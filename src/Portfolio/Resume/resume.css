@@ -1,0 +1,30 @@
+#port-resume-left {
+    max-width: 352px;
+    float: left;
+}
+
+/* #port-resume-pdf {
+    float: right;
+} */
+
+#port-resume-pdf {
+    text-align: right;
+}
+
+.port-resume-heading {
+    color: #939314;
+    margin-top: 27px;
+}
+
+.port-resume-entry {
+    margin-top: 27px;
+}
+
+.port-resume-content {
+    color: #486970;
+}
+
+#port-resume-right {
+    max-width: 517px;
+    float: right;
+}
