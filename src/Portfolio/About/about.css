@@ -1,17 +1,39 @@
+#port-about {
+  color: #333F48;
+}
+
+#headshot {
+  width: 412px;
+  margin: 0;
+}
+
+#port-about {
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  align-items: flex-end;
+}
+
 #about-text {
-    max-width: 50ch;
-    /* text-align: justify; */
-}
-  
-#about-contact-block {
-  margin-top: 40px;
-}
-
-#port-about-left {
-  float: left;
-}
-
-#port-about-right {
-  float: right;
   max-width: 446px;
+}
+
+#about-me {
+  max-width: 50ch;
+}
+
+#contact-group {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+
+#contact-info {
+  margin-left: 20px;
+}
+
+a {
+  text-decoration: underline;
+  color: #333F48;
 }

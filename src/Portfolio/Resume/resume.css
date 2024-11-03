@@ -1,30 +1,84 @@
-#port-resume-left {
-    max-width: 352px;
-    float: left;
+/* LAYOUT */
+
+#actual-resume {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-/* #port-resume-pdf {
-    float: right;
-} */
+#resume-left {
+    max-width: 352px;
+}
 
-#port-resume-pdf {
+#resume-right {
+    max-width: 517px;
+}
+
+.within-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.within-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.within-small {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.title {
+    margin-bottom: 10px;
+}
+
+.list {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.entry {
+    margin-bottom: 22px;
+}
+
+/* PDF LINK */
+
+#port-resume-pdf-div {
     text-align: right;
 }
 
-.port-resume-heading {
-    color: #939314;
-    margin-top: 27px;
+#pdf {
+    color: #b44a9f;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
 }
 
-.port-resume-entry {
-    margin-top: 27px;
+#pdf:hover {
+    text-decoration: underline;
 }
 
-.port-resume-content {
+/* TEXT STYLES */
+
+/* #port-resume {
+    color: #355063;
     color: #486970;
+} */
+
+.dark {
+    color: #355063;
 }
 
-#port-resume-right {
-    max-width: 517px;
-    float: right;
+.green {
+    color: #939314;
+    margin-bottom: 12px;
+}
+
+.light {
+    color: #486970;
 }

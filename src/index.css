@@ -1,15 +1,24 @@
-/* @font-face {
+@font-face {
   font-family: "inter-variable", sans-serif;
-  src: url('./path/to/your/font.woff2') format('woff2'),
-       url('./path/to/your/font.woff') format('woff');
-} */
+  src: url('../public/font/InterVariable-Italic.ttf') format('ttf'),
+    url('../public/font/InterVariable.ttf') format('ttf');
+}
 
 :root {
   font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-feature-settings: 'liga' 1, 'calt' 1;
+  /* fix for Chrome */
 }
+
 @supports (font-variation-settings: normal) {
-  :root { font-family: InterVariable, sans-serif; }
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
 
 body {
@@ -22,40 +31,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #FFFEFB;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
   color: #333F48;
+  margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-span {
-  margin-left: 15px;
-}
-
-#port-navbar {
-  height: 83px;
-  /* margin-bottom: 67px; */
-}
-
-#port-home-blurb {
-  max-width: 807px;
-  font-size: 30px;
-}
-
-#port-home-work {
-  margin-top: 73px;
-}
-
-#port-home-link {
-  float: left;
-}
-
-#port-navbar-items {
-  float: right;
-}
-
-a:visited {
+a {
   text-decoration: none;
+}
+
+.bold {
+  font-weight: 650;
 }

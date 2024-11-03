@@ -1,0 +1,163 @@
+.project-heading {
+    /* position: relative; */
+    display: flex;
+    min-height: 120px;
+    justify-content: space-between;
+}
+
+.crop-image {
+    object-fit: cover;
+}
+
+.project-heading-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-heading-title {
+    font-weight: 600;
+    color: #333f48;
+    max-width: 484px;
+}
+
+.project-heading-left {
+    float: left;
+}
+
+.project-heading-des {
+    max-width: 484px;
+}
+
+.gray {
+    color: #767676
+}
+
+.project-content-rest {
+    margin-top: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.padding-bottom {
+    padding-bottom: 2.231%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#ig-link {
+    text-decoration: underline;
+    color: #767676;
+}
+
+.section-titles {
+    text-align: center;
+    color: #767676;
+    margin-top: 50px;
+}
+
+#top-section {
+    margin-top: 0px;
+}
+
+.type-container {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+}
+
+.type-column-right {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    gap: 22px;
+}
+
+#full-width {
+    max-width: 986px;
+}
+
+.space-after {
+    margin-bottom: 43px;
+}
+
+/* CALDER */
+
+.basic-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.calder-col {
+    max-width: 482px;
+    /* display: block; */
+}
+
+/* GENERAL */
+
+.project-heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-heading-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.basic-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+}
+
+.basic-container-align-left {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    justify-content: left;
+    align-items: left;
+}
+
+.two-third-column {
+    width: 66%;
+}
+
+.third-column {
+    width: 33%;
+}
+
+.display-block {
+    display: block;
+}
+
+.slim {
+    max-width: 85%;
+}
+
+.basic-items {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    align-items: flex-start;
+}
+
+#basic-items-center {
+    align-items: center;
+}
+
+.half-column {
+    align-items: flex-start;
+    max-width: 482px;
+}
+
+.border {
+    border: 2px solid #333F48;
+}
