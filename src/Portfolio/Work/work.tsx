@@ -1,7 +1,5 @@
-import { Routes, Route, Navigate } from "react-router";
 import { Link } from "react-router-dom";
 import "./work.css";
-import React from "react";
 export default function Work() {
   return (
     <div id="port-work">
@@ -13,21 +11,21 @@ export default function Work() {
 
       <div id="port-work-content">
         <div className="work-images-columns">
-          <Link to="/Portfolio/Work/Projects/rockumentary"><img src="images/work/rockumentary.png" width="100%" /></Link>
+          <Link to="/Portfolio/Work/Projects/rockumentary"><img src="images/work/rockumentary.png" alt="Rockumentary image" width="100%" /></Link>
           {/* <Link to="/Portfolio/Work/Projects/schoolStairs"><img src="images/work/complete_stairs.png" width="100%" /></Link> */}
-          <Link to="/Portfolio/Work/Projects/morningtide"><img src="images/work/morningtide.png" width="100%" /></Link>
+          <Link to="/Portfolio/Work/Projects/morningtide"><img src="images/work/morningtide.png" alt="Morningtide image" width="100%" /></Link>
         </div>
 
         <div className="work-images-columns">
-          <Link to="/Portfolio/Work/Projects/textDiagram"><img src="images/work/TextDiagramColor.png" width="100%" /></Link>
-          <Link to="/Portfolio/Work/Projects/dissonantHarmony"><img src="images/work/calder.png" width="100%" /></Link>
-          <Link to="/Portfolio/Work/Projects/sunFall"><img src="images/work/sunfall.jpg" width="100%" /></Link>
+          <Link to="/Portfolio/Work/Projects/textDiagram"><img src="images/work/TextDiagramColor.png" alt="Text Diagram image" width="100%" /></Link>
+          <Link to="/Portfolio/Work/Projects/dissonantHarmony"><img src="images/work/calder.png" alt="Calder image" width="100%" /></Link>
+          <Link to="/Portfolio/Work/Projects/sunFall"><img src="images/work/sunfall.jpg" alt="Sunfall image" width="100%" /></Link>
         </div>
 
         <div className="work-images-columns">
-          <Link to="/Portfolio/Work/Projects/basicsOfTypography"><img src="images/work/typography.jpg" width="100%" /></Link>
-          <Link to="/Portfolio/Work/Projects/myFavoriteThings"><img src="images/work/page 3.jpg" width="100%" /></Link>
-          <Link to="/Portfolio/Work/Projects/designPhilosophy"><img className="border" src="images/work/quote1.png" width="100%" /></Link>
+          <Link to="/Portfolio/Work/Projects/basicsOfTypography"><img src="images/work/typography.jpg" alt="Typography image" width="100%" /></Link>
+          <Link to="/Portfolio/Work/Projects/myFavoriteThings"><img src="images/work/page 3.jpg" alt="My Favorite Things image" width="100%" /></Link>
+          <Link to="/Portfolio/Work/Projects/designPhilosophy"><img className="border" src="images/work/quote1.png" alt="Design Philosophy image" width="100%" /></Link>
         </div>
       </div>
     </div>

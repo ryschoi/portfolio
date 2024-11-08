@@ -1,5 +1,3 @@
-import { Routes, Route, Navigate } from "react-router";
-import { Link } from "react-router-dom";
 import "./projects.css";
 
 export default function TextDiagram() {

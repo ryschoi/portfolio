@@ -1,10 +1,8 @@
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./navigation.css";
-import { Navigate, Route, Routes } from "react-router";
 
 export default function NavBar() {
   const { pathname } = useLocation();
-  const { cid } = useParams();
   const links = [
     { label: "Work", path: `/Portfolio/Work` },
     { label: "Resume", path: `/Portfolio/Resume` },
@@ -14,7 +12,7 @@ export default function NavBar() {
 
   return (
     <div id="navbar">
-      <Link to="/Portfolio/Home" id="navbar-home-link"><img src="images/name_new.png" width="130" /></Link>
+      <Link to="/Portfolio/Home" id="navbar-home-link"><img src="images/name_new.png" alt="Logo" width="130" /></Link>
       <div id="navbar-items">
         {links.map((page) => (
           <Link key={page.path} to={page.path} className={`

@@ -1,5 +1,5 @@
 import * as db from "../Database";
-import { Link, useParams, useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function Projects() {
     const { cid } = useParams();

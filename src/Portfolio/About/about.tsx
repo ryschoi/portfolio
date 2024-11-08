@@ -1,9 +1,8 @@
-import { Routes, Route, Navigate } from "react-router";
 import "./about.css";
 export default function About() {
   return (
     <div id="port-about">
-      <img id="headshot" src="images/headshot.png" />
+      <img id="headshot" alt="Headshot" src="images/headshot.png" />
 
       <div id="about-text">
         <p id="about-me">
