@@ -64,6 +64,23 @@ export default function Resume() {
         <div id="resume-right">
           <p className="green">Experience</p>
           <div className="within-entries">
+          <div>
+              <p className="dark bold">Personal Portfolio Website</p>
+              <p className="dark">
+                Boston, MA | Sep 2024 - present<br />
+                <ul className="list light">
+                  <li>
+                  Designed a prototype using Figma and implemented a single-page React application
+                  </li>
+                  <li>
+                  Showcased multiple unique project pages
+                  </li>
+                  <li>
+                  Utilized efficient coding practices to optimize performance and code maintainability
+                  </li>
+                </ul>
+              </p>
+            </div>
             <div>
               <p className="dark bold">UX Researcher @ Radien</p>
               <p className="dark">
