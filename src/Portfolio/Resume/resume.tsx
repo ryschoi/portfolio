@@ -4,7 +4,7 @@ export default function Resume() {
   return (
     <div id="port-resume">
       <div id="port-resume-pdf-div">
-        <a id="pdf" href="images/Rebecca_Choi_Resume.pdf">View as pdf</a>
+        <a id="pdf" href="images/Rebecca_Choi Resume.pdf">View as pdf</a>
       </div>
 
       <div id="actual-resume">
