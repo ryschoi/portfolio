@@ -31,7 +31,7 @@ export default function DissonantHarmony() {
                         A1 size poster
                     </p>
                     <img src="images/work/calder.png" width="100%" />
-                    <div className="basic-row">
+                    <div className="two-col">
                         <p className="calder-col">
                             I went with the theme of a deconstructed sculpture which I
                             created by first tracing over an image of Big Crinkly using

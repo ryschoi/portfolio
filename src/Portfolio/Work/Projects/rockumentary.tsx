@@ -35,7 +35,7 @@ export default function Rockumentary() {
                         <div className="basic-container-align-left two-third-column">
                             <div className="basic-items">
                                 <img className="crop-image" src="images/work/rockumentary sketches.png" width="48.25%" height="200px" />
-                                <img className="crop-image" src="images/work/rock_writing.jpg" width="48.25%" height="200px" />
+                                <img className="crop-image" src="images/work/rock_writing.png" width="48.25%" height="200px" />
                             </div>
                             <p>
                                 I went through many rounds of initial sketches for this poster–different

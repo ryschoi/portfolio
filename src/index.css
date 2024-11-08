@@ -53,3 +53,7 @@ a {
 .bold {
   font-weight: 650;
 }
+
+.underline {
+  text-decoration: underline;
+}

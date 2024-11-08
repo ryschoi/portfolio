@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from "react-router";
 import { Link } from "react-router-dom";
 import "./work.css";
+import React from "react";
 export default function Work() {
   return (
     <div id="port-work">
@@ -13,6 +14,7 @@ export default function Work() {
       <div id="port-work-content">
         <div className="work-images-columns">
           <Link to="/Portfolio/Work/Projects/rockumentary"><img src="images/work/rockumentary.png" width="100%" /></Link>
+          {/* <Link to="/Portfolio/Work/Projects/schoolStairs"><img src="images/work/complete_stairs.png" width="100%" /></Link> */}
           <Link to="/Portfolio/Work/Projects/morningtide"><img src="images/work/morningtide.png" width="100%" /></Link>
         </div>
 
@@ -25,7 +27,7 @@ export default function Work() {
         <div className="work-images-columns">
           <Link to="/Portfolio/Work/Projects/basicsOfTypography"><img src="images/work/typography.jpg" width="100%" /></Link>
           <Link to="/Portfolio/Work/Projects/myFavoriteThings"><img src="images/work/page 3.jpg" width="100%" /></Link>
-          <Link to="/Portfolio/Work/Projects/designPhilosophy"><img src="images/work/quote1.png" width="100%" /></Link>
+          <Link to="/Portfolio/Work/Projects/designPhilosophy"><img className="border" src="images/work/quote1.png" width="100%" /></Link>
         </div>
       </div>
     </div>

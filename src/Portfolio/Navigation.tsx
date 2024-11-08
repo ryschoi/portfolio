@@ -10,22 +10,15 @@ export default function NavBar() {
     { label: "Resume", path: `/Portfolio/Resume` },
     { label: "About", path: `/Portfolio/About` }
   ];
+  const checkHome = (page: string) => { return pathname.includes("Home") && page.includes("Work") };
 
   return (
-    // <div id="port-navbar">
-    //   <Link to="/Portfolio/Home" id="port-home-link"><img src="images/name_new.png" width="130"/></Link>
-    //   <div id="port-navbar-items">
-    //     <span><Link to="/Portfolio/Work" className="port-nav-link">Work</Link></span>
-    //     <span><Link to="/Portfolio/Resume" className="port-nav-link">Resume</Link></span>
-    //     <span><Link to="/Portfolio/About" className="port-nav-link">About</Link></span>
-    //   </div>
-    // </div>
     <div id="navbar">
       <Link to="/Portfolio/Home" id="navbar-home-link"><img src="images/name_new.png" width="130" /></Link>
       <div id="navbar-items">
         {links.map((page) => (
           <Link key={page.path} to={page.path} className={`
-            ${pathname.includes(page.label) ? "port-nav-link nav-active" : "port-nav-link"}`}>
+            ${pathname.includes(page.label) || checkHome(page.label) ? "port-nav-link nav-active" : "port-nav-link"}`}>
             {page.label}
           </Link>
         ))}

@@ -14,6 +14,7 @@ import SunFall from "./Work/Projects/sunFall";
 import BasicsOfTypography from "./Work/Projects/basicsOfTypography";
 import MyFavoriteThings from "./Work/Projects/myFavoriteThings";
 import DesignPhilosophy from "./Work/Projects/designPhilosophy";
+import SchoolStairs from "./Work/Projects/schoolStairs";
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
         <Route path="/Work/Projects/basicsOfTypography" element={<BasicsOfTypography />} />
         <Route path="/Work/Projects/myFavoriteThings" element={<MyFavoriteThings />} />
         <Route path="/Work/Projects/designPhilosophy" element={<DesignPhilosophy />} />
+        <Route path="/Work/Projects/schoolStairs" element={<SchoolStairs />} />
       </Routes>
 
       <Footer />

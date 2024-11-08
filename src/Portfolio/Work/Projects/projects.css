@@ -37,7 +37,17 @@
     margin-top: 68px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+}
+
+.project-rest-align-left {
+    display: flex;
+    margin-top: 68px;
+    flex-direction: column;
+    align-items: left;
+    gap: 22px;
+    justify-content: left;
+    align-items: left;
 }
 
 .padding-bottom {
@@ -81,7 +91,7 @@
 }
 
 .space-after {
-    margin-bottom: 43px;
+    margin-bottom: 19px;
 }
 
 /* CALDER */
@@ -92,8 +102,14 @@
     justify-content: space-between;
 }
 
+.two-col {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+}
+
 .calder-col {
-    max-width: 482px;
+    max-width: 49%;
     /* display: block; */
 }
 
@@ -160,4 +176,8 @@
 
 .border {
     border: 2px solid #333F48;
+}
+
+#space-above {
+    margin-top: 22px;
 }
