@@ -1,6 +1,6 @@
 import Home from "./Portfolio"
 import ResetScroll from "./Portfolio/ResetScroll"
-import { BrowserRouter as Router, HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 
 export default function App() {

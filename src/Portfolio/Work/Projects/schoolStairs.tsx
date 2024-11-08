@@ -16,8 +16,8 @@ export default function SchoolStairs() {
             <div className="project-content-rest">
                 <div className="basic-container">
                     <div className="basic-items">
-                        <img src="images/work/complete_stairs.png" width="49%" />
-                        <img src="images/work/walking.png" width="49%" />
+                        <img src="images/work/complete_stairs.png" alt="" width="49%" />
+                        <img src="images/work/walking.png" alt="" width="49%" />
                     </div>
                 </div>
             </div>

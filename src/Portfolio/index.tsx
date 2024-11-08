@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router";
+import { Routes, Route } from "react-router";
 import Work from "./Work/work";
 import Resume from "./Resume/resume";
 import About from "./About/about";

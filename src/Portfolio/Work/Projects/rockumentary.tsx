@@ -27,7 +27,7 @@ export default function Rockumentary() {
 
             <div className="project-content-rest">
                 <div className="basic-container">
-                    <img src="images/work/rockumentary.png" width="100%" />
+                    <img src="images/work/rockumentary.png" alt="" width="100%" />
 
                     <div className="basic-items">
                         <div className="basic-container-align-left two-third-column">
