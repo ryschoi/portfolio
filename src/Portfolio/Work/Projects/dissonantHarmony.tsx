@@ -28,7 +28,7 @@ export default function DissonantHarmony() {
                     <p className="section-titles">
                         A1 size poster
                     </p>
-                    <img src="images/work/calder.png" width="100%" />
+                    <img src="images/work/calder.png" alt="" width="100%" />
                     <div className="two-col">
                         <p className="calder-col">
                             I went with the theme of a deconstructed sculpture which I
@@ -51,8 +51,8 @@ export default function DissonantHarmony() {
                 <div className="basic-container slim">
                     <p className="section-titles">A5 size poster (front & back)</p>
                     <div className="basic-items">
-                        <img src="images/work/calder_a5_front.png" width="50%" />
-                        <img src="images/work/calder_a5_back.png" width="50%" />
+                        <img src="images/work/calder_a5_front.png" alt="" width="50%" />
+                        <img src="images/work/calder_a5_back.png" alt="" width="50%" />
                     </div>
                 </div>
 
@@ -60,7 +60,7 @@ export default function DissonantHarmony() {
                     <p className="section-titles">Instagram posts +gif<br />
                         <a id="ig-link" href="https://www.instagram.com/snfivowlactz/">(pseudo Instagram account)</a></p>
                     <div className="basic-items">
-                        <img src="images/work/calder_instagram.jpeg" width="50%" />
+                        <img src="images/work/calder_instagram.jpeg" alt="" width="50%" />
                         <video controls width="50%">
                             <source src="images/work/calder.mov" type="video/mp4" />
                         </video>
@@ -70,10 +70,10 @@ export default function DissonantHarmony() {
                 <div className="basic-container">
                     <p className="section-titles">Previous iterations</p>
                     <div className="basic-items basic-items-center">
-                        <img src="images/work/calder_prev1.png" width="231px" />
-                        <img src="images/work/calder_prev2.png" width="231px" />
-                        <img src="images/work/calder_prev3.png" width="231px" />
-                        <img src="images/work/calder_prev3.png" width="231px" />
+                        <img src="images/work/calder_prev1.png" alt="" width="231px" />
+                        <img src="images/work/calder_prev2.png" alt="" width="231px" />
+                        <img src="images/work/calder_prev3.png" alt="" width="231px" />
+                        <img src="images/work/calder_prev3.png" alt="" width="231px" />
                     </div>
                 </div>
 

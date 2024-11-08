@@ -16,7 +16,7 @@ export default function Morningtide() {
                 </p>
             </div>
             <div className="project-content-rest">
-                <img src="images/work/morningtide.png" width="100%" />
+                <img src="images/work/morningtide.png" alt="" width="100%" />
             </div>
         </div>
     );

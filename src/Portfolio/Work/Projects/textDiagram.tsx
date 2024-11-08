@@ -26,9 +26,9 @@ export default function TextDiagram() {
 
 
             <div className="project-rest-align-left">
-                <img className="crop-image" src="images/work/TextDiagramB&W.png" width="100%" />
+                <img className="crop-image" src="images/work/TextDiagramB&W.png" alt="" width="100%" />
                 <p className="gray space-after">Black and white version used for submission</p>
-                <img className="crop-image" src="images/work/TextDiagramColor.png" width="100%" />
+                <img className="crop-image" src="images/work/TextDiagramColor.png" alt="" width="100%" />
                 <p className="gray space-after">Lightly colored version</p>
             </div>
         </div>

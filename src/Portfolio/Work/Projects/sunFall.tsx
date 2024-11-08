@@ -14,7 +14,7 @@ export default function SunFall() {
                 </p>
             </div>
             <div className="project-content-rest">
-                <img src="images/work/sunfall.jpg" width="100%" />
+                <img src="images/work/sunfall.jpg" alt="" width="100%" />
             </div>
         </div>
     );

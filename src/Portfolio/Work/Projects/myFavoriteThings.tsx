@@ -21,22 +21,22 @@ export default function MyFavoriteThings() {
                 <div className="basic-container">
                     <p className="section-titles" id="top-section">Pages 1 - 4</p>
                     <div className="basic-items">
-                        <img src="images/work/page 1.jpg" width="50%" />
-                        <img src="images/work/page 2.jpg" width="50%" />
+                        <img src="images/work/page 1.jpg" alt="" width="50%" />
+                        <img src="images/work/page 2.jpg" alt="" width="50%" />
                     </div>
                 </div>
                 <div className="basic-container">
                     <p className="section-titles">Pages 5 - 8</p>
                     <div className="basic-items">
-                        <img src="images/work/page 3.jpg" width="50%" />
-                        <img src="images/work/page 4.jpg" width="50%" />
+                        <img src="images/work/page 3.jpg" alt="" width="50%" />
+                        <img src="images/work/page 4.jpg" alt="" width="50%" />
                     </div>
                 </div>
                 <div className="basic-container">
                     <p className="section-titles">Pages 9 - 12</p>
                     <div className="basic-items">
-                        <img src="images/work/page 5.jpg" width="50%" />
-                        <img src="images/work/page 6.jpg" width="50%" />
+                        <img src="images/work/page 5.jpg" alt="" width="50%" />
+                        <img src="images/work/page 6.jpg" alt="" width="50%" />
                     </div>
                 </div>
             </div>

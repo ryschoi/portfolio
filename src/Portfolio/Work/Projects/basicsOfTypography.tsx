@@ -25,24 +25,11 @@ export default function BasicsOfTypography() {
                 <div className="type-container">
                     <img src="images/work/typography.jpg" width="48.84%" />
                     <div className="type-column-right">
-                        <img className="crop-image" src="images/work/type_defg.jpg" width="100%" height="310px"/>
-                        <img className="crop-image" src="images/work/type_serif.jpg" width="100%" height="310px"/>
+                        <img className="crop-image" src="images/work/type_defg.jpg" alt="" width="100%" height="310px"/>
+                        <img className="crop-image" src="images/work/type_serif.jpg" alt="" width="100%" height="310px"/>
                     </div>
                 </div>
             </div>
-
-
-            {/* <div className="project-content-rest">
-                <div className="type-container">
-                    <div className="column-half">
-                        <img src="images/work/typography.jpg" width="100%" />
-                    </div>
-                    <div className="column-half last-column">
-                        <img src="images/work/type_defg.jpg" width="100%" />
-                        <img src="images/work/type_serif.jpg" width="100%" />
-                    </div>
-                </div>
-            </div> */}
         </div>
     );
 }

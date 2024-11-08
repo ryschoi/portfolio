@@ -32,8 +32,8 @@ export default function Rockumentary() {
                     <div className="basic-items">
                         <div className="basic-container-align-left two-third-column">
                             <div className="basic-items">
-                                <img className="crop-image" src="images/work/rockumentary sketches.png" width="48.25%" height="200px" />
-                                <img className="crop-image" src="images/work/rock_writing.png" width="48.25%" height="200px" />
+                                <img className="crop-image" src="images/work/rockumentary sketches.png" alt="" width="48.25%" height="200px" />
+                                <img className="crop-image" src="images/work/rock_writing.png" alt="" width="48.25%" height="200px" />
                             </div>
                             <p>
                                 I went through many rounds of initial sketches for this poster–different
@@ -44,14 +44,14 @@ export default function Rockumentary() {
                                 solid colors.
                             </p>
                             <div className="display-block">
-                                <img className="crop-image" src="images/work/rock_seb.jpg" width="50%" height="390px"/>
-                                <img className="crop-image" src="images/work/upclose_rock.png" width="50%" height="390px"/>
+                                <img className="crop-image" src="images/work/rock_seb.jpg" alt="" width="50%" height="390px"/>
+                                <img className="crop-image" src="images/work/upclose_rock.png" alt="" width="50%" height="390px"/>
                             </div>
                             <p>The reference photo versus the drawing</p>
                         </div>
                         <div className="basic-container third-column">
-                            <img className="crop-image" src="images/work/rock_ver1.jpg" width="100%" />
-                            <img src="images/work/rock_corner.png" width="100%" />
+                            <img className="crop-image" src="images/work/rock_ver1.jpg" alt="" width="100%" />
+                            <img src="images/work/rock_corner.png" alt="" width="100%" />
                             <p>
                                 The grain was one of the last things I added but is for sure
                                 one of my favorite parts about this poster–it’s subtle but

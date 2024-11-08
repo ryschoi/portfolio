@@ -22,21 +22,21 @@ export default function DesignPhilosophy() {
                 <div className="basic-items">
                     <div className="basic-container half-column">
                         <div>
-                            <img className="border" src="images/work/quote1.png" width="100%" />
+                            <img className="border" src="images/work/quote1.png" alt="" width="100%" />
                             <p>Illustration of eye and hand, the ways you see and feel things</p>
                         </div>
                         <div>
-                            <img className="border" src="images/work/desphil_1.png" width="100%" />
+                            <img className="border" src="images/work/desphil_1.png" alt="" width="100%" />
                             <p>“works” is made up of the word “design” to show that the construction of design creates its workings</p>
                         </div>
                         <div>
-                            <img className="border" src="images/work/desphil_2.png" width="100%" />
+                            <img className="border" src="images/work/desphil_2.png" alt="" width="100%" />
                             <p>Illustration of eye and hand, the ways you see and feel things</p>
                         </div>
                     </div>
                     <div className="basic-container half-column">
                         <div>
-                            <img className="border" src="images/work/desphil_3.png" width="100%" />
+                            <img className="border" src="images/work/desphil_3.png" alt="" width="100%" />
                             <p>Illustration of eye and hand, the ways you see and feel things</p>
                         </div>
                     </div>
