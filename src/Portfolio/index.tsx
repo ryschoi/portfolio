@@ -5,7 +5,6 @@ import About from "./About/about";
 import NavBar from "./Navigation";
 import Footer from "./Footer";
 
-// import the components from the files
 import Rockumentary from "./Work/Projects/rockumentary";
 import Morningtide from "./Work/Projects/morningtide";
 import TextDiagram from "./Work/Projects/textDiagram";
@@ -28,7 +27,6 @@ export default function Home() {
         <Route path="/Resume" element={<Resume />} />
         <Route path="/About" element={<About />} />
 
-        // setting the path, what the url displays
         <Route path="/Work/Projects/rockumentary" element={<Rockumentary />} />
         <Route path="/Work/Projects/morningtide" element={<Morningtide />} />
         <Route path="/Work/Projects/textDiagram" element={<TextDiagram />} />
