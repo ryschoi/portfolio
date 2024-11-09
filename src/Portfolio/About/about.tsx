@@ -22,7 +22,8 @@ export default function About() {
         <div id="contact-group">
           <p>Contact</p>
           <p id="contact-info">
-            Email - <a href="choi.re@northeastern.edu">choi.re@northeastern.edu</a><br />
+            School - <a href="choi.re@northeastern.edu">choi.re@northeastern.edu</a><br />
+            Personal - <a href="rebeccca.choi05@gmail.com">choi.re@northeastern.edu</a><br />
             <a id="link-under" href="https://www.linkedin.com/in/rebecca-choi-3479b916a">LinkedIn</a>
           </p>
         </div>
