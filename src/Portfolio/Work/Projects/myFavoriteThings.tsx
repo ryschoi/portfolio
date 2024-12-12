@@ -9,12 +9,9 @@ export default function MyFavoriteThings() {
                     <p className="project-heading-details gray">February 2024<br />Graphic Design</p>
                 </div>
                 <p className="project-heading-des">
-                    Do you think good critiquers make good designers? This speaker was my
-                    first “big” purchase after I started working in high school and I wear
-                    it with pride that I happened to buy such a perfectly designed product.
-                    As critical as I can be, this speaker is one thing I cannot find a single
-                    thing to complain about. Everything is just so thoughtfully designed with
-                    no extra flairs. The design just works, therefore making it my favorite thing.
+                    When such a big part of designing is critiquing, it is rare that I see that 
+                    there is little left for improvement. This speaker is one of those few, rare cases. 
+                    I am overtaken by how simple yet effective the design is, thereby making it my favorite thing.
                 </p>
             </div>
             <div className="project-content-rest">
