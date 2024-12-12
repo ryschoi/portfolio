@@ -16,8 +16,8 @@ export default function BasicsOfTypography() {
                     committing to creative decisions, which is where I most often get
                     stuck in the design process. During this one day, I successfully
                     gathered and categorized all the information, drafted, and brought
-                    to life this poster that you see below. Along with getting lots and
-                    lots of practice with the Pathfinder tool in Illustrator.
+                    to life this poster that you see below (along with getting lots and
+                    lots of practice with the Pathfinder tool in Illustrator).
                 </p>
             </div>
 
