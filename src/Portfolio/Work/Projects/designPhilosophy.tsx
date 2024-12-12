@@ -31,13 +31,16 @@ export default function DesignPhilosophy() {
                         </div>
                         <div>
                             <img className="border" src="images/work/desphil_2.png" alt="" width="100%" />
-                            <p>Illustration of eye and hand, the ways you see and feel things</p>
+                            <p>The first part of the quote is repeated over and over again to “distract” 
+                                the reader from seeing the important truth that “design is how it works”</p>
                         </div>
                     </div>
                     <div className="basic-container half-column">
                         <div>
                             <img className="border" src="images/work/desphil_3.png" alt="" width="100%" />
-                            <p>Illustration of eye and hand, the ways you see and feel things</p>
+                            <p>Representing “looks like” and “feels like” in over-exaggerated styles to both 
+                                make the viewer see and feel the texts, and to convey that sometimes 
+                                those aspects can be overdone and detract from the main purpose</p>
                         </div>
                     </div>
                 </div>
