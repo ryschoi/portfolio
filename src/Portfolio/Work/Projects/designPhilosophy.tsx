@@ -15,7 +15,7 @@ export default function DesignPhilosophy() {
                     was for my studio for Typographic Systems and was for sure one of
                     the more difficult design projects I’ve done as I was challenged to
                     rethink how I use and orient type to not just be the literal text, 
-                    but to make the deisgn itself.
+                    but to make the design itself.
                 </p>
             </div>
             <div className="project-content-rest">
