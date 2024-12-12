@@ -70,7 +70,7 @@ export default function Resume() {
                 Boston, MA | Sep 2024 - present<br />
                 <ul className="list light">
                   <li>
-                  Designed a prototype using Figma and implemented a single-page React application
+                  Designed a high-fidelity prototype using Figma and implemented a single-page React application using HTML and CSS
                   </li>
                   <li>
                   Showcased multiple unique project pages
