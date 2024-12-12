@@ -14,11 +14,11 @@ export default function DissonantHarmony() {
                 </div>
                 <p className="project-heading-des">
                     Little did I know on the one Saturday afternoon in 2018 that our
-                    family paid a visit to the SFMoMA that years later I would design
+                    family paid a visit to the SFMoMA that years later I would design mock
                     exhibition materials for one of the sculptures I had seen that day.
-                    Below is an A1 size poster, A5 size handout, and Instagram posts all
-                    featuring Alexander Calder’s iconic Big Crinkly created for a project
-                    in my typography studio.
+                    Below is an A1 size poster, A5 size flyer, and Instagram posts all
+                    featuring Alexander Calder’s iconic Big Crinkly. This was my final 
+                    project for one of my studio classes.
                 </p>
 
             </div>
@@ -49,7 +49,7 @@ export default function DissonantHarmony() {
                 </div>
 
                 <div className="basic-container slim">
-                    <p className="section-titles">A5 size poster (front & back)</p>
+                    <p className="section-titles">A5 size flyer (front & back)</p>
                     <div className="basic-items">
                         <img src="images/work/calder_a5_front.png" alt="" width="50%" />
                         <img src="images/work/calder_a5_back.png" alt="" width="50%" />
