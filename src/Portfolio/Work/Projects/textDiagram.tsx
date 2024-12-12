@@ -16,7 +16,7 @@ export default function TextDiagram() {
                     podcast “99% Invisible”. This project, focusing on information design,
                     was done in the studio section for Design Process and Practices. It is
                     one of my favorites from pieces I’ve done at school as it was when I
-                    discovered my love for information design. Unlike most designs that take
+                    discovered my attachment to information design. Unlike most designs that take
                     lots of drafting and sketching, this one came together rather naturally.
                     I loved figuring out how to fit together all the information,
                     establishing the typographic hierarchy, and coming up with the simple
@@ -27,9 +27,9 @@ export default function TextDiagram() {
 
             <div className="project-rest-align-left">
                 <img className="crop-image" src="images/work/TextDiagramB&W.png" alt="" width="100%" />
-                <p className="gray space-after">Black and white version used for submission</p>
+                <p className="gray space-after">Grayscale version used for submission</p>
                 <img className="crop-image" src="images/work/TextDiagramColor.png" alt="" width="100%" />
-                <p className="gray space-after">Lightly colored version</p>
+                <p className="gray space-after">Lightly colored version for myself</p>
             </div>
         </div>
     );
