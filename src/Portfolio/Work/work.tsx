@@ -54,14 +54,14 @@ export default function Work() {
               </div>
             </Link>
           </div>
-          <div className="hover-container">
+          {/* <div className="hover-container">
             <Link to="/Portfolio/Work/Projects/sunFall">
               <img className="hover-img" src="images/work/sunfall.jpg" alt="" />
               <div className="hover-overlay">
                 <p className="hover-text">sun fall</p>
               </div>
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="work-images-columns">
@@ -83,13 +83,21 @@ export default function Work() {
             </Link>
           </div>
           <div className="hover-container">
+            <Link to="/Portfolio/Work/Projects/designPhilosophy">
+              <img className="border hover-img" src="images/work/quote1.png" alt="" />
+              <div className="hover-overlay">
+                <p className="hover-text">Design Philosophy</p>
+              </div>
+            </Link>
+          </div>
+          {/* <div className="hover-container">
             <Link to="/Portfolio/Work/Projects/morningtide">
               <img className="hover-img" src="images/work/morningtide.png" alt="" />
               <div className="hover-overlay">
                 <p className="hover-text">Morningtide</p>
               </div>
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="work-images-columns">
@@ -106,14 +114,6 @@ export default function Work() {
               <img className="hover-img" src="images/work/typography.jpg" alt="" />
               <div className="hover-overlay">
                 <p className="hover-text">Basics of Typography</p>
-              </div>
-            </Link>
-          </div>
-          <div className="hover-container">
-            <Link to="/Portfolio/Work/Projects/designPhilosophy">
-              <img className="border hover-img" src="images/work/quote1.png" alt="" />
-              <div className="hover-overlay">
-                <p className="hover-text">Design Philosophy</p>
               </div>
             </Link>
           </div>
