@@ -8,13 +8,13 @@ export default function Work() {
       <p id="port-home-blurb">
         {/* Lover of tech, design, and data. */}
 
+
         {/* Experienced in UI/UX, information design, web development, and data analysis & visualization. */}
 
         Experienced in UI/UX, information design, web development, and
         data analysis & visualization.
         Eager to combine tech, design, and data to create something novel and meaningful.
-        {/* Designing with the intention 
-      to ensure quality, functional products and satisfied users. */}
+        {/* Designing with the intention to ensure quality, functional products and satisfied users. */}
 
 
         {/* Old blurb */}
