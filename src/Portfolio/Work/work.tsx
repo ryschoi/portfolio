@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import Filters from "./Filters";
+// import Filters from "./Filters";
 import "./work.css";
-import * as projectsDB from "../Database";
+// import * as projectsDB from "../Database";
 export default function Work() {
   return (
     <div id="port-work">
