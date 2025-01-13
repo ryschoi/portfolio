@@ -1,0 +1,76 @@
+/* LAYOUT */
+
+#actual-resume {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#resume-left {
+    max-width: 352px;
+}
+
+#resume-right {
+    max-width: 517px;
+}
+
+#port-resume ul {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.entries {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.entry-item {
+    display: flex;
+    flex-direction: column;
+}
+
+/* PDF LINK */
+
+#port-resume-pdf-div {
+    text-align: right;
+}
+
+#pdf {
+    color: #b44a9f;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+#pdf:hover {
+    text-decoration: underline;
+}
+
+/* TEXT STYLES */
+
+.section-title {
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.section-subtitle {
+    font-weight: 600;
+}
+
+.gray {
+    color: #545454;
+}
