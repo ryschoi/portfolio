@@ -6,7 +6,6 @@ export default function Resume() {
       <div id="port-resume-pdf-div">
         <a id="pdf" href="images/Rebecca_Choi_Resume.pdf">View as pdf</a>
       </div>
-
       <div id="actual-resume">
         <div className="column" id="resume-left">
           {/* EDUCATION */}

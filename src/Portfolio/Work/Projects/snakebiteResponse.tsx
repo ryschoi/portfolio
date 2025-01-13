@@ -13,7 +13,7 @@ export default function snakebiteResponse() {
                     </p>
                 </div>
                 <p className="project-heading-des">
-                    blurb
+                    Description coming soon
                 </p>
 
             </div>
