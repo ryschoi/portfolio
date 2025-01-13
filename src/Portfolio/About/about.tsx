@@ -20,7 +20,7 @@ export default function About() {
           I am a second-year student studying Computer Science
           and Design at Northeastern University in Boston.<br /><br />
 
-          I have a deep passion for figuring out how people work. In design,
+          I am passionate about understanding how people think and behave. In design,
           I have found a discipline where can apply my insights and fuel my passion.
           Whether it's through a development project or a visual design, I work with the human nature in mind,
           aiming to create quality products that new users can interact with in a familiar way.<br /><br />
