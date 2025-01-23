@@ -18,7 +18,7 @@ export default function Rockumentary() {
                         on as a way to challenge myself to do something of a different feel. After
                         many FaceTime consultations from coast to coast of the US and getting the drawing of my friend’s iconic
                         bowl-cut and glasses just right, I ended up with this poster that captures
-                        the boldness of rock, nostalgia of a documentary/movie, and my friend’s personal
+                        the boldness of rock, nostalgia of a documentary, and my friend’s personal
                         brand. “Rockumentary” is the musical documentary of the rock music that shaped his life.
                     </p>
                 </div>
