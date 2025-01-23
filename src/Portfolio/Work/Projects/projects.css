@@ -38,6 +38,10 @@
     align-items: center;
 }
 
+.project-content-margin {
+    margin-top: 68px;
+}
+
 .project-rest-align-left {
     display: flex;
     margin-top: 68px;
@@ -75,12 +79,6 @@
     text-align: center;
     color: #767676;
     font-style: italic;
-}
-
-.type-container {
-    display: flex;
-    flex-direction: row;
-    gap: 22px;
 }
 
 .type-column-right {
@@ -176,7 +174,7 @@
 
 .half-column {
     align-items: flex-start;
-    max-width: 482px;
+    max-width: 49.5%;
 }
 
 .border {

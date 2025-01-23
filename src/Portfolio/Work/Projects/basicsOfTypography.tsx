@@ -16,17 +16,17 @@ export default function BasicsOfTypography() {
                     committing to creative decisions, which is where I most often get
                     stuck in the design process. During this one day, I successfully
                     gathered and categorized all the information, drafted, and brought
-                    to life this poster that you see below (along with getting lots and
-                    lots of practice with the Pathfinder tool in Illustrator).
+                    to life this poster that you see below (along with getting lots of
+                    practice with the Pathfinder tool in Illustrator).
                 </p>
             </div>
 
             <div className="project-content-rest">
-                <div className="type-container">
+                <div className="two-col">
                     <img src="images/work/typography.jpg" alt="" width="48.84%" />
                     <div className="type-column-right">
-                        <img className="crop-image" src="images/work/type_defg.jpg" alt="" width="100%" height="310px"/>
-                        <img className="crop-image" src="images/work/type_serif.jpg" alt="" width="100%" height="310px"/>
+                        <img className="crop-image" src="images/work/type_defg.jpg" alt="" width="100%"/>
+                        <img className="crop-image" src="images/work/type_serif.jpg" alt="" width="100%"/>
                     </div>
                 </div>
             </div>
