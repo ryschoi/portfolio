@@ -8,7 +8,7 @@ import Footer from "./Footer";
 import Rockumentary from "./Work/Projects/rockumentary";
 import Morningtide from "./Work/Projects/morningtide";
 import TextDiagram from "./Work/Projects/textDiagram";
-import SnakebiteProject from "./Work/Projects/snakebiteResponse";
+import SnakebiteReponse from "./Work/Projects/snakebiteResponse";
 import DissonantHarmony from "./Work/Projects/dissonantHarmony";
 import SunFall from "./Work/Projects/sunFall";
 import SnakebiteData from "./Work/Projects/snakebiteData";
@@ -32,7 +32,7 @@ export default function Home() {
         <Route path="/Work/Projects/rockumentary" element={<Rockumentary />} />
         <Route path="/Work/Projects/morningtide" element={<Morningtide />} />
         <Route path="/Work/Projects/textDiagram" element={<TextDiagram />} />
-        <Route path="/Work/Projects/snakebiteProject" element={<SnakebiteProject />} />
+        <Route path="/Work/Projects/snakebiteResponse" element={<SnakebiteReponse />} />
         <Route path="/Work/Projects/dissonantHarmony" element={<DissonantHarmony />} />
         <Route path="/Work/Projects/sunFall" element={<SunFall />} />
         <Route path="/Work/Projects/snakebiteData" element={<SnakebiteData />} />

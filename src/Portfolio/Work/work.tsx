@@ -5,118 +5,72 @@ import "./work.css";
 export default function Work() {
   return (
     <div id="port-work">
-      <p id="port-home-blurb">
-        {/* Lover of tech, design, and data. */}
-
-
-        {/* Experienced in UI/UX, information design, web development, and data analysis & visualization. */}
+      <h1 id="port-home-blurb">
+        {/* 
+        Experienced in...<br />
+        conducting user research,<br />
+        designing clean and user-friendly interfaces,<br />
+        crafting compelling data stories,<br />
+        and writing efficient and maintainable code.<br />*/}
 
         Experienced in UI/UX, information design, web development, and
         data analysis & visualization.
         Eager to combine tech, design, and data to create something novel and meaningful.
         {/* Designing with the intention to ensure quality, functional products and satisfied users. */}
 
-
         {/* Old blurb */}
         {/* Graphic & information design, UI, UX, data visualization, etc. I thrive at the
         intersection of design and technology and create solutions that strike the balance
         between systematic order and creative freedom. */}
-      </p>
+      </h1>
 
       {/* <Filters /> */}
+
       <div id="port-work-content">
         <div className="work-images-columns">
-
-          <div className="hover-container">
-            <Link to="/Portfolio/Work/Projects/rockumentary">
-              <img className="hover-img" src="images/work/rockumentary.png" alt="" />
-              <div className="hover-overlay">
-                <p className="hover-text">Rockumentary<br />
-                  {/* ---<br />
-                  Senior recital poster for a Berklee College of Music student */}
-                </p>
-              </div>
-            </Link>
-          </div>
-          <div className="hover-container">
-            <Link to="/Portfolio/Work/Projects/textDiagram">
-              <img className="hover-img" src="images/work/textDiagramColor.png" alt="" />
-              <div className="hover-overlay">
-                <p className="hover-text">Text Diagram</p>
-              </div>
-            </Link>
-          </div>
-          <div className="hover-container">
-            <Link to="/Portfolio/Work/Projects/myFavoriteThings">
-              <img className="hover-img" src="images/work/page 3.jpg" alt="" />
-              <div className="hover-overlay">
-                <p className="hover-text">My Favorite Things Dossier</p>
-              </div>
-            </Link>
-          </div>
-          {/* <div className="hover-container">
-            <Link to="/Portfolio/Work/Projects/sunFall">
-              <img className="hover-img" src="images/work/sunfall.jpg" alt="" />
-              <div className="hover-overlay">
-                <p className="hover-text">sun fall</p>
-              </div>
-            </Link>
-          </div> */}
+          <Link to="/Portfolio/Work/Projects/rockumentary">
+            <img src="images/work/rockumentary.png" alt="" width="100%" />
+            <p className="project-name">Rockumentary</p>
+            <p className="description">2024 • Graphic Design</p>
+          </Link>
+          <Link to="/Portfolio/Work/Projects/dissonantHarmony">
+            <img className="" src="images/work/calder.png" alt="" width="100%" />
+            <p className="project-name">Dissonant Harmony</p>
+            <p className="description">2024 • Graphic Design</p>
+          </Link>
+          <Link to="/Portfolio/Work/Projects/textDiagram">
+            <img src="images/work/textDiagramColor.png" alt="" width="100%" />
+            <p className="project-name">Text Diagram</p>
+            <p className="description">2024 • Information Design</p>
+          </Link>
+          <Link to="/Portfolio/Work/Projects/myFavoriteThings">
+            <img src="images/work/page 3.jpg" alt="" width="100%" />
+            <p className="project-name">"My Favorite Things" Research Dossier</p>
+            <p className="description">2024 • Information Design</p>
+          </Link>
         </div>
 
         <div className="work-images-columns">
-          <div className="hover-container">
-            <Link to="/Portfolio/Work/Projects/snakebiteProject">
-              <img className="hover-img" src="images/work/snakebitePrevention.png" alt="" />
-              <div className="hover-overlay">
-                <p className="hover-text">Snakebite Response Poster<br />
-                </p>
-              </div>
-            </Link>
-          </div>
-          <div className="hover-container">
-            <Link to="/Portfolio/Work/Projects/snakebiteData">
-              <img className="hover-img" src="images/work/snakebiteData.png" alt="" />
-              <div className="hover-overlay">
-                <p className="hover-text">Snakebite Data Story Poster</p>
-              </div>
-            </Link>
-          </div>
-          <div className="hover-container">
-            <Link to="/Portfolio/Work/Projects/designPhilosophy">
-              <img className="border hover-img" src="images/work/quote1.png" alt="" />
-              <div className="hover-overlay">
-                <p className="hover-text">Design Philosophy</p>
-              </div>
-            </Link>
-          </div>
-          {/* <div className="hover-container">
-            <Link to="/Portfolio/Work/Projects/morningtide">
-              <img className="hover-img" src="images/work/morningtide.png" alt="" />
-              <div className="hover-overlay">
-                <p className="hover-text">Morningtide</p>
-              </div>
-            </Link>
-          </div> */}
-        </div>
-
-        <div className="work-images-columns">
-          <div className="hover-container">
-            <Link to="/Portfolio/Work/Projects/dissonantHarmony">
-              <img className="hover-img" src="images/work/calder.png" alt="" />
-              <div className="hover-overlay">
-                <p className="hover-text">Dissonant Harmony</p>
-              </div>
-            </Link>
-          </div>
-          <div className="hover-container">
-            <Link to="/Portfolio/Work/Projects/basicsOfTypography">
-              <img className="hover-img" src="images/work/typography.jpg" alt="" />
-              <div className="hover-overlay">
-                <p className="hover-text">Basics of Typography</p>
-              </div>
-            </Link>
-          </div>
+          <Link to="/Portfolio/Work/Projects/snakebiteResponse">
+            <img src="images/work/snakebitePrevention.png" alt="" width="100%" />
+            <p className="project-name">Snakebite Response Poster</p>
+            <p className="description">2024 • Information Design</p>
+          </Link>
+          <Link to="/Portfolio/Work/Projects/snakebiteData">
+            <img src="images/work/snakebiteData.png" alt="" width="100%" />
+            <p className="project-name">Snakebite Data Story Poster</p>
+            <p className="description">2024 • Information Design</p>
+          </Link>
+          <Link to="/Portfolio/Work/Projects/basicsOfTypography">
+            <img className="" src="images/work/typography.jpg" alt="" width="100%" />
+            <p className="project-name">Basics of Typography</p>
+            <p className="description">2024 • Graphic Design</p>
+          </Link>
+          <Link to="/Portfolio/Work/Projects/designPhilosophy">
+            <img className="border" src="images/work/quote1.png" alt="" width="100%" />
+            <p className="project-name">Design Philosophy</p>
+            <p className="description">2024 • Typography</p>
+          </Link>
         </div>
       </div >
     </div >

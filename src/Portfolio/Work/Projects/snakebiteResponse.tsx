@@ -1,4 +1,5 @@
 import "./projects.css";
+import { Link } from "react-router-dom";
 
 export default function snakebiteResponse() {
     return (
@@ -13,7 +14,14 @@ export default function snakebiteResponse() {
                     </p>
                 </div>
                 <p className="project-heading-des">
-                    Description coming soon
+                    A simple, illustration-based informational poster intended to be
+                    able to be used by residents of Botswana. The project entailed researching the
+                    ways to help prevent fatal encounters with snakes specially in Botswana / southern Africa,
+                    organizing information into different sections and writing concise actionable steps, and
+                    finally creating the visual components of the poster. Wallet cards compile poster information
+                    into small folding panels that would be able to kept for easy access throughout the day.<br /><br />
+                    This was one of two projects for my Information Design studio class I took
+                    in Fall 2024. See the second project, a data story poster <Link to="/Portfolio/Work/Projects/snakebiteData" className="underline">here</Link>. 
                 </p>
 
             </div>
@@ -25,7 +33,7 @@ export default function snakebiteResponse() {
                         <span className="italic">A2 size</span>
                     </p>
                     <img src="images/work/snakebitePrevention.png" alt="" width="100%" />
-                    <div className="two-col">
+                    {/* <div className="two-col">
                         <p className="calder-col">
                             I went with the theme of a deconstructed sculpture which I
                             created by first tracing over an image of Big Crinkly using
@@ -41,12 +49,12 @@ export default function snakebiteResponse() {
                             (literally) by showing the actual constructing of the sculpture,
                             from separate pieces to one body.
                         </p>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className="basic-container">
                     <p className="section-titles">
-                        Snakebite response supporting wallet cards<br />
+                        Supplementary wallet cards<br />
                         <span className="italic">Folding panels of 88 x 55 mm</span>
                     </p>
                     <img src="images/work/snakebiteWallet.png" alt="" width="25%" />

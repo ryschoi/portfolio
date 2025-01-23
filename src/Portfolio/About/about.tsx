@@ -2,7 +2,7 @@ import "./about.css";
 export default function About() {
   return (
     <div id="port-about">
-      <img id="headshot" alt="Headshot" src="images/headshot.png" />
+      <img id="headshot" alt="Headshot" src="images/headshot.jpg" />
 
       <div id="about-text">
         <p id="about-me">
@@ -17,11 +17,11 @@ export default function About() {
        
           <span>Hi, I'm Rebecca!</span><br /><br />
           
-          I am a second-year student studying Computer Science
+          I'm currently a second-year student studying Computer Science
           and Design at Northeastern University in Boston.<br /><br />
 
           I am passionate about understanding how people think and behave. In design,
-          I have found a discipline where can apply my insights and fuel my passion.
+          I have found a discipline where I can apply my insights and fuel my passion.
           Whether it's through a development project or a visual design, I work with the human nature in mind,
           aiming to create quality products that new users can interact with in a familiar way.<br /><br />
           

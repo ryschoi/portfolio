@@ -1,4 +1,5 @@
 import "./projects.css";
+import { Link } from "react-router-dom";
 
 export default function SnakebiteData() {
     return (
@@ -13,7 +14,10 @@ export default function SnakebiteData() {
                     </p>
                 </div>
                 <p className="project-heading-des">
-                    Description coming soon
+                    Analyzed over seven data sets to construct a story behind the link between 
+                    certain climate conditions and countries with high rates of snakebite. <br /><br />
+                    This is the second project of my Information Design studio class in Fall 2024. 
+                    See the first project, a <Link to="/Portfolio/Work/Projects/snakebiteResponse" className="underline">"Snakebite Prevention in Botswana"</Link> project.
                 </p>
 
             </div>

@@ -6,7 +6,7 @@ export default function DissonantHarmony() {
             <div className="project-heading">
                 <div className="project-heading-left">
                     <h1 className="project-heading-title">
-                        Museum Exhibition Materials
+                        Dissonant Harmony
                     </h1>
                     <p className="project-heading-details gray">
                         April 2024<br />Graphic Design  |  Typography

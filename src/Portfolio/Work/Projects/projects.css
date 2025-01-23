@@ -16,11 +16,7 @@
 }
 
 .project-heading-title {
-    font-size: 32px;
-    font-weight: 600;
-    color: #333f48;
     max-width: 484px;
-    line-height: 110%;
 }
 
 .project-heading-left {
@@ -189,4 +185,8 @@
 
 #space-above {
     margin-top: 22px;
+}
+
+.project-heading-des Link {
+    text-decoration: underline;
 }
