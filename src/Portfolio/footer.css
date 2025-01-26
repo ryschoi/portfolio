@@ -1,39 +1,3 @@
-/* #footer {
-    margin-top: 150px;
-    margin-bottom: 80px;
-}
-
-#footer hr {
-    margin-top: 40px;
-    margin-bottom: 35px;
-}
-
-#footer-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#footer-content p {
-    max-width: 389px;
-}
-
-#footer-contact a {
-    text-decoration: none;
-}
-
-#footer-image {
-    object-fit: contain;
-}
-
-#footer-text {
-    line-height: 20px;
-}
-
-#footer-content Link {
-    display: inline;
-} */
-
 #footer {
     margin-top: 175px;
     display: flex;

@@ -31,22 +31,22 @@ export default function Work() {
           <Link to="/Portfolio/Work/Projects/rockumentary">
             <img src="images/work/rockumentary.png" alt="" width="100%" />
             <p className="project-name">Rockumentary</p>
-            <p className="description">2024 • Graphic Design</p>
+            <p className="gray">2024 • Graphic Design</p>
           </Link>
           <Link to="/Portfolio/Work/Projects/dissonantHarmony">
             <img className="" src="images/work/calder.png" alt="" width="100%" />
             <p className="project-name">Dissonant Harmony</p>
-            <p className="description">2024 • Graphic Design</p>
+            <p className="gray">2024 • Graphic Design</p>
           </Link>
           <Link to="/Portfolio/Work/Projects/textDiagram">
             <img src="images/work/textDiagramColor.png" alt="" width="100%" />
             <p className="project-name">Text Diagram</p>
-            <p className="description">2024 • Information Design</p>
+            <p className="gray">2024 • Information Design</p>
           </Link>
           <Link to="/Portfolio/Work/Projects/myFavoriteThings">
             <img src="images/work/page 3.jpg" alt="" width="100%" />
             <p className="project-name">"My Favorite Things" Research Dossier</p>
-            <p className="description">2024 • Information Design</p>
+            <p className="gray">2024 • Information Design</p>
           </Link>
         </div>
 
@@ -54,22 +54,22 @@ export default function Work() {
           <Link to="/Portfolio/Work/Projects/snakebiteResponse">
             <img src="images/work/snakebitePrevention.png" alt="" width="100%" />
             <p className="project-name">Snakebite Response Poster</p>
-            <p className="description">2024 • Information Design</p>
+            <p className="gray">2024 • Information Design</p>
           </Link>
           <Link to="/Portfolio/Work/Projects/snakebiteData">
             <img src="images/work/snakebiteData.png" alt="" width="100%" />
             <p className="project-name">Snakebite Data Story Poster</p>
-            <p className="description">2024 • Information Design  |  Data analysis  |  Data visualization</p>
+            <p className="gray">2024 • Information Design  |  Data analysis  |  Data visualization</p>
           </Link>
           <Link to="/Portfolio/Work/Projects/basicsOfTypography">
             <img className="" src="images/work/typography.jpg" alt="" width="100%" />
             <p className="project-name">Basics of Typography</p>
-            <p className="description">2024 • Graphic Design</p>
+            <p className="gray">2024 • Graphic Design</p>
           </Link>
           <Link to="/Portfolio/Work/Projects/designPhilosophy">
             <img className="border" src="images/work/quote1.png" alt="" width="100%" />
             <p className="project-name">Design Philosophy</p>
-            <p className="description">2024 • Typography</p>
+            <p className="gray">2024 • Typography</p>
           </Link>
         </div>
       </div >
