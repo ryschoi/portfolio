@@ -2,7 +2,6 @@
   font-size: 20px;
   line-height: 22px;
   margin-left: 50px;
-  color: #333F48;
   text-decoration: none;
 }
 
@@ -11,7 +10,7 @@ a:visited {
 }
 
 .nav-active {
-  color: #939314;
+  color: #abab11;
 }
 
 #navbar {
