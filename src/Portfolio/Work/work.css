@@ -2,14 +2,14 @@
     margin-top: 25px;
     display: flex;
     flex-direction: row;
-    gap: 28px;
+    gap: 32px;
     align-items: flex-start;
 }
 
 .work-images-columns {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: 32px;
     width: 48%;
 }
 
@@ -19,8 +19,8 @@
 }
 
 .project-name {
-    margin-top: 6px;
-    margin-bottom: 2px;
+    margin-top: 8px;
+    margin-bottom: 4px;
     font-size: 20px;
 }
 

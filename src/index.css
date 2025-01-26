@@ -36,7 +36,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /* background-color: #f4f4f4; */
   /* background-color: #fffefa; */
-  background-color: #fcfcfc;
+  background-color: #ffffff;
 }
 
 * {
@@ -77,8 +77,10 @@ a:hover {
 }
 
 h1 {
-    font-size: 32px;
-    font-weight: 650;
-    line-height: 36px;
+    /* font-size: 32px;
+    line-height: 36px; */
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 450;
     margin-bottom: 55px;
 }

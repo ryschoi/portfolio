@@ -15,7 +15,9 @@ export default function About() {
           Designing with the intention to ensure quality, functional products and satisfied users. */}
        
        
-          <span>Hi, I'm Rebecca!</span><br /><br />
+          <span>Hi, I'm Rebecca!</span>
+          
+          <br /><br />
           
           I'm currently a second-year student studying Computer Science
           and Design at Northeastern University in Boston.<br /><br />
@@ -25,7 +27,7 @@ export default function About() {
           Whether it's through a development project or a visual design, I work with the human nature in mind,
           aiming to create quality products that new users can interact with in a familiar way.<br /><br />
           
-          I am eager to combine tech, design, and data to create something novel and meaningful for our world.
+          I am experienced in UI/UX, design, web development, and data visualization, but open to being a part of anything that can combine tech, design, and data to create something meaningful and useful for our world.
         </p>
 
         <div id="contact-group">

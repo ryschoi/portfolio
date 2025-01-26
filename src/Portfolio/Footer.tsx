@@ -14,7 +14,7 @@ export default function Footer() {
         <div id="footer">
             <div>
                 <Link to="/Portfolio/Home" id="navbar-home-link"><img src="images/name_new.png" alt="Logo" width="110" /></Link>
-                <p className="gray">UI/UX, information design, web development, and data analysis & visualization</p>
+                <p id="skills" className="gray">UI/UX, information design, web development, data analysis & visualization</p>
             </div>
             <div id="navbar-items">
                 {links.map((page) => (

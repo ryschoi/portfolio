@@ -30,6 +30,11 @@ export default function SnakebiteData() {
                     <div className="basic-items">
                         <img src="images/work/snakebiteData.png" alt="" width="100%" />
                     </div>
+                    {/* <div className="basic-items">
+                        <img src="images/work/snakebiteData1.png" alt="" width="32%"/>
+                        <img src="images/work/snakebiteData2.png" alt="" width="32%" />
+                        <img src="images/work/snakebiteData3.png" alt="" width="32%" />
+                    </div> */}
                 </div>
             </div>
         </div>

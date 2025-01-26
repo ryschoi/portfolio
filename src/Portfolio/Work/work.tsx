@@ -6,17 +6,17 @@ export default function Work() {
   return (
     <div id="port-work">
       <h1 id="port-home-blurb">
-        {/* 
-        Experienced in...<br />
+        
+        {/* Experienced in...<br />
         conducting user research,<br />
         designing clean and user-friendly interfaces,<br />
         crafting compelling data stories,<br />
-        and writing efficient and maintainable code.<br />*/}
+        and writing efficient and maintainable code.<br /> */}
 
-        Experienced in UI/UX, information design, web development, and
-        data analysis & visualization.
-        Eager to combine tech, design, and data to create something novel and meaningful.
+        {/* Experienced in UI/UX, information design, web development, and data analysis & visualization. */}
+        Looking to combine tech, design, and data to create something meaningful and useful.
         {/* Designing with the intention to ensure quality, functional products and satisfied users. */}
+
 
         {/* Old blurb */}
         {/* Graphic & information design, UI, UX, data visualization, etc. I thrive at the
