@@ -59,7 +59,7 @@ export default function Work() {
           <Link to="/Portfolio/Work/Projects/snakebiteData">
             <img src="images/work/snakebiteData.png" alt="" width="100%" />
             <p className="project-name">Snakebite Data Story Poster</p>
-            <p className="description">2024 • Information Design</p>
+            <p className="description">2024 • Information Design  |  Data analysis  |  Data visualization</p>
           </Link>
           <Link to="/Portfolio/Work/Projects/basicsOfTypography">
             <img className="" src="images/work/typography.jpg" alt="" width="100%" />
