@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 export default function snakebiteResponse() {
     return (
         <div className="project-content" id="project-content-rockumentary">
-            <div className="project-heading">
-                <div className="project-heading-left">
+            <div className="row-space-between">
+                <div className="col-space-between">
                     <h1 className="project-heading-title">
                         Snakebite Response Poster
                     </h1>
@@ -27,14 +27,14 @@ export default function snakebiteResponse() {
             </div>
 
             <div className="project-content-rest">
-                <div className="basic-container">
+                <div className="col22">
                     <p className="section-titles">
                         Snakebite Response Poster<br />
                         <span className="italic">A2 size</span>
                     </p>
                     <img src="images/work/snakebitePrevention.png" alt="" width="100%" />
-                    {/* <div className="two-col">
-                        <p className="calder-col">
+                    {/* <div className="row22">
+                        <p className="half-column">
                             I went with the theme of a deconstructed sculpture which I
                             created by first tracing over an image of Big Crinkly using
                             the Pen tool and then separating it by its individual parts.
@@ -42,7 +42,7 @@ export default function snakebiteResponse() {
                             of “dissonant”–that all the individual pieces of the whole
                             sculpture are on their own dissonant. All a little random, a
                         </p>
-                        <p className="calder-col">
+                        <p className="half-column">
                             little rough-cut, jagged almost. But somehow coming together
                             and creating harmony. The gif in the Instagram post is my favorite
                             part of this project because I think it brings everything together
@@ -52,27 +52,27 @@ export default function snakebiteResponse() {
                     </div> */}
                 </div>
 
-                <div className="basic-container">
+                <div className="col22">
                     <p className="section-titles">
                         Supplementary wallet cards<br />
                         <span className="italic">Folding panels of 88 x 55 mm</span>
                     </p>
                     <img src="images/work/snakebiteWallet.png" alt="" width="25%" />
-                    <div className="basic-items">
+                    <div className="row22">
                         <img src="images/work/snakebiteWallet1.png" alt="" width="33%" />
                         <img src="images/work/snakebiteWallet2.png" alt="" width="33%" />
                         <img src="images/work/snakebiteWallet3.png" alt="" width="33%" />
                     </div>
-                    <div className="basic-items">
+                    <div className="row22">
                         <img src="images/work/snakebiteWallet4.png" alt="" width="33%" />
                         <img src="images/work/snakebiteWallet5.png" alt="" width="33%" />
                         <img src="images/work/snakebiteWallet6.png" alt="" width="33%" />
                     </div>
                 </div>
 
-                <div className="basic-container slim">
+                <div className="col22 slim">
                     <p className="section-titles">Previous iterations in print form</p>
-                    <div className="basic-items basic-items-center">
+                    <div className="row22 row22-center">
                         <img src="images/work/snakebiteWalletVersions.png" alt="" width="100%" />
                     </div>
                 </div>

@@ -3,8 +3,8 @@ import "./projects.css";
 export default function TextDiagram() {
     return (
         <div className="project-content" id="project-content-rockumentary">
-            <div className="project-heading">
-                <div className="project-heading-left">
+            <div className="row-space-between">
+                <div className="col-space-between">
                     <h1 className="project-heading-title">Text Diagram</h1>
                     <p className="project-heading-details gray">
                         February 2024<br />Information design  | Typography
@@ -25,11 +25,14 @@ export default function TextDiagram() {
             </div>
 
 
-            <div className="project-rest-align-left">
-                <img className="crop-image" src="images/work/textDiagramBW.png" alt="" width="100%" />
-                <p className="gray space-after">Grayscale version used for submission</p>
-                <img className="crop-image" src="images/work/textDiagramColor.png" alt="" width="100%" />
-                <p className="gray space-after">Lightly colored version for myself</p>
+            <div className="project-content-rest">
+                <div className="col22">
+                    <p className="section-titles">Grayscale version used for submission</p>
+                    <img className="crop-image" src="images/work/textDiagramBW.png" alt="" width="100%" />
+                    <p className="section-titles">Lightly colored version for myself</p>
+                    <img className="crop-image" src="images/work/textDiagramColor.png" alt="" width="100%" />
+                </div>
+
             </div>
         </div>
     );

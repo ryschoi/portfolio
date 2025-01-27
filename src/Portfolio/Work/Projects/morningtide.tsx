@@ -3,8 +3,8 @@ import "./projects.css";
 export default function Morningtide() {
     return (
         <div className="project-content" id="project-content-rockumentary">
-            <div className="project-heading">
-            <div className="project-heading-left">
+            <div className="row-space-between">
+            <div className="col-space-between">
                 <h1 className="project-heading-title">Morningtide</h1>
                 <p className="project-heading-details gray">2022<br />Graphic Design</p>
                 </div>

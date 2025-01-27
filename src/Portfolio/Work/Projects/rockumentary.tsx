@@ -3,8 +3,8 @@ import "./projects.css";
 export default function Rockumentary() {
     return (
         <div className="project-content" id="project-content-rockumentary">
-            <div className="project-heading">
-                <div className="project-heading-left">
+            <div className="row-space-between">
+                <div className="col-space-between">
                     <h1 className="project-heading-title">Rockumentary</h1>
                     <p className="project-heading-details gray">June 2024<br />Graphic design  |  Concept/brand</p>
                 </div>
@@ -26,12 +26,12 @@ export default function Rockumentary() {
 
 
             <div className="project-content-rest">
-                <div className="basic-container">
+                <div className="col22">
                     <img src="images/work/rockumentary.png" alt="" width="100%" />
 
-                    <div className="basic-items">
-                        <div className="basic-container-align-left two-third-column">
-                            <div className="basic-items">
+                    <div className="row22">
+                        <div className="col22-align-left two-third-column">
+                            <div className="row22">
                                 <img className="crop-image" src="images/work/rockumentary sketches.png" alt="" width="48.25%" height="200px" />
                                 <img className="crop-image" src="images/work/rock_writing.png" alt="" width="48.25%" height="200px" />
                             </div>
@@ -49,7 +49,7 @@ export default function Rockumentary() {
                             </div>
                             <p>The reference photo versus the drawing</p>
                         </div>
-                        <div className="basic-container third-column">
+                        <div className="col22 third-column">
                             <img className="crop-image" src="images/work/rock_ver1.jpg" alt="" width="100%" />
                             <img src="images/work/rock_corner.png" alt="" width="100%" />
                             <p>

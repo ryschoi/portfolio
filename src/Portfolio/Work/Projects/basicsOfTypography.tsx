@@ -3,8 +3,8 @@ import "./projects.css";
 export default function BasicsOfTypography() {
     return (
         <div className="project-content">
-            <div className="project-heading">
-                <div className="project-heading-left">
+            <div className="row-space-between">
+                <div className="col-space-between">
                     <h1 className="project-heading-title">Basics of Typography</h1>
                     <p className="project-heading-details gray">
                         June 2024<br />Information design  |  Typography
@@ -22,9 +22,9 @@ export default function BasicsOfTypography() {
             </div>
 
             <div className="project-content-rest">
-                <div className="two-col">
+                <div className="row22">
                     <img src="images/work/typography.jpg" alt="" width="48.84%" />
-                    <div className="type-column-right">
+                    <div className="col22">
                         <img className="crop-image" src="images/work/type_defg.jpg" alt="" width="100%"/>
                         <img className="crop-image" src="images/work/type_serif.jpg" alt="" width="100%"/>
                     </div>

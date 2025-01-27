@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 export default function SnakebiteData() {
     return (
         <div className="project-content" id="project-content-rockumentary">
-            <div className="project-heading">
-                <div className="project-heading-left">
+            <div className="row-space-between">
+                <div className="col-space-between">
                     <h1 className="project-heading-title">
                         Snakebite Data Story Poster
                     </h1>
@@ -23,14 +23,14 @@ export default function SnakebiteData() {
             </div>
 
             <div className="project-content-rest">
-                <div className="basic-container">
+                <div className="col22">
                     <p className="section-titles">Snakebite Data Story<br />
                         <span className="italic">A2 size</span>
                     </p>
-                    <div className="basic-items">
+                    <div className="row22">
                         <img src="images/work/snakebiteData.png" alt="" width="100%" />
                     </div>
-                    <div className="basic-items">
+                    <div className="row22">
                         <img className="crop-image" src="images/work/snakebiteData1.png" alt="" height="250px" width="32%"/>
                         <img className="crop-image" src="images/work/snakebiteData2.png" alt="" height="250px" width="32%"/>
                         <img className="crop-image" src="images/work/snakebiteData3.png" alt="" height="250px" width="32%" />

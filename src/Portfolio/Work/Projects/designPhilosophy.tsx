@@ -3,8 +3,8 @@ import "./projects.css";
 export default function DesignPhilosophy() {
     return (
         <div className="project-content">
-            <div className="project-heading">
-                <div className="project-heading-left">
+            <div className="row-space-between">
+                <div className="col-space-between">
                     <h1 className="project-heading-title">Design Philosophy</h1>
                     <p className="project-heading-details gray">February 2024<br />Typography</p>
                 </div>
@@ -19,8 +19,8 @@ export default function DesignPhilosophy() {
                 </p>
             </div>
             <div className="project-content-rest">
-                <div className="basic-items">
-                    <div className="basic-container half-column">
+                <div className="row22">
+                    <div className="col22 half-column">
                         <div>
                             <img className="border" src="images/work/quote1.png" alt="" width="100%" />
                             <p>Illustration of eye and hand, the ways you see and feel things</p>
@@ -35,7 +35,7 @@ export default function DesignPhilosophy() {
                                 the reader from seeing the important truth that “design is how it works”</p>
                         </div>
                     </div>
-                    <div className="basic-container half-column">
+                    <div className="col22 half-column">
                         <div>
                             <img className="border" src="images/work/desphil_3.png" alt="" width="100%" />
                             <p>Representing “looks like” and “feels like” in over-exaggerated styles to both 
