@@ -8,7 +8,7 @@ export default function DesignPhilosophy() {
                     <h1 className="project-heading-title">Design Philosophy</h1>
                     <p className="project-heading-details gray">February 2024<br />Typography</p>
                 </div>
-                <p className="project-heading-des">
+                <p className="description">
                     “Design is not just what it looks like and feels like. Design is
                     how it works.” -Steve Jobs is my design philosophy and the quote
                     that these cut up, layered, and rotated words represent. This project

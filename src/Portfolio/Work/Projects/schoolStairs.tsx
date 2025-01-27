@@ -8,7 +8,7 @@ export default function SchoolStairs() {
                     <h1 className="project-heading-title">Stairs Design for Albany High School</h1>
                     <p className="project-heading-details gray" id="space-above">May 2022<br />Graphic Design  |  Concept/brand</p>
                 </div>
-                <p className="project-heading-des">
+                <p className="description">
                     A 15-panel vinyl design for my high school’s main stairs that celebrates various highlights from the past school year, fostering unity and school pride.
                     This design was a project in my graphic design class, and between two classes, voted on to be printed and installed.
                 </p>

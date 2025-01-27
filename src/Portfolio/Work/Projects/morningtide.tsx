@@ -8,7 +8,7 @@ export default function Morningtide() {
                 <h1 className="project-heading-title">Morningtide</h1>
                 <p className="project-heading-details gray">2022<br />Graphic Design</p>
                 </div>
-                <p className="project-heading-des">
+                <p className="description">
                     This was a spec ad poster I made in high school for a local business
                     as part of my first graphic design class. I created the concept of this
                     poster based on the minimal and warm feel of the store. The logo is the

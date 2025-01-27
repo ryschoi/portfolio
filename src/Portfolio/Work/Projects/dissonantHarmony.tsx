@@ -12,7 +12,7 @@ export default function DissonantHarmony() {
                         April 2024<br />Graphic Design  |  Typography
                     </p>
                 </div>
-                <p className="project-heading-des">
+                <p className="description">
                     Little did I know on the one Saturday afternoon in 2018 that our
                     family paid a visit to the SFMoMA that years later I would design mock
                     exhibition materials for one of the sculptures I had seen that day.

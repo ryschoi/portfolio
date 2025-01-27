@@ -8,7 +8,7 @@ export default function Rockumentary() {
                     <h1 className="project-heading-title">Rockumentary</h1>
                     <p className="project-heading-details gray">June 2024<br />Graphic design  |  Concept/brand</p>
                 </div>
-                <div className="project-heading-des">
+                <div className="description">
                     <p>
                         The invitation for one of my greatest honors as a designer came one summer
                         Friday afternoon when a good friend of mine at the Berklee College of Music

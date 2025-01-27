@@ -1,27 +1,26 @@
-#headshot {
-  width: 412px;
-  margin: 0;
-}
-
-#port-about {
+#about {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
 }
 
-#about-text {
+#headshot {
+  width: 412px;
+}
+
+#text {
   margin-top: 80px;
   margin-left: 100px;
   margin-right: 100px;
   max-width: 480px;
 }
 
-#about-me {
+#bio {
   max-width: 60ch;
 }
 
-#contact-group {
+#contact {
   display: flex;
   flex-direction: row;
   margin-top: 40px;
@@ -32,16 +31,11 @@
   margin-left: 20px;
 }
 
-#port-about a {
-  text-decoration: underline;
-  align-self: baseline;
-}
-
 #no-underline {
   text-decoration: none;
 }
 
-#about-me span {
+#bio span {
   font-size: 24px;
   line-height: 36px;
   font-weight: 450;

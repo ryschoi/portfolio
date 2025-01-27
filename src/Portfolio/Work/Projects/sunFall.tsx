@@ -8,7 +8,7 @@ export default function SunFall() {
                     <h1 className="project-heading-title">Sun Fall</h1>
                     <p className="project-heading-details gray">2022<br />Graphic Design</p>
                 </div>
-                <p className="project-heading-des">
+                <p className="description">
                     A book cover I created for a fake book, from concept to execution.
                     Part of my first graphic design class in high school.
                 </p>

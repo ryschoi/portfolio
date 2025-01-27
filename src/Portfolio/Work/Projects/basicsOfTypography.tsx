@@ -10,7 +10,7 @@ export default function BasicsOfTypography() {
                         June 2024<br />Information design  |  Typography
                     </p>
                 </div>
-                <p className="project-heading-des">
+                <p className="description">
                     As someone who starts many more projects than I complete, this 24-hour
                     challenge was the perfect way to give myself practice in making and
                     committing to creative decisions, which is where I most often get

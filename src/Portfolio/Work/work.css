@@ -1,4 +1,9 @@
-#port-work-content {
+#home-blurb {
+    max-width: 800px;
+    margin-bottom: 55px;
+}
+
+#work-content {
     margin-top: 25px;
     display: flex;
     flex-direction: row;
@@ -6,16 +11,11 @@
     align-items: flex-start;
 }
 
-.work-images-columns {
+.work-columns {
     display: flex;
     flex-direction: column;
     gap: 44px;
     width: 48%;
-}
-
-#port-home-blurb {
-    max-width: 800px;
-    margin-bottom: 55px;
 }
 
 .project-name {
@@ -24,14 +24,12 @@
     font-size: 20px;
 }
 
-
-/* Image hover behavior */
-
+/* IMAGE HOVER */
 #port-work-content img:hover {
     opacity: 85%;
 }
 
-/* Filters */
+/* FILTERS */
 
 #work-filters {
     display: inline-flex;

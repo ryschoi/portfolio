@@ -13,7 +13,7 @@ export default function snakebiteResponse() {
                         Dec 2024<br />Information design
                     </p>
                 </div>
-                <p className="project-heading-des">
+                <p className="description">
                     A simple, illustration-based informational poster intended to be
                     able to be used by residents of Botswana. The project entailed researching the
                     ways to help prevent fatal encounters with snakes specially in Botswana / southern Africa,

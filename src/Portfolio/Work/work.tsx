@@ -4,9 +4,8 @@ import "./work.css";
 // import * as projectsDB from "../Database";
 export default function Work() {
   return (
-    <div id="port-work">
-      <h1 id="port-home-blurb">
-        
+    <div id="work">
+      <h1 id="home-blurb">
         {/* Experienced in...<br />
         conducting user research,<br />
         designing clean and user-friendly interfaces,<br />
@@ -17,7 +16,6 @@ export default function Work() {
         Looking to combine tech, design, and data to create something meaningful and useful.
         {/* Designing with the intention to ensure quality, functional products and satisfied users. */}
 
-
         {/* Old blurb */}
         {/* Graphic & information design, UI, UX, data visualization, etc. I thrive at the
         intersection of design and technology and create solutions that strike the balance
@@ -26,8 +24,8 @@ export default function Work() {
 
       {/* <Filters /> */}
 
-      <div id="port-work-content">
-        <div className="work-images-columns">
+      <div id="work-content">
+        <div className="work-columns">
           <Link to="/Portfolio/Work/Projects/rockumentary">
             <img src="images/work/rockumentary.png" alt="" width="100%" />
             <p className="project-name">Rockumentary</p>
@@ -50,7 +48,7 @@ export default function Work() {
           </Link>
         </div>
 
-        <div className="work-images-columns">
+        <div className="work-columns">
           <Link to="/Portfolio/Work/Projects/snakebiteResponse">
             <img src="images/work/snakebitePrevention.png" alt="" width="100%" />
             <p className="project-name">Snakebite Response Poster</p>

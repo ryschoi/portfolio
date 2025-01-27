@@ -11,7 +11,7 @@ export default function TextDiagram() {
                     </p>
                 </div>
 
-                <p className="project-heading-des">
+                <p className="description">
                     This is a map of the information covered in a podcast episode from the
                     podcast “99% Invisible”. This project, focusing on information design,
                     was done in the studio section for Design Process and Practices. It is

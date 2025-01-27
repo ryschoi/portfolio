@@ -13,7 +13,7 @@ export default function SnakebiteData() {
                         Dec 2024<br />Information Design  |  Data analysis  |  Data visualization
                     </p>
                 </div>
-                <p className="project-heading-des">
+                <p className="description">
                     Analyzed over seven data sets to construct a story behind the link between 
                     certain climate conditions and countries with high rates of snakebite. <br /><br />
                     This is the second project of my Information Design studio class in Fall 2024. 
@@ -30,11 +30,11 @@ export default function SnakebiteData() {
                     <div className="basic-items">
                         <img src="images/work/snakebiteData.png" alt="" width="100%" />
                     </div>
-                    {/* <div className="basic-items">
-                        <img src="images/work/snakebiteData1.png" alt="" width="32%"/>
-                        <img src="images/work/snakebiteData2.png" alt="" width="32%" />
-                        <img src="images/work/snakebiteData3.png" alt="" width="32%" />
-                    </div> */}
+                    <div className="basic-items">
+                        <img className="crop-image" src="images/work/snakebiteData1.png" alt="" height="250px" width="32%"/>
+                        <img className="crop-image" src="images/work/snakebiteData2.png" alt="" height="250px" width="32%"/>
+                        <img className="crop-image" src="images/work/snakebiteData3.png" alt="" height="250px" width="32%" />
+                    </div>
                 </div>
             </div>
         </div>
