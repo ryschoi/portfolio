@@ -1,11 +1,13 @@
+import { Link } from "react-router-dom";
 import "./resume.css";
 
 export default function Resume() {
   return (
     <div id="port-resume">
-      <a id="pdf" href="images/Rebecca_Choi_Resume.pdf">
+      <div className="col22">
+        <a className="underline gray" href="images/Rebecca_Choi_Resume.pdf">View as pdf</a>
         <img className="border" src="images/Rebecca_Choi_Resume.png" alt="" width="75%" />
-      </a>
+      </div>
     </div >
   );
 }

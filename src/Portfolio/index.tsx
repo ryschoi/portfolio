@@ -29,7 +29,7 @@ export default function Home() {
         <Route path="/Resume" element={<Resume />} />
         <Route path="/About" element={<About />} />
 
-        <Route path="/Work/Projects/rockumentary" element={<Rockumentary />} />
+        <Route path="/rockumentary" element={<Rockumentary />} />
         <Route path="/Work/Projects/morningtide" element={<Morningtide />} />
         <Route path="/Work/Projects/textDiagram" element={<TextDiagram />} />
         <Route path="/Work/Projects/snakebiteResponse" element={<SnakebiteReponse />} />
