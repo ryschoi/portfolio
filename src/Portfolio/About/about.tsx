@@ -23,10 +23,10 @@ export default function About() {
 
           I am passionate about understanding how people think and behave. In design,
           I have found a discipline where I can apply my insights and fuel my passion.
-          Whether it's through a development project or a visual design, I work with the human nature in mind,
+          Whether it's in coding or visual design, I work with the human nature in mind,
           aiming to create quality products that new users can interact with in a familiar way.<br /><br />
 
-          I am experienced in UI/UX, design, web development, and data visualization, but open to being a part of anything that can combine tech, design, and data to create something meaningful and useful for our world.
+          I am experienced in UI/UX, design, web development, and data visualization, but looking to being a part of anything that can combine tech, design, and data to create something meaningful and useful for our world.
         </p>
 
         <div id="contact">
