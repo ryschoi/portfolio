@@ -1,14 +1,7 @@
 import "./footer.css";
-import { Link, useLocation } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 
 export default function Footer() {
-    const { pathname } = useLocation();
-    const links = [
-        { label: "Work", test: "/", path: `/` },
-        { label: "Resume", test: "/resume", path: `/resume` },
-        { label: "About", test: "/about", path: `/about` }
-    ];
 
     return (
         <div id="footer">
