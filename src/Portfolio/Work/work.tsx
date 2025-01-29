@@ -1,8 +1,19 @@
 import { Link } from "react-router-dom";
 // import Filters from "./Filters";
 import "./work.css";
-// import * as projectsDB from "../Database";
 export default function Work() {
+  const projects = [
+    { id: 1, column: "left", name: "Rockumentary", path: `/rockumentary`, year: 2024, tags: "Graphic design", frontImage: "images/work/rockumentary.png", border: false },
+    { id: 2, column: "left", name: "Dissonant Harmony", path: `/dissonantHarmony`, year: 2024, tags: "Graphic design", frontImage: "images/work/calder.png", border: false },
+    { id: 3, column: "left", name: "Text Diagram", path: `/textDiagram`, year: 2024, tags: "Information design", frontImage: "images/work/textDiagramColor.png", border: false },
+    { id: 4, column: "left", name: "My Favorite Things Research Dossier", path: `/myFavoriteThings`, year: 2024, tags: "Information design", frontImage: "images/work/page 3.jpg", border: false },
+    { id: 5, column: "right", name: "Snakebite Response Poster", path: `/snakebiteResponse`, year: 2024, tags: "Information design", frontImage: "images/work/snakebitePrevention.png", border: false },
+    { id: 6, column: "right", name: "Snakebite Data Story Poster", path: `/snakebiteData`, year: 2024, tags: "Information Design  |  Data analysis  |  Data visualization", frontImage: "images/work/snakebiteData.png", border: false },
+    // { id: 7, column: "right", name: "Radien", path: `/radien`, year: 2024, tags: "UX research | UI/UX", frontImage: "images/work/radien.png", border: false },
+    { id: 8, column: "right", name: "Basics of Typography", path: `/basicsOfTypography`, year: 2024, tags: "Graphic design", frontImage: "images/work/typography.jpg", border: false },
+    { id: 9, column: "right", name: "Design Philosophy", path: `/designPhilosophy`, year: 2024, tags: "Typography", frontImage: "images/work/quote1.png", border: true }
+  ];
+
   return (
     <div id="work">
       <h1 id="home-blurb">
@@ -22,53 +33,29 @@ export default function Work() {
         between systematic order and creative freedom. */}
       </h1>
 
-      {/* <Filters /> */}
-
       <div id="work-content">
         <div className="work-columns">
-          <Link to="/rockumentary">
-            <img src="images/work/rockumentary.png" alt="" width="100%" />
-            <p className="project-name">Rockumentary</p>
-            <p className="gray">2024 • Graphic Design</p>
-          </Link>
-          <Link to="/dissonantHarmony">
-            <img className="" src="images/work/calder.png" alt="" width="100%" />
-            <p className="project-name">Dissonant Harmony</p>
-            <p className="gray">2024 • Graphic Design</p>
-          </Link>
-          <Link to="/textDiagram">
-            <img src="images/work/textDiagramColor.png" alt="" width="100%" />
-            <p className="project-name">Text Diagram</p>
-            <p className="gray">2024 • Information Design</p>
-          </Link>
-          <Link to="/myFavoriteThings">
-            <img src="images/work/page 3.jpg" alt="" width="100%" />
-            <p className="project-name">"My Favorite Things" Research Dossier</p>
-            <p className="gray">2024 • Information Design</p>
-          </Link>
+          {projects
+            .filter((project) => project.column == "left")
+            .map((project) => (
+              <Link to={project.path} key={project.id}>
+                <img src={project.frontImage} alt="" width="100%" className={project.border === true ? "border" : ""}/>
+                <p className="project-name">{project.name}</p>
+                <p className="gray">{project.year} • {project.tags}</p>
+              </Link>
+            ))}
         </div>
 
         <div className="work-columns">
-          <Link to="/snakebiteResponse">
-            <img src="images/work/snakebitePrevention.png" alt="" width="100%" />
-            <p className="project-name">Snakebite Response Poster</p>
-            <p className="gray">2024 • Information Design</p>
-          </Link>
-          <Link to="/snakebiteData">
-            <img src="images/work/snakebiteData.png" alt="" width="100%" />
-            <p className="project-name">Snakebite Data Story Poster</p>
-            <p className="gray">2024 • Information Design  |  Data analysis  |  Data visualization</p>
-          </Link>
-          <Link to="/basicsOfTypography">
-            <img className="" src="images/work/typography.jpg" alt="" width="100%" />
-            <p className="project-name">Basics of Typography</p>
-            <p className="gray">2024 • Graphic Design</p>
-          </Link>
-          <Link to="/designPhilosophy">
-            <img className="border" src="images/work/quote1.png" alt="" width="100%" />
-            <p className="project-name">Design Philosophy</p>
-            <p className="gray">2024 • Typography</p>
-          </Link>
+          {projects
+            .filter((project) => project.column == "right")
+            .map((project) => (
+              <Link to={project.path} key={project.id}>
+                <img src={project.frontImage} alt="" width="100%" className={project.border === true ? "border" : ""}/>
+                <p className="project-name">{project.name}</p>
+                <p className="gray">{project.year} • {project.tags}</p>
+              </Link>
+            ))}
         </div>
       </div >
     </div >

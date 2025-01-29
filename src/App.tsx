@@ -18,6 +18,7 @@ import BasicsOfTypography from "./Portfolio/Work/Projects/basicsOfTypography";
 import MyFavoriteThings from "./Portfolio/Work/Projects/myFavoriteThings";
 import DesignPhilosophy from "./Portfolio/Work/Projects/designPhilosophy";
 import SchoolStairs from "./Portfolio/Work/Projects/schoolStairs";
+import Radien from "./Portfolio/Work/Projects/radien";
 
 
 export default function App() {
@@ -47,6 +48,7 @@ export default function App() {
           <Route path="/myFavoriteThings" element={<MyFavoriteThings />} />
           <Route path="/designPhilosophy" element={<DesignPhilosophy />} />
           <Route path="/schoolStairs" element={<SchoolStairs />} />
+          <Route path="/radien" element={<Radien />} />
         </Routes>
 
         <Footer />
