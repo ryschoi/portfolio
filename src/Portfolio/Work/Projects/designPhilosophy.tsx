@@ -1,8 +1,19 @@
 import "./projects.css";
+import projectHeader from "./projectHeader";
 
 export default function DesignPhilosophy() {
     return (
         <div className="project-content">
+            {/* <projectHeader name={"Design Philosophy"}
+                year={2024}
+                tags={"Typography"}
+                description={"“Design is not just what it looks like and feels like. Design is
+                    how it works.” -Steve Jobs is my design philosophy and the quote
+            that these cut up, layered, and rotated words represent. This project
+            was for my studio for Typographic Systems and was for sure one of
+            the more difficult design projects I’ve done as I was challenged to
+            rethink how I use and orient type to not just be the literal text, 
+                    but to make the design itself."} /> */}
             <div className="row-space-between">
                 <div className="col-space-between">
                     <h1 className="project-heading-title">Design Philosophy</h1>
@@ -14,7 +25,7 @@ export default function DesignPhilosophy() {
                     that these cut up, layered, and rotated words represent. This project
                     was for my studio for Typographic Systems and was for sure one of
                     the more difficult design projects I’ve done as I was challenged to
-                    rethink how I use and orient type to not just be the literal text, 
+                    rethink how I use and orient type to not just be the literal text,
                     but to make the design itself.
                 </p>
             </div>
@@ -31,15 +42,15 @@ export default function DesignPhilosophy() {
                         </div>
                         <div>
                             <img className="border" src="images/work/desphil_2.png" alt="" width="100%" />
-                            <p>The first part of the quote is repeated over and over again to “distract” 
+                            <p>The first part of the quote is repeated over and over again to “distract”
                                 the reader from seeing the important truth that “design is how it works”</p>
                         </div>
                     </div>
                     <div className="col22 half-column">
                         <div>
                             <img className="border" src="images/work/desphil_3.png" alt="" width="100%" />
-                            <p>Representing “looks like” and “feels like” in over-exaggerated styles to both 
-                                make the viewer see and feel the texts, and to convey that sometimes 
+                            <p>Representing “looks like” and “feels like” in over-exaggerated styles to both
+                                make the viewer see and feel the texts, and to convey that sometimes
                                 those aspects can be overdone and detract from the main purpose</p>
                         </div>
                     </div>

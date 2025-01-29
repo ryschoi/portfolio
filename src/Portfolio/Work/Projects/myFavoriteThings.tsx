@@ -1,19 +1,13 @@
 import "./projects.css";
+import { projects } from "../../Database";
+import ProjectHeader from "./projectHeader";
+import { Project } from "./Project";
 
 export default function MyFavoriteThings() {
+    const thisProject = projects.find(p => p._id === 4);
     return (
-        <div className="project-content" id="project-content-rockumentary">
-            <div className="row-space-between">
-                <div className="col-space-between">
-                    <h1 className="project-heading-title">"My Favorite Things" Research Dossier</h1>
-                    <p className="project-heading-details gray">February 2024<br />Graphic Design</p>
-                </div>
-                {/* <p className="description">
-                    When such a big part of designing is critiquing, it is rare that I see that 
-                    there is little left for improvement. This speaker is one of those few, rare cases. 
-                    I am overtaken by how simple yet effective the design is, thereby making it my favorite thing.
-                </p> */}
-            </div>
+        <div className="project-content">
+            <ProjectHeader project={thisProject as Project} />
             <div className="project-content-rest">
                 <div className="col22">
                     <p className="section-titles" id="top-section">Pages 1 - 4</p>

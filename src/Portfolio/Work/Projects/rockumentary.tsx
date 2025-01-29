@@ -1,29 +1,14 @@
 import "./projects.css";
+import { projects } from "../../Database";
+import ProjectHeader from "./projectHeader";
+import { Project } from "./Project";
 
 export default function Rockumentary() {
-    return (
-        <div className="project-content" id="project-content-rockumentary">
-            <div className="row-space-between">
-                <div className="col-space-between">
-                    <h1 className="project-heading-title">Rockumentary</h1>
-                    <p className="project-heading-details gray">June 2024<br />Graphic design  |  Concept/brand</p>
-                </div>
-                <div className="description">
-                    <p>
-                        The invitation for one of my greatest honors as a designer came one summer
-                        Friday afternoon when a good friend of mine at the Berklee College of Music
-                        asked me if I wanted to design the poster for his senior recital. While we
-                        share a love for music, the rock music that he loves is nothing like the
-                        mellow tunes of the music I listen to and embody. Nonetheless, I took this
-                        on as a way to challenge myself to do something of a different feel. After
-                        many FaceTime consultations from coast to coast of the US and getting the drawing of my friend’s iconic
-                        bowl-cut and glasses just right, I ended up with this poster that captures
-                        the boldness of rock, nostalgia of a documentary, and my friend’s personal
-                        brand. “Rockumentary” is the musical documentary of the rock music that shaped his life.
-                    </p>
-                </div>
-            </div>
+    const thisProject = projects.find(p => p._id === 1);
 
+    return (
+        <div className="project-content">
+            <ProjectHeader project={thisProject as Project} />
 
             <div className="project-content-rest">
                 <div className="col22">
@@ -44,8 +29,8 @@ export default function Rockumentary() {
                                 solid colors.
                             </p>
                             <div className="display-block">
-                                <img className="crop-image" src="images/work/rock_seb.jpg" alt="" width="50%" height="390px"/>
-                                <img className="crop-image" src="images/work/upclose_rock.png" alt="" width="50%" height="390px"/>
+                                <img className="crop-image" src="images/work/rock_seb.jpg" alt="" width="50%" height="390px" />
+                                <img className="crop-image" src="images/work/upclose_rock.png" alt="" width="50%" height="390px" />
                             </div>
                             <p>The reference photo versus the drawing</p>
                         </div>

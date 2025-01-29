@@ -1,30 +1,14 @@
 import "./projects.css";
 import { Link } from "react-router-dom";
+import { projects } from "../../Database";
+import ProjectHeader from "./projectHeader";
+import { Project } from "./Project";
 
 export default function snakebiteResponse() {
+    const thisProject = projects.find(p => p._id === 5);
     return (
-        <div className="project-content" id="project-content-rockumentary">
-            <div className="row-space-between">
-                <div className="col-space-between">
-                    <h1 className="project-heading-title">
-                        Snakebite Response Poster
-                    </h1>
-                    <p className="project-heading-details gray">
-                        Dec 2024<br />Information design
-                    </p>
-                </div>
-                <p className="description">
-                    A simple, illustration-based informational poster intended to be
-                    able to be used by residents of Botswana. The project entailed researching the
-                    ways to help prevent fatal encounters with snakes specially in Botswana / southern Africa,
-                    organizing information into different sections and writing concise actionable steps, and
-                    finally creating the visual components of the poster. Wallet cards compile poster information
-                    into small folding panels that would be able to kept for easy access throughout the day.<br /><br />
-                    This was one of two projects for my Information Design studio class I took
-                    in Fall 2024. See the second project, a data story poster <Link to="/snakebiteData" className="underline">here</Link>. 
-                </p>
-
-            </div>
+        <div className="project-content">
+            <ProjectHeader project={thisProject as Project} />
 
             <div className="project-content-rest">
                 <div className="col22">

@@ -1,18 +1,7 @@
 import { Link } from "react-router-dom";
-// import Filters from "./Filters";
+import { projects } from "../Database";
 import "./work.css";
 export default function Work() {
-  const projects = [
-    { id: 1, column: "left", name: "Rockumentary", path: `/rockumentary`, year: 2024, tags: "Graphic design", frontImage: "images/work/rockumentary.png", border: false },
-    { id: 2, column: "left", name: "Dissonant Harmony", path: `/dissonantHarmony`, year: 2024, tags: "Graphic design", frontImage: "images/work/calder.png", border: false },
-    { id: 3, column: "left", name: "Text Diagram", path: `/textDiagram`, year: 2024, tags: "Information design", frontImage: "images/work/textDiagramColor.png", border: false },
-    { id: 4, column: "left", name: "My Favorite Things Research Dossier", path: `/myFavoriteThings`, year: 2024, tags: "Information design", frontImage: "images/work/page 3.jpg", border: false },
-    { id: 5, column: "right", name: "Snakebite Response Poster", path: `/snakebiteResponse`, year: 2024, tags: "Information design", frontImage: "images/work/snakebitePrevention.png", border: false },
-    { id: 6, column: "right", name: "Snakebite Data Story Poster", path: `/snakebiteData`, year: 2024, tags: "Information Design  |  Data analysis  |  Data visualization", frontImage: "images/work/snakebiteData.png", border: false },
-    // { id: 7, column: "right", name: "Radien", path: `/radien`, year: 2024, tags: "UX research | UI/UX", frontImage: "images/work/radien.png", border: false },
-    { id: 8, column: "right", name: "Basics of Typography", path: `/basicsOfTypography`, year: 2024, tags: "Graphic design", frontImage: "images/work/typography.jpg", border: false },
-    { id: 9, column: "right", name: "Design Philosophy", path: `/designPhilosophy`, year: 2024, tags: "Typography", frontImage: "images/work/quote1.png", border: true }
-  ];
 
   return (
     <div id="work">
@@ -36,9 +25,9 @@ export default function Work() {
       <div id="work-content">
         <div className="work-columns">
           {projects
-            .filter((project) => project.column === "left")
+            .filter((project) => project.column === "left" && project.active === true)
             .map((project) => (
-              <Link to={project.path} key={project.id}>
+              <Link to={project.path} key={project._id}>
                 <img src={project.frontImage} alt="" width="100%" className={project.border === true ? "border" : ""}/>
                 <p className="project-name">{project.name}</p>
                 <p className="gray">{project.year} • {project.tags}</p>
@@ -48,9 +37,9 @@ export default function Work() {
 
         <div className="work-columns">
           {projects
-            .filter((project) => project.column === "right")
+            .filter((project) => project.column === "right" && project.active === true)
             .map((project) => (
-              <Link to={project.path} key={project.id}>
+              <Link to={project.path} key={project._id}>
                 <img src={project.frontImage} alt="" width="100%" className={project.border === true ? "border" : ""}/>
                 <p className="project-name">{project.name}</p>
                 <p className="gray">{project.year} • {project.tags}</p>

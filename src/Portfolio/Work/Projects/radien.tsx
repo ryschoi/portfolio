@@ -1,21 +1,14 @@
 import "./projects.css";
+import { projects } from "../../Database";
+import ProjectHeader from "./projectHeader";
+import { Project } from "./Project";
 
 export default function Radien() {
+    const thisProject = projects.find(p => p._id === 7);
+
     return (
-        <div className="project-content" id="project-content-rockumentary">
-            <div className="row-space-between">
-                <div className="col-space-between">
-                    <h1 className="project-heading-title">Radien</h1>
-                    <p className="project-heading-details gray">
-                        August 2024<br />UX Research | UI/UX
-                    </p>
-                </div>
-
-                <p className="description">
-                    Description coming soon
-                </p>
-            </div>
-
+        <div className="project-content">
+            <ProjectHeader project={thisProject as Project} />
 
             <div className="project-content-rest">
                 <div className="col22">
@@ -28,7 +21,7 @@ export default function Radien() {
                         <img className="crop-image" src="images/work/radien.png" alt="" width="49.5%" />
                         <img className="crop-image" src="images/work/radien5.png" alt="" width="49.5%" />
                     </div>
-                    <p className="section-titles">Popup to remind people to log their progress<br/>Meant to pop up at a set time close to the end of the work day</p>
+                    <p className="section-titles">Popup to remind people to log their progress<br />Meant to pop up at a set time close to the end of the work day</p>
                     <img className="crop-image" src="images/work/radien4.png" alt="" width="49.5%" />
                 </div>
 

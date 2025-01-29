@@ -1,18 +1,14 @@
 import "./projects.css";
+import { projects } from "../../Database";
+import ProjectHeader from "./projectHeader";
+import { Project } from "./Project";
 
 export default function SchoolStairs() {
+    const thisProject = projects.find(p => p._id === 10);
+
     return (
         <div className="project-content">
-            <div className="row-space-between">
-                <div className="col-space-between">
-                    <h1 className="project-heading-title">Stairs Design for Albany High School</h1>
-                    <p className="project-heading-details gray">May 2022<br />Graphic Design  |  Concept/brand</p>
-                </div>
-                <p className="description">
-                    A 15-panel vinyl design for my high school’s main stairs that celebrates various highlights from the past school year, fostering unity and school pride.
-                    This design was a project in my graphic design class, and between two classes, voted on to be printed and installed.
-                </p>
-            </div>
+            <ProjectHeader project={thisProject as Project} />
             <div className="project-content-rest">
                 <div className="col22">
                     <div className="row22">

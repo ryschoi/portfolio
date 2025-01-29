@@ -1,28 +1,13 @@
 import "./projects.css";
+import { projects } from "../../Database";
+import ProjectHeader from "./projectHeader";
+import { Project } from "./Project";
 
 export default function TextDiagram() {
+    const thisProject = projects.find(p => p._id === 3);
     return (
         <div className="project-content" id="project-content-rockumentary">
-            <div className="row-space-between">
-                <div className="col-space-between">
-                    <h1 className="project-heading-title">Text Diagram</h1>
-                    <p className="project-heading-details gray">
-                        February 2024<br />Information design  | Typography
-                    </p>
-                </div>
-
-                <p className="description">
-                    This is a map of the information covered in a podcast episode from the
-                    podcast “99% Invisible”. This project, focusing on information design,
-                    was done in the studio section for Design Process and Practices. It is
-                    one of my favorites from pieces I’ve done at school as it was when I
-                    discovered my attachment to information design. Unlike most designs that take
-                    lots of drafting and sketching, this one came together rather naturally.
-                    I loved figuring out how to fit together all the information,
-                    establishing the typographic hierarchy, and coming up with the simple
-                    lines and circle “arrows” that guide the viewer from one point to the next.
-                </p>
-            </div>
+            <ProjectHeader project={thisProject as Project} />
 
 
             <div className="project-content-rest">

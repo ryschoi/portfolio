@@ -1,27 +1,14 @@
 import "./projects.css";
+import { projects } from "../../Database";
+import ProjectHeader from "./projectHeader";
+import { Project } from "./Project";
 
 export default function DissonantHarmony() {
-    return (
-        <div className="project-content" id="project-content-rockumentary">
-            <div className="row-space-between">
-                <div className="col-space-between">
-                    <h1 className="project-heading-title">
-                        Dissonant Harmony
-                    </h1>
-                    <p className="project-heading-details gray">
-                        April 2024<br />Graphic Design  |  Typography
-                    </p>
-                </div>
-                <p className="description">
-                    Little did I know on the one Saturday afternoon in 2018 that our
-                    family paid a visit to the SFMoMA that years later I would design mock
-                    exhibition materials for one of the sculptures I had seen that day.
-                    Below is an A1 size poster, A5 size flyer, and Instagram posts all
-                    featuring Alexander Calder’s iconic Big Crinkly. This was my final
-                    project for one of my studio classes.
-                </p>
+    const thisProject = projects.find(p => p._id === 2);
 
-            </div>
+    return (
+        <div className="project-content">
+            <ProjectHeader project={thisProject as Project} />
 
             <div className="project-content-rest">
                 <div className="col22">
