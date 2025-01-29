@@ -1,34 +1,14 @@
 import "./projects.css";
-import projectHeader from "./projectHeader";
+import { projects } from "../../Database";
+import ProjectHeader from "./projectHeader";
+import { Project } from "./Project";
 
 export default function DesignPhilosophy() {
+    const thisProject = projects.find(p => p._id === 9);
+
     return (
         <div className="project-content">
-            {/* <projectHeader name={"Design Philosophy"}
-                year={2024}
-                tags={"Typography"}
-                description={"“Design is not just what it looks like and feels like. Design is
-                    how it works.” -Steve Jobs is my design philosophy and the quote
-            that these cut up, layered, and rotated words represent. This project
-            was for my studio for Typographic Systems and was for sure one of
-            the more difficult design projects I’ve done as I was challenged to
-            rethink how I use and orient type to not just be the literal text, 
-                    but to make the design itself."} /> */}
-            <div className="row-space-between">
-                <div className="col-space-between">
-                    <h1 className="project-heading-title">Design Philosophy</h1>
-                    <p className="project-heading-details gray">February 2024<br />Typography</p>
-                </div>
-                <p className="description">
-                    “Design is not just what it looks like and feels like. Design is
-                    how it works.” -Steve Jobs is my design philosophy and the quote
-                    that these cut up, layered, and rotated words represent. This project
-                    was for my studio for Typographic Systems and was for sure one of
-                    the more difficult design projects I’ve done as I was challenged to
-                    rethink how I use and orient type to not just be the literal text,
-                    but to make the design itself.
-                </p>
-            </div>
+            <ProjectHeader project={thisProject as Project} />
             <div className="project-content-rest">
                 <div className="row22">
                     <div className="col22 half-column">

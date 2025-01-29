@@ -1,5 +1,4 @@
 import "./projects.css";
-import { Link } from "react-router-dom";
 import { projects } from "../../Database";
 import ProjectHeader from "./projectHeader";
 import { Project } from "./Project";

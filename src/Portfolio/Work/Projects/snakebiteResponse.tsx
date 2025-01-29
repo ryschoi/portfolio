@@ -1,5 +1,4 @@
 import "./projects.css";
-import { Link } from "react-router-dom";
 import { projects } from "../../Database";
 import ProjectHeader from "./projectHeader";
 import { Project } from "./Project";
@@ -17,23 +16,6 @@ export default function snakebiteResponse() {
                         <span className="italic">A2 size</span>
                     </p>
                     <img src="images/work/snakebitePrevention.png" alt="" width="100%" />
-                    {/* <div className="row22">
-                        <p className="half-column">
-                            I went with the theme of a deconstructed sculpture which I
-                            created by first tracing over an image of Big Crinkly using
-                            the Pen tool and then separating it by its individual parts.
-                            The display of the individual pieces plays along with the idea
-                            of “dissonant”–that all the individual pieces of the whole
-                            sculpture are on their own dissonant. All a little random, a
-                        </p>
-                        <p className="half-column">
-                            little rough-cut, jagged almost. But somehow coming together
-                            and creating harmony. The gif in the Instagram post is my favorite
-                            part of this project because I think it brings everything together
-                            (literally) by showing the actual constructing of the sculpture,
-                            from separate pieces to one body.
-                        </p>
-                    </div> */}
                 </div>
 
                 <div className="col22">
