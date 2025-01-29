@@ -1,7 +1,7 @@
 #about {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 
@@ -10,20 +10,18 @@
 }
 
 #text {
-  margin-top: 80px;
   margin-left: 100px;
   margin-right: 100px;
   max-width: 480px;
 }
 
-#bio {
-  max-width: 60ch;
+.bio {
+  max-width: 65ch;
 }
 
 #contact {
   display: flex;
   flex-direction: row;
-  margin-top: 40px;
   margin-bottom: 50px;
 }
 
@@ -35,8 +33,13 @@
   text-decoration: none;
 }
 
-#bio span {
+#greeting {
+  margin-top: 30px;
   font-size: 24px;
   line-height: 36px;
   font-weight: 700;
+}
+
+.heading {
+  margin-bottom: 4px;
 }

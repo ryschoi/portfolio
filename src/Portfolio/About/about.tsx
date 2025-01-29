@@ -5,31 +5,44 @@ export default function About() {
       <img id="headshot" alt="Headshot" src="images/headshot.jpg" />
 
       <div id="text">
-        <p id="bio">
-          {/* Hi, I'm Rebecca.<br /><br />
-          
-          Second-year student studying Computer Science
-          and Design at Northeastern University in Boston.<br /><br />
+        <div className="bio">
+          <p id="greeting">Hi, I'm Rebecca!</p><br />
 
-          Eager to combine tech, design, and data to create something valuable and meaningful.
-          Designing with the intention to ensure quality, functional products and satisfied users. */}
+          <p>
+            I'm currently a second-year student studying Computer Science
+            and Design at Northeastern University in Boston.
+          </p><br />
 
-          <span>Hi, I'm Rebecca!</span>
+          <p className="heading gray">As a designer & developer...</p>
+          <p>
+            I am passionate about understanding how people think and behave. In design,
+            I have found a discipline where I can apply my insights and fuel my passion.
+            Whether it's in coding or visual design, I work with the human nature in mind,
+            aiming to create quality products that new users can interact with in a familiar way.<br /><br />
 
-          <br /><br />
+            I am experienced in UI/UX, design, web development, and data visualization, but
+            looking to being a part of anything that can combine tech, design, and data to
+            create something meaningful and useful for our world.<br /><br />
+          </p>
 
-          I'm currently a second-year student studying Computer Science
-          and Design at Northeastern University in Boston.<br /><br />
 
-          I am passionate about understanding how people think and behave. In design,
-          I have found a discipline where I can apply my insights and fuel my passion.
-          Whether it's in coding or visual design, I work with the human nature in mind,
-          aiming to create quality products that new users can interact with in a familiar way.<br /><br />
+          <p className="heading gray">Outside of work...</p>
+          <p>
+            I am the middle of three girls, I have been playing the bass for
+            over seven years, I love walking around taking pictures of the city, and I am probably the
+            biggest lover of kombucha you know.
+          </p><br />
 
-          I am experienced in UI/UX, design, web development, and data visualization, but looking to being a part of anything that can combine tech, design, and data to create something meaningful and useful for our world.
-        </p>
+          <p className="heading gray">Contact</p>
+          <p>
+            <a className="underline" href="choi.re@northeastern.edu">choi.re@northeastern.edu</a><br />
+            510-682-0020<br /><br />
 
-        <div id="contact">
+            <a className="underline" href="https://www.linkedin.com/in/rebecca-choi-3479b916a">LinkedIn</a> | <a className="underline" href="images/Rebecca_Choi_Resume.pdf">Resume</a>
+          </p><br /><br />
+        </div>
+
+        {/* <div id="contact">
           Contact
           <p id="contact-info">
             <a className="underline" href="choi.re@northeastern.edu">choi.re@northeastern.edu</a><br />
@@ -37,8 +50,8 @@ export default function About() {
 
             <a className="underline" href="https://www.linkedin.com/in/rebecca-choi-3479b916a">LinkedIn</a> | <a className="underline" href="images/Rebecca_Choi_Resume.pdf">Resume</a>
           </p>
-        </div>
+        </div> */}
       </div>
-    </div>
+    </div >
   );
 }
