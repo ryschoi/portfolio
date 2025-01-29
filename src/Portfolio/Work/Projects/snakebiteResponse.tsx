@@ -21,7 +21,7 @@ export default function snakebiteResponse() {
                     finally creating the visual components of the poster. Wallet cards compile poster information
                     into small folding panels that would be able to kept for easy access throughout the day.<br /><br />
                     This was one of two projects for my Information Design studio class I took
-                    in Fall 2024. See the second project, a data story poster <Link to="/Portfolio/Work/Projects/snakebiteData" className="underline">here</Link>. 
+                    in Fall 2024. See the second project, a data story poster <Link to="/snakebiteData" className="underline">here</Link>. 
                 </p>
 
             </div>

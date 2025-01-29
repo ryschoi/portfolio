@@ -14,10 +14,15 @@ export default function SnakebiteData() {
                     </p>
                 </div>
                 <p className="description">
-                    Analyzed over seven data sets to construct a story behind the link between 
-                    certain climate conditions and countries with high rates of snakebite. <br /><br />
+                    Through this family of visualizations, I crafted a story of the link between 
+                    certain climate conditions and countries with high rates of snakebite. I was lucky
+                    to have had the opportunity to learn about the global snakebite crisis through this
+                    project and to get to put my design skills to use to bring about more awareness for both those
+                    affected and not. While this poster only covers climate conditions, I can see it becoming a much
+                    fuller and more compelling story with the incorporation of data on patterns in wealth, hospital accessibility and funding, and much more. 
+                    <br /><br />
                     This is the second project of my Information Design studio class in Fall 2024. 
-                    See the first project, a <Link to="/Portfolio/Work/Projects/snakebiteResponse" className="underline">"Snakebite Prevention in Botswana"</Link> project.
+                    See the first project, a <Link to="/snakebiteResponse" className="underline">"Snakebite Prevention in Botswana"</Link> project.
                 </p>
 
             </div>
