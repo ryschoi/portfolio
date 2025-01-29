@@ -36,7 +36,7 @@ export default function Work() {
       <div id="work-content">
         <div className="work-columns">
           {projects
-            .filter((project) => project.column == "left")
+            .filter((project) => project.column === "left")
             .map((project) => (
               <Link to={project.path} key={project.id}>
                 <img src={project.frontImage} alt="" width="100%" className={project.border === true ? "border" : ""}/>
@@ -48,7 +48,7 @@ export default function Work() {
 
         <div className="work-columns">
           {projects
-            .filter((project) => project.column == "right")
+            .filter((project) => project.column === "right")
             .map((project) => (
               <Link to={project.path} key={project.id}>
                 <img src={project.frontImage} alt="" width="100%" className={project.border === true ? "border" : ""}/>
