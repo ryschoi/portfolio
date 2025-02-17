@@ -11,7 +11,7 @@ export default function NavBar() {
 
   return (
     <div id="navbar">
-      <Link to="/" id="navbar-home-link"><img src="images/name_new.png" alt="Logo" width="120" /></Link>
+      <Link to="/" id="navbar-home-link"><img src="images/name.png" alt="Logo" width="120" /></Link>
       <div id="navbar-items">
         {links.map((page) => (
           <Link key={page.path} to={page.path} className={`
