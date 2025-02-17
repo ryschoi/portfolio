@@ -6,6 +6,7 @@ export default function About() {
 
       <div id="text">
         <div className="bio">
+          {/* tech as a tool, design as a principle, data as the content, and humans as the reason */}
           <p id="greeting">Hi, I'm Rebecca!</p><br />
 
           <p>
@@ -30,7 +31,7 @@ export default function About() {
             I love trees, playing the bass, long silent train rides, and kombucha.
           </p><br />
 
-          <p className="heading gray">Contact me!</p>
+          <p className="heading gray">Contact me</p>
           <p>
             <a className="underline" href="choi.re@northeastern.edu">choi.re@northeastern.edu</a><br />
             510-682-0020<br /><br />

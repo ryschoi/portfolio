@@ -56,7 +56,7 @@ export default function DissonantHarmony() {
 
                 <div className="col22">
                     <p className="section-titles">Previous iterations</p>
-                    <div className="row22 row22-center">
+                    <div className="row22">
                         <img src="images/work/calder_prev1.png" alt="" width="231px" />
                         <img src="images/work/calder_prev2.png" alt="" width="231px" />
                         <img src="images/work/calder_prev3.png" alt="" width="231px" />

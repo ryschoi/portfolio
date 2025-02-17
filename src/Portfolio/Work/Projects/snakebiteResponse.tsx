@@ -38,7 +38,7 @@ export default function snakebiteResponse() {
 
                 <div className="col22 slim">
                     <p className="section-titles">Previous iterations in print form</p>
-                    <div className="row22 row22-center">
+                    <div className="row22">
                         <img src="images/work/snakebiteWalletVersions.png" alt="" width="100%" />
                     </div>
                 </div>

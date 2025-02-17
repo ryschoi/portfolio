@@ -11,9 +11,9 @@ export default function MyFavoriteThings() {
             <div className="project-content-rest">
                 <div className="col22">
                     <p className="section-titles" id="top-section">Pages 1 - 4</p>
-                    <div className="row22">
-                        <img src="images/work/page 1.jpg" alt="" width="50%" />
-                        <img src="images/work/page 2.jpg" alt="" width="50%" />
+                    <div className="row">
+                        <div className="col-sm"><img src="images/work/page 1.jpg" alt="" width="49%"/></div>
+                        <div className="col-sm"><img src="images/work/page 2.jpg" alt="" width="49%"/></div>
                     </div>
                 </div>
                 <div className="col22">
