@@ -4,7 +4,7 @@ import ProjectHeader from "./projectHeader";
 import { Project } from "./Project";
 
 export default function snakebiteResponse() {
-    const thisProject = projects.find(p => p._id === 5);
+    const thisProject = projects.find(p => p.path === "/snakebite-response");
     return (
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} />

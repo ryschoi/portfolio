@@ -4,7 +4,7 @@ import ProjectHeader from "./projectHeader";
 import { Project } from "./Project";
 
 export default function MyFavoriteThings() {
-    const thisProject = projects.find(p => p._id === 4);
+    const thisProject = projects.find(p => p.path === "/my-favorite-things");
     return (
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} />

@@ -31,15 +31,15 @@ export default function Home() {
 
         <Route path="/rockumentary" element={<Rockumentary />} />
         <Route path="/Work/Projects/morningtide" element={<Morningtide />} />
-        <Route path="/Work/Projects/textDiagram" element={<TextDiagram />} />
-        <Route path="/Work/Projects/snakebiteResponse" element={<SnakebiteReponse />} />
-        <Route path="/Work/Projects/dissonantHarmony" element={<DissonantHarmony />} />
-        <Route path="/Work/Projects/sunFall" element={<SunFall />} />
-        <Route path="/Work/Projects/snakebiteData" element={<SnakebiteData />} />
-        <Route path="/Work/Projects/basicsOfTypography" element={<BasicsOfTypography />} />
-        <Route path="/Work/Projects/myFavoriteThings" element={<MyFavoriteThings />} />
-        <Route path="/Work/Projects/designPhilosophy" element={<DesignPhilosophy />} />
-        <Route path="/Work/Projects/schoolStairs" element={<SchoolStairs />} />
+        <Route path="/Work/Projects/text-diagram" element={<TextDiagram />} />
+        <Route path="/Work/Projects/snakebite-response" element={<SnakebiteReponse />} />
+        <Route path="/Work/Projects/dissonant-harmony" element={<DissonantHarmony />} />
+        <Route path="/Work/Projects/sun-fall" element={<SunFall />} />
+        <Route path="/Work/Projects/snakebite-data" element={<SnakebiteData />} />
+        <Route path="/Work/Projects/basics-of-typography" element={<BasicsOfTypography />} />
+        <Route path="/Work/Projects/my-favorite-things" element={<MyFavoriteThings />} />
+        <Route path="/Work/Projects/design-philosophy" element={<DesignPhilosophy />} />
+        <Route path="/Work/Projects/school-stairs" element={<SchoolStairs />} />
       </Routes>
 
       <Footer />

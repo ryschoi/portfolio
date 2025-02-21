@@ -4,7 +4,7 @@ import ProjectHeader from "./projectHeader";
 import { Project } from "./Project";
 
 export default function Rockumentary() {
-    const thisProject = projects.find(p => p._id === 1);
+    const thisProject = projects.find(p => p.path === "/rockumentary");
 
     return (
         <div className="project-content">

@@ -4,7 +4,7 @@ import ProjectHeader from "./projectHeader";
 import { Project } from "./Project";
 
 export default function Radien() {
-    const thisProject = projects.find(p => p._id === 7);
+    const thisProject = projects.find(p => p.path === "/radien");
 
     return (
         <div className="project-content">

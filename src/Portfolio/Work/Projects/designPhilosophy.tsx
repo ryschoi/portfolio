@@ -4,7 +4,7 @@ import ProjectHeader from "./projectHeader";
 import { Project } from "./Project";
 
 export default function DesignPhilosophy() {
-    const thisProject = projects.find(p => p._id === 9);
+    const thisProject = projects.find(p => p.path === "/design-philosophy");
 
     return (
         <div className="project-content">

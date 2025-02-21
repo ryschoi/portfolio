@@ -4,7 +4,7 @@ import ProjectHeader from "./projectHeader";
 import { Project } from "./Project";
 
 export default function SchoolStairs() {
-    const thisProject = projects.find(p => p._id === 10);
+    const thisProject = projects.find(p => p.path === "/school-stairs");
 
     return (
         <div className="project-content">

@@ -4,7 +4,7 @@ import ProjectHeader from "./projectHeader";
 import { Project } from "./Project";
 
 export default function TextDiagram() {
-    const thisProject = projects.find(p => p._id === 3);
+    const thisProject = projects.find(p => p.path === "/text-diagram");
     return (
         <div className="project-content" id="project-content-rockumentary">
             <ProjectHeader project={thisProject as Project} />

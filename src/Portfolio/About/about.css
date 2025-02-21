@@ -43,3 +43,7 @@
 .heading {
   margin-bottom: 4px;
 }
+
+#about ul {
+  margin-left: 15px;
+}

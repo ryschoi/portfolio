@@ -19,6 +19,7 @@ import MyFavoriteThings from "./Portfolio/Work/Projects/myFavoriteThings";
 import DesignPhilosophy from "./Portfolio/Work/Projects/designPhilosophy";
 import SchoolStairs from "./Portfolio/Work/Projects/schoolStairs";
 import Radien from "./Portfolio/Work/Projects/radien";
+import Cooper from "./Portfolio/Work/Projects/cooper"
 
 
 export default function App() {
@@ -39,16 +40,17 @@ export default function App() {
 
           <Route path="/rockumentary" element={<Rockumentary />} />
           <Route path="/morningtide" element={<Morningtide />} />
-          <Route path="/textDiagram" element={<TextDiagram />} />
-          <Route path="/snakebiteResponse" element={<SnakebiteReponse />} />
-          <Route path="/dissonantHarmony" element={<DissonantHarmony />} />
-          <Route path="/sunFall" element={<SunFall />} />
-          <Route path="/snakebiteData" element={<SnakebiteData />} />
-          <Route path="/basicsOfTypography" element={<BasicsOfTypography />} />
-          <Route path="/myFavoriteThings" element={<MyFavoriteThings />} />
-          <Route path="/designPhilosophy" element={<DesignPhilosophy />} />
-          <Route path="/schoolStairs" element={<SchoolStairs />} />
+          <Route path="/text-diagram" element={<TextDiagram />} />
+          <Route path="/snakebite-response" element={<SnakebiteReponse />} />
+          <Route path="/dissonant-harmony" element={<DissonantHarmony />} />
+          <Route path="/sun-fall" element={<SunFall />} />
+          <Route path="/snakebite-data" element={<SnakebiteData />} />
+          <Route path="/basics-of-typography" element={<BasicsOfTypography />} />
+          <Route path="/my-favorite-things" element={<MyFavoriteThings />} />
+          <Route path="/design-philosophy" element={<DesignPhilosophy />} />
+          <Route path="/school-stairs" element={<SchoolStairs />} />
           <Route path="/radien" element={<Radien />} />
+          <Route path="/cooper" element={<Cooper />} />
         </Routes>
 
         <Footer />

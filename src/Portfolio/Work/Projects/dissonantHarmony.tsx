@@ -4,7 +4,7 @@ import ProjectHeader from "./projectHeader";
 import { Project } from "./Project";
 
 export default function DissonantHarmony() {
-    const thisProject = projects.find(p => p._id === 2);
+    const thisProject = projects.find(p => p.path === "/dissonant-harmony");
 
     return (
         <div className="project-content">

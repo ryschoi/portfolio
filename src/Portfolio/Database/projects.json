@@ -16,7 +16,7 @@
         "active": true,
         "column": "left",
         "name": "Dissonant Harmony",
-        "path": "/dissonantHarmony",
+        "path": "/dissonant-harmony",
         "year": 2024,
         "tags": "Graphic design",
         "frontImage": "images/work/calder.png",
@@ -28,7 +28,7 @@
         "active": true,
         "column": "left",
         "name": "Text Diagram",
-        "path": "/textDiagram",
+        "path": "/text-diagram",
         "year": 2024,
         "tags": "Information design",
         "frontImage": "images/work/textDiagramColor.png",
@@ -40,7 +40,7 @@
         "active": true,
         "column": "left",
         "name": "My Favorite Things Research Dossier",
-        "path": "/myFavoriteThings",
+        "path": "/my-favorite-things",
         "year": 2024,
         "tags": "Information design",
         "frontImage": "images/work/page 3.jpg",
@@ -51,8 +51,21 @@
         "_id": 5,
         "active": true,
         "column": "right",
+        "name": "Cooper Co-op Review Platform",
+        "path": "/cooper",
+        "year": 2025 ,
+        "tags": "UI/UX",
+        "frontImage": "images/work/cooper.png",
+        "border": false,
+        "description": "This co-op review platform for Northeastern students is an ongoing project part of Sandbox Northeastern. Please check back at the end of the semester for process images and final designs!"
+
+    },
+    {
+        "_id": 6,
+        "active": true,
+        "column": "right",
         "name": "Snakebite Response Poster",
-        "path": "/snakebiteResponse",
+        "path": "/snakebite-response",
         "year": 2024,
         "tags": "Information design",
         "frontImage": "images/work/snakebitePrevention.png",
@@ -60,11 +73,11 @@
         "description": "A simple, illustration-based informational poster intended to be able to be used by residents of Botswana. The project entailed researching the ways to help prevent fatal encounters with snakes specially in Botswana / southern Africa, organizing information into different sections and writing concise actionable steps, and finally creating the visual components of the poster. Wallet cards compile poster information into small folding panels that would be able to kept for easy access throughout the day."
     },
     {
-        "_id": 6,
+        "_id": 7,
         "active": true,
         "column": "right",
         "name": "Snakebite Data Story Poster",
-        "path": "/snakebiteData",
+        "path": "/snakebite-data",
         "year": 2024,
         "tags": "Information design  |  Data analysis  |  Data visualization",
         "frontImage": "images/work/snakebiteData.png",
@@ -72,7 +85,7 @@
         "description": "Through this family of visualizations, I crafted a story of the link between certain climate conditions and countries with high rates of snakebite. I was lucky to have had the opportunity to learn about the global snakebite crisis through this project and to get to put my design skills to use to bring about more awareness for both those affected and not. While this poster only covers climate conditions, I can see it becoming a much fuller and more compelling story with the incorporation of data on patterns in wealth, hospital accessibility and funding, and much more."
     },
     {
-        "_id": 7,
+        "_id": 8,
         "active": false,
         "column": "right",
         "name": "Radien",
@@ -84,11 +97,11 @@
         "description": "Description coming soon."
     },
     {
-        "_id": 8,
+        "_id": 9,
         "active": true,
         "column": "right",
         "name": "Basics of Typography",
-        "path": "/basicsOfTypography",
+        "path": "/basics-of-typography",
         "year": 2024,
         "tags": "Graphic design",
         "frontImage": "images/work/typography.jpg",
@@ -96,11 +109,11 @@
         "description": "As someone who starts many more projects than I complete, this 24-hour challenge was the perfect way to give myself practice in making and committing to creative decisions, which is where I most often get stuck in the design process. During this one day, I successfully gathered and categorized all the information, drafted, and brought to life this poster that you see below (along with getting lots of practice with the Pathfinder tool in Illustrator)."
     },
     {
-        "_id": 9,
+        "_id": 10,
         "active": true,
-        "column": "right",
+        "column": "left",
         "name": "Design Philosophy",
-        "path": "/designPhilosophy",
+        "path": "/design-philosophy",
         "year": 2024,
         "tags": "Typography",
         "frontImage": "images/work/quote1.png",
@@ -109,15 +122,15 @@
 
     },
     {
-        "_id": 10,
+        "_id": 11,
         "active": false,
         "column": "right",
         "name": "School Stairs Design",
-        "path": "/schoolStairs",
+        "path": "/school-stairs",
         "year": 2022,
         "tags": "Graphic design",
         "frontImage": "images/work/complete_stairs.png",
-        "border": true,
+        "border": false,
         "description": "Description coming soon."
 
     }

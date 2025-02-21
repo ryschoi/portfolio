@@ -4,7 +4,7 @@ import ProjectHeader from "./projectHeader";
 import { Project } from "./Project";
 
 export default function BasicsOfTypography() {
-    const thisProject = projects.find(p => p.path === "/basics-of-typography");
+    const thisProject = projects.find(p => p.path === "/cooper");
 
     return (
         <div className="project-content">
@@ -12,11 +12,7 @@ export default function BasicsOfTypography() {
 
             <div className="project-content-rest">
                 <div className="row22">
-                    <img src="images/work/typography.jpg" alt="" width="48.84%" />
-                    <div className="col22">
-                        <img className="crop-image" src="images/work/type_defg.jpg" alt="" width="100%" />
-                        <img className="crop-image" src="images/work/type_serif.jpg" alt="" width="100%" />
-                    </div>
+                    <img src="images/work/cooper.png" alt="" width="100%" className="border"/>
                 </div>
             </div>
         </div>

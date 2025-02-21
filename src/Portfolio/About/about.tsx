@@ -26,6 +26,13 @@ export default function About() {
             create something meaningful and useful for our world.<br /><br />
           </p>
 
+          <p className="heading gray">Right now I am...</p>
+          <ul>
+            <li>Learning to clean up, analyze, and visualize data in Python and R</li>
+            <li>Working as a designer on a team of student developers and designers to create a co-op review platform</li>
+            <li>Refining this website to store more of my projects and restructuring it to be more easily maintainable for the future. Next step: making it mobile-reponsive!</li>
+          </ul><br />
+
           <p className="heading gray">Outside of work...</p>
           <p>
             I love trees, playing the bass, long silent train rides, and kombucha.
@@ -36,7 +43,7 @@ export default function About() {
             <a className="underline" href="choi.re@northeastern.edu">choi.re@northeastern.edu</a><br />
             510-682-0020<br /><br />
 
-            <a className="underline" href="https://www.linkedin.com/in/rebecca-choi-3479b916a">LinkedIn</a> | <a className="underline" href="images/Rebecca_Choi_Resume.pdf">Resume</a>
+            <a className="underline" href="https://www.linkedin.com/in/ryschoi">LinkedIn</a> | <a className="underline" href="images/Rebecca_Choi_Resume.pdf">Resume</a>
           </p><br /><br />
         </div>
 
