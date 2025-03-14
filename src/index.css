@@ -28,7 +28,7 @@ code {
 }
 
 body {
-  margin: 70px 140px 70px 140px;
+  margin: 70px 280px 70px 280px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-color: #f4f4f4; */
@@ -41,20 +41,11 @@ body {
   margin: 0;
 
   /* TEXT */
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 22px;
+  line-height: 26px;
   color: #222222;
 }
-
-/* p {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px; */
-/* color: #333F48; */
-/* color: #222222;
-  margin: 0;
-} */
 
 a {
   text-decoration: none;
@@ -77,9 +68,9 @@ a:hover {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 28px;
   line-height: 42px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 55px;
 }
 
