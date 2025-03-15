@@ -20,6 +20,9 @@
 
 #text {
   max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 #headshot {
@@ -41,7 +44,6 @@
 }
 
 #greeting {
-  margin-top: 30px;
   font-size: 24px;
   line-height: 36px;
   font-weight: 600;
@@ -55,14 +57,8 @@
   margin-left: 24px;
 }
 
-.mid-text {
-  font-size: 16px;
-  line-height: 26px;
-}
-
 .subheading {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 12px;
-  margin-top: 44px;
 }

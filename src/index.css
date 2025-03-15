@@ -41,9 +41,8 @@ body {
   margin: 0;
 
   /* TEXT */
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
+  font-size: 14px;
+  line-height: 24px;
   color: #222222;
 }
 
@@ -74,6 +73,38 @@ h1 {
   margin-bottom: 55px;
 }
 
+h2 {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+/*
+Light - 300
+Regular - 400
+Semibold - 600
+Bold - 700
+Black - 900
+*/
+
+
+.semi-bold {
+  font-weight: 600;
+}
+
 .border {
-    border: 2px solid #222222;
+  border: 2px solid #222222;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.mid-text {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.slim-fit {
+  max-width: 650px;
 }

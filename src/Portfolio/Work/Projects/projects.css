@@ -1,6 +1,8 @@
-/* .project-content {
-    margin: 0px 80px 0px 80px;
-} */
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .project-heading {
     display: flex;
@@ -23,9 +25,9 @@
     max-width: 484px;
 }
 
-.description {
+/* .description {
     max-width: 484px;
-}
+} */
 
 .project-content-rest {
     margin-top: 68px;
@@ -84,6 +86,18 @@
     align-items: center;
 }
 
+.proj-two-thirds {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.col8 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
 .col22-align-left {
     display: flex;
     flex-direction: column;
@@ -131,4 +145,8 @@
 
 .description Link {
     text-decoration: underline;
+}
+
+#proj-attributes {
+    margin-top: 24px;
 }

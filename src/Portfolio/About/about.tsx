@@ -6,15 +6,15 @@ export default function About() {
         <div className="circular-container">
           <img id="headshot" src="images/headshot-square.png" />
         </div>
-        <div className="bio">
-          {/* tech as a tool, design as a principle, data as the content, and humans as the reason */}
-          <h2 id="greeting">Hi, I'm Rebecca!</h2><br />
+        {/* tech as a tool, design as a principle, data as the content, and humans as the reason */}
+        <h2 id="greeting">Hi, I'm Rebecca!</h2>
 
-          <p className="mid-text">
-            I'm a second-year student studying Computer Science
-            and Design at Northeastern University in Boston.
-          </p>
+        <p className="subheading gray no-margin-top">
+          I'm a second-year student studying Computer Science
+          and Design at Northeastern University in Boston.
+        </p>
 
+        <div>
           <p className="subheading gray">I am passionate about understanding how people think and behave.</p>
           <p className="mid-text">
             In design, I have found a discipline where I can apply my insights and fuel my passion.
@@ -25,7 +25,9 @@ export default function About() {
             looking to being a part of anything that combines tech, design, and data to
             create something meaningful and useful for our world.
           </p>
+        </div>
 
+        <div>
           <p className="subheading gray">Currently I am...</p>
           <p>
             <ul className="mid-text">
@@ -34,23 +36,26 @@ export default function About() {
               <li className="mid-text">Refining this website to store more of my projects and restructuring it to be more easily maintainable for the future. Next step: making it mobile-reponsive!</li>
             </ul>
           </p>
+        </div>
 
-
+        <div>
           <p className="subheading gray">Outside of work...</p>
           <p className="mid-text">
             I love trees, playing the bass, long silent train rides, and kombucha.
           </p>
-          <br /><br />
-          <hr />
-          <br /><br />
+        </div>
 
+        {/* <hr /> */}
+        <div>
+          <p className="subheading gray">Contact</p>
           <p className="mid-text">
             <a className="mid-text underline" href="choi.re@northeastern.edu">choi.re@northeastern.edu</a><br />
             510-682-0020<br /><br />
 
             <a className="mid-text underline" href="https://www.linkedin.com/in/ryschoi">LinkedIn</a> | <a className="underline mid-text" href="images/Rebecca_Choi_Resume.pdf">Resume</a>
-          </p><br /><br />
+          </p>
         </div>
+
 
         {/* <div id="contact">
           Contact
