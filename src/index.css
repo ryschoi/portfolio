@@ -16,34 +16,28 @@
   font-style: normal;
 }
 
-/* @supports (font-variation-settings: normal) {
-  :root {
-    font-family: InterVariable, sans-serif;
-  }
-} */
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 body {
-  margin: 70px 280px 70px 280px;
+  margin: 70px 0px 70px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #f4f4f4; */
-  /* background-color: #fffefa; */
-  background-color: #ffffff;
+  background-color: hsl(0, 0%, 100%);
 }
 
 * {
   padding: 0;
-  margin: 0;
+  margin: auto;
 
   /* TEXT */
   font-size: 14px;
   line-height: 24px;
   color: #222222;
+
+  max-width: 850px;
 }
 
 a {
@@ -67,9 +61,8 @@ a:hover {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 36px;
   line-height: 42px;
-  font-weight: 600;
   margin-bottom: 55px;
 }
 

@@ -86,10 +86,10 @@
     align-items: center;
 }
 
-.proj-two-thirds {
+.col48 {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 48px;
 }
 
 .col8 {
@@ -145,8 +145,4 @@
 
 .description Link {
     text-decoration: underline;
-}
-
-#proj-attributes {
-    margin-top: 24px;
 }
