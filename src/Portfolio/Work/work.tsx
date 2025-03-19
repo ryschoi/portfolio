@@ -28,7 +28,7 @@ export default function Work() {
             .filter((project) => project.column === "left" && project.active === true)
             .map((project) => (
               <Link to={project.path} key={project._id}>
-                <img src={project.frontImage} alt="" width="100%" className={project.border === true ? "border" : ""}/>
+                <img src={project.frontImage} alt="" width="100%" height="auto" className={project.border === true ? "border" : ""}/>
                 <p className="project-name">{project.name}</p>
                 <p className="gray">{project.year} • {project.tags}</p>
               </Link>
@@ -40,7 +40,7 @@ export default function Work() {
             .filter((project) => project.column === "right" && project.active === true)
             .map((project) => (
               <Link to={project.path} key={project._id}>
-                <img src={project.frontImage} alt="" width="100%" className={project.border === true ? "border" : ""}/>
+                <img src={project.frontImage} alt="" width="100%" height="auto" className={project.border === true ? "border" : ""}/>
                 <p className="project-name">{project.name}</p>
                 <p className="gray">{project.year} • {project.tags}</p>
               </Link>
