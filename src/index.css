@@ -30,14 +30,13 @@ body {
 
 * {
   padding: 0;
-  margin: auto;
+  margin-left: 20.625%;
+  margin-right: 20.625%;
 
   /* TEXT */
   font-size: 14px;
   line-height: 24px;
   color: #222222;
-
-  max-width: 850px;
 }
 
 a {

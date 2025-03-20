@@ -5,7 +5,7 @@ export default function Work() {
 
   return (
     <div id="work">
-      <h1 className="semibold" id="home-blurb">
+      <h1 className="" id="home-blurb">
         {/* Experienced in...<br />
         conducting user research,<br />
         designing clean and user-friendly interfaces,<br />
