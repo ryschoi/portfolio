@@ -26,8 +26,6 @@
 } */
 
 
-
-
 @font-face {
   font-family: "Hanken-Grotesk";
   src: url('fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype'),
@@ -85,6 +83,10 @@ font-family: Satoshi-VariableItalic;
 
 body {
   margin: 0;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: Hanken-Grotesk;
+  font-weight: 400;
+  color: #5e5e5e;
 }
 
 #root {
