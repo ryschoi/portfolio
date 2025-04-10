@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
 /* @import url(../public/fonts/satoshi/fonts/WEB/css/satoshi.css); */
 
 /* @import url('satoshi.css'); */
@@ -21,7 +22,7 @@
 } */
 
 
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 @font-face {
   font-family: "Hanken-Grotesk";
@@ -30,11 +31,11 @@
 }
 
 /* DIATYPE */
-@font-face {
+/* @font-face {
   font-family: "diatype";
   src: url('/fonts/diatype/abc-diatype-var/ABCDiatypeVariable-Trial.ttf') format('truetype'),
     url('/fonts/diatype/abc-diatype/ABCDiatype-Regular-Trial.otf') format('opentype');
-}
+} */
 
 /* @import url('/fonts/diatype/abc-diatype-var/ABCDiatypeVariable-Trial.ttf');
 @import url('/fonts/diatype/abc-diatype/ABCDiatype-Regular-Trial.otf'); */
