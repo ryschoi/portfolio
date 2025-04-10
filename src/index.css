@@ -42,6 +42,7 @@ body {
 * {
   padding: 0;
   margin: 0;
+  
   /* Text */
   font-size: 14px;
   font-weight: 400;
@@ -77,8 +78,8 @@ a:hover {
 }
 
 h1 {
-    font-size: 32px;
-    font-weight: 650;
-    line-height: 36px;
-    margin-bottom: 55px;
+  font-size: 32px;
+  font-weight: 650;
+  line-height: 36px;
+  margin-bottom: 55px;
 }
