@@ -1,0 +1,156 @@
+.project-content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.project-heading {
+    display: flex;
+    min-height: 120px;
+    justify-content: space-between;
+}
+
+.proj-header {
+    display: flex;
+    align-items: center;
+}
+
+.crop-image {
+    object-fit: cover;
+}
+
+.col40 {
+    display: flex;
+    flex-direction: column;
+    gap: 44px
+}
+
+.project-heading-title {
+    width: 660px;
+}
+
+/* .description {
+    max-width: 484px;
+} */
+
+.project-content-rest {
+    margin-top: 68px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-content-margin {
+    margin-top: 68px;
+}
+
+.project-rest-align-left {
+    display: flex;
+    margin-top: 68px;
+    flex-direction: column;
+    align-items: left;
+    gap: 22px;
+    justify-content: left;
+    align-items: left;
+}
+
+.section-titles {
+    text-align: center;
+    margin-top: 50px;
+    color: #767676;
+}
+
+#top-section {
+    margin-top: 0px;
+}
+
+.italic {
+    text-align: center;
+    color: #767676;
+    font-style: italic;
+}
+
+.row-space-between {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.col-space-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.col22 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 22px;
+    align-items: center;
+}
+
+.col48 {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.col8 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.col22-align-left {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    justify-content: left;
+    align-items: left;
+}
+
+.two-third-column {
+    width: 66%;
+}
+
+.third-column {
+    width: 33%;
+}
+
+.display-block {
+    display: block;
+}
+
+.slim {
+    width: 85%;
+}
+
+.row22 {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#row22-center {
+    align-items: center;
+}
+
+.half-column {
+    align-items: flex-start;
+    max-width: 49.5%;
+}
+
+#space-above {
+    margin-top: 22px;
+}
+
+.description Link {
+    text-decoration: underline;
+}
+
+.proj-header img {
+    margin-top: -20px;
+}

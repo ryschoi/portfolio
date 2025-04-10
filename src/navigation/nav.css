@@ -1,0 +1,28 @@
+#navbar {
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  height: 150px;
+}
+
+#navbar-items {
+  display: inline-block;
+}
+
+.port-nav-link {
+  font-size: 18px;
+  line-height: 22px;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+.nav-active {
+  color: #abab11;
+}
+
+#navbar-home-link {
+  display: inline-block;
+}
