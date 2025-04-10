@@ -1,1 +1,1 @@
-Take a look! https://rebeccachoi.netlify.app/
+Take a look! http://rebeccachoi.netlify.app/
