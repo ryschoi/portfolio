@@ -23,7 +23,7 @@ export default function About() {
           <p className="subheading gray">I am passionate about understanding how people think and behave.</p>
           <p className="mid-text">
             From board games to deep philosophical questions, I get excited by anything that makes me think about the world around.
-            No two problems ever have the same solution, so I enjoy crafting my thinking and work to the sublties of every respective challenge.
+            No two problems ever have the same solution, so I enjoy crafting my thinking and work to the sublties of every challenge.
             <br /><br />In design, I have found a discipline where I can apply my insights and fuel my passion.
             Whether it's in coding or visual design, I work with the human nature in mind,
             aiming to create quality products that new users can interact with in a familiar way.</p>
