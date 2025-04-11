@@ -19,6 +19,24 @@
 
     },
     {
+        "_id": 1,
+        "active": true,
+        "column": "left",
+        "name": "Rockumentary",
+        "path": "/rockumentary",
+        "summary": "A recital poster that balances notes of rock and nostalgia",
+        "type": "Freelance",
+        "team": "Solo project",
+        "role": "Designer",
+        "medium": "Digital",
+        "tools": "Adobe Illustrator, Goodnotes",
+        "year": 2024,
+        "tags": "Graphic design, branding",
+        "frontImage": "images/work/rock_bg.png",
+        "border": false,
+        "description": "The invitation for one of my greatest honors as a designer came one summer Friday afternoon when a good friend of mine at the Berklee College of Music asked me if I wanted to design the poster for his senior recital. While we share a love for music, the rock music that he loves is nothing like the mellow tunes of the music I listen to and embody. Nonetheless, I took this on as a way to challenge myself to do something of a different feel. After many FaceTime consultations from coast to coast of the US and getting the drawing of my friend’s iconic bowl-cut and glasses just right, I ended up with this poster that captures the boldness of rock, nostalgia of a documentary, and my friend's personal brand. “Rockumentary” is the musical documentary of the rock music that shaped his life."
+    },
+    {
         "_id": 7,
         "active": true,
         "column": "right",
@@ -53,24 +71,6 @@
         "frontImage": "images/work/snakebite_poster_bg.png",
         "border": false,
         "description": "A simple, illustration-based informational poster intended to be able to be used by residents of Botswana. The project entailed researching the ways to help prevent fatal encounters with snakes specially in Botswana / southern Africa, organizing information into different sections and writing concise actionable steps, and finally creating the visual components of the poster. Wallet cards compile poster information into small folding panels that would be able to kept for easy access throughout the day."
-    },
-    {
-        "_id": 1,
-        "active": true,
-        "column": "left",
-        "name": "Rockumentary",
-        "path": "/rockumentary",
-        "summary": "A recital poster that balances notes of rock and nostalgia",
-        "type": "Freelance",
-        "team": "Solo project",
-        "role": "Designer",
-        "medium": "Digital",
-        "tools": "Adobe Illustrator, Goodnotes",
-        "year": 2024,
-        "tags": "Graphic design, branding",
-        "frontImage": "images/work/rock_bg.png",
-        "border": false,
-        "description": "The invitation for one of my greatest honors as a designer came one summer Friday afternoon when a good friend of mine at the Berklee College of Music asked me if I wanted to design the poster for his senior recital. While we share a love for music, the rock music that he loves is nothing like the mellow tunes of the music I listen to and embody. Nonetheless, I took this on as a way to challenge myself to do something of a different feel. After many FaceTime consultations from coast to coast of the US and getting the drawing of my friend’s iconic bowl-cut and glasses just right, I ended up with this poster that captures the boldness of rock, nostalgia of a documentary, and my friend's personal brand. “Rockumentary” is the musical documentary of the rock music that shaped his life."
     },
     {
         "_id": 2,

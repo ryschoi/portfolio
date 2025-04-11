@@ -24,7 +24,7 @@ export default function Work() {
         intersection of design and technology and create solutions that strike the balance
         between systematic order and creative freedom. */}
         </h2>
-
+        
         <div id="work-content">
           <div className="work-single-col">
             {projects
