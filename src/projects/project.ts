@@ -12,7 +12,9 @@ export type Project = {
     tools: string;
     year: number;
     tags: string;
+    vertical: boolean;
     frontImage: string;
+    frontImageBG: string;
     border: boolean;
     description: string;
 };

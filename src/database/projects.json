@@ -13,7 +13,9 @@
         "tools": "Adobe Illustrator, Microsoft Excel",
         "year": 2024,
         "tags": "Data analysis  |  Data visualization  |  Information design",
-        "frontImage": "images/work/snakebite_data_bg.png",
+        "vertical": true,
+        "frontImage": "images/work/snakebiteData.png",
+        "frontImageBG": "images/work/snakebite_data_bg.png",
         "border": false,
         "description": "This family of visualizations crafts a story of the link between certain climate conditions and countries with high rates of snakebite. I was lucky to have had the opportunity to learn about the global snakebite crisis through this project and to get to put my design skills to use to bring about more awareness for both those affected and not. While this poster only covers climate conditions, I can see it becoming a much fuller and more compelling story with the incorporation of data on patterns in wealth, hospital accessibility and funding, and much more."
     },
@@ -31,7 +33,9 @@
         "tools": "Adobe Illustrator, Figma, Goodnotes",
         "year": 2024,
         "tags": "Information design",
-        "frontImage": "images/work/snakebite_poster_bg.png",
+        "vertical": false,
+        "frontImage": "images/work/snakebitePrevention.png",
+        "frontImageBG": "images/work/snakebite_poster_bg.png",
         "border": false,
         "description": "A simple, illustration-based informational poster intended to be able to be used by residents of Botswana. The project entailed researching the ways to help prevent fatal encounters with snakes specially in Botswana / southern Africa, organizing information into different sections and writing concise actionable steps, and finally creating the visual components of the poster. Wallet cards compile poster information into small folding panels that would be able to kept for easy access throughout the day."
     },
@@ -49,10 +53,11 @@
         "tools": "Figma",
         "year": 2025,
         "tags": "UI/UX",
-        "frontImage": "images/work/cooper_bg.png",
+        "vertical": false,
+        "frontImage": "images/work/cooper.png",
+        "frontImageBG": "images/work/cooper_bg.png",
         "border": false,
         "description": "This co-op review platform for Northeastern students is an ongoing project part of Sandbox Northeastern. Please check back at the end of the semester for process images and final designs!"
-
     },
     {
         "_id": 1,
@@ -68,7 +73,9 @@
         "tools": "Adobe Illustrator, Goodnotes",
         "year": 2024,
         "tags": "Graphic design, branding",
-        "frontImage": "images/work/rock_bg.png",
+        "vertical": true,
+        "frontImage": "images/work/rockumentary.png",
+        "frontImageBG": "images/work/rock_bg.png",
         "border": false,
         "description": "The invitation for one of my greatest honors as a designer came one summer Friday afternoon when a good friend of mine at the Berklee College of Music asked me if I wanted to design the poster for his senior recital. While we share a love for music, the rock music that he loves is nothing like the mellow tunes of the music I listen to and embody. Nonetheless, I took this on as a way to challenge myself to do something of a different feel. After many FaceTime consultations from coast to coast of the US and getting the drawing of my friend’s iconic bowl-cut and glasses just right, I ended up with this poster that captures the boldness of rock, nostalgia of a documentary, and my friend's personal brand. “Rockumentary” is the musical documentary of the rock music that shaped his life."
     },
@@ -86,7 +93,9 @@
         "tools": "Adobe Illustrator",
         "year": 2024,
         "tags": "Graphic design",
-        "frontImage": "images/work/calder_bg.png",
+        "vertical": true,
+        "frontImage": "images/work/calder.png",
+        "frontImageBG": "images/work/calder_bg.png",
         "border": false,
         "description": "Little did I know on the one Saturday afternoon in 2018 that our family paid a visit to the SFMoMA that years later I would design mock exhibition materials for one of the sculptures I had seen that day. Below is an A1 size poster, A5 size flyer, and Instagram posts all featuring Alexander Calder’s iconic Big Crinkly. This was my final project for one of my studio classes."
     },
@@ -104,7 +113,9 @@
         "tools": "Adobe Illustrator",
         "year": 2024,
         "tags": "Information design",
-        "frontImage": "images/work/text_diagram_bg.png",
+        "vertical": false,
+        "frontImage": "images/work/textDiagramColor.png",
+        "frontImageBG": "images/work/text_diagram_bg.png",
         "border": false,
         "description": "This is a map of the information covered in a podcast episode from the podcast “99% Invisible”. This project, focusing on information design, was done in the studio section for Design Process and Practices. It is one of my favorites from pieces I’ve done at school as it was when I discovered my attachment to information design. Unlike most designs that take lots of drafting and sketching, this one came together rather naturally.  I loved figuring out how to fit together all the information, establishing the typographic hierarchy, and coming up with the simple  lines and circle “arrows” that guide the viewer from one point to the next."
     },
@@ -122,7 +133,9 @@
         "tools": "Figma",
         "year": 2024,
         "tags": "Information design",
-        "frontImage": "images/work/favorite_bg.png",
+        "vertical": false,
+        "frontImage": "images/work/page 3.jpg",
+        "frontImageBG": "images/work/favorite_bg.png",
         "border": false,
         "description": "Description coming soon."
     },
@@ -140,7 +153,9 @@
         "tools": "Figma",
         "year": 2024,
         "tags": "UX research | UI/UX",
-        "frontImage": "images/work/radien_bg.png",
+        "vertical": false,
+        "frontImage": "images/work/radien.png",
+        "frontImageBG": "images/work/radien_bg.png",
         "border": false,
         "description": "Description coming soon."
     },
@@ -158,7 +173,9 @@
         "tools": "Adobe Illustrator",
         "year": 2024,
         "tags": "Graphic design",
-        "frontImage": "images/work/type-front.png",
+        "vertical": true,
+        "frontImage": "images/work/typography.jpg",
+        "frontImageBG": "images/work/type-front.png",
         "border": false,
         "description": "As someone who starts many more projects than I complete, this 24-hour challenge was the perfect way to give myself practice in making and committing to creative decisions, which is where I most often get stuck in the design process. During this one day, I successfully gathered and categorized all the information, drafted, and brought to life this poster that you see below (along with getting lots of practice with the Pathfinder tool in Illustrator)."
     },
@@ -176,10 +193,11 @@
         "tools": "Paper, Adobe Illustrator",
         "year": 2024,
         "tags": "Typography",
+        "vertical": false,
         "frontImage": "images/work/philosophy-front.png",
+        "frontImageBG": "images/work/philosophy-front.png",
         "border": false,
         "description": "\"Design is not just what it looks like and feels like. Design is how it works.\" (Steve Jobs) is my design philosophy and the quote that these cut up, layered, and rotated words represent. This project was for my studio for Typographic Systems and was for sure one of the more difficult design projects I’ve done as I was challenged to rethink how I use and orient type to not just be the literal text, but to make the design itself."
-
     },
     {
         "_id": 11,
@@ -195,7 +213,9 @@
         "tools": "Adobe Illustrator",
         "year": 2022,
         "tags": "Graphic design",
+        "vertical": true,
         "frontImage": "images/work/complete_stairs.png",
+        "frontImageBG": "images/work/complete_stairs.png",
         "border": false,
         "description": "Description coming soon."
     }

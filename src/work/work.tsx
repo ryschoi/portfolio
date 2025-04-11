@@ -17,7 +17,7 @@ export default function Work() {
           {/* Experienced in UI/UX, information design, web development, and data analysis & visualization. */}
           <span className="gray">Hi, I'm Rebecca.</span><br />
           Designing with the intention to create quality products that new users can interact with in a familiar way.
-Eager to combine tech, design, and data to create something meaningful and useful.
+          Eager to combine tech, design, and data to create something meaningful and useful.
           {/* Designing with the intention to ensure quality, functional products and satisfied users. */}
 
           {/* Old blurb */}
@@ -25,14 +25,19 @@ Eager to combine tech, design, and data to create something meaningful and usefu
         intersection of design and technology and create solutions that strike the balance
         between systematic order and creative freedom. */}
         </h2>
-        
+
         <div id="work-content">
           <div className="work-single-col">
+
+
             {projects
               .filter((project) => project.active === true)
               .map((project) => (
                 <Link to={project.path} key={project._id}>
-                  <img src={project.frontImage} alt="" width="100%" height="auto" className={project.border === true ? "border" : ""} />
+                  {/* <div className="img-bg-cont">
+                    <img src={project.frontImage} alt="" width={project.vertical === true ? "70%" : "90%"} height="auto" className={project.border === true ? "border" : ""} />
+                  </div> */}
+                  <img src={project.frontImageBG} alt="" width="100%" height="auto" className={project.border === true ? "border" : ""} />
                   {/* <p className="big-body-text">{project.name}</p> */}
                   <p className="big-body-text semi-bold proj-sum-work">{project.summary}</p>
                   <p className="gray">{project.tags}</p>
