@@ -16,7 +16,7 @@ export default function Work() {
 
           {/* Experienced in UI/UX, information design, web development, and data analysis & visualization. */}
           <span className="gray">Hi, I'm Rebecca.</span><br />
-          A multidisciplinary creator eager to combine tech, design, and data to create something meaningful and useful.
+          Eager to combine tech, design, and data to create something meaningful and useful.
           {/* Designing with the intention to ensure quality, functional products and satisfied users. */}
 
           {/* Old blurb */}
