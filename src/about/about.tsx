@@ -43,7 +43,7 @@ export default function About() {
         <div>
           <p className="subheading gray">Outside of work...</p>
           <p className="mid-text">
-            I love trees, playing the bass, long silent train rides, and kombucha.
+            I love full bleed designs, trees, playing the bass, long silent train rides, and kombucha.
           </p>
         </div>
 
