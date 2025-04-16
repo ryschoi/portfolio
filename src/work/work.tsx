@@ -37,7 +37,7 @@ export default function Work() {
                   {/* <div className="img-bg-cont">
                     <img src={project.frontImage} alt="" width={project.vertical === true ? "70%" : "90%"} height="auto" className={project.border === true ? "border" : ""} />
                   </div> */}
-                  <img src={project.frontImageBG} alt="" width="100%" height="auto" className={project.border === true ? "border" : ""} />
+                  <img src={project.frontImageBG} alt="" width="100%" height="auto" className={project.border === true ? "" : ""} />
                   {/* <p className="big-body-text">{project.name}</p> */}
                   <p className="big-body-text semi-bold proj-sum-work">{project.summary}</p>
                   <p className="gray">{project.tags}</p>

@@ -51,10 +51,10 @@ export default function About() {
         <div>
           <p className="subheading gray">Contact</p>
           <p className="">
-            <a className="underline dark-gray" href="choi.re@northeastern.edu">choi.re@northeastern.edu</a><br />
+            <a className="underline" href="choi.re@northeastern.edu">choi.re@northeastern.edu</a><br />
             510-682-0020<br /><br />
 
-            <a className="underline dark-gray" href="https://www.linkedin.com/in/ryschoi">LinkedIn</a> | <a className="underline dark-gray" href="images/Rebecca_Choi_Resume.pdf">Resume</a>
+            <a className="underline" href="https://www.linkedin.com/in/ryschoi">LinkedIn</a> | <a className="underline" href="images/Rebecca_Choi_Resume.pdf">Resume</a>
           </p>
         </div>
 

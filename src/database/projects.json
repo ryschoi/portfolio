@@ -56,7 +56,7 @@
         "vertical": false,
         "frontImage": "images/work/cooper.png",
         "frontImageBG": "images/work/cooper_bg.png",
-        "border": false,
+        "border": true,
         "description": "This co-op review platform for Northeastern students is an ongoing project part of Sandbox Northeastern. Please check back at the end of the semester for process images and final designs!"
     },
     {
