@@ -29,7 +29,7 @@ export default function App() {
     <Router>
       <ResetScroll />
       <div>
-        <NavBar />
+        {/* <NavBar /> */}
 
         <Routes>
           <Route path="/" element={<Work />} />

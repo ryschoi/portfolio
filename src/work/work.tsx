@@ -1,78 +1,62 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { projects } from "../database";
+import { useRef } from "react";
+import "../navigation/nav.css";
 import "./work.css";
 export default function Work() {
+  const { pathname } = useLocation();
+  const links = [
+    { label: "Work", path: `/` },
+    { label: "Resume", path: `/resume` },
+    { label: "About", path: `/about` }
+  ];
+
+  const myRef = useRef(null);
+  const executeScroll = () => myRef.current.scrollIntoView()
 
   return (
-    <div className="flex">
-      <div id="work" className="max-w-2/3">
-        <h2 className="" id="home-blurb">
-          {/* Experienced in...<br />
-        conducting user research,<br />
-        designing clean and user-friendly interfaces,<br />
-        crafting compelling data stories,<br />
-        and writing efficient and maintainable code.<br /> */}
-
-          {/* Experienced in UI/UX, information design, web development, and data analysis & visualization. */}
-          <span className="gray">Hi, I'm Rebecca.</span><br />
-          Designing with the intention to create quality products that new users can interact with in a familiar way.
-          Eager to combine tech, design, and data to create something meaningful and useful.
-          {/* Designing with the intention to ensure quality, functional products and satisfied users. */}
-
-          {/* Old blurb */}
-          {/* Graphic & information design, UI, UX, data visualization, etc. I thrive at the
-        intersection of design and technology and create solutions that strike the balance
-        between systematic order and creative freedom. */}
-        </h2>
-
-        <div id="work-content">
-          <div className="work-single-col">
-
-
-            {projects
-              .filter((project) => project.active === true)
-              .map((project) => (
-                <Link to={project.path} key={project._id}>
-                  {/* <div className="img-bg-cont">
-                    <img src={project.frontImage} alt="" width={project.vertical === true ? "70%" : "90%"} height="auto" className={project.border === true ? "border" : ""} />
-                  </div> */}
-                  <img src={project.frontImageBG} alt="" width="100%" height="auto" className={project.border === true ? "" : ""} />
-                  {/* <p className="big-body-text">{project.name}</p> */}
-                  <p className="big-body-text semi-bold proj-sum-work">{project.summary}</p>
-                  <p className="gray">{project.tags}</p>
-                </Link>
-              ))}
+    <div id="work" className="max-w-2/3">
+      <div id="work-top-intro">
+        <Link to="/" id="navbar-home-link"><img src="images/name.png" alt="Logo" width="120" /></Link>
+        <h1>
+          Designing with the intention to create quality products that new users can interact with in a familiar way. Eager to combine tech, design, and data to create something meaningful and useful.
+        </h1>
+        <div id="text-nav" className="scroll">
+          <button onClick={executeScroll}><Link to="/">See work</Link></button>
+          <div>
+            <Link to="/resume">Resume</Link>
+            <Link to="/about">About me</Link>
           </div>
+        </div>
+      </div>
 
+      <div id="work-content" ref={myRef}>
+        <div className="work-single-col">
+          {projects
+            .filter((project) => project.active === true)
+            .map((project) => (
+              <div className="project-cont">
+                {/* TEXT */}
+                <div className="proj-details-cont">
+                  <div>
+                    <p className="gray">{project.tags}</p>
+                    <p className="big-body-text semi-bold proj-sum-work">{project.summary}</p>
+                  </div>
+                  <div>
+                    <p className="gray">{project.name}</p>
+                    <p className="gray">{project.year}</p>
+                  </div>
+                </div>
 
-          {/* Two column layout */}
-
-          {/* <div className="work-columns">
-            {projects
-              .filter((project) => project.column === "left" && project.active === true)
-              .map((project) => (
-                <Link to={project.path} key={project._id}>
-                  <img src={project.frontImage} alt="" width="100%" height="auto" className={project.border === true ? "border" : ""} />
-                  <p className="big-body-text">{project.name}</p>
-                  <p className="gray">{project.tags}</p>
+                {/* IMAGE */}
+                <Link to={project.path} key={project._id} className="img-cont">
+                  <img src={project.frontImageBG} alt="" className={project.border === true ? "proj-img" : "proj-img"} />
                 </Link>
-              ))}
-          </div>
-
-          <div className="work-columns">
-            {projects
-              .filter((project) => project.column === "right" && project.active === true)
-              .map((project) => (
-                <Link to={project.path} key={project._id}>
-                  <img src={project.frontImage} alt="" width="100%" height="auto" className={project.border === true ? "border" : ""} />
-                  <p className="big-body-text">{project.name}</p>
-                  <p className="gray">{project.tags}</p>
-                </Link>
-              ))}
-          </div> */}
-        </div >
-      </div >
+              </div>
+            ))}
+        </div>
+      </div>
     </div>
   );
 }

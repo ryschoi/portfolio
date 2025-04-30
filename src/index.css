@@ -89,8 +89,7 @@ body {
 }
 
 #root {
-  width: 800px;
-  margin: 0 auto;
+  margin: 0px 3.5%;
 }
 
 p,
@@ -172,4 +171,11 @@ a:hover {
 
 .slim-fit {
   width: 660px;
+}
+
+button {
+  background-color: #ffffff;
+  border: none;
+  padding: 0;
+  margin: 0;
 }
