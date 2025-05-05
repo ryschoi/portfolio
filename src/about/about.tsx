@@ -3,8 +3,6 @@ import "./about.css";
 export default function About() {
   return (
     <div id="about">
-
-
       <div id="about-content">
         <div className="circular-container">
           <img id="headshot" src="images/headshot-square.png" />
@@ -20,7 +18,7 @@ export default function About() {
         </p>
 
         <div>
-          <p className="subheading gray">I am passionate about understanding how people think and behave.</p>
+          <h3 className="subheading gray">I am passionate about understanding how people think and behave.</h3>
           <p className="mid-text">
             From board games to deep philosophical questions, I get excited by anything that makes me think about the world around.
             No two problems ever have the same solution, so I enjoy crafting my thinking and work to the sublties of every challenge.
@@ -30,7 +28,7 @@ export default function About() {
         </div>
 
         <div>
-          <p className="subheading gray">Currently I am...</p>
+          <h3 className="subheading gray">Currently I am...</h3>
           <p>
             <ul className="">
               <li className="">Learning to clean up, analyze, and visualize data in Python and R</li>
@@ -41,7 +39,7 @@ export default function About() {
         </div>
 
         <div>
-          <p className="subheading gray">Outside of work...</p>
+          <h3 className="subheading gray">Outside of work...</h3>
           <p className="mid-text">
             I love full bleed designs, trees, playing the bass, long silent train rides, and kombucha.
           </p>
@@ -49,7 +47,7 @@ export default function About() {
 
         {/* <hr /> */}
         <div>
-          <p className="subheading gray">Contact</p>
+          <h3 className="subheading gray">Contact</h3>
           <p className="">
             <a className="underline" href="choi.re@northeastern.edu">choi.re@northeastern.edu</a><br />
             510-682-0020<br /><br />

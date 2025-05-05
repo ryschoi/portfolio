@@ -63,48 +63,48 @@ body {
 }
 
 #root {
-  margin: 0% 3.5%;
+  margin: 0px 3.2%;
 }
 
 p,
 ul,
 li,
 a {
-  /* font-family: Satoshi-Regular; */
   font-family: 'Hanken Grotesk';
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   margin: 0;
   color: #212121;
   font-weight: 300;
-  /* letter-spacing: 0.025em; */
 }
 
 .p-style {
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   margin: 0;
   color: #212121;
   font-weight: 300;
 }
 
-.big-body-text {
-  font-size: 18px;
-  line-height: 26px;
-}
-
 h1 {
-  font-size: 28px;
-  line-height: 38px;
   margin: 0;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
   font-weight: 500;
 }
 
 h2 {
-  font-size: 24px;
-  line-height: 32px;
   margin: 0;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
   font-weight: 500;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 600;
 }
 
 a {
@@ -141,7 +141,7 @@ a:hover {
 }
 
 button {
-  background-color: #ffffff;
+  background-color: white;
   border: none;
   padding: 0;
   margin: 0;

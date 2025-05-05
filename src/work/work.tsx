@@ -13,7 +13,6 @@ export default function Work() {
   ];
 
   const myRef = useRef(null);
-  const executeScroll = () => myRef.current.scrollIntoView()
 
   return (
     <div id="work" className="">
@@ -21,17 +20,10 @@ export default function Work() {
         This box changes color based on the screen size.
       </div>
       <div id="work-top-intro">
-        <Link to="/" id="navbar-home-link"><img src="images/name.png" alt="Logo" width="120" /></Link>
+        {/* <Link to="/" id="navbar-home-link"><img src="images/name.png" alt="Logo" width="120" /></Link> */}
         <h1>
-          Designing with the intention to create quality products that new users can interact with in a familiar way. Eager to combine tech, design, and data to create something meaningful and useful.
+          Using tech, design, and data to create intentionally and meaningfully.
         </h1>
-        <div id="text-nav" className="scroll">
-          <button onClick={executeScroll}><Link to="/">See work</Link></button>
-          <div>
-            <Link to="/resume">Resume</Link>
-            <Link to="/about">About me</Link>
-          </div>
-        </div>
       </div>
       <div id="work-content" ref={myRef}>
         <div className="work-single-col">
@@ -40,10 +32,10 @@ export default function Work() {
             .map((project) => (
               <div className="project-cont">
                 {/* TEXT */}
-                <div className="proj-details-cont">
+                <div className="proj-text-cont w-1/3">
                   <div>
                     <p className="gray">{project.tags}</p>
-                    <p className="big-body-text semi-bold proj-sum-work">{project.summary}</p>
+                    <h3 className="semi-bold proj-sum-work">{project.summary}</h3>
                   </div>
                   <div>
                     <p className="gray">{project.name}</p>
