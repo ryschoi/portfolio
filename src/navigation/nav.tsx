@@ -11,13 +11,13 @@ export default function NavBar() {
   ];
 
   return (
-    <div id="navbar">
-      <Link to="/" id="navbar-home-link"><img src="images/name.png" alt="Logo" width="120" /></Link>
-      <div id="navbar-items">
+    <div className="h-[8rem] flex flex-row justify-between content-end">
+      <Link to="/"><img src="images/name.png" alt="Logo" className="w-[7rem]" /></Link>
+      <div className="flex flex-row gap-[3rem]">
         {links.map((page) => (
           <Link key={page.path} to={page.path} className={`
-            ${pathname.endsWith(page.path) ? "port-nav-link semi-bold nav-active" : "port-nav-link semi-bold gray"}`}>
-            {page.label}
+            ${pathname.endsWith(page.path) ? "no-underline nav-active" : "no-underline gray"}`}>
+            <h3 className="inline">{page.label}</h3>
           </Link>
         ))}
       </div>
