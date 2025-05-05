@@ -1,30 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url(../public/fonts/satoshi/fonts/WEB/css/satoshi.css);
+  @import url('satoshi.css');
+    font-family: "satoshi", sans-serif;
+    src: url('../public/fonts/satoshi/fonts/TTF/Satoshi-Variable.ttf') format('ttf'),
+    url('../public/fonts/satoshi/fonts/TTF/Satoshi-VariableItalic.ttf') format('ttf');
+  }
+  :root {
+    font-family: Satoshi-Regular;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+  }
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
-/* @import "tailwindcss"; */
-
-/* @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap'); */
-
-/* @import url(../public/fonts/satoshi/fonts/WEB/css/satoshi.css); */
-
-/* @import url('satoshi.css'); */
-
-/* @font-face {
-  font-family: "satoshi", sans-serif;
-  src: url('../public/fonts/satoshi/fonts/TTF/Satoshi-Variable.ttf') format('ttf'),
-  url('../public/fonts/satoshi/fonts/TTF/Satoshi-VariableItalic.ttf') format('ttf');
-}
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
-
-@font-face {
-  font-family: "Hanken-Grotesk", sans-serif;
-  src: url('../public/fonts/HankenGrotesk-Italic-VariableFont_wght.ttf') format('ttf'),
-    url('../public/fonts/HankenGrotesk-VariableFont_wght.ttf') format('ttf');
-} */
-
-/* :root {
-  font-family: Satoshi-Regular;
-  font-feature-settings: 'liga' 1, 'calt' 1;
-} */
-
 
 @font-face {
   font-family: "Hanken-Grotesk";
@@ -33,14 +23,15 @@
 }
 
 /* DIATYPE */
-/* @font-face {
-  font-family: "diatype";
-  src: url('/fonts/diatype/abc-diatype-var/ABCDiatypeVariable-Trial.ttf') format('truetype'),
-    url('/fonts/diatype/abc-diatype/ABCDiatype-Regular-Trial.otf') format('opentype');
-} */
-
-/* @import url('/fonts/diatype/abc-diatype-var/ABCDiatypeVariable-Trial.ttf');
-@import url('/fonts/diatype/abc-diatype/ABCDiatype-Regular-Trial.otf'); */
+/*
+  @font-face {
+    font-family: "diatype";
+    src: url('/fonts/diatype/abc-diatype-var/ABCDiatypeVariable-Trial.ttf') format('truetype'),
+      url('/fonts/diatype/abc-diatype/ABCDiatype-Regular-Trial.otf') format('opentype');
+  }
+  @import url('/fonts/diatype/abc-diatype-var/ABCDiatypeVariable-Trial.ttf');
+  @import url('/fonts/diatype/abc-diatype/ABCDiatype-Regular-Trial.otf');
+*/
 
 
 :root {
@@ -63,23 +54,6 @@ body {
   font-weight: 400;
 }
 
-
-/*  TEXT STYLES  */
-/*
-font-family: Satoshi-Light;
-font-family: Satoshi-LightItalic;
-font-family: Satoshi-Regular;
-font-family: Satoshi-Italic;
-font-family: Satoshi-Medium;
-font-family: Satoshi-MediumItalic;
-font-family: Satoshi-Bold;
-font-family: Satoshi-BoldItalic;
-font-family: Satoshi-Black;
-font-family: Satoshi-BlackItalic;
-font-family: Satoshi-Variable;
-font-family: Satoshi-VariableItalic;
-*/
-
 body {
   margin: 0;
   font-family: 'Hanken Grotesk';
@@ -89,12 +63,13 @@ body {
 }
 
 #root {
-  margin: 0px 3.5%;
+  margin: 0% 3.5%;
 }
 
 p,
 ul,
-li, a {
+li,
+a {
   /* font-family: Satoshi-Regular; */
   font-family: 'Hanken Grotesk';
   font-size: 15px;
@@ -130,7 +105,6 @@ h2 {
   line-height: 32px;
   margin: 0;
   font-weight: 500;
-  /* font-family: Satoshi-Bold; */
 }
 
 a {
@@ -143,7 +117,6 @@ a:hover {
 }
 
 .bold {
-  /* font-family: Satoshi-Bold; */
   font-weight: 600;
 }
 
@@ -156,9 +129,7 @@ a:hover {
 }
 
 .semi-bold {
-  /* font-family: Satoshi-Medium; */
   font-weight: 500;
-  ;
 }
 
 .border {
@@ -167,10 +138,6 @@ a:hover {
 
 .italic {
   font-style: italic;
-}
-
-.slim-fit {
-  width: 660px;
 }
 
 button {

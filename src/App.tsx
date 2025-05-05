@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ResetScroll from "./reset-scroll"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -29,7 +27,7 @@ export default function App() {
     <Router>
       <ResetScroll />
       <div>
-        {/* <NavBar /> */}
+        <NavBar />
 
         <Routes>
           <Route path="/" element={<Work />} />

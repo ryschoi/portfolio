@@ -16,7 +16,10 @@ export default function Work() {
   const executeScroll = () => myRef.current.scrollIntoView()
 
   return (
-    <div id="work" className="max-w-2/3">
+    <div id="work" className="">
+      <div className="bg-red-500 sm:bg-blue-500 md:bg-green-500 lg:bg-yellow-500">
+        This box changes color based on the screen size.
+      </div>
       <div id="work-top-intro">
         <Link to="/" id="navbar-home-link"><img src="images/name.png" alt="Logo" width="120" /></Link>
         <h1>
@@ -30,7 +33,6 @@ export default function Work() {
           </div>
         </div>
       </div>
-
       <div id="work-content" ref={myRef}>
         <div className="work-single-col">
           {projects
