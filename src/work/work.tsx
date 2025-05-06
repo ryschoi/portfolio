@@ -18,14 +18,12 @@ export default function Work() {
 
   return (
     <div id="work" className="">
-
-      <div className="flex flex-col gap-[0.5rem] h-[18rem] items-center place-content-center">
+      <div className="flex flex-col gap-[0.5rem] mt-[8rem] mb-[12rem] items-center place-content-center">
         <h2 className="text-red-500">
-        <span className="gray">UX Designer, coder, kombucha drinker. 🌚</span><br />
-        Using tech, design, and data to create intentionally and meaningfully.
+          <span className="gray">UX Designer, coder, kombucha drinker. 🌚</span><br />
+          Using tech, design, and data to create intentionally and meaningfully.
         </h2>
       </div>
-
 
       {/* WORK DISPLAYS */}
       <div id="work-content" ref={myRef}>

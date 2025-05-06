@@ -11,15 +11,17 @@ export default function NavBar() {
   ];
 
   return (
-    <div className="h-[8rem] flex flex-row justify-between content-end">
-      <Link to="/"><img src="images/name.png" alt="Logo" className="w-[7rem]" /></Link>
-      <div className="flex flex-row gap-[3rem]">
-        {links.map((page) => (
-          <Link key={page.path} to={page.path} className={`
+    <div className="h-[4rem] content-end mb-[4rem]">
+      <div className="flex flex-row justify-between">
+        <Link to="/"><img src="images/name.png" alt="Logo" className="w-[7rem]" /></Link>
+        <div className="flex flex-row gap-[3rem]">
+          {links.map((page) => (
+            <Link key={page.path} to={page.path} className={`
             ${pathname.endsWith(page.path) ? "no-underline nav-active" : "no-underline gray"}`}>
-            <h3 className="inline">{page.label}</h3>
-          </Link>
-        ))}
+              <h3 className="inline">{page.label}</h3>
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

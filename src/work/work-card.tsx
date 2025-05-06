@@ -8,7 +8,9 @@ export default function WorkCard({ project }: { project: Project }) {
             <div className="w-1/3 flex flex-col gap-[4rem] mt-[2.6rem]">
                 <div>
                     <p className="gray">{project.tags}</p>
-                    <h3 className="semi-bold proj-sum-work">{project.summary}</h3>
+                    <Link to={project.path} key={project._id} className="mt-[0.4rem] mb-[0rem] h3">
+                        {project.summary}
+                    </Link>
                 </div>
                 <div>
                     <p className="gray">{project.name}</p>

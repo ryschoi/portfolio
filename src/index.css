@@ -107,6 +107,12 @@ h3 {
   font-weight: 500;
 }
 
+.h3 {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+}
+
 a {
   text-decoration: none;
   color: #212121;
@@ -128,10 +134,6 @@ a:hover {
   color: #8b8b8b;
 }
 
-.semi-bold {
-  font-weight: 500;
-}
-
 .border {
   border: 2px solid #212121;
 }
@@ -145,4 +147,8 @@ button {
   border: none;
   padding: 0;
   margin: 0;
+}
+
+.semi-bold {
+  font-weight: 500;
 }
