@@ -23,7 +23,7 @@ export default function SnakebiteData() {
 
                     {/* version1 */}
                     <div className="flex flex-row justify-between w-[63rem] self-center">
-                        <img src="../public/images/work/Snakebite Data Story Crit1.png" className="w-3/5 light-border" />
+                        <img src="../public/images/work/s-data-crit1.png" className="w-3/5 light-border" />
                         <h4 className="w-1/3">
                             <span className="gray">Version 1</span><br />Feedback received and my notes:<br /><br />
                             <ul>
