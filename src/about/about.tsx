@@ -5,13 +5,13 @@ export default function About() {
   interface CopyButtonProps { text: string; }
 
   const CopyButton: React.FC<CopyButtonProps> = ({ text }) => {
-    const [tooltip, setTooltip] = useState('Copy to clipboard');
+    const [tooltip, setTooltip] = useState('Copy');
 
     const handleCopy = async () => {
       try {
         await navigator.clipboard.writeText(text);
-        setTooltip('Copied!');
-        setTimeout(() => setTooltip('Copy to clipboard'), 1500);
+        setTooltip('Copied 📋');
+        setTimeout(() => setTooltip('Copy'), 1500);
       } catch (err) {
         setTooltip('Failed to copy');
       }
@@ -41,7 +41,8 @@ export default function About() {
         {/* TEXT */}
         <div className="w-7/10 flex flex-col gap-[1rem]">
           <div className="flex flex-col gap-[1rem]">
-            <h3 className="">Hi, I'm Rebecca.<br /><span className="gray">A second-year Computer Science and Design student at Northeastern University and a UI/UX designer at Sandbox NU.</span></h3>
+            <h3 className="">Hi, I'm Rebecca.</h3>
+            <h4><span className="gray">A second-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h4 gray underline">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className="h4 gray underline">Sandbox NU.</a></span></h4>
 
           </div>
 

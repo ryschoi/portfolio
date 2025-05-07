@@ -42,7 +42,7 @@
 
 * {
   font-family: 'Hanken Grotesk';
-  font-weight: 400;
+  /* font-weight: 500; */
   margin: 0;
 }
 
@@ -82,21 +82,14 @@ h2 {
   font-weight: var(--heading-weight);
 }
 
-h3 {
+h3, .h3 {
   margin: var(--zero);
   font-size: var(--h3-size);
   line-height: var(--h3-leading);
   font-weight: var(--heading-weight);
 }
 
-.h3 {
-  margin: var(--zero);
-  font-size: var(--h3-size);
-  line-height: var(--h3-leading);
-  font-weight: var(--heading-weight);
-}
-
-h4 {
+h4, .h4 {
   margin: var(--zero);
   font-size: var(--h4-size);
   line-height: var(--h4-leading);
