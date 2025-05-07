@@ -16,7 +16,7 @@ export default function SnakebiteData() {
                 <div className="flex flex-col gap-[4rem]">
 
                     {/* PROBLEM SPACE */}
-                    <SectionHeader title="Problem" description="There seems to be a link between certain climate conditions and high levels of snakebite. The aim is to " optional="" />
+                    {/* <SectionHeader title="Problem" description="There seems to be a link between certain climate conditions and high levels of snakebite. The aim is to " optional="" /> */}
 
                     {/* PROCESS */}
                     <SectionHeader title="Process" description="Collecting data, creating initial visualizations in Excel, receiving feedback on how to make them more easily understandable, creating a story" optional="Most of the data was collected from Our World in Data. Since the data was relatively clean, most of the focus of this project was in figuring out how I could combine all the information I had to create one coheisve story. I used Excel to create initial data visualizations like maps and charts. From there, I copied them over into Illustrator where I was able to edit them more stylically." />
@@ -39,11 +39,11 @@ export default function SnakebiteData() {
                     {/* later versions */}
 
                     <div className="w-[63rem] flex flex-row gap-[1rem] self-center">
-                        <img className="crop-image w-1/2 h-[24rem] light-border" src="images/work/s-data-slice-intro.png" alt="" />
-                        <img className="crop-image w-1/2 h-[24rem] light-border" src="images/work/s-data-slice-map.png" alt="" />
+                        <img className="crop-image w-[31rem] h-[24rem] light-border" src="images/work/s-data-slice-intro.png" alt="" />
+                        <img className="crop-image w-[31rem] h-[24rem] light-border" src="images/work/s-data-slice-map.png" alt="" />
                     </div>
 
-                    <div className="flex flex-col gap-[1rem]">
+                    <div className="flex flex-col gap-[1rem] w-[63rem]">
                         <img src="../public/images/work/s-data-slice-isotype.png" className="light-border w-full" />
                         <p>I also made the series of once-bar charts into a series of differently-sized icons, keeping the focus on the difference between the global average and high-snakebite-countries average.</p>
                     </div>
