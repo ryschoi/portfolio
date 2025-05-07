@@ -1,70 +1,64 @@
 import "./about.css";
 export default function About() {
   return (
-    <div id="about">
-      <div id="about-content">
-        <div className="circular-container">
-          <img id="headshot" src="images/headshot-square.png" />
+    <div className="flex justify-center">
+      <div className="flex flex-row justify-between w-[63vw]">
+        {/* IMAGE */}
+        <div className="overflow-hidden w-[12rem] h-[12rem] rounded-[50%]">
+          <img id="headshot" className="w-full h-auto object-cover" src="images/headshot-square.png" />
         </div>
 
-        <h2 id="greeting">Hello! I'm Rebecca.</h2>
 
-        <p className="subheading gray no-margin-top">
-          {/* I am multidisciplinary creator. */}
-          {/* tech as a tool, design as a principle, data as the content, and humans as the reason */}
-          Currently a second-year studying Computer Science
-          and Design at Northeastern University in Boston, MA. Experienced in UI/UX, graphic design, web development, and data analysis and visualization.
-        </p>
+        {/* TEXT */}
+        <div className="w-2/3 flex flex-col gap-[2rem]">
+          {/* TOP TEXT */}
+          <div className="flex flex-col gap-[1rem]">
+            <h2>Hi, I'm Rebecca.</h2>
 
-        <div>
-          <h3 className="subheading gray">I am passionate about understanding how people think and behave.</h3>
+            {/* INTRO */}
+            <h3 className="subheading gray no-margin-top">
+              {/* tech as a tool, design as a principle, data as the content, and humans as the reason */}
+              A second-year Computer Science and Design student at Northeastern University.
+              Experienced in UI/UX, graphic design, web development, and data analysis and visualization.
+            </h3>
+
+            {/* CONTACT */}
+            <div>
+              {/* email */}
+              <a className="inline underline gray" href="choi.re@northeastern.edu"><h4 className="inline">choi.re@northeastern.edu</h4></a>
+              {/* phone */}
+              <h4 className="inline gray"> | (510) 682-0020</h4><br />
+              {/* links */}
+              <h4 className="gray">
+                <a className="underline gray" href="https://www.linkedin.com/in/ryschoi"><h4 className="inline">LinkedIn</h4></a> | <a className="underline gray" href="images/Rebecca_Choi_Resume.pdf"><h4 className="inline">Resume</h4></a>
+              </h4>
+            </div>
+          </div>
+
           <p className="mid-text">
-            From board games to deep philosophical questions, I get excited by anything that makes me think about the world around.
-            No two problems ever have the same solution, so I enjoy crafting my thinking and work to the sublties of every challenge.
-            <br /><br />In design, I have found a discipline where I can apply my insights and fuel my passion.
+            I'm passionate about understanding how people think and behave. In design, I have found a discipline where I can apply my insights and fuel my passion.
             Whether it's in coding or visual design, I work with the human nature in mind,
-            aiming to create quality products that new users can interact with in a familiar way.</p>
-        </div>
-
-        <div>
-          <h3 className="subheading gray">Currently I am...</h3>
-          <p>
-            <ul className="">
-              <li className="">Learning to clean up, analyze, and visualize data in Python and R</li>
-              <li className="">Working as a designer at Sandbox Northeastern on a team of student developers and designers to create a co-op review platform</li>
-              <li className="">Refining this website to store more of my projects and restructuring it to be more easily maintainable for the future. Next step: making it mobile-reponsive!</li>
-            </ul>
+            aiming to create quality products that new users can interact with in a familiar way.
           </p>
+
+          <div>
+            <h3 className="subheading gray">Currently I am...</h3>
+            <p>
+              <ul className="">
+                <li className="">Learning to clean up, analyze, and visualize data in Python and R</li>
+                <li className="">Working as a designer at Sandbox Northeastern on a team of student developers and designers to create a co-op review platform</li>
+                <li className="">Refining this website to store more of my projects and restructuring it to be more easily maintainable for the future. Next step: making it mobile-reponsive!</li>
+              </ul>
+            </p>
+          </div>
+
+          <div>
+            <h3 className="subheading gray">Outside of work...</h3>
+            <p className="mid-text">
+              I love full bleed designs, trees, playing the bass, long silent train rides, and kombucha.
+            </p>
+          </div>
         </div>
-
-        <div>
-          <h3 className="subheading gray">Outside of work...</h3>
-          <p className="mid-text">
-            I love full bleed designs, trees, playing the bass, long silent train rides, and kombucha.
-          </p>
-        </div>
-
-        {/* <hr /> */}
-        <div>
-          <h3 className="subheading gray">Contact</h3>
-          <p className="">
-            <a className="underline" href="choi.re@northeastern.edu">choi.re@northeastern.edu</a><br />
-            510-682-0020<br /><br />
-
-            <a className="underline" href="https://www.linkedin.com/in/ryschoi">LinkedIn</a> | <a className="underline" href="images/Rebecca_Choi_Resume.pdf">Resume</a>
-          </p>
-        </div>
-
-
-        {/* <div id="contact">
-          Contact
-          <p id="contact-info">
-            <a className="underline" href="choi.re@northeastern.edu">choi.re@northeastern.edu</a><br />
-            510-682-0020<br /><br />
-
-            <a className="underline" href="https://www.linkedin.com/in/rebecca-choi-3479b916a">LinkedIn</a> | <a className="underline" href="images/Rebecca_Choi_Resume.pdf">Resume</a>
-          </p>
-        </div> */}
       </div>
     </div>
   );

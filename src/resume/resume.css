@@ -1,12 +1,4 @@
-#port-resume {
-    text-align: center;
-}
-
 .resume-img-cont {
     background-color: #5e5e5e;
     padding: 60px;
-}
-
-#resume-img {
-    filter: drop-shadow(#505050 0rem 0rem 10px);
 }
