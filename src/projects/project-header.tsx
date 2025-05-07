@@ -3,17 +3,22 @@ import { Project } from "./project";
 export default function ProjectHeader({ project }: { project: Project }) {
     return (
         <div className="w-full flex justify-center">
-            <div className="flex flex-col items-center mb-[5rem] w-[63vw]">
+            <div className="flex flex-col items-center mb-[5rem] w-(--mid-width)">
                 {/* TOP TITLE */}
                 <div className="w-5/6">
                     <h2 className="project-heading-title semi-bold gray">{project.tags}</h2>
                     <h2 className="project-heading-title semi-bold">{project.name}  <span className="gray semi-bold">{project.year}</span></h2>
                 </div>
 
-                {/* TOP IMAGE */}
+                {/* IMAGE */}
                 <div className="gray-bg w-full mt-[1.8rem] mb-[3.5rem] flex align-center justify-center pt-[2.5rem] pb-[2.5rem]">
                     <img src={project.frontImage} alt="" className={project.vertical === true ? "w-[26rem]" : "w-[44rem]"} />
                 </div>
+                {/* <div className="gray-bg w-full flex align-center justify-center mt-[1.8rem] mb-[3.5rem]">
+                    <div className={project.vertical === true ? "self-center h-7/10 mt-[3rem] mb-[3rem]" : "self-center w-7/10 mt-[3rem] mb-[3rem]"}>
+                        <img src={project.frontImage} alt="" className={project.vertical === true ? "h-auto" : "w-full"} />
+                    </div>
+                </div> */}
 
                 {/* BELOW IMAGE */}
                 <div className="w-5/6 flex flex-col gap-[2.4rem]">

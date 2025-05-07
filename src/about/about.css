@@ -11,3 +11,16 @@
 .subheading {
   margin-bottom: 8px;
 }
+
+#contacts a {
+  color: #6F6E09;
+}
+
+.tag:hover {
+  background-color: #c6c47f;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+}

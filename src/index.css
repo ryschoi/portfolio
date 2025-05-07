@@ -12,6 +12,7 @@
 
 @theme {
   --zero: 0px;
+  --mid-width: 63vw;
 
   /* COLORS */
   /* --color-black: #212121; */
@@ -139,6 +140,22 @@ a:hover {
   font-weight: 500;
 }
 
+.green {
+  color: #acaa0b;
+}
+
+.dark-green {
+  color: #6F6E09;
+}
+
+.light-green {
+  color: #E0DFAC;
+}
+
+.tag {
+  background-color: #E0DFAC;
+  color: #6F6E09;
+}
 
 
 

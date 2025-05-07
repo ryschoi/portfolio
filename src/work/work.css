@@ -12,25 +12,18 @@
     justify-content: space-between;
 }
 
-.img-cont {
+.img-bg {
     background-color: #D3D3D3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 44px;
-    padding-bottom: 44px;
-    width: 63vw;
     transition: transform .2s;
+}
+
+.img-bg:hover {
+    opacity: 85%;
+    transform: scale(1.01);
 }
 
 .gray-bg {
     background-color: #D3D3D3;
-}
-
-/* IMAGE HOVER */
-.img-cont:hover {
-    opacity: 85%;
-    transform: scale(1.01);
 }
 
 .proj-img {
