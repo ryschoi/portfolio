@@ -1,4 +1,3 @@
-import React from "react";
 import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "./project-header";

@@ -1,4 +1,3 @@
-.resume-img-cont {
-    background-color: #5e5e5e;
-    padding: 60px;
+.resume-shadow {
+    filter: drop-shadow(0 0 3rem #ebebeb)
 }
