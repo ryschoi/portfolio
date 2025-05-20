@@ -31,30 +31,29 @@ export default function About() {
 
   return (
     <div className="flex justify-center">
-      <div className="flex flex-row justify-between w-[63vw]">
+      <div className="flex flex-wrap justify-between w-[63vw] gap-[1.5rem]">
         {/* IMAGE */}
-        <div className="overflow-hidden w-[11rem] h-[11rem] rounded-[50%]">
+        <div className="overflow-hidden w-[11rem] h-[11rem] rounded-[100%]">
           <img id="headshot" className="w-full h-auto object-cover" src="images/headshot-square.png" />
         </div>
-
 
         {/* TEXT */}
         <div className="w-7/10 flex flex-col gap-[1rem]">
           <div className="flex flex-col gap-[1rem]">
-            <h3 className="">Hi, I'm Rebecca.</h3>
-            <h4><span className="gray">A second-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h4 gray underline">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className="h4 gray underline">Sandbox NU.</a></span></h4>
+            <h2>Hi, I'm Rebecca.</h2>
+            <h3><span className="gray">A third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h4 gray underline">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className="h3 gray underline">Sandbox NU.</a></span></h3>
 
           </div>
 
           <p>
             I'm passionate about understanding how people think and behave. In design, I have found a discipline where I can apply my insights and fuel my passion.
-            Whether it's in coding or visual design, I work with the human nature in mind,
-            aiming to create quality products that new users can interact with in a familiar way.
+            Whether it's in coding or visual design, I work with the future users in mind,
+            aiming to create quality products that users can interact with in a familiar way.
             <br /><br />
             Outside of work I love full bleed designs, trees, playing the bass, long silent train rides, and kombucha.
           </p>
 
-          <div id="contacts" className="flex flex-row gap-[12px] mt-[1rem]">
+          <div id="contacts" className="flex flex-wrap gap-[12px] mt-[1rem]">
             <CopyButton text="choi.re@northeastern.edu" />
             <CopyButton text="(510) 682-0020" />
             <a href="https://www.linkedin.com/in/ryschoi/"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">LinkedIn</button></a>

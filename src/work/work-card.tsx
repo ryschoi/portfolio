@@ -15,7 +15,7 @@ export default function WorkCard({ project }: { project: Project }) {
                         <h3>{project.summary}</h3>
                         <p className="gray">{project.name}</p>
                     </div>
-                    <p className="gray">{project.tags}</p>
+                    {/* <p className="gray">{project.tags}</p> */}
                 </div>
             </Link>
         </div>

@@ -15,7 +15,6 @@
     background-color: #D3D3D3;
 }
 
-.img-shadow {
-  /* border: 0.8px solid #212121; */
+.subtle-shadow {
   filter: drop-shadow(0 0 3rem #e0e0e0)
 }
