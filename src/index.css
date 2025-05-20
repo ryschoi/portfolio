@@ -78,6 +78,10 @@ a {
   font-size: var(--ps-size);
 }
 
+.cap-top {
+  margin-top: 1rem;
+}
+
 .p-style {
   margin: 0;
   font-size: 1rem;
@@ -85,7 +89,7 @@ a {
   font-weight: var(--weight);
 }
 
-.small-p {
+.sp {
   margin: var(--zero);
   font-size: var(--ps-size);
   line-height: var(--ps-leading);
