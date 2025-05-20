@@ -18,6 +18,7 @@ export default function ImageBG({ project }: { project: Project }) {
                 </div>
             </div>
 
+            {/* SNAKEBITE DATA IMAGES */}
             {project._id === 7 && (
                 <div className="flex flex-row gap-[0.5rem]">
                     <div className="zoom img-bg rounded-[0.5rem] flex align-center justify-center w-full">
@@ -30,6 +31,23 @@ export default function ImageBG({ project }: { project: Project }) {
                             <img src="/images/work/snakebiteData2.png" alt="" className="w-[30vw] subtle-shadow" />
                         </div>
                     </div>
+                </div>
+            )}
+
+            {/* SNAKEBITE RESPONSE IMAGES */}
+            {project._id === 6 && (
+                <div className="flex flex-row gap-[0.5rem]">
+                    <div className="zoom img-bg rounded-[0.5rem] flex align-center justify-center w-full">
+                        <div className="self-center mt-[3rem] h-[50vh] overflow-hidden">
+                            <img src="/images/work/snakebiteWallet.png" alt="" className="w-[25vh] subtle-shadow" />
+                        </div>
+                    </div>
+                    <div className="zoom img-bg rounded-[0.5rem] flex align-center justify-center w-full">
+                        <div className="self-center my-[3rem]">
+                            <img src="/images/work/snakebiteWallet3.png" alt="" className="w-[30vw] subtle-shadow" />
+                        </div>
+                    </div>
+                    
                 </div>
             )}
         </div>
