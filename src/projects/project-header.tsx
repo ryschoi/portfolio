@@ -2,8 +2,8 @@ import { Project } from "./project";
 
 export default function ProjectHeader({ project }: { project: Project }) {
     return (
-        <div className="w-full flex justify-center">
-            <div className="flex flex-col items-center mb-[5rem] w-full">
+        <div className="w-full flex flex-col justify-center mb-[6rem]">
+            <div className="flex flex-col items-center mb-[6rem] w-full">
                 {/* TOP TITLE */}
                 <div className="w-(--mid-width)">
                     <h2 className="gray">{project.tags}</h2>
@@ -25,28 +25,29 @@ export default function ProjectHeader({ project }: { project: Project }) {
                     <div className="flex flex-wrap justify-between" id="proj-attributes">
                         {/* project type */}
                         <div className="flex flex-col gap-[0.2rem] w-[10rem]">
-                            <p className="p-style semi-bold gray">PROJECT TYPE</p>
+                            <p className="caption">PROJECT TYPE</p>
                             <p>{project.type}</p>
                         </div>
                         {/* team and role */}
                         <div className="flex flex-col gap-[0.2rem] w-[10rem]">
-                            <p className="p-style semi-bold gray">TEAM & ROLE</p>
+                            <p className="caption">TEAM & ROLE</p>
                             <p>{project.team}<br />{project.role}</p>
                         </div>
                         {/* medium */}
                         <div className="flex flex-col gap-[0.2rem] w-[10rem]">
-                            <p className="p-style semi-bold gray">MEDIUM</p>
+                            <p className="caption">MEDIUM</p>
                             <p>{project.medium}</p>
                         </div>
                         {/* tools */}
                         <div className="flex flex-col gap-[0.2rem] w-[10rem]">
-                            <p className="p-style semi-bold gray">TOOLS</p>
+                            <p className="caption">TOOLS</p>
                             <p>{project.tools}</p>
                         </div>
                     </div>
                     <p className="mt-[1.4rem]">{project.description}</p>
                 </div>
             </div>
+            <hr />
         </div>
     );
 }

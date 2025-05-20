@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @font-face {
   font-family: "Hanken-Grotesk";
@@ -68,6 +69,13 @@ a {
   font-size: 1rem;
   line-height: var(--leading);
   font-weight: var(--weight);
+}
+
+.caption {
+  font-family: 'Space Mono';
+  color: #8b8b8b;
+  text-transform: uppercase;
+  font-size: var(--ps-size);
 }
 
 .p-style {
@@ -186,7 +194,9 @@ a:hover {
   line-height: 2rem;
 }
 
-
+hr {
+    border: 0.7px solid #dcdcdc;
+}
 
 
 

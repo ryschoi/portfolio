@@ -13,8 +13,8 @@ export default function Footer() {
                     <Link to="/">Rebecca Choi</Link>
                     <br />
                     <br />
-                    <p className="small-p gray">Coded and designed by me ◡̈</p>
-                    <p className="small-p gray">Last updated: May 2025</p>
+                    <p className="caption">Coded and designed by me ◡̈</p>
+                    <p className="caption">Last updated: May 2025</p>
                 </div>
 
                 {/* Right side */}

@@ -2,6 +2,7 @@ import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "./project-header";
 import { Project } from "./project";
+import SectionHeader from "./section-header";
 
 export default function DissonantHarmony() {
     const thisProject = projects.find(p => p.path === "/dissonant-harmony");
@@ -11,29 +12,13 @@ export default function DissonantHarmony() {
             <ProjectHeader project={thisProject as Project} />
 
             <div className="project-content-rest">
-                <div className="col22">
-                    <p className="section-titles">
-                        A1 size poster
-                    </p>
-                    <img src="images/work/calder.png" alt="" width="100%" />
-                    <div className="row22">
-                        <p className="half-column">
-                            I went with the theme of a deconstructed sculpture which I
+                <SectionHeader title="concept" description="Reflecting the idea of dissonant harmony in the illustrations and typography" optional="I went with the theme of a deconstructed sculpture which I
                             created by first tracing over an image of Big Crinkly using
                             the Pen tool and then separating it by its individual parts.
                             The display of the individual pieces plays along with the idea
                             of “dissonant”–that all the individual pieces of the whole
-                            sculpture are on their own dissonant. All a little random, a
-                        </p>
-                        <p className="half-column">
-                            little rough-cut, jagged almost. But somehow coming together
-                            and creating harmony. The gif in the Instagram post is my favorite
-                            part of this project because I think it brings everything together
-                            (literally) by showing the actual constructing of the sculpture,
-                            from separate pieces to one body.
-                        </p>
-                    </div>
-                </div>
+                            sculpture are on their own dissonant. All a little random, a little rough-cut, jagged almost, but somehow coming together
+                            and creating a harmonious result." />
 
                 <div className="col22 slim">
                     <p className="section-titles">A5 size flyer (front & back)</p>
@@ -48,10 +33,13 @@ export default function DissonantHarmony() {
                         <a className="underline gray" href="https://www.instagram.com/snfivowlactz/">(pseudo Instagram account)</a></p>
                     <div className="row22">
                         <img src="images/work/calder_instagram.jpeg" alt="" width="50%" />
-                        <video controls width="50%">
+                        <video autoPlay loop muted width="50%">
                             <source src="images/work/calder.mov" type="video/mp4" />
                         </video>
                     </div>
+                    <p>My favorite part of this project because I think it brings everything together
+                        (literally) by showing the actual constructing of the sculpture,
+                        from separate pieces to one body.</p>
                 </div>
 
                 <div className="col22">

@@ -6,13 +6,13 @@ type inputs = {
 
 export default function SectionHeader({ title, description, optional }: inputs) {
     return (
-        <div className="flex flex-row justify-between w-[63vw] self-center">
+        <div className="flex flex-col gap-[0.5rem] w-(--mid-width) self-center">
             {/* TITLE */}
-            <h3 className="gray w-1/5">{title}</h3>
+            <p className="caption gray semi-bold">{title}</p>
 
             {/* DESCRIPTION */}
-            <div className="w-3/5 flex flex-col gap-[1rem]">
-                <h3 className="">{description}</h3>
+            <div className="flex flex-col gap-[1rem]">
+                <h2 className="">{description}</h2>
                 <p>{optional}</p>
             </div>
         </div>

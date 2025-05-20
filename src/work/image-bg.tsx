@@ -44,10 +44,29 @@ export default function ImageBG({ project }: { project: Project }) {
                     </div>
                     <div className="zoom img-bg rounded-[0.5rem] flex align-center justify-center w-full">
                         <div className="self-center my-[3rem]">
-                            <img src="/images/work/snakebiteWallet3.png" alt="" className="w-[30vw] subtle-shadow" />
+                            <img src="/images/work/snakebiteWallet5.png" alt="" className="w-[30vw] subtle-shadow" />
                         </div>
                     </div>
-                    
+
+                </div>
+            )}
+
+            {/* DISSONANT HARMONY */}
+            {project._id === 2 && (
+                <div className="flex flex-row gap-[0.5rem] h-[34vw] w-full">
+                    <div className="zoom img-bg rounded-[0.5rem] flex align-center justify-center w-full">
+                        <div className="self-center h-[56vh]">
+                            <img src="/images/work/calder_a5_front.png" alt="" className="w-[19vw] subtle-shadow" />
+                        </div>
+                    </div>
+                    <div className="zoom img-bg rounded-[0.5rem] flex align-center justify-center w-full">
+                        <div className="self-center h-[56vh]">
+                            <video autoPlay loop muted width="50%" className="subtle-shadow w-[27vw]">
+                                <source src="images/work/calder.mov" type="video/mp4" />
+                            </video>
+                        </div>
+                    </div>
+
                 </div>
             )}
         </div>
