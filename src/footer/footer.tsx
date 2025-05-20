@@ -20,7 +20,7 @@ export default function Footer() {
                 {/* Right side */}
                 <div className="flex flex-wrap gap-[8rem]">
                     <div>
-                        <Link to="/work">Work</Link><br />
+                        <Link to="/">Work</Link><br />
                         <Link to="/resume">Resume</Link><br />
                         <Link to="/about">About</Link><br />
                     </div>
