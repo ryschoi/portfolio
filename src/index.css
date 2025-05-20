@@ -27,8 +27,8 @@
   --ps-size: 0.9rem;
   --ps-leading: 1.3rem;
 
-  --h1-size: 1.8rem;
-  --h1-leading: 2.5rem;
+  --h1-size: 1.65rem;
+  --h1-leading: 2.2rem;
 
   --h2-size: 1.45rem;
   --h2-leading: 2rem;
@@ -54,10 +54,11 @@
 * {
   font-family: 'Hanken Grotesk';
   margin: 0;
+  color: #212121;
 }
 
 #root {
-  margin: 0px 10%;
+  margin: 0px 4%;
 }
 
 p,
@@ -67,14 +68,12 @@ a {
   font-size: 1rem;
   line-height: var(--leading);
   font-weight: var(--weight);
-  color: #212121;
 }
 
 .p-style {
   margin: 0;
   font-size: 1rem;
   line-height: var(--leading);
-  color: #212121;
   font-weight: var(--weight);
 }
 
@@ -114,7 +113,6 @@ h4, .h4 {
 
 a {
   text-decoration: none;
-  color: #212121;
 }
 
 a:hover {
@@ -166,8 +164,19 @@ a:hover {
   color: #6F6E09;
 }
 
-.max-w-tablet {
-  max-width: 36rem;
+.tag:hover {
+  background-color: #c6c47f;
+  cursor: pointer;
+}
+
+.gray-tag {
+  background-color: #dbdbdb;
+  color: #474747;
+}
+
+.gray-tag:hover {
+  background-color: #c6c6c6;
+  cursor: pointer;
 }
 
 .home-name {

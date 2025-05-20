@@ -42,7 +42,6 @@ export default function About() {
           <div className="flex flex-col gap-[1rem]">
             <h2>Hi, I'm Rebecca.</h2>
             <h3><span className="gray">A third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h4 gray underline">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className="h3 gray underline">Sandbox NU.</a></span></h3>
-
           </div>
 
           <p>
@@ -50,9 +49,10 @@ export default function About() {
             Whether it's in coding or visual design, I work with the future users in mind,
             aiming to create quality products that users can interact with in a familiar way.
             <br /><br />
-            Outside of work I love full bleed designs, trees, playing the bass, long silent train rides, and kombucha.
+            Outside of work I love trees, playing the bass, long silent train rides, and kombucha.
           </p>
 
+          {/* TAGS */}
           <div id="contacts" className="flex flex-wrap gap-[12px] mt-[1rem]">
             <CopyButton text="choi.re@northeastern.edu" />
             <CopyButton text="(510) 682-0020" />
