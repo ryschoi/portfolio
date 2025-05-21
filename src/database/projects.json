@@ -1,6 +1,6 @@
 [
     {
-        "_id": 7,
+        "id": 7,
         "active": true,
         "column": "right",
         "name": "Snakebite Data Story Poster",
@@ -20,7 +20,7 @@
         "description": "This family of visualizations crafts a story of the link between certain climate conditions and countries with high rates of snakebite. I was lucky to have had the opportunity to learn about the global snakebite crisis through this project and to get to put my design skills to use to bring about more awareness for both those affected and not. While this poster only covers climate conditions, I can see it becoming a much fuller and more compelling story with the incorporation of data on patterns in wealth, hospital accessibility and funding, and much more."
     },
     {
-        "_id": 6,
+        "id": 6,
         "active": true,
         "column": "right",
         "name": "Snakebite Response Poster",
@@ -40,14 +40,14 @@
         "description": "A simple, illustration-based informational poster intended to be able to be used by residents of Botswana. The project entailed researching the ways to help prevent fatal encounters with snakes specially in Botswana / southern Africa, organizing information into different sections and writing concise actionable steps, and finally creating the visual components of the poster. Wallet cards compile poster information into small folding panels that would be able to kept for easy access throughout the day."
     },
     {
-        "_id": 5,
+        "id": 5,
         "active": true,
         "column": "right",
         "name": "Cooper Co-op Review Platform @ Sandbox",
         "path": "/cooper",
         "summary": "Helping Northeastern students make more informed co-op searching decisions",
         "type": "Club",
-        "team": "3 designers, 5 developers",
+        "team": "5 developers, 3 designers",
         "role": "UX Designer",
         "medium": "Web, mobile",
         "tools": "Figma",
@@ -60,7 +60,7 @@
         "description": "This co-op review platform for Northeastern students is an ongoing project part of Sandbox Northeastern. Please check back at the end of the semester for process images and final designs!"
     },
     {
-        "_id": 1,
+        "id": 1,
         "active": true,
         "column": "left",
         "name": "Rockumentary",
@@ -80,7 +80,7 @@
         "description": "The invitation for one of my greatest honors as a designer came one summer Friday afternoon when a good friend of mine at the Berklee College of Music asked me if I wanted to design the poster for his senior recital. While we share a love for music, the rock music that he loves is nothing like the mellow tunes of the music I listen to and embody. Nonetheless, I took this on as a way to challenge myself to do something of a different feel. After many FaceTime consultations from coast to coast of the US and getting the drawing of my friend’s iconic bowl-cut and glasses just right, I ended up with this poster that captures the boldness of rock, nostalgia of a documentary, and my friend's personal brand. “Rockumentary” is the musical documentary of the rock music that shaped his life."
     },
     {
-        "_id": 2,
+        "id": 2,
         "active": true,
         "column": "left",
         "name": "Dissonant Harmony",
@@ -100,7 +100,7 @@
         "description": "Little did I know on the one Saturday afternoon in 2018 that our family paid a visit to the SFMoMA that years later I would design mock exhibition materials for one of the sculptures I had seen that day. Below is an A1 size poster, A5 size flyer, and Instagram posts all featuring Alexander Calder’s iconic Big Crinkly. This was my final project for my Typography 1 studio."
     },
     {
-        "_id": 3,
+        "id": 3,
         "active": false,
         "column": "left",
         "name": "Text Diagram",
@@ -120,7 +120,7 @@
         "description": "This is a map of the information covered in a podcast episode from the podcast “99% Invisible”. This project, focusing on information design, was done in the studio section for Design Process and Practices. It is one of my favorites from pieces I’ve done at school as it was when I discovered my attachment to information design. Unlike most designs that take lots of drafting and sketching, this one came together rather naturally.  I loved figuring out how to fit together all the information, establishing the typographic hierarchy, and coming up with the simple  lines and circle “arrows” that guide the viewer from one point to the next."
     },
     {
-        "_id": 4,
+        "id": 4,
         "active": false,
         "column": "right",
         "name": "My Favorite Things Research Dossier",
@@ -140,7 +140,7 @@
         "description": "Description coming soon."
     },
     {
-        "_id": 8,
+        "id": 8,
         "active": true,
         "column": "right",
         "name": "Radien",
@@ -160,7 +160,7 @@
         "description": "Description coming soon."
     },
     {
-        "_id": 9,
+        "id": 9,
         "active": false,
         "column": "right",
         "name": "Basics of Typography",
@@ -180,7 +180,7 @@
         "description": "As someone who starts many more projects than I complete, this 24-hour challenge was the perfect way to give myself practice in making and committing to creative decisions, which is where I most often get stuck in the design process. During this one day, I successfully gathered and categorized all the information, drafted, and brought to life this poster that you see below (along with getting lots of practice with the Pathfinder tool in Illustrator)."
     },
     {
-        "_id": 10,
+        "id": 10,
         "active": false,
         "column": "left",
         "name": "Design Philosophy",
@@ -200,7 +200,7 @@
         "description": "\"Design is not just what it looks like and feels like. Design is how it works.\" (Steve Jobs) is my design philosophy and the quote that these cut up, layered, and rotated words represent. This project was for my studio for Typographic Systems and was for sure one of the more difficult design projects I’ve done as I was challenged to rethink how I use and orient type to not just be the literal text, but to make the design itself."
     },
     {
-        "_id": 11,
+        "id": 11,
         "active": false,
         "column": "right",
         "name": "School Stairs Design",

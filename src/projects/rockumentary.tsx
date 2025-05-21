@@ -75,8 +75,6 @@ export default function Rockumentary() {
                     </div>
                 </div>
 
-                
-
                 {/* FINAL */}
                 <div className="flex flex-col gap-[3rem] w-full">
                     <h2 className="self-center w-(--mid-width)">Final poster</h2>

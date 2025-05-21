@@ -2,13 +2,13 @@ import { Project } from "../projects/project";
 
 export default function ImageBG({ project }: { project: Project }) {
     return (
-        <div className="flex flex-col flex-grid gap-[0.5rem]">
+        <div className="flex flex-col flex-grid sm:gap-[2rem] gap-[0.5rem]">
             {/* FIRST IMAGE */}
-            <div className={`zoom img-bg rounded-[0.5rem] flex align-center justify-center overflow-hidden ${project._id === 7 ? "h-[40rem]" : ""}`}>
-                <div className={project._id === 7 ? "mt-[3rem] mx-[1.5rem]" : "my-[3rem]"}>
+            <div className={`zoom img-bg rounded-[0.5rem] flex align-center justify-center overflow-hidden ${project.id === 7 ? "h-[40rem]" : ""}`}>
+                <div className={project.id === 7 ? "mt-[3rem] mx-[1.5rem]" : "my-[3rem]"}>
                     <img src={project.frontImage} alt=""
                         className={
-                            project._id === 7
+                            project.id === 7
                                 ? "w-full max-h-[120vh] object-cover subtle-shadow"
                                 : project.vertical
                                     ? "h-[80vh] subtle-shadow"
@@ -19,7 +19,7 @@ export default function ImageBG({ project }: { project: Project }) {
             </div>
 
             {/* SNAKEBITE DATA IMAGES */}
-            {project._id === 7 && (
+            {project.id === 7 && (
                 <div className="flex flex-row gap-[0.5rem]">
                     <div className="zoom img-bg rounded-[0.5rem] flex align-center justify-center w-full">
                         <div className="self-center my-[3rem]">
@@ -35,7 +35,7 @@ export default function ImageBG({ project }: { project: Project }) {
             )}
 
             {/* SNAKEBITE RESPONSE IMAGES */}
-            {project._id === 6 && (
+            {project.id === 6 && (
                 <div className="flex flex-row gap-[0.5rem]">
                     <div className="zoom img-bg rounded-[0.5rem] flex align-center justify-center w-full">
                         <div className="self-center mt-[3rem] h-[50vh] overflow-hidden">
@@ -52,7 +52,7 @@ export default function ImageBG({ project }: { project: Project }) {
             )}
 
             {/* DISSONANT HARMONY */}
-            {project._id === 2 && (
+            {project.id === 2 && (
                 <div className="flex flex-row gap-[0.5rem] h-[34vw] w-full">
                     <div className="zoom img-bg rounded-[0.5rem] flex align-center justify-center w-full">
                         <div className="self-center h-[56vh]">

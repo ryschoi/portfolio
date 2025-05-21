@@ -90,7 +90,7 @@ export default function DissonantHarmony() {
                     <SectionHeader
                         title="Digital marketing material"
                         description="Instagram posts and gif"
-                        optional="I snuck in another instance of dissonant harmony with the nine-square grid creating one complete picture. The center slide features a gif that shows the individual pieces of the sculpture getting put back together. This gif ties together the entire set of marketing materials as it visually plays out the transformation of individual, dissonant pieces coming together to form a harmonious sculpture." />
+                        optional="I snuck in another instance of dissonant harmony with the nine-square grid creating one complete picture. The center slide features a gif that shows the individual pieces of the sculpture getting put back together. This gif ties together the entire set of marketing materials as it visually plays out the transformation of individual, dissonant pieces coming together and forming a harmonious sculpture." />
                     <div className="flex flex-row gap-[0.5rem]">
                         <div className="flex flex-col w-full">
                             <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full">
@@ -110,6 +110,14 @@ export default function DissonantHarmony() {
                             </div>
                             <p className="caption cap-top">sculpture reconstruction gif</p>
                         </div>
+                    </div>
+                </div>
+
+                {/* FINAL */}
+                <div className="flex flex-col gap-[3rem] w-full">
+                    <h2 className="self-center w-(--mid-width)">Final A1-size poster</h2>
+                    <div className="rounded-[0.5rem] img-bg w-full mt-[1.8rem] mb-[3.5rem] flex align-center justify-center py-[3rem] w-full">
+                        <img src="images/work/calder.png" alt="" className="w-[36rem] subtle-shadow" />
                     </div>
                 </div>
             </div>

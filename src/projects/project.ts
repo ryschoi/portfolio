@@ -1,5 +1,5 @@
 export type Project = {
-    _id: number;
+    id: number;
     active: boolean;
     column: string;
     name: string;
