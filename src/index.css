@@ -109,14 +109,16 @@ h2 {
   font-weight: var(--heading-weight);
 }
 
-h3, .h3 {
+h3,
+.h3 {
   margin: var(--zero);
   font-size: var(--h3-size);
   line-height: var(--h3-leading);
   font-weight: var(--heading-weight);
 }
 
-h4, .h4 {
+h4,
+.h4 {
   margin: var(--zero);
   font-size: var(--h4-size);
   line-height: var(--h4-leading);
@@ -199,7 +201,15 @@ a:hover {
 }
 
 hr {
-    border: 0.7px solid #dcdcdc;
+  border: 0.7px solid #dcdcdc;
+}
+
+.dark-bg {
+  background-color: #212121;
+}
+
+.calder-bg {
+  background-color: #dbdad2;
 }
 
 

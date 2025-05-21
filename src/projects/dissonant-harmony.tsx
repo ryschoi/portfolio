@@ -23,9 +23,29 @@ export default function DissonantHarmony() {
                             sculpture are on their own dissonant. All a little random, a little rough-cut, jagged almost, but somehow coming together
                             and creating a harmonious result." />
 
+                {/* TYPE */}
+                <div className="flex flex-col gap-[3rem] w-full align-center">
+                    <SectionHeader
+                        title="Type"
+                        description="Aglet Mono: geometric, like Calder's artwork"
+                        optional="The title words vary heavily in style to emphasize a dissonance between two objects." />
+                    <div className="flex flex-row gap-[0.5rem]">
+                        <div className="calder-bg rounded-[0.5rem] flex align-center justify-center w-3/5">
+                            <div className="self-center my-[3rem]">
+                                <img src="/images/work/calder_type-06.png" alt="" className="h-[18vw]" />
+                            </div>
+                        </div>
+                        <div className="calder-bg rounded-[0.5rem] flex align-center justify-center w-full">
+                            <div className="self-center my-[3rem]">
+                                <img src="/images/work/calder_type-07.png" alt="" className="h-[18vw]" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 {/* DARK VERSIONS */}
                 <div className="flex flex-col gap-[3rem] w-full align-center">
-                    <h3 className="self-center w-(--mid-width)">After trying out both light and dark backgrounds, I found that the light background worked better as it let the colors in the sculpture pop more whereas in the dark background the colors got washed out.</h3>
+                    <h2 className="self-center w-(--mid-width)">After trying out both light and dark backgrounds, I found that the light background worked better as it let the colors in the sculpture pop more whereas in the dark background the colors got washed out.</h2>
                     <div className="flex flex-col">
                         <div className="flex flex-row gap-[0.5rem]">
                             <div className="flex flex-col w-full">
@@ -70,7 +90,7 @@ export default function DissonantHarmony() {
                     <SectionHeader
                         title="Digital marketing material"
                         description="Instagram posts and gif"
-                        optional="I snuck in another instance of dissonant harmony with the nine-square grid creating one complete picture. The center slide features a gif that shows the individual pieces of the sculpture getting put back together. This gif ties together the entire set of marketing materials as it visually plays out the transformation of individual, dissonant pieces coming together to form a harmonious sculpture."/>
+                        optional="I snuck in another instance of dissonant harmony with the nine-square grid creating one complete picture. The center slide features a gif that shows the individual pieces of the sculpture getting put back together. This gif ties together the entire set of marketing materials as it visually plays out the transformation of individual, dissonant pieces coming together to form a harmonious sculpture." />
                     <div className="flex flex-row gap-[0.5rem]">
                         <div className="flex flex-col w-full">
                             <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full">
