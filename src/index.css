@@ -49,7 +49,7 @@
 :root {
   font-family: 'Hanken-Grotesk';
   font-feature-settings: 'liga' 1, 'calt' 1;
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 * {
