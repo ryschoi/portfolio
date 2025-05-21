@@ -1,7 +1,15 @@
 import "./footer.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Footer() {
+    const location = useLocation();
+
+    const handleClick = (to: string) => {
+        if (location.pathname === to && ['/', '/about', '/resume'].includes(to)) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    };
+
     return (
         <div id="footer" className="mt-[8rem] mb-[4.5rem]">
             <hr />
@@ -10,7 +18,7 @@ export default function Footer() {
             <div className="flex flex-row justify-between items-end">
                 {/* Left side */}
                 <div>
-                    <Link to="/">Rebecca Choi</Link>
+                    <Link to="/" onClick={() => handleClick('/')}>Rebecca Choi</Link>
                     <br />
                     <br />
                     <p className="caption">Coded and designed by me ◡̈</p>
@@ -20,9 +28,9 @@ export default function Footer() {
                 {/* Right side */}
                 <div className="flex flex-wrap gap-[8rem]">
                     <div>
-                        <Link to="/">Work</Link><br />
-                        <Link to="/resume">Resume</Link><br />
-                        <Link to="/about">About</Link><br />
+                        <Link to="/" onClick={() => handleClick('/')}>Work</Link><br />
+                        <Link to="/resume" onClick={() => handleClick('/resume')}>Resume</Link><br />
+                        <Link to="/about" onClick={() => handleClick('/about')}>About</Link><br />
                     </div>
                     <div>
                         <p>choi.re@northeastern.edu</p>
