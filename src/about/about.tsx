@@ -30,36 +30,77 @@ export default function About() {
   };
 
   return (
-    <div className="flex justify-center">
-      <div className="flex flex-wrap justify-between w-[63vw] gap-[1.5rem]">
-        {/* IMAGE */}
-        <div className="overflow-hidden w-[11rem] h-[11rem] rounded-[100%]">
-          <img id="headshot" className="w-full h-auto object-cover" src="images/headshot-square.png" />
-        </div>
-
-        {/* TEXT */}
-        <div className="w-7/10 flex flex-col gap-[1rem]">
-          <div className="flex flex-col gap-[1rem]">
-            <h2>Hi, I'm Rebecca.</h2>
-            <h3><span className="gray">A third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h4 gray underline">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className="h3 gray underline">Sandbox NU.</a></span></h3>
+    <div className="flex justify-center w-full">
+      <div className="flex flex-col gap-[6rem] w-full">
+        <div className="self-center flex flex-wrap justify-between w-(--mid-width) gap-[1.5rem]">
+          {/* IMAGE */}
+          <div className="overflow-hidden w-[11rem] h-[11rem] rounded-[100%]">
+            <img id="headshot" className="w-full h-auto object-cover" src="images/headshot-square.png" />
           </div>
 
-          <p>
-            I'm passionate about understanding how people think and behave. In design, I have found a discipline where I can apply my insights and fuel my passion.
-            Whether it's in coding or visual design, I work with the future users in mind,
-            aiming to create quality products that users can interact with in a familiar way.
-            <br /><br />
-            Outside of work I love trees, playing the bass, long silent train rides, and kombucha.
-          </p>
+          {/* TEXT */}
+          <div className="w-7/10 flex flex-col gap-[1rem]">
+            <div className="flex flex-col gap-[1rem]">
+              <h2>Hi, I'm Rebecca.</h2>
+              <h3><span className="gray">A third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h4 gray underline">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className="h3 gray underline">Sandbox NU.</a></span></h3>
+            </div>
 
-          {/* TAGS */}
-          <div id="contacts" className="flex flex-wrap gap-[12px] mt-[1rem]">
-            <CopyButton text="choi.re@northeastern.edu" />
-            <CopyButton text="(510) 682-0020" />
-            <a href="https://www.linkedin.com/in/ryschoi/"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">LinkedIn</button></a>
-            <a href="../public/images/Rebecca_Choi_Resume.pdf"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">Resume</button></a>
+            <p>
+              I'm passionate about understanding how people think and behave. In design, I have found a discipline where I can apply my insights and fuel my passion.
+              Whether it's in coding or visual design, I work with the future users in mind,
+              aiming to create quality products that users can interact with in a familiar way.
+              <br /><br />
+              Outside of work I love trees, photography, playing the bass, and kombucha.
+            </p>
+
+            {/* TAGS */}
+            <div id="contacts" className="flex flex-wrap gap-[12px] mt-[1rem]">
+              <CopyButton text="choi.re@northeastern.edu" />
+              <CopyButton text="(510) 682-0020" />
+              <a href="https://www.linkedin.com/in/ryschoi/"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">LinkedIn</button></a>
+              <a href="../public/images/Rebecca_Choi_Resume.pdf"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">Resume</button></a>
+            </div>
           </div>
         </div>
+
+        {/* <hr /> */}
+        {/* SKILLS */}
+        {/* <div className="flex justify-between w-full">
+          <div className="flex flex-col gap-[0.5rem] w-[20vw]">
+            <p className="caption">Tech & development</p>
+            <div>
+              <p>Front-end development</p>
+              <p>Web design</p>
+              <p>Design-developer handoff</p>
+            </div>
+            <p>Languages: HTML, CSS, Typescript, Java, Python</p>
+            <p>Frameworks & tools: React, Tailwind, Git, VS Code, IntelliJ, Eclipse</p>
+          </div>
+          <div className="flex flex-col gap-[0.5rem] w-[20vw]">
+            <p className="caption">Design</p>
+            <div>
+              <p>UI/UX design</p>
+              <p>Web design</p>
+              <p>Data visualization</p>
+              <p>Information design</p>
+              <p>Prototyping (low, medium, and high fidelity)</p>
+              <p>Usability testing</p>
+              <p>User research, interviews, personas, affinity diagrams, thematic analysis</p>
+              <p>Information architecture</p>
+              <p>Design system and brand creation</p>
+              <p>Design-developer handoff</p>
+            </div>
+            <p>Tools: Figma, Adobe Illustrator, Adobe InDesign</p>
+          </div>
+          <div className="flex flex-col gap-[0.5rem] w-[20vw]">
+            <p className="caption">Data</p>
+            <div>
+              <p>Data visualization</p>
+              <p>Data analysis</p>
+            </div>
+            <p>Tools: Python, R, RStudio, Microsoft Excel</p>
+          </div>
+        </div> */}
       </div>
     </div>
   );
