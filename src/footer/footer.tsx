@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
-        <div id="footer" className="mt-[8rem] mb-[4rem]">
+        <div id="footer" className="mt-[8rem] mb-[4.5rem]">
             <hr />
             <br />
             <br />
-            <div className="flex flex-row justify-between items-start">
+            <div className="flex flex-row justify-between items-end">
                 {/* Left side */}
                 <div>
                     <Link to="/">Rebecca Choi</Link>

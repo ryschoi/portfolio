@@ -15,10 +15,6 @@
     align-items: center;
 }
 
-.crop-image {
-    object-fit: cover;
-}
-
 .col40 {
     display: flex;
     flex-direction: column;

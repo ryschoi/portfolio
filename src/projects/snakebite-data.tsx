@@ -9,7 +9,6 @@ export default function SnakebiteData() {
     return (
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} />
-            {/* <hr className="stroke-black stroke-[1px]"/> */}
 
             <div className="project-content-rest">
                 <div className="flex flex-col gap-[4rem]">
