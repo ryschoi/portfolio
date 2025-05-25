@@ -30,9 +30,9 @@ export default function SnakebiteData() {
 
                 {/* PROCESS */}
                 <div className="flex flex-col gap-[3rem] w-full">
-                    <SectionHeader title="Process" description="Establishing a clearer style and message" optional="Each week in class we had a critique session. This might've looked like a 1-on-1 critique with the professor, small group feedback sessions, or walking around marking up the posters. Most of the feedback I received was centered around turning the data into a language users could read, not delivering it in large, abstract numbers." />
+                    <SectionHeader title="Process" description="Establishing a clearer style and message" optional="Each week in class we had a critique session. This might've looked like a 1-on-1 critique with the professor, small group feedback sessions, or walking around marking up the posters. I appreciated the variety of feedback I received given the variety of experiences amongst my classmates: some more visual, graphic design focused, some data visualization focused, and others more content focused, through the lens of future viewers. Ultimately, through this project, I learned how to turn data into a language users could read, instead of delivering it in the raw, large, abstract numbers." />
                     {/* <p className="self-center w-(--mid-width)">I used Excel to create initial data visualizations like maps and charts. From there, I copied them over into Illustrator where I was able to edit them more stylically and piece them together into the poster orientation. Since this was my first time working with qualitative data, there was a lot I was learning with each round of critiquing. I learned that a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but about telling and showing what the numbers actually mean. That meant setting solid context for each visualization and, in my single-tone design, being very intentional with each time I used the color green.</p> */}
-                    <h2 className="w-(--mid-width) self-center">Most of the feedback I received was centered around turning the data into a language users could read, not delivering it in large, abstract numbers.</h2>
+                    <h2 className="w-(--mid-width) self-center">I learned how to turn data into a language users could read, instead of delivering it in the raw, large, abstract numbers.</h2>
                     {/* FIRST DRAFT */}
                     <div className="flex flex-col w-full">
                         <div className="rounded-[0.5rem] img-bg w-full flex align-center justify-center py-[3rem] w-full gap-[2rem]">
@@ -45,10 +45,10 @@ export default function SnakebiteData() {
                     <div className="flex flex-col w-(--mid-width) self-center">
                         <p>Comments:</p>
                         <ul>
-                            <li>Box plot is too technical</li>
+                            <li>Box plot is too technical–would take too long to read while some may not even know how to read it</li>
                             <li>Re-order items in two right visualizations to be in the same order</li>
                             <li>Turn map into a choropleth to show more of a range of snakebite conditions, rather than a black and white more than or below average</li>
-                            <li>Make it look less like a two-column layout</li>
+                            <li>Make it look less like a two-column layout–establish a more clear flow</li>
                             <li>Make the green less bright; stands out too much</li>
                         </ul>
                     </div>
