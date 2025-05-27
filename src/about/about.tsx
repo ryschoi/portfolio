@@ -31,7 +31,7 @@ export default function About() {
 
   return (
     <div className="flex justify-center w-full">
-      <div className="flex flex-col gap-[3rem] w-1/2 min-w-[600px] items-center">
+      <div className="flex flex-col gap-[3rem] w-[92vw] max-w-[41rem] items-center">
         <div className="overflow-hidden w-full">
           <img id="headshot" className="w-full h-auto object-cover rounded-[0.5rem]" src="images/wide.png" />
         </div>
