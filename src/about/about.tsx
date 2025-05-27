@@ -31,36 +31,40 @@ export default function About() {
 
   return (
     <div className="flex justify-center w-full">
-      <div className="flex flex-col gap-[6rem] w-full">
-        <div className="self-center flex flex-wrap justify-between w-(--mid-width) gap-[1.5rem]">
-          {/* IMAGE */}
-          <div className="overflow-hidden w-[11rem] h-[11rem] rounded-[100%]">
-            <img id="headshot" className="w-full h-auto object-cover" src="images/headshot-square.png" />
-          </div>
+      <div className="flex flex-col gap-[3rem] w-1/2 min-w-[600px] items-center">
+        {/* IMAGE */}
+        {/* <div className="overflow-hidden w-[11rem] h-[11rem] rounded-[100%]">
+          <img id="headshot" className="w-full h-auto object-cover" src="images/headshot-square.png" />
+        </div> */}
+        <div className="overflow-hidden w-full">
+          <img id="headshot" className="w-full h-auto object-cover rounded-[0.5rem]" src="images/wide.png" />
+        </div>
 
-          {/* TEXT */}
-          <div className="w-7/10 flex flex-col gap-[1rem]">
-            <div className="flex flex-col gap-[1rem]">
-              <h2>Hi, I'm Rebecca.</h2>
-              <h3><span className="gray">A third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h4 gray underline">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className="h3 gray underline">Sandbox NU.</a></span></h3>
-            </div>
+        <div className="flex flex-col gap-[1rem]">
+          <h2>Hi, I'm Rebecca Choi</h2>
+          <p className="caption">A third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="caption underline">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className="caption underline">Sandbox NU.</a></p>
+        </div>
+        <div className="flex flex-col gap-[1rem]">
+          <h3 className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</h3>
+          <p>
+            I'm passionate about understanding how people think and behave. In design, I have found a discipline where I can apply my insights and fuel my passion.
+            Whether it's in coding or visual design, I work with the future users in mind,
+            aiming to create quality products that users can interact with in a familiar way.
+            <br /><br />
+            It's important to me that the projects I work on are meaningful in themselves and in the way that they are created. As a designer, this means that I am intentional with all my choices, making sure that whatever I design is easy on the eyes, easy to use, and delivers what the user needs out of the product. As a developer, I focus on scalability, efficiency, and writing clean and maintainable code.
+            <br /><br />
+            My goal is that it will always be clear that my work is crafted with care and intention.
+            <br /><br />
+            Outside of work I love trees, photography, playing the bass, and kombucha.
+          </p>
+        </div>
 
-            <p>
-              I'm passionate about understanding how people think and behave. In design, I have found a discipline where I can apply my insights and fuel my passion.
-              Whether it's in coding or visual design, I work with the future users in mind,
-              aiming to create quality products that users can interact with in a familiar way.
-              <br /><br />
-              Outside of work I love trees, photography, playing the bass, and kombucha.
-            </p>
-
-            {/* TAGS */}
-            <div id="contacts" className="flex flex-wrap gap-[12px] mt-[1rem]">
-              <CopyButton text="choi.re@northeastern.edu" />
-              <CopyButton text="(510) 682-0020" />
-              <a href="https://www.linkedin.com/in/ryschoi/"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">LinkedIn</button></a>
-              <a href="../public/images/Rebecca_Choi_Resume.pdf"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">Resume</button></a>
-            </div>
-          </div>
+        {/* TAGS */}
+        <div id="contacts" className="w-full flex flex-wrap gap-[12px]">
+          <CopyButton text="choi.re@northeastern.edu" />
+          <CopyButton text="(510) 682-0020" />
+          <a href="https://www.linkedin.com/in/ryschoi/"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">LinkedIn</button></a>
+          <a href="../public/images/Rebecca_Choi_Resume.pdf"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">Resume</button></a>
         </div>
 
         {/* <hr /> */}
@@ -102,6 +106,6 @@ export default function About() {
           </div>
         </div> */}
       </div>
-    </div>
+    </div >
   );
 }
