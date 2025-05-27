@@ -77,7 +77,7 @@ export default function DissonantHarmony() {
                         description="Ensuring there is a focal point for the poster"
                         optional="It was important that there was a main focal point for the poster, especially because the poster was a big A1 size. I needed to establish a clear direction that viewers' eyes could follow when looking at the poster. That meant not only setting big-enough margins, but also making sure the individual pieces of the sculpture were framed well and that the other elements supported the main focus (the sculpture)." />
                     <div className="flex flex-col w-full">
-                        <div className="rounded-[0.5rem] img-bg w-full flex align-center justify-center py-[1rem] w-full">
+                        <div className="rounded-[0.5rem] img-bg w-full flex align-center justify-center py-[3rem] w-full">
                             <img src="images/work/calder-a1-markup.jpg" alt="" className="w-[46rem]" />
                         </div>
                         <p className="caption cap-top">a pervious a1 poster version</p>
