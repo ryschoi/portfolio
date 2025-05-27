@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @font-face {
   font-family: "Hanken-Grotesk";
@@ -12,42 +12,56 @@
 
 @theme {
   --zero: 0px;
-  --mid-width: 63vw;
+  --mid-width: 58vw;
+  --mid-width-px: 832px;
+  --mob-page-w: 85vw;
 
   /* COLORS */
   /* --color-black: #212121; */
 
+  --breakpoint-sm: 5px;
+
   /* TEXT */
-  --heading-weight: 500;
+  --heading-weight: 400;
   --weight: 300;
   --leading: 1.6rem;
 
-  --h1-size: 1.8rem;
-  --h1-leading: 2.5rem;
+  --ps-size: 0.9rem;
+  --ps-leading: 1.3rem;
 
-  --h2-size: 1.6rem;
-  --h2-leading: 2.2rem;
+  --h1-size: 1.65rem;
+  --h1-leading: 2.2rem;
 
-  --h3-size: 1.3rem;
-  --h3-leading: 1.8rem;
+  --h2-size: 1.45rem;
+  --h2-leading: 2rem;
+  --h2-weight: 300;
+
+  --h3-size: 1.2rem;
+  --h3-leading: 1.6rem;
 
   --h4-size: 1.15rem;
   --h4-leading: 1.6rem;
+
+  --breakpoint-*: initial;
+  --breakpoint-tablet: 40rem;
+  --breakpoint-laptop: 64rem;
+  --breakpoint-desktop: 80rem;
 }
 
 :root {
   font-family: 'Hanken-Grotesk';
   font-feature-settings: 'liga' 1, 'calt' 1;
+  /* scroll-behavior: smooth; */
 }
 
 * {
   font-family: 'Hanken Grotesk';
-  /* font-weight: 500; */
   margin: 0;
+  color: #212121;
 }
 
 #root {
-  margin: 0px 3.2%;
+  margin: 0px 4%;
 }
 
 p,
@@ -57,15 +71,31 @@ a {
   font-size: 1rem;
   line-height: var(--leading);
   font-weight: var(--weight);
-  color: #212121;
+  text-transform: none;
+}
+
+.caption {
+  font-family: 'Space Mono';
+  color: #8b8b8b;
+  text-transform: uppercase;
+  font-size: var(--ps-size);
+}
+
+.cap-top {
+  margin-top: 1rem;
 }
 
 .p-style {
   margin: 0;
   font-size: 1rem;
   line-height: var(--leading);
-  color: #212121;
   font-weight: var(--weight);
+}
+
+.sp {
+  margin: var(--zero);
+  font-size: var(--ps-size);
+  line-height: var(--ps-leading);
 }
 
 h1 {
@@ -82,14 +112,16 @@ h2 {
   font-weight: var(--heading-weight);
 }
 
-h3, .h3 {
+h3,
+.h3 {
   margin: var(--zero);
   font-size: var(--h3-size);
   line-height: var(--h3-leading);
   font-weight: var(--heading-weight);
 }
 
-h4, .h4 {
+h4,
+.h4 {
   margin: var(--zero);
   font-size: var(--h4-size);
   line-height: var(--h4-leading);
@@ -98,7 +130,6 @@ h4, .h4 {
 
 a {
   text-decoration: none;
-  color: #212121;
 }
 
 a:hover {
@@ -148,6 +179,62 @@ a:hover {
 .tag {
   background-color: #E0DFAC;
   color: #6F6E09;
+}
+
+.tag:hover {
+  background-color: #c6c47f;
+  cursor: pointer;
+}
+
+.tag-no-hover {
+  background-color: #E0DFAC;
+  color: #6F6E09;
+}
+
+.gray-tag {
+  background-color: #dbdbdb;
+  color: #474747;
+}
+
+.gray-tag:hover {
+  background-color: #c6c6c6;
+  cursor: pointer;
+}
+
+.home-name {
+  font-size: var(--h1-size);
+  letter-spacing: -0.005rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+hr {
+  border: 0.7px solid #dcdcdc;
+}
+
+.dark-bg {
+  background-color: #212121;
+}
+
+.calder-bg {
+  background-color: #dbdad2;
+}
+
+.goodnotes-bg {
+  background-color: #f8f5ea;
+}
+
+.goodnotes-bg-2 {
+  background-color: #dfdcd1;
+}
+
+.s-data-bg {
+  background-color: #f2f1ed;
+}
+
+.mob-mid-w {
+  width: var(--mob-page-w);
+  max-width: var(--mid-width-px);
 }
 
 
