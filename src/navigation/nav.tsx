@@ -10,7 +10,7 @@ export default function NavBar() {
   ];
 
   return (
-    <div id="nav" className="h-[3.5rem] content-end mb-[4rem]">
+    <div id="nav" className="h-[3.5rem] min-h-[50px] content-end mb-[4rem]">
       <div className="flex flex-row justify-between">
         {/* <Link to="/"><img src="images/name.png" alt="Logo" className="w-[7rem]" /></Link> */}
         {links.map((page) => (
