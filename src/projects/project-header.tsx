@@ -5,7 +5,7 @@ export default function ProjectHeader({ project }: { project: Project }) {
         <div className="w-full flex flex-col justify-center mb-[6rem]">
             <div className="flex flex-col items-center mb-[6rem] w-full">
                 {/* TOP TITLE */}
-                <div className="w-(--mid-width)">
+                <div className="mob-mid-w">
                     <h2 className="gray">{project.tags}</h2>
                     <h2>{project.name}  <span className="gray">{project.year}</span></h2>
                 </div>
@@ -16,7 +16,7 @@ export default function ProjectHeader({ project }: { project: Project }) {
                 </div>
 
                 {/* BELOW IMAGE */}
-                <div className="flex flex-col gap-[2.4rem] self-center w-(--mid-width)">
+                <div className="flex flex-col gap-[2.4rem] self-center mob-mid-w">
                     {/* SUMMARY TITLE */}
                     <h2 className="">{project.summary}</h2>
 

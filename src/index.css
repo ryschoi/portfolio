@@ -13,6 +13,8 @@
 @theme {
   --zero: 0px;
   --mid-width: 58vw;
+  --mid-width-px: 832px;
+  --mob-page-w: 85vw;
 
   /* COLORS */
   /* --color-black: #212121; */
@@ -222,6 +224,11 @@ hr {
 
 .s-data-bg {
   background-color: #f2f1ed;
+}
+
+.mob-mid-w {
+  width: var(--mob-page-w);
+  max-width: var(--mid-width-px);
 }
 
 

@@ -49,7 +49,7 @@ export default function DissonantHarmony() {
                         title="BACKGROUND"
                         description="A light background with adequete contrast to let colors pop"
                         optional="After trying out both light and dark backgrounds, I found that the light background worked better as it let the colors in the sculpture pop more whereas in the dark background the colors got washed out." />
-                    <p className="w-(--mid-width) self-center">To determine this, I put both poster versions in grayscale to see the differences in values in each of the colors. Value in color theory refers to the darkness of a color, independent of hue or saturation. As can be seen in the images below, there is much more contrast between the sculpture and the background in the lighter background than the dark one. The small screws in the top-right of the dark-background poster are completely invisible, meaning that they are the exact same values.</p>
+                    <p className="mob-mid-w self-center">To determine this, I put both poster versions in grayscale to see the differences in values in each of the colors. Value in color theory refers to the darkness of a color, independent of hue or saturation. As can be seen in the images below, there is much more contrast between the sculpture and the background in the lighter background than the dark one. The small screws in the top-right of the dark-background poster are completely invisible, meaning that they are the exact same values.</p>
                     <div className="flex flex-row gap-[0.5rem]">
                         <div className="flex flex-col w-full">
                             <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full">
@@ -82,7 +82,7 @@ export default function DissonantHarmony() {
                         </div>
                         <p className="caption cap-top">a pervious a1 poster version</p>
                     </div>
-                    <div className="flex flex-col w-(--mid-width) self-center">
+                    <div className="flex flex-col mob-mid-w self-center">
                         <p>Comments:</p>
                         <ul>
                             <li>Reflect the idea of dissonant harmony in the title text. There is no significance to the type choices or orientation of the text in this version.</li>
@@ -97,7 +97,7 @@ export default function DissonantHarmony() {
                         </div>
                         <p className="caption cap-top">final a1 poster</p>
                     </div>
-                    <p className="w-(--mid-width) self-center">In the final A1 poster version, there is a much-better sense of hierarchy and more obvious flow for how people should read the poster.<br /><br />
+                    <p className="mob-mid-w self-center">In the final A1 poster version, there is a much-better sense of hierarchy and more obvious flow for how people should read the poster.<br /><br />
                         Eyes are first directed to either the sculpture or the title. There is a clear, top-to-bottom flow of elements. The big red sculpture piece being in the vertical center also helps guide the eyes from the top of the sculpture group to the bottom and does not potentailly diverge the viewer's attention elsewhere.<br /><br />
                         Museum info at the bottom being a similar width as the title helps retain consistency and hierarchy across elements, not adding another layer to the hierarchy of elements.</p>
                 </div>

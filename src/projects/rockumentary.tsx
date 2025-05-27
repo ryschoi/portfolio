@@ -77,7 +77,7 @@ export default function Rockumentary() {
 
                 {/* FINAL */}
                 <div className="flex flex-col gap-[3rem] w-full">
-                    <h2 className="self-center w-(--mid-width)">Final poster</h2>
+                    <h2 className="self-center mob-mid-w">Final poster</h2>
                     <div className="rounded-[0.5rem] img-bg w-full mt-[1.8rem] mb-[3.5rem] flex align-center justify-center py-[3rem] w-full">
                         <img src="images/work/rockumentary.png" alt="" className="w-[36rem] subtle-shadow" />
                     </div>

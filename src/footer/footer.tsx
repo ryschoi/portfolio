@@ -26,7 +26,7 @@ export default function Footer() {
                 </div>
 
                 {/* Right side */}
-                <div className="flex gap-[8rem]">
+                <div className="flex gap-[7.5rem]">
                     <div>
                         <Link to="/" onClick={() => handleClick('/')}>Work</Link><br />
                         <Link to="/resume" onClick={() => handleClick('/resume')}>Resume</Link><br />
