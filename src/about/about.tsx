@@ -37,7 +37,7 @@ export default function About() {
         </div>
 
         <div className="flex flex-col gap-[1rem]">
-          <h2>Hi, I'm Rebecca Choi</h2>
+          <h2>Hi, I'm Rebecca.</h2>
           <p className="caption">A third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="caption underline">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className="caption underline">Sandbox NU.</a></p>
         </div>
         <div className="flex flex-col gap-[1rem]">

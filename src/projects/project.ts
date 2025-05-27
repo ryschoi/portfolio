@@ -11,7 +11,7 @@ export type Project = {
     medium: string;
     tools: string;
     year: number;
-    tags: string;
+    tags: string[];
     vertical: boolean;
     frontImage: string;
     frontImageBG: string;

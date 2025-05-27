@@ -71,6 +71,7 @@ a {
   font-size: 1rem;
   line-height: var(--leading);
   font-weight: var(--weight);
+  text-transform: none;
 }
 
 .caption {
@@ -183,6 +184,11 @@ a:hover {
 .tag:hover {
   background-color: #c6c47f;
   cursor: pointer;
+}
+
+.tag-no-hover {
+  background-color: #E0DFAC;
+  color: #6F6E09;
 }
 
 .gray-tag {
