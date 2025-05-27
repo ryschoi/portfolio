@@ -27,24 +27,24 @@ export default function ProjectHeader({ project }: { project: Project }) {
 
                     {/* ATTRIBUTES */}
                     {/* LG */}
-                    <div className="flex flex-wrap justify-between gap-[1.5rem]" id="proj-attributes">
+                    <div className="flex flex-wrap justify-between gap-y-[2rem]" id="proj-attributes">
                         {/* project type */}
-                        <div className="flex flex-col gap-[0.2rem] w-[9.5rem]">
+                        <div className="flex flex-col gap-[0.2rem] w-[10rem]">
                             <p className="caption">PROJECT TYPE</p>
                             <p>{project.type}</p>
                         </div>
                         {/* team and role */}
-                        <div className="flex flex-col gap-[0.2rem] w-[9.5rem]">
+                        <div className="flex flex-col gap-[0.2rem] w-[10rem]">
                             <p className="caption">TEAM & ROLE</p>
                             <p>{project.team}<br />{project.role}</p>
                         </div>
                         {/* medium */}
-                        <div className="flex flex-col gap-[0.2rem] w-[9.5rem]">
+                        <div className="flex flex-col gap-[0.2rem] w-[10rem]">
                             <p className="caption">MEDIUM</p>
                             <p>{project.medium}</p>
                         </div>
                         {/* tools */}
-                        <div className="flex flex-col gap-[0.2rem] w-[9.5rem]">
+                        <div className="flex flex-col gap-[0.2rem] w-[10rem]">
                             <p className="caption">TOOLS</p>
                             <p>{project.tools}</p>
                         </div>
