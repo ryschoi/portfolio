@@ -60,6 +60,7 @@ export default function About() {
           <CopyButton text="choi.re@northeastern.edu" />
           <CopyButton text="(510) 682-0020" />
           <a href="https://www.linkedin.com/in/ryschoi/"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">LinkedIn</button></a>
+          <a href="https://github.com/ryschoi"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">GitHub</button></a>
           <a href="../public/images/Rebecca_Choi_Resume.pdf"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">Resume</button></a>
         </div>
 
