@@ -32,10 +32,6 @@ export default function About() {
   return (
     <div className="flex justify-center w-full">
       <div className="flex flex-col gap-[3rem] w-1/2 min-w-[600px] items-center">
-        {/* IMAGE */}
-        {/* <div className="overflow-hidden w-[11rem] h-[11rem] rounded-[100%]">
-          <img id="headshot" className="w-full h-auto object-cover" src="images/headshot-square.png" />
-        </div> */}
         <div className="overflow-hidden w-full">
           <img id="headshot" className="w-full h-auto object-cover rounded-[0.5rem]" src="images/wide.png" />
         </div>
