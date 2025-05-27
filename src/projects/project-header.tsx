@@ -22,7 +22,7 @@ export default function ProjectHeader({ project }: { project: Project }) {
 
                     {/* ATTRIBUTES */}
                     {/* LG */}
-                    <div className="flex flex-wrap justify-between" id="proj-attributes">
+                    <div className="flex flex-wrap justify-between gap-[2rem]" id="proj-attributes">
                         {/* project type */}
                         <div className="flex flex-col gap-[0.2rem] w-[10rem]">
                             <p className="caption">PROJECT TYPE</p>

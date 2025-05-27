@@ -114,7 +114,7 @@ export default function SnakebiteData() {
                 <div className="flex flex-col gap-[3rem] w-full">
                     <h2 className="self-center mob-mid-w">Final poster</h2>
                     <div className="rounded-[0.5rem] img-bg w-full flex align-center justify-center py-[3rem] w-full">
-                        <img src="images/work/snakebiteData.png" alt="" className="w-[36rem] subtle-shadow" />
+                        <img src="images/work/snakebiteData.png" alt="" className="w-[36rem] max-w-[84vw] subtle-shadow" />
                     </div>
                 </div>
             </div>
