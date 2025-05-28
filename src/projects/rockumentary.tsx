@@ -1,8 +1,8 @@
 import "./projects.css";
 import { projects } from "../database";
-import ProjectHeader from "./project-header";
+import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
-import SectionHeader from "./section-header";
+import SectionHeader from "../components/section-header";
 
 export default function Rockumentary() {
     const thisProject = projects.find(p => p.path === "/rockumentary");

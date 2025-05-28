@@ -1,7 +1,8 @@
 import "./projects.css";
 import { projects } from "../database";
-import ProjectHeader from "./project-header";
-import SectionHeader from "./section-header";
+import ProjectHeader from "../components/project-header";
+import SectionHeader from "../components/section-header";
+import VerticalImageSpan from "../components/vertical-image-span";
 import { Project } from "./project";
 
 export default function SnakebiteData() {
@@ -113,9 +114,7 @@ export default function SnakebiteData() {
                 {/* FINAL */}
                 <div className="flex flex-col gap-[3rem] w-full">
                     <h2 className="self-center mob-mid-w">Final poster</h2>
-                    <div className="rounded-[0.5rem] img-bg w-full flex align-center justify-center py-[3rem] w-full">
-                        <img src="images/work/snakebiteData.png" alt="" className="w-[36rem] max-w-[84vw] subtle-shadow" />
-                    </div>
+                    <VerticalImageSpan path="images/work/snakebiteData.png"/>
                 </div>
             </div>
         </div>

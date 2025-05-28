@@ -1,8 +1,9 @@
 import "./projects.css";
 import { projects } from "../database";
-import ProjectHeader from "./project-header";
+import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
-import SectionHeader from "./section-header";
+import SectionHeader from "../components/section-header";
+import VerticalImageSpan from "../components/vertical-image-span";
 
 export default function DissonantHarmony() {
     const thisProject = projects.find(p => p.path === "/dissonant-harmony");
@@ -77,8 +78,8 @@ export default function DissonantHarmony() {
                         description="Ensuring there is a focal point for the poster"
                         optional="It was important that there was a main focal point for the poster, especially because the poster was a big A1 size. I needed to establish a clear direction that viewers' eyes could follow when looking at the poster. That meant not only setting big-enough margins, but also making sure the individual pieces of the sculpture were framed well and that the other elements supported the main focus (the sculpture)." />
                     <div className="flex flex-col w-full">
-                        <div className="rounded-[0.5rem] img-bg w-full flex align-center justify-center py-[3rem] w-full">
-                            <img src="images/work/calder-a1-markup.jpg" alt="" className="w-[46rem]" />
+                        <div className="rounded-[0.5rem] img-bg w-full flex align-center justify-center py-[4vw] w-full">
+                            <img src="images/work/calder-a1-markup.jpg" alt="" className="w-[36rem] max-w-[84vw]" />
                         </div>
                         <p className="caption cap-top">a pervious a1 poster version</p>
                     </div>
@@ -92,9 +93,7 @@ export default function DissonantHarmony() {
                     </div>
                     {/* final */}
                     <div className="flex flex-col w-full">
-                        <div className="rounded-[0.5rem] img-bg w-full flex align-center justify-center py-[3rem] w-full">
-                            <img src="images/work/calder.png" alt="" className="w-[36rem] subtle-shadow" />
-                        </div>
+                        <VerticalImageSpan path="images/work/calder.png" />
                         <p className="caption cap-top">final a1 poster</p>
                     </div>
                     <p className="mob-mid-w self-center">In the final A1 poster version, there is a much-better sense of hierarchy and more obvious flow for how people should read the poster.<br /><br />

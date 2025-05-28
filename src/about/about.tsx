@@ -1,5 +1,6 @@
 import "./about.css";
 import { useState } from "react";
+import Tag from "../components/tag";
 
 export default function About() {
   interface CopyButtonProps { text: string; }
@@ -59,9 +60,9 @@ export default function About() {
         <div id="contacts" className="w-full flex flex-wrap gap-[12px]">
           <CopyButton text="choi.re@northeastern.edu" />
           <CopyButton text="(510) 682-0020" />
-          <a href="https://www.linkedin.com/in/ryschoi/"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">LinkedIn</button></a>
-          <a href="https://github.com/ryschoi"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">GitHub</button></a>
-          <a href="../public/images/Rebecca_Choi_Resume.pdf"><button className="tag py-[6px] px-[16px] rounded-[0.5rem]">Resume</button></a>
+          <a href="https://www.linkedin.com/in/ryschoi/"><Tag text="LinkedIn" hover={true} /></a>
+          <a href="https://github.com/ryschoi"><Tag text="GitHub" hover={true} /></a>
+          <a href="../public/images/Rebecca_Choi_Resume.pdf"><Tag text="Resume" hover={true} /></a>
         </div>
 
         {/* <hr /> */}

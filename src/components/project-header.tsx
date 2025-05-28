@@ -1,4 +1,5 @@
-import { Project } from "./project";
+import { Project } from "../projects/project";
+import Tag from "./tag";
 
 export default function ProjectHeader({ project }: { project: Project }) {
     return (
@@ -10,7 +11,7 @@ export default function ProjectHeader({ project }: { project: Project }) {
                     <div className="flex flex-wrap gap-[0.5rem]">
                         {project.tags
                         .map((tag) => (
-                            <button className="tag-no-hover py-[6px] px-[16px] rounded-[0.5rem]">{tag}</button>
+                            <Tag text={tag} hover={false} />
                         ))}
                     </div>
                 </div>
