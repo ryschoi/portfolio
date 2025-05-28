@@ -4,6 +4,7 @@ import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
 import SectionHeader from "../components/section-header";
 import VerticalImageSpan from "../components/vertical-image-span";
+import TwoImageCaption from "../components/two-image-caption";
 
 export default function DissonantHarmony() {
     const thisProject = projects.find(p => p.path === "/dissonant-harmony");
@@ -31,13 +32,13 @@ export default function DissonantHarmony() {
                         description="Aglet Mono: geometric, like Calder's artwork"
                         optional="The title words that vary heavily in style and yet are the same width emphasize a dissonant harmony between two objects." />
                     <div className="flex flex-row gap-[0.5rem]">
-                        <div className="calder-bg rounded-[0.5rem] flex align-center justify-center w-3/5">
-                            <div className="self-center my-[3rem]">
+                        <div className="calder-bg rounded-[0.5rem] flex place-content-center w-3/5">
+                            <div className="self-center my-[1rem]">
                                 <img src="/images/work/calder_type-06.png" alt="" className="h-[18vw]" />
                             </div>
                         </div>
-                        <div className="calder-bg rounded-[0.5rem] flex align-center justify-center w-full">
-                            <div className="self-center my-[3rem]">
+                        <div className="calder-bg rounded-[0.5rem] flex place-content-center w-full">
+                            <div className="self-center my-[1rem]">
                                 <img src="/images/work/calder_type-07.png" alt="" className="h-[18vw]" />
                             </div>
                         </div>
@@ -51,24 +52,8 @@ export default function DissonantHarmony() {
                         description="A light background with adequete contrast to let colors pop"
                         optional="After trying out both light and dark backgrounds, I found that the light background worked better as it let the colors in the sculpture pop more whereas in the dark background the colors got washed out." />
                     <p className="mob-mid-w self-center">To determine this, I put both poster versions in grayscale to see the differences in values in each of the colors. Value in color theory refers to the darkness of a color, independent of hue or saturation. As can be seen in the images below, there is much more contrast between the sculpture and the background in the lighter background than the dark one. The small screws in the top-right of the dark-background poster are completely invisible, meaning that they are the exact same values.</p>
-                    <div className="flex flex-row gap-[0.5rem]">
-                        <div className="flex flex-col w-full">
-                            <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full">
-                                <div className="self-center my-[3rem]">
-                                    <img src="/images/work/calder-good-contrast.jpg" alt="" className="w-[24vw] subtle-shadow" />
-                                </div>
-                            </div>
-                            <p className="caption cap-top">light background → high contrast</p>
-                        </div>
-                        <div className="flex flex-col w-full">
-                            <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full">
-                                <div className="self-center my-[3rem]">
-                                    <img src="/images/work/calder-bad-contrast.jpg" alt="" className="w-[24vw] subtle-shadow" />
-                                </div>
-                            </div>
-                            <p className="caption cap-top">dark background → low contrast</p>
-                        </div>
-                    </div>
+
+                    <TwoImageCaption path1="/images/work/calder-good-contrast.jpg" cap1="light background → high contrast" path2="/images/work/calder-bad-contrast.jpg" cap2="dark background → low contrast" />
                 </div>
 
                 {/* A1 */}
@@ -91,7 +76,7 @@ export default function DissonantHarmony() {
                             <li>For the pieces of the sculpture, group the smaller items together. They get lost visually when they are scattered amongst the bigger pieces.</li>
                         </ul>
                     </div>
-                    {/* final */}
+                    {/* final a1 */}
                     <div className="flex flex-col w-full">
                         <VerticalImageSpan path="images/work/calder.png" />
                         <p className="caption cap-top">final a1 poster</p>
@@ -108,10 +93,10 @@ export default function DissonantHarmony() {
                         description="A flyer intended to guide people to the exhibition rather than spark intrigue like the poster"
                         optional="Unlike the rest of the exhibition materials, the flyer shows the fully-constructed version of Big Crinkly. I thought this made the most sense as while the poster could be meant to spark intrigue for the viewers, the flyer would be held at the museum, and therefore showing the actual artwork could help museum visitors know what to keep an eye out for. Furthermore, if museum goers had seen the poster before the flyer (or vice versa), it could help them make the connection of the deeper meaning behind the artwork, having seen the structure both the constructed and deconstructed." />
                     <div className="flex flex-col w-full">
-                        <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full">
-                            <div className="self-center my-[3rem] subtle-shadow flex flex-wrap gap-[4rem] ">
-                                <img src="/images/work/calder_a5_front.png" alt="" className="w-[20vw]" />
-                                <img src="/images/work/calder_a5_back.png" alt="" className="w-[20vw]" />
+                        <div className="img-bg rounded-[0.5rem] flex place-content-center w-full">
+                            <div className="self-center my-[3rem] subtle-shadow flex flex-wrap gap-[4rem] place-content-center">
+                                <img src="/images/work/calder_a5_front.png" alt="" className="w-[24vw] min-w-[332px]" />
+                                <img src="/images/work/calder_a5_back.png" alt="" className="w-[24vw] min-w-[332px]" />
                             </div>
                         </div>
                         <p className="caption cap-top">front & back</p>
@@ -124,19 +109,20 @@ export default function DissonantHarmony() {
                         title="Digital marketing material"
                         description="Instagram posts and gif"
                         optional="I snuck in another instance of dissonant harmony with the nine-square grid creating one complete picture. The center slide features a gif that shows the individual pieces of the sculpture getting put back together. This gif ties together the entire set of marketing materials as it visually plays out the transformation of individual, dissonant pieces coming together and forming a harmonious sculpture." />
-                    <div className="flex flex-row gap-[0.5rem]">
-                        <div className="flex flex-col w-full">
-                            <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full">
-                                <div className="self-center my-[3rem]">
-                                    <img src="/images/work/calder_instagram.jpeg" alt="" className="w-[24vw] subtle-shadow" />
+
+                    <div className="flex flex-wrap gap-[0.5rem]">
+                        <div className="flex flex-col w-full max-w-[655px]">
+                            <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full max-w-[655px]">
+                                <div className="self-center my-[4vw]">
+                                    <img src="/images/work/calder_instagram.jpeg" alt="" className="w-[24vw] min-w-[332px] subtle-shadow" />
                                 </div>
                             </div>
                             <p className="caption cap-top">Instagram posts <a className="caption underline" href="https://www.instagram.com/snfivowlactz/">(pseudo Instagram account)</a></p>
                         </div>
-                        <div className="flex flex-col w-full">
-                            <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full">
-                                <div className="self-center my-[3rem]">
-                                    <video autoPlay loop muted className="w-[24vw] subtle-shadow">
+                        <div className="flex flex-col w-full max-w-[655px]">
+                            <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full max-w-[655px]">
+                                <div className="self-center my-[4vw]">
+                                    <video autoPlay loop muted className="w-[24vw] min-w-[332px] subtle-shadow">
                                         <source src="images/work/calder.mov" type="video/mp4" />
                                     </video>
                                 </div>
