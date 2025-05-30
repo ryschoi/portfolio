@@ -3,6 +3,8 @@ import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
 import SectionHeader from "../components/section-header";
+import VerticalImageSpan from "../components/vertical-image-span";
+import TwoImageCaptionRock from "../components/two-image-caption-rock";
 
 export default function Rockumentary() {
     const thisProject = projects.find(p => p.path === "/rockumentary");
@@ -19,28 +21,11 @@ export default function Rockumentary() {
                         description="Deciding which elements should be hand-drawn and which should be digital"
                         optional="I went through many rounds of initial sketches for this poster–different stances, layouts, colors. For a long time I wanted to do it mainly by hand so that I could have more flexibility when conveying the bold feel of rock and nostalgic feel of a life documentary or a movie. In the end I settled for a simple and bold Helvetica but with a nice grain to soften all the solid colors." />
                     <div className="flex flex-col gap-[1rem]">
-                        <div className="flex flex-row gap-[0.5rem]">
-                            <div className="flex flex-col w-full">
-                                <div className="goodnotes-bg-2 rounded-[0.5rem] flex align-center justify-center w-full">
-                                    <div className="self-center my-[3rem]">
-                                        <img src="/images/work/rockumentary sketches.png" alt="" className="h-[18vw]" />
-                                    </div>
-                                </div>
-                                <p className="caption cap-top">hand-traced on my ipad</p>
-                            </div>
-                            <div className="flex flex-col w-full">
-                                <div className="goodnotes-bg rounded-[0.5rem] flex align-center justify-center w-full">
-                                    <div className="self-center my-[3rem]">
-                                        <img src="/images/work/rock_writing.png" alt="" className="h-[18vw]" />
-                                    </div>
-                                </div>
-                                <p className="caption cap-top">potential title text</p>
-                            </div>
-                        </div>
+                        <TwoImageCaptionRock path1="/images/work/rockumentary sketches.png" cap1="Hand-traced on my ipad" path2="/images/work/rock_writing.png" cap2="Potential title text" />
                         <div className="flex flex-col w-full">
-                            <div className="goodnotes-bg-2 rounded-[0.5rem] flex align-center justify-center w-full">
+                            <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full">
                                 <div className="self-center my-[3rem]">
-                                    <img src="/images/work/rock_ver1.jpg" alt="" className="h-[30vw]" />
+                                    <img src="/images/work/rock_ver1.jpg" alt="" className="h-[30rem] subtle-shadow" />
                                 </div>
                             </div>
                             <p className="caption cap-top">one of my sketched out ideas</p>
@@ -78,9 +63,7 @@ export default function Rockumentary() {
                 {/* FINAL */}
                 <div className="flex flex-col gap-[3rem] w-full">
                     <h2 className="self-center mob-mid-w">Final poster</h2>
-                    <div className="rounded-[0.5rem] img-bg w-full mt-[1.8rem] mb-[3.5rem] flex align-center justify-center py-[3rem] w-full">
-                        <img src="images/work/rockumentary.png" alt="" className="w-[36rem] subtle-shadow" />
-                    </div>
+                    <VerticalImageSpan path="images/work/rockumentary.png" />
                 </div>
             </div>
         </div>
