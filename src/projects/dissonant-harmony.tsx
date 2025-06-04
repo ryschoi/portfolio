@@ -122,7 +122,7 @@ export default function DissonantHarmony() {
                         <div className="flex flex-col w-full max-w-[655px]">
                             <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full max-w-[655px]">
                                 <div className="self-center my-[4vw]">
-                                    <video autoPlay loop muted className="w-[24vw] min-w-[332px] subtle-shadow">
+                                    <video autoPlay loop playsInline muted className="w-[24vw] min-w-[332px] subtle-shadow">
                                         <source src="images/work/calder.mov" type="video/mp4" />
                                     </video>
                                 </div>

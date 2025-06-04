@@ -2,6 +2,9 @@ import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
+import SectionHeader from "../components/section-header";
+import TwoImageCaption from "../components/two-image-caption";
+import VerticalImageSpan from "../components/vertical-image-span";
 
 export default function snakebiteResponse() {
     const thisProject = projects.find(p => p.path === "/snakebite-response");
@@ -10,12 +13,12 @@ export default function snakebiteResponse() {
             <ProjectHeader project={thisProject as Project} />
 
             <div className="project-content-rest">
-                <div className="col22">
-                    <p className="section-titles">
-                        Snakebite Response Poster<br />
-                        <span className="italic">A2 size</span>
-                    </p>
-                    <img src="images/work/snakebitePrevention.png" alt="" width="100%" />
+                <SectionHeader title="Snakebite Response Poster process" description="Name" optional="" />
+                <p className="mob-mid-w">To start off, I conducted research on the current snakebite crisis, focusing on its effects in Africa, and how to prevent fatal encounters with snakes, also focused on Africa and Botswana.</p>
+
+                <div className="flex flex-col gap-[3rem] w-full">
+                    <h2 className="self-center mob-mid-w">Final A2 poster</h2>
+                    <VerticalImageSpan path="images/work/snakebitePrevention.png" />
                 </div>
 
                 <div className="col22">
