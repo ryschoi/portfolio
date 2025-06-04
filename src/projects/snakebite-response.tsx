@@ -13,8 +13,8 @@ export default function snakebiteResponse() {
             <ProjectHeader project={thisProject as Project} />
 
             <div className="project-content-rest">
-                <SectionHeader title="Snakebite Response Poster process" description="Name" optional="" />
-                <p className="mob-mid-w">To start off, I conducted research on the current snakebite crisis, focusing on its effects in Africa, and how to prevent fatal encounters with snakes, also focused on Africa and Botswana.</p>
+                {/* <SectionHeader title="Snakebite Response Poster process" description="Name" optional="" />
+                <p className="mob-mid-w">To start off, I conducted research on the current snakebite crisis, focusing on its effects in Africa, and how to prevent fatal encounters with snakes, also focused on Africa and Botswana.</p> */}
 
                 <div className="flex flex-col gap-[3rem] w-full">
                     <h2 className="self-center mob-mid-w">Final A2 poster</h2>

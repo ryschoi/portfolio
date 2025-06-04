@@ -39,10 +39,10 @@ export default function About() {
 
         <div className="flex flex-col gap-[1rem]">
           <h2>Hi, I'm Rebecca.</h2>
-          <p className="caption">A third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="caption underline">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className="caption underline">Sandbox NU.</a></p>
+          <p className="caption">I'm a third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="caption underline">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className="caption underline">Sandbox NU</a>.</p>
         </div>
         <div className="flex flex-col gap-[1rem]">
-          <h3 className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</h3>
+          <h3 className="gray">I have an interdisciplinary skillset across tech, design, and data, and am passionate about creating meaningful and well-crafted products and experiences.</h3>
           <p>
             I'm passionate about understanding how people think and behave. In design, I have found a discipline where I can apply my insights and fuel my passion.
             Whether it's in coding or visual design, I work with the future users in mind,
