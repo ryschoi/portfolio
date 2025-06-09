@@ -4,42 +4,11 @@
     align-items: left;
 }
 
-.project-heading {
-    display: flex;
-    min-height: 120px;
-    justify-content: space-between;
-}
-
-.proj-header {
-    display: flex;
-    align-items: center;
-}
-
-.col40 {
-    display: flex;
-    flex-direction: column;
-    gap: 44px
-}
-
 .project-content-rest {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8rem;
-}
-
-.project-content-margin {
-    margin-top: 68px;
-}
-
-.project-rest-align-left {
-    display: flex;
-    margin-top: 68px;
-    flex-direction: column;
-    align-items: left;
-    gap: 22px;
-    justify-content: left;
-    align-items: left;
 }
 
 .section-titles {
@@ -48,26 +17,10 @@
     color: #404040;
 }
 
-#top-section {
-    margin-top: 0px;
-}
-
 .italic {
     text-align: center;
     color: #404040;
     font-style: italic;
-}
-
-.row-space-between {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.col-space-between {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .col22 {
@@ -78,42 +31,6 @@
     align-items: center;
 }
 
-.col48 {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-}
-
-.col8 {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.col22-align-left {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    justify-content: left;
-    align-items: left;
-}
-
-.two-third-column {
-    width: 66%;
-}
-
-.third-column {
-    width: 33%;
-}
-
-.display-block {
-    display: block;
-}
-
-.slim {
-    width: 85%;
-}
-
 .row22 {
     display: flex;
     flex-direction: row;
@@ -122,23 +39,16 @@
     justify-content: center;
 }
 
-#row22-center {
-    align-items: center;
+.task-container {
+    width: 100vw;
+    margin-left: calc(-4vw);
+    margin-right: calc(-4vw);
+    background-color: #1e1e1e;
 }
 
-.half-column {
-    align-items: flex-start;
-    max-width: 49.5%;
-}
-
-#space-above {
-    margin-top: 22px;
-}
-
-.description Link {
-    text-decoration: underline;
-}
-
-.proj-header img {
-    margin-top: -20px;
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 100%;
 }

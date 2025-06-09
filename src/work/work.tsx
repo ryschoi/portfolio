@@ -5,7 +5,7 @@ import "./work.css";
 import WorkCard from "./work-card";
 export default function Work() {
   return (
-    <div>
+    <div className="">
       {/* GREETING */}
       <div className="flex flex-col gap-[0.5rem] mt-[10rem] mb-[14rem] items-center place-content-center">
         <h2 className="text-red-500 text-center w-[39rem] max-w-[80vw]">

@@ -61,7 +61,7 @@ export default function Rockumentary() {
                 </div>
 
                 {/* FINAL */}
-                <div className="flex flex-col gap-[3rem] w-full">
+                <div className="section">
                     <h2 className="self-center mob-mid-w">Final poster</h2>
                     <VerticalImageSpan path="images/work/rockumentary.png" />
                 </div>

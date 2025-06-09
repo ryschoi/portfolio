@@ -1,18 +1,19 @@
 import { Project } from "../projects/project";
 import Tag from "./tag";
+import Task from "./task";
 
 export default function ProjectHeader({ project }: { project: Project }) {
     return (
-        <div className="w-full flex flex-col justify-center mb-[6rem]">
+        <div className="w-full flex flex-col justify-center">
             <div className="flex flex-col items-center mb-[6rem] w-full">
                 {/* TOP TITLE */}
                 <div className="mob-mid-w flex flex-col gap-[1.5vh]">
                     <h2>{project.name}  <span className="gray">{project.year}</span></h2>
                     <div className="flex flex-wrap gap-[0.5rem]">
                         {project.tags
-                        .map((tag) => (
-                            <Tag text={tag} hover={false} />
-                        ))}
+                            .map((tag) => (
+                                <Tag text={tag} hover={false} />
+                            ))}
                     </div>
                 </div>
 
@@ -53,7 +54,7 @@ export default function ProjectHeader({ project }: { project: Project }) {
                     <p className="mt-[1.4rem]">{project.description}</p>
                 </div>
             </div>
-            <hr />
+            {/* <hr /> */}
         </div>
     );
 }

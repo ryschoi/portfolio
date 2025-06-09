@@ -5,6 +5,7 @@ import { Project } from "./project";
 import SectionHeader from "../components/section-header";
 import VerticalImageSpan from "../components/vertical-image-span";
 import TwoImageCaption from "../components/two-image-caption";
+import Task from "../components/task";
 
 export default function DissonantHarmony() {
     const thisProject = projects.find(p => p.path === "/dissonant-harmony");
@@ -14,19 +15,23 @@ export default function DissonantHarmony() {
             <ProjectHeader project={thisProject as Project} />
 
             <div className="project-content-rest">
-                <SectionHeader
-                    title="Concept"
-                    description="Reflecting the idea of dissonant harmony in the illustrations and typography"
-                    optional="I went with the theme of a deconstructed sculpture which I
+                <Task task="Reflecting the idea of dissonant harmony in the illustrations and typography" processItems={["Concept", "Type", "Background", "A1-size poster", "A5-size flyer", "Digital marketing material"]} />
+
+                <div id="concept">
+                    <SectionHeader
+                        title="Concept"
+                        description="Reflecting the idea of dissonant harmony in the illustrations and typography"
+                        optional="I went with the theme of a deconstructed sculpture which I
                             created by first tracing over an image of Big Crinkly using
                             the Pen tool and then separating it by its individual parts.
                             The display of the individual pieces plays along with the idea
                             of “dissonant”–that all the individual pieces of the whole
                             sculpture are on their own dissonant. All a little random, a little rough-cut, jagged almost, but somehow coming together
                             and creating a harmonious result." />
+                </div>
 
                 {/* TYPE */}
-                <div className="flex flex-col gap-[3rem] w-full align-center">
+                <div className="section align-center" id="type">
                     <SectionHeader
                         title="Type"
                         description="Aglet Mono: geometric, like Calder's artwork"
@@ -46,7 +51,7 @@ export default function DissonantHarmony() {
                 </div>
 
                 {/* DARK VERSIONS */}
-                <div className="flex flex-col gap-[3rem] w-full align-center">
+                <div className="section align-center" id="background">
                     <SectionHeader
                         title="BACKGROUND"
                         description="A light background with adequete contrast to let colors pop"
@@ -57,7 +62,7 @@ export default function DissonantHarmony() {
                 </div>
 
                 {/* A1 */}
-                <div className="flex flex-col gap-[3rem] w-full align-center">
+                <div className="section align-center" id="a1-size-poster">
                     <SectionHeader
                         title="A1-size poster"
                         description="Ensuring there is a focal point for the poster"
@@ -87,7 +92,7 @@ export default function DissonantHarmony() {
                 </div>
 
                 {/* FLYER */}
-                <div className="flex flex-col gap-[3rem] w-full align-center">
+                <div className="section align-center" id="a5-size-flyer">
                     <SectionHeader
                         title="A5-size flyer"
                         description="A flyer intended to guide people to the exhibition rather than spark intrigue like the poster"
@@ -104,7 +109,7 @@ export default function DissonantHarmony() {
                 </div>
 
                 {/* DIGITAL MATERIAL */}
-                <div className="flex flex-col gap-[3rem] w-full align-center">
+                <div className="section align-center" id="digital-marketing-material">
                     <SectionHeader
                         title="Digital marketing material"
                         description="Instagram posts and gif"
