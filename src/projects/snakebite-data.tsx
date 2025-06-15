@@ -16,13 +16,17 @@ export default function SnakebiteData() {
                 <Task task="Turn global snakebite and climate data into a cohesive, readable story" processItems={["Data collection and engineering", "Data visualization"]} />
 
                 {/* DATA COLLECTION */}
-                <div className="section" id="data-collection-and-engineering">
+                {/* <div className="section" id="data-collection-and-engineering">
                     <SectionHeader title="Data collection & engineering" description="Collected data from Our World in Data, and cleaned up and engineered it in Excel" optional="Most of the data was collected from Our World in Data. I downloaded data sets for individual climate conditions (i.e. precipitation, surface temperature). From there, I used Excel to clean up each dataset and combine them into one workbook that I could easily filter through and map. Even though each dataset covered global data by country, there were still variations in the categorization: some countries did not have recorded data in some datasets, and some datasets listed continents as countries, leading to duplicate values." />
+                </div> */}
+
+                <div className="section" id="data-collection-and-engineering">
+                    <SectionHeader title="Part 1" description="Data collection & engineering" optional="Most of the data was collected from Our World in Data. I downloaded data sets for individual climate conditions (i.e. precipitation, surface temperature). From there, I used Excel to clean up each dataset and combine them into one workbook that I could easily filter through and map. Even though each dataset covered global data by country, there were still variations in the categorization: some countries did not have recorded data in some datasets, and some datasets listed continents as countries, leading to duplicate values." />
                 </div>
 
                 {/* DATA VISUALIZATION */}
                 <div className="section" id="data-visualization">
-                    <SectionHeader title="Data visualization" description="Establishing a clearer style and message" optional="I used Excel to create initial data visualizations like maps and charts. From there, I copied them over into Illustrator where I edited them more stylistically and pieced them together into the poster orientation." />
+                    <SectionHeader title="Part 2" description="Data visualization" optional="I used Excel to create initial data visualizations like maps and charts. From there, I copied them over into Illustrator where I edited them more stylistically and pieced them together into the poster orientation." />
 
                     {/* FIRST DRAFT */}
                     <div className="flex flex-col w-full">

@@ -41,12 +41,12 @@ export default function snakebiteResponse() {
                     <SectionHeader title="Part 3" description="Wallet cards" optional="After the poster, I created a set of wallet cards with the same content on the poster for people to have a way to access the information more conveniently." />
                     <div className="rounded-[0.5rem] img-bg w-full flex place-content-center">
                         <div className="grid grid-flow-col grid-rows-3 gap-[2rem] my-[4vw]">
-                            <img src="images/work/snakebiteWallet1.png" alt="" className="w-[26rem] max-w-[40vw] subtle-shadow" />
-                            <img src="images/work/snakebiteWallet3.png" alt="" className="w-[26rem] max-w-[40vw] subtle-shadow" />
-                            <img src="images/work/snakebiteWallet5.png" alt="" className="w-[26rem] max-w-[40vw] subtle-shadow" />
-                            <img src="images/work/snakebiteWallet2.png" alt="" className="w-[26rem] max-w-[40vw] subtle-shadow" />
-                            <img src="images/work/snakebiteWallet4.png" alt="" className="w-[26rem] max-w-[40vw] subtle-shadow" />
-                            <img src="images/work/snakebiteWallet6.png" alt="" className="w-[26rem] max-w-[40vw] subtle-shadow" />
+                            <img src="images/work/snakebiteWallet1.png" alt="" className="w-[25rem] max-w-[38vw] subtle-shadow" />
+                            <img src="images/work/snakebiteWallet3.png" alt="" className="w-[25rem] max-w-[38vw] subtle-shadow" />
+                            <img src="images/work/snakebiteWallet5.png" alt="" className="w-[25rem] max-w-[38vw] subtle-shadow" />
+                            <img src="images/work/snakebiteWallet2.png" alt="" className="w-[25rem] max-w-[38vw] subtle-shadow" />
+                            <img src="images/work/snakebiteWallet4.png" alt="" className="w-[25rem] max-w-[38vw] subtle-shadow" />
+                            <img src="images/work/snakebiteWallet6.png" alt="" className="w-[25rem] max-w-[38vw] subtle-shadow" />
                         </div>
                     </div>
                 </div>

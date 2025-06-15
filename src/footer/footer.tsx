@@ -22,7 +22,7 @@ export default function Footer() {
                     <br />
                     <br />
                     <p className="caption">Coded and designed by me ◡̈</p>
-                    <p className="caption">Last updated: May 2025</p>
+                    <p className="caption">Last updated: June 2025</p>
                 </div>
 
                 {/* Right side */}

@@ -19,7 +19,7 @@ export default function Task({ task, processItems }: { task: string; processItem
                 </div>
                 <br />
                 <br />
-                <p className="text-[#e8e8e6]">Process overview (click to jump to section)</p>
+                <p className="text-[#e8e8e6]">Process overview</p>
                 {processItems.map((item, index) => (
                     <p
                         key={index}

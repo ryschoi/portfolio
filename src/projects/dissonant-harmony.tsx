@@ -15,13 +15,13 @@ export default function DissonantHarmony() {
             <ProjectHeader project={thisProject as Project} />
 
             <div className="project-content-rest">
-                <Task task="Reflecting the idea of dissonant harmony in the illustrations and typography" processItems={["Concept", "Type", "Background", "A1-size poster", "A5-size flyer", "Digital marketing material"]} />
+                <Task task="Create marketing material for a museum exhibition" processItems={["Concept", "Type", "Background", "A1-size poster", "A5-size flyer", "Digital marketing material"]} />
 
                 <div id="concept">
                     <SectionHeader
                         title="Concept"
                         description="Reflecting the idea of dissonant harmony in the illustrations and typography"
-                        optional="I went with the theme of a deconstructed sculpture which I
+                        optional="For the museum exhibition, I chose the SFMoma Dissonant Harmony exhibition for Alexander Calder. I went with the theme of a deconstructed sculpture which I
                             created by first tracing over an image of Big Crinkly using
                             the Pen tool and then separating it by its individual parts.
                             The display of the individual pieces plays along with the idea

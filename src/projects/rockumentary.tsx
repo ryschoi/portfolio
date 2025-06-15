@@ -5,6 +5,7 @@ import { Project } from "./project";
 import SectionHeader from "../components/section-header";
 import VerticalImageSpan from "../components/vertical-image-span";
 import TwoImageCaptionRock from "../components/two-image-caption-rock";
+import Task from "../components/task";
 
 export default function Rockumentary() {
     const thisProject = projects.find(p => p.path === "/rockumentary");
@@ -12,13 +13,14 @@ export default function Rockumentary() {
     return (
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} />
-
+            
             <div className="project-content-rest">
+                <Task task="Create a poster for a Berklee student's British-rock-themed senior recital" processItems={["Sketching and initial ideas", "Subtle details"]} />
                 {/* SKETCHES */}
-                <div className="flex flex-col w-full gap-[3rem]">
+                <div className="flex flex-col w-full gap-[3rem]" id="sketching-and-initial-ideas">
                     <SectionHeader
-                        title="Sketches & initial ideas"
-                        description="Deciding which elements should be hand-drawn and which should be digital"
+                        title="Part 1"
+                        description="Sketching and initial ideas"
                         optional="I went through many rounds of initial sketches for this poster–different stances, layouts, colors. For a long time I wanted to do it mainly by hand so that I could have more flexibility when conveying the bold feel of rock and nostalgic feel of a life documentary or a movie. In the end I settled for a simple and bold Helvetica but with a nice grain to soften all the solid colors." />
                     <div className="flex flex-col gap-[1rem]">
                         <TwoImageCaptionRock path1="/images/work/rockumentary sketches.png" cap1="Hand-traced on my ipad" path2="/images/work/rock_writing.png" cap2="Potential title text" />
@@ -34,10 +36,10 @@ export default function Rockumentary() {
                 </div>
 
                 {/* DETAILS */}
-                <div className="flex flex-col w-full gap-[3rem]">
+                <div className="flex flex-col w-full gap-[3rem]" id="subtle-details">
                     <SectionHeader
-                        title="Subtle details"
-                        description="The design is in the details-from the grain to the iconic bowl cut"
+                        title="Part 2"
+                        description="Subtle details"
                         optional="It was important that the poster really captured Seb as a person, which meant making sure his appearance was accurately represented in the drawing. While the crossed-arms stance that I had before (shown above) captures his confident and controlled personality, the guitar-playing stance signals that the poster is about music which is why I went with that." />
                     <div className="flex flex-row gap-[0.5rem] w-full">
                         <div className="flex flex-col w-1/3">

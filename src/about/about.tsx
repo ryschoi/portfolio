@@ -44,11 +44,15 @@ export default function About() {
         <div className="flex flex-col gap-[1rem]">
           <h3 className="gray">I have an interdisciplinary skillset across tech, design, and data, and am passionate about creating meaningful and well-crafted products and experiences.</h3>
           <p>
-            I'm passionate about understanding how people think and behave. In design, I have found a discipline where I can apply my insights and fuel my passion.
-            Whether it's in coding or visual design, I work with the future users in mind,
-            aiming to create quality products that users can interact with in a familiar way.
+            Being someone who is simultaneously very rational and has lofty visions, 
+            I thrive when I am able to use both my strategic / analytical and creative sides. 
+            I always approach my work as fun challenges, where I work to make dreams of what 
+            the product can deliver a reality.
             <br /><br />
-            It's important to me that the projects I work on are meaningful in themselves and in the way that they are created. As a designer, this means that I am intentional with all my choices, making sure that whatever I design is easy on the eyes, easy to use, and delivers what the user needs out of the product. As a developer, I focus on scalability, efficiency, and writing clean and maintainable code.
+            Whether it's in coding or visual design, I work with the future users in mind,
+            aiming to create quality products and experiences that users can interact with in a familiar way.
+           <br /><br />
+            It's important to me that the projects I work on are meaningful to their users and in the way that they are created. As a designer, this means that I am intentional with all my choices, making sure that whatever I design is easy on the eyes, easy to use, and delivers what the user needs out of the product. As a developer, I focus on scalability, efficiency, and writing clean and maintainable code.
             <br /><br />
             My goal is that it will always be clear that my work is crafted with care and intention.
             <br /><br />
