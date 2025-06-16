@@ -1,6 +1,5 @@
 import { Project } from "../projects/project";
 import Tag from "./tag";
-import Task from "./task";
 
 export default function ProjectHeader({ project }: { project: Project }) {
     return (
@@ -12,7 +11,7 @@ export default function ProjectHeader({ project }: { project: Project }) {
                     <div className="flex flex-wrap gap-[0.5rem]">
                         {project.tags
                             .map((tag) => (
-                                <Tag text={tag} hover={false} />
+                                <Tag text={tag} hover={false} clicked={false} />
                             ))}
                     </div>
                 </div>
