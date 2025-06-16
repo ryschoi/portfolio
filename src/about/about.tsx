@@ -33,40 +33,41 @@ export default function About() {
   return (
     <div className="flex justify-center w-full">
       <div className="flex flex-col gap-[3rem] w-(--mob-page-w) max-w-[41rem] items-center">
+        {/* IMAGE */}
         <div className="overflow-hidden w-full">
           <img id="headshot" className="w-full h-auto object-cover rounded-[0.5rem]" src="images/wide.png" />
         </div>
 
+        {/* GREETING */}
         <div className="flex flex-col gap-[1rem]">
           <h2>Hi, I'm Rebecca.</h2>
           <p className="caption">I'm a third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="caption underline">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className="caption underline">Sandbox NU</a>.</p>
         </div>
-        <div className="flex flex-col gap-[1rem]">
-          <h3 className="gray">I have an interdisciplinary skillset across tech, design, and data, and am passionate about creating meaningful and well-crafted products and experiences.</h3>
-          <p>
-            Being someone who is simultaneously very rational and has lofty visions, 
-            I thrive when I am able to use both my strategic / analytical and creative sides. 
-            I always approach my work as fun challenges, where I work to make dreams of what 
-            the product can deliver a reality.
-            <br /><br />
-            Whether it's in coding or visual design, I work with the future users in mind,
-            aiming to create quality products and experiences that users can interact with in a familiar way.
-           <br /><br />
-            It's important to me that the projects I work on are meaningful to their users and in the way that they are created. As a designer, this means that I am intentional with all my choices, making sure that whatever I design is easy on the eyes, easy to use, and delivers what the user needs out of the product. As a developer, I focus on scalability, efficiency, and writing clean and maintainable code.
-            <br /><br />
-            My goal is that it will always be clear that my work is crafted with care and intention.
-            <br /><br />
-            Outside of work I love trees, photography, playing the bass, and kombucha.
-          </p>
-        </div>
+
+        <h3 className="gray">I have an interdisciplinary skillset across tech, design, and data, and am passionate about creating meaningful and well-crafted products and experiences.</h3>
+        <p>
+          Being someone who is simultaneously very rational and has lofty visions,
+          I thrive when I am able to use both my strategic / analytical and creative sides.
+          I always approach my work as fun challenges, where I work to make dreams of what
+          the product can deliver a reality.
+          <br /><br />
+          Whether it's in coding or visual design, I work with the future users in mind,
+          aiming to create quality products and experiences that users can interact with in a familiar way.
+          <br /><br />
+          It's important to me that the projects I work on are meaningful to their users and in the way that they are created. As a designer, this means that I am intentional with all my choices, making sure that whatever I design is easy on the eyes, easy to use, and delivers what the user needs out of the product. As a developer, I focus on scalability, efficiency, and writing clean and maintainable code.
+          <br /><br />
+          My goal is that it will always be clear that my work is crafted with care and intention.
+          <br /><br />
+          Outside of work I love trees, photography, playing the bass, and kombucha.
+        </p>
 
         {/* TAGS */}
         <div id="contacts" className="w-full flex flex-wrap gap-[12px]">
           <CopyButton text="choi.re@northeastern.edu" />
           <CopyButton text="(510) 682-0020" />
-          <a href="https://www.linkedin.com/in/ryschoi/"><Tag text="LinkedIn" hover={true} /></a>
-          <a href="https://github.com/ryschoi"><Tag text="GitHub" hover={true} /></a>
-          <a href="../public/images/Rebecca_Choi_Resume.pdf"><Tag text="Resume" hover={true} /></a>
+          <a href="https://www.linkedin.com/in/ryschoi/"><Tag text="LinkedIn" hover={true} clicked={false} /></a>
+          <a href="https://github.com/ryschoi"><Tag text="GitHub" hover={true} clicked={false} /></a>
+          <a href="../public/images/Rebecca_Choi_Resume.pdf"><Tag text="Resume" hover={true} clicked={false} /></a>
         </div>
 
         {/* <hr /> */}

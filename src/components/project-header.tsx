@@ -11,7 +11,7 @@ export default function ProjectHeader({ project }: { project: Project }) {
                     <div className="flex flex-wrap gap-[0.5rem]">
                         {project.tags
                             .map((tag) => (
-                                <Tag text={tag} hover={false} clicked={false} />
+                                <Tag text={tag} hover={false} clicked={true} />
                             ))}
                     </div>
                 </div>
