@@ -51,7 +51,11 @@
 :root {
   font-family: 'Hanken-Grotesk';
   font-feature-settings: 'liga' 1, 'calt' 1;
-  /* scroll-behavior: smooth; */
+}
+
+::selection {
+  background-color: #e9e8b7;
+  color: #212121;
 }
 
 * {
@@ -179,6 +183,7 @@ a:hover {
 
 button {
   border: none;
+  font-size: 0.85rem;
 }
 
 .tag, .tag-no-hover {

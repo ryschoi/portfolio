@@ -2,6 +2,7 @@ import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
+import Task from "../components/task";
 
 export default function BasicsOfTypography() {
     const thisProject = projects.find(p => p.path === "/cooper");
@@ -11,10 +12,7 @@ export default function BasicsOfTypography() {
             <ProjectHeader project={thisProject as Project} />
 
             <div className="project-content-rest">
-                <div className="row22">
-                    {/* Images coming soon. */}
-                    {/* <img src="images/work/cooper.png" alt="" width="100%" className="border"/> */}
-                </div>
+                <Task task="Rethink the experience of the job information page, and redesign accordingly" processItems={["Research", "User testing", "UI redesigns"]} />
             </div>
         </div>
     );

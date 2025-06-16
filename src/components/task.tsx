@@ -21,11 +21,7 @@ export default function Task({ task, processItems }: { task: string; processItem
                 <br />
                 <p className="text-[#e8e8e6]">Process overview</p>
                 {processItems.map((item, index) => (
-                    <p
-                        key={index}
-                        onClick={() => handleScroll(item)}
-                        className="caption hover:underline cursor-pointer"
-                    >
+                    <p key={index} onClick={() => handleScroll(item)} className="caption hover:underline cursor-pointer">
                         → {item}
                     </p>
                 ))}

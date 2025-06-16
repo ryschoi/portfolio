@@ -3,7 +3,7 @@ import MiscImageBG from "./misc.image-bg";
 
 export default function MiscCard({ project }: { project: MiscProj }) {
     return (
-        <div className="flex flex-col gap-[2rem] w-full">
+        <div className="flex flex-col gap-[1rem] w-[40vw]">
             {/* IMAGES */}
             <div className="flex flex-col w-full">
                 <MiscImageBG project={project} />
