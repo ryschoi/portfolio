@@ -21,6 +21,7 @@ import DesignPhilosophy from "./projects/design-philosophy";
 import SchoolStairs from "./projects/school-stairs";
 import Radien from "./projects/radien";
 import Cooper from "./projects/cooper"
+import OpenForum from "./projects/open-forum";
 
 
 export default function App() {
@@ -49,6 +50,7 @@ export default function App() {
           <Route path="/school-stairs" element={<SchoolStairs />} />
           <Route path="/radien" element={<Radien />} />
           <Route path="/cooper" element={<Cooper />} />
+          <Route path="/open-forum" element={<OpenForum />} />
         </Routes>
 
         <Footer />

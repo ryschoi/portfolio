@@ -46,10 +46,7 @@ export default function About() {
 
         <h3 className="gray">I have an interdisciplinary skillset across tech, design, and data, and am passionate about creating meaningful and well-crafted products and experiences.</h3>
         <p>
-          Being someone who is simultaneously very rational and has lofty visions,
-          I thrive when I am able to use both my strategic / analytical and creative sides.
-          I always approach my work as fun challenges, where I work to make dreams of what
-          the product can deliver a reality.
+          As someone who is both visionary and rational, I navigate complex problems with discernment and find ways to turn solutions into reality.
           <br /><br />
           Whether it's in coding or visual design, I work with the future users in mind,
           aiming to create quality products and experiences that users can interact with in a familiar way.

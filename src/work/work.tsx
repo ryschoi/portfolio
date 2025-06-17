@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { projects } from "../database";
+import { Link } from "react-router";
 import "../index.css";
 import "../navigation/nav.css";
 import "./work.css";
@@ -22,7 +23,7 @@ export default function Work() {
   });
 
   return (
-    <div>
+    <div className="flex flex-col">
       {/* GREETING */}
       <div className="flex flex-col mt-[10rem] mb-[14rem] items-center">
         <h1 className="text-red-500 text-center w-[39rem] max-w-[80vw]">
@@ -56,13 +57,25 @@ export default function Work() {
           ))}
       </div>
 
-      {/* <div className="flex flex-col gap-[4rem]">
-        {projects
-          .filter((proj) => proj.active === true)
-          .map((proj) => (
-            <WorkCard project={proj} />
-          ))}
-      </div> */}
+      {/* SEE MORE */}
+      {/* <Link className="self-center mt-[6rem] gray" to={"../misc"}>
+        <p className="gray inline">See more</p>
+        <div className="inline mx-[0.5rem]">
+          {selectedTag === null ? (
+            <p className="inline gray">misc</p>
+          ) : (
+            allTags
+              .filter((tag) => tag === selectedTag)
+              .map((tag) => {
+                const isSelected = selectedTag === tag;
+                return (
+                  <Tag key={tag} text={tag} hover={true} clicked={isSelected} />
+                );
+              })
+          )}
+        </div>
+        <p className="gray inline">work →</p>
+      </Link> */}
     </div >
   );
 }

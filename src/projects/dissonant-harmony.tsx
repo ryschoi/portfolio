@@ -1,11 +1,11 @@
-import "./projects.css";
-import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
-import { Project } from "./project";
 import SectionHeader from "../components/section-header";
-import VerticalImageSpan from "../components/vertical-image-span";
-import TwoImageCaption from "../components/two-image-caption";
 import Task from "../components/task";
+import TwoImageCaption from "../components/two-image-caption";
+import VerticalImageSpan from "../components/vertical-image-span";
+import { projects } from "../database";
+import { Project } from "./project";
+import "./projects.css";
 
 export default function DissonantHarmony() {
     const thisProject = projects.find(p => p.path === "/dissonant-harmony");
@@ -39,12 +39,12 @@ export default function DissonantHarmony() {
                     <div className="flex flex-row gap-[0.5rem]">
                         <div className="calder-bg rounded-[0.5rem] flex place-content-center w-3/5">
                             <div className="self-center my-[1rem]">
-                                <img src="/images/work/calder_type-06.png" alt="" className="h-[18vw]" />
+                                <img src="/images/work/calder/calder_type-06.png" alt="" className="h-[18vw]" />
                             </div>
                         </div>
                         <div className="calder-bg rounded-[0.5rem] flex place-content-center w-full">
                             <div className="self-center my-[1rem]">
-                                <img src="/images/work/calder_type-07.png" alt="" className="h-[18vw]" />
+                                <img src="/images/work/calder/calder_type-07.png" alt="" className="h-[18vw]" />
                             </div>
                         </div>
                     </div>
@@ -58,7 +58,7 @@ export default function DissonantHarmony() {
                         optional="After trying out both light and dark backgrounds, I found that the light background worked better as it let the colors in the sculpture pop more whereas in the dark background the colors got washed out." />
                     <p className="mob-mid-w self-center">To determine this, I put both poster versions in grayscale to see the differences in values in each of the colors. Value in color theory refers to the darkness of a color, independent of hue or saturation. As can be seen in the images below, there is much more contrast between the sculpture and the background in the lighter background than the dark one. The small screws in the top-right of the dark-background poster are completely invisible, meaning that they are the exact same values.</p>
 
-                    <TwoImageCaption path1="/images/work/calder-good-contrast.jpg" cap1="light background → high contrast" path2="/images/work/calder-bad-contrast.jpg" cap2="dark background → low contrast" />
+                    <TwoImageCaption path1="/images/work/calder/calder-good-contrast.jpg" cap1="light background → high contrast" path2="/images/work/calder/calder-bad-contrast.jpg" cap2="dark background → low contrast" />
                 </div>
 
                 {/* A1 */}
@@ -69,7 +69,7 @@ export default function DissonantHarmony() {
                         optional="It was important that there was a main focal point for the poster, especially because the poster was a big A1 size. I needed to establish a clear direction that viewers' eyes could follow when looking at the poster. That meant not only setting big-enough margins, but also making sure the individual pieces of the sculpture were framed well and that the other elements supported the main focus (the sculpture)." />
                     <div className="flex flex-col w-full">
                         <div className="rounded-[0.5rem] img-bg w-full flex align-center justify-center py-[4vw] w-full">
-                            <img src="images/work/calder-a1-markup.jpg" alt="" className="w-[36rem] max-w-[84vw]" />
+                            <img src="images/work/calder/calder-a1-markup.jpg" alt="" className="w-[36rem] max-w-[84vw]" />
                         </div>
                         <p className="caption cap-top">a pervious a1 poster version</p>
                     </div>
@@ -83,7 +83,7 @@ export default function DissonantHarmony() {
                     </div>
                     {/* final a1 */}
                     <div className="flex flex-col w-full">
-                        <VerticalImageSpan path="images/work/calder.png" />
+                        <VerticalImageSpan path="images/work/calder/calder.png" />
                         <p className="caption cap-top">final a1 poster</p>
                     </div>
                     <p className="mob-mid-w self-center">In the final A1 poster version, there is a much-better sense of hierarchy and more obvious flow for how people should read the poster.<br /><br />
@@ -100,8 +100,8 @@ export default function DissonantHarmony() {
                     <div className="flex flex-col w-full">
                         <div className="img-bg rounded-[0.5rem] flex place-content-center w-full">
                             <div className="self-center my-[3rem] subtle-shadow flex flex-wrap gap-[4rem] place-content-center">
-                                <img src="/images/work/calder_a5_front.png" alt="" className="w-[24vw] min-w-[332px]" />
-                                <img src="/images/work/calder_a5_back.png" alt="" className="w-[24vw] min-w-[332px]" />
+                                <img src="/images/work/calder/calder_a5_front.png" alt="" className="w-[24vw] min-w-[332px]" />
+                                <img src="/images/work/calder/calder_a5_back.png" alt="" className="w-[24vw] min-w-[332px]" />
                             </div>
                         </div>
                         <p className="caption cap-top">front & back</p>
@@ -119,7 +119,7 @@ export default function DissonantHarmony() {
                         <div className="flex flex-col w-full max-w-[655px]">
                             <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full max-w-[655px]">
                                 <div className="self-center my-[4vw]">
-                                    <img src="/images/work/calder_instagram.jpeg" alt="" className="w-[24vw] min-w-[332px] subtle-shadow" />
+                                    <img src="/images/work/calder/calder_instagram.jpeg" alt="" className="w-[24vw] min-w-[332px] subtle-shadow" />
                                 </div>
                             </div>
                             <p className="caption cap-top">Instagram posts <a className="caption underline" href="https://www.instagram.com/snfivowlactz/">(pseudo Instagram account)</a></p>
@@ -128,7 +128,7 @@ export default function DissonantHarmony() {
                             <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full max-w-[655px]">
                                 <div className="self-center my-[4vw]">
                                     <video autoPlay loop playsInline muted className="w-[24vw] min-w-[332px] subtle-shadow">
-                                        <source src="images/work/calder.mov" type="video/mp4" />
+                                        <source src="images/work/calder/calder.mov" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>

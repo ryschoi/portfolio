@@ -32,8 +32,8 @@ export default function SnakebiteData() {
                     <div className="flex flex-col w-full">
                         <div className="img-bg rounded-[0.5rem] flex place-content-center w-full">
                             <div className="self-center my-[3vw] subtle-shadow flex flex-wrap gap-[4vw] place-content-center">
-                                <img src="/images/work/s-data-crit1.png" alt="" className="w-[36vw] min-w-[332px]" />
-                                <img src="/images/work/snakebite-data-feedback.png" alt="" className="w-[36vw] min-w-[332px]" />
+                                <img src="/images/work/snakebite-data/s-data-crit1.png" alt="" className="w-[36vw] min-w-[332px]" />
+                                <img src="/images/work/snakebite-data/snakebite-data-feedback.png" alt="" className="w-[36vw] min-w-[332px]" />
                             </div>
                         </div>
                         <p className="caption cap-top">first iteration</p>
@@ -61,7 +61,7 @@ export default function SnakebiteData() {
                         <div className="flex flex-col w-full max-w-[655px]">
                             <div className="s-data-bg rounded-[0.5rem] flex place-content-center w-full max-w-[655px]">
                                 <div className="self-center my-[1.5vw]">
-                                    <img src="/images/work/isotype2.png" alt="" className="w-[44vw] min-w-[332px]" />
+                                    <img src="/images/work/snakebite-data/isotype2.png" alt="" className="w-[44vw] min-w-[332px]" />
                                 </div>
                             </div>
                             <p className="caption cap-top">initial</p>
@@ -69,7 +69,7 @@ export default function SnakebiteData() {
                         <div className="flex flex-col w-full max-w-[655px]">
                             <div className="s-data-bg rounded-[0.5rem] flex place-content-center w-full max-w-[655px]">
                                 <div className="self-center my-[1.5vw]">
-                                    <img src="/images/work/isotype1.png" alt="" className="w-[44vw] min-w-[332px]" />
+                                    <img src="/images/work/snakebite-data/isotype1.png" alt="" className="w-[44vw] min-w-[332px]" />
                                 </div>
                             </div>
                             <p className="caption cap-top">final</p>
@@ -88,7 +88,7 @@ export default function SnakebiteData() {
                         <div className="flex flex-col w-full max-w-[655px]">
                             <div className="s-data-bg rounded-[0.5rem] flex place-content-center w-full max-w-[655px]">
                                 <div className="self-center my-[1.5vw]">
-                                    <img src="/images/work/degree1.png" alt="" className="w-[32vw] min-w-[332px]" />
+                                    <img src="/images/work/snakebite-data/degree1.png" alt="" className="w-[32vw] min-w-[332px]" />
                                 </div>
                             </div>
                             <p className="caption cap-top">initial</p>
@@ -96,7 +96,7 @@ export default function SnakebiteData() {
                         <div className="flex flex-col w-full max-w-[655px]">
                             <div className="s-data-bg rounded-[0.5rem] flex place-content-center w-full max-w-[655px]">
                                 <div className="self-center my-[1.5vw]">
-                                    <img src="/images/work/degree2.png" alt="" className="w-[32vw] min-w-[332px]" />
+                                    <img src="/images/work/snakebite-data/degree2.png" alt="" className="w-[32vw] min-w-[332px]" />
                                 </div>
                             </div>
                             <p className="caption cap-top">final</p>
@@ -107,7 +107,7 @@ export default function SnakebiteData() {
                 {/* FINAL */}
                 <div className="section">
                     <h2 className="self-center mob-mid-w">Final poster</h2>
-                    <VerticalImageSpan path="images/work/snakebiteData.png" />
+                    <VerticalImageSpan path="images/work/snakebite-data/snakebiteData.png" />
                 </div>
 
                 <p className="mob-mid-w">Through this project, I learned that a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but that you need to turn the data into a language users could read, instead of delivering it in the raw, large, abstract numbers.. That meant setting solid context for each visualization and, in my single-tone design, being very intentional with each time I used the color green so that the visualizations could be interpretted with even just a glance.</p>
