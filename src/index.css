@@ -250,6 +250,7 @@ hr {
 .mob-mid-w {
   width: var(--mob-page-w);
   max-width: var(--mid-width-px);
+  align-self: center;
 }
 
 .misc-grid {
@@ -257,4 +258,12 @@ hr {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
   width: 100%;
   gap: 2rem;
+}
+
+.highlight {
+  padding: 3px 8px;
+  margin: 0 0 0.5rem 0;
+  background-color: #e9e8b7;
+  font-weight: 500;
+  color: #282828;
 }

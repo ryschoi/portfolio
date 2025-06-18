@@ -28,11 +28,13 @@ export default function Footer() {
                 {/* Right side */}
                 <div className="flex gap-[7.5rem]">
                     <div>
+                        <p className="caption mb-[0.5rem]">Navigation</p>
                         <Link to="/" onClick={() => handleClick('/')}>Work</Link><br />
                         <Link to="/resume" onClick={() => handleClick('/resume')}>Resume</Link><br />
                         <Link to="/about" onClick={() => handleClick('/about')}>About</Link><br />
                     </div>
                     <div>
+                        <p className="caption mb-[0.5rem]">Contact</p>
                         <p>choi.re@northeastern.edu</p>
                         <p>(510) 682-0020</p>
                         <a href="https://www.linkedin.com/in/ryschoi/" className="underline">LinkedIn</a>

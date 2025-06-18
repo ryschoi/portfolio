@@ -7,7 +7,7 @@ export default function ProjectHeader({ project }: { project: Project }) {
             <div className="flex flex-col items-center mb-[6rem] w-full">
                 {/* TOP TITLE */}
                 <div className="mob-mid-w flex flex-col gap-[1.5vh]">
-                    <h2>{project.name}  <span className="gray">{project.year}</span></h2>
+                    <h1>{project.name}  <span className="gray">{project.year}</span></h1>
                     <div className="flex flex-wrap gap-[0.5rem]">
                         {project.tags
                             .map((tag) => (

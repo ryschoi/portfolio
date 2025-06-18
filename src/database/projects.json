@@ -61,7 +61,7 @@
     },
     {
         "id": 12,
-        "active": true,
+        "active": false,
         "column": "right",
         "name": "Open Forum",
         "path": "/open-forum",
@@ -72,12 +72,12 @@
         "medium": "Mobile",
         "tools": "Figma",
         "year": 2025,
-        "tags": ["UI/UX design", "UX research"],
+        "tags": ["UX research", "UI/UX design"],
         "vertical": false,
         "frontImage": "images/work/open-forum/open-forum-screens.png",
         "frontImageBG": "images/work/complete_stairs.png",
         "border": false,
-        "description": "Semester-long group project for Human-Computer Interaction, Spring 2025."
+        "description": "Semester-long group project for IS4300 Human-Computer Interaction, Spring 2025."
     },
     {
         "id": 2,
@@ -172,7 +172,7 @@
         "medium": "Web",
         "tools": "Figma",
         "year": 2024,
-        "tags": ["UX research", "UI/UX design"],
+        "tags": ["UI/UX design", "UX research"],
         "vertical": false,
         "frontImage": "images/work/radien/radien.png",
         "frontImageBG": "images/work/radien/radien_bg.png",
