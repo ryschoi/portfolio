@@ -58,7 +58,7 @@ export default function Work() {
       </div>
 
       {/* SEE MORE */}
-      {/* <Link className="self-center mt-[6rem] gray" to={"../misc"}>
+      <Link className="self-center mt-[6rem] gray" to={"../misc"}>
         <p className="gray inline">See more</p>
         <div className="inline mx-[0.5rem]">
           {selectedTag === null ? (
@@ -75,7 +75,7 @@ export default function Work() {
           )}
         </div>
         <p className="gray inline">work →</p>
-      </Link> */}
+      </Link>
     </div >
   );
 }

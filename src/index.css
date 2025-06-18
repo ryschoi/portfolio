@@ -252,28 +252,9 @@ hr {
   max-width: var(--mid-width-px);
 }
 
-
-
-/* DIATYPE */
-/*
-  @font-face {
-    font-family: "diatype";
-    src: url('/fonts/diatype/abc-diatype-var/ABCDiatypeVariable-Trial.ttf') format('truetype'),
-      url('/fonts/diatype/abc-diatype/ABCDiatype-Regular-Trial.otf') format('opentype');
-  }
-  @import url('/fonts/diatype/abc-diatype-var/ABCDiatypeVariable-Trial.ttf');
-  @import url('/fonts/diatype/abc-diatype/ABCDiatype-Regular-Trial.otf');
-*/
-
-/* SATOSHI */
-/* @import url(../public/fonts/satoshi/fonts/WEB/css/satoshi.css);
-  @import url('satoshi.css');
-    font-family: "satoshi", sans-serif;
-    src: url('../public/fonts/satoshi/fonts/TTF/Satoshi-Variable.ttf') format('ttf'),
-    url('../public/fonts/satoshi/fonts/TTF/Satoshi-VariableItalic.ttf') format('ttf');
-  }
-  :root {
-    font-family: Satoshi-Regular;
-    font-feature-settings: 'liga' 1, 'calt' 1;
-  }
-*/
+.misc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  width: 100%;
+  gap: 2rem;
+}

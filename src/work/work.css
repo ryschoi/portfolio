@@ -23,3 +23,17 @@
     background-color: transparent;
     cursor: pointer;
 }
+
+.work-img-group-col {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+}
+
+.work-add-img-cont {
+  border-radius: 0.5rem;
+  display: flex;
+  place-content: center;
+  width: 100%;
+}

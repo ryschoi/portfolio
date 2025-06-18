@@ -60,6 +60,26 @@
         "description": "This co-op review platform for Northeastern students is an ongoing project part of Sandbox Northeastern. Please check back at the end of the semester for process images and final designs!"
     },
     {
+        "id": 12,
+        "active": true,
+        "column": "right",
+        "name": "Open Forum",
+        "path": "/open-forum",
+        "summary": "An app for organizing meaningful and engaging discussions, increasing students' sense of belongingness on campus",
+        "type": "School project",
+        "team": "4 students",
+        "role": "Researcher & designer",
+        "medium": "Mobile",
+        "tools": "Figma",
+        "year": 2025,
+        "tags": ["UI/UX design", "UX research"],
+        "vertical": false,
+        "frontImage": "images/work/open-forum/open-forum-screens.png",
+        "frontImageBG": "images/work/complete_stairs.png",
+        "border": false,
+        "description": "Semester-long group project for Human-Computer Interaction, Spring 2025."
+    },
+    {
         "id": 2,
         "active": true,
         "column": "left",
@@ -218,25 +238,5 @@
         "frontImageBG": "images/work/complete_stairs.png",
         "border": false,
         "description": "Description coming soon."
-    },
-    {
-        "id": 12,
-        "active": true,
-        "column": "right",
-        "name": "Open Forum",
-        "path": "/open-forum",
-        "summary": "An app for organizing meaningful and engaging discussions, increasing students' sense of belongingness on campus",
-        "type": "School project",
-        "team": "4 students",
-        "role": "Researcher & designer",
-        "medium": "Mobile",
-        "tools": "Figma",
-        "year": 2025,
-        "tags": ["UI/UX design", "UX research"],
-        "vertical": false,
-        "frontImage": "images/work/open-forum/open-forum-screens.png",
-        "frontImageBG": "images/work/complete_stairs.png",
-        "border": false,
-        "description": "Semester-long group project for Human-Computer Interaction, Spring 2025."
     }
 ]

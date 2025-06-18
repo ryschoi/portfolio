@@ -44,12 +44,7 @@ export default function Misc() {
             </div>
 
             {/* CARDS */}
-            <div
-                className="grid gap-[2rem] w-full"
-                style={{
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 30rem), 1fr))',
-                }}
-            >
+            <div className="misc-grid">
                 {filteredProjects
                     .map((proj) => (
                         <MiscCard project={proj} />
