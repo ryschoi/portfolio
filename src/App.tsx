@@ -2,6 +2,7 @@ import ResetScroll from "./reset-scroll"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Work from "./work/work"
+import Misc from "./misc/misc"
 import Resume from "./resume/resume";
 import About from "./about/about";
 import NavBar from "./navigation/nav"
@@ -20,6 +21,7 @@ import DesignPhilosophy from "./projects/design-philosophy";
 import SchoolStairs from "./projects/school-stairs";
 import Radien from "./projects/radien";
 import Cooper from "./projects/cooper"
+import OpenForum from "./projects/open-forum";
 
 
 export default function App() {
@@ -31,6 +33,7 @@ export default function App() {
 
         <Routes>
           <Route path="/" element={<Work />} />
+          <Route path="/misc" element={<Misc />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<About />} />
 
@@ -47,6 +50,7 @@ export default function App() {
           <Route path="/school-stairs" element={<SchoolStairs />} />
           <Route path="/radien" element={<Radien />} />
           <Route path="/cooper" element={<Cooper />} />
+          <Route path="/open-forum" element={<OpenForum />} />
         </Routes>
 
         <Footer />

@@ -1,14 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
-@font-face {
-  font-family: "Hanken-Grotesk";
-  src: url('fonts/HankenGrotesk-VariableFont_wght.ttf') format('truetype'),
-    url('fonts/HankenGrotesk-Itailc-VariableFont_wght.ttf') format('truetype');
-}
 
 @theme {
   --zero: 0px;
@@ -18,8 +13,6 @@
 
   /* COLORS */
   /* --color-black: #212121; */
-
-  --breakpoint-sm: 5px;
 
   /* TEXT */
   --heading-weight: 400;
@@ -48,14 +41,14 @@
   --breakpoint-desktop: 80rem;
 }
 
-:root {
-  font-family: 'Hanken-Grotesk';
-  font-feature-settings: 'liga' 1, 'calt' 1;
-  /* scroll-behavior: smooth; */
+::selection {
+  background-color: #e9e8b7;
+  color: #212121;
 }
 
 * {
   font-family: 'Hanken Grotesk';
+  font-feature-settings: 'liga' 1, 'calt' 1;
   margin: 0;
   color: #212121;
 }
@@ -166,6 +159,7 @@ a:hover {
 
 .green {
   color: #acaa0b;
+  /* color: #ebc034; */
 }
 
 .dark-green {
@@ -176,20 +170,41 @@ a:hover {
   color: #E0DFAC;
 }
 
-.tag {
-  background-color: #E0DFAC;
-  color: #6F6E09;
+button {
+  border: none;
+  font-size: 0.85rem;
+}
+
+.tag, .tag-no-hover {
+  background-color: transparent;
+  color: #1e1e1e;
+  border: 1.5px solid #cecece;
+  border-radius: 1rem;
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+  /* transition: transform .25s; */
 }
 
 .tag:hover {
-  background-color: #c6c47f;
+  background-color: #f1f1f1;
+  color: #1e1e1e;
+  border: 1.5px solid #cecece;
+  border-radius: 1rem;
   cursor: pointer;
+  top: -3px;
+  /* transform: scale(1.025); */
 }
 
-.tag-no-hover {
-  background-color: #E0DFAC;
-  color: #6F6E09;
+.tag-clicked {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border: 1.5px solid #1e1e1e;
+  border-radius: 1rem;
 }
+
+
+
 
 .gray-tag {
   background-color: #dbdbdb;
@@ -235,30 +250,20 @@ hr {
 .mob-mid-w {
   width: var(--mob-page-w);
   max-width: var(--mid-width-px);
+  align-self: center;
 }
 
+.misc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  width: 100%;
+  gap: 2rem;
+}
 
-
-/* DIATYPE */
-/*
-  @font-face {
-    font-family: "diatype";
-    src: url('/fonts/diatype/abc-diatype-var/ABCDiatypeVariable-Trial.ttf') format('truetype'),
-      url('/fonts/diatype/abc-diatype/ABCDiatype-Regular-Trial.otf') format('opentype');
-  }
-  @import url('/fonts/diatype/abc-diatype-var/ABCDiatypeVariable-Trial.ttf');
-  @import url('/fonts/diatype/abc-diatype/ABCDiatype-Regular-Trial.otf');
-*/
-
-/* SATOSHI */
-/* @import url(../public/fonts/satoshi/fonts/WEB/css/satoshi.css);
-  @import url('satoshi.css');
-    font-family: "satoshi", sans-serif;
-    src: url('../public/fonts/satoshi/fonts/TTF/Satoshi-Variable.ttf') format('ttf'),
-    url('../public/fonts/satoshi/fonts/TTF/Satoshi-VariableItalic.ttf') format('ttf');
-  }
-  :root {
-    font-family: Satoshi-Regular;
-    font-feature-settings: 'liga' 1, 'calt' 1;
-  }
-*/
+.highlight {
+  padding: 3px 8px;
+  margin: 0 0 0.5rem 0;
+  background-color: #e9e8b7;
+  font-weight: 500;
+  color: #282828;
+}

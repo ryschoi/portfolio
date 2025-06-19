@@ -4,15 +4,15 @@ import "./nav.css";
 export default function NavBar() {
   const { pathname } = useLocation();
   const links = [
-    { label: "Work", test: "/", path: `/` },
-    { label: "Resume", test: "/resume", path: `/resume` },
-    { label: "About", test: "/about", path: `/about` }
+    { label: "Work", path: `/` },
+    // { label: "Misc", path: `/misc` },
+    { label: "Resume", path: `/resume` },
+    { label: "About", path: `/about` }
   ];
 
   return (
     <div id="nav" className="h-[4rem] content-end mb-[4rem]">
       <div className="flex flex-row justify-between">
-        {/* <Link to="/"><img src="images/name.png" alt="Logo" className="w-[7rem]" /></Link> */}
         {links.map((page) => (
           <Link key={page.path} to={page.path}
             className={`${pathname.endsWith(page.path) ? "no-underline nav-active" : "gray no-underline"}`}>

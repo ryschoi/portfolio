@@ -1,0 +1,50 @@
+[
+    {
+        "title": "UE Wonderboom \"My favorite Things\" Research Dossier",
+        "description": "",
+        "year": 2024,
+        "tags": ["Information design", "Graphic design"],
+        "path": "images/work/page 3.jpg",
+        "active": true
+    },
+    {
+        "title": "\"Ubiquitous Icons\" Text Diagram",
+        "description": "",
+        "year": 2024,
+        "tags": ["Information design"],
+        "path": "images/work/textDiagramColor.png",
+        "active": true
+    },
+    {
+        "title": "Basics of Typography Poster",
+        "description": "",
+        "year": 2024,
+        "tags": ["Information design"],
+        "path": "images/work/typography.jpg",
+        "active": true
+    },
+    {
+        "title": "Morningtide Spec Ad Poster",
+        "description": "",
+        "year": 2021,
+        "tags": ["Graphic design"],
+        "path": "images/work/morningtide.png",
+        "active": true
+    },
+    {
+        "title": "Albany High School Main Stairs Design",
+        "description": "",
+        "year": 2022,
+        "tags": ["Graphic design"],
+        "path": "images/work/stairs.png",
+        "active": true
+    },
+    {
+        "title": "Rebecca's Design Influences",
+        "description": "",
+        "year": 2024,
+        "tags": ["Information design"],
+        "path": "images/work/design influences.jpg",
+        "active": true
+    }
+]

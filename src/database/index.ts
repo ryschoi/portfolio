@@ -1,3 +1,3 @@
 import projects from "./projects.json";
-import nav from "./nav.json";
-export { projects, nav };
+import misc from "./misc.json"
+export { projects, misc };

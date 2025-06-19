@@ -1,6 +1,6 @@
 import "./projects.css";
 import { projects } from "../database";
-import ProjectHeader from "./project-header";
+import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
 
 export default function BasicsOfTypography() {
