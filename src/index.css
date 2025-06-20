@@ -10,6 +10,9 @@
   --mid-width: 58vw;
   --mid-width-px: 832px;
   --mob-page-w: 85vw;
+  
+  --med-width-px: 1000px;
+  --med-page-w: 85vw;
 
   /* COLORS */
   /* --color-black: #212121; */
@@ -30,7 +33,7 @@
   --h2-weight: 300;
 
   --h3-size: 1.2rem;
-  --h3-leading: 1.6rem;
+  --h3-leading: 1.7rem;
 
   --h4-size: 1.15rem;
   --h4-leading: 1.6rem;
@@ -98,7 +101,7 @@ h1 {
   font-weight: var(--heading-weight);
 }
 
-h2 {
+h2, .h2 {
   margin: var(--zero);
   font-size: var(--h2-size);
   line-height: var(--h2-leading);
@@ -139,6 +142,10 @@ a:hover {
 
 .gray {
   color: #8b8b8b;
+}
+
+.dark-gray {
+  color: #575757;
 }
 
 .border {
@@ -253,6 +260,12 @@ hr {
   align-self: center;
 }
 
+.med-w {
+  width: var(--med-page-w);
+  max-width: var(--med-width-px);
+  align-self: center;
+}
+
 .misc-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
@@ -260,8 +273,16 @@ hr {
   gap: 2rem;
 }
 
+.med-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  width: 100%;
+  row-gap: 2rem;
+  column-gap: 4rem;
+}
+
 .highlight {
-  padding: 3px 8px;
+  padding: 3px 5px;
   margin: 0 0 0.5rem 0;
   background-color: #e9e8b7;
   font-weight: 500;

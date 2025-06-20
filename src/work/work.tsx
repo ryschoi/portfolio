@@ -25,7 +25,7 @@ export default function Work() {
   return (
     <div className="flex flex-col">
       {/* GREETING */}
-      <div className="flex flex-col mt-[10rem] mb-[14rem] items-center">
+      <div className="flex flex-col mt-[9rem] mb-[13rem] items-center">
         <h1 className="text-red-500 text-center w-[39rem] max-w-[80vw]">
           <span className="gray">Hi, I'm Rebecca. 🌚<br /></span>A designer and developer who is using tech, design, and data to create intentionally and meaningfully.
         </h1>
