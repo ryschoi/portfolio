@@ -20,26 +20,6 @@
         "description": "This family of visualizations crafts a story of the link between certain climate conditions and countries with high rates of snakebite. I was lucky to have had the opportunity to learn about the global snakebite crisis through this project and to get to put my design skills to use to bring about more awareness for both those affected and not. While this poster only covers climate conditions, I can see it becoming a much fuller and more compelling story with the incorporation of data on patterns in wealth, hospital accessibility and funding, and much more."
     },
     {
-        "id": 6,
-        "active": true,
-        "column": "right",
-        "name": "Snakebite Response Poster",
-        "path": "/snakebite-response",
-        "summary": "An illustrated guide to snakebite prevention for Batswana of all ages",
-        "type": "School project",
-        "team": "Solo project",
-        "role": "Designer",
-        "medium": "Print",
-        "tools": "Adobe Illustrator, Figma, Goodnotes",
-        "year": 2024,
-        "tags": ["Information design"],
-        "vertical": false,
-        "frontImage": "images/work/snakebite-response/snakebitePrevention.png",
-        "frontImageBG": "images/work/snakebite-response/snakebite_poster_bg.png",
-        "border": false,
-        "description": "A simple, illustration-based informational poster intended to be able to be used by residents of Botswana. The project entailed researching the ways to help prevent fatal encounters with snakes specially in Botswana / southern Africa, organizing information into different sections and writing concise actionable steps, and finally creating the visual components of the poster. Wallet cards compile poster information into small folding panels that would be able to kept for easy access throughout the day."
-    },
-    {
         "id": 12,
         "active": true,
         "column": "right",
@@ -58,6 +38,26 @@
         "frontImageBG": "images/work/complete_stairs.png",
         "border": false,
         "description": "Semester-long group project for IS4300 Human-Computer Interaction, Spring 2025."
+    },
+    {
+        "id": 6,
+        "active": true,
+        "column": "right",
+        "name": "Snakebite Response Poster",
+        "path": "/snakebite-response",
+        "summary": "An illustrated guide to snakebite prevention for Batswana of all ages",
+        "type": "School project",
+        "team": "Solo project",
+        "role": "Designer",
+        "medium": "Print",
+        "tools": "Adobe Illustrator, Figma, Goodnotes",
+        "year": 2024,
+        "tags": ["Information design"],
+        "vertical": false,
+        "frontImage": "images/work/snakebite-response/snakebitePrevention.png",
+        "frontImageBG": "images/work/snakebite-response/snakebite_poster_bg.png",
+        "border": false,
+        "description": "A simple, illustration-based informational poster intended to be able to be used by residents of Botswana. The project entailed researching the ways to help prevent fatal encounters with snakes specially in Botswana / southern Africa, organizing information into different sections and writing concise actionable steps, and finally creating the visual components of the poster. Wallet cards compile poster information into small folding panels that would be able to kept for easy access throughout the day."
     },
     {
         "id": 5,
