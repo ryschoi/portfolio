@@ -19,6 +19,10 @@
   filter: drop-shadow(0 0 3rem #e0e0e0)
 }
 
+.dark-shadow {
+  filter: drop-shadow(0 0 3rem #303030)
+}
+
 #clear-filters {
   background-color: transparent;
   cursor: pointer;

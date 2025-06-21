@@ -194,9 +194,9 @@ export default function OpenForum() {
                     </div>                    
                     <div className="half-grid-full">
                         <div className="flex flex-col">
-                            <div className="img-bg rounded-[0.5rem] flex place-content-center">
+                            <div className="bg-[#1e1e1e] rounded-[0.5rem] flex place-content-center">
                                 <div className="self-center my-[6vw]">
-                                    <img src="images/work/open-forum/messages.png" alt="" className="w-[32vw] min-w-[330px] subtle-shadow" />
+                                    <img src="images/work/open-forum/messages.png" alt="" className="w-[32vw] min-w-[330px] dark-shadow" />
                                 </div>
                             </div>
                             <p className="caption cap-top">Error prevention and feedback messages</p>
