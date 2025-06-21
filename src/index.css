@@ -136,6 +136,10 @@ a:hover {
   font-weight: 600;
 }
 
+.semi-bold {
+  font-weight: 500;
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -279,6 +283,22 @@ hr {
   width: 100%;
   row-gap: 2rem;
   column-gap: 4rem;
+}
+
+.half-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  width: 100%;
+  row-gap: 2rem;
+  column-gap: 4rem;
+}
+
+.half-grid-full {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  width: 100%;
+  row-gap: 2rem;
+  column-gap: 0.5rem;
 }
 
 .highlight {
