@@ -78,7 +78,7 @@ export default function About() {
             <div className="flex flex-wrap gap-[0.8rem]">
               <a href="https://www.linkedin.com/in/ryschoi/"><Tag text="LinkedIn" hover={true} clicked={false} /></a>
               <a href="https://github.com/ryschoi"><Tag text="GitHub" hover={true} clicked={false} /></a>
-              <a href="../public/images/Rebecca_Choi_Resume.pdf"><Tag text="Resume" hover={true} clicked={false} /></a>
+              <a href="images/Rebecca_Choi_Resume.pdf"><Tag text="Resume" hover={true} clicked={false} /></a>
             </div>
           </div>
         </div>
