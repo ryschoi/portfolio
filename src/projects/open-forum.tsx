@@ -38,8 +38,8 @@ export default function OpenForum() {
                                 <div>
                                     <h3 className="mb-[0.5rem]">Instagram</h3>
                                     <ul>
-                                        <li>General social communication and connection for both personal and community-use</li>
-                                        <li>Clubs and organizations use it for more public-facing content and communication</li>
+                                        <li>General social communication and connection for both personal and community use</li>
+                                        <li>Clubs and organizations use it for more public-facing content and communication rather than internal communication</li>
                                     </ul>
                                 </div>
                                 <div>
@@ -57,7 +57,7 @@ export default function OpenForum() {
 
                 {/* RESEARCH */}
                 <div id="users-interviews,-thematic-analysis,-personas," className="section">
-                    <SectionHeader title="Phase 2: UX research" description="User interviews, thematic analysis, and personas" optional="For the UX research phase, we conducted interviews with four different Northeastern students to hear from our target users' real experiences of navigating social life on campus. After, we created an affinity diagram to extract key themes from our interviews, along with two personas to illustrate what our interview findings might look like with actual people's lives, preferences, and temperaments." />
+                    <SectionHeader title="Phase 2: UX research" description="User interviews, thematic analysis, and personas" optional="For the UX research phase, we conducted interviews with four different Northeastern students to hear from our target users' real experiences of navigating social life on campus. After, we created an affinity diagram to extract key themes from our interviews, along with two personas to illustrate what our interview findings might look like in the context of actual people's lives, preferences, and temperaments." />
                     <div className="rounded-[0.5rem] w-full flex place-content-center py-[4vw]">
                         <img src="images/work/open-forum/g2-affinity-diagram.png" alt="" className="w-[30rem] max-w-[84vw]" />
                     </div>
@@ -117,7 +117,7 @@ export default function OpenForum() {
                     {/* TOP IDEAS */}
                     <div className="gray-full-container">
                         <div className="med-w my-[4rem]">
-                            <h3 className="mb-[1.5rem] dark-gray caption">Existing options: online social platforms</h3>
+                            <h3 className="mb-[1.5rem] dark-gray caption">Top two ideas</h3>
                             <div className="half-grid">
                                 <div className="flex flex-col gap-[1rem]">
                                     <h3>Open Forum</h3>
@@ -184,7 +184,7 @@ export default function OpenForum() {
 
                 {/* HIGH-FI */}
                 <div id="create-high-fidelity-prototype" className="section">
-                    <SectionHeader title="Phase 5: Design" description="High-fidelity prototype" optional="As the final phase of this project, I created a high-fidelity prototype of our app in Figma, incorporating notes from our user testing and all the way to the initial research." />
+                    <SectionHeader title="Phase 5: Design" description="High-fidelity prototype" optional="As the final phase of this project, I created a high-fidelity prototype of our app in Figma, incorporating notes from our user testing and all the way back to the initial research." />
                     <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full mb-[-2.75vw]">
                         <div className="self-center my-[4vw]">
                             <video autoPlay loop playsInline muted className="w-[20vw] min-w-[20rem]">

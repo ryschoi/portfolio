@@ -289,7 +289,7 @@ hr {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
   width: 100%;
-  row-gap: 2rem;
+  row-gap: 4rem;
   column-gap: 4rem;
 }
 

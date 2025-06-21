@@ -15,7 +15,7 @@ export default function Footer() {
             <hr />
             <br />
             <br />
-            <div className="flex flex-wrap justify-between items-end gap-[4rem]">
+            <div className="flex flex-wrap justify-between items-end gap-y-[3.5rem]">
                 {/* Left side */}
                 <div>
                     <Link to="/" onClick={() => handleClick('/')}>Rebecca Choi</Link>
@@ -26,7 +26,7 @@ export default function Footer() {
                 </div>
 
                 {/* Right side */}
-                <div className="flex gap-[7.5rem]">
+                <div className="flex justify-between w-[28rem]">
                     <div>
                         <p className="caption mb-[0.5rem]">Navigation</p>
                         <Link to="/" onClick={() => handleClick('/')}>Work</Link><br />
