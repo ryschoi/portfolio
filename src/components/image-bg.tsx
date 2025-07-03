@@ -5,7 +5,7 @@ export default function ImageBG({ project }: { project: Project }) {
     return (
         <div className="flex flex-col sm:gap-[2rem] gap-[0.5rem]">
             {/* FIRST IMAGE */}
-            <div className="zoom img-bg relative rounded-[0.5rem] flex align-center justify-center overflow-hidden">
+            <div className="zoom img-bg relative rounded flex align-center justify-center overflow-hidden">
 
                 {/* MAP BUTTONS */}
                 <div className="flex gap-[0.5rem] tag-position">

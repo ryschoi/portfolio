@@ -1,6 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* Neutral Regular */
+@font-face {
+  font-family: 'Poly Sans';
+  src: url('fonts/poly/Standard/PolySansTrial-Neutral.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Neutral Italic */
+@font-face {
+  font-family: 'Poly Sans';
+  src: url('fonts/poly/Standard/PolySansItalicTrial-NeutralItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Slim Regular */
+@font-face {
+  font-family: 'Poly Sans';
+  src: url('fonts/poly/Standard/PolySansTrial-Slim.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Slim Italic */
+@font-face {
+  font-family: 'Poly Sans';
+  src: url('fonts/poly/Standard/PolySansItalicTrial-SlimItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Bulky Regular */
+@font-face {
+  font-family: 'Poly Sans';
+  src: url('fonts/poly/Standard/PolySansTrial-Bulky.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Median Regular */
+@font-face {
+  font-family: 'Poly Sans';
+  src: url('fonts/poly/Standard/PolySansTrial-Median.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,8 +58,8 @@
   --mid-width: 58vw;
   --mid-width-px: 832px;
   --mob-page-w: 85vw;
-  
-  --med-width-px: 1000px;
+
+  --med-width-px: 1100px;
   --med-page-w: 85vw;
 
   /* COLORS */
@@ -35,8 +83,9 @@
   --h3-size: 1.2rem;
   --h3-leading: 1.7rem;
 
-  --h4-size: 1.15rem;
-  --h4-leading: 1.6rem;
+  --h4-size: 1.1rem;
+  --h4-leading: 1.5rem;
+  --h4-weight: 500;
 
   --breakpoint-*: initial;
   --breakpoint-tablet: 40rem;
@@ -51,6 +100,9 @@
 
 * {
   font-family: 'Hanken Grotesk';
+  /* font-family: 'Poly Sans';
+  font-weight: 400;
+  font-style: normal; */
   font-feature-settings: 'liga' 1, 'calt' 1;
   margin: 0;
   color: #212121;
@@ -101,7 +153,8 @@ h1 {
   font-weight: var(--heading-weight);
 }
 
-h2, .h2 {
+h2,
+.h2 {
   margin: var(--zero);
   font-size: var(--h2-size);
   line-height: var(--h2-leading);
@@ -121,7 +174,7 @@ h4,
   margin: var(--zero);
   font-size: var(--h4-size);
   line-height: var(--h4-leading);
-  font-weight: var(--heading-weight);
+  font-weight: var(--h4-weight);
 }
 
 a {
@@ -144,12 +197,28 @@ a:hover {
   text-decoration: underline;
 }
 
+.rounded {
+  border-radius: 0.5rem;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.light-gray {
+  color: #c3c3c3;
+}
+
 .gray {
   color: #8b8b8b;
 }
 
 .dark-gray {
   color: #575757;
+}
+
+.black {
+  color: #212121;
 }
 
 .border {
@@ -186,7 +255,8 @@ button {
   font-size: 0.85rem;
 }
 
-.tag, .tag-no-hover {
+.tag,
+.tag-no-hover {
   background-color: transparent;
   color: #1e1e1e;
   border: 1.5px solid #cecece;
@@ -211,6 +281,13 @@ button {
   background-color: #1e1e1e;
   color: #ffffff;
   border: 1.5px solid #1e1e1e;
+  border-radius: 1rem;
+}
+
+.tag-white {
+  background-color: #f1f1f1;
+  color: #1e1e1e;
+  border: 1.5px solid #cecece;
   border-radius: 1rem;
 }
 
@@ -270,11 +347,17 @@ hr {
   align-self: center;
 }
 
+.w-full-top {
+  width: var(--med-page-w);
+  max-width: var(--med-width-px);
+  align-self: center;
+}
+
 .misc-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
   width: 100%;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .med-grid {
@@ -283,6 +366,10 @@ hr {
   width: 100%;
   row-gap: 2rem;
   column-gap: 4rem;
+}
+
+.scroll-cont {
+  overflow: scroll;
 }
 
 .half-grid {
@@ -307,4 +394,19 @@ hr {
   background-color: #e9e8b7;
   font-weight: 500;
   color: #282828;
+}
+
+.frosted {
+  backdrop-filter: blur(1.25rem);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3sec ease;
+}
+
+.frosted-2 {
+  backdrop-filter: blur(1.25rem);
+  background-color: rgba(255, 255, 255, 0.5);
+  /* box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25); */
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
 }

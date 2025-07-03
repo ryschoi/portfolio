@@ -7,6 +7,7 @@ import SectionHeader from "components/section-header";
 import VerticalImageSpan from "components/vertical-image-span";
 import Tag from "components/tag";
 import TwoImageCaption from "components/two-image-caption";
+import TextCard from "components/text-card";
 
 export default function OpenForum() {
     const thisProject = projects.find(p => p.path === "/open-forum");
@@ -58,7 +59,7 @@ export default function OpenForum() {
                 {/* RESEARCH */}
                 <div id="users-interviews,-thematic-analysis,-personas," className="section">
                     <SectionHeader title="Phase 2: UX research" description="User interviews, thematic analysis, and personas" optional="For the UX research phase, we conducted interviews with four different Northeastern students to hear from our target users' real experiences of navigating social life on campus. After, we created an affinity diagram to extract key themes from our interviews, along with two personas to illustrate what our interview findings might look like in the context of actual people's lives, preferences, and temperaments." />
-                    <div className="rounded-[0.5rem] w-full flex place-content-center py-[4vw]">
+                    <div className="rounded w-full flex place-content-center py-[4vw]">
                         <img src="images/work/open-forum/g2-affinity-diagram.png" alt="" className="w-[30rem] max-w-[84vw]" />
                     </div>
                     {/* AFFINITY DIAGRAM NOTES */}
@@ -90,6 +91,21 @@ export default function OpenForum() {
                             </div>
                         </div>
                     </div>
+
+                    {/* <div className="med-w">
+                        <h3 className="mb-[1rem] caption">What we found</h3>
+                        <div className="flex gap-[1rem] scroll-cont">
+                            <TextCard
+                                main="Structured and interested-based social spaces are reported more effective methods of socializing"
+                                description="Almost all of the students we interviewed mentioned meeting friends either from clubs (organized and interest-based) or other public activities like intramural sports (interested-based)." />
+                            <TextCard
+                                main="Technology can help maintain existing connections, but struggles to create them"
+                                description="Common online social activites like FaceTime calls or sending reels to friends on Instagram were said to be frequent forms of interacting with friends online, but are more methods for maintaining friendships rather than forming new ones." />
+                            <TextCard
+                                main="Time is a major constraint when it comes to socializing"
+                                description="Students are genearlly pretty busy, with schedules that do not necessarily align with other people. However, one student mentioned that spending lots of time alone to work did not necessarily mean they didn't feel like they didn't belong." />
+                        </div>
+                    </div> */}
                     {/* NEXT STEPS */}
                     <div className="mob-mid-w">
                         <p>From this, we decided we needed an app that would...</p>
@@ -185,16 +201,16 @@ export default function OpenForum() {
                 {/* HIGH-FI */}
                 <div id="create-high-fidelity-prototype" className="section">
                     <SectionHeader title="Phase 5: Design" description="High-fidelity prototype" optional="As the final phase of this project, I created a high-fidelity prototype of our app in Figma, incorporating notes from our user testing and all the way back to the initial research." />
-                    <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full mb-[-2.75vw]">
+                    <div className="img-bg rounded flex align-center justify-center w-full mb-[-2.75vw]">
                         <div className="self-center my-[4vw]">
                             <video autoPlay loop playsInline muted className="w-[20vw] min-w-[20rem]">
                                 <source src="images/work/open-forum/open-forum-video.mov" type="video/mp4" />
                             </video>
                         </div>
-                    </div>                    
+                    </div>
                     <div className="half-grid-full">
                         <div className="flex flex-col">
-                            <div className="bg-[#1e1e1e] rounded-[0.5rem] flex place-content-center">
+                            <div className="bg-[#1e1e1e] rounded flex place-content-center">
                                 <div className="self-center my-[6vw]">
                                     <img src="images/work/open-forum/messages.png" alt="" className="w-[32vw] min-w-[330px] dark-shadow" />
                                 </div>
@@ -202,7 +218,7 @@ export default function OpenForum() {
                             <p className="caption cap-top">Error prevention and feedback messages</p>
                         </div>
                         <div className="flex flex-col">
-                            <div className="bg-[#1e1e1e] rounded-[0.5rem] flex place-content-center">
+                            <div className="bg-[#1e1e1e] rounded flex place-content-center">
                                 <div className="self-center my-[4.3vw]">
                                     <img src="images/work/open-forum/tags.png" alt="" className="w-[14vw] min-w-[200px]" />
                                 </div>

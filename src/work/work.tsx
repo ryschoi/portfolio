@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { projects } from "../database";
-import { Link } from "react-router";
 import "../index.css";
 import "../navigation/nav.css";
 import "./work.css";

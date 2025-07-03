@@ -21,7 +21,7 @@ export default function About() {
     return (
       <div className="relative group">
         <button onClick={handleCopy}
-          className="tag py-[6px] px-[16px] rounded-[0.5rem] bg-gray-100 hover:bg-gray-200 transition">{text}
+          className="tag py-[6px] px-[16px] rounded bg-gray-100 hover:bg-gray-200 transition">{text}
         </button>
         <div className="absolute bottom-full mb-[0.5rem] left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-[0.88rem] rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 gray">
           {tooltip}
@@ -35,33 +35,51 @@ export default function About() {
       <div className="flex flex-col gap-[2.5rem] w-(--mob-page-w) max-w-[41rem]">
         {/* IMAGE */}
         <div className="overflow-hidden w-full">
-          <img id="headshot" className="w-full h-auto object-cover rounded-[0.5rem]" src="images/wide.png" />
+          <img id="headshot" className="w-full h-auto object-cover rounded" src="images/wide.png" />
         </div>
 
         {/* GREETING */}
         <div className="flex flex-col gap-[0.5rem]">
           <h2>Hi, I'm Rebecca.</h2>
           <h3 className="gray">I'm a third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h3 underline gray">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className=" h3 underline gray">Sandbox NU</a>.</h3>
-           {/* Incoming marketing analytics co-op at <a className="h3 gray underline" href="https://www.bostonbeer.com/">Boston Beer Company</a>. */}
+          {/* Incoming marketing analytics co-op at <a className="h3 gray underline" href="https://www.bostonbeer.com/">Boston Beer Company</a>. */}
         </div>
 
         {/* <h3 className="gray">I have an interdisciplinary skillset across tech, design, and data, and am passionate about creating meaningful and well-crafted products and experiences.</h3> */}
 
         {/* WORK */}
         <div>
-          <p className="caption">Work and design philosophy</p>
-          <p>
-            As someone who is both visionary and rational, I navigate complex problems with discernment and find ways to turn solutions into reality.
-            <br /><br />
-            It's important to me that the projects I work on are meaningful to their users and in the way that they are created. As a designer, this means that I am intentional with all my choices, making sure that whatever I design is easy on the eyes, easy to use, and delivers what the user needs out of the product. As a developer, I focus on scalability, efficiency, and writing clean and maintainable code.
-          </p>
+          <p className="caption mb-[0.5rem]">Work background & philosophy</p>
+          <p>I’ve always loved to create. I love the combination of balancing strategy and ________ while iterating with trial error.</p>
+
+          <div className="flex flex-col gap-[1rem]">
+            {/* CODING */}
+            <div>
+              <h4 className="gray">Coding as a tool</h4>
+              <p>When I took my first coding class in middle school, a summer web dev bootcamp, I fell in love with the freedom to code and create whatever I wanted, but soon realized that with that freedom came many decisions surrounding usability, _____________, and intent. This is when I discovered the importance of design.</p>
+            </div>
+
+            {/* DESIGN */}
+            <div>
+              <h4 className="gray">Design as a framework</h4>
+              <p>Even if I knew how to code the greatest website ever, I needed to know what would make a website great. To me, design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that _________ to business, behavioral, and aesthetic constraints. With many, many design projects, ranging from graphic design posters to data visualization dashboards to websites, I’ve mastered the ability to successfully iterate and design without compromising any constraints. Design is not just a creative, artistic expression, but really a means of making something work.</p>
+            </div>
+
+            {/* DATA */}
+            <div className="flex flex-col gap-[0.25rem]">
+              <h4 className="gray">Data as a ________</h4>
+              <p>Most recently, I’ve started to explore the big world of data. Today, there is no shortage of data: masses of transactions, interactions, and __________ are recorded. I’m excited by how much information we have access to, and how we can make informed and intentional decisions from it. There’s no need to guess and no excuse for ________ when data analysis can help ____________ and refine the effectiveness of any processes.</p>
+            </div>
+          </div>
         </div>
+
+
 
         {/* OUTSIDE OF WORK */}
         <div className="w-full">
-          <p className="caption">Outside of work</p>
+          <p className="caption mb-[0.5rem]">Outside of work</p>
           <p>
-            I love photography, bass guitar, and kombucha.</p>
+            I love walking around taking pictures of nature and the city, teaching my dog new tricks, and baking whatever my sisters request. I also grew up in a very musical family, and like to challenge myself to learn whatever cool bass lines I come across.</p>
         </div>
 
         {/* TAGS */}
@@ -82,6 +100,14 @@ export default function About() {
             </div>
           </div>
         </div>
+
+
+
+        {/* <p>
+          As someone who is both visionary and rational, I navigate complex problems with discernment and find ways to turn solutions into reality.
+          <br /><br />
+          It's important to me that the projects I work on are meaningful to their users and in the way that they are created. As a designer, this means that I am intentional with all my choices, making sure that whatever I design is easy on the eyes, easy to use, and delivers what the user needs out of the product. As a developer, I focus on scalability, efficiency, and writing clean and maintainable code.
+        </p> */}
 
         {/* <hr /> */}
         {/* SKILLS */}
@@ -122,6 +148,6 @@ export default function About() {
           </div>
         </div> */}
       </div>
-    </div >
+    </div>
   );
 }

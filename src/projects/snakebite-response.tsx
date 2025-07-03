@@ -18,7 +18,7 @@ export default function snakebiteResponse() {
 
                 <div className="section" id="research">
                     <SectionHeader title="Part 1" description="Research" optional="To start off, I conducted research on the current snakebite crisis, focusing on its effects in Africa, and how to prevent fatal encounters with snakes, also focused on Africa and Botswana." />
-                    <img src="images/work/snakebite-response/s-res-research.png" alt="" className="mob-mid-w self-center subtle-shadow rounded-[0.5rem]" />
+                    <img src="images/work/snakebite-response/s-res-research.png" alt="" className="mob-mid-w self-center subtle-shadow rounded" />
                     <p className="mob-mid-w self-center">After collecting all the tips for snakebite prevention, it was time to identify a primary organizing principle from Wurman's L.A.T.C.H. (location, alphabet, time, category, hierarchy). My information sorted best categorically, and into the following three categories: indoor/home, outdoor/activity, and apparel.</p>
                 </div>
 
@@ -28,7 +28,7 @@ export default function snakebiteResponse() {
                         <VerticalImageSpan path="images/work/snakebite-response/snakebite_first.png" />
                         <p className="caption cap-top">First version</p>
                     </div>
-                    <div className="rounded-[0.5rem] img-bg w-full flex place-content-center py-[2vw] w-full">
+                    <div className="rounded img-bg w-full flex place-content-center py-[2vw] w-full">
                         <img src="images/work/snakebite-response/s-res-ver1-table.png" alt="" className="w-[65rem] max-w-[90vw]" />
                     </div>
                     <div className="flex flex-col">
@@ -39,7 +39,7 @@ export default function snakebiteResponse() {
                 </div>
                 <div className="section" id="wallet-cards">
                     <SectionHeader title="Part 3" description="Wallet cards" optional="After the poster, I created a set of wallet cards with the same content on the poster for people to have a way to access the information more conveniently." />
-                    <div className="rounded-[0.5rem] img-bg w-full flex place-content-center">
+                    <div className="rounded img-bg w-full flex place-content-center">
                         <div className="grid grid-flow-col grid-rows-3 gap-[2rem] my-[4vw]">
                             <img src="images/work/snakebite-response/snakebiteWallet1.png" alt="" className="w-[25rem] max-w-[38vw] subtle-shadow" />
                             <img src="images/work/snakebite-response/snakebiteWallet3.png" alt="" className="w-[25rem] max-w-[38vw] subtle-shadow" />
@@ -51,7 +51,7 @@ export default function snakebiteResponse() {
                     </div>
                 </div>
                 <div className="flex flex-col w-full">
-                    <div className="rounded-[0.5rem] img-bg w-full flex place-content-center py-[4vw]">
+                    <div className="rounded img-bg w-full flex place-content-center py-[4vw]">
                         <img src="images/work/snakebite-response/snakebiteWalletVersions.png" alt="" className="w-[50rem] max-w-[84vw] subtle-shadow" />
                     </div>
                     <p className="caption cap-top">Previous versions in print form</p>

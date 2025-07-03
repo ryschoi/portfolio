@@ -30,7 +30,7 @@ export default function SnakebiteData() {
 
                     {/* FIRST DRAFT */}
                     <div className="flex flex-col w-full">
-                        <div className="img-bg rounded-[0.5rem] flex place-content-center w-full">
+                        <div className="img-bg rounded flex place-content-center w-full">
                             <div className="self-center my-[3vw] subtle-shadow flex flex-wrap gap-[4vw] place-content-center">
                                 <img src="/images/work/snakebite-data/s-data-crit1.png" alt="" className="w-[36vw] min-w-[332px]" />
                                 <img src="/images/work/snakebite-data/snakebite-data-feedback.png" alt="" className="w-[36vw] min-w-[332px]" />
@@ -59,7 +59,7 @@ export default function SnakebiteData() {
                     </div>
                     <div className="flex flex-wrap gap-[0.5rem]">
                         <div className="flex flex-col w-full max-w-[655px]">
-                            <div className="s-data-bg rounded-[0.5rem] flex place-content-center w-full max-w-[655px]">
+                            <div className="s-data-bg rounded flex place-content-center w-full max-w-[655px]">
                                 <div className="self-center my-[1.5vw]">
                                     <img src="/images/work/snakebite-data/isotype2.png" alt="" className="w-[44vw] min-w-[332px]" />
                                 </div>
@@ -67,7 +67,7 @@ export default function SnakebiteData() {
                             <p className="caption cap-top">initial</p>
                         </div>
                         <div className="flex flex-col w-full max-w-[655px]">
-                            <div className="s-data-bg rounded-[0.5rem] flex place-content-center w-full max-w-[655px]">
+                            <div className="s-data-bg rounded flex place-content-center w-full max-w-[655px]">
                                 <div className="self-center my-[1.5vw]">
                                     <img src="/images/work/snakebite-data/isotype1.png" alt="" className="w-[44vw] min-w-[332px]" />
                                 </div>
@@ -86,7 +86,7 @@ export default function SnakebiteData() {
 
                     <div className="flex flex-wrap gap-[0.5rem]">
                         <div className="flex flex-col w-full max-w-[655px]">
-                            <div className="s-data-bg rounded-[0.5rem] flex place-content-center w-full max-w-[655px]">
+                            <div className="s-data-bg rounded flex place-content-center w-full max-w-[655px]">
                                 <div className="self-center my-[1.5vw]">
                                     <img src="/images/work/snakebite-data/degree1.png" alt="" className="w-[32vw] min-w-[332px]" />
                                 </div>
@@ -94,7 +94,7 @@ export default function SnakebiteData() {
                             <p className="caption cap-top">initial</p>
                         </div>
                         <div className="flex flex-col w-full max-w-[655px]">
-                            <div className="s-data-bg rounded-[0.5rem] flex place-content-center w-full max-w-[655px]">
+                            <div className="s-data-bg rounded flex place-content-center w-full max-w-[655px]">
                                 <div className="self-center my-[1.5vw]">
                                     <img src="/images/work/snakebite-data/degree2.png" alt="" className="w-[32vw] min-w-[332px]" />
                                 </div>

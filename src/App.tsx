@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Work from "./work/work"
 import Misc from "./misc/misc"
+import Philosophy from "philosophy/philosophy";
 import Resume from "./resume/resume";
 import About from "./about/about";
 import NavBar from "./navigation/nav"
@@ -34,6 +35,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Work />} />
           <Route path="/misc" element={<Misc />} />
+          <Route path="/philosophy" element={<Philosophy />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<About />} />
 
