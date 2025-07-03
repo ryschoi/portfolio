@@ -50,25 +50,25 @@ export default function About() {
         {/* WORK */}
         <div>
           <p className="caption mb-[0.5rem]">Work background & philosophy</p>
-          <p>I’ve always loved to create. I love the combination of balancing strategy and ________ while iterating with trial error.</p>
-
+          <p>I’ve always loved to create. I love working through problems with strategy and iteration by trial error.</p>
+          <br />
           <div className="flex flex-col gap-[1rem]">
             {/* CODING */}
-            <div>
+            <div className="flex flex-col gap-[0.25rem]">
               <h4 className="gray">Coding as a tool</h4>
-              <p>When I took my first coding class in middle school, a summer web dev bootcamp, I fell in love with the freedom to code and create whatever I wanted, but soon realized that with that freedom came many decisions surrounding usability, _____________, and intent. This is when I discovered the importance of design.</p>
+              <p>When I took my first coding class in middle school, a summer web dev bootcamp, I fell in love with the freedom to code and create whatever I wanted, but soon realized that with that freedom came many decisions surrounding usability and intent. This is when I discovered the importance of design.</p>
             </div>
 
             {/* DESIGN */}
-            <div>
+            <div className="flex flex-col gap-[0.25rem]">
               <h4 className="gray">Design as a framework</h4>
-              <p>Even if I knew how to code the greatest website ever, I needed to know what would make a website great. To me, design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that _________ to business, behavioral, and aesthetic constraints. With many, many design projects, ranging from graphic design posters to data visualization dashboards to websites, I’ve mastered the ability to successfully iterate and design without compromising any constraints. Design is not just a creative, artistic expression, but really a means of making something work.</p>
+              <p>Even if I knew how to code the greatest website ever, I needed to know what would make a website great. To me, design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that fit to business, behavioral, and aesthetic constraints. With many, many design projects, ranging from graphic design posters to data visualization dashboards to websites, I’ve mastered the ability to successfully iterate and design without compromising any constraints. Design is not just a creative, artistic expression, but really a means of making something work.</p>
             </div>
 
             {/* DATA */}
             <div className="flex flex-col gap-[0.25rem]">
-              <h4 className="gray">Data as a ________</h4>
-              <p>Most recently, I’ve started to explore the big world of data. Today, there is no shortage of data: masses of transactions, interactions, and __________ are recorded. I’m excited by how much information we have access to, and how we can make informed and intentional decisions from it. There’s no need to guess and no excuse for ________ when data analysis can help ____________ and refine the effectiveness of any processes.</p>
+              <h4 className="gray">Data as a compass</h4>
+              <p>Most recently, I’ve started to explore the big world of data. Today, there is no shortage of data. I’m excited by how much information we have access to, and how we can make informed and intentional decisions from it.</p>
             </div>
           </div>
         </div>
