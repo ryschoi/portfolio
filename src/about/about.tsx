@@ -41,7 +41,7 @@ export default function About() {
         {/* GREETING */}
         <div className="flex flex-col gap-[0.5rem]">
           <h2>Hi, I'm Rebecca.</h2>
-          <h3 className="gray">I'm a third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h3 underline gray">Northeastern University</a> and a UI/UX designer at <a href="https://www.sandboxnu.com/" className=" h3 underline gray">Sandbox NU</a>.</h3>
+          <h3 className="gray">I'm a third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h3 underline gray">Northeastern University</a>, the Marketing Analytics Co-op at Boston Beer Company, and a UI/UX design lead at <a href="https://www.sandboxnu.com/" className=" h3 underline gray">Sandbox NU</a>.</h3>
           {/* Incoming marketing analytics co-op at <a className="h3 gray underline" href="https://www.bostonbeer.com/">Boston Beer Company</a>. */}
         </div>
 
@@ -50,26 +50,25 @@ export default function About() {
         {/* WORK */}
         <div>
           <p className="caption mb-[0.5rem]">Work background & philosophy</p>
-          <p>I’ve always loved to create. I love working through problems with strategy and iteration by trial error.</p>
+          <p>I’ve always loved to create. I love working through problems with strategy and iterations.</p>
           <br />
-          <div className="flex flex-col gap-[1rem]">
-            {/* CODING */}
-            <div className="flex flex-col gap-[0.25rem]">
-              <h4 className="gray">Coding as a tool</h4>
-              <p>When I took my first coding class in middle school, a summer web dev bootcamp, I fell in love with the freedom to code and create whatever I wanted, but soon realized that with that freedom came many decisions surrounding usability and intent. This is when I discovered the importance of design.</p>
-            </div>
 
-            {/* DESIGN */}
-            <div className="flex flex-col gap-[0.25rem]">
-              <h4 className="gray">Design as a framework</h4>
-              <p>Even if I knew how to code the greatest website ever, I needed to know what would make a website great. To me, design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that fit to business, behavioral, and aesthetic constraints. With many, many design projects, ranging from graphic design posters to data visualization dashboards to websites, I’ve mastered the ability to successfully iterate and design without compromising any constraints. Design is not just a creative, artistic expression, but really a means of making something work.</p>
-            </div>
-
-            {/* DATA */}
-            <div className="flex flex-col gap-[0.25rem]">
-              <h4 className="gray">Data as a compass</h4>
-              <p>Most recently, I’ve started to explore the big world of data. Today, there is no shortage of data. I’m excited by how much information we have access to, and how we can make informed and intentional decisions from it.</p>
-            </div>
+          {/* CODING */}
+          <div className="flex flex-col gap-[0.25rem]">
+            <p className="caption gray italic">Coding as a tool</p>
+            <p>When I took my first coding class in middle school, a summer web dev bootcamp, I fell in love with the freedom to code and create whatever I wanted, but soon realized that with that freedom came many decisions surrounding usability and intent. This is when I discovered the importance of design.</p>
+          </div>
+          <br />
+          {/* DESIGN */}
+          <div className="flex flex-col gap-[0.25rem]">
+            <p className="caption gray italic">Design as a framework</p>
+            <p>If I wanted to create the best website in existence, I would need to know what would make such a website so great. To me, design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that fit business, user behavior, and aesthetic constraints. With the practice of many design projects, I’ve mastered the ability to successfully iterate and design without compromising any constraints. To me, design is not exactly a creative, artistic expression, but really a means of making something work.</p>
+          </div>
+          <br />
+          {/* DATA */}
+          <div className="flex flex-col gap-[0.25rem]">
+            <p className="caption gray italic">Data as a compass</p>
+            <p>Today, there is no shortage of data. I’m excited by how much information we have access to, and how we can make informed and intentional decisions from it.</p>
           </div>
         </div>
 
@@ -79,7 +78,7 @@ export default function About() {
         <div className="w-full">
           <p className="caption mb-[0.5rem]">Outside of work</p>
           <p>
-            I love walking around taking pictures of nature and the city, teaching my dog new tricks, and baking whatever my sisters request. I also grew up in a very musical family, and like to challenge myself to learn whatever cool bass lines I come across.</p>
+            I love photography, walking around the city, teaching my dog new tricks, and baking whatever my sisters request. I also come from a very musical family, and have been teaching myself the bass guitar since middle school.</p>
         </div>
 
         {/* TAGS */}
