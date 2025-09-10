@@ -114,25 +114,26 @@ export default function DissonantHarmony() {
                         title="Digital marketing material"
                         description="Instagram posts and gif"
                         optional="I snuck in another instance of dissonant harmony with the nine-square grid creating one complete picture. The center slide features a gif that shows the individual pieces of the sculpture getting put back together. This gif ties together the entire set of marketing materials as it visually plays out the transformation of individual, dissonant pieces coming together and forming a harmonious sculpture." />
-
-                    <div className="flex flex-wrap gap-[0.5rem]">
-                        <div className="flex flex-col w-full max-w-[655px]">
-                            <div className="img-bg rounded flex align-center justify-center w-full max-w-[655px]">
-                                <div className="self-center my-[4vw]">
-                                    <img src="/images/work/calder/calder_instagram.jpeg" alt="" className="w-[24vw] min-w-[332px] subtle-shadow" />
+                    
+                    
+                    <div className="work-img-group-col-bigger">
+                        <div>
+                            <div className="img-bg work-add-img-cont">
+                                <div className="self-center my-[3rem]">
+                                    <img src="/images/work/calder/calder_instagram.jpeg" alt="" className="w-[30vw] min-w-[18rem] subtle-shadow" />
                                 </div>
                             </div>
                             <p className="caption cap-top">Instagram posts <a className="caption underline" href="https://www.instagram.com/snfivowlactz/">(pseudo Instagram account)</a></p>
                         </div>
-                        <div className="flex flex-col w-full max-w-[655px]">
-                            <div className="img-bg rounded flex align-center justify-center w-full max-w-[655px]">
-                                <div className="self-center my-[4vw]">
-                                    <video autoPlay loop playsInline muted className="w-[24vw] min-w-[332px] subtle-shadow">
+                        <div>
+                            <div className="img-bg work-add-img-cont">
+                                <div className="self-center my-[3rem]">
+                                    <video autoPlay loop playsInline muted className="w-[30vw] min-w-[18rem] subtle-shadow">
                                         <source src="images/work/calder/calder.mov" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
-                            <p className="caption cap-top">sculpture reconstruction gif</p>
+                            <p className="caption cap-top">Sculpture reconstruction gif</p>
                         </div>
                     </div>
                 </div>
