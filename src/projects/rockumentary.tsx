@@ -21,7 +21,7 @@ export default function Rockumentary() {
                     <SectionHeader
                         title="Part 1"
                         description="Sketching and initial ideas"
-                        optional="I went through many rounds of initial sketches for this poster–different stances, layouts, colors. For a long time I wanted to do it mainly by hand so that I could have more flexibility when conveying the bold feel of rock and nostalgic feel of a life documentary or a movie. In the end I settled for a simple and bold Helvetica but with a nice grain to soften all the solid colors." />
+                        optional="To start, I went through many rounds of initial sketches for this poster: different stances, layouts, and colors. For a long time, I wanted to do it mainly by hand so that I could have more flexibility when conveying the bold feel of rock and nostalgic feel of a life documentary or a movie. In the end, though, I settled for a simple and bold Helvetica but with a nice grain to soften all the solid colors." />
                     <div className="flex flex-col gap-[1rem]">
                         <TwoImageCaptionRock path1="/images/work/rockumentary/rockumentary sketches.png" cap1="Hand-traced on my ipad" path2="/images/work/rockumentary/rock_writing.png" cap2="Potential title text" />
                         <div className="flex flex-col w-full">
