@@ -56,13 +56,13 @@ export default function About() {
           {/* CODING */}
           <div className="flex flex-col gap-[0.25rem]">
             <p className="caption gray italic">Coding as a tool</p>
-            <p>When I took my first coding class in middle school, a summer web dev bootcamp, I fell in love with the freedom to code and create whatever I wanted, but soon realized that with that freedom came many decisions surrounding usability and intent. This is when I discovered the importance of design.</p>
+            <p>When I took my first coding class in middle school, a summer web development bootcamp, I fell in love with the freedom to code and create whatever I wanted, but soon realized that with that freedom came many decisions surrounding usability and intent. This is when I discovered the importance of design.</p>
           </div>
           <br />
           {/* DESIGN */}
           <div className="flex flex-col gap-[0.25rem]">
             <p className="caption gray italic">Design as a framework</p>
-            <p>If I wanted to create the best website in existence, I would need to know what would make such a website so great. To me, design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that fit business, user behavior, and aesthetic constraints. With the practice of many design projects, I’ve mastered the ability to successfully iterate and design without compromising any constraints. To me, design is not exactly a creative, artistic expression, but really a means of making something work.</p>
+            <p>If I wanted to create the greatest website to exist, I would need to know what would make such a website so great. Design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that fit business, user behavior, and aesthetic constraints. With the practice of many design projects, I’ve mastered the ability to successfully iterate and design without compromising any constraints. To me, design is not exactly a creative, artistic expression, but really a means of making something work.</p>
           </div>
           <br />
           {/* DATA */}

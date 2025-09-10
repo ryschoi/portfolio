@@ -23,6 +23,7 @@ import SchoolStairs from "./projects/school-stairs";
 import Radien from "./projects/radien";
 import Cooper from "./projects/cooper"
 import OpenForum from "./projects/open-forum";
+import AliHacks from "./projects/ali-hacks";
 
 
 export default function App() {
@@ -53,6 +54,7 @@ export default function App() {
           <Route path="/radien" element={<Radien />} />
           <Route path="/cooper" element={<Cooper />} />
           <Route path="/open-forum" element={<OpenForum />} />
+          <Route path="/ali-hacks" element={<AliHacks />} />
         </Routes>
 
         <Footer />

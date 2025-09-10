@@ -10,9 +10,9 @@ export default function ImageBG({ project }: { project: Project }) {
                 {/* MAP BUTTONS */}
                 <div className="flex gap-[0.5rem] tag-position">
                     {project.tags
-                    .map((tag) => (
-                        <Tag text={tag} hover={false} clicked={true} />
-                    ))}
+                        .map((tag) => (
+                            <Tag text={tag} hover={false} clicked={true} />
+                        ))}
                 </div>
                 <div className="my-[3vw]">
                     {project.id === 12 ?

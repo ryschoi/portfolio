@@ -5,6 +5,7 @@ import "../navigation/nav.css";
 import "./work.css";
 import WorkCard from "./work-card";
 import Tag from "../components/tag";
+import { Link } from "react-router";
 
 export default function Work() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);

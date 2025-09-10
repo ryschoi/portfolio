@@ -238,5 +238,25 @@
         "frontImageBG": "images/work/complete_stairs.png",
         "border": false,
         "description": "Description coming soon."
+    },
+    {
+        "id": 13,
+        "active": true,
+        "column": "right",
+        "name": "ALI Hacks",
+        "path": "/ali-hacks",
+        "summary": "Professional yet original internal portal UI and sponsorship package for a Boston-based, student-led hackathon",
+        "type": "Contract",
+        "team": "Solo project",
+        "role": "UI/UX designer",
+        "medium": "Web",
+        "tools": "Figma",
+        "year": 2025,
+        "tags": ["UI/UX design"],
+        "vertical": false,
+        "frontImage": "images/work/alihacks/aliFront.png",
+        "frontImageBG": "images/work/alihacks/aliFront.png",
+        "border": false,
+        "description": ""
     }
 ]
