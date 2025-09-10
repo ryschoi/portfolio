@@ -89,7 +89,7 @@ export default function SnakebiteData() {
                         <div>
                             <div className="s-data-bg work-add-img-cont">
                                 <div className="self-center mx-[2rem]">
-                                    <img src="/images/work/snakebite-data/degree1.png" alt="" className="w-full min-w-[18rem]" />
+                                    <img src="/images/work/snakebite-data/degree1.png" alt="" className="self-center w-6/7 min-w-[18rem]" />
                                 </div>
                             </div>
                             <p className="caption cap-top">initial</p>
@@ -97,7 +97,7 @@ export default function SnakebiteData() {
                         <div>
                             <div className="s-data-bg work-add-img-cont">
                                 <div className="self-center mx-[2rem]">
-                                    <img src="/images/work/snakebite-data/degree2.png" alt="" className="w-full min-w-[18rem]" />
+                                    <img src="/images/work/snakebite-data/degree2.png" alt="" className="self-center w-6/7 min-w-[18rem]" />
                                 </div>
                             </div>
                             <p className="caption cap-top">final</p>
