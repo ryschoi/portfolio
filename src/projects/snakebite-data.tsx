@@ -81,7 +81,7 @@ export default function SnakebiteData() {
                 <div className="section align-center">
                     <div className="flex flex-col gap-[1rem]">
                         <h2 className="self-center mob-mid-w">Degree of separation</h2>
-                        <p className="mob-mid-w self-center">In this chart, I wanted to highlight the large potential disparity in reported data and reality with the differently sized boxes. The challenge here was figuring out how to label the boxes in a way that would get the message across to viewers with the least amount of work.<br /><br />I followed Edward Tufte's "degree of separation" scale, which determines how accessible labels are to their corresponding data points, and connected the labels directly to the boxes rather than separating them from the boxes entirely. This way, there is less back-and-forth when reading the chart and the main message can be understood at just a glance since all the central points are consolidated in one area.</p>
+                        <p className="mob-mid-w self-center">In this chart, I wanted to highlight the large potential disparity in reported data and reality with the differently sized boxes. The challenge here was figuring out how to label the boxes in a way that would get the message across to viewers with the least amount of brain work.<br /><br />I followed Edward Tufte's "degree of separation" scale, which is a method of determining how accessible labels are to their corresponding data points, and connected the labels directly to the boxes rather than separating them from the boxes entirely. This way, there is less back-and-forth between the boxes and the labels, and the main message of the visualization can be understood at just a glance since all the central points are consolidated in one area.</p>
                     </div>
 
                     <div className="flex flex-wrap gap-[0.5rem]">
@@ -110,7 +110,7 @@ export default function SnakebiteData() {
                     <VerticalImageSpan path="images/work/snakebite-data/snakebiteData.png" />
                 </div>
 
-                <p className="mob-mid-w">Through this project, I learned that a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but that you need to turn the data into a language users could read, instead of delivering it in the raw, large, abstract numbers.. That meant setting solid context for each visualization and, in my single-tone design, being very intentional with each time I used the color green so that the visualizations could be interpretted with even just a glance.</p>
+                <p className="mob-mid-w">Through this project, I learned that a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but that the data needs to be represented in a language users can read, instead of delivering it in the raw, large, abstract numbers. For this project, that meant setting solid context for each visualization and, in my single-tone design, being very intentional with each time I used the color green so that the visualizations could be interpretted with even just a glance. The color green running throughout the entire poster also keeps the same meaning of referring to the countries with higher-than-average rates of snakebite.</p>
             </div>
         </div>
     );
