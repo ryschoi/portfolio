@@ -20,6 +20,26 @@
         "description": "This family of visualizations crafts a story of the link between certain climate conditions and countries with high rates of snakebite. I was lucky to have had the opportunity to learn about the global snakebite crisis through this project and to get to put my design skills to use to bring about more awareness for both those affected and not. While this poster only covers climate conditions, I can see it becoming a much fuller and more compelling story with the incorporation of data on patterns in wealth, hospital accessibility and funding, and much more."
     },
     {
+        "id": 12,
+        "active": true,
+        "column": "right",
+        "name": "Open Forum",
+        "path": "/open-forum",
+        "summary": "An app for organizing meaningful and engaging discussions, increasing students' sense of belongingness on campus",
+        "type": "School project",
+        "team": "Four students",
+        "role": "Researcher & designer",
+        "medium": "Mobile",
+        "tools": "Figma",
+        "year": 2025,
+        "tags": ["UX research", "UI/UX design"],
+        "vertical": false,
+        "frontImage": "images/work/open-forum/open-forum-screens.png",
+        "frontImageBG": "images/work/complete_stairs.png",
+        "border": false,
+        "description": "Semester-long group project for IS4300 Human-Computer Interaction, Spring 2025."
+    },
+    {
         "id": 6,
         "active": true,
         "column": "right",
@@ -60,26 +80,6 @@
         "description": "This co-op review platform for Northeastern students is an ongoing project part of Sandbox Northeastern. Please check back at the end of the semester for process images and final designs!"
     },
     {
-        "id": 12,
-        "active": false,
-        "column": "right",
-        "name": "Open Forum",
-        "path": "/open-forum",
-        "summary": "An app for organizing meaningful and engaging discussions, increasing students' sense of belongingness on campus",
-        "type": "School project",
-        "team": "4 students",
-        "role": "Researcher & designer",
-        "medium": "Mobile",
-        "tools": "Figma",
-        "year": 2025,
-        "tags": ["UX research", "UI/UX design"],
-        "vertical": false,
-        "frontImage": "images/work/open-forum/open-forum-screens.png",
-        "frontImageBG": "images/work/complete_stairs.png",
-        "border": false,
-        "description": "Semester-long group project for IS4300 Human-Computer Interaction, Spring 2025."
-    },
-    {
         "id": 2,
         "active": true,
         "column": "left",
@@ -117,7 +117,7 @@
         "frontImage": "images/work/rockumentary/rockumentary.png",
         "frontImageBG": "images/work/rockumentary/rock_bg.png",
         "border": false,
-        "description": "The invitation for one of my greatest honors as a designer came one summer Friday afternoon when a good friend of mine at the Berklee College of Music asked me if I wanted to design the poster for his senior recital. While we share a love for music, the rock music that he loves is nothing like the mellow tunes of the music I listen to and embody. Nonetheless, I took this on as a way to challenge myself to do something of a different feel. After many FaceTime consultations from coast to coast of the US and getting the drawing of my friend’s iconic bowl-cut and glasses just right, I ended up with this poster that captures the boldness of rock, nostalgia of a documentary, and my friend's personal brand. “Rockumentary” is the musical documentary of the rock music that shaped his life."
+        "description": "The invitation for one of my greatest honors as a designer came one summer Friday afternoon when a good friend of mine at the Berklee College of Music asked me if I wanted to design the poster for his senior recital. While we share a love for music, the rock music that he loves is nothing like the mellow tunes of the music I listen to and embody. Still, I took this on as a way to challenge myself to do something of a different feel. After many FaceTime consultations from coast to coast of the US and getting the drawing of my friend’s iconic bowl-cut and glasses just right, I ended up with this poster that captures the boldness of rock, nostalgia of a documentary, and my friend's personal brand. “Rockumentary” is the musical documentary of the rock music that shaped his life."
     },
     {
         "id": 3,
@@ -167,17 +167,17 @@
         "path": "/radien",
         "summary": "A ticket-tracking system for project management and ease in handoff of work between teams",
         "type": "School project",
-        "team": "4 students",
+        "team": "Four students",
         "role": "UX researcher & designer",
         "medium": "Web",
         "tools": "Figma",
         "year": 2024,
-        "tags": ["UI/UX design", "UX research"],
+        "tags": ["UX research", "UI/UX design"],
         "vertical": false,
         "frontImage": "images/work/radien/radien.png",
         "frontImageBG": "images/work/radien/radien_bg.png",
         "border": false,
-        "description": "Description coming soon."
+        "description": "A six-week long UI/UX research and design group project for Radien, as part of the User-Experience Design course."
     },
     {
         "id": 9,
@@ -238,5 +238,25 @@
         "frontImageBG": "images/work/complete_stairs.png",
         "border": false,
         "description": "Description coming soon."
+    },
+    {
+        "id": 13,
+        "active": true,
+        "column": "right",
+        "name": "ALI Hacks",
+        "path": "/ali-hacks",
+        "summary": "Professional yet original internal portal UI and sponsorship package for a Boston-based, student-led hackathon",
+        "type": "Contract",
+        "team": "Solo project",
+        "role": "UI/UX designer",
+        "medium": "Web",
+        "tools": "Figma",
+        "year": 2025,
+        "tags": ["UI/UX design"],
+        "vertical": false,
+        "frontImage": "images/work/alihacks/aliFront.png",
+        "frontImageBG": "images/work/alihacks/aliFront.png",
+        "border": false,
+        "description": "I was reached out to by one of my Cooper team members to complete some quick design work for this hackathon. I did the UI for the internal admission portal along with the design for the sponsorship package, resulting in partnerships with companies like Vercel and Anthropic."
     }
 ]

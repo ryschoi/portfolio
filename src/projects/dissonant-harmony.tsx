@@ -37,12 +37,12 @@ export default function DissonantHarmony() {
                         description="Aglet Mono: geometric, like Calder's artwork"
                         optional="The title words that vary heavily in style and yet are the same width emphasize a dissonant harmony between two objects." />
                     <div className="flex flex-row gap-[0.5rem]">
-                        <div className="calder-bg rounded-[0.5rem] flex place-content-center w-3/5">
+                        <div className="calder-bg rounded flex place-content-center w-3/5">
                             <div className="self-center my-[1rem]">
                                 <img src="/images/work/calder/calder_type-06.png" alt="" className="h-[18vw]" />
                             </div>
                         </div>
-                        <div className="calder-bg rounded-[0.5rem] flex place-content-center w-full">
+                        <div className="calder-bg rounded flex place-content-center w-full">
                             <div className="self-center my-[1rem]">
                                 <img src="/images/work/calder/calder_type-07.png" alt="" className="h-[18vw]" />
                             </div>
@@ -68,7 +68,7 @@ export default function DissonantHarmony() {
                         description="Ensuring there is a focal point for the poster"
                         optional="It was important that there was a main focal point for the poster, especially because the poster was a big A1 size. I needed to establish a clear direction that viewers' eyes could follow when looking at the poster. That meant not only setting big-enough margins, but also making sure the individual pieces of the sculpture were framed well and that the other elements supported the main focus (the sculpture)." />
                     <div className="flex flex-col w-full">
-                        <div className="rounded-[0.5rem] img-bg w-full flex align-center justify-center py-[4vw] w-full">
+                        <div className="rounded img-bg w-full flex align-center justify-center py-[4vw] w-full">
                             <img src="images/work/calder/calder-a1-markup.jpg" alt="" className="w-[36rem] max-w-[84vw]" />
                         </div>
                         <p className="caption cap-top">a pervious a1 poster version</p>
@@ -98,7 +98,7 @@ export default function DissonantHarmony() {
                         description="A flyer intended to guide people to the exhibition rather than spark intrigue like the poster"
                         optional="Unlike the rest of the exhibition materials, the flyer shows the fully-constructed version of Big Crinkly. I thought this made the most sense as while the poster could be meant to spark intrigue for the viewers, the flyer would be held at the museum, and therefore showing the actual artwork could help museum visitors know what to keep an eye out for. Furthermore, if museum goers had seen the poster before the flyer (or vice versa), it could help them make the connection of the deeper meaning behind the artwork, having seen the structure both the constructed and deconstructed." />
                     <div className="flex flex-col w-full">
-                        <div className="img-bg rounded-[0.5rem] flex place-content-center w-full">
+                        <div className="img-bg rounded flex place-content-center w-full">
                             <div className="self-center my-[3rem] subtle-shadow flex flex-wrap gap-[4rem] place-content-center">
                                 <img src="/images/work/calder/calder_a5_front.png" alt="" className="w-[24vw] min-w-[332px]" />
                                 <img src="/images/work/calder/calder_a5_back.png" alt="" className="w-[24vw] min-w-[332px]" />
@@ -114,25 +114,26 @@ export default function DissonantHarmony() {
                         title="Digital marketing material"
                         description="Instagram posts and gif"
                         optional="I snuck in another instance of dissonant harmony with the nine-square grid creating one complete picture. The center slide features a gif that shows the individual pieces of the sculpture getting put back together. This gif ties together the entire set of marketing materials as it visually plays out the transformation of individual, dissonant pieces coming together and forming a harmonious sculpture." />
-
-                    <div className="flex flex-wrap gap-[0.5rem]">
-                        <div className="flex flex-col w-full max-w-[655px]">
-                            <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full max-w-[655px]">
-                                <div className="self-center my-[4vw]">
-                                    <img src="/images/work/calder/calder_instagram.jpeg" alt="" className="w-[24vw] min-w-[332px] subtle-shadow" />
+                    
+                    
+                    <div className="work-img-group-col-bigger">
+                        <div>
+                            <div className="img-bg work-add-img-cont">
+                                <div className="self-center my-[3rem]">
+                                    <img src="/images/work/calder/calder_instagram.jpeg" alt="" className="w-[30vw] min-w-[18rem] subtle-shadow" />
                                 </div>
                             </div>
                             <p className="caption cap-top">Instagram posts <a className="caption underline" href="https://www.instagram.com/snfivowlactz/">(pseudo Instagram account)</a></p>
                         </div>
-                        <div className="flex flex-col w-full max-w-[655px]">
-                            <div className="img-bg rounded-[0.5rem] flex align-center justify-center w-full max-w-[655px]">
-                                <div className="self-center my-[4vw]">
-                                    <video autoPlay loop playsInline muted className="w-[24vw] min-w-[332px] subtle-shadow">
+                        <div>
+                            <div className="img-bg work-add-img-cont">
+                                <div className="self-center my-[3rem]">
+                                    <video autoPlay loop playsInline muted className="w-[30vw] min-w-[18rem] subtle-shadow">
                                         <source src="images/work/calder/calder.mov" type="video/mp4" />
                                     </video>
                                 </div>
                             </div>
-                            <p className="caption cap-top">sculpture reconstruction gif</p>
+                            <p className="caption cap-top">Sculpture reconstruction gif</p>
                         </div>
                     </div>
                 </div>

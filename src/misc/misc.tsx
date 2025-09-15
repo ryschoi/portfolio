@@ -19,10 +19,11 @@ export default function Misc() {
     });
 
     return (
+        // <div className="bg-[#212121] mx-[-4rem] my-[-2rem]">
         <div className="flex flex-col place-content-center items-center gap-[2rem]">
             <div className="flex flex-col gap-[1rem]">
                 {/* TITLE */}
-                <h2>Miscellaneous work from over the years</h2>
+                <h2 className="">Miscellaneous work from over the years</h2>
 
                 {/* FILTERS */}
                 <div className="flex flex-wrap gap-[0.5rem] mb-[2rem]">
@@ -51,5 +52,6 @@ export default function Misc() {
                     ))}
             </div>
         </div>
+        // </div>
     );
 }

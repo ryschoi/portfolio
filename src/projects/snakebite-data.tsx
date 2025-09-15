@@ -30,7 +30,7 @@ export default function SnakebiteData() {
 
                     {/* FIRST DRAFT */}
                     <div className="flex flex-col w-full">
-                        <div className="img-bg rounded-[0.5rem] flex place-content-center w-full">
+                        <div className="img-bg rounded flex place-content-center w-full">
                             <div className="self-center my-[3vw] subtle-shadow flex flex-wrap gap-[4vw] place-content-center">
                                 <img src="/images/work/snakebite-data/s-data-crit1.png" alt="" className="w-[36vw] min-w-[332px]" />
                                 <img src="/images/work/snakebite-data/snakebite-data-feedback.png" alt="" className="w-[36vw] min-w-[332px]" />
@@ -57,19 +57,20 @@ export default function SnakebiteData() {
                         <h2 className="self-center mob-mid-w">Isotypes</h2>
                         <p className="mob-mid-w self-center">At first, to highlight the difference in climate conditions, I had illustrations of what those conditions might look like (i.e. more jagged land or more rainfall). However, I found that other than the numbers under the illustrations, there was no way to tangibly grasp the difference in measuremnets.<br /><br />For the final version, I turned the numbers into isotypes with circles representing the actual proportions of the numbers. This way, it is a lot easier to tell the values of each measurement, and just how much the differences are.</p>
                     </div>
-                    <div className="flex flex-wrap gap-[0.5rem]">
-                        <div className="flex flex-col w-full max-w-[655px]">
-                            <div className="s-data-bg rounded-[0.5rem] flex place-content-center w-full max-w-[655px]">
-                                <div className="self-center my-[1.5vw]">
-                                    <img src="/images/work/snakebite-data/isotype2.png" alt="" className="w-[44vw] min-w-[332px]" />
+                    {/* IMAGES */}
+                    <div className="work-img-group-col-bigger">
+                        <div>
+                            <div className="s-data-bg work-add-img-cont">
+                                <div className="self-center m-[1rem]">
+                                    <img src="/images/work/snakebite-data/isotype2.png" alt="" className="w-full min-w-[18rem]" />
                                 </div>
                             </div>
                             <p className="caption cap-top">initial</p>
                         </div>
-                        <div className="flex flex-col w-full max-w-[655px]">
-                            <div className="s-data-bg rounded-[0.5rem] flex place-content-center w-full max-w-[655px]">
-                                <div className="self-center my-[1.5vw]">
-                                    <img src="/images/work/snakebite-data/isotype1.png" alt="" className="w-[44vw] min-w-[332px]" />
+                        <div>
+                            <div className="s-data-bg work-add-img-cont">
+                                <div className="self-center m-[1rem]">
+                                    <img src="/images/work/snakebite-data/isotype1.png" alt="" className="w-full min-w-[18rem]" />
                                 </div>
                             </div>
                             <p className="caption cap-top">final</p>
@@ -83,20 +84,20 @@ export default function SnakebiteData() {
                         <h2 className="self-center mob-mid-w">Degree of separation</h2>
                         <p className="mob-mid-w self-center">In this chart, I wanted to highlight the large potential disparity in reported data and reality with the differently sized boxes. The challenge here was figuring out how to label the boxes in a way that would get the message across to viewers with the least amount of brain work.<br /><br />I followed Edward Tufte's "degree of separation" scale, which is a method of determining how accessible labels are to their corresponding data points, and connected the labels directly to the boxes rather than separating them from the boxes entirely. This way, there is less back-and-forth between the boxes and the labels, and the main message of the visualization can be understood at just a glance since all the central points are consolidated in one area.</p>
                     </div>
-
-                    <div className="flex flex-wrap gap-[0.5rem]">
-                        <div className="flex flex-col w-full max-w-[655px]">
-                            <div className="s-data-bg rounded-[0.5rem] flex place-content-center w-full max-w-[655px]">
-                                <div className="self-center my-[1.5vw]">
-                                    <img src="/images/work/snakebite-data/degree1.png" alt="" className="w-[32vw] min-w-[332px]" />
+                    {/* IMAGES */}
+                    <div className="work-img-group-col">
+                        <div>
+                            <div className="s-data-bg work-add-img-cont">
+                                <div className="self-center mx-[2rem]">
+                                    <img src="/images/work/snakebite-data/degree1.png" alt="" className="self-center w-6/7 min-w-[18rem]" />
                                 </div>
                             </div>
                             <p className="caption cap-top">initial</p>
                         </div>
-                        <div className="flex flex-col w-full max-w-[655px]">
-                            <div className="s-data-bg rounded-[0.5rem] flex place-content-center w-full max-w-[655px]">
-                                <div className="self-center my-[1.5vw]">
-                                    <img src="/images/work/snakebite-data/degree2.png" alt="" className="w-[32vw] min-w-[332px]" />
+                        <div>
+                            <div className="s-data-bg work-add-img-cont">
+                                <div className="self-center mx-[2rem]">
+                                    <img src="/images/work/snakebite-data/degree2.png" alt="" className="self-center w-6/7 min-w-[18rem]" />
                                 </div>
                             </div>
                             <p className="caption cap-top">final</p>

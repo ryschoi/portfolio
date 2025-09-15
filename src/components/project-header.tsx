@@ -17,7 +17,7 @@ export default function ProjectHeader({ project }: { project: Project }) {
                 </div>
 
                 {/* IMAGE */}
-                <div className="rounded-[0.5rem] img-bg w-full mt-[1.8rem] mb-[3.5rem] flex align-center justify-center py-[3vw]">
+                <div className="rounded img-bg w-full mt-[1.8rem] mb-[3.5rem] flex align-center justify-center py-[3vw]">
                     <img src={project.frontImage} alt="" className={project.vertical === true ? "w-[26rem] max-w-[85vw] subtle-shadow" : "w-[44rem] max-w-[85vw] subtle-shadow"} />
                 </div>
 

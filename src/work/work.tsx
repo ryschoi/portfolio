@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { projects } from "../database";
-import { Link } from "react-router";
 import "../index.css";
 import "../navigation/nav.css";
 import "./work.css";
 import WorkCard from "./work-card";
 import Tag from "../components/tag";
+import { Link } from "react-router";
 
 export default function Work() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -25,9 +25,9 @@ export default function Work() {
   return (
     <div className="flex flex-col">
       {/* GREETING */}
-      <div className="flex flex-col mt-[10rem] mb-[14rem] items-center">
+      <div className="flex flex-col mt-[9rem] mb-[13rem] items-center">
         <h1 className="text-red-500 text-center w-[39rem] max-w-[80vw]">
-          <span className="gray">Hi, I'm Rebecca. 🌚<br /></span>A designer and developer who is using tech, design, and data to create intentionally and meaningfully.
+          <span className="gray">Hi, I'm Rebecca.<br /></span>A designer and developer who is using tech, design, and data to create intentionally and meaningfully.
         </h1>
       </div>
 
