@@ -105,8 +105,6 @@ export default function About() {
           </div>
         </div>
 
-
-
         {/* <p>
           As someone who is both visionary and rational, I navigate complex problems with discernment and find ways to turn solutions into reality.
           <br /><br />
