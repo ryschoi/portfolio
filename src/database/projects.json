@@ -27,7 +27,7 @@
         "path": "/open-forum",
         "summary": "An app for organizing meaningful and engaging discussions, increasing students' sense of belongingness on campus",
         "type": "School project",
-        "team": "4 students",
+        "team": "Four students",
         "role": "Researcher & designer",
         "medium": "Mobile",
         "tools": "Figma",
@@ -167,7 +167,7 @@
         "path": "/radien",
         "summary": "A ticket-tracking system for project management and ease in handoff of work between teams",
         "type": "School project",
-        "team": "4 students",
+        "team": "Four students",
         "role": "UX researcher & designer",
         "medium": "Web",
         "tools": "Figma",
@@ -177,7 +177,7 @@
         "frontImage": "images/work/radien/radien.png",
         "frontImageBG": "images/work/radien/radien_bg.png",
         "border": false,
-        "description": "Description coming soon."
+        "description": "A six-week long UI/UX research and design group project for Radien, as part of the User-Experience Design course."
     },
     {
         "id": 9,
@@ -257,6 +257,6 @@
         "frontImage": "images/work/alihacks/aliFront.png",
         "frontImageBG": "images/work/alihacks/aliFront.png",
         "border": false,
-        "description": ""
+        "description": "I was reached out to by one of my Cooper team members to complete some quick design work for this hackathon. I did the UI for the internal admission portal along with the design for the sponsorship package, resulting in partnerships with companies like Vercel and Anthropic."
     }
 ]

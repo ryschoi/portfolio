@@ -66,8 +66,8 @@ export default function ImageBG({ project }: { project: Project }) {
             {project.id === 2 && (
                 <div className="work-img-group-col">
                     <div className="zoom img-bg work-add-img-cont">
-                        <div className="self-center my-[2rem]">
-                            <img src="/images/work/calder/calder_a5_front.png" alt="" className="w-[18vw] min-w-[18rem] subtle-shadow" />
+                        <div className="self-center my-[3rem] place-content-center">
+                            <img src="/images/work/calder/calder_a5_front.png" alt="" className="w-[18vw] min-w-[18rem] subtle-shadow self-center" />
                         </div>
                     </div>
                     <div className="zoom img-bg work-add-img-cont">
