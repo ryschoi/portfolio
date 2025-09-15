@@ -39,48 +39,21 @@ export default function About() {
         </div>
 
         {/* GREETING */}
-        <div className="flex flex-col gap-[0.5rem]">
+        <div className="flex flex-col gap-[1rem]">
           <h2>Hi, I'm Rebecca.</h2>
-          <h3 className="gray">I'm a third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h3 underline gray">Northeastern University</a>, the Marketing Analytics Co-op at Boston Beer Company, and a UI/UX design lead at <a href="https://www.sandboxnu.com/" className=" h3 underline gray">Sandbox NU</a>.</h3>
+          <h3 className="gray">I'm a third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h3 underline gray">Northeastern University</a>, the Marketing Analytics Co-op at Boston Beer Company, and a UI/UX design lead at <a href="https://www.sandboxnu.com/" className=" h3 underline gray">Sandbox NU</a> for <a className="gray h3 underline" href="/cooper">Cooper</a>.</h3>
+          <h3 className="gray">I love photography, taking long walks around the city, teaching my dog new tricks, and cooking and baking new things. I also come from a very musical family, and have been teaching myself the bass guitar since middle school.</h3>
+          <h3 className="gray">Read about my <a className="gray h3 underline" href="/background">work background & philosophy here</a>.</h3>
         </div>
 
-        {/* <h3 className="gray">I have an interdisciplinary skillset across tech, design, and data, and am passionate about creating meaningful and well-crafted products and experiences.</h3> */}
-
-        <hr />
-        {/* WORK */}
-        <div>
-          <p className="caption mb-[0.5rem]">Work background & philosophy</p>
-          <p>I’ve always loved to create. I love working through problems with strategy and iterations.</p>
-          <br />
-
-          {/* CODING */}
-          <div className="flex flex-col gap-[0.5rem]">
-            <p className="caption gray italic">[Coding as a tool]</p>
-            <p>When I took my first coding class in middle school, a summer web development bootcamp, I fell in love with the freedom to code and create whatever I wanted, but soon realized that with that freedom came many decisions surrounding usability and intent. This is when I discovered the importance of design.</p>
-          </div>
-          <br />
-          {/* DESIGN */}
-          <div className="flex flex-col gap-[0.5rem]">
-            <p className="caption gray italic">[Design as a framework]</p>
-            <p>If I wanted to create the greatest website to exist, I would need to know what would make such a website so great. Design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that fit business, user behavior, and aesthetic constraints. With the practice of many design projects, I’ve mastered the ability to successfully iterate and design without compromising any constraints. To me, design is not exactly a creative, artistic expression, but really a means of making something work.</p>
-          </div>
-          <br />
-          {/* DATA */}
-          <div className="flex flex-col gap-[0.5rem]">
-            <p className="caption grayy italic">[Data]</p>
-            <p>Today, there is no shortage of data. I’m excited by how much information we have access to, and how we can make informed and intentional decisions from it.</p>
-          </div>
-        </div>
-
-        <hr />
 
 
         {/* OUTSIDE OF WORK */}
-        <div className="w-full">
+        {/* <div className="w-full">
           <p className="caption mb-[0.5rem]">Outside of work</p>
           <p>
             I love photography, taking long walks around the city, teaching my dog new tricks, and cooking and baking new things. I also come from a very musical family, and have been teaching myself the bass guitar since middle school.</p>
-        </div>
+        </div> */}
 
         <hr />
 

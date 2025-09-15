@@ -6,13 +6,13 @@ export default function NavBar() {
   const links = [
     { label: "Work", path: `/` },
     // { label: "Misc", path: `/misc` },
-    // { label: "Philosophy", path: `/philosophy` },
+    { label: "Background", path: `/background` },
     { label: "Resume", path: `/resume` },
     { label: "About", path: `/about` }
   ];
 
   return (
-    <div id="nav" className="h-[4rem] content-end mb-[4rem]">
+    <div id="nav" className="w-full self-center h-[4rem] content-end mb-[4rem] max-w-[--mob-page-w]">
       <div className="flex flex-row justify-between">
         {links.map((page) => (
           <Link key={page.path} to={page.path}
