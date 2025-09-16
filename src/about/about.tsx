@@ -67,7 +67,7 @@ export default function About() {
             </div>
             <div className="flex flex-col">
               <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/arboretum wide.jpg" />
-              <p className="caption cap-top">arnold arboretum</p>
+              <p className="caption cap-top">arnold arboretum (highly recommend for a quiet, scenic walk)</p>
             </div>
           </div>
           <br />
