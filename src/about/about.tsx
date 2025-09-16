@@ -47,13 +47,13 @@ export default function About() {
           {/* IMAGES */}
           <div className="work-img-group-col">
             <div className="flex flex-col">
-              <img id="headshot" className="w-full h-[20vw] min-h-[25vh] object-cover rounded" src="images/cooper team.jpg" />
+              <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/cooper hangout.PNG" />
               <p className="caption cap-top">The Cooper team!</p>
             </div>
-            {/* <div className="flex flex-col">
-              <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/cooper hangout.PNG" />
-              <p className="caption cap-top">team hangouts</p>
-            </div> */}
+            <div className="flex flex-col">
+              <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/sandbox group.JPG" />
+              <p className="caption cap-top">sandbox spr '25 group picture</p>
+            </div>
           </div>
         </div>
 
