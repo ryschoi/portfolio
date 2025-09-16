@@ -58,7 +58,6 @@ export default function ImageBG({ project }: { project: Project }) {
                             <img src="/images/work/snakebite-response/snakebiteWallet5.png" alt="" className="w-[30vw] min-w-[332px] subtle-shadow" />
                         </div>
                     </div>
-
                 </div>
             )}
 

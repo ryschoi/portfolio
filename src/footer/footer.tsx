@@ -30,8 +30,8 @@ export default function Footer() {
                     <div>
                         <p className="caption mb-[0.5rem]">Pages</p>
                         <Link to="/" onClick={() => handleClick('/')}>Work</Link><br />
-                        <Link to="/background" onClick={() => handleClick('/background')}>Background</Link><br />
                         <Link to="/resume" onClick={() => handleClick('/resume')}>Resume</Link><br />
+                        <Link to="/background" onClick={() => handleClick('/background')}>Background</Link><br />
                         <Link to="/about" onClick={() => handleClick('/about')}>About</Link><br />
                     </div>
                     <div>

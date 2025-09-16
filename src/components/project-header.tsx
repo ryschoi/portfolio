@@ -34,16 +34,21 @@ export default function ProjectHeader({ project }: { project: Project }) {
                             <p className="caption">PROJECT TYPE</p>
                             <p>{project.type}</p>
                         </div>
+                        {/* timeline */}
+                        <div className="flex flex-col gap-[0.2rem] w-[10rem]">
+                            <p className="caption">TIMELINE</p>
+                            <p>{project.timeline}</p>
+                        </div>
                         {/* team and role */}
                         <div className="flex flex-col gap-[0.2rem] w-[10rem]">
                             <p className="caption">TEAM & ROLE</p>
                             <p>{project.team}<br />{project.role}</p>
                         </div>
                         {/* medium */}
-                        <div className="flex flex-col gap-[0.2rem] w-[10rem]">
+                        {/* <div className="flex flex-col gap-[0.2rem] w-[10rem]">
                             <p className="caption">MEDIUM</p>
                             <p>{project.medium}</p>
-                        </div>
+                        </div> */}
                         {/* tools */}
                         <div className="flex flex-col gap-[0.2rem] w-[10rem]">
                             <p className="caption">TOOLS</p>

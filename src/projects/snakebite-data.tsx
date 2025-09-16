@@ -55,7 +55,7 @@ export default function SnakebiteData() {
                 <div className="section align-center">
                     <div className="flex flex-col gap-[1rem]">
                         <h2 className="self-center mob-mid-w">Isotypes</h2>
-                        <p className="mob-mid-w self-center">At first, to highlight the difference in climate conditions, I had illustrations of what those conditions might look like (i.e. more jagged land or more rainfall). However, I found that other than the numbers under the illustrations, there was no way to tangibly grasp the difference in measuremnets.<br /><br />For the final version, I turned the numbers into isotypes with circles representing the actual proportions of the numbers. This way, it is a lot easier to tell the values of each measurement, and just how much the differences are.</p>
+                        <p className="mob-mid-w self-center">At first, to highlight the difference in climate conditions, I had illustrations of what those conditions might look like (i.e. more jagged land or more rainfall). However, I found that other than the numbers under the illustrations, there was no way to tangibly grasp the difference in measurements.<br /><br />For the final version, I turned the numbers into isotypes with circles representing the actual proportions of the numbers. This way, it is a lot easier to tell the values of each measurement, and just how much the differences are.</p>
                     </div>
                     {/* IMAGES */}
                     <div className="work-img-group-col-bigger">

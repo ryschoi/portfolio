@@ -32,28 +32,47 @@ export default function About() {
 
   return (
     <div className="flex justify-center w-full">
-      <div className="flex flex-col gap-[2.5rem] w-(--mob-page-w) max-w-[41rem]">
+      <div className="flex flex-col gap-[4rem] w-(--mob-page-w) max-w-[41rem]">
         {/* IMAGE */}
         <div className="overflow-hidden w-full">
           <img id="headshot" className="w-full h-auto object-cover rounded" src="images/wide.png" />
         </div>
 
         {/* GREETING */}
-        <div className="flex flex-col gap-[1rem]">
-          <h2>Hi, I'm Rebecca.</h2>
-          <h3 className="gray">I'm a third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h3 underline gray">Northeastern University</a>, the Marketing Analytics Co-op at Boston Beer Company, and a UI/UX design lead at <a href="https://www.sandboxnu.com/" className=" h3 underline gray">Sandbox NU</a> for <a className="gray h3 underline" href="/cooper">Cooper</a>.</h3>
-          <h3 className="gray">I love photography, taking long walks around the city, teaching my dog new tricks, and cooking and baking new things. I also come from a very musical family, and have been teaching myself the bass guitar since middle school.</h3>
-          <h3 className="gray">Read about my <a className="gray h3 underline" href="/background">work background & philosophy here</a>.</h3>
+        <h2 className="dark-gray">Hi, I'm Rebecca. <span className="gray">I'm a third-year Computer Science and Design student at Northeastern University.</span></h2>
+
+        {/* SUMMARY */}
+        <div className="flex flex-col gap-[1.5rem]">
+          <h2 className="dark-gray">I'm currently doing my co-op at The Boston Beer Company on the Marketing Analytics team, <span className="gray">using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible.</span> I'm also a UI/UX design lead at <a href="https://www.sandboxnu.com/" className=" h2 underline dark-gray">Sandbox NU</a> for <a className="h2 underline dark-gray" href="/cooper">Cooper</a>, <span className="gray">helping Northeastern students make more informed co-op decisions.</span></h2>
+          {/* IMAGES */}
+          <div className="work-img-group-col">
+            <div className="flex flex-col">
+              <img id="headshot" className="w-full h-[20vw] min-h-[25vh] object-cover rounded" src="images/cooper team.jpg" />
+              <p className="caption cap-top">The Cooper team!</p>
+            </div>
+            {/* <div className="flex flex-col">
+              <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/cooper hangout.PNG" />
+              <p className="caption cap-top">team hangouts</p>
+            </div> */}
+          </div>
         </div>
 
-
-
-        {/* OUTSIDE OF WORK */}
-        {/* <div className="w-full">
-          <p className="caption mb-[0.5rem]">Outside of work</p>
-          <p>
-            I love photography, taking long walks around the city, teaching my dog new tricks, and cooking and baking new things. I also come from a very musical family, and have been teaching myself the bass guitar since middle school.</p>
-        </div> */}
+        <div className="flex flex-col gap-[1.5rem]">
+          <h2 className="gray">I love photography, taking long walks around the city, teaching my dog new tricks, and cooking and baking new things. I also come from a very musical family, and have been teaching myself the bass guitar since middle school.</h2>
+          {/* IMAGES */}
+          <div className="work-img-group-col">
+            <div className="flex flex-col">
+              <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/nara.png" />
+              <p className="caption cap-top">My dog, Nara</p>
+            </div>
+            <div className="flex flex-col">
+              <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/arboretum wide.jpg" />
+              <p className="caption cap-top">arnold arboretum</p>
+            </div>
+          </div>
+          <br />
+          <h2 className="gray">Read about my <a className="gray h2 underline" href="/background">work background & philosophy here</a>.</h2>
+        </div>
 
         <hr />
 
