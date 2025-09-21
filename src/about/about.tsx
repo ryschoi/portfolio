@@ -52,7 +52,7 @@ export default function About() {
             </div>
             <div className="flex flex-col">
               <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/sandbox group.JPG" />
-              <p className="caption cap-top">sandbox spr '25 group picture</p>
+              <p className="caption cap-top">sandbox spr '25</p>
             </div>
           </div>
         </div>
