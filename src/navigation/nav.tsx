@@ -6,7 +6,7 @@ export default function NavBar() {
   const links = [
     { label: "Work", path: `/` },
     // { label: "Misc", path: `/misc` },
-    { label: "Resume", path: `/resume` },
+    // { label: "Resume", path: `/resume` },
     { label: "Background", path: `/background` },
     { label: "About", path: `/about` }
   ];
