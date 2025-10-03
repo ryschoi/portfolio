@@ -19,7 +19,7 @@ export default function Background() {
                 {/* DESIGN */}
                 <div className="flex flex-col gap-[0.5rem]">
                     <p className="caption gray italic">[Design as a framework]</p>
-                    <p>If I wanted to create the greatest website to exist, I would need to know what would make such a website so great. To me, design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that fit business, user behavior, and aesthetic constraints. <br /><br />
+                    <p>If I wanted to create the greatest product to exist, I would need to know what would make such a product so great. To me, design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that fit business, user behavior, and aesthetic constraints. <br /><br />
                     With the practice of many projects, I’ve mastered the ability to successfully create without compromising any constraints. This means that functionality and user experience are always of utmost priority, above aesthetics, and as far as other constraints permit.
                     </p>
                 </div>
