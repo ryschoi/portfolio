@@ -6,6 +6,7 @@ import "./work.css";
 import WorkCard from "./work-card";
 import Tag from "../components/tag";
 import { Link } from "react-router";
+import ProjectHeader from "components/project-header";
 
 export default function Work() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -26,9 +27,14 @@ export default function Work() {
     <div className="flex flex-col">
       {/* GREETING */}
       <div className="flex flex-col mt-[9rem] mb-[13rem] items-center">
+        {/* OLD HEADER (CENTERED TEXT) mt-9rem, mb-13rem */}
         <h1 className="text-red-500 text-center w-[39rem] max-w-[80vw]">
           <span className="gray">Hi, I'm Rebecca.<br /></span>A designer and developer who is using tech, design, and data to create intentionally and meaningfully.
         </h1>
+        {/* NEW HEADER BELOW */}
+        {/* <div className="mob-mid-w flex flex-col gap-[1.5vh]">
+          <h1>Hi, I'm Rebecca.<br /><span className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</span></h1>
+        </div> */}
       </div>
 
       {/* FILTERS */}

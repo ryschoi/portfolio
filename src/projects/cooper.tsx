@@ -12,7 +12,7 @@ export default function Cooper() {
             <ProjectHeader project={thisProject as Project} />
 
             <div className="project-content-rest">
-                <Task task="Rethink the experience of the job information page, and redesign accordingly" processItems={["Research", "User testing", "UI redesigns"]} />
+                <Task task="Lead the design side of the creation of a Northeastern co-op review platform" processItems={["Research", "Project definition", "User testing", "UI redesigns"]} />
             </div>
         </div>
     );
