@@ -13,7 +13,7 @@ export default function AliHacks() {
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} />
             <div className="project-content-rest">
-                <Task task="Design high-fidelity wireframes for the internal application portal and a sponsorship package to send out to potential sponsors." processItems={["Internal portal UI", "Sponsorship package design"]} />
+                <Task task="Using the existing Asian-American style from the public website, design high-fidelity wireframes for the internal application portal and a sponsorship package to send out to potential sponsors." processItems={["Internal portal UI", "Sponsorship package design"]} />
                 <p className="mob-mid-w">Process coming soon.</p>
 
                 {/* <div className="section" id="data-collection-and-engineering">
