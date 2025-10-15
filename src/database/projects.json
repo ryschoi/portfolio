@@ -264,12 +264,12 @@
         "medium": "Web",
         "tools": "Figma",
         "year": 2025,
-        "timeline": "3 weeks for UI, 2 weeks for sponsorship package",
+        "timeline": "5 weeks total (3 weeks for UI, 2 weeks for sponsorship package)",
         "tags": ["UI/UX"],
         "vertical": false,
         "frontImage": "images/work/alihacks/aliFront.png",
         "frontImageBG": "images/work/alihacks/aliFront.png",
         "border": false,
-        "description": "I was reached out to by one of my Cooper team members to complete some quick design work for this hackathon. I did the UI for the internal admission portal along with the design for the sponsorship package, resulting in partnerships with companies like Vercel and Anthropic."
+        "description": "I was reached out to by one of my Cooper team members to complete some quick design work for this hackathon. I did the UI for the internal admission portal along with the design for the sponsorship package, resulting in partnerships with companies like Vercel and Anthropic. Many sponsors noted that the design of the sponsorship package was a big reason that they decided to partner with the hackathon."
     }
 ]
