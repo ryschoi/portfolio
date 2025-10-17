@@ -4,7 +4,7 @@ import ImageBG from "../components/image-bg";
 
 export default function WorkCard({ project }: { project: Project }) {
     return (
-        <div className="flex flex-col gap-[2rem] w-full">
+        <div className="flex flex-col gap-[1.4rem] w-full">
             {/* IMAGES */}
             <Link to={project.path} key={project.id} className="flex flex-col w-full">
                 <ImageBG project={project} />
