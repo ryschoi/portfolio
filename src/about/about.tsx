@@ -43,7 +43,7 @@ export default function About() {
 
         {/* SUMMARY */}
         <div className="flex flex-col gap-[1.5rem]">
-          <h2 className="dark-gray">I'm currently doing my co-op at The Boston Beer Company on the Marketing Analytics team, <span className="gray">using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible.</span> I'm also a UI/UX design lead at <a href="https://www.sandboxnu.com/" className=" h2 underline dark-gray">Sandbox NU</a> for <a className="h2 underline dark-gray" href="/cooper">Cooper</a>, <span className="gray">helping Northeastern students make more informed co-op decisions.</span></h2>
+          <h2 className="dark-gray">I'm currently doing my co-op at The Boston Beer Company on the Marketing Analytics team, <span className="gray">using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible.</span> I'm also a design lead at <a href="https://www.sandboxnu.com/" className=" h2 underline dark-gray">Sandbox NU</a> for <a className="h2 underline dark-gray" href="/cooper">Cooper</a>, <span className="gray">creating an job experience review platform to help Northeastern students make more informed co-op decisions.</span></h2>
           {/* IMAGES */}
           <div className="work-img-group-col">
             <div className="flex flex-col">
@@ -58,7 +58,7 @@ export default function About() {
         </div>
 
         <div className="flex flex-col gap-[1.5rem]">
-          <h2 className="gray">I love photography, taking long walks around the city, teaching my dog new tricks, and cooking and baking new things. I also come from a very musical family, and have been teaching myself the bass guitar since middle school.</h2>
+          <h2 className="gray">In my free time I often go on long walks around the city, cook and bake new things, and teach my dog new tricks. I also come from a very musical family, and have been teaching myself the bass guitar since middle school.</h2>
           {/* IMAGES */}
           <div className="work-img-group-col">
             <div className="flex flex-col">

@@ -7,7 +7,7 @@ export default function Background() {
                 <hr />
                 <div>
                     <p className="caption mb-[0.5rem]">Work background & philosophy</p>
-                    <p>I love to create–working through problems with strategy and iterations, and testing freely within boundary lines.</p>
+                    <p>I use use my technical skills and design thinking to create meaningful and useful products, but am a thinker at the core and always aim to understand how things work.</p>
                 </div>
 
                 {/* CODING */}
