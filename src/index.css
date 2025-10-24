@@ -70,7 +70,7 @@
   --weight: 300;
   --leading: 1.6rem;
 
-  --ps-size: 0.9rem;
+  --ps-size: 1rem;
   --ps-leading: 1.3rem;
 
   --h1-size: 1.65rem;
@@ -99,7 +99,8 @@
 }
 
 * {
-  font-family: 'Hanken Grotesk';
+  font-family: 'Roboto';
+  /* font-family: 'Hanken Grotesk'; */
   /* font-family: 'Poly Sans';
   font-weight: 400;
   font-style: normal; */
@@ -123,10 +124,12 @@ a {
 }
 
 .caption {
-  font-family: 'Space Mono';
+  font-family: 'Roboto Condensed';
+  font-variant: small-caps;
+  font-weight: 500;
   color: #8b8b8b;
   text-transform: uppercase;
-  font-size: var(--ps-size);
+  /* font-size: var(--ps-size); */
 }
 
 .cap-top {
@@ -150,7 +153,7 @@ h1 {
   margin: var(--zero);
   font-size: var(--h1-size);
   line-height: var(--h1-leading);
-  font-weight: var(--heading-weight);
+  font-weight: 300;
 }
 
 h2,
@@ -158,7 +161,7 @@ h2,
   margin: var(--zero);
   font-size: var(--h2-size);
   line-height: var(--h2-leading);
-  font-weight: var(--heading-weight);
+  font-weight: 900;
 }
 
 h3,
