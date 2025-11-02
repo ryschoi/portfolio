@@ -243,11 +243,11 @@ a:hover {
 }
 
 .pink {
-  color: #ac0b99;
+  color: #b872b1;
 }
 
 .blue {
-  color: #0b23ac;
+  color: #0b69ac;
 }
 
 .dark-green {
@@ -298,9 +298,6 @@ button {
   border: 1.5px solid #cecece;
   border-radius: 1rem;
 }
-
-
-
 
 .gray-tag {
   background-color: #dbdbdb;

@@ -38,7 +38,7 @@ export default function Work() {
           <div className="flex flex-row gap-[0.5rem]">
             <Link key='/' to='/background' className=""><Tag text="Read about my work background" hover={true} clicked={false} /></Link>
             {/* <Link key='/' to='/about' className=""><Tag text="Learn about me" hover={true} clicked={false} /></Link> */}
-            <Link key='/' to='/about#contacts' className=""><Tag text="Contact me" hover={true} clicked={false} /></Link>
+            <Link key='/' to='/about#contacts' className=""><button className="work-tag">Contact me</button></Link>
           </div>
         </div>
       </div>
