@@ -28,13 +28,19 @@ export default function Work() {
       {/* GREETING */}
       <div className="flex flex-col mt-[9rem] mb-[13rem] items-center">
         {/* OLD HEADER (CENTERED TEXT) mt-9rem, mb-13rem */}
-        <h1 className="text-red-500 text-center w-[39rem] max-w-[80vw]">
+        {/* <h1 className="text-red-500 text-center w-[39rem] max-w-[80vw]">
           <span className="gray">Hi, I'm Rebecca.<br /></span>A designer and developer who is using tech, design, and data to create intentionally and meaningfully.
-        </h1>
+        </h1> */}
         {/* NEW HEADER BELOW */}
-        {/* <div className="mob-mid-w flex flex-col gap-[1.5vh]">
+        <div className="w-[39rem] max-w-[80vw] flex flex-col gap-[4vh]">
           <h1>Hi, I'm Rebecca.<br /><span className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</span></h1>
-        </div> */}
+
+          <div className="flex flex-row gap-[0.5rem]">
+            <Link key='/' to='/background' className=""><Tag text="Read about my work background" hover={true} clicked={false} /></Link>
+            {/* <Link key='/' to='/about' className=""><Tag text="Learn about me" hover={true} clicked={false} /></Link> */}
+            <Link key='/' to='/about#contacts' className=""><Tag text="Contact me" hover={true} clicked={false} /></Link>
+          </div>
+        </div>
       </div>
 
       {/* FILTERS */}

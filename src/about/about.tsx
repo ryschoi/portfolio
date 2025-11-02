@@ -1,9 +1,21 @@
 import "./about.css";
 import { useState } from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Tag from "../components/tag";
 
 export default function About() {
+  const { hash } = useLocation();
   interface CopyButtonProps { text: string; }
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
 
   const CopyButton: React.FC<CopyButtonProps> = ({ text }) => {
     const [tooltip, setTooltip] = useState('Copy');
@@ -77,7 +89,7 @@ export default function About() {
         <hr />
 
         {/* TAGS */}
-        <div className="w-full flex flex-col gap-[1rem]">
+        <div className="w-full flex flex-col gap-[1rem]" id="contacts">
           {/* CONTACT */}
           <div className="flex gap-[1rem] items-center">
             <p className="caption">Contact</p>
