@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { projects } from "../database";
 import "../index.css";
 import "../navigation/nav.css";
 import "./work.css";
 import WorkCard from "./work-card";
 import Tag from "../components/tag";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 import ProjectHeader from "components/project-header";
+import HoverButton from "components/hover-button";
 
 export default function Work() {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -23,6 +24,12 @@ export default function Work() {
     return isActive && hasTag;
   });
 
+  const handleClick = (to: string) => {
+    if (location.pathname === to && ['/', '/background', '/about', '/resume'].includes(to)) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="flex flex-col">
       {/* GREETING */}
@@ -36,14 +43,17 @@ export default function Work() {
           <h1>Hi, I'm Rebecca.<br /><span className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</span></h1>
 
           <div className="flex flex-row gap-[0.5rem]">
-            <Link key='/' to='/background' className=""><button className="work-tag">Read about my work background</button></Link>
-            <Link key='/' to='/about#contacts' className=""><button className="work-tag">Contact me</button></Link>
+            {/* <Link key='/' to='/#work' className=""><button className="work-tag">See work</button></Link> */}
+            {/* <Link key='/' to='/background' className=""><button className="work-tag">Read about my work background</button></Link>
+            <Link key='/' to='/about#contacts' className=""><button className="work-tag">Contact me</button></Link> */}
+            <Link key='/' to='/background' className=""><HoverButton text="Read about my work background" hoverText="How did I decide on CS & Design? How did I end up here??" /></Link>
+            <Link key='/' to='/about#contacts' className=""><HoverButton text="Contact me" hoverText="Email, phone, LinkedIn..." /></Link>
           </div>
         </div>
       </div>
 
       {/* FILTERS */}
-      <div className="flex flex-wrap gap-[0.5rem] mb-[2rem]">
+      <div className="flex flex-wrap gap-[0.5rem] mb-[2rem]" id="">
         {allTags.map((tag) => {
           const isSelected = selectedTag === tag;
 

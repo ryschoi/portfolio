@@ -100,17 +100,18 @@
 
 * {
   font-family: 'Hanken Grotesk';
-  /* font-family: 'Poly Sans';
-  font-weight: 400;
-  font-style: normal; */
   font-feature-settings: 'liga' 1, 'calt' 1;
   margin: 0;
   color: #212121;
-  /* background-color: #f6f5f4; */
+}
+
+body{
+  background-color: #F9F8F6;
 }
 
 #root {
   margin: 0px 4%;
+  /* background-color: #F9F8F6; */
 }
 
 p,
@@ -203,7 +204,7 @@ a:hover {
 }
 
 .white {
-  color: #ffffff;
+  color: #fdfdfd;
 }
 
 .light-gray {
@@ -266,7 +267,7 @@ button {
 
 .tag,
 .tag-no-hover {
-  background-color: transparent;
+  background-color: #FDFDFD;
   color: #1e1e1e;
   border: 1.5px solid #cecece;
   border-radius: 1rem;
@@ -277,7 +278,7 @@ button {
 }
 
 .tag:hover {
-  background-color: #f1f1f1;
+  background-color: #EFEDEA;
   color: #1e1e1e;
   border: 1.5px solid #cecece;
   border-radius: 1rem;
@@ -287,34 +288,10 @@ button {
 }
 
 .tag-clicked {
-  background-color: #1e1e1e;
+  background-color: #333333;
   color: #ffffff;
-  border: 1.5px solid #1e1e1e;
+  border: 1.5px solid #333333;
   border-radius: 1rem;
-}
-
-.tag-white {
-  background-color: #f1f1f1;
-  color: #1e1e1e;
-  border: 1.5px solid #cecece;
-  border-radius: 1rem;
-}
-
-.gray-tag {
-  background-color: #dbdbdb;
-  color: #474747;
-}
-
-.gray-tag:hover {
-  background-color: #c6c6c6;
-  cursor: pointer;
-}
-
-.home-name {
-  font-size: var(--h1-size);
-  letter-spacing: -0.005rem;
-  font-weight: 600;
-  line-height: 2rem;
 }
 
 hr {

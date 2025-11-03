@@ -5,7 +5,6 @@ export default function Task({ task, processItems }: { task: string; processItem
         if (section) {
             const offset = 64;
             const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
-
             window.scrollTo({ top: y, behavior: 'smooth' });
         }
     };
