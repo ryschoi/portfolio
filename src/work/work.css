@@ -9,8 +9,8 @@
   border-radius: 1rem;
   position: relative;
   top: 0;
-  transition: top ease 0.5s;
   padding: 6px 16px;
+  transition: top ease 0.5s;
 }
 
 .work-tag:hover {

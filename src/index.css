@@ -106,6 +106,7 @@
   font-feature-settings: 'liga' 1, 'calt' 1;
   margin: 0;
   color: #212121;
+  /* background-color: #f6f5f4; */
 }
 
 #root {

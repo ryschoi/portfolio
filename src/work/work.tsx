@@ -36,8 +36,7 @@ export default function Work() {
           <h1>Hi, I'm Rebecca.<br /><span className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</span></h1>
 
           <div className="flex flex-row gap-[0.5rem]">
-            <Link key='/' to='/background' className=""><Tag text="Read about my work background" hover={true} clicked={false} /></Link>
-            {/* <Link key='/' to='/about' className=""><Tag text="Learn about me" hover={true} clicked={false} /></Link> */}
+            <Link key='/' to='/background' className=""><button className="work-tag">Read about my work background</button></Link>
             <Link key='/' to='/about#contacts' className=""><button className="work-tag">Contact me</button></Link>
           </div>
         </div>
