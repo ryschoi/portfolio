@@ -48,7 +48,7 @@ export default function Work() {
               {/* <Link key='/' to='/#work' className=""><button className="work-tag">See work</button></Link> */}
               {/* <Link key='/' to='/background' className=""><button className="work-tag">Read about my work background</button></Link>
             <Link key='/' to='/about#contacts' className=""><button className="work-tag">Contact me</button></Link> */}
-              <Link key='/' to='/background' className=""><HoverButton text="Read about my work background" hoverText="How did I decide on CS & Design? How did I end up here??" /></Link>
+              <Link key='/' to='/background' className=""><HoverButton text="Read about my work background" hoverText="What are my design principles? Why CS & Design? How did I end up here??" /></Link>
               <Link key='/' to='/about#contacts' className=""><HoverButton text="Contact me" hoverText="Email, phone, LinkedIn..." /></Link>
             </div>
           </div>
