@@ -3,7 +3,6 @@ import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import SectionHeader from "../components/section-header";
 import VerticalImageSpan from "../components/vertical-image-span";
-import TwoImageCaption from "../components/two-image-caption";
 import { Project } from "./project";
 import Task from "../components/task";
 
@@ -13,7 +12,7 @@ export default function SnakebiteData() {
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} />
             <div className="project-content-rest">
-                <Task task="Turn global snakebite and climate data into a cohesive, readable story" processItems={["Data collection and engineering", "Data visualization"]} />
+                <Task task="Turn global snakebite and climate data into a cohesive, readable story" processItems={["Data collection and engineering", "Data visualization", "Project reflection"]} />
 
                 {/* DATA COLLECTION */}
                 {/* <div className="section" id="data-collection-and-engineering">
@@ -81,7 +80,10 @@ export default function SnakebiteData() {
                 {/* DEGREES */}
                 <div className="section align-center">
                     <div className="thing w-slim">
-                        <h3>Degree of separation</h3>
+                        <div className="flex flex-col">
+                            <h3>Degree of separation</h3>
+                            <h3 className="gray">Reducing the time needed to grasp the main message</h3>
+                        </div>
                         <p>In this chart, I wanted to highlight the large potential disparity in reported data and reality with the differently sized boxes. The challenge here was figuring out how to label the boxes in a way that would get the message across to viewers with the least amount of brain work.<br /><br />I followed Edward Tufte's "degree of separation" scale, which is a method of determining how accessible labels are to their corresponding data points, and connected the labels directly to the boxes rather than separating them from the boxes entirely. This way, there is less back-and-forth between the boxes and the labels, and the main message of the visualization can be understood at just a glance since all the central points are consolidated in one area.</p>
                     </div>
                     {/* IMAGES */}
@@ -111,7 +113,7 @@ export default function SnakebiteData() {
                     <VerticalImageSpan path="images/work/snakebite-data/snakebiteData.png" />
                 </div>
 
-                <div className="thing">
+                <div className="thing" id="project-reflection">
                     <h3>Reflection</h3>
                     <p className="w-slim">Through this project, I learned that a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but that the data needs to be represented in a language users can read, instead of delivering it in the raw, large, abstract numbers. For this project, that meant setting solid context for each visualization and, in my single-tone design, being very intentional with each time I used the color green so that the visualizations could be interpretted with even just a glance. The color green running throughout the entire poster also keeps the same meaning of referring to the countries with higher-than-average rates of snakebite.</p>
                 </div>

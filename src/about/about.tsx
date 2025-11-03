@@ -80,6 +80,7 @@ export default function About() {
             <span className="gray h3">Apart from my <HoverButton path="/" text="Work" hoverText="Collection of projects that captures the full breadth of my interests" /> and <HoverButton path="/background" text="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
             </span>
           </h2>
+          <br />
           <button onClick={() => handleScroll("contacts")} className="hover-tag">↓ Contact</button>
         </div>
 

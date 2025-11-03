@@ -13,14 +13,14 @@ export default function Task({ task, processItems }: { task: string; processItem
         <div className="task-container flex place-content-center">
             <div className="mob-mid-w my-[7rem]">
                 <div>
-                    <p className="caption">Task</p>
+                    <p className="caption light-gray">Task</p>
                     <h1 className="white">{task}</h1>
                 </div>
                 <br />
                 <br />
-                <p className="white">Process overview</p>
+                <p className="caption light-gray">Process overview</p>
                 {processItems.map((item, index) => (
-                    <p key={index} onClick={() => handleScroll(item)} className="caption hover:underline cursor-pointer">
+                    <p key={index} onClick={() => handleScroll(item)} className="white hover:underline cursor-pointer">
                         → {item}
                     </p>
                 ))}

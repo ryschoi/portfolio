@@ -37,7 +37,7 @@
     width: 100vw;
     margin-left: calc(-4vw);
     margin-right: calc(-4vw);
-    background-color: #1e1e1e;
+    background-color: #212121;
 }
 
 .gray-full-container {
@@ -52,7 +52,7 @@
 .section {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
     width: 100%;
 }
 
