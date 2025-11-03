@@ -14,11 +14,11 @@ export default function Task({ task, processItems }: { task: string; processItem
             <div className="mob-mid-w my-[7rem]">
                 <div>
                     <p className="caption">Task</p>
-                    <h1 className="text-[#e8e8e6]">{task}</h1>
+                    <h1 className="white">{task}</h1>
                 </div>
                 <br />
                 <br />
-                <p className="text-[#e8e8e6]">Process overview</p>
+                <p className="white">Process overview</p>
                 {processItems.map((item, index) => (
                     <p key={index} onClick={() => handleScroll(item)} className="caption hover:underline cursor-pointer">
                         → {item}

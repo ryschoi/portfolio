@@ -64,7 +64,7 @@ export default function Rockumentary() {
 
                 {/* FINAL */}
                 <div className="section">
-                    <h2 className="self-center mob-mid-w">Final poster</h2>
+                    <h2 className="w-slim self-center">Final poster</h2>
                     <VerticalImageSpan path="images/work/rockumentary/rockumentary.png" />
                 </div>
             </div>

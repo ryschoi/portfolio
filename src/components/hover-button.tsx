@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router";
+import { useLocation, Link } from "react-router";
 
-export default function HoverButton({ text, hoverText }: { text: string; hoverText: string }) {
+export default function HoverButton({ text, hoverText, path }: { text: string; hoverText: string, path: string }) {
   const { hash } = useLocation();
 
   useEffect(() => {
@@ -14,13 +14,15 @@ export default function HoverButton({ text, hoverText }: { text: string; hoverTe
   }, [hash]);
 
   return (
-    <div className="relative group inline">
-      <button className="work-tag">
-        {text}
-      </button>
-      <div className="tooltip opacity-0 group-hover:opacity-100 gray">
-        {hoverText}
+    <Link key='/' to={path}>
+      <div className="relative inline">
+        <button className="hover-tag peer" data-full-text={hoverText}>
+          {text}
+        </button>
+        <p className="tooltip opacity-0 peer-hover:opacity-100 gray">
+          {hoverText}
+        </p>
       </div>
-    </div>
+    </Link>
   );
 }

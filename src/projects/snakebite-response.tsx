@@ -19,7 +19,7 @@ export default function snakebiteResponse() {
                 <div className="section" id="research">
                     <SectionHeader title="Part 1" description="Research" optional="To start off, I conducted research on the current snakebite crisis, focusing on its effects in Africa, and how to prevent fatal encounters with snakes, also focused on Africa and Botswana." />
                     <img src="images/work/snakebite-response/s-res-research.png" alt="" className="mob-mid-w self-center subtle-shadow rounded" />
-                    <p className="mob-mid-w self-center">After collecting all the tips for snakebite prevention, it was time to identify a primary organizing principle from Wurman's L.A.T.C.H. (location, alphabet, time, category, hierarchy). My information sorted best categorically, and into the following three categories: indoor/home, outdoor/activity, and apparel.</p>
+                    <p className="w-slim self-center">After collecting all the tips for snakebite prevention, it was time to identify a primary organizing principle from Wurman's L.A.T.C.H. (location, alphabet, time, category, hierarchy). My information sorted best categorically, and into the following three categories: indoor/home, outdoor/activity, and apparel.</p>
                 </div>
 
                 <div className="section" id="poster-and-concept-design">
@@ -35,7 +35,7 @@ export default function snakebiteResponse() {
                         <VerticalImageSpan path="images/work/snakebite-response/snakebitePrevention.png" />
                         <p className="caption cap-top">Final version</p>
                     </div>
-                    <p className="mob-mid-w self-center">The result is a poster that is illustration-focused, where the text supports instead of creating the content. Though drawing is not my strong-suit, I got a lot of practice drawing simple scenes with perspective through this poster. The refinement of the color palette helps give any instance of color the important role of highlighting special items.<br /><br />The official language of Botswana is English, but it's likely that some will not know how to read English. The illustration-based poster ensures that all would be able to interpret the content in the poster, as the center scene is a picture of what their own life in Botswana might look like.</p>
+                    <p className="w-slim self-center">The result is a poster that is illustration-focused, where the text supports instead of creating the content. Though drawing is not my strong-suit, I got a lot of practice drawing simple scenes with perspective through this poster. The refinement of the color palette helps give any instance of color the important role of highlighting special items.<br /><br />The official language of Botswana is English, but it's likely that some will not know how to read English. The illustration-based poster ensures that all would be able to interpret the content in the poster, as the center scene is a picture of what their own life in Botswana might look like.</p>
                 </div>
                 <div className="section" id="wallet-cards">
                     <SectionHeader title="Part 3" description="Wallet cards" optional="After the poster, I created a set of wallet cards with the same content on the poster for people to have a way to access the information more conveniently." />

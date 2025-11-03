@@ -105,6 +105,7 @@ h1 {
   font-size: var(--h1-size);
   line-height: var(--h1-leading);
   font-weight: var(--heading-weight);
+  letter-spacing: -0.25px;
 }
 
 h2,
@@ -113,6 +114,7 @@ h2,
   font-size: var(--h2-size);
   line-height: var(--h2-leading);
   font-weight: var(--heading-weight);
+  letter-spacing: -0.25px;
 }
 
 h3,
@@ -121,6 +123,7 @@ h3,
   font-size: var(--h3-size);
   line-height: var(--h3-leading);
   font-weight: var(--heading-weight);
+  letter-spacing: -0.25px;
 }
 
 h4,
@@ -160,7 +163,7 @@ a:hover {
 }
 
 .light-gray {
-  color: #c3c3c3;
+  color: #a9a9a9;
 }
 
 .gray {
@@ -212,6 +215,11 @@ a:hover {
   color: #E0DFAC;
 }
 
+.w-slim {
+  width: var(--mob-page-w);
+  max-width: 41rem;
+}
+
 button {
   border: none;
   font-size: 0.85rem;
@@ -226,7 +234,6 @@ button {
   position: relative;
   top: 0;
   transition: top ease 0.5s;
-  /* transition: transform .25s; */
 }
 
 .tag:hover {

@@ -21,9 +21,7 @@ export default function OpenForum() {
                 {/* PROBLEM */}
                 <div id="define-the-problem" className="section">
                     <SectionHeader title="Phase 1: Problem" description="Define the problem" optional="We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?" />
-                    <div className="mob-mid-w self-center">
-                        <p className="mb-[0.5rem]">From our online research, we found that technology can create personalized experiences and provide tailored recommendations for events, activities, and communities based on students’ interests and preferences. Interest-based communities, mentorship matching, and group planning tools could help students build relationships over shared goals or hobbies.</p>
-                    </div>
+                    <p className="mb-[0.5rem] w-slim self-center">From our online research, we found that technology can create personalized experiences and provide tailored recommendations for events, activities, and communities based on students’ interests and preferences. Interest-based communities, mentorship matching, and group planning tools could help students build relationships over shared goals or hobbies.</p>
                     <div className="gray-full-container">
                         <div className="med-w my-[4rem]">
                             <h3 className="mb-[1.5rem] dark-gray caption">Existing options: online social platforms</h3>
@@ -107,7 +105,7 @@ export default function OpenForum() {
                         </div>
                     </div> */}
                     {/* NEXT STEPS */}
-                    <div className="mob-mid-w">
+                    <div className="w-slim self-center">
                         <p>From this, we decided we needed an app that would...</p>
                         <ul>
                             <li>help organize or facilitate social interaction, not create a digital space for it</li>
@@ -122,7 +120,7 @@ export default function OpenForum() {
                 <div id="ideate-solutions" className="section">
                     <SectionHeader title="Phase 3: Ideation" description="Solution ideation" optional="Using the themes and constraints we got from our research, I brainstormed 12 different potential solutions, and one of my team members did another three." />
                     {/* IDEAS LIST */}
-                    <div className="mob-mid-w">
+                    <div className="w-slim self-center">
                         <p className="mb-[0.5rem]">Some of our ideas were:</p>
                         <ul>
                             <li>An app for clubs to post their upcoming events. A filter-heavy platform for users to curate their feed to events that fit their preferences (i.e. free food, resume/career help, networking, etc.)</li>
@@ -195,7 +193,7 @@ export default function OpenForum() {
                             </td>
                         </tr>
                     </table> */}
-                    <p className="mob-mid-w">Coming soon.</p>
+                    <p className="w-slim self-center">Coming soon.</p>
                 </div>
 
                 {/* HIGH-FI */}

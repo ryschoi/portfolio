@@ -6,7 +6,6 @@ import "./work.css";
 import WorkCard from "./work-card";
 import Tag from "../components/tag";
 import { Link, useLocation } from "react-router";
-import ProjectHeader from "components/project-header";
 import HoverButton from "components/hover-button";
 
 export default function Work() {
@@ -24,12 +23,6 @@ export default function Work() {
     return isActive && hasTag;
   });
 
-  const handleClick = (to: string) => {
-    if (location.pathname === to && ['/', '/background', '/about', '/resume'].includes(to)) {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="flex flex-col">
       {/* GREETING */}
@@ -37,26 +30,24 @@ export default function Work() {
         <img src="images/notion_face.png" className="w-[8rem] object-contain" />
         <div className="flex flex-col">
           {/* OLD HEADER (CENTERED TEXT) mt-9rem, mb-13rem */}
-            {/* <h1 className="text-red-500 text-center w-[39rem] max-w-[80vw]">
+          {/* <h1 className="text-red-500 text-center w-[39rem] max-w-[80vw]">
             <span className="gray">Hi, I'm Rebecca.<br /></span>A designer and developer who is using tech, design, and data to create intentionally and meaningfully.
           </h1> */}
           {/* NEW HEADER BELOW */}
           <div className="w-[39rem] max-w-[80vw] flex flex-col gap-[3vh]">
-            <h1>Hi, I'm Rebecca.<br /><span className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</span></h1>
-
-            <div className="flex flex-row gap-[0.5rem]">
-              {/* <Link key='/' to='/#work' className=""><button className="work-tag">See work</button></Link> */}
-              {/* <Link key='/' to='/background' className=""><button className="work-tag">Read about my work background</button></Link>
-            <Link key='/' to='/about#contacts' className=""><button className="work-tag">Contact me</button></Link> */}
-              <Link key='/' to='/background' className=""><HoverButton text="Read about my work background" hoverText="What are my design principles? Why CS & Design? How did I end up here??" /></Link>
-              <Link key='/' to='/about#contacts' className=""><HoverButton text="Contact me" hoverText="Email, phone, LinkedIn..." /></Link>
+            <h1>Hi, I'm Rebecca.<br />
+              <span className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</span>
+            </h1>
+            <div className="flex flex-wrap gap-[0.5rem]">
+              <HoverButton path="/background" text="Read about my work background" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
+              <HoverButton path="/about#contacts" text="Contact me" hoverText="Email, phone, LinkedIn..." />
             </div>
           </div>
         </div>
       </div>
 
       {/* FILTERS */}
-      <div className="flex flex-wrap gap-[0.5rem] mb-[2rem]" id="">
+      <div className="flex flex-wrap gap-[0.5rem] mb-[1.5rem]" id="">
         {allTags.map((tag) => {
           const isSelected = selectedTag === tag;
 
@@ -68,9 +59,7 @@ export default function Work() {
             </div>
           );
         })}
-        <button onClick={() => setSelectedTag(null)} id="clear-filters" className="gray underline">
-          Clear filters
-        </button>
+        <button onClick={() => setSelectedTag(null)} id="clear-filters" className="gray underline">Clear filters</button>
       </div>
 
       {/* WORK CARDS */}

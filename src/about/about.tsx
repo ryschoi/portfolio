@@ -4,10 +4,21 @@ import { useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
 import Tag from "../components/tag";
 import HoverButton from "components/hover-button";
+import TagCursor from "components/tag-cursor";
 
 export default function About() {
   const { hash } = useLocation();
   interface CopyButtonProps { text: string; }
+
+  const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
+
+  const handleMove = (e: React.MouseEvent<HTMLImageElement>) => {
+    setCursor({ x: e.clientX, y: e.clientY, visible: true });
+  };
+
+  const hideCursor = (e: React.MouseEvent<HTMLImageElement>) => {
+    setCursor(prev => ({ ...prev, visible: false }));
+  };
 
   useEffect(() => {
     if (hash) {
@@ -43,37 +54,50 @@ export default function About() {
     );
   };
 
+  const handleScroll = (item: string) => {
+    const id = item.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const section = document.getElementById(id);
+    if (section) {
+      const offset = 64;
+      const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="flex justify-center w-full">
-      <div className="flex flex-col gap-[2rem] w-(--mob-page-w) max-w-[41rem]">
+      <div className="flex flex-col gap-[2rem] w-slim">
         {/* IMAGE */}
         <div className="overflow-hidden w-full">
           <img id="headshot" className="w-full h-auto object-cover rounded" src="images/wide.png" />
         </div>
 
         {/* GREETING */}
-        <h2 className="mb-[1rem]">
-          About me
-          <br />
-          <span className="gray h3">Apart from my <Link key='/' to='/' className=""><HoverButton text="Work" hoverText="Collection of some projects that shows the full breadth of my interests" /></Link> and <Link key='/' to='/background' className=""><HoverButton text="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I end up here??" /></Link>
-          </span>
-        </h2>
+        <div>
+          <h2 className="mb-[1rem]">
+            About me
+            <br />
+            <span className="gray h3">Apart from my <HoverButton path="/" text="Work" hoverText="Collection of projects that captures the full breadth of my interests" /> and <HoverButton path="/background" text="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
+            </span>
+          </h2>
+          <button onClick={() => handleScroll("contacts")} className="hover-tag">↓ Contact</button>
+        </div>
 
         <hr />
 
-        {/* SUMMARY */}
-          <div className="thing">
-            {/* <img src="/images/code_icon.png" className="w-[4rem] mb-[0.75rem] aspect-square" /> */}
-            <h3 className="tracking-[-0.25px]">Currently...</h3>
-            <ul>
-              <li className="h3">Third-year Computer Science and Design student at Northeastern University</li>
-              <li className="h3">Doing my co-op at The Boston Beer Company on the Marketing Analytics team, using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible</li>
-              <li className="h3">Design lead at at <a href="https://www.sandboxnu.com/" className="h3 underline">Sandbox NU</a> for <a className="h3 underline" href="/cooper">Cooper</a>, creating a job experience review platform to help Northeastern students make more informed co-op decisions</li>
-            </ul>
-          </div>
+        {/* CURRENTLY */}
+        <div className="thing">
+          <h3 className="tracking-[-0.25px]">Currently...</h3>
+          <ul>
+            <li className="h3">Third-year Computer Science and Design student at Northeastern University</li>
+            <li className="h3">Doing my co-op at The Boston Beer Company on the Marketing Analytics team, using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible</li>
+            <li className="h3">Design lead at at <a href="https://www.sandboxnu.com/" className="h3 underline">Sandbox NU</a> for <a className="h3 underline" href="/cooper">Cooper</a>, creating a job experience review platform to help Northeastern students make more informed co-op decisions</li>
+          </ul>
+        </div>
 
         <hr />
 
+        {/* OTHER THINGS */}
         <div className="flex flex-col gap-[1.5rem]">
           <h3 className="">
             <span className="font-[400]">Some things that keep me going:</span> long walks around the city, baking (& thinking about my someday-bakery), bass guitar / music, kombucha, spontaneous changes to this website, and my dog<br />
@@ -91,6 +115,14 @@ export default function About() {
               <p className="caption cap-top">from one of my walks!</p>
             </div>
           </div>
+          {/* <>
+            <img className="tag-img rounded" src="images/nara.png"
+              style={{ cursor: "none" }}
+              onMouseMove={(e: React.MouseEvent<HTMLImageElement>) => handleMove(e)}
+              onMouseEnter={(e: React.MouseEvent<HTMLImageElement>) => handleMove(e)}
+              onMouseLeave={(e: React.MouseEvent<HTMLImageElement>) => hideCursor(e)} />
+            <TagCursor text="My dog, Nara" x={cursor.x} y={cursor.y} visible={cursor.visible} />
+          </> */}
         </div>
 
         <hr />
@@ -121,45 +153,6 @@ export default function About() {
           <br /><br />
           It's important to me that the projects I work on are meaningful to their users and in the way that they are created. As a designer, this means that I am intentional with all my choices, making sure that whatever I design is easy on the eyes, easy to use, and delivers what the user needs out of the product. As a developer, I focus on scalability, efficiency, and writing clean and maintainable code.
         </p> */}
-
-        {/* <hr /> */}
-        {/* SKILLS */}
-        {/* <div className="flex justify-between w-full">
-          <div className="flex flex-col gap-[0.5rem] w-[20vw]">
-            <p className="caption">Tech & development</p>
-            <div>
-              <p>Front-end development</p>
-              <p>Web design</p>
-              <p>Design-developer handoff</p>
-            </div>
-            <p>Languages: HTML, CSS, Typescript, Java, Python</p>
-            <p>Frameworks & tools: React, Tailwind, Git, VS Code, IntelliJ, Eclipse</p>
-          </div>
-          <div className="flex flex-col gap-[0.5rem] w-[20vw]">
-            <p className="caption">Design</p>
-            <div>
-              <p>UI/UX design</p>
-              <p>Web design</p>
-              <p>Data visualization</p>
-              <p>Information design</p>
-              <p>Prototyping (low, medium, and high fidelity)</p>
-              <p>Usability testing</p>
-              <p>User research, interviews, personas, affinity diagrams, thematic analysis</p>
-              <p>Information architecture</p>
-              <p>Design system and brand creation</p>
-              <p>Design-developer handoff</p>
-            </div>
-            <p>Tools: Figma, Adobe Illustrator, Adobe InDesign</p>
-          </div>
-          <div className="flex flex-col gap-[0.5rem] w-[20vw]">
-            <p className="caption">Data</p>
-            <div>
-              <p>Data visualization</p>
-              <p>Data analysis</p>
-            </div>
-            <p>Tools: Python, R, RStudio, Microsoft Excel</p>
-          </div>
-        </div> */}
       </div>
     </div>
   );
