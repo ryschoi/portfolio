@@ -1,54 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-/* Neutral Regular */
-@font-face {
-  font-family: 'Poly Sans';
-  src: url('fonts/poly/Standard/PolySansTrial-Neutral.otf') format('opentype');
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* Neutral Italic */
-@font-face {
-  font-family: 'Poly Sans';
-  src: url('fonts/poly/Standard/PolySansItalicTrial-NeutralItalic.otf') format('opentype');
-  font-weight: 400;
-  font-style: italic;
-}
-
-/* Slim Regular */
-@font-face {
-  font-family: 'Poly Sans';
-  src: url('fonts/poly/Standard/PolySansTrial-Slim.otf') format('opentype');
-  font-weight: 300;
-  font-style: normal;
-}
-
-/* Slim Italic */
-@font-face {
-  font-family: 'Poly Sans';
-  src: url('fonts/poly/Standard/PolySansItalicTrial-SlimItalic.otf') format('opentype');
-  font-weight: 300;
-  font-style: italic;
-}
-
-/* Bulky Regular */
-@font-face {
-  font-family: 'Poly Sans';
-  src: url('fonts/poly/Standard/PolySansTrial-Bulky.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-
-/* Median Regular */
-@font-face {
-  font-family: 'Poly Sans';
-  src: url('fonts/poly/Standard/PolySansTrial-Median.otf') format('opentype');
-  font-weight: 500;
-  font-style: normal;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -126,7 +78,7 @@ a {
 
 .caption {
   font-family: 'Space Mono';
-  color: #8b8b8b;
+  color: #727272;
   text-transform: uppercase;
   font-size: var(--ps-size);
 }
@@ -212,7 +164,7 @@ a:hover {
 }
 
 .gray {
-  color: #8b8b8b;
+  color: #727272;
 }
 
 .dark-gray {

@@ -6,6 +6,10 @@
     /* padding: 1rem; */
 }
 
+.testing {
+    font-weight: 700;
+}
+
 .timeline {
     margin-top: 20px;
     position: relative;

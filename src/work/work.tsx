@@ -33,21 +33,24 @@ export default function Work() {
   return (
     <div className="flex flex-col">
       {/* GREETING */}
-      <div className="flex flex-col mt-[9rem] mb-[13rem] items-center">
-        {/* OLD HEADER (CENTERED TEXT) mt-9rem, mb-13rem */}
-        {/* <h1 className="text-red-500 text-center w-[39rem] max-w-[80vw]">
-          <span className="gray">Hi, I'm Rebecca.<br /></span>A designer and developer who is using tech, design, and data to create intentionally and meaningfully.
-        </h1> */}
-        {/* NEW HEADER BELOW */}
-        <div className="w-[39rem] max-w-[80vw] flex flex-col gap-[4vh]">
-          <h1>Hi, I'm Rebecca.<br /><span className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</span></h1>
+      <div className="flex flex-wrap gap-[3rem] items-start mt-[9rem] mb-[13rem] self-center">
+        <img src="images/notion_face.png" className="w-[8rem] object-contain" />
+        <div className="flex flex-col">
+          {/* OLD HEADER (CENTERED TEXT) mt-9rem, mb-13rem */}
+            {/* <h1 className="text-red-500 text-center w-[39rem] max-w-[80vw]">
+            <span className="gray">Hi, I'm Rebecca.<br /></span>A designer and developer who is using tech, design, and data to create intentionally and meaningfully.
+          </h1> */}
+          {/* NEW HEADER BELOW */}
+          <div className="w-[39rem] max-w-[80vw] flex flex-col gap-[3vh]">
+            <h1>Hi, I'm Rebecca.<br /><span className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</span></h1>
 
-          <div className="flex flex-row gap-[0.5rem]">
-            {/* <Link key='/' to='/#work' className=""><button className="work-tag">See work</button></Link> */}
-            {/* <Link key='/' to='/background' className=""><button className="work-tag">Read about my work background</button></Link>
+            <div className="flex flex-row gap-[0.5rem]">
+              {/* <Link key='/' to='/#work' className=""><button className="work-tag">See work</button></Link> */}
+              {/* <Link key='/' to='/background' className=""><button className="work-tag">Read about my work background</button></Link>
             <Link key='/' to='/about#contacts' className=""><button className="work-tag">Contact me</button></Link> */}
-            <Link key='/' to='/background' className=""><HoverButton text="Read about my work background" hoverText="How did I decide on CS & Design? How did I end up here??" /></Link>
-            <Link key='/' to='/about#contacts' className=""><HoverButton text="Contact me" hoverText="Email, phone, LinkedIn..." /></Link>
+              <Link key='/' to='/background' className=""><HoverButton text="Read about my work background" hoverText="How did I decide on CS & Design? How did I end up here??" /></Link>
+              <Link key='/' to='/about#contacts' className=""><HoverButton text="Contact me" hoverText="Email, phone, LinkedIn..." /></Link>
+            </div>
           </div>
         </div>
       </div>

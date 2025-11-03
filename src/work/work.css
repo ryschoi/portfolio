@@ -6,6 +6,18 @@
   background-color: #EFEFEF;
 }
 
+.plain-tag {
+  background-color: #fdfdfd;
+  color: #1e1e1e;
+  border: 1.5px solid #cecece;
+  border-radius: 1rem;
+  position: relative;
+  top: 0;
+  padding: 6px 16px;
+  transition: top ease 0.5s;
+  width: fit-content;
+}
+
 .work-tag {
   background-color: #fdfdfd;
   color: #1e1e1e;

@@ -15,7 +15,7 @@ export default function HoverButton({ text, hoverText }: { text: string; hoverTe
 
   return (
     <div className="relative group">
-      <button className="tag py-[6px] px-[16px] rounded bg-gray-100 hover:bg-gray-200 transition">
+      <button className="work-tag">
         {text}
       </button>
       <div className="tooltip opacity-0 group-hover:opacity-100 gray">
