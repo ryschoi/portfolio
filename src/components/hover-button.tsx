@@ -14,7 +14,7 @@ export default function HoverButton({ text, hoverText }: { text: string; hoverTe
   }, [hash]);
 
   return (
-    <div className="relative group">
+    <div className="relative group inline">
       <button className="work-tag">
         {text}
       </button>

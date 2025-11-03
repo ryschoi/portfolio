@@ -36,7 +36,7 @@ export default function Footer() {
                     </div>
                     <div>
                         <p className="caption mb-[0.5rem]">Contact</p>
-                        <p>choi.re@northeastern.edu</p>
+                        <p>rebecca.choi05@gmail.com</p>
                         <p>(510) 682-0020</p>
                         <a href="https://www.linkedin.com/in/ryschoi/" className="underline">LinkedIn</a>
                     </div>

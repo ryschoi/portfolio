@@ -5,7 +5,7 @@ export default function Background() {
         <div className="flex justify-center w-full">
             <div className="flex flex-col gap-[4rem] w-(--mob-page-w) max-w-[41rem]">
                 <div className="flex flex-col gap-[1.25rem]">
-                    <button className="plain-tag self-center">Work background & philosophy</button>
+                    <button className="plain-tag self-center subtle-shadow">Work background & philosophy</button>
                     <h1 className="text-center text-[2.5rem] leading-[3rem] w-9/10 self-center">From coding to designing, always thinking one level deeper.</h1>
                     <p className="gray text-center">I use my technical skills and design thinking to create meaningful and useful products, but am a thinker at the core and always aim to understand how things work.</p>
 

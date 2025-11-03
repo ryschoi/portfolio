@@ -40,8 +40,7 @@
 
 .tooltip {
   position: absolute;
-  top: 100%;
-  margin-bottom: 0.5rem;
+  top: 125%;
   left: 0;
   transform: translateX(-0.3rem);
   white-space: nowrap;
@@ -65,7 +64,7 @@
 }
 
 .subtle-shadow {
-  filter: drop-shadow(0 0 3rem #e0e0e0)
+  filter: drop-shadow(0 0 3rem #d0d0d0)
 }
 
 .dark-shadow {

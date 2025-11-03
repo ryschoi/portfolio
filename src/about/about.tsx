@@ -1,8 +1,9 @@
 import "./about.css";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import Tag from "../components/tag";
+import HoverButton from "components/hover-button";
 
 export default function About() {
   const { hash } = useLocation();
@@ -44,33 +45,41 @@ export default function About() {
 
   return (
     <div className="flex justify-center w-full">
-      <div className="flex flex-col gap-[4rem] w-(--mob-page-w) max-w-[41rem]">
+      <div className="flex flex-col gap-[2rem] w-(--mob-page-w) max-w-[41rem]">
         {/* IMAGE */}
         <div className="overflow-hidden w-full">
           <img id="headshot" className="w-full h-auto object-cover rounded" src="images/wide.png" />
         </div>
 
         {/* GREETING */}
-        <h2 className="dark-gray">Hi, I'm Rebecca. <span className="gray">I'm a third-year Computer Science and Design student at Northeastern University.</span></h2>
+        <h2 className="mb-[1rem]">
+          About me
+          <br />
+          <span className="gray h3">Apart from my <Link key='/' to='/' className=""><HoverButton text="Work" hoverText="Collection of some projects that shows the full breadth of my interests" /></Link> and <Link key='/' to='/background' className=""><HoverButton text="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I end up here??" /></Link>
+          </span>
+        </h2>
+
+        <hr />
 
         {/* SUMMARY */}
-        <div className="flex flex-col gap-[1.5rem]">
-          <h2 className="dark-gray">I'm currently doing my co-op at The Boston Beer Company on the Marketing Analytics team, <span className="gray">using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible.</span> I'm also a design lead at <a href="https://www.sandboxnu.com/" className=" h2 underline dark-gray">Sandbox NU</a> for <a className="h2 underline dark-gray" href="/cooper">Cooper</a>, <span className="gray">creating an job experience review platform to help Northeastern students make more informed co-op decisions.</span></h2>
-          {/* IMAGES */}
-          <div className="work-img-group-col">
-            <div className="flex flex-col">
-              <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/cooper hangout.PNG" />
-              <p className="caption cap-top">The Cooper team!</p>
-            </div>
-            <div className="flex flex-col">
-              <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/sandbox group.JPG" />
-              <p className="caption cap-top">sandbox spr '25</p>
-            </div>
+          <div className="thing">
+            {/* <img src="/images/code_icon.png" className="w-[4rem] mb-[0.75rem] aspect-square" /> */}
+            <h3 className="tracking-[-0.25px]">Currently...</h3>
+            <ul>
+              <li className="h3">Third-year Computer Science and Design student at Northeastern University</li>
+              <li className="h3">Doing my co-op at The Boston Beer Company on the Marketing Analytics team, using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible</li>
+              <li className="h3">Design lead at at <a href="https://www.sandboxnu.com/" className="h3 underline">Sandbox NU</a> for <a className="h3 underline" href="/cooper">Cooper</a>, creating a job experience review platform to help Northeastern students make more informed co-op decisions</li>
+            </ul>
           </div>
-        </div>
+
+        <hr />
 
         <div className="flex flex-col gap-[1.5rem]">
-          <h2 className="gray">In my free time I often go on long walks around the city, cook and bake new things, and teach my dog new tricks. I also come from a very musical family, and have been teaching myself the bass guitar since middle school.</h2>
+          <h3 className="">
+            <span className="font-[400]">Some things that keep me going:</span> long walks around the city, baking (& thinking about my someday-bakery), bass guitar / music, kombucha, spontaneous changes to this website, and my dog<br />
+            {/* Pet peeves: custom cursors, inefficiency */}
+            {/* Dislikes: custom cursors */}
+          </h3>
           {/* IMAGES */}
           <div className="work-img-group-col">
             <div className="flex flex-col">
@@ -79,11 +88,9 @@ export default function About() {
             </div>
             <div className="flex flex-col">
               <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/arboretum wide.jpg" />
-              <p className="caption cap-top">arnold arboretum (highly recommend for a quiet, scenic walk)</p>
+              <p className="caption cap-top">from one of my walks!</p>
             </div>
           </div>
-          <br />
-          <h2 className="gray">Read about my <a className="gray h2 underline" href="/background">work background & philosophy here</a>.</h2>
         </div>
 
         <hr />
@@ -94,7 +101,7 @@ export default function About() {
           <div className="flex gap-[1rem] items-center">
             <p className="caption">Contact</p>
             <div className="flex flex-wrap gap-[0.8rem]">
-              <CopyButton text="choi.re@northeastern.edu" />
+              <CopyButton text="rebecca.choi05@gmail.com" />
               <CopyButton text="(510) 682-0020" />
             </div>
           </div>
