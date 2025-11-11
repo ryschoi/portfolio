@@ -74,6 +74,10 @@
   filter: drop-shadow(0 0 3rem #d0d0d0)
 }
 
+.smaller-shadow {
+  filter: drop-shadow(0 0 1.5rem #d0d0d0)
+}
+
 .dark-shadow {
   filter: drop-shadow(0 0 3rem #303030)
 }

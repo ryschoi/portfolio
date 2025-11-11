@@ -60,8 +60,6 @@ export default function Work() {
               <Tag hover={true} clicked={isSelected}>
                 {tag} <span className="gray text-[0.85rem]">{count}</span>
               </Tag>
-
-              {/* <span className="gray text-[0.85rem]">{count}</span> */}
             </div>
           );
         })}

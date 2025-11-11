@@ -68,20 +68,44 @@ export default function About() {
     <div className="flex justify-center w-full">
       <div className="flex flex-col gap-[2rem] w-slim">
         {/* IMAGE */}
-        <div className="overflow-hidden w-full">
+        {/* <div className="overflow-hidden w-full">
           <img id="headshot" className="w-full h-auto object-cover rounded" src="images/wide.png" />
-        </div>
+        </div> */}
 
         {/* GREETING */}
+        {/* <div>
+          <h2 className="mb-[1rem]">
+            About me
+            <br />
+            <span className="gray h3">
+              Apart from my <HoverButton path="/" text="Work" hoverText="Collection of projects that captures the full breadth of my interests" /> and <HoverButton path="/background" text="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
+            </span>
+          </h2>
+          
+          <br />
+          <button onClick={() => handleScroll("contacts")} className="hover-tag">↓ Contact</button>
+        </div> */}
+
         <div>
           <h2 className="mb-[1rem]">
             About me
             <br />
-            <span className="gray h3">Apart from my <HoverButton path="/" text="Work" hoverText="Collection of projects that captures the full breadth of my interests" /> and <HoverButton path="/background" text="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
+            <span className="gray h3">
+              Apart from my <HoverButton path="/" text="Work" hoverText="Collection of projects that captures the full breadth of my interests" /> and <HoverButton path="/background" text="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
             </span>
           </h2>
+
+          <div className="relative rounded flex align-center justify-center overflow-hidden">
+            <div className="my-[3vw]">
+              <img src="images/denby_headshot_cropped.jpg"
+                alt=""
+                className="rounded w-[20rem] max-w-[85vw] smaller-shadow object-cover"
+              />
+            </div>
+          </div>
+
           <br />
-          <button onClick={() => handleScroll("contacts")} className="hover-tag">↓ Contact</button>
+          <button onClick={() => handleScroll("contacts")} className="hover-tag">↓ Contact & links</button>
         </div>
 
         <hr />
@@ -113,7 +137,7 @@ export default function About() {
             </div>
             <div className="flex flex-col">
               <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/arboretum wide.jpg" />
-              <p className="caption cap-top">from one of my walks!</p>
+              <p className="caption cap-top">from one of my walks</p>
             </div>
           </div>
           {/* <>
