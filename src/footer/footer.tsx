@@ -21,7 +21,7 @@ export default function Footer() {
                     <Link to="/" onClick={() => handleClick('/')}>Rebecca Choi</Link>
                     <div>
                         <p className="caption">Coded and designed by me ◡̈</p>
-                        <p className="caption">Last updated: Sept 2025</p>
+                        <p className="caption">Last updated: Nov 2025</p>
                     </div>
                 </div>
 

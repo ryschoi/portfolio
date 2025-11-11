@@ -50,12 +50,18 @@ export default function Work() {
       <div className="flex flex-wrap gap-[0.5rem] mb-[1.5rem]" id="">
         {allTags.map((tag) => {
           const isSelected = selectedTag === tag;
+          const count = projects.filter((p) => p.active === true && p.tags.includes(tag)).length;
 
           return (
             <div
               key={tag}
-              onClick={() => setSelectedTag((prev) => (prev === tag ? null : tag))}>
-              <Tag text={tag} hover={true} clicked={isSelected} />
+              onClick={() => setSelectedTag((prev) => (prev === tag ? null : tag))}
+              className="flex items-center gap-[0.5rem]">
+              <Tag hover={true} clicked={isSelected}>
+                {tag} <span className="gray text-[0.85rem]">{count}</span>
+              </Tag>
+
+              {/* <span className="gray text-[0.85rem]">{count}</span> */}
             </div>
           );
         })}

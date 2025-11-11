@@ -1,4 +1,11 @@
-export default function Tag({ text, hover, clicked }: { text: string, hover: boolean, clicked: boolean }) {
+type TagProps = {
+  text?: string;
+  hover: boolean;
+  clicked: boolean;
+  children?: React.ReactNode;
+};
+
+export default function Tag({ text, hover, clicked, children }: TagProps) {
     const basePadding = "py-[6px] px-[16px]";
     const style = clicked
         ? "tag-clicked"
@@ -7,6 +14,6 @@ export default function Tag({ text, hover, clicked }: { text: string, hover: boo
             : "tag-no-hover";
 
     return (
-        <button className={`${style} ${basePadding}`}>{text}</button>
+        <button className={`${style} ${basePadding}`}>{text || children}</button>
     );
 }
