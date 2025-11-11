@@ -22,7 +22,7 @@ export default function Background() {
                     <img src="/images/design_icon.png" className="w-[4rem] mb-[0.75rem] aspect-square" />
                     <h3>Design as a framework</h3>
                     <p>If I wanted to create the greatest product to exist, I would need to know what would make such a product so great. To me, design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that fit business, user behavior, and aesthetic constraints. <br /><br />
-                        With the practice of many projects, I’ve mastered the ability to successfully create without compromising any constraints. <span className="font-[500]">This means that functionality and user experience are always of utmost priority, above aesthetics, and as far as other constraints permit.</span>
+                        With experience designing for a wide range of audiences–college students, people in Botswana, and brand marketing teams–I've had lots of practice applying design principles to many different products, successfully applying fundamental design principles to the needs and unique situations of each user group. <span className="font-[500]">This means that functionality and user experience are the main values I act on when designing.</span>
                     </p>
                 </div>
 
