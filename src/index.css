@@ -6,6 +6,8 @@
 @tailwind utilities;
 
 @theme {
+  --color-green: oklch(0.7163 0.1533 108.86);
+
   --zero: 0px;
   --mid-width: 58vw;
   --mid-width-px: 832px;

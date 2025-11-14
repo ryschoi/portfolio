@@ -28,13 +28,9 @@ export default function Work() {
       {/* GREETING */}
       <div className="flex flex-wrap gap-[3rem] items-start mt-[9rem] mb-[13rem] self-center">
         <img src="images/notion_face.png" className="w-[8rem] object-contain" />
-        <div className="flex flex-col">
-          {/* OLD HEADER (CENTERED TEXT) mt-9rem, mb-13rem */}
-          {/* <h1 className="text-red-500 text-center w-[39rem] max-w-[80vw]">
-            <span className="gray">Hi, I'm Rebecca.<br /></span>A designer and developer who is using tech, design, and data to create intentionally and meaningfully.
-          </h1> */}
+        
           {/* NEW HEADER BELOW */}
-          <div className="w-[39rem] max-w-[80vw] flex flex-col gap-[3vh]">
+          <div className="w-[39rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[3vh]">
             <h1>Hi, I'm Rebecca.<br />
               <span className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</span>
             </h1>
@@ -43,7 +39,6 @@ export default function Work() {
               <HoverButton path="/about#contacts" buttonText="Contact me" hoverText="Email, phone, LinkedIn..." />
             </div>
           </div>
-        </div>
       </div>
 
       {/* FILTERS */}
