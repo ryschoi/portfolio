@@ -6,9 +6,10 @@ export default function Background() {
             <div className="flex flex-col gap-[4rem] w-slim">
                 <div className="flex flex-col gap-[1.25rem]">
                     <button className="plain-tag self-center subtle-shadow">Work background & philosophy</button>
-                    <h1 className="text-center callout w-9/10 self-center">Highly intentional and thoughtful about all the details</h1>
-                    <p className="gray text-center">The details make the design. I use my analytical skills and sensitivity to usability in human-computer interactions to create meaningful and useful products. However, at the core, I am just a thinker and am always trying to understand how things work.</p>
+                    <h1 className="text-center callout w-9.5/10 self-center">Highly detail-oriented and intentional from concept to execution</h1>
+                    <p className="gray text-center">I use my analytical skills and sensitivity to usability in human-computer interactions to create meaningful and useful products. However, at the core, I am just a thinker and am always trying to understand how things work.</p>
                 </div>
+                {/* detail-oriented intentional thorough precise full-picture */}
 
                 {/* CODING */}
                 <div className="thing">
@@ -22,7 +23,7 @@ export default function Background() {
                     <img src="/images/design_icon.png" className="w-[4rem] mb-[0.75rem] aspect-square" />
                     <h3>Design as a framework</h3>
                     <p>If I wanted to create the greatest product to exist, I would need to know what would make such a product so great. To me, design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that fit business, user behavior, and aesthetic constraints. <br /><br />
-                        With experience designing for a wide range of audiences–college students, people in Botswana, and brand marketing teams–I've had lots of practice applying design principles to many different products, successfully applying fundamental design principles to the needs and unique situations of each user group. <span className="font-[500]">This means that functionality and user experience are the main values I act on when designing.</span>
+                        With experience designing for a wide range of audiences–college students, non-English speakers, and brand marketing teams–I've had lots of practice applying design principles to many different products, successfully applying fundamental design principles to the needs and unique situations of each user group. <span className="font-[500]">This means that functionality and user experience are the main values I act on when designing.</span>
                     </p>
                 </div>
 

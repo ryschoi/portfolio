@@ -39,8 +39,8 @@ export default function Work() {
               <span className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</span>
             </h1>
             <div className="flex flex-wrap gap-[0.5rem]">
-              <HoverButton path="/background" text="Read about my work background" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
-              <HoverButton path="/about#contacts" text="Contact me" hoverText="Email, phone, LinkedIn..." />
+              <HoverButton path="/background" buttonText="Read about my work background" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
+              <HoverButton path="/about#contacts" buttonText="Contact me" hoverText="Email, phone, LinkedIn..." />
             </div>
           </div>
         </div>
