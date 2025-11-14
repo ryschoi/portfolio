@@ -1,7 +1,7 @@
 type inputs = {
     title: string;
     description: string;
-    optional: string;
+    optional?: string;
 }
 
 export default function SectionHeader({ title, description, optional }: inputs) {

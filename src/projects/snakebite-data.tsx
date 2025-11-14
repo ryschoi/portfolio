@@ -14,13 +14,8 @@ export default function SnakebiteData() {
             <div className="project-content-rest">
                 <Task task="Turn global snakebite and climate data into a cohesive, readable story" processItems={["Data collection and engineering", "Data visualization", "Project reflection"]} />
 
-                {/* DATA COLLECTION */}
-                {/* <div className="section" id="data-collection-and-engineering">
-                    <SectionHeader title="Data collection & engineering" description="Collected data from Our World in Data, and cleaned up and engineered it in Excel" optional="Most of the data was collected from Our World in Data. I downloaded data sets for individual climate conditions (i.e. precipitation, surface temperature). From there, I used Excel to clean up each dataset and combine them into one workbook that I could easily filter through and map. Even though each dataset covered global data by country, there were still variations in the categorization: some countries did not have recorded data in some datasets, and some datasets listed continents as countries, leading to duplicate values." />
-                </div> */}
-
                 <div className="section" id="data-collection-and-engineering">
-                    <SectionHeader title="Part 1" description="Data collection & engineering" optional="Most of the data was collected from Our World in Data. I downloaded data sets for individual climate conditions (i.e. precipitation, surface temperature). From there, I used Excel to clean up each dataset and combine them into one workbook that I could easily filter through and map. Even though each dataset covered global data by country, there were still variations in the categorization: some countries did not have recorded data in some datasets, and some datasets listed continents as countries, leading to duplicate values." />
+                    <SectionHeader title="Part 1" description="Data collection & engineering"></SectionHeader>
                 </div>
 
                 {/* DATA VISUALIZATION */}

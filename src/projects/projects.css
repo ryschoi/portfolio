@@ -44,7 +44,7 @@
     width: 100vw;
     margin-left: calc(-4vw);
     margin-right: calc(-4vw);
-    background-color: #f5f5f5;
+    background-color: #efeee8;
     display: flex;
     place-content: center;
 }

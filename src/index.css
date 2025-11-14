@@ -39,6 +39,9 @@
   --h4-leading: 1.5rem;
   --h4-weight: 500;
 
+  --callout-size: 2.5rem;
+  --callout-leading: 3rem;
+
   --breakpoint-*: initial;
   --breakpoint-tablet: 40rem;
   --breakpoint-laptop: 64rem;
@@ -132,6 +135,11 @@ h4,
   font-size: var(--h4-size);
   line-height: var(--h4-leading);
   font-weight: var(--h4-weight);
+}
+
+.callout {
+  font-size: var(--callout-size);
+  line-height: var(--callout-leading);
 }
 
 a {
