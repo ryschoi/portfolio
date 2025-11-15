@@ -24,14 +24,12 @@ export default function HoverButton({ buttonText, hoverText, path }: { buttonTex
   };
 
   return (
-    <Link key='/' to={path}>
+    <Link className="inline" key='/' to={path}>
       <div className="relative inline">
         <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="hover-tag peer" data-full-text={hoverText}>
           {buttonText}
         </button>
-        <p className="">
-          {isHovering ? <p className="tooltip gray">{hoverText}</p> : <></>}
-        </p>
+        {isHovering ? <p className="tooltip gray">{hoverText}</p> : <></>}
       </div>
     </Link>
   );
