@@ -18,9 +18,7 @@ export default function SnakebiteData() {
                     <SectionHeader
                         title="Part 1"
                         description="Data collection & engineering"
-                        optional="I started by downloading data sets for various climate conditions from Our World in Data. From there, I used Excel to clean up each dataset and combine them into one workbook that I could easily filter through and map. Even though each dataset covered global data by country, there were still variations in the data structure: some countries did not have recorded data in some datasets, and some datasets listed continents as countries, leading to duplicate values.
-
-"/>
+                        optional="I started by downloading data sets for various climate conditions from Our World in Data. From there, I used Excel to clean up each dataset and combine them into one workbook that I could easily filter through and map. Even though each dataset covered global data by country, there were still variations in the data structure: some countries did not have recorded data in some datasets, and some datasets listed continents as countries, leading to duplicate values."/>
                 </div>
 
                 {/* DATA VISUALIZATION */}
