@@ -26,19 +26,18 @@ export default function Work() {
   return (
     <div className="flex flex-col">
       {/* GREETING */}
-      <div className="flex flex-wrap gap-[3rem] items-start mt-[9rem] mb-[13rem] self-center">
+      <div className="flex flex-wrap gap-[2.5rem] items-start mt-[9rem] mb-[13rem] self-center">
         <img src="images/notion_face.png" className="w-[8rem] object-contain" />
-        
-          {/* NEW HEADER BELOW */}
-          <div className="w-[39rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[2.5vh]">
-            <h1>Hi, I'm Rebecca.<br />
-              <span className="gray">A developer-turned-designer shaping people's digital experiences with intention and craft</span>
-            </h1>
-            <div className="flex flex-wrap gap-[0.5rem]">
-              <HoverButton path="/background" buttonText="Read about my work background" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
-              <HoverButton path="/about#contacts" buttonText="Contact me" hoverText="Email, phone, LinkedIn..." />
-            </div>
+        {/* NEW HEADER BELOW */}
+        <div className="w-[39rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[3vh]">
+          <h1>Hi, I'm Rebecca.<br />
+            <span className="gray">A developer-turned-designer shaping people's digital experiences with intention and craft</span>
+          </h1>
+          <div className="flex flex-wrap gap-[0.5rem]">
+            <HoverButton path="/background" buttonText="Read about my work background" hoverText="What are my design principles? Why tech + design? How did I get here??" />
+            <HoverButton path="/about#contacts" buttonText="Contact me" hoverText="Email, phone, LinkedIn..." />
           </div>
+        </div>
       </div>
 
       {/* FILTERS */}
