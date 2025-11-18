@@ -30,9 +30,9 @@ export default function Work() {
         <img src="images/notion_face.png" className="w-[8rem] object-contain" />
         
           {/* NEW HEADER BELOW */}
-          <div className="w-[39rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[3vh]">
+          <div className="w-[39rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[2.5vh]">
             <h1>Hi, I'm Rebecca.<br />
-              <span className="gray">A developer-turned-designer shaping people's experiences of interacting with the digitial world</span>
+              <span className="gray">A developer-turned-designer shaping people's digital experiences with intention and craft</span>
             </h1>
             <div className="flex flex-wrap gap-[0.5rem]">
               <HoverButton path="/background" buttonText="Read about my work background" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
