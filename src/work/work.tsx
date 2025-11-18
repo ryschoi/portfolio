@@ -57,7 +57,7 @@ export default function Work() {
             </div>
           );
         })}
-        <button onClick={() => setSelectedTag(null)} id="clear-filters" className="gray underline">Clear filters</button>
+        <button onClick={() => setSelectedTag(null)} id="clear-filters" className="gray hover-underline">Clear filters</button>
       </div>
 
       {/* WORK CARDS */}
