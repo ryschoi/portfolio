@@ -3,32 +3,55 @@ import Tag from "./tag";
 
 export default function ImageBG({ project }: { project: Project }) {
     return (
-        <div className="flex flex-col sm:gap-[2rem] gap-[0.5rem]">
+        <div className="flex flex-col gap-[0.5rem]">
             {/* FIRST IMAGE */}
-            <div className="zoom img-bg relative rounded flex align-center justify-center overflow-hidden">
-
-                {/* MAP BUTTONS */}
-                <div className="flex gap-[0.5rem] tag-position">
-                    {project.tags
-                        .map((tag) => (
+            {project.id === 7 ?
+                <div className="zoom img-bg relative rounded flex justify-center overflow-hidden">
+                    {/* TAGS */}
+                    <div className="flex gap-[0.5rem] tag-position">
+                        {project.tags.map((tag) => (
                             <Tag text={tag} hover={false} clicked={true} />
                         ))}
-                </div>
-                <div className="my-[3vw]">
-                    {project.id === 12 ?
-                        <video autoPlay loop playsInline muted src="images/work/open-forum/open-forum-video.mov"
-                            className="w-[18rem] max-w-[85vw]" />
-                        :
-                        < img src={project.frontImage} alt=""
-                            className={
-                                project.vertical
-                                    ? "w-[26rem] max-w-[85vw] subtle-shadow object-cover"
-                                    : "w-[44rem] max-w-[85vw] subtle-shadow object-cover"
-                            }
+                    </div>
+                    <div className="my-[3vw]">
+                        <img src={project.frontImage} alt=""
+                            className="w-[26rem] max-w-[85vw] subtle-shadow object-cover"
                         />
-                    }
+                    </div>
+                    {/* <div className="flex items-start h-full">
+                        <img
+                            src={project.frontImage}
+                            alt=""
+                            className="pt-[3vw] w-[40rem] h-full object-contain object-top self-start subtle-shadow"
+                        />
+                    </div> */}
                 </div>
-            </div>
+                :
+                <div className="zoom img-bg relative rounded flex align-center justify-center overflow-hidden">
+                    {/* MAP BUTTONS */}
+                    <div className="flex gap-[0.5rem] tag-position">
+                        {project.tags
+                            .map((tag) => (
+                                <Tag text={tag} hover={false} clicked={true} />
+                            ))}
+                    </div>
+                    <div className="my-[3vw]">
+                        {project.id === 12 ?
+                            <video autoPlay loop playsInline muted src="images/work/open-forum/open-forum-video.mov"
+                                className="w-[18rem] max-w-[85vw]" />
+                            :
+                            <img src={project.frontImage} alt=""
+                                className={
+                                    project.vertical
+                                        ? "w-[26rem] max-w-[85vw] subtle-shadow object-cover"
+                                        : "w-[44rem] max-w-[85vw] subtle-shadow object-cover"
+                                }
+                            />
+                        }
+                    </div>
+                </div>
+            }
+
             {/* SNAKEBITE DATA IMAGES */}
             {project.id === 7 && (
                 <div className="work-img-group-col">

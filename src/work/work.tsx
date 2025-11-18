@@ -32,7 +32,7 @@ export default function Work() {
           {/* NEW HEADER BELOW */}
           <div className="w-[39rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[3vh]">
             <h1>Hi, I'm Rebecca.<br />
-              <span className="gray">A designer and developer who is using tech, design, and data to create intentionally and meaningfully.</span>
+              <span className="gray">A developer-turned-designer shaping people's experiences of interacting with the digitial world</span>
             </h1>
             <div className="flex flex-wrap gap-[0.5rem]">
               <HoverButton path="/background" buttonText="Read about my work background" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
