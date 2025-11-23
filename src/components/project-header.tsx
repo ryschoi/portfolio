@@ -42,7 +42,13 @@ export default function ProjectHeader({ project }: { project: Project }) {
                         {/* team and role */}
                         <div className="flex flex-col gap-[0.2rem] w-[10rem]">
                             <p className="caption">TEAM & ROLE</p>
-                            <p>{project.team}<br />{project.role}</p>
+                            <div>
+                                {project.team.map((t, i) => (
+                                    <p key={i}>{t}</p>
+                                ))}
+                                <p>{project.role}</p>
+                            </div>
+
                         </div>
                         {/* medium */}
                         {/* <div className="flex flex-col gap-[0.2rem] w-[10rem]">

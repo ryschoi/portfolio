@@ -12,7 +12,7 @@ export default function NavBar() {
   ];
 
   return (
-    <div id="nav" className="w-full self-center h-[4rem] content-end mt-[4vh] mb-[3rem] flex flex-row justify-between">
+    <div id="nav" className="w-full self-center h-[4rem] content-end mt-[5vh] mb-[3rem] flex flex-row justify-between">
         {/* <Link key='/' to='/' className="h2 leading-snug">Rebecca<br />Choi</Link> */}
         {links.map((page) => (
           <Link key={page.path} to={page.path}

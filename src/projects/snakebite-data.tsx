@@ -124,7 +124,7 @@ export default function SnakebiteData() {
                             </div>
                             <div className="s-data-bg work-add-img-cont">
                                 <div className="self-center m-[1rem]">
-                                    <img src="/images/work/snakebite-data/s-data-sun.png" alt="" className="w-[14vw]" />
+                                    <img src="/images/work/snakebite-data/s-data-sun.png" alt="" className="h-[20vh] min-h-[200px]" />
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@ export default function SnakebiteData() {
                             </div>
                             <div className="s-data-bg work-add-img-cont">
                                 <div className="self-center m-[1rem]">
-                                    <img src="/images/work/snakebite-data/s-data-circles.png" alt="" className="w-[14vw]" />
+                                    <img src="/images/work/snakebite-data/s-data-circles.png" alt="" className="h-[20vh] min-h-[200px]" />
                                 </div>
                             </div>
                             <div className="s-data-bg work-add-img-cont">

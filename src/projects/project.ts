@@ -6,7 +6,7 @@ export type Project = {
     path: string;
     summary: string;
     type: string;
-    team: string;
+    team: string[];
     role: string;
     medium: string;
     tools: string;

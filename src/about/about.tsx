@@ -45,9 +45,9 @@ export default function About() {
     return (
       <div className="relative group">
         <button onClick={handleCopy}
-          className="tag py-[6px] px-[16px] rounded bg-gray-100 hover:bg-gray-200 transition">{text}
+          className="tag py-[6px] px-[16px] rounded transition">{text}
         </button>
-        <div className="absolute bottom-full mb-[0.5rem] left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-[0.88rem] rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 gray">
+        <div className="absolute bottom-full mb-[0.5rem] left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.88rem] rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 gray">
           {tooltip}
         </div>
       </div>
