@@ -17,7 +17,10 @@
   --med-page-w: 85vw;
 
   /* COLORS */
-  /* --color-black: #212121; */
+  --color-black: oklch(32.11% 0 0);
+  --color-tag-bg: oklch(99.4% 0 0);
+  --color-tag-hover: oklch(96.24% 0.0025 48.72);
+  --color-gray-stroke: oklch(84.83% 0 0);
 
   /* TEXT */
   --heading-weight: 400;
@@ -52,14 +55,14 @@
 
 ::selection {
   background-color: #e9e8b7;
-  color: #212121;
+  color: var(--color-black);
 }
 
 * {
   font-family: 'Hanken Grotesk';
   font-feature-settings: 'liga' 1, 'calt' 1;
   margin: 0;
-  color: #212121;
+  color: var(--color-black);
 }
 
 body{
@@ -185,11 +188,11 @@ a:hover {
 }
 
 .black {
-  color: #212121;
+  color: var(--color-black);
 }
 
 .border {
-  border: 2px solid #212121;
+  border: 2px solid var(--color-black);
 }
 
 .light-border {
@@ -237,29 +240,29 @@ button {
 
 .tag,
 .tag-no-hover {
-  background-color: #FDFDFD;
-  color: #1e1e1e;
-  border: 1.5px solid #cecece;
+  background-color: var(--color-tag-bg);
+  color: var(--color-black);
+  border: 1.5px solid var(--color-gray-stroke);
   border-radius: 1rem;
   position: relative;
   top: 0;
+  padding: 6px 16px;
   transition: top ease 0.5s;
 }
 
 .tag:hover {
-  background-color: #EFEDEA;
-  color: #1e1e1e;
-  border: 1.5px solid #cecece;
+  background-color: var(--color-tag-hover);
+  color: var(--color-black);
+  border: 1.5px solid var(--color-gray-stroke);
   border-radius: 1rem;
   cursor: pointer;
   top: -3px;
-  /* transform: scale(1.025); */
 }
 
 .tag-clicked {
-  background-color: #333333;
+  background-color: var(--color-black);
   color: #ffffff;
-  border: 1.5px solid #333333;
+  border: 1.5px solid var(--color-black);
   border-radius: 1rem;
 }
 
@@ -269,10 +272,6 @@ hr {
 
 .hover-underline:hover {
   text-decoration: underline;
-}
-
-.dark-bg {
-  background-color: #212121;
 }
 
 .calder-bg {

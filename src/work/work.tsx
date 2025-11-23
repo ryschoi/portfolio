@@ -39,7 +39,7 @@ export default function Work() {
           </div>
         </div>
       </div>
-
+      
       {/* FILTERS */}
       <div className="flex flex-wrap gap-[0.5rem] mb-[1.5rem]" id="">
         {allTags.map((tag) => {

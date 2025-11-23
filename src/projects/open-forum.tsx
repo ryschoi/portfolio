@@ -16,11 +16,11 @@ export default function OpenForum() {
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} />
             <div className="project-content-rest">
-                <Task task="Design a mobile app that will increase Northeastern students' sense of belongingness on campus" processItems={["Define the problem", "Users interviews, thematic analysis, personas", "Ideate solutions", "User testing with low-fidelity prototypes", "Create high-fidelity prototype"]} />
+                <Task task="Design a mobile app that will increase Northeastern students' sense of belongingness on campus" processItems={["Defining the problem", "Users interviews, thematic analysis, personas", "Ideate solutions", "User testing with low-fidelity prototypes", "Create high-fidelity prototype"]} />
 
                 {/* PROBLEM */}
-                <div id="define-the-problem" className="section">
-                    <SectionHeader title="Phase 1: Problem" description="Define the problem" optional="We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?" />
+                <div id="defining-the-problem" className="section">
+                    <SectionHeader title="Phase 1: Defining the problem" description="How can technology support students’ belongingness on campus?" optional="We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?" />
                     <p className="mb-[0.5rem] w-slim self-center">From our online research, we found that technology can create personalized experiences and provide tailored recommendations for events, activities, and communities based on students’ interests and preferences. Interest-based communities, mentorship matching, and group planning tools could help students build relationships over shared goals or hobbies.</p>
                     <div className="gray-full-container">
                         <div className="med-w my-[4rem]">
@@ -165,34 +165,6 @@ export default function OpenForum() {
                 {/* LOW-FI */}
                 <div id="user-testing-with-low-fidelity-prototypes" className="section">
                     <SectionHeader title="Phase 4: Testing" description="Low-fidelity prototypes and user testing" optional="Next, we created paper prototypes and user-tested both of our top ideas, Open Forum and Blind Match." />
-                    {/* <table className="med-w">
-                        <tr>
-                            <th></th>
-                            <th>Open Forum</th>
-                        </tr>
-                        <tr>
-                            <td className="td-first-col">Tasks</td>
-                            <td>
-                                <ul>
-                                    <li>Create a new discussion about Northeastern</li>
-                                    <li>Find the Ice cream event and find the notification for it?</li>
-                                    <li>Search for a petition about IS 4300</li>
-                                </ul>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="td-first-col">Post-test questions</td>
-                            <td>
-                                <ul>
-                                    <li>How easy was it to create a new discussion? What did you expect to see when you clicked on the discussion?</li>
-                                    <li>What was it like using the app to engage with campus life compared to what you usually used?</li>
-                                    <li>What features do you think were the most useful?</li>
-                                    <li>Was there an aspect or feature of the app that you found frustrating to use?</li>
-                                    <li>What aspect of the app makes it most likely for you to use it?</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table> */}
                     <p className="w-slim self-center">Coming soon.</p>
                 </div>
 

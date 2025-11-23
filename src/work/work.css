@@ -3,12 +3,12 @@
 }
 
 .img-bg {
-  background-color: #f1f1f1;
+  background-color: #00000007;
 }
 
 .plain-tag {
-  background-color: #fdfdfd;
-  color: #1e1e1e;
+  background-color: var(--color-tag-bg);
+  color: var(--color-black);
   border: 1.5px solid #cecece;
   border-radius: 1rem;
   position: relative;
@@ -19,9 +19,9 @@
 }
 
 .hover-tag {
-  background-color: #fdfdfd;
-  color: #1e1e1e;
-  border: 1.5px solid #cecece;
+  background-color: var(--color-tag-bg);
+  color: var(--color-black);
+  border: 1.5px solid var(--color-gray-stroke);
   border-radius: 1rem;
   position: relative;
   top: 0;
@@ -32,9 +32,9 @@
 }
 
 .hover-tag:hover {
-  background-color: #EFEDEA;
-  color: #1e1e1e;
-  border: 1.5px solid #cecece;
+  background-color: var(--color-tag-hover);
+  color: var(--color-black);
+  border: 1.5px solid var(--color-gray-stroke);
   border-radius: 1rem;
   cursor: pointer;
   top: -3px;
@@ -110,6 +110,13 @@
 
 .tag-position {
   position: absolute;
+  top: 1em;
+  right: 1rem;
+  z-index: 10;
+}
+
+.tag-position-2 {
+  height: fit-content;
   top: 1em;
   right: 1rem;
   z-index: 10;

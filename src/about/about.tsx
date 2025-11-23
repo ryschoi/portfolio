@@ -67,25 +67,6 @@ export default function About() {
   return (
     <div className="flex justify-center w-full">
       <div className="flex flex-col gap-[2rem] w-slim">
-        {/* IMAGE */}
-        {/* <div className="overflow-hidden w-full">
-          <img id="headshot" className="w-full h-auto object-cover rounded" src="images/wide.png" />
-        </div> */}
-
-        {/* GREETING */}
-        {/* <div>
-          <h2 className="mb-[1rem]">
-            About me
-            <br />
-            <span className="gray h3">
-              Apart from my <HoverButton path="/" text="Work" hoverText="Collection of projects that captures the full breadth of my interests" /> and <HoverButton path="/background" text="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
-            </span>
-          </h2>
-          
-          <br />
-          <button onClick={() => handleScroll("contacts")} className="hover-tag">↓ Contact</button>
-        </div> */}
-
         <div>
           <h2 className="mb-[1rem]">
             About me
