@@ -4,10 +4,8 @@ import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
 import Task from "../components/task";
 import SectionHeader from "components/section-header";
-import VerticalImageSpan from "components/vertical-image-span";
 import Tag from "components/tag";
-import TwoImageCaption from "components/two-image-caption";
-import TextCard from "components/text-card";
+import ImageModal from "components/image-modal";
 
 export default function OpenForum() {
     const thisProject = projects.find(p => p.path === "/open-forum");
@@ -16,79 +14,114 @@ export default function OpenForum() {
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} />
             <div className="project-content-rest">
-                <Task task="Design a mobile app that will increase Northeastern students' sense of belongingness on campus" processItems={["Defining the problem", "Users interviews, thematic analysis, personas", "Ideate solutions", "User testing with low-fidelity prototypes", "Create high-fidelity prototype"]} />
+                <Task task="Design a mobile app that will increase Northeastern students' sense of belongingness on campus" processItems={["Defining the problem", "Research", "Ideate solutions", "User testing with low-fidelity prototypes", "Create high-fidelity prototype"]} />
 
                 {/* PROBLEM */}
                 <div id="defining-the-problem" className="section">
                     <SectionHeader title="Phase 1: Defining the problem" description="How can technology support students’ belongingness on campus?" optional="We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?" />
-                    <p className="mb-[0.5rem] w-slim self-center">From our online research, we found that technology can create personalized experiences and provide tailored recommendations for events, activities, and communities based on students’ interests and preferences. Interest-based communities, mentorship matching, and group planning tools could help students build relationships over shared goals or hobbies.</p>
-                    <div className="gray-full-container">
-                        <div className="med-w my-[4rem]">
-                            <h3 className="mb-[1.5rem] dark-gray caption">Existing options: online social platforms</h3>
-                            <div className="med-grid">
-                                <div>
-                                    <h3 className="mb-[0.5rem]">Northeastern CampusLabs</h3>
-                                    <ul>
-                                        <li>Catalog of university-registered clubs and organizations</li>
-                                        <li>No social interaction</li>
-                                        <li>Often outdated</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 className="mb-[0.5rem]">Instagram</h3>
-                                    <ul>
-                                        <li>General social communication and connection for both personal and community use</li>
-                                        <li>Clubs and organizations use it for more public-facing content and communication rather than internal communication</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <h3 className="mb-[0.5rem]">Slack and Discord</h3>
-                                    <ul>
-                                        <li>Club and community chats</li>
-                                        <li>Used for both official and unofficial cases</li>
-                                        <li>Not created for finding new people</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 {/* RESEARCH */}
-                <div id="users-interviews,-thematic-analysis,-personas," className="section">
-                    <SectionHeader title="Phase 2: UX research" description="User interviews, thematic analysis, and personas" optional="For the UX research phase, we conducted interviews with four different Northeastern students to hear from our target users' real experiences of navigating social life on campus. After, we created an affinity diagram to extract key themes from our interviews, along with two personas to illustrate what our interview findings might look like in the context of actual people's lives, preferences, and temperaments." />
-                    <div className="rounded w-full flex place-content-center py-[4vw]">
-                        <img src="images/work/open-forum/g2-affinity-diagram.png" alt="" className="w-[30rem] max-w-[84vw]" />
+                <div id="research" className="section">
+                    <SectionHeader title="Phase 2: Research" description="Northeastern students are generally busy, and we'll need to create a solution that will help facilitate structured social gatherings" optional="" />
+                    <div className="img-bg left-border w-slim self-center py-[1rem] px-[1.2rem]">
+                        <p className="caption">Research process</p>
+                        <ul>
+                            <li>
+                                Conduct <span className="bold">online research</span> on how college students connect these days, the state of college students' wellbeings, etc.
+                            </li>
+                            <li>
+                                Conduct <span className="bold">interviews</span> with four different Northeastern students to hear from some of our potential users' real experiences of navigating social life on campus.
+                            </li>
+                            <li>
+                                Create an <span className="bold">affinity diagram to extract key themes</span> from our interviews
+                            </li>
+                            <li>
+                                Create two <span className="bold">personas</span> to illustrate what the themes might look like in the context of actual people's lives, preferences, and temperaments.
+                            </li>
+                        </ul>
                     </div>
-                    {/* AFFINITY DIAGRAM NOTES */}
-                    <div className="gray-full-container">
-                        <div className="med-w my-[4rem]">
-                            <h3 className="mb-[1.5rem] dark-gray caption">What we found</h3>
-                            <div className="flex flex-col gap-[1.5rem]">
-                                <div className="flex gap-[0.5rem]">
-                                    <h3>→</h3>
-                                    <div className="flex flex-col">
-                                        <h3 className="mb-[0.5rem]">Structured and interested-based social spaces are reported more effective methods of socializing</h3>
-                                        <p>Almost all of the students we interviewed mentioned meeting friends either from clubs (organized and interest-based) or other public activities like intramural sports (interested-based).</p>
+                    {/* ONLINE RESEARCH */}
+                    <div className="flex flex-col gap-[2rem] mt-[1rem]">
+                        <div className="flex flex-col w-slim self-center">
+                            <h3 className="gray">Online research</h3>
+                            <h3 className="">Online social platforms are commonly used by clubs and organizations for big-group communication or for existing relationships and are not ideal for forming new connections.</h3>
+                        </div>
+                        <div className="gray-full-container">
+                            <div className="med-w my-[4rem]">
+                                <h3 className="mb-[1.5rem] dark-gray caption">Existing options: online social platforms</h3>
+                                <div className="med-grid">
+                                    <div>
+                                        <h3 className="mb-[0.5rem]">Northeastern CampusLabs</h3>
+                                        <ul>
+                                            <li>Catalog of university-registered clubs and organizations</li>
+                                            <li>No social interaction</li>
+                                            <li>Often outdated</li>
+                                        </ul>
                                     </div>
-                                </div>
-                                <div className="flex gap-[0.5rem]">
-                                    <h3>→</h3>
-                                    <div className="flex flex-col">
-                                        <h3 className="mb-[0.5rem]">Technology can help maintain existing connections, but struggles to create them</h3>
-                                        <p>Common online social activites like FaceTime calls or sending reels to friends on Instagram were said to be frequent forms of interacting with friends online, but are more methods for maintaining friendships rather than forming new ones.</p>
+                                    <div>
+                                        <h3 className="mb-[0.5rem]">Instagram</h3>
+                                        <ul>
+                                            <li>General social communication and connection for both personal and community use</li>
+                                            <li>Clubs and organizations use it for more public-facing content and communication rather than internal communication</li>
+                                        </ul>
                                     </div>
-                                </div>
-                                <div className="flex gap-[0.5rem]">
-                                    <h3>→</h3>
-                                    <div className="flex flex-col">
-                                        <h3 className="mb-[0.5rem]">Struggles with time constraints</h3>
-                                        <p>Students are genearlly pretty busy, with schedules that do not necessarily align with other people. However, one student mentioned that spending lots of time alone to work did not necessarily mean they didn't feel like they didn't belong.</p>
+                                    <div>
+                                        <h3 className="mb-[0.5rem]">Slack and Discord</h3>
+                                        <ul>
+                                            <li>Club and community chats</li>
+                                            <li>Used for both official and unofficial cases</li>
+                                            <li>Not created for finding new people</li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    {/* INTERVIEWS */}
+                    <div className="flex flex-col gap-[2rem] mt-[1rem]">
+                        <div className="flex flex-col w-slim self-center">
+                            <h3 className="gray">Interviews & affinity diagram</h3>
+                            {/* <h3 className="">Online social platforms are commonly used by clubs and organizations for big-group communication or for existing relationships and are not ideal for forming new connections.</h3> */}
+                        </div>
+                        {/* <ImageModal src="images/work/open-forum/g2-affinity-diagram.png" alt="" /> */}
+                        <div className="rounded w-full flex place-content-center py-[4vw]">
+                            <img src="images/work/open-forum/g2-affinity-diagram.png" alt="" className="w-[30rem] max-w-[84vw]" />
+                        </div>
+                        <div className="gray-full-container">
+                            <div className="med-w my-[4rem]">
+                                <h3 className="mb-[1.5rem] dark-gray caption">What we found</h3>
+                                <div className="flex flex-col gap-[1.5rem]">
+                                    <div className="flex gap-[0.5rem]">
+                                        <h3>→</h3>
+                                        <div className="flex flex-col">
+                                            <h3 className="mb-[0.5rem]">Structured and interested-based social spaces are reported more effective methods of socializing</h3>
+                                            <p>Almost all of the students we interviewed mentioned meeting friends either from clubs (organized and interest-based) or other public activities like intramural sports (interested-based).</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-[0.5rem]">
+                                        <h3>→</h3>
+                                        <div className="flex flex-col">
+                                            <h3 className="mb-[0.5rem]">Technology can help maintain existing connections, but struggles to create them</h3>
+                                            <p>Common online social activites like FaceTime calls or sending reels to friends on Instagram were said to be frequent forms of interacting with friends online, but are more methods for maintaining friendships rather than forming new ones.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-[0.5rem]">
+                                        <h3>→</h3>
+                                        <div className="flex flex-col">
+                                            <h3 className="mb-[0.5rem]">Struggles with time constraints</h3>
+                                            <p>Students are genearlly pretty busy, with schedules that do not necessarily align with other people. However, one student mentioned that spending lots of time alone to work did not necessarily mean they didn't feel like they didn't belong.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* <div className="rounded w-full flex place-content-center py-[4vw]">
+                        <img src="images/work/open-forum/g2-affinity-diagram.png" alt="" className="w-[30rem] max-w-[84vw]" />
+                    </div> */}
 
                     {/* <div className="med-w">
                         <h3 className="mb-[1rem] caption">What we found</h3>
