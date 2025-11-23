@@ -105,7 +105,12 @@
   display: flex;
   flex-direction: column;
   place-content: center;
-  width: 100%;
+  /* width: 100%; */
+}
+
+.left-border {
+  border-left: 4px solid #cfcfcf;
+  padding-left: 0.8rem;
 }
 
 .tag-position {

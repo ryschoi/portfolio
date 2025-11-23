@@ -49,6 +49,17 @@
     place-content: center;
 }
 
+.gray-narrow-container {
+    width: 100vw;
+    margin-left: calc(-4vw);
+    margin-right: calc(-4vw);
+    background-color: #00000007;
+    display: flex;
+    place-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
 .section {
     display: flex;
     flex-direction: column;
