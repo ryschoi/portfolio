@@ -29,8 +29,7 @@ export default function SnakebiteData() {
                     <div className="flex flex-col  w-slim self-center">
                         <div className="img-bg rounded flex place-content-center">
                             <div className="self-center my-[3vw] subtle-shadow flex flex-wrap gap-[4vw] place-content-center">
-                                <img src="/images/work/snakebite-data/s-data-crit1.png" alt="" className="w-[36vw] min-w-[332px]" />
-                                {/* <img src="/images/work/snakebite-data/snakebite-data-feedback.png" alt="" className="w-[36vw] min-w-[332px]" /> */}
+                                <img src="/images/work/snakebite-data/s-data-crit1.png" alt="" className="w-[76vw] max-w-[38rem]" />
                             </div>
                         </div>
                         <p className="caption cap-top">first iteration</p>
@@ -94,7 +93,6 @@ export default function SnakebiteData() {
                         </div>
                     </div> */}
 
-
                     {/* <div>
                         <div className="s-data-bg work-add-img-cont">
                             <div className="self-center m-[1rem]">
@@ -103,7 +101,6 @@ export default function SnakebiteData() {
                         </div>
                         <p className="caption cap-top">final</p>
                     </div> */}
-
 
                     <div className="flex flex-col w-slim self-center gap-[3rem]">
                         <div className="flex flex-col gap-[0.6rem] left-border pl-[0.6rem]">
