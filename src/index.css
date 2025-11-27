@@ -199,6 +199,10 @@ a:hover {
   border: 1px solid #dddddd;
 }
 
+.thick-light-border {
+  border: 3px solid #dddddd;
+}
+
 .italic {
   font-style: italic;
 }

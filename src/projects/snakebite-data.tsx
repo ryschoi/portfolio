@@ -34,13 +34,43 @@ export default function SnakebiteData() {
                 </div>
 
                 {/* ISOTYPES */}
-                <div className="flex flex-col mt-[1rem] gap-[1.5rem] align-center self-center w-slim">
-                    <div className="flex flex-col">
+                <div className="flex flex-col mt-[1rem] gap-[1.5rem] align-center w-full">
+                    <div className="flex flex-col self-center w-slim">
                         <h3>Isotypes</h3>
                         <h3 className="gray">Representing data in a visual and proportionately-accurate way</h3>
                     </div>
 
-                    <div className="flex flex-col w-slim self-center gap-[3rem]">
+                    <div className="work-img-group-col">
+                        <div className="img-bg rounded flex flex-col p-[1.5rem] box-border">
+                            <div className="work-add-img-cont p-[1rem] box-border h-[20rem]">
+                                <img src="/images/work/snakebite-data/s-data-bars.png" alt="" className="subtle-shadow" />
+                            </div>
+                            <div className="mt-[1rem]">
+                                <p className="h4 gray">First version: bars</p>
+                                <p>Arbitrary bar sizes–only takeaway is the difference value and the general size difference</p>
+                            </div>
+                        </div>
+                        <div className="img-bg rounded flex flex-col p-[1.5rem] box-border">
+                            <div className="work-add-img-cont p-[1rem] box-border h-[20rem]">
+                                <img src="/images/work/snakebite-data/s-data-sun.png" alt="" className="subtle-shadow max-h-[15rem] self-center" />
+                            </div>
+                            <div className="mt-[1rem]">
+                                <p className="h4 gray">Second version: illustrations</p>
+                                <p>Illustrations showed what the climates might look like, but the visuals were also arbitrarily-sized and therefore not very informative</p>
+                            </div>
+                        </div>
+                        <div className="img-bg rounded flex flex-col p-[1.5rem] box-border thick-light-border">
+                            <div className="work-add-img-cont p-[1rem] box-border h-[20rem]">
+                                <img src="/images/work/snakebite-data/s-data-circles.png" alt="" className="subtle-shadow max-h-[15rem] self-center" />
+                            </div>
+                            <div className="mt-[1rem]">
+                                <p className="h4 gray">Final version: isotypes</p>
+                                <p>Isotypes being representative of actual proportions of the numbers makes it much easier to tell the values of each measurement and just how much the differences are</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* <div className="flex flex-col w-slim self-center gap-[3rem]">
                         <div className="flex flex-col gap-[0.6rem] left-border pl-[0.6rem]">
                             <div className="flex flex-col gap-[0.1rem]">
                                 <p className="caption">first version: bars</p>
@@ -79,7 +109,7 @@ export default function SnakebiteData() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* DEGREES */}

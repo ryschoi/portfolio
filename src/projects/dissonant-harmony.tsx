@@ -112,9 +112,10 @@ export default function DissonantHarmony() {
                 {/* DIGITAL MATERIAL */}
                 <div className="section align-center" id="digital-marketing-material">
                     <SectionHeader
-                        title="Digital marketing material"
-                        description="Instagram posts and gif"
-                        optional="I snuck in another instance of dissonant harmony with the nine-square grid creating one complete picture. The center slide features a gif that shows the individual pieces of the sculpture getting put back together. This gif ties together the entire set of marketing materials as it visually plays out the transformation of individual, dissonant pieces coming together and forming a harmonious sculpture." />
+                        title="Digital marketing material: Instagram posts and gif"
+                        description="Sneaking in one last instance of dissonant harmony with the nine-square grid"
+                        optional="For the extra-observant and overthinkers (like me), the nine squares in the Instagram feed creating one complete picture make one extra nugget of fun." />
+                        <p className="w-slim self-center">The center slide features a gif that shows the individual pieces of the sculpture getting put back together. This gif ties together the entire set of marketing materials as it visually plays out the transformation of individual, dissonant pieces coming together and forming a harmonious sculpture.</p>
                     
                     
                     <div className="work-img-group-col-bigger">
