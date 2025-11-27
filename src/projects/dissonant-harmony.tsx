@@ -96,7 +96,8 @@ export default function DissonantHarmony() {
                     <SectionHeader
                         title="A5-size flyer"
                         description="A flyer intended to guide people to the exhibition rather than spark intrigue like the poster"
-                        optional="Unlike the rest of the exhibition materials, the flyer shows the fully-constructed version of Big Crinkly. I thought this made the most sense as while the poster could be meant to spark intrigue for the viewers, the flyer would be held at the museum, and therefore showing the actual artwork could help museum visitors know what to keep an eye out for. Furthermore, if museum goers had seen the poster before the flyer (or vice versa), it could help them make the connection of the deeper meaning behind the artwork, having seen the structure both the constructed and deconstructed." />
+                        optional="Unlike the rest of the exhibition materials, the flyer shows the fully-constructed version of Big Crinkly, focusing more on guiding museum-goers to the exhibit." />
+                    <p className="w-slim self-center">I thought this made the most sense as while the poster could be meant to spark intrigue for the viewers, the flyer would be held at the museum, and therefore showing the actual artwork could help museum visitors know what to keep an eye out for. Furthermore, if museum goers had seen the poster before the flyer (or vice versa), it could help them make the connection of the deeper meaning behind the artwork, having seen the structure both constructed and deconstructed.</p>
                     <div className="flex flex-col w-full">
                         <div className="img-bg rounded flex place-content-center w-full">
                             <div className="self-center my-[3rem] subtle-shadow flex flex-wrap gap-[4rem] place-content-center">

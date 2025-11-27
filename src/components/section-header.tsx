@@ -15,8 +15,10 @@ export default function SectionHeader({ title, description, optional }: inputs) 
         // </div>
         <div className="flex flex-col gap-[0.25rem] w-slim self-center">
             <p className="caption gray semi-bold">{title}</p>
-            <h2 className="mb-[1rem]">{description}</h2>
-            <p>{optional}</p>
+            <h2 className="">{description}</h2>
+            {optional && (
+                <span className="h4 !mt-[1rem] gray">{optional}</span>
+            )}
         </div>
     );
 }
