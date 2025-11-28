@@ -2,28 +2,36 @@ import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
-import Task from "../components/task";
 import SectionHeader from "components/section-header";
 import Tag from "components/tag";
 import ImageModal from "components/image-modal";
+import { section } from "./section";
 
 export default function OpenForum() {
     const thisProject = projects.find(p => p.path === "/open-forum");
+    const sections: section[] = [
+        { header: "01. Defining the problem", description: "How can technology support students’ belongingness on campus?", optional:"We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?" },
+        { header: "02. Research", description: "Northeastern students are generally busy, and we'll need to create a solution that will help facilitate structured social gatherings" },
+        { header: "03. Ideation", description: "Solution ideation", optional: "Using the themes and constraints we got from our research, I brainstormed 12 different potential solutions, and one of my team members did another three." },
+        { header: "04. User testing", description: "Low-fidelity prototypes and user testing", optional:"Next, we created paper prototypes and user-tested both of our top ideas, Open Forum and Blind Match." },
+        { header: "05. Design", description: "High-fidelity prototype", optional:"As the final phase of this project, I created a high-fidelity prototype of our app in Figma, incorporating notes from our user testing and all the way back to the initial research." }
+    ];
 
     return (
         <div className="project-content">
-            <ProjectHeader project={thisProject as Project} />
+            <ProjectHeader project={thisProject as Project} sections={sections} />
             <div className="project-content-rest">
-                <Task task="Design a mobile app that will increase Northeastern students' sense of belongingness on campus" processItems={["Defining the problem", "Research", "Ideate solutions", "User testing with low-fidelity prototypes", "Create high-fidelity prototype"]} />
+                {/* <Task task="Design a mobile app that will increase Northeastern students' sense of belongingness on campus" processItems={["Defining the problem", "Research", "Ideate solutions", "User testing with low-fidelity prototypes", "Create high-fidelity prototype"]} /> */}
 
                 {/* PROBLEM */}
                 <div id="defining-the-problem" className="section">
-                    <SectionHeader title="Phase 1: Defining the problem" description="How can technology support students’ belongingness on campus?" optional="We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?" />
+                    <SectionHeader title={sections[0].header} description={sections[0].description} optional={sections[0].optional} />
+                    <p className="w-slim self-center">We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?</p>
                 </div>
 
                 {/* RESEARCH */}
                 <div id="research" className="section">
-                    <SectionHeader title="Phase 2: Research" description="Northeastern students are generally busy, and we'll need to create a solution that will help facilitate structured social gatherings" optional="" />
+                    <SectionHeader title={sections[1].header} description={sections[1].description} />
                     <div className="img-bg left-border w-slim self-center py-[1rem] px-[1.2rem]">
                         <p className="caption">Research process</p>
                         <ul>
@@ -118,25 +126,6 @@ export default function OpenForum() {
                             </div>
                         </div>
                     </div>
-
-                    {/* <div className="rounded w-full flex place-content-center py-[4vw]">
-                        <img src="images/work/open-forum/g2-affinity-diagram.png" alt="" className="w-[30rem] max-w-[84vw]" />
-                    </div> */}
-
-                    {/* <div className="med-w">
-                        <h3 className="mb-[1rem] caption">What we found</h3>
-                        <div className="flex gap-[1rem] scroll-cont">
-                            <TextCard
-                                main="Structured and interested-based social spaces are reported more effective methods of socializing"
-                                description="Almost all of the students we interviewed mentioned meeting friends either from clubs (organized and interest-based) or other public activities like intramural sports (interested-based)." />
-                            <TextCard
-                                main="Technology can help maintain existing connections, but struggles to create them"
-                                description="Common online social activites like FaceTime calls or sending reels to friends on Instagram were said to be frequent forms of interacting with friends online, but are more methods for maintaining friendships rather than forming new ones." />
-                            <TextCard
-                                main="Time is a major constraint when it comes to socializing"
-                                description="Students are genearlly pretty busy, with schedules that do not necessarily align with other people. However, one student mentioned that spending lots of time alone to work did not necessarily mean they didn't feel like they didn't belong." />
-                        </div>
-                    </div> */}
                     {/* NEXT STEPS */}
                     <div className="w-slim self-center">
                         <p>From this, we decided we needed an app that would...</p>
@@ -150,8 +139,9 @@ export default function OpenForum() {
                 </div>
 
                 {/* IDEATION */}
-                <div id="ideate-solutions" className="section">
-                    <SectionHeader title="Phase 3: Ideation" description="Solution ideation" optional="Using the themes and constraints we got from our research, I brainstormed 12 different potential solutions, and one of my team members did another three." />
+                <div id="ideation" className="section">
+                    <SectionHeader title={sections[2].header} description={sections[2].description} optional={sections[2].optional} />
+
                     {/* IDEAS LIST */}
                     <div className="w-slim self-center">
                         <p className="mb-[0.5rem]">Some of our ideas were:</p>
@@ -196,14 +186,14 @@ export default function OpenForum() {
                 </div>
 
                 {/* LOW-FI */}
-                <div id="user-testing-with-low-fidelity-prototypes" className="section">
-                    <SectionHeader title="Phase 4: Testing" description="Low-fidelity prototypes and user testing" optional="Next, we created paper prototypes and user-tested both of our top ideas, Open Forum and Blind Match." />
+                <div id="user-testing" className="section">
+                    <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />
                     <p className="w-slim self-center">Coming soon.</p>
                 </div>
 
                 {/* HIGH-FI */}
-                <div id="create-high-fidelity-prototype" className="section">
-                    <SectionHeader title="Phase 5: Design" description="High-fidelity prototype" optional="As the final phase of this project, I created a high-fidelity prototype of our app in Figma, incorporating notes from our user testing and all the way back to the initial research." />
+                <div id="design" className="section">
+                    <SectionHeader title={sections[4].header} description={sections[4].description} optional={sections[4].optional} />
                     <div className="img-bg rounded flex align-center justify-center w-full mb-[-2.75vw]">
                         <div className="self-center my-[4vw]">
                             <video autoPlay loop playsInline muted className="w-[20vw] min-w-[20rem]">

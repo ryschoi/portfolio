@@ -1,6 +1,6 @@
 import { section } from "projects/section";
 
-export default function Task({ task, sectionsList }: { task: string, sectionsList: section[] }) {
+export default function ProcessBox({ sectionsList }: { sectionsList: section[] }) {
     const handleScroll = (item: string) => {
         const id = item.toLowerCase().replace(/[^a-z0-9]+/g, '-');
         const section = document.getElementById(id);
@@ -15,10 +15,15 @@ export default function Task({ task, sectionsList }: { task: string, sectionsLis
         <div className="task-container flex place-content-center">
             <div className="mob-mid-w my-[7rem] flex flex-col gap-[1rem]">
                 <p className="caption light-gray">Process</p>
+                <hr className="border-[#555555] border-[1.5px]"/>
                 {sectionsList.map((section, index) => (
-                    <div className="hover:underline cursor-pointer flex flex-col gap-[0.25rem]" onClick={() => handleScroll(section.header)}>
-                        <p className="caption light-gray">0{index + 1}. {section.header}</p>
-                        <h2 className="white">{section.description}</h2>
+                    <div className="flex flex-col gap-[2rem]">
+                         {/* hover:underline cursor-pointer  onClick={() => handleScroll(section.header)} */}
+                        <div className="flex flex-col gap-[0.25rem]">
+                            <p className="caption light-gray">{section.header}</p>
+                            <h2 className="white">{section.description}</h2>
+                        </div>
+                        <hr className="border-[#555555] border-[1.5px]"/>
                     </div>
                 ))}
             </div>

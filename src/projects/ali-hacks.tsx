@@ -1,30 +1,20 @@
 import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
-import SectionHeader from "../components/section-header";
-import VerticalImageSpan from "../components/vertical-image-span";
-import TwoImageCaption from "../components/two-image-caption";
 import { Project } from "./project";
-import Task from "../components/task";
+import { section } from "./section";
 
 export default function AliHacks() {
     const thisProject = projects.find(p => p.path === "/ali-hacks");
+    const sections: section[] = [
+        { header: "01. Internal application portal", description:"" },
+        { header: "02. Sponsorship package", description:"" }
+    ]
     return (
         <div className="project-content">
-            <ProjectHeader project={thisProject as Project} />
+            <ProjectHeader project={thisProject as Project} sections={sections} />
             <div className="project-content-rest">
-                <Task task="Using the existing Asian-American style from the public website, design high-fidelity wireframes for the internal application portal and a sponsorship package to send out to potential sponsors." processItems={["Internal portal UI", "Sponsorship package design"]} />
                 <p className="w-slim self-center">Process coming soon.</p>
-
-                {/* <div className="section" id="data-collection-and-engineering">
-                    <SectionHeader title="Part 1" description="Data collection & engineering" optional="Most of the data was collected from Our World in Data. I downloaded data sets for individual climate conditions (i.e. precipitation, surface temperature). From there, I used Excel to clean up each dataset and combine them into one workbook that I could easily filter through and map. Even though each dataset covered global data by country, there were still variations in the categorization: some countries did not have recorded data in some datasets, and some datasets listed continents as countries, leading to duplicate values." />
-                </div> */}
-
-                {/* FINAL */}
-                {/* <div className="section">
-                    <h2 className="w-slim self-center">Final wireframes</h2>
-                    <VerticalImageSpan path="images/work/snakebite-data/snakebiteData.png" />
-                </div> */}
             </div>
         </div>
     );

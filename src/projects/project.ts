@@ -17,5 +17,5 @@ export type Project = {
     frontImage: string;
     frontImageBG: string;
     border: boolean;
-    description: string;
+    overview: string;
 };

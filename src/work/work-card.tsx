@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Project } from "../projects/project";
 import ImageBG from "../components/image-bg";
-import Tag from "components/tag";
 
 export default function WorkCard({ project }: { project: Project }) {
     return (
@@ -18,12 +17,6 @@ export default function WorkCard({ project }: { project: Project }) {
                     </Link>
                     <p className="caption">{project.name}, {project.year}</p>
                 </div>
-                {/* Right tags */}
-                {/* <div className="flex gap-[0.5rem] tag-position-2">
-                    {project.tags.map((tag) => (
-                        <Tag text={tag} hover={false} clicked={true} />
-                    ))}
-                </div> */}
             </div>
         </div>
     );

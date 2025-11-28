@@ -18,13 +18,6 @@ export default function ImageBG({ project }: { project: Project }) {
                             className="w-[26rem] max-w-[85vw] subtle-shadow object-cover"
                         />
                     </div>
-                    {/* <div className="flex items-start h-full">
-                        <img
-                            src={project.frontImage}
-                            alt=""
-                            className="pt-[3vw] w-[40rem] h-full object-contain object-top self-start subtle-shadow"
-                        />
-                    </div> */}
                 </div>
                 :
                 <div className="zoom img-bg relative rounded flex align-center justify-center overflow-hidden">
