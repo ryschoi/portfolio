@@ -54,7 +54,7 @@ export default function ProjectHeader({ project, sections }: { project: Project,
                             {project.team.map((t, i) => (
                                 <p key={i}>{t}</p>
                             ))}
-                            <p className="white">{project.role}</p>
+                            <p className="">{project.role}</p>
                         </div>
                     </div>
                     <div className="flex flex-col gap-[0.2rem] w-[10rem]">

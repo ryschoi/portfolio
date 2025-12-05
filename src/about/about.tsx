@@ -93,7 +93,7 @@ export default function About() {
 
         {/* CURRENTLY */}
         <div className="thing">
-          <h3 className="tracking-[-0.25px]">Born and raised in the temperate Bay Area, California, and now in (not-so-temperate) Boston, MA.</h3>
+          <h3 className="tracking-[-0.25px]">Born and raised in the temperate Bay Area, and now in (not-so-temperate) Boston, MA.</h3>
           <br />
           <h3 className="tracking-[-0.25px]">Currently...</h3>
           <ul>

@@ -26,7 +26,7 @@ export default function OpenForum() {
                 {/* PROBLEM */}
                 <div id="defining-the-problem" className="section">
                     <SectionHeader title={sections[0].header} description={sections[0].description} optional={sections[0].optional} />
-                    <p className="w-slim self-center">We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?</p>
+                    {/* <p className="w-slim self-center">We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?</p> */}
                 </div>
 
                 {/* RESEARCH */}
