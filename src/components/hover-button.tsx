@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router";
 
-export default function HoverButton({ buttonText, hoverText, path }: { buttonText: string; hoverText: string, path: string }) {
+export default function HoverButton({ buttonText, hoverText, path }: { buttonText: string, hoverText: string, path: string }) {
   const { hash } = useLocation();
 
   useEffect(() => {

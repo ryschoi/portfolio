@@ -4,9 +4,7 @@ import ProjectHeader from "../components/project-header";
 import SectionHeader from "../components/section-header";
 import VerticalImageSpan from "../components/vertical-image-span";
 import { Project } from "./project";
-import Task from "../components/task";
 import { section } from "./section";
-import ProcessBox from "components/process";
 
 export default function SnakebiteData() {
     const thisProject = projects.find(p => p.path === "/snakebite-data");

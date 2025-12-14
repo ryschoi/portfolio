@@ -2,13 +2,17 @@ import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
+import { section } from "./section";
 
 export default function BasicsOfTypography() {
     const thisProject = projects.find(p => p.path === "/basics-of-typography");
+    const sections: section[] = [
+        { header: "", description: "" }
+    ]
 
     return (
         <div className="project-content">
-            <ProjectHeader project={thisProject as Project} />
+            <ProjectHeader project={thisProject as Project} sections={sections}/>
 
             <div className="project-content-rest">
                 <div className="row22">

@@ -1,4 +1,3 @@
-import "./resume.css";
 import Tag from "components/tag";
 
 export default function Resume() {

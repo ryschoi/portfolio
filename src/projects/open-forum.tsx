@@ -4,7 +4,6 @@ import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
 import SectionHeader from "components/section-header";
 import Tag from "components/tag";
-import ImageModal from "components/image-modal";
 import { section } from "./section";
 
 export default function OpenForum() {

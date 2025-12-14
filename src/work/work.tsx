@@ -1,11 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { projects } from "../database";
 import "../index.css";
-import "../navigation/nav.css";
 import "./work.css";
 import WorkCard from "./work-card";
 import Tag from "../components/tag";
-import { Link, useLocation } from "react-router";
 import HoverButton from "components/hover-button";
 
 export default function Work() {
@@ -26,7 +24,7 @@ export default function Work() {
   return (
     <div className="flex flex-col">
       {/* GREETING */}
-      <div className="flex flex-wrap gap-[2.5rem] items-start mt-[9rem] mb-[13rem] self-center">
+      <div className="flex flex-wrap gap-[2.5rem] items-start mt-[8rem] mb-[12rem] self-center">
         <img src="images/notion_face.png" className="w-[8rem] object-contain" />
         {/* NEW HEADER BELOW */}
         <div className="w-[39rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[3vh]">
@@ -39,7 +37,7 @@ export default function Work() {
           </div>
         </div>
       </div>
-      
+
       {/* FILTERS */}
       <div className="flex flex-wrap gap-[0.5rem] mb-[1.5rem]" id="">
         {allTags.map((tag) => {

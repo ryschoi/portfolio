@@ -65,13 +65,13 @@
   color: var(--color-black);
 }
 
-body{
-  background-color: #F9F8F6;
+body {
+  /* background-color: #F9F8F6; */
+  background-color: #f7f6f4;
 }
 
 #root {
   margin: 0px 4%;
-  /* background-color: #F9F8F6; */
 }
 
 p,
@@ -213,7 +213,10 @@ a:hover {
 
 .green {
   color: #acaa0b;
-  /* color: #ebc034; */
+}
+
+.nav-active {
+  color: #abab11;
 }
 
 .pink {
@@ -347,14 +350,6 @@ hr {
   column-gap: 0.5rem;
 }
 
-.highlight {
-  padding: 3px 5px;
-  margin: 0 0 0.5rem 0;
-  background-color: #e9e8b7;
-  font-weight: 500;
-  color: #282828;
-}
-
 .frosted {
   backdrop-filter: blur(1.25rem);
   background-color: rgba(255, 255, 255, 0.5);
@@ -368,4 +363,8 @@ hr {
   background-color: rgba(255, 255, 255, 0.5);
   /* box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25); */
   /* border: 1px solid rgba(255, 255, 255, 0.3); */
+}
+
+.resume-shadow {
+  filter: drop-shadow(0 0 3rem #ebebeb)
 }

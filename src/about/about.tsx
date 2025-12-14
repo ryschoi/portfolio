@@ -5,6 +5,7 @@ import { useLocation, Link } from "react-router-dom";
 import Tag from "../components/tag";
 import HoverButton from "components/hover-button";
 import TagCursor from "components/tag-cursor";
+import SlideImg from "components/slide-img";
 
 export default function About() {
   const { hash } = useLocation();
@@ -115,12 +116,12 @@ export default function About() {
           {/* IMAGES */}
           <div className="work-img-group-col">
             <div className="flex flex-col">
-              <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/nara.png" />
+              <img className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/nara.png" />
               <p className="caption cap-top">My dog, Nara</p>
             </div>
             <div className="flex flex-col">
-              <img id="headshot" className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/arboretum wide.jpg" />
-              <p className="caption cap-top">from one of my walks</p>
+              <img className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/arboretum wide.jpg" />
+              <p className="caption cap-top">Trees!</p>
             </div>
           </div>
           {/* <>
@@ -131,6 +132,18 @@ export default function About() {
               onMouseLeave={(e: React.MouseEvent<HTMLImageElement>) => hideCursor(e)} />
             <TagCursor text="My dog, Nara" x={cursor.x} y={cursor.y} visible={cursor.visible} />
           </> */}
+          {/* <div className="carousel-container">
+            <div className="slides-wrapper">
+              <SlideImg src="images/nara.png" caption="my dog nara" />
+              <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
+              <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
+              <SlideImg src="images/carrotCake.png" caption="Fall baking" />
+              <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
+              <SlideImg src="images/nara.png" caption="my dog nara" />
+              <SlideImg src="images/nara.png" caption="my dog nara" />
+              <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
+            </div>
+          </div> */}
         </div>
 
         <hr />

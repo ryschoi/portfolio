@@ -1,21 +1,3 @@
-#contact {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 50px;
-}
-
-#contact-info {
-  margin-left: 20px;
-}
-
-.subheading {
-  margin-bottom: 8px;
-}
-
-#contacts a {
-  color: #6F6E09;
-}
-
 .tag-img {
   width: 100%;
   height: 15vw;
@@ -32,4 +14,52 @@
   top: 0;
   padding: 6px 16px;
   transition: top ease 0.5s;
+}
+
+/* .carousel-container {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+} */
+
+.carousel-container:hover .slides-wrapper {
+  animation-play-state: paused;
+}
+
+.slides-wrapper {
+  display: flex;
+  /* Adjust width based on number of original images * 2 (e.g., 8 images * 12.5% width each = 100% per set) */
+  width: max-content;
+  /* For 4 unique images, two sets of 4 */
+  animation: slideAnimation 30s linear infinite;
+  /* Adjust duration and timing function as needed */
+  gap: 0.5rem;
+}
+
+.slides-wrapper:hover {
+  animation-play-state: paused;
+}
+
+.slide-img {
+  width: full;
+  height: 15vw;
+  min-height: 25vh;
+  border-radius: 0.5rem;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    /* Moves the wrapper the width of one full set of images */
+    transform: translateX(-100%);
+  }
 }

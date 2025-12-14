@@ -7,7 +7,6 @@ import { projects } from "../database";
 import { Project } from "./project";
 import "./projects.css";
 import { section } from "./section";
-import ProcessBox from "components/process";
 
 export default function DissonantHarmony() {
     const thisProject = projects.find(p => p.path === "/dissonant-harmony");
