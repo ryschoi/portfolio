@@ -6,6 +6,7 @@ import Tag from "../components/tag";
 import HoverButton from "components/hover-button";
 import TagCursor from "components/tag-cursor";
 import SlideImg from "components/slide-img";
+import { usePauseOnScroll } from "components/pause-on-scroll";
 
 export default function About() {
   const { hash } = useLocation();
@@ -55,6 +56,8 @@ export default function About() {
     );
   };
 
+  const { viewportRef, trackRef } = usePauseOnScroll();
+
   const handleScroll = (item: string) => {
     const id = item.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     const section = document.getElementById(id);
@@ -64,6 +67,8 @@ export default function About() {
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
+
+
 
   return (
     <div className="flex justify-center w-full">
@@ -133,15 +138,41 @@ export default function About() {
             <TagCursor text="My dog, Nara" x={cursor.x} y={cursor.y} visible={cursor.visible} />
           </> */}
           {/* <div className="carousel-container">
-            <div className="slides-wrapper">
-              <SlideImg src="images/nara.png" caption="my dog nara" />
-              <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
-              <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
-              <SlideImg src="images/carrotCake.png" caption="Fall baking" />
-              <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
-              <SlideImg src="images/nara.png" caption="my dog nara" />
-              <SlideImg src="images/nara.png" caption="my dog nara" />
-              <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
+            <div className="carousel-viewport">
+              <div className="slides-wrapper">
+                <SlideImg src="images/nara.png" caption="my dog nara" />
+                <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
+                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
+                <SlideImg src="images/carrotCake.png" caption="Fall baking" />
+                <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
+                <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
+
+                <SlideImg src="images/nara.png" caption="my dog nara" />
+                <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
+                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
+                <SlideImg src="images/carrotCake.png" caption="Fall baking" />
+                <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
+                <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
+              </div>
+            </div>
+          </div> */}
+          {/* <div ref={viewportRef} className="carousel-container">
+            <div className="carousel-viewport">
+              <div ref={trackRef} className="slides-wrapper">
+                <SlideImg src="images/nara.png" caption="my dog nara" />
+                <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
+                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
+                <SlideImg src="images/carrotCake.png" caption="Fall baking" />
+                <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
+                <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
+
+                <SlideImg src="images/nara.png" caption="my dog nara" />
+                <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
+                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
+                <SlideImg src="images/carrotCake.png" caption="Fall baking" />
+                <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
+                <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
+              </div>
             </div>
           </div> */}
         </div>

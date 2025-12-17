@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 export default function NavBar() {
   const { pathname } = useLocation();
   const links = [
+    // { label: "Rebecca Choi", path: `/` },
     { label: "Work", path: `/` },
     // { label: "Misc", path: `/misc` },
     // { label: "Resume", path: `/resume` },

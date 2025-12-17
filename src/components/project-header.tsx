@@ -7,18 +7,17 @@ export default function ProjectHeader({ project, sections }: { project: Project,
     return (
         <div className="flex flex-col items-center mb-[6rem] w-full gap-[2rem]">
             {/* TOP TITLE */}
-            <div className="mob-mid-w flex flex-col gap-[1.5vh]">
-                <div className="flex flex-col gap-[0.6vh]">
-                    <h1>{project.summary}</h1>
-                    <p className="caption">{project.name}, {project.year}</p>
-                    <div className="flex gap-[0.5rem] tag-position-2 mt-[0.5rem]">
-                        {project.tags.map((tag) => (
-                            <Tag text={tag} hover={false} clicked={true} />
-                        ))}
-                    </div>
+            <div className="mob-mid-w flex flex-col gap-[0.2rem]">
+                <h1>{project.summary}</h1>
+                <p className="caption">{project.name}, {project.year}</p>
+                <div className="flex gap-[0.5rem] tag-position-2 mt-[0.5rem]">
+                    {project.tags.map((tag) => (
+                        <Tag text={tag} hover={false} clicked={true} />
+                    ))}
                 </div>
-                {/* Old */}
-                {/* <h1>{project.name}  <span className="gray">{project.year}</span></h1>
+            </div>
+            {/* Old */}
+            {/* <h1>{project.name}  <span className="gray">{project.year}</span></h1>
                     <div className="flex flex-wrap gap-[0.5rem]">
                         {project.tags
                             .map((tag) => (
@@ -26,7 +25,6 @@ export default function ProjectHeader({ project, sections }: { project: Project,
                             ))}
                     </div>
                 */}
-            </div>
 
             {/* IMAGE */}
             <div className="rounded img-bg w-full flex align-center justify-center py-[3vw]">
@@ -34,8 +32,8 @@ export default function ProjectHeader({ project, sections }: { project: Project,
             </div>
 
             {/* BELOW IMAGE */}
-            <div className="flex flex-col gap-[3rem] self-center mob-mid-w my-[2rem]">
-                <div>
+            <div className="flex flex-col gap-[3.5rem] self-center mob-mid-w mt-[2rem] mb-[3rem]">
+                <div className="flex flex-col gap-[0.2rem]">
                     <p className="caption">Project overview</p>
                     <h1 className="">{project.overview}</h1>
                 </div>
