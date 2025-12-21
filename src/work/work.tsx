@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { projects } from "../database";
 import "../index.css";
 import "./work.css";
@@ -7,6 +8,23 @@ import Tag from "../components/tag";
 import HoverButton from "components/hover-button";
 
 export default function Work() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo === "filters") {
+      const section = document.getElementById("filters");
+      if (section) {
+        const offset = 64;
+        const y =
+          section.getBoundingClientRect().top +
+          window.pageYOffset -
+          offset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }
+  }, [location.state]);
+
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
   const allTags = Array.from(
@@ -24,9 +42,8 @@ export default function Work() {
   return (
     <div className="flex flex-col">
       {/* GREETING */}
-      <div className="flex flex-wrap gap-[2.5rem] items-start mt-[8rem] mb-[12rem] self-center">
+      <div className="flex flex-wrap gap-[2.5rem] items-start mt-[9rem] mb-[12rem] self-center">
         <img src="images/notion_face.png" className="w-[8rem] object-contain" />
-        {/* NEW HEADER BELOW */}
         <div className="w-[39rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[3vh]">
           <h1>Hi, I'm Rebecca.<br />
             <span className="gray">A developer-turned-designer shaping people's digital experiences with intention and craft</span>
@@ -39,7 +56,7 @@ export default function Work() {
       </div>
 
       {/* FILTERS */}
-      <div className="flex flex-wrap gap-[0.5rem] mb-[1.5rem]" id="">
+      <div className="flex flex-wrap gap-[0.5rem] mb-[1.5rem]" id="filters">
         {allTags.map((tag) => {
           const isSelected = selectedTag === tag;
           const count = projects.filter((p) => p.active === true && p.tags.includes(tag)).length;
@@ -50,7 +67,7 @@ export default function Work() {
               onClick={() => setSelectedTag((prev) => (prev === tag ? null : tag))}
               className="flex items-center gap-[0.5rem]">
               <Tag hover={true} clicked={isSelected}>
-                {tag} <span className="gray text-[0.85rem]">{count}</span>
+                {tag} <span className={`text-[0.85rem] ${ isSelected ? "light-gray" : "gray" }`}>{count}</span>
               </Tag>
             </div>
           );

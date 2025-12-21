@@ -68,8 +68,6 @@ export default function About() {
     }
   };
 
-
-
   return (
     <div className="flex justify-center w-full">
       <div className="flex flex-col gap-[2rem] w-slim">

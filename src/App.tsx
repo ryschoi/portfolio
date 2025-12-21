@@ -32,7 +32,6 @@ export default function App() {
       <ResetScroll />
       <div className="flex flex-col place-content-center">
         <NavBar />
-
         <Routes>
           <Route path="/" element={<Work />} />
           <Route path="/misc" element={<Misc />} />

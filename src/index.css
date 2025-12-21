@@ -31,7 +31,7 @@
   --ps-leading: 1.3rem;
 
   --h1-size: 1.65rem;
-  --h1-leading: 2.2rem;
+  --h1-leading: 2.1rem;
 
   --h2-size: 1.45rem;
   --h2-leading: 2rem;
@@ -195,6 +195,10 @@ a:hover {
   border: 2px solid var(--color-black);
 }
 
+.border-bottom {
+  border-bottom: 1.5px solid var(--color-gray-stroke);
+}
+
 .light-border {
   border: 1px solid #dddddd;
 }
@@ -215,8 +219,9 @@ a:hover {
   color: #acaa0b;
 }
 
-.nav-active {
+.nav-active, .work-hover:hover {
   color: #abab11;
+  cursor: pointer;
 }
 
 .pink {
