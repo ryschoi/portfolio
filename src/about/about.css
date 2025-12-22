@@ -37,9 +37,13 @@
 /* Animated track */
 .slides-wrapper {
   display: flex;
-  width: max-content;
+  width: 100%;
+  height: fit-content;
   gap: 0.5rem;
-  animation: slideAnimation 40s linear infinite;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  /* animation: slideAnimation 40s linear infinite; */
 }
 
 .slides-wrapper.paused {
@@ -55,7 +59,14 @@
   border-radius: 0.5rem;
 }
 
-@keyframes slideAnimation {
+.vert-slide-img {
+  width: 28vw;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* @keyframes slideAnimation {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
-}
+} */

@@ -29,10 +29,13 @@ export default function ImageBG({ project }: { project: Project }) {
                             ))}
                     </div>
                     <div className="my-[3vw]">
-                        {project.id === 12 ?
+                        {project.id === 12 ? (
                             <video autoPlay loop playsInline muted src="images/work/open-forum/open-forum-video.mov"
                                 className="w-[18rem] max-w-[85vw]" />
-                            :
+                        ) : project.id === 13 ? (
+                            <video autoPlay loop playsInline muted src="images/work/alihacks/full_proto.mov"
+                                className="w-[44rem] max-w-[85vw] subtle-shadow object-cover" />
+                        ) : (
                             <img src={project.frontImage} alt=""
                                 className={
                                     project.vertical
@@ -40,7 +43,7 @@ export default function ImageBG({ project }: { project: Project }) {
                                         : "w-[44rem] max-w-[85vw] subtle-shadow object-cover"
                                 }
                             />
-                        }
+                        )}
                     </div>
                 </div>
             }

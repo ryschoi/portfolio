@@ -6,6 +6,10 @@
   background-color: #e8e9d880;
 }
 
+.ali-bg-2 {
+  background-color: #bac5bd50;
+}
+
 .plain-tag {
   background-color: var(--color-tag-bg);
   color: var(--color-black);

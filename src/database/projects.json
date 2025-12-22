@@ -105,6 +105,27 @@
         "overview": "Marketing material for an Alexandar Calder museum exhibition. Includes an A1 size poster, A5 size flyer, and Instagram posts."
     },
     {
+        "id": 13,
+        "active": true,
+        "column": "right",
+        "name": "ALI Hacks",
+        "path": "/ali-hacks",
+        "summary": "Professional yet original internal portal UI and sponsorship package for a Boston-based, student-led hackathon",
+        "type": "Contract",
+        "team": ["Individual project"],
+        "role": "UI/UX designer",
+        "medium": "Web",
+        "tools": "Figma",
+        "year": 2025,
+        "timeline": "May - Jun 2025",
+        "tags": ["UI/UX"],
+        "vertical": false,
+        "frontImage": "images/work/alihacks/aliFront.png",
+        "frontImageBG": "images/work/alihacks/aliFront.png",
+        "border": false,
+        "overview": "High-fi prototypes for the internal application portal of a Boston student-led hackathon and a sponsorship package to send out to potential sponsors."
+    },
+    {
         "id": 1,
         "active": true,
         "column": "left",
@@ -250,26 +271,5 @@
         "frontImageBG": "images/work/complete_stairs.png",
         "border": false,
         "overview": "Description coming soon."
-    },
-    {
-        "id": 13,
-        "active": true,
-        "column": "right",
-        "name": "ALI Hacks",
-        "path": "/ali-hacks",
-        "summary": "Professional yet original internal portal UI and sponsorship package for a Boston-based, student-led hackathon",
-        "type": "Contract",
-        "team": ["Individual project"],
-        "role": "UI/UX designer",
-        "medium": "Web",
-        "tools": "Figma",
-        "year": 2025,
-        "timeline": "May - Jun 2025",
-        "tags": ["UI/UX"],
-        "vertical": false,
-        "frontImage": "images/work/alihacks/aliFront.png",
-        "frontImageBG": "images/work/alihacks/aliFront.png",
-        "border": false,
-        "overview": "High-fi prototypes for the internal application portal of a Boston student-led hackathon and a sponsorship package to send out to potential sponsors."
     }
 ]

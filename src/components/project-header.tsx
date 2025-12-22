@@ -7,7 +7,7 @@ export default function ProjectHeader({ project, sections }: { project: Project,
     return (
         <div className="flex flex-col items-center mb-[6rem] w-full gap-[2rem]">
             {/* TOP TITLE */}
-            <div className="mob-mid-w flex flex-col gap-[0.2rem]">
+            <div className="mob-mid-w flex flex-col gap-[0.1rem]">
                 <h1 className="mb-[0.3rem]">{project.summary}</h1>
                 <p className="caption">{project.name}, {project.year}</p>
                 <div className="flex gap-[0.5rem] tag-position-2 mt-[0.5rem]">
@@ -19,7 +19,13 @@ export default function ProjectHeader({ project, sections }: { project: Project,
 
             {/* IMAGE */}
             <div className="rounded img-bg w-full flex align-center justify-center py-[3vw]">
-                <img src={project.frontImage} alt="" className={project.vertical === true ? "w-[26rem] max-w-[85vw] subtle-shadow" : "w-[44rem] max-w-[85vw] subtle-shadow"} />
+                < img src={project.frontImage} alt="" className={project.vertical === true ? "w-[26rem] max-w-[85vw] subtle-shadow" : "w-[44rem] max-w-[85vw] subtle-shadow"} />
+                {/* {project.id === 13 ? (
+                    <video autoPlay loop playsInline muted src="images/work/alihacks/full_proto.mov"
+                        className="w-[44rem] max-w-[85vw] subtle-shadow object-cover" />
+                ) : (
+                    < img src={project.frontImage} alt="" className={project.vertical === true ? "w-[26rem] max-w-[85vw] subtle-shadow" : "w-[44rem] max-w-[85vw] subtle-shadow"} />
+                )} */}
             </div>
 
             {/* BELOW IMAGE */}
