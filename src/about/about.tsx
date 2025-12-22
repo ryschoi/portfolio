@@ -97,13 +97,13 @@ export default function About() {
 
         {/* CURRENTLY */}
         <div className="thing">
-          <h3 className="tracking-[-0.25px]">Born and raised in the temperate Bay Area, and now in (not-so-temperate) Boston, MA.</h3>
+          <h4 className="tracking-[-0.25px]">Born and raised in the temperate Bay Area, and now in (not-so-temperate) Boston, MA.</h4>
           <br />
-          <h3 className="tracking-[-0.25px]">Currently...</h3>
+          <h4 className="tracking-[-0.25px]">Currently...</h4>
           <ul>
-            <li className="h3">Third-year Computer Science and Design student at Northeastern University</li>
-            <li className="h3">Doing my co-op at The Boston Beer Company on the Marketing Analytics team, using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible</li>
-            <li className="h3">Design lead at <a href="https://www.sandboxnu.com/" className="h3 underline">Sandbox NU</a> for <a className="h3 underline" href="/cooper">Cooper</a>, creating a job experience review platform to help Northeastern students make more informed co-op decisions</li>
+            <li className="h4">Third-year Computer Science and Design student at Northeastern University</li>
+            <li className="h4">Doing my co-op at The Boston Beer Company on the Marketing Analytics team, using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible</li>
+            <li className="h4">Design lead at <a href="https://www.sandboxnu.com/" className="h3 underline">Sandbox NU</a> for <a className="h3 underline" href="/cooper">Cooper</a>, creating a job experience review platform to help Northeastern students make more informed co-op decisions</li>
           </ul>
         </div>
 
@@ -111,11 +111,11 @@ export default function About() {
 
         {/* OTHER THINGS */}
         <div className="flex flex-col gap-[1.5rem]">
-          <h3 className="">
+          <h4 className="">
             <span className="font-[400]">Some things that keep me going:</span> long walks around the city, baking & recipe testing, bass guitar, music, kombucha, spontaneous changes to this website, and my dog<br />
             {/* Pet peeves: custom cursors, inefficiency */}
             {/* Dislikes: custom cursors */}
-          </h3>
+          </h4>
           {/* IMAGES */}
           <div className="work-img-group-col">
             <div className="flex flex-col">

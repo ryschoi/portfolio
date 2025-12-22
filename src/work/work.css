@@ -44,6 +44,31 @@
   top: -3px;
 }
 
+.up-arrow {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 9999;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-tag-bg);
+  border: 1.5px solid var(--color-gray-stroke);
+  border-radius: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.up-arrow:hover {
+  background-color: var(--color-tag-hover);
+  transform: translateY(-3px);
+}
+
 .tooltip {
   display: block;
   position: absolute;

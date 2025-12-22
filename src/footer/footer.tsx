@@ -1,10 +1,29 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Footer() {
-    const location = useLocation();
+    const { pathname } = useLocation();
+    const navigate = useNavigate();
+
+    const handleWorkClick = () => {
+        if (pathname !== "/") {
+            navigate("/", { state: { scrollTo: "filters" } });
+        } else {
+            const section = document.getElementById("filters");
+            if (section) {
+                const offset = 64;
+                const y =
+                    section.getBoundingClientRect().top +
+                    window.pageYOffset -
+                    offset;
+
+                window.scrollTo({ top: y, behavior: "smooth" });
+            }
+        }
+    };
+
 
     const handleClick = (to: string) => {
-        if (location.pathname === to && ['/', '/background', '/about', '/resume'].includes(to)) {
+        if (pathname === to && ['/', '/background', '/about', '/resume'].includes(to)) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
@@ -20,7 +39,7 @@ export default function Footer() {
                     <Link to="/" onClick={() => handleClick('/')}>Rebecca Choi</Link>
                     <div>
                         <p className="caption">Coded and designed by me ◡̈</p>
-                        <p className="caption">Last updated: Nov 2025</p>
+                        <p className="caption">Last updated: Dec 2025</p>
                     </div>
                 </div>
 
@@ -28,8 +47,12 @@ export default function Footer() {
                 <div className="flex justify-between w-[28rem]">
                     <div>
                         <p className="caption mb-[0.5rem]">Pages</p>
-                        <Link to="/" onClick={() => handleClick('/')}>Work</Link><br />
-                        {/* <Link to="/resume" onClick={() => handleClick('/resume')}>Resume</Link><br /> */}
+                        {/* <Link to="/" onClick={() => handleClick('/')}>Work</Link><br /> */}
+                        <button
+                            onClick={handleWorkClick}
+                            className="cursor-pointer bg-transparent p-style green-hover p-[0px] block">
+                            Work
+                        </button>
                         <Link to="/background" onClick={() => handleClick('/background')}>Background</Link><br />
                         <Link to="/about" onClick={() => handleClick('/about')}>About</Link><br />
                     </div>

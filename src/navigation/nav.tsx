@@ -33,15 +33,13 @@ export default function NavBar() {
         <button
           onClick={handleWorkClick}
           className={`caption bg-transparent transition-colors
-    ${pathname === "/"
+            ${pathname === "/"
               ? "nav-active"
               : "gray work-hover"
-            }
-  `}
+            }`}
         >
           Work
         </button>
-
         <NavBarItem name="Background" path="/background" currentPage={pathname} />
         <NavBarItem name="About" path="/about" currentPage={pathname} />
       </div>
