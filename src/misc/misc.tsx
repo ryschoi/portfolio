@@ -19,7 +19,6 @@ export default function Misc() {
     });
 
     return (
-        // <div className="bg-[#212121] mx-[-4rem] my-[-2rem]">
         <div className="flex flex-col place-content-center items-center gap-[2rem]">
             <div className="flex flex-col gap-[1rem]">
                 {/* TITLE */}

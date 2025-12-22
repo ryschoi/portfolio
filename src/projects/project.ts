@@ -6,15 +6,16 @@ export type Project = {
     path: string;
     summary: string;
     type: string;
-    team: string;
+    team: string[];
     role: string;
     medium: string;
     tools: string;
     year: number;
+    timeline: string;
     tags: string[];
     vertical: boolean;
     frontImage: string;
     frontImageBG: string;
     border: boolean;
-    description: string;
+    overview: string;
 };

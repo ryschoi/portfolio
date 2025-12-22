@@ -3,86 +3,126 @@ import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import SectionHeader from "../components/section-header";
 import VerticalImageSpan from "../components/vertical-image-span";
-import TwoImageCaption from "../components/two-image-caption";
 import { Project } from "./project";
-import Task from "../components/task";
+import { section } from "./section";
 
 export default function SnakebiteData() {
     const thisProject = projects.find(p => p.path === "/snakebite-data");
+    const sections: section[] = [
+        { header: "01. Data collection and engineering", description: "Gather data sets and create preliminary data visualizations", optional: "I got various data sets of climate conditions from Our World in Data. In Excel, I cleaned them up so I could work with them in one workbook, and then created initial visualizations (that I later moved to Illustrator)." },
+        { header: "02. Data visualization", description: "Establishing a clear visual language and data story", optional: "In Illustrator, I not only edited individual visualizations, creating one consistent look for the poster, but I also had to make sure that each of the visualizations, once pieced together, told one cohesive story." },
+        { header: "03. Final deliverable", description: "A5 size poster" },
+        { header: "04. Reflection", description: "My first data visualization project!" }
+    ];
     return (
         <div className="project-content">
-            <ProjectHeader project={thisProject as Project} />
+            <ProjectHeader project={thisProject as Project} sections={sections} />
             <div className="project-content-rest">
-                <Task task="Turn global snakebite and climate data into a cohesive, readable story" processItems={["Data collection and engineering", "Data visualization"]} />
 
-                {/* DATA COLLECTION */}
-                {/* <div className="section" id="data-collection-and-engineering">
-                    <SectionHeader title="Data collection & engineering" description="Collected data from Our World in Data, and cleaned up and engineered it in Excel" optional="Most of the data was collected from Our World in Data. I downloaded data sets for individual climate conditions (i.e. precipitation, surface temperature). From there, I used Excel to clean up each dataset and combine them into one workbook that I could easily filter through and map. Even though each dataset covered global data by country, there were still variations in the categorization: some countries did not have recorded data in some datasets, and some datasets listed continents as countries, leading to duplicate values." />
-                </div> */}
-
-                <div className="section" id="data-collection-and-engineering">
-                    <SectionHeader title="Part 1" description="Data collection & engineering" optional="Most of the data was collected from Our World in Data. I downloaded data sets for individual climate conditions (i.e. precipitation, surface temperature). From there, I used Excel to clean up each dataset and combine them into one workbook that I could easily filter through and map. Even though each dataset covered global data by country, there were still variations in the categorization: some countries did not have recorded data in some datasets, and some datasets listed continents as countries, leading to duplicate values." />
+                <div className="section w-slim" id="data-collection-and-engineering">
+                    <SectionHeader title={sections[0].header} description={sections[0].description} optional={sections[0].optional} />
                 </div>
 
                 {/* DATA VISUALIZATION */}
-                <div className="section" id="data-visualization">
-                    <SectionHeader title="Part 2" description="Data visualization" optional="I used Excel to create initial data visualizations like maps and charts. From there, I copied them over into Illustrator where I edited them more stylistically and pieced them together into the poster orientation." />
+                <div className="section self-center" id="data-visualization">
+                    <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
 
                     {/* FIRST DRAFT */}
-                    <div className="flex flex-col w-full">
-                        <div className="img-bg rounded flex place-content-center w-full">
-                            <div className="self-center my-[3vw] subtle-shadow flex flex-wrap gap-[4vw] place-content-center">
-                                <img src="/images/work/snakebite-data/s-data-crit1.png" alt="" className="w-[36vw] min-w-[332px]" />
-                                <img src="/images/work/snakebite-data/snakebite-data-feedback.png" alt="" className="w-[36vw] min-w-[332px]" />
-                            </div>
-                        </div>
-                        <p className="caption cap-top">first iteration</p>
-                    </div>
-                    {/* COMMENTS */}
-                    <div className="flex flex-col mob-mid-w self-center">
-                        <p>Comments:</p>
-                        <ul>
-                            <li>Box plot is too technical–would take too long to read while some may not even know how to read it</li>
-                            <li>Re-order items in two right visualizations to be in the same order</li>
-                            <li>Turn map into a choropleth to show more of a range of snakebite conditions, rather than a black and white more than or below average</li>
-                            <li>Make it look less like a two-column layout–establish a more clear flow</li>
-                            <li>Make the green less bright; stands out too much</li>
-                        </ul>
+                    <h4 className="gray w-slim self-center">The first iteration of the poster prompted changes being needed surrounding choosing the right type of visualizations to use and refining the visual style.</h4>
+                    <div className="w-slim self-center img-bg rounded flex place-content-center p-[4vw] box-border">
+                        <img src="/images/work/snakebite-data/first-crit-feedback.png" alt="" className="self-center subtle-shadow w-full" />
                     </div>
                 </div>
 
                 {/* ISOTYPES */}
-                <div className="section align-center">
-                    <div className="flex flex-col gap-[1rem]">
-                        <h2 className="self-center mob-mid-w">Isotypes</h2>
-                        <p className="mob-mid-w self-center">At first, to highlight the difference in climate conditions, I had illustrations of what those conditions might look like (i.e. more jagged land or more rainfall). However, I found that other than the numbers under the illustrations, there was no way to tangibly grasp the difference in measuremnets.<br /><br />For the final version, I turned the numbers into isotypes with circles representing the actual proportions of the numbers. This way, it is a lot easier to tell the values of each measurement, and just how much the differences are.</p>
+                <div className="flex flex-col mt-[1rem] gap-[1.5rem] align-center w-full">
+                    <div className="flex flex-col self-center w-slim">
+                        <h3>Isotypes</h3>
+                        <h3 className="gray">Representing data in a visual and proportionately-accurate way</h3>
                     </div>
-                    {/* IMAGES */}
-                    <div className="work-img-group-col-bigger">
-                        <div>
+
+                    <div className="work-img-group-col">
+                        <div className="img-bg rounded flex flex-col p-[1.5rem] box-border">
+                            <div className="work-add-img-cont p-[1rem] box-border h-[20rem]">
+                                <img src="/images/work/snakebite-data/s-data-bars.png" alt="" className="subtle-shadow" />
+                            </div>
+                            <div className="mt-[1rem]">
+                                <p className="h4 gray">First version: bars</p>
+                                <p>Arbitrary bar sizes–only takeaway is the difference value and the general size difference</p>
+                            </div>
+                        </div>
+                        <div className="img-bg rounded flex flex-col p-[1.5rem] box-border">
+                            <div className="work-add-img-cont p-[1rem] box-border h-[20rem]">
+                                <img src="/images/work/snakebite-data/s-data-sun.png" alt="" className="subtle-shadow max-h-[15rem] self-center" />
+                            </div>
+                            <div className="mt-[1rem]">
+                                <p className="h4 gray">Second version: illustrations</p>
+                                <p>Illustrations showed what the climates might look like, but the visuals were also arbitrarily-sized and therefore not very informative</p>
+                            </div>
+                        </div>
+                        <div className="img-bg rounded flex flex-col p-[1.5rem] box-border thick-light-border">
+                            <div className="work-add-img-cont p-[1rem] box-border h-[20rem]">
+                                <img src="/images/work/snakebite-data/s-data-circles.png" alt="" className="subtle-shadow max-h-[15rem] self-center" />
+                            </div>
+                            <div className="mt-[1rem]">
+                                <p className="h4 gray">Final version: isotypes</p>
+                                <p>Isotypes being representative of actual proportions of the numbers makes it much easier to tell the values of each measurement and just how much the differences are</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* <div className="flex flex-col w-slim self-center gap-[3rem]">
+                        <div className="flex flex-col gap-[0.6rem] left-border pl-[0.6rem]">
+                            <div className="flex flex-col gap-[0.1rem]">
+                                <p className="caption">first version: bars</p>
+                                <p>Arbitrary bar sizes–only takeaway is the difference value and the general size difference</p>
+                            </div>
                             <div className="s-data-bg work-add-img-cont">
                                 <div className="self-center m-[1rem]">
-                                    <img src="/images/work/snakebite-data/isotype2.png" alt="" className="w-full min-w-[18rem]" />
+                                    <img src="/images/work/snakebite-data/s-data-bars.png" alt="" className="w-full min-w-[18rem]" />
                                 </div>
                             </div>
-                            <p className="caption cap-top">initial</p>
                         </div>
-                        <div>
+                        <div className="flex flex-col gap-[0.6rem] left-border pl-[0.6rem]">
+                            <div className="flex flex-col gap-[0.1rem]">
+                                <p className="caption">second version: Illustrations</p>
+                                <p>Illustrations showed what the climates might look like, but the visuals were also arbitrarily-sized and therefore not very informative</p>
+                            </div>
+                            <div className="s-data-bg work-add-img-cont">
+                                <div className="self-center m-[1rem]">
+                                    <img src="/images/work/snakebite-data/s-data-sun.png" alt="" className="h-[20vh] min-h-[200px]" />
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-[0.6rem] pl-[0.8rem] border-l-[8px] border-l-[#cfcfcf]">
+                            <div className="flex flex-col gap-[0.1rem]">
+                                <p className="caption"><span className="font-[20px] text-[#616161]">★</span> Final version: Isotypes</p>
+                                <p>Isotypes being representative of actual proportions of the numbers makes it much easier to tell the values of each measurement and just how much the differences are</p>
+                            </div>
+                            <div className="s-data-bg work-add-img-cont">
+                                <div className="self-center m-[1rem]">
+                                    <img src="/images/work/snakebite-data/s-data-circles.png" alt="" className="h-[20vh] min-h-[200px]" />
+                                </div>
+                            </div>
                             <div className="s-data-bg work-add-img-cont">
                                 <div className="self-center m-[1rem]">
                                     <img src="/images/work/snakebite-data/isotype1.png" alt="" className="w-full min-w-[18rem]" />
                                 </div>
                             </div>
-                            <p className="caption cap-top">final</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* DEGREES */}
-                <div className="section align-center">
-                    <div className="flex flex-col gap-[1rem]">
-                        <h2 className="self-center mob-mid-w">Degree of separation</h2>
-                        <p className="mob-mid-w self-center">In this chart, I wanted to highlight the large potential disparity in reported data and reality with the differently sized boxes. The challenge here was figuring out how to label the boxes in a way that would get the message across to viewers with the least amount of brain work.<br /><br />I followed Edward Tufte's "degree of separation" scale, which is a method of determining how accessible labels are to their corresponding data points, and connected the labels directly to the boxes rather than separating them from the boxes entirely. This way, there is less back-and-forth between the boxes and the labels, and the main message of the visualization can be understood at just a glance since all the central points are consolidated in one area.</p>
+                <div className="flex flex-col mt-[1rem] gap-[1.5rem] align-center">
+                    <div className="thing w-slim">
+                        <div className="flex flex-col">
+                            <h3>Degree of separation</h3>
+                            <h3 className="gray">Reducing the time needed to grasp the main message</h3>
+                        </div>
+                        <h4 className="gray">In this chart, I wanted to highlight the large disparity between reported data and reality. The challenge here was figuring out how to label the boxes in a way that would get the message across to viewers with the least amount of brain work.</h4>
+                        <br />
+                        <p>Following Edward Tufte's "degree of separation" scale, a method of determining how accessible labels are to their corresponding data points, I connected the labels directly to the boxes rather than separating them from the boxes entirely. This way, there is less back-and-forth between the boxes and the labels, and the main message of the visualization can be understood at just a glance since all the central points are consolidated in one area.</p>
                     </div>
                     {/* IMAGES */}
                     <div className="work-img-group-col">
@@ -107,11 +147,14 @@ export default function SnakebiteData() {
 
                 {/* FINAL */}
                 <div className="section">
-                    <h2 className="self-center mob-mid-w">Final poster</h2>
+                    <SectionHeader title={sections[2].header} description={sections[2].description} />
                     <VerticalImageSpan path="images/work/snakebite-data/snakebiteData.png" />
                 </div>
 
-                <p className="mob-mid-w">Through this project, I learned that a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but that the data needs to be represented in a language users can read, instead of delivering it in the raw, large, abstract numbers. For this project, that meant setting solid context for each visualization and, in my single-tone design, being very intentional with each time I used the color green so that the visualizations could be interpretted with even just a glance. The color green running throughout the entire poster also keeps the same meaning of referring to the countries with higher-than-average rates of snakebite.</p>
+                <div className="section" id="project-reflection">
+                    <SectionHeader title={sections[3].header} description={sections[3].description} />
+                    <p className="w-slim self-center">Through this project, I learned that <span className="bold">a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but that the data needs to be represented in a language users can read</span>. For this project, that meant setting solid context for each visualization and, in my single-tone design, being very intentional with each time I used the color green so that the visualizations could be interpretted with even just a glance. The color green running throughout the entire poster also keeps the same meaning of referring to the countries with higher-than-average rates of snakebite.<br /><br />I was lucky to have gotten to learn about the global snakebite crisis through this project and to get to put my design skills to use to bring about more awareness for both those affected and not. While this poster only covers climate conditions, I'd love to expand the story with the incorporation of data about wealth & lifestyle, hospital accessibility, and government funding.</p>
+                </div>
             </div>
         </div>
     );

@@ -1,9 +1,10 @@
 import ResetScroll from "./reset-scroll"
+import ScrollToTopButton from "components/scroll-top";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Work from "./work/work"
 import Misc from "./misc/misc"
-import Philosophy from "philosophy/philosophy";
+import Background from "background/background";
 import Resume from "./resume/resume";
 import About from "./about/about";
 import NavBar from "./navigation/nav"
@@ -30,13 +31,12 @@ export default function App() {
   return (
     <Router>
       <ResetScroll />
-      <div>
+      <div className="flex flex-col place-content-center">
         <NavBar />
-
         <Routes>
           <Route path="/" element={<Work />} />
           <Route path="/misc" element={<Misc />} />
-          <Route path="/philosophy" element={<Philosophy />} />
+          <Route path="/background" element={<Background />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<About />} />
 
@@ -59,6 +59,7 @@ export default function App() {
 
         <Footer />
       </div>
+      <ScrollToTopButton />
     </Router >
   );
 }

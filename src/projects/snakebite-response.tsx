@@ -3,42 +3,47 @@ import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
 import SectionHeader from "../components/section-header";
-import TwoImageCaption from "../components/two-image-caption";
-import VerticalImageSpan from "../components/vertical-image-span";
-import Task from "../components/task";
+import { section } from "./section";
 
 export default function snakebiteResponse() {
     const thisProject = projects.find(p => p.path === "/snakebite-response");
+    const sections: section[] = [
+        { header: "01. Research", description: "Learning about snakebites, specifically in Africa", optional: "I started off by researching the current state of the snakebite crisis and how one might prevent fatal encounters with snakes, focusing material specific to Botswana or Africa." },
+        { header: "02. Concept and poster design", description: "Developing a clean and easily-understandable visual style", optional: "To start off, I put all the information I had onto the poster just to see what it would look like and to determine which direction I should take the poster in. While the design was pretty unsuccessful, it was extremely helpful for quickly determining what I should and shouldn't do in terms of color/style and the structure of the poster." },
+        { header: "03. Wallet cards", description: "Transferring poster contents into bite-size pieces of information for wallet cards", optional: "After the poster, I created a set of wallet cards with the same content on the poster for people to have a way to access the information more conveniently." },
+    ];
     return (
         <div className="project-content">
-            <ProjectHeader project={thisProject as Project} />
+            <ProjectHeader project={thisProject as Project} sections={sections} />
 
             <div className="project-content-rest">
-                <Task task="Create a poster guide and wallet cards for snakebite prevention in Botswana" processItems={["Research", "Poster and concept design", "Wallet cards"]} />
-
                 <div className="section" id="research">
-                    <SectionHeader title="Part 1" description="Research" optional="To start off, I conducted research on the current snakebite crisis, focusing on its effects in Africa, and how to prevent fatal encounters with snakes, also focused on Africa and Botswana." />
-                    <img src="images/work/snakebite-response/s-res-research.png" alt="" className="mob-mid-w self-center subtle-shadow rounded" />
-                    <p className="mob-mid-w self-center">After collecting all the tips for snakebite prevention, it was time to identify a primary organizing principle from Wurman's L.A.T.C.H. (location, alphabet, time, category, hierarchy). My information sorted best categorically, and into the following three categories: indoor/home, outdoor/activity, and apparel.</p>
+                    <SectionHeader title={sections[0].header} description={sections[0].description} optional={sections[0].optional} />
+                    <p className="w-slim self-center">After collecting all the tips for snakebite prevention and in starting to think about the visual language of the poster, I chose to organize my information categorically (see Wurman's L.A.T.C.H.: location, alphabet, time, category, hierarchy), into the following three sections: indoor/home, outdoor/activity, and apparel.</p>
                 </div>
 
                 <div className="section" id="poster-and-concept-design">
-                    <SectionHeader title="Part 2" description="Poster and Concept Design" optional="To start off, I put all the information I had onto the poster just to see what it would look like and to determine which direction I should take the poster in. While the design was pretty unsuccessful, it was extremely helpful for determining how I should structure the poster moving forward." />
-                    <div className="flex flex-col">
-                        <VerticalImageSpan path="images/work/snakebite-response/snakebite_first.png" />
+                    <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
+                    <div className="flex flex-col w-fit w-slim self-center">
+                        <div className="rounded img-bg flex place-content-center py-[4vw]">
+                            <img src="images/work/snakebite-response/snakebite_first.png" alt="" className="w-[24rem] max-w-[84vw] subtle-shadow" />
+                        </div>
                         <p className="caption cap-top">First version</p>
                     </div>
                     <div className="rounded img-bg w-full flex place-content-center py-[2vw] w-full">
                         <img src="images/work/snakebite-response/s-res-ver1-table.png" alt="" className="w-[65rem] max-w-[90vw]" />
                     </div>
-                    <div className="flex flex-col">
-                        <VerticalImageSpan path="images/work/snakebite-response/snakebitePrevention.png" />
+                    <div className="flex flex-col w-full">
+                        <div className="rounded img-bg flex place-content-center py-[4vw]">
+                            <img src="images/work/snakebite-response/snakebitePrevention.png" alt="" className="h-[36vw] max-w-[84vw] subtle-shadow" />
+                        </div>
                         <p className="caption cap-top">Final version</p>
                     </div>
-                    <p className="mob-mid-w self-center">The result is a poster that is illustration-focused, where the text supports instead of creating the content. Though drawing is not my strong-suit, I got a lot of practice drawing simple scenes with perspective through this poster. The refinement of the color palette helps give any instance of color the important role of highlighting special items.<br /><br />The official language of Botswana is English, but it's likely that some will not know how to read English. The illustration-based poster ensures that all would be able to interpret the content in the poster, as the center scene is a picture of what their own life in Botswana might look like.</p>
+                    <p className="w-slim self-center">The result is a poster that is illustration-focused, where the text is just supporting material instead of being the main content. Though drawing is not my strong-suit, I got a lot of practice drawing simple scenes with perspective through this poster. The refinement of the color palette helps give any instance of color the important role of highlighting special items.<br /><br />The official language of Botswana is English, but it's likely that some will not know how to read English. The illustration-based poster ensures that all would be able to interpret the content in the poster, as the center scene is a picture of what their own life in Botswana might look like.</p>
                 </div>
+
                 <div className="section" id="wallet-cards">
-                    <SectionHeader title="Part 3" description="Wallet cards" optional="After the poster, I created a set of wallet cards with the same content on the poster for people to have a way to access the information more conveniently." />
+                    <SectionHeader title={sections[2].header} description={sections[2].description} optional={sections[2].optional} />
                     <div className="rounded img-bg w-full flex place-content-center">
                         <div className="grid grid-flow-col grid-rows-3 gap-[2rem] my-[4vw]">
                             <img src="images/work/snakebite-response/snakebiteWallet1.png" alt="" className="w-[25rem] max-w-[38vw] subtle-shadow" />

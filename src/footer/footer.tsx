@@ -1,11 +1,29 @@
-import "./footer.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function Footer() {
-    const location = useLocation();
+    const { pathname } = useLocation();
+    const navigate = useNavigate();
+
+    const handleWorkClick = () => {
+        if (pathname !== "/") {
+            navigate("/", { state: { scrollTo: "filters" } });
+        } else {
+            const section = document.getElementById("filters");
+            if (section) {
+                const offset = 64;
+                const y =
+                    section.getBoundingClientRect().top +
+                    window.pageYOffset -
+                    offset;
+
+                window.scrollTo({ top: y, behavior: "smooth" });
+            }
+        }
+    };
+
 
     const handleClick = (to: string) => {
-        if (location.pathname === to && ['/', '/about', '/resume'].includes(to)) {
+        if (pathname === to && ['/', '/background', '/about', '/resume'].includes(to)) {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
@@ -17,25 +35,30 @@ export default function Footer() {
             <br />
             <div className="flex flex-wrap justify-between items-start gap-y-[3.5rem]">
                 {/* Left side */}
-                <div>
+                <div className="flex flex-col gap-[3vw]">
                     <Link to="/" onClick={() => handleClick('/')}>Rebecca Choi</Link>
-                    <br />
-                    <br />
-                    <p className="caption">Coded and designed by me ◡̈</p>
-                    <p className="caption">Last updated: June 2025</p>
+                    <div>
+                        <p className="caption">Coded and designed by me ◡̈</p>
+                        <p className="caption">Last updated: Dec 2025</p>
+                    </div>
                 </div>
 
                 {/* Right side */}
                 <div className="flex justify-between w-[28rem]">
                     <div>
-                        <p className="caption mb-[0.5rem]">Navigation</p>
-                        <Link to="/" onClick={() => handleClick('/')}>Work</Link><br />
-                        <Link to="/resume" onClick={() => handleClick('/resume')}>Resume</Link><br />
+                        <p className="caption mb-[0.5rem]">Pages</p>
+                        {/* <Link to="/" onClick={() => handleClick('/')}>Work</Link><br /> */}
+                        <button
+                            onClick={handleWorkClick}
+                            className="cursor-pointer bg-transparent p-style green-hover p-[0px] block">
+                            Work
+                        </button>
+                        <Link to="/background" onClick={() => handleClick('/background')}>Background</Link><br />
                         <Link to="/about" onClick={() => handleClick('/about')}>About</Link><br />
                     </div>
                     <div>
                         <p className="caption mb-[0.5rem]">Contact</p>
-                        <p>choi.re@northeastern.edu</p>
+                        <p>rebecca.choi05@gmail.com</p>
                         <p>(510) 682-0020</p>
                         <a href="https://www.linkedin.com/in/ryschoi/" className="underline">LinkedIn</a>
                     </div>

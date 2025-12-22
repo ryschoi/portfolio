@@ -1,9 +1,35 @@
 import "./about.css";
 import { useState } from "react";
+import { useEffect } from "react";
+import { useLocation, Link } from "react-router-dom";
 import Tag from "../components/tag";
+import HoverButton from "components/hover-button";
+import TagCursor from "components/tag-cursor";
+import SlideImg from "components/slide-img";
+import { usePauseOnScroll } from "components/pause-on-scroll";
 
 export default function About() {
+  const { hash } = useLocation();
   interface CopyButtonProps { text: string; }
+
+  const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
+
+  const handleMove = (e: React.MouseEvent<HTMLImageElement>) => {
+    setCursor({ x: e.clientX, y: e.clientY, visible: true });
+  };
+
+  const hideCursor = (e: React.MouseEvent<HTMLImageElement>) => {
+    setCursor(prev => ({ ...prev, visible: false }));
+  };
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
 
   const CopyButton: React.FC<CopyButtonProps> = ({ text }) => {
     const [tooltip, setTooltip] = useState('Copy');
@@ -21,76 +47,143 @@ export default function About() {
     return (
       <div className="relative group">
         <button onClick={handleCopy}
-          className="tag py-[6px] px-[16px] rounded bg-gray-100 hover:bg-gray-200 transition">{text}
+          className="tag py-[6px] px-[16px] rounded transition">{text}
         </button>
-        <div className="absolute bottom-full mb-[0.5rem] left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-[0.88rem] rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 gray">
+        <div className="absolute bottom-full mb-[0.5rem] left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.88rem] rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 gray">
           {tooltip}
         </div>
       </div>
     );
   };
 
+  const { viewportRef, trackRef } = usePauseOnScroll();
+
+  const handleScroll = (item: string) => {
+    const id = item.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const section = document.getElementById(id);
+    if (section) {
+      const offset = 64;
+      const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="flex justify-center w-full">
-      <div className="flex flex-col gap-[2.5rem] w-(--mob-page-w) max-w-[41rem]">
-        {/* IMAGE */}
-        <div className="overflow-hidden w-full">
-          <img id="headshot" className="w-full h-auto object-cover rounded" src="images/wide.png" />
-        </div>
-
-        {/* GREETING */}
-        <div className="flex flex-col gap-[0.5rem]">
-          <h2>Hi, I'm Rebecca.</h2>
-          <h3 className="gray">I'm a third-year Computer Science and Design student at <a href="https://www.northeastern.edu/" className="h3 underline gray">Northeastern University</a>, the Marketing Analytics Co-op at Boston Beer Company, and a UI/UX design lead at <a href="https://www.sandboxnu.com/" className=" h3 underline gray">Sandbox NU</a>.</h3>
-        </div>
-
-        {/* <h3 className="gray">I have an interdisciplinary skillset across tech, design, and data, and am passionate about creating meaningful and well-crafted products and experiences.</h3> */}
-
-        <hr />
-        {/* WORK */}
+      <div className="flex flex-col gap-[2rem] w-slim">
         <div>
-          <p className="caption mb-[0.5rem]">Work background & philosophy</p>
-          <p>I’ve always loved to create. I love working through problems with strategy and iterations.</p>
-          <br />
+          <h2 className="mb-[1rem]">
+            About me
+            <br />
+            <span className="gray h3">
+              Apart from my <HoverButton path="/" buttonText="Work" hoverText="Collection of projects that captures the full breadth of my interests" /> and <HoverButton path="/background" buttonText="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
+            </span>
+          </h2>
 
-          {/* CODING */}
-          <div className="flex flex-col gap-[0.5rem]">
-            <p className="caption gray italic">[Coding as a tool]</p>
-            <p>When I took my first coding class in middle school, a summer web development bootcamp, I fell in love with the freedom to code and create whatever I wanted, but soon realized that with that freedom came many decisions surrounding usability and intent. This is when I discovered the importance of design.</p>
+          <div className="relative rounded flex align-center justify-center overflow-hidden">
+            <div className="my-[3vw]">
+              <img src="images/website-assets/denby_headshot_cropped.jpg"
+                alt=""
+                className="rounded w-[20rem] max-w-[85vw] smaller-shadow object-cover"
+              />
+            </div>
           </div>
+
           <br />
-          {/* DESIGN */}
-          <div className="flex flex-col gap-[0.5rem]">
-            <p className="caption gray italic">[Design as a framework]</p>
-            <p>If I wanted to create the greatest website to exist, I would need to know what would make such a website so great. Design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that fit business, user behavior, and aesthetic constraints. With the practice of many design projects, I’ve mastered the ability to successfully iterate and design without compromising any constraints. To me, design is not exactly a creative, artistic expression, but really a means of making something work.</p>
-          </div>
-          <br />
-          {/* DATA */}
-          <div className="flex flex-col gap-[0.5rem]">
-            <p className="caption grayy italic">[Data]</p>
-            <p>Today, there is no shortage of data. I’m excited by how much information we have access to, and how we can make informed and intentional decisions from it.</p>
-          </div>
+          <button onClick={() => handleScroll("contacts")} className="hover-tag">↓ Contact & links</button>
         </div>
 
         <hr />
 
+        {/* CURRENTLY */}
+        <div className="thing">
+          <h4 className="tracking-[-0.25px]">Born and raised in the temperate Bay Area, and now in (not-so-temperate) Boston, MA.</h4>
+          <br />
+          <h4 className="tracking-[-0.25px]">Currently...</h4>
+          <ul>
+            <li className="h4">Third-year Computer Science and Design student at Northeastern University</li>
+            <li className="h4">Doing my co-op at The Boston Beer Company on the Marketing Analytics team, using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible</li>
+            <li className="h4">Design lead at <a href="https://www.sandboxnu.com/" className="h3 underline">Sandbox NU</a> for <a className="h3 underline" href="/cooper">Cooper</a>, creating a job experience review platform to help Northeastern students make more informed co-op decisions</li>
+          </ul>
+        </div>
 
-        {/* OUTSIDE OF WORK */}
-        <div className="w-full">
-          <p className="caption mb-[0.5rem]">Outside of work</p>
-          <p>
-            I love photography, taking long walks around the city, teaching my dog new tricks, and cooking and baking new things. I also come from a very musical family, and have been teaching myself the bass guitar since middle school.</p>
+        <hr />
+
+        {/* OTHER THINGS */}
+        <div className="flex flex-col gap-[1.5rem]">
+          <h4 className="">
+            <span className="font-[400]">Some things that keep me going:</span> long walks around the city, baking & recipe testing, bass guitar, music, kombucha, spontaneous changes to this website, and my dog<br />
+            {/* Pet peeves: custom cursors, inefficiency */}
+            {/* Dislikes: custom cursors */}
+          </h4>
+          {/* IMAGES */}
+          <div className="work-img-group-col">
+            <div className="flex flex-col">
+              <img className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/nara.png" />
+              <p className="caption cap-top">My dog, Nara</p>
+            </div>
+            <div className="flex flex-col">
+              <img className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/arboretum wide.jpg" />
+              <p className="caption cap-top">Trees!</p>
+            </div>
+          </div>
+          {/* <>
+            <img className="tag-img rounded" src="images/nara.png"
+              style={{ cursor: "none" }}
+              onMouseMove={(e: React.MouseEvent<HTMLImageElement>) => handleMove(e)}
+              onMouseEnter={(e: React.MouseEvent<HTMLImageElement>) => handleMove(e)}
+              onMouseLeave={(e: React.MouseEvent<HTMLImageElement>) => hideCursor(e)} />
+            <TagCursor text="My dog, Nara" x={cursor.x} y={cursor.y} visible={cursor.visible} />
+          </> */}
+          {/* <div className="carousel-container">
+            <div className="carousel-viewport">
+              <div className="slides-wrapper">
+                <SlideImg src="images/nara.png" caption="my dog nara" />
+                <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
+                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
+                <SlideImg src="images/carrotCake.png" caption="Fall baking" />
+                <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
+                <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
+
+                <SlideImg src="images/nara.png" caption="my dog nara" />
+                <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
+                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
+                <SlideImg src="images/carrotCake.png" caption="Fall baking" />
+                <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
+                <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
+              </div>
+            </div>
+          </div> */}
+          {/* <div ref={viewportRef} className="carousel-container">
+            <div className="carousel-viewport">
+              <div ref={trackRef} className="slides-wrapper">
+                <SlideImg src="images/nara.png" caption="my dog nara" />
+                <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
+                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
+                <SlideImg src="images/carrotCake.png" caption="Fall baking" />
+                <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
+                <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
+
+                <SlideImg src="images/nara.png" caption="my dog nara" />
+                <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
+                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
+                <SlideImg src="images/carrotCake.png" caption="Fall baking" />
+                <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
+                <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
+              </div>
+            </div>
+          </div> */}
         </div>
 
         <hr />
 
         {/* TAGS */}
-        <div className="w-full flex flex-col gap-[1rem]">
+        <div className="w-full flex flex-col gap-[1rem]" id="contacts">
           {/* CONTACT */}
           <div className="flex gap-[1rem] items-center">
             <p className="caption">Contact</p>
             <div className="flex flex-wrap gap-[0.8rem]">
-              <CopyButton text="choi.re@northeastern.edu" />
+              <CopyButton text="rebecca.choi05@gmail.com" />
               <CopyButton text="(510) 682-0020" />
             </div>
           </div>
@@ -110,45 +203,6 @@ export default function About() {
           <br /><br />
           It's important to me that the projects I work on are meaningful to their users and in the way that they are created. As a designer, this means that I am intentional with all my choices, making sure that whatever I design is easy on the eyes, easy to use, and delivers what the user needs out of the product. As a developer, I focus on scalability, efficiency, and writing clean and maintainable code.
         </p> */}
-
-        {/* <hr /> */}
-        {/* SKILLS */}
-        {/* <div className="flex justify-between w-full">
-          <div className="flex flex-col gap-[0.5rem] w-[20vw]">
-            <p className="caption">Tech & development</p>
-            <div>
-              <p>Front-end development</p>
-              <p>Web design</p>
-              <p>Design-developer handoff</p>
-            </div>
-            <p>Languages: HTML, CSS, Typescript, Java, Python</p>
-            <p>Frameworks & tools: React, Tailwind, Git, VS Code, IntelliJ, Eclipse</p>
-          </div>
-          <div className="flex flex-col gap-[0.5rem] w-[20vw]">
-            <p className="caption">Design</p>
-            <div>
-              <p>UI/UX design</p>
-              <p>Web design</p>
-              <p>Data visualization</p>
-              <p>Information design</p>
-              <p>Prototyping (low, medium, and high fidelity)</p>
-              <p>Usability testing</p>
-              <p>User research, interviews, personas, affinity diagrams, thematic analysis</p>
-              <p>Information architecture</p>
-              <p>Design system and brand creation</p>
-              <p>Design-developer handoff</p>
-            </div>
-            <p>Tools: Figma, Adobe Illustrator, Adobe InDesign</p>
-          </div>
-          <div className="flex flex-col gap-[0.5rem] w-[20vw]">
-            <p className="caption">Data</p>
-            <div>
-              <p>Data visualization</p>
-              <p>Data analysis</p>
-            </div>
-            <p>Tools: Python, R, RStudio, Microsoft Excel</p>
-          </div>
-        </div> */}
       </div>
     </div>
   );
