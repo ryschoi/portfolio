@@ -43,7 +43,7 @@ export default function Work() {
     <div className="flex flex-col">
       {/* GREETING */}
       <div className="flex flex-wrap gap-[2.5rem] items-start mt-[9rem] mb-[12rem] self-center">
-        <img src="images/notion_face.png" className="w-[8rem] object-contain" />
+        <img src="images/website-assets/notion_face.png" className="w-[8rem] object-contain" />
         <div className="w-[39rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[3vh]">
           <h1>Hi, I'm Rebecca.<br />
             <span className="gray">A developer-turned-designer shaping people's digital experiences with intention and craft</span>
