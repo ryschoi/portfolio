@@ -50,7 +50,7 @@ export default function DissonantHarmony() {
                     <SectionHeader title={sections[2].header} description={sections[2].description} optional={sections[2].optional} />
                     <p className="w-slim self-center">To determine this, I put both poster versions in grayscale to see the differences in values in each of the colors. Value in color theory refers to the darkness of a color, independent of hue or saturation. As can be seen in the images below, there is much more contrast between the sculpture and the background in the lighter background than the dark one. The small screws in the top-right of the dark-background poster are completely invisible, meaning that they are the exact same values.</p>
 
-                    <TwoImageCaption path1="/images/work/calder/calder-good-contrast.jpg" cap1="light background → high contrast" path2="/images/work/calder/calder-bad-contrast.jpg" cap2="dark background → low contrast" />
+                    <TwoImageCaption path1="/images/work/calder/calder-bad-contrast.jpg" cap1="dark background → low contrast" path2="/images/work/calder/calder-good-contrast.jpg" cap2="light background → high contrast" />
                 </div>
 
                 {/* A1 */}

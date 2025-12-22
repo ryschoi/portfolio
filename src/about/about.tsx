@@ -82,7 +82,7 @@ export default function About() {
 
           <div className="relative rounded flex align-center justify-center overflow-hidden">
             <div className="my-[3vw]">
-              <img src="images/denby_headshot_cropped.jpg"
+              <img src="images/website-assets/denby_headshot_cropped.jpg"
                 alt=""
                 className="rounded w-[20rem] max-w-[85vw] smaller-shadow object-cover"
               />
