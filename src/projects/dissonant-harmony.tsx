@@ -55,19 +55,12 @@ export default function DissonantHarmony() {
 
                 {/* A1 */}
                 <div className="section align-center" id="a1-size-poster">
-                    <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />                    <div className="flex flex-col w-full">
-                        <div className="rounded img-bg w-full flex align-center justify-center py-[4vw] w-full">
-                            <img src="images/work/calder/calder-a1-markup.jpg" alt="" className="w-[36rem] max-w-[84vw]" />
+                    <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />
+                    <div className="flex flex-col w-slim self-center">
+                        <div className="rounded img-bg w-full flex align-center justify-center py-[4rem]">
+                            <img src="images/work/calder/calder-a1-markup.png" alt="" className="w-[36rem] max-w-[84vw]" />
                         </div>
                         <p className="caption cap-top">a pervious a1 poster version</p>
-                    </div>
-                    <div className="flex flex-col w-slim self-center">
-                        <p>Comments:</p>
-                        <ul>
-                            <li>Reflect the idea of dissonant harmony in the title text. There is no significance to the type choices or orientation of the text in this version.</li>
-                            <li>Margins are too small for the size of the poster and same throughout the entire length of the poster. Does not help establish hierarchy across the elements.</li>
-                            <li>For the pieces of the sculpture, group the smaller items together. They get lost visually when they are scattered amongst the bigger pieces.</li>
-                        </ul>
                     </div>
                     {/* final a1 */}
                     <div className="flex flex-col w-full">
