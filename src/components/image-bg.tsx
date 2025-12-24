@@ -31,7 +31,7 @@ export default function ImageBG({ project }: { project: Project }) {
                     <div className="my-[3vw]">
                         {project.id === 12 ? (
                             <video autoPlay loop playsInline muted src="images/work/open-forum/open-forum-video.mov"
-                                className="w-[18rem] max-w-[85vw]" />
+                                className="w-[18rem] max-w-[85vw] rounded-[3rem]" />
                         ) : project.id === 13 ? (
                             <video autoPlay loop playsInline muted src="images/work/alihacks/full_proto.mov"
                                 className="w-[44rem] max-w-[85vw] subtle-shadow object-cover" />
