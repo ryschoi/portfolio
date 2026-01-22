@@ -6,6 +6,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @font-face {
+  font-family: 'Universal Sans';
+  src: url('/fonts/Universal-Sans-Display-450-Trial.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+} */
+
 @theme {
   --color-green: oklch(0.7163 0.1533 108.86);
 
@@ -60,7 +67,7 @@
 }
 
 * {
-  font-family: 'Hanken Grotesk';
+  font-family: 'Hanken Grotesk', sans-serif;
   font-feature-settings: 'liga' 1, 'calt' 1;
   margin: 0;
   color: var(--color-black);
