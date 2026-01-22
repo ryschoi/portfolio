@@ -19,7 +19,7 @@ export default function ProcessBox({ sectionsList }: { sectionsList: section[] }
                 {sectionsList.map((section, index) => (
                     <div key={index} className="flex flex-col gap-[2.25rem]">
                         {/* hover:underline cursor-pointer  onClick={() => handleScroll(section.header)} */}
-                        <div className="flex flex-col gap-[0.25rem]">
+                        <div className="flex flex-col gap-[0.5rem]">
                             <p className="caption light-gray">{section.header}</p>
                             <h2 className="white">{section.description}</h2>
                         </div>

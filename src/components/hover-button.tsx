@@ -56,15 +56,3 @@ export default function HoverButton({ buttonText, hoverText, path, onClick }: Ho
 
   return content;
 }
-
-//   return (
-//     <Link className="inline" key='/' to={path}>
-//       <div className="relative inline">
-//         <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="hover-tag peer" data-full-text={hoverText}>
-//           {buttonText}
-//         </button>
-//         {isHovering ? <p className="tooltip gray">{hoverText}</p> : <></>}
-//       </div>
-//     </Link>
-//   );
-// }
