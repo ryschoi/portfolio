@@ -16,57 +16,62 @@
   transition: top ease 0.5s;
 }
 
-/* Outer shell — NOT scrollable */
 .carousel-container {
   width: 100%;
   overflow: hidden;
 }
 
-/* THIS is the scroll container */
 .carousel-viewport {
   width: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  overflow: hidden;
 }
 
-.carousel-viewport::-webkit-scrollbar {
-  display: none;
+.scroll-static {
+  display: flex;
+  width: max-content;
+  gap: 0.75rem;
 }
 
-/* Animated track */
+.spons-img {
+  width: auto;
+  height: 30rem;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
 .slides-wrapper {
   display: flex;
-  width: 100%;
-  height: fit-content;
-  gap: 0.5rem;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  /* animation: slideAnimation 40s linear infinite; */
+  width: max-content;
+  gap: 0.75rem;
+
+  animation: slide 30s linear infinite;
 }
 
-.slides-wrapper.paused {
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel-container:hover .slides-wrapper {
   animation-play-state: paused;
 }
 
 .slide-img {
-  width: 20vw;
-  height: 15vw;
-  min-height: 25vh;
+  width: 20rem;
+  height: 15rem;
   flex-shrink: 0;
   object-fit: cover;
   border-radius: 0.5rem;
 }
 
 .vert-slide-img {
-  width: 28vw;
-  height: auto;
+  width: auto;
+  height: 15rem;
   flex-shrink: 0;
   object-fit: cover;
+  border-radius: 0.5rem;
 }
-
-/* @keyframes slideAnimation {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-} */

@@ -39,7 +39,7 @@ export default function Footer() {
                     <Link to="/" onClick={() => handleClick('/')}>Rebecca Choi</Link>
                     <div>
                         <p className="caption">Coded and designed by me ◡̈</p>
-                        <p className="caption">Last updated: Dec 2025</p>
+                        <p className="caption">Last updated: Jan 2026</p>
                     </div>
                 </div>
 
@@ -47,7 +47,6 @@ export default function Footer() {
                 <div className="flex justify-between w-[28rem]">
                     <div>
                         <p className="caption mb-[0.5rem]">Pages</p>
-                        {/* <Link to="/" onClick={() => handleClick('/')}>Work</Link><br /> */}
                         <button
                             onClick={handleWorkClick}
                             className="cursor-pointer bg-transparent p-style green-hover p-[0px] block">

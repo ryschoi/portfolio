@@ -32,7 +32,7 @@ export default function ProjectHeader({ project, sections }: { project: Project,
             <div className="flex flex-col gap-[3.5rem] self-center mob-mid-w mt-[2rem] mb-[3rem]">
                 <div className="flex flex-col gap-[0.2rem]">
                     <p className="caption">Project overview</p>
-                    <h1 className="">{project.overview}</h1>
+                    <h1 className="serif">{project.overview}</h1>
                 </div>
                 <div className="flex flex-wrap justify-between gap-y-[2rem]" id="proj-attributes">
                     <div className="flex flex-col gap-[0.2rem] w-[10rem]">

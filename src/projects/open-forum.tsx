@@ -5,21 +5,23 @@ import { Project } from "./project";
 import SectionHeader from "components/section-header";
 import Tag from "components/tag";
 import { section } from "./section";
+import FloatingNav from "components/floating-nav";
 
 export default function OpenForum() {
     const thisProject = projects.find(p => p.path === "/open-forum");
     const sections: section[] = [
-        { header: "01. Defining the problem", description: "How can technology support students’ belongingness on campus?", optional:"We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?" },
-        { header: "02. Research", description: "Northeastern students are generally busy, and we'll need to create a solution that will help facilitate structured social gatherings" },
-        { header: "03. Ideation", description: "Solution ideation", optional: "Using the themes and constraints we got from our research, I brainstormed 12 different potential solutions, and one of my team members did another three." },
-        { header: "04. User testing", description: "Low-fidelity prototypes and user testing", optional:"Next, we created paper prototypes and user-tested both of our top ideas, Open Forum and Blind Match." },
-        { header: "05. Design", description: "High-fidelity prototype", optional:"As the final phase of this project, I created a high-fidelity prototype of our app in Figma, incorporating notes from our user testing and all the way back to the initial research." }
+        { id: "defining-the-problem", header: "01. Defining the problem", description: "How can technology support students’ belongingness on campus?", optional:"We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?" },
+        { id: "research", header: "02. Research", description: "Northeastern students are generally busy, and we'll need to create a solution that will help facilitate structured social gatherings" },
+        { id: "ideation", header: "03. Ideation", description: "Solution ideation", optional: "Using the themes and constraints we got from our research, I brainstormed 12 different potential solutions, and one of my team members did another three." },
+        { id: "user-testing", header: "04. User testing", description: "Low-fidelity prototypes and user testing", optional:"Next, we created paper prototypes and user-tested both of our top ideas, Open Forum and Blind Match." },
+        { id: "design", header: "05. Design", description: "High-fidelity prototype", optional:"As the final phase of this project, I created a high-fidelity prototype of our app in Figma, incorporating notes from our user testing and all the way back to the initial research." }
     ];
 
     return (
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} sections={sections} />
             <div className="project-content-rest">
+                {/* <FloatingNav sections={sections} /> */}
                 {/* <Task task="Design a mobile app that will increase Northeastern students' sense of belongingness on campus" processItems={["Defining the problem", "Research", "Ideate solutions", "User testing with low-fidelity prototypes", "Create high-fidelity prototype"]} /> */}
 
                 {/* PROBLEM */}
@@ -142,14 +144,14 @@ export default function OpenForum() {
                     <SectionHeader title={sections[2].header} description={sections[2].description} optional={sections[2].optional} />
 
                     {/* IDEAS LIST */}
-                    <div className="w-slim self-center">
+                    {/* <div className="w-slim self-center">
                         <p className="mb-[0.5rem]">Some of our ideas were:</p>
                         <ul>
                             <li>An app for clubs to post their upcoming events. A filter-heavy platform for users to curate their feed to events that fit their preferences (i.e. free food, resume/career help, networking, etc.)</li>
                             <li>A web app that shows available rooms on campus since space is the greatest asset on Northeastern campus and often times a barrier to hanging out because people cannot find spaces to meet.</li>
                             <li>A podcast hosted by Northeastern students, bringing on other Northeastern students. It would help the Northeastern community feel smaller with the shared experiences talked about on the podcast while introducing new students each week. Targets those who are busy and always on the move (gives them something to listen to).</li>
                         </ul>
-                    </div>
+                    </div> */}
                     {/* TOP IDEAS */}
                     <div className="gray-full-container">
                         <div className="med-w my-[4rem]">

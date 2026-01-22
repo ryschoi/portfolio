@@ -20,6 +20,8 @@ import Radien from "./projects/radien";
 import Cooper from "./projects/cooper"
 import OpenForum from "./projects/open-forum";
 import AliHacks from "./projects/ali-hacks";
+import BostonBeer from "projects/bostonbeer";
+import PortfolioWebsite from "projects/portfolio";
 
 
 export default function App() {
@@ -44,6 +46,8 @@ export default function App() {
           <Route path="/cooper" element={<Cooper />} />
           <Route path="/open-forum" element={<OpenForum />} />
           <Route path="/ali-hacks" element={<AliHacks />} />
+          <Route path="/boston-beer" element={<BostonBeer />} />
+          <Route path="/portfolio-website" element={<PortfolioWebsite />} />
         </Routes>
 
         <Footer />

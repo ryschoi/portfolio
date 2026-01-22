@@ -1,7 +1,6 @@
 export type Project = {
     id: number;
     active: boolean;
-    column: string;
     name: string;
     path: string;
     summary: string;
@@ -15,7 +14,5 @@ export type Project = {
     tags: string[];
     vertical: boolean;
     frontImage: string;
-    frontImageBG: string;
-    border: boolean;
     overview: string;
 };

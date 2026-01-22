@@ -1,8 +1,16 @@
 import { useEffect, useState } from "react";
 import { useLocation, Link } from "react-router";
 
-export default function HoverButton({ buttonText, hoverText, path }: { buttonText: string, hoverText: string, path: string }) {
+type HoverButtonProps = {
+  buttonText: string;
+  hoverText: string;
+  path?: string;
+  onClick?: () => void;
+};
+
+export default function HoverButton({ buttonText, hoverText, path, onClick }: HoverButtonProps) {
   const { hash } = useLocation();
+  const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
     if (hash) {
@@ -13,8 +21,6 @@ export default function HoverButton({ buttonText, hoverText, path }: { buttonTex
     }
   }, [hash]);
 
-  const [isHovering, setIsHovering] = useState(false);
-
   const handleMouseEnter = () => {
     setIsHovering(true);
   };
@@ -23,14 +29,42 @@ export default function HoverButton({ buttonText, hoverText, path }: { buttonTex
     setIsHovering(false);
   };
 
-  return (
-    <Link className="inline" key='/' to={path}>
-      <div className="relative inline">
-        <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="hover-tag peer" data-full-text={hoverText}>
-          {buttonText}
-        </button>
-        {isHovering ? <p className="tooltip gray">{hoverText}</p> : <></>}
-      </div>
-    </Link>
+  const content = (
+    <div className="relative inline">
+      <button
+        onClick={onClick}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+        className="hover-tag peer"
+        data-full-text={hoverText}
+        type="button"
+      >
+        {buttonText}
+      </button>
+
+      {isHovering && <p className="tooltip gray">{hoverText}</p>}
+    </div>
   );
+
+  if (path && !onClick) {
+    return (
+      <Link className="inline" to={path}>
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 }
+
+//   return (
+//     <Link className="inline" key='/' to={path}>
+//       <div className="relative inline">
+//         <button onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="hover-tag peer" data-full-text={hoverText}>
+//           {buttonText}
+//         </button>
+//         {isHovering ? <p className="tooltip gray">{hoverText}</p> : <></>}
+//       </div>
+//     </Link>
+//   );
+// }

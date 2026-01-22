@@ -1,12 +1,11 @@
 import "./about.css";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import Tag from "../components/tag";
 import HoverButton from "components/hover-button";
 import TagCursor from "components/tag-cursor";
 import SlideImg from "components/slide-img";
-import { usePauseOnScroll } from "components/pause-on-scroll";
 
 export default function About() {
   const { hash } = useLocation();
@@ -56,8 +55,6 @@ export default function About() {
     );
   };
 
-  const { viewportRef, trackRef } = usePauseOnScroll();
-
   const handleScroll = (item: string) => {
     const id = item.toLowerCase().replace(/[^a-z0-9]+/g, '-');
     const section = document.getElementById(id);
@@ -65,6 +62,26 @@ export default function About() {
       const offset = 64;
       const y = section.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
+
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const handleWorkClick = () => {
+    if (pathname !== "/") {
+      navigate("/", { state: { scrollTo: "filters" } });
+    } else {
+      const section = document.getElementById("filters");
+      if (section) {
+        const offset = 64;
+        const y =
+          section.getBoundingClientRect().top +
+          window.pageYOffset -
+          offset;
+
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
     }
   };
 
@@ -76,7 +93,7 @@ export default function About() {
             About me
             <br />
             <span className="gray h3">
-              Apart from my <HoverButton path="/" buttonText="Work" hoverText="Collection of projects that captures the full breadth of my interests" /> and <HoverButton path="/background" buttonText="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
+              Apart from my <HoverButton path="/" buttonText="Work" hoverText="Collection of projects that captures the full breadth of my interests" onClick={handleWorkClick} /> and <HoverButton path="/background" buttonText="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
             </span>
           </h2>
 
@@ -97,14 +114,16 @@ export default function About() {
 
         {/* CURRENTLY */}
         <div className="thing">
-          <h4 className="tracking-[-0.25px]">Born and raised in the temperate Bay Area, and now in (not-so-temperate) Boston, MA.</h4>
+          <h3 className="tracking-[-0.25px] serif">Born and raised in the temperate Bay Area, and now in Boston, MA.</h3>
           <br />
-          <h4 className="tracking-[-0.25px]">Currently...</h4>
-          <ul>
+          <h3 className="tracking-[-0.25px] serif">Currently...</h3>
+          <ul className="gray">
             <li className="h4">Third-year Computer Science and Design student at Northeastern University</li>
             <li className="h4">Doing my co-op at The Boston Beer Company on the Marketing Analytics team, using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible</li>
             <li className="h4">Design lead at <a href="https://www.sandboxnu.com/" className="h3 underline">Sandbox NU</a> for <a className="h3 underline" href="/cooper">Cooper</a>, creating a job experience review platform to help Northeastern students make more informed co-op decisions</li>
           </ul>
+          <br />
+          <h3 className="serif">Incoming Human Interface Design Intern @ Apple, Summer 2026</h3>
         </div>
 
         <hr />
@@ -112,12 +131,12 @@ export default function About() {
         {/* OTHER THINGS */}
         <div className="flex flex-col gap-[1.5rem]">
           <h4 className="">
-            <span className="font-[400]">Some things that keep me going:</span> long walks around the city, baking & recipe testing, bass guitar, music, kombucha, spontaneous changes to this website, and my dog<br />
+            <span className="font-[400]">Some things that keep me going:</span> walks around the city, baking & recipe testing, bass guitar, kombucha, spontaneous changes to this website, and my dog<br />
             {/* Pet peeves: custom cursors, inefficiency */}
             {/* Dislikes: custom cursors */}
           </h4>
           {/* IMAGES */}
-          <div className="work-img-group-col">
+          {/* <div className="work-img-group-col">
             <div className="flex flex-col">
               <img className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/nara.png" />
               <p className="caption cap-top">My dog, Nara</p>
@@ -126,7 +145,7 @@ export default function About() {
               <img className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/arboretum wide.jpg" />
               <p className="caption cap-top">Trees!</p>
             </div>
-          </div>
+          </div> */}
           {/* <>
             <img className="tag-img rounded" src="images/nara.png"
               style={{ cursor: "none" }}
@@ -135,44 +154,26 @@ export default function About() {
               onMouseLeave={(e: React.MouseEvent<HTMLImageElement>) => hideCursor(e)} />
             <TagCursor text="My dog, Nara" x={cursor.x} y={cursor.y} visible={cursor.visible} />
           </> */}
-          {/* <div className="carousel-container">
+          <div className="carousel-container">
             <div className="carousel-viewport">
               <div className="slides-wrapper">
-                <SlideImg src="images/nara.png" caption="my dog nara" />
-                <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
-                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
-                <SlideImg src="images/carrotCake.png" caption="Fall baking" />
-                <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
-                <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
-
-                <SlideImg src="images/nara.png" caption="my dog nara" />
-                <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
-                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
-                <SlideImg src="images/carrotCake.png" caption="Fall baking" />
-                <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
-                <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
+                <SlideImg src="images/nara.png" caption="my dog nara" vert={false} />
+                <SlideImg src="images/sandbox group.JPG" caption="sandbox" vert={false} />
+                <SlideImg src="images/cooper hangout.PNG" caption="the cooper team" vert={false} />
+                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" vert={false} />
+                <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
+                <SlideImg src="images/northeastern_campus.png" caption="campus in the fall" vert={true} />
+                <SlideImg src="images/arboretum wide.jpg" caption="trees!" vert={false} />
+                <SlideImg src="images/nara.png" caption="my dog nara" vert={false} />
+                <SlideImg src="images/sandbox group.JPG" caption="sandbox" vert={false} />
+                <SlideImg src="images/cooper hangout.PNG" caption="the cooper team" vert={false} />
+                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" vert={false} />
+                <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
+                <SlideImg src="images/northeastern_campus.png" caption="campus in the fall" vert={true} />
+                <SlideImg src="images/arboretum wide.jpg" caption="trees!" vert={false} />
               </div>
             </div>
-          </div> */}
-          {/* <div ref={viewportRef} className="carousel-container">
-            <div className="carousel-viewport">
-              <div ref={trackRef} className="slides-wrapper">
-                <SlideImg src="images/nara.png" caption="my dog nara" />
-                <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
-                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
-                <SlideImg src="images/carrotCake.png" caption="Fall baking" />
-                <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
-                <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
-
-                <SlideImg src="images/nara.png" caption="my dog nara" />
-                <SlideImg src="images/sandbox group.JPG" caption="sandbox" />
-                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" />
-                <SlideImg src="images/carrotCake.png" caption="Fall baking" />
-                <SlideImg src="images/northeastern_campus.png" caption="northeastern campus" />
-                <SlideImg src="images/arboretum wide.jpg" caption="trees!" />
-              </div>
-            </div>
-          </div> */}
+          </div>
         </div>
 
         <hr />
