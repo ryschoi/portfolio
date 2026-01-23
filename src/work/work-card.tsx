@@ -11,7 +11,7 @@ export default function WorkCard({ project }: { project: Project }) {
             </Link>
             {/* TEXT */}
             <div className="flex justify-between">
-                <div className="flex flex-col gap-[0.5vh]">
+                <div className="flex flex-col gap-[0.3vh]">
                     <Link to={project.path} className="flex flex-col w-full">
                         <h3>{project.summary}</h3>
                     </Link>

@@ -14,6 +14,6 @@ export default function Tag({ text, hover, clicked, children }: TagProps) {
             : "tag-no-hover";
 
     return (
-        <button className={`${style} ${basePadding}`}>{text || children}</button>
+        <button className={`${style} ${basePadding} w-fit`}>{text || children}</button>
     );
 }

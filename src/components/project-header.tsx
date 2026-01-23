@@ -8,7 +8,7 @@ export default function ProjectHeader({ project, sections }: { project: Project,
         <div className="flex flex-col items-center mb-[6rem] w-full gap-[2rem]">
             {/* TOP TITLE */}
             <div className="mob-mid-w flex flex-col gap-[0.1rem]">
-                <h1 className="mb-[0.3rem]">{project.summary}</h1>
+                <h1 className="mb-[0.3rem] tracking-[-0.3px]">{project.summary}</h1>
                 <p className="caption">{project.name}, {project.year}</p>
                 <div className="flex gap-[0.5rem] tag-position-2 mt-[0.5rem]">
                     {project.tags.map((tag) => (
@@ -32,7 +32,7 @@ export default function ProjectHeader({ project, sections }: { project: Project,
             <div className="flex flex-col gap-[3.5rem] self-center mob-mid-w mt-[2rem] mb-[3rem]">
                 <div className="flex flex-col gap-[0.2rem]">
                     <p className="caption">Project overview</p>
-                    <h1 className="">{project.overview}</h1>
+                    <h1 className="serif">{project.overview}</h1>
                 </div>
                 <div className="flex flex-wrap justify-between gap-y-[2rem]" id="proj-attributes">
                     <div className="flex flex-col gap-[0.2rem] w-[10rem]">

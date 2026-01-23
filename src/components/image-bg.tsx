@@ -31,7 +31,7 @@ export default function ImageBG({ project }: { project: Project }) {
                     <div className="my-[3vw]">
                         {project.id === 12 ? (
                             <video autoPlay loop playsInline muted src="images/work/open-forum/open-forum-video.mov"
-                                className="w-[18rem] max-w-[85vw]" />
+                                className="w-[18rem] max-w-[85vw] rounded-[3rem]" />
                         ) : project.id === 13 ? (
                             <video autoPlay loop playsInline muted src="images/work/alihacks/full_proto.mov"
                                 className="w-[44rem] max-w-[85vw] subtle-shadow object-cover" />
@@ -90,7 +90,7 @@ export default function ImageBG({ project }: { project: Project }) {
                     </div>
                     <div className="zoom img-bg work-add-img-cont">
                         <div className="self-center my-[2rem]">
-                            <video autoPlay loop muted width="50%" className="subtle-shadow w-[16vw] min-w-[20rem]">
+                            <video autoPlay loop playsInline muted width="50%" className="subtle-shadow w-[16vw] min-w-[20rem]">
                                 <source src="images/work/calder/calder.mov" type="video/mp4" />
                             </video>
                         </div>

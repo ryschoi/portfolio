@@ -11,12 +11,12 @@ import { section } from "./section";
 export default function DissonantHarmony() {
     const thisProject = projects.find(p => p.path === "/dissonant-harmony");
     const sections: section[] = [
-        { header: "01. Concept", description: "Reflecting the idea of dissonant harmony in the illustrations and typography", optional: "For the museum exhibition, I chose the SFMoma Dissonant Harmony exhibition for Alexander Calder. I went with the theme of a deconstructed sculpture which I created by first tracing over an image of Big Crinkly using the Pen tool and then separating it by its individual parts. The display of the individual pieces plays along with the idea of “dissonant”–that all the individual pieces of the whole sculpture are on their own dissonant. All a little random, a little rough-cut, jagged almost, but somehow coming together and creating a harmonious result." },
-        { header: "02. Type", description: "Aglet Mono: geometric, like Calder's artwork", optional: "The title words that vary heavily in style and yet are the same width emphasize a dissonant harmony between two objects." },
-        { header: "03. Background", description: "A light background with enough contrast to let colors pop", optional: "After trying out both light and dark backgrounds, I found that the light background worked better as it let the colors in the sculpture pop more whereas in the dark background the colors got washed out." },
-        { header: "04. A1-size poster", description: "Ensuring there is a focal point for the poster", optional: "It was important that there was a main focal point for the poster, especially because the poster was a big A1 size. I needed to establish a clear direction that viewers' eyes could follow when looking at the poster. That meant not only setting big-enough margins, but also making sure the individual pieces of the sculpture were framed well and that the other elements supported the main focus (the sculpture)." },
-        { header: "05. A5-size flyer", description: "A flyer intended to guide people to the exhibition rather than spark intrigue like the poster", optional: "Unlike the rest of the exhibition materials, the flyer shows the fully-constructed version of Big Crinkly, focusing more on guiding museum-goers to the exhibit." },
-        { header: "06. Digital marketing material: Instagram posts and gif", description: "Sneaking in one last instance of dissonant harmony with the nine-square grid", optional: "For the extra-observant and overthinkers (like me), the nine squares in the Instagram feed creating one complete picture make one extra nugget of fun." },
+        { id: "concept", header: "01. Concept", description: "Reflecting the idea of dissonant harmony in the illustrations and typography", optional: "For the museum exhibition to design for, I chose the SFMoma Dissonant Harmony exhibition for Alexander Calder. To focus on the idea of a dissonant (unharmonious) harmony, I deconstructed one of Calder's most popular sculptures, Big Crinkly, by first tracing over an image of it with the pen tool and then separating it into its individual parts. The imagery of the individual pieces shows that all these random, rough-cut shapes can somehow come together and create a harmonious result like Big Crinkly." },
+        { id: "type", header: "02. Type", description: "Aglet Mono: geometric, like Calder's artwork", optional: "The title words that vary heavily in style and yet are the same width emphasize a dissonant harmony between two objects." },
+        { id: "background", header: "03. Background", description: "A light background with enough contrast to let colors pop", optional: "After trying out both light and dark backgrounds, I found that the light background worked better as it let the colors in the sculpture pop more whereas in the dark background the colors got washed out." },
+        { id: "ai-size-poster", header: "04. A1-size poster", description: "Ensuring there is a focal point for the poster", optional: "It was important that there was a main focal point for the poster, especially because the poster was a big A1 size. I needed to establish a clear direction that viewers' eyes could follow when looking at the poster. That meant not only setting big-enough margins, but also making sure the individual pieces of the sculpture were framed well and that the other elements supported the main focus (the sculpture)." },
+        { id: "a5-size-flyer", header: "05. A5-size flyer", description: "A flyer intended to guide people to the exhibition rather than spark intrigue like the poster", optional: "Unlike the rest of the exhibition materials, the flyer shows the fully-constructed version of Big Crinkly, focusing more on guiding museum-goers to the exhibit." },
+        { id: "digital-marketing-material", header: "06. Digital marketing material: Instagram posts and gif", description: "Sneaking in one last instance of dissonant harmony with the nine-square grid", optional: "For the extra-observant and overthinkers (like me), the nine squares in the Instagram feed creating one complete picture make one extra nugget of fun." },
     ]
 
     return (
@@ -55,19 +55,12 @@ export default function DissonantHarmony() {
 
                 {/* A1 */}
                 <div className="section align-center" id="a1-size-poster">
-                    <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />                    <div className="flex flex-col w-full">
-                        <div className="rounded img-bg w-full flex align-center justify-center py-[4vw] w-full">
-                            <img src="images/work/calder/calder-a1-markup.jpg" alt="" className="w-[36rem] max-w-[84vw]" />
+                    <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />
+                    <div className="flex flex-col w-slim self-center">
+                        <div className="rounded img-bg w-full flex align-center justify-center py-[4rem]">
+                            <img src="images/work/calder/calder-a1-markup.png" alt="" className="w-[36rem] max-w-[84vw]" />
                         </div>
                         <p className="caption cap-top">a pervious a1 poster version</p>
-                    </div>
-                    <div className="flex flex-col w-slim self-center">
-                        <p>Comments:</p>
-                        <ul>
-                            <li>Reflect the idea of dissonant harmony in the title text. There is no significance to the type choices or orientation of the text in this version.</li>
-                            <li>Margins are too small for the size of the poster and same throughout the entire length of the poster. Does not help establish hierarchy across the elements.</li>
-                            <li>For the pieces of the sculpture, group the smaller items together. They get lost visually when they are scattered amongst the bigger pieces.</li>
-                        </ul>
                     </div>
                     {/* final a1 */}
                     <div className="flex flex-col w-full">

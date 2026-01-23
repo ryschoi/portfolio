@@ -64,9 +64,38 @@
   cursor: pointer;
 }
 
-.up-arrow:hover {
+.up-arrow:hover,
+.process-button:hover {
   background-color: var(--color-tag-hover);
   transform: translateY(-3px);
+}
+
+.process-button {
+  position: fixed;
+  bottom: 3rem;
+  left: 47vw;
+  z-index: 9999;
+  padding: 6px 16px;
+  width: fit-content;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-tag-bg);
+  border: 1.5px solid var(--color-gray-stroke);
+  border-radius: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.process-button.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
 }
 
 .tooltip {

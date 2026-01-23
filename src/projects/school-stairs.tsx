@@ -8,7 +8,7 @@ export default function SchoolStairs() {
 
     return (
         <div className="project-content">
-            <ProjectHeader project={thisProject as Project} />
+            {/* <ProjectHeader project={thisProject as Project} /> */}
             <div className="project-content-rest">
                 <div className="col22">
                     <div className="row22">

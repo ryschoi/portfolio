@@ -5,33 +5,28 @@ import { Project } from "./project";
 import SectionHeader from "components/section-header";
 import Tag from "components/tag";
 import { section } from "./section";
+import FloatingNav from "components/floating-nav";
 
 export default function OpenForum() {
     const thisProject = projects.find(p => p.path === "/open-forum");
     const sections: section[] = [
-        { header: "01. Defining the problem", description: "How can technology support students’ belongingness on campus?", optional:"We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?" },
-        { header: "02. Research", description: "Northeastern students are generally busy, and we'll need to create a solution that will help facilitate structured social gatherings" },
-        { header: "03. Ideation", description: "Solution ideation", optional: "Using the themes and constraints we got from our research, I brainstormed 12 different potential solutions, and one of my team members did another three." },
-        { header: "04. User testing", description: "Low-fidelity prototypes and user testing", optional:"Next, we created paper prototypes and user-tested both of our top ideas, Open Forum and Blind Match." },
-        { header: "05. Design", description: "High-fidelity prototype", optional:"As the final phase of this project, I created a high-fidelity prototype of our app in Figma, incorporating notes from our user testing and all the way back to the initial research." }
+        { id: "research", header: "Research", description: "How can technology support students’ belongingness on campus?" },
+        { id: "ideation", header: "Ideation", description: "Our solution must support both new and existing relationships and facilitate structured, interest-based social gatherings in a non-time-demanding way", optional: "Using the themes and constraints we got from our research, we came up with 15 different potential solutions and got creative with the different areas of life we could turn into socializing opportunities (eating, studying, conversation, errands, etc.)" },
+        { id: "user-testing", header: "User testing w/ low-fidelity prototypes", description: "With paper prototypes of our top two ideas, we gathered feedback from fellow students" },
+        { id: "design", header: "High-fidelity prototype", description: "Presenting... Open Forum", optional: "We decided to go with Open Forum, the discussion-organizing app, as it was the solution that best addressed all of our constraints." }
     ];
 
     return (
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} sections={sections} />
             <div className="project-content-rest">
-                {/* <Task task="Design a mobile app that will increase Northeastern students' sense of belongingness on campus" processItems={["Defining the problem", "Research", "Ideate solutions", "User testing with low-fidelity prototypes", "Create high-fidelity prototype"]} /> */}
-
-                {/* PROBLEM */}
-                <div id="defining-the-problem" className="section">
-                    <SectionHeader title={sections[0].header} description={sections[0].description} optional={sections[0].optional} />
-                    {/* <p className="w-slim self-center">We started off with some questions that would help us get a better understanding of the problem and the current technology solutions: How can technology support students’ belongingness on campus? What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support?</p> */}
-                </div>
+                <FloatingNav sections={sections} />
 
                 {/* RESEARCH */}
                 <div id="research" className="section">
-                    <SectionHeader title={sections[1].header} description={sections[1].description} />
-                    <div className="img-bg left-border w-slim self-center py-[1rem] px-[1.2rem]">
+                    <SectionHeader title={sections[0].header} description={sections[0].description} />
+
+                    <div className="flex flex-col gap-[0.75rem] img-bg left-border w-slim self-center py-[1rem] px-[1.2rem]">
                         <p className="caption">Research process</p>
                         <ul>
                             <li>
@@ -49,10 +44,19 @@ export default function OpenForum() {
                         </ul>
                     </div>
                     {/* ONLINE RESEARCH */}
-                    <div className="flex flex-col gap-[2rem] mt-[1rem]">
+                    {/* What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support? */}
+                    {/* <div className="flex flex-col gap-[2rem] mt-[1rem]">
                         <div className="flex flex-col w-slim self-center">
                             <h3 className="gray">Online research</h3>
-                            <h3 className="">Online social platforms are commonly used by clubs and organizations for big-group communication or for existing relationships and are not ideal for forming new connections.</h3>
+                            <h3 className="">Digital platforms are commonly used by clubs and organizations for large-group communication and work for existing relationships but are not ideal for forming new connections.</h3>
+                        </div>
+                        <div className="w-slim self-center">
+                            <p className="mb-[0.25rem] bold">Northeastern CampusLabs</p>
+                            <ul>
+                                <li>Catalog of university-registered clubs and organizations</li>
+                                <li>No social interaction</li>
+                                <li>Often outdated</li>
+                            </ul>
                         </div>
                         <div className="gray-full-container">
                             <div className="med-w my-[4rem]">
@@ -84,42 +88,37 @@ export default function OpenForum() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* INTERVIEWS */}
                     <div className="flex flex-col gap-[2rem] mt-[1rem]">
                         <div className="flex flex-col w-slim self-center">
-                            <h3 className="gray">Interviews & affinity diagram</h3>
+                            {/* <h3 className="gray">Interviews & affinity diagram</h3> */}
                             {/* <h3 className="">Online social platforms are commonly used by clubs and organizations for big-group communication or for existing relationships and are not ideal for forming new connections.</h3> */}
                         </div>
                         {/* <ImageModal src="images/work/open-forum/g2-affinity-diagram.png" alt="" /> */}
-                        <div className="rounded w-full flex place-content-center py-[4vw]">
+                        {/* <div className="rounded w-full flex place-content-center py-[4vw]">
                             <img src="images/work/open-forum/g2-affinity-diagram.png" alt="" className="w-[30rem] max-w-[84vw]" />
-                        </div>
+                        </div> */}
                         <div className="gray-full-container">
-                            <div className="med-w my-[4rem]">
+                            <div className="w-slim my-[4rem]">
                                 <h3 className="mb-[1.5rem] dark-gray caption">What we found</h3>
-                                <div className="flex flex-col gap-[1.5rem]">
-                                    <div className="flex gap-[0.5rem]">
-                                        <h3>→</h3>
-                                        <div className="flex flex-col">
-                                            <h3 className="mb-[0.5rem]">Structured and interested-based social spaces are reported more effective methods of socializing</h3>
-                                            <p>Almost all of the students we interviewed mentioned meeting friends either from clubs (organized and interest-based) or other public activities like intramural sports (interested-based).</p>
-                                        </div>
+                                <div className="flex flex-wrap gap-[2rem]">
+                                    <div className="flex flex-col gap-[0.5rem]">
+                                        <h3>Structured and interested-based social spaces are reported more effective methods of socializing</h3>
+                                        <p>Almost all the students we interviewed mentioned meeting friends either from clubs or other public activities like intramural sports.</p>
+                                        {/* <div className="flex gap-[0.25rem] mt-[0.5rem]">
+                                            <Tag text="Organized social events" hover={false} clicked={true} />
+                                            <Tag text="Interest-based" hover={false} clicked={true} />
+                                        </div> */}
                                     </div>
-                                    <div className="flex gap-[0.5rem]">
-                                        <h3>→</h3>
-                                        <div className="flex flex-col">
-                                            <h3 className="mb-[0.5rem]">Technology can help maintain existing connections, but struggles to create them</h3>
-                                            <p>Common online social activites like FaceTime calls or sending reels to friends on Instagram were said to be frequent forms of interacting with friends online, but are more methods for maintaining friendships rather than forming new ones.</p>
-                                        </div>
+                                    <div className="flex flex-col gap-[0.5rem]">
+                                        <h3>Technology can help maintain existing connections, but struggles to create them</h3>
+                                        <p>Online methods of connecting like FaceTimes or sending friends Instagram reels are better for maintaining friendships rather than forming new ones.</p>
                                     </div>
-                                    <div className="flex gap-[0.5rem]">
-                                        <h3>→</h3>
-                                        <div className="flex flex-col">
-                                            <h3 className="mb-[0.5rem]">Struggles with time constraints</h3>
-                                            <p>Students are genearlly pretty busy, with schedules that do not necessarily align with other people. However, one student mentioned that spending lots of time alone to work did not necessarily mean they didn't feel like they didn't belong.</p>
-                                        </div>
+                                    <div className="flex flex-col gap-[0.5rem]">
+                                        <h3>Students are busy and time constraints complicate socializing efforts</h3>
+                                        <p>Students' collectively busy schedules make it hard to find time to socialize. Interestingly, one student mentioned that that didn't necessarily mean that they didn't feel like they didn't belong because of the "shared-struggle" sentiments.</p>
                                     </div>
                                 </div>
                             </div>
@@ -127,29 +126,29 @@ export default function OpenForum() {
                     </div>
                     {/* NEXT STEPS */}
                     <div className="w-slim self-center">
-                        <p>From this, we decided we needed an app that would...</p>
+                        <h4 className="mb-[0.5rem]">From this, we decided we'd need our app to...</h4>
                         <ul>
-                            <li>help organize or facilitate social interaction, not create a digital space for it</li>
-                            <li>allow interest-based activities or discussions</li>
-                            <li>serve both new and existing relationships</li>
-                            <li>work with students' busy schedules, organizing events that are either very frequent, not too long, or flexible in when students can attend</li>
+                            <li>help organize or facilitate social interaction in-person, not create a digital space for it</li>
+                            <li>facilitate interest-based activities or discussions</li>
+                            <li>support both new and existing relationships</li>
+                            <li>work with students' busy schedules by organizing events that either happen frequently, are not too long, or are flexible in when students can attend</li>
                         </ul>
                     </div>
                 </div>
 
                 {/* IDEATION */}
                 <div id="ideation" className="section">
-                    <SectionHeader title={sections[2].header} description={sections[2].description} optional={sections[2].optional} />
+                    <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
 
                     {/* IDEAS LIST */}
-                    <div className="w-slim self-center">
+                    {/* <div className="w-slim self-center">
                         <p className="mb-[0.5rem]">Some of our ideas were:</p>
                         <ul>
                             <li>An app for clubs to post their upcoming events. A filter-heavy platform for users to curate their feed to events that fit their preferences (i.e. free food, resume/career help, networking, etc.)</li>
                             <li>A web app that shows available rooms on campus since space is the greatest asset on Northeastern campus and often times a barrier to hanging out because people cannot find spaces to meet.</li>
                             <li>A podcast hosted by Northeastern students, bringing on other Northeastern students. It would help the Northeastern community feel smaller with the shared experiences talked about on the podcast while introducing new students each week. Targets those who are busy and always on the move (gives them something to listen to).</li>
                         </ul>
-                    </div>
+                    </div> */}
                     {/* TOP IDEAS */}
                     <div className="gray-full-container">
                         <div className="med-w my-[4rem]">
@@ -160,7 +159,7 @@ export default function OpenForum() {
                                     <p>A platform that organizes open discussions on current events, hot takes, etc. Students can submit petitions and people will be able to express interest and show up either to participate or just listen.</p>
                                     <p>Encourages sharing interests / opinions by inviting people passionate about the same topics and provides a casual environment for people to talk and meet new people.</p>
                                     <div className="flex flex-wrap gap-[0.5rem] mt-[1rem]">
-                                        <Tag text="Organize social events" hover={false} clicked={true} />
+                                        <Tag text="Organized social events" hover={false} clicked={true} />
                                         <Tag text="Busy-schedule compatible" hover={false} clicked={true} />
                                         <Tag text="New connections" hover={false} clicked={true} />
                                         <Tag text="Existing relationships" hover={false} clicked={true} />
@@ -172,7 +171,7 @@ export default function OpenForum() {
                                     <p>A platform that sets you up with a random group of people and a day/time to meet up each week. Takes in weekly availability and forms groups based on availability and loosely based on interests.</p>
                                     <p>Helps with the struggle with time constraints by finding people with matching weekly availabilities, encouraging consistent meetups.</p>
                                     <div className="flex flex-wrap gap-[0.5rem] mt-[1rem]">
-                                        <Tag text="Organize social events" hover={false} clicked={true} />
+                                        <Tag text="Organized social events" hover={false} clicked={true} />
                                         <Tag text="Busy-schedule compatible" hover={false} clicked={true} />
                                         <Tag text="New connections" hover={false} clicked={true} />
                                         <Tag text="Existing relationships" hover={false} clicked={false} />
@@ -186,13 +185,14 @@ export default function OpenForum() {
 
                 {/* LOW-FI */}
                 <div id="user-testing" className="section">
-                    <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />
+                    <SectionHeader title={sections[2].header} description={sections[2].description} />
                     <p className="w-slim self-center">Coming soon.</p>
                 </div>
 
                 {/* HIGH-FI */}
                 <div id="design" className="section">
-                    <SectionHeader title={sections[4].header} description={sections[4].description} optional={sections[4].optional} />
+                    <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />
+                    <p className="w-slim self-center">Below is a high-fidelity prototype of our app that I created in Figma.</p>
                     <div className="img-bg rounded flex align-center justify-center w-full mb-[-2.75vw]">
                         <div className="self-center my-[4vw]">
                             <video autoPlay loop playsInline muted className="w-[20vw] min-w-[20rem]">

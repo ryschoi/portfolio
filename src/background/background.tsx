@@ -6,7 +6,7 @@ export default function Background() {
             <div className="flex flex-col gap-[4rem] w-slim">
                 <div className="flex flex-col gap-[1.25rem]">
                     <button className="plain-tag self-center subtle-shadow">Work background & philosophy</button>
-                    <h1 className="text-center callout w-9.5/10 self-center">Highly detail-oriented and intentional from concept to execution</h1>
+                    <h1 className="text-center callout w-9.5/10 self-center serif">Highly detail-oriented and intentional from concept to execution</h1>
                     <p className="gray text-center">I use my analytical skills and sensitivity to usability in human-computer interactions to create meaningful and useful products. However, at the core, I am just a thinker and am always trying to understand how things work.</p>
                 </div>
                 {/* detail-oriented intentional thorough precise full-picture */}
