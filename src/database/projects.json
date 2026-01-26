@@ -1,5 +1,23 @@
 [
     {
+        "id": 12,
+        "active": true,
+        "name": "Open Forum",
+        "path": "/open-forum",
+        "summary": "An app for organizing meaningful and engaging discussions, increasing students' sense of belongingness on campus",
+        "type": "School project",
+        "team": ["Rebecca Choi", "Thomas Yi", "Josh Len", "Sean Yoo"],
+        "role": "",
+        "medium": "Mobile",
+        "tools": "Figma",
+        "year": 2025,
+        "timeline": "Jan - Apr 2025",
+        "tags": ["UI/UX"],
+        "vertical": false,
+        "frontImage": "images/work/open-forum/open-forum-screens.png",
+        "overview": "Semester-long group project for Human-Computer Interaction consisting of a full UX research process to create a mobile app solution to support belongingness on campus"
+    },
+    {
         "id": 7,
         "active": true,
         "name": "Snakebite Data Story Poster",
@@ -18,29 +36,11 @@
         "overview": "As the second project from my Information Design studio, I needed to create a data story poster about the global snakebite crisis. This poster captures the link between different climate conditions and countries with high rates of snakebite."
     },
     {
-        "id": 12,
-        "active": true,
-        "name": "Open Forum",
-        "path": "/open-forum",
-        "summary": "An app for organizing meaningful and engaging discussions, increasing students' sense of belongingness on campus",
-        "type": "School project",
-        "team": ["Rebecca Choi", "Thomas Yi", "Josh Len", "Sean Yoo"],
-        "role": "",
-        "medium": "Mobile",
-        "tools": "Figma",
-        "year": 2025,
-        "timeline": "Jan - Apr 2025",
-        "tags": ["UI/UX"],
-        "vertical": false,
-        "frontImage": "images/work/open-forum/open-forum-screens.png",
-        "overview": "Semester-long group project for Human-Computer Interaction consisting of a full UX research and design process to create a mobile app solution to support belongingness on campus"
-    },
-    {
         "id": 14,
         "active": false,
         "name": "Marketing Analytics Co-op @ Boston Beer",
         "path": "/boston-beer",
-        "summary": "Summary",
+        "summary": "Applying UX research and design thinking to translate marketing data into clear and engaging insights for a non-technical audience",
         "type": "Co-op",
         "team": ["Marketing Analytics Team"],
         "role": "My role: Marketing Analytics Co-op",
@@ -51,7 +51,7 @@
         "tags": ["Data", "Information design", "UI/UX"],
         "vertical": false,
         "frontImage": "images/work/bostonbeer/.png",
-        "overview": "Project overview"
+        "overview": "As the sole designer on the Marketing Analytics team, I redesigned and developed Power BI dashboards and scorecards to deliver clear insights on advertising performance to the brand marketing teams."
     },
     {
         "id": 15,
@@ -96,7 +96,7 @@
         "path": "/cooper",
         "summary": "Helping Northeastern students make more informed co-op searching decisions",
         "type": "Club",
-        "team": ["Five developers", "Three designers"],
+        "team": ["Project Lead", "Technical Lead", "Five developers", "Three designers"],
         "role": "My role: Design Lead",
         "medium": "Web, mobile",
         "tools": "Figma",
@@ -145,7 +145,7 @@
     },
     {
         "id": 1,
-        "active": true,
+        "active": false,
         "name": "Rockumentary",
         "path": "/rockumentary",
         "summary": "A recital poster that balances notes of rock and nostalgia",

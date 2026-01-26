@@ -193,7 +193,7 @@ export default function OpenForum() {
                 <div id="design" className="section">
                     <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />
                     <p className="w-slim self-center">Below is a high-fidelity prototype of our app that I created in Figma.</p>
-                    <div className="img-bg rounded flex align-center justify-center w-full mb-[-2.75vw]">
+                    <div className="img-bg rounded flex align-center justify-center w-full mb-[0.5rem]">
                         <div className="self-center my-[4vw]">
                             <video autoPlay loop playsInline muted className="w-[20vw] min-w-[20rem]">
                                 <source src="images/work/open-forum/open-forum-video.mov" type="video/mp4" />

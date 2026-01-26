@@ -4,28 +4,29 @@ import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
 import { section } from "./section";
 import SectionHeader from "components/section-header";
+import FloatingNav from "components/floating-nav";
 
 export default function Cooper() {
     const thisProject = projects.find(p => p.path === "/cooper");
     const sections: section[] = [
-        { id: "1", header: "01. Semester 1: UX Designer", description: "Learning my way around the project and how to work with developers", optional: "I first joined the project in its third semester. I was relatively new to UI/UX design and due to there being no Design Lead and the team being overall very developer-heavy, I was given a lot of freedom. My instructions were “redesign the role page” and I was free to go wherever from there." },
-        { id: "2", header: "02. Semester 2+: Design Lead", description: "Design direction for the project" }
+        { id: "first-sem", header: "Semester 1: UX Designer", description: "Learning my way around my first cross-functional team", optional: "I first joined the project in its third semester. I was relatively new to UI/UX design and due to there being no Design Lead and the team being overall very developer-heavy, I was given a lot of freedom. My instructions were “redesign the role page” and I was free to go wherever from there." },
+        { id: "sec-sem", header: "Semester 2+: Design Lead", description: "Establishing design direction for the project, cross-functional collaboration, and a product design approach" }
     ]
 
     return (
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} sections={sections} />
-
+            <FloatingNav sections={sections} />
             <div className="project-content-rest">
                 <div id="first-sem" className="section">
                     <SectionHeader title={sections[0].header} description={sections[0].description} />
                     <p className="w-slim self-center">Coming soon.</p>
                     {/* role page before */}
-                    {/* <p className="w-slim self-center">At this point, my greatest advantage as a designer was not having ever seen Cooper before, and therefore getting a completely unbiased view.</p>
+                    {/* <p className="w-slim self-center">Upon first joining the project, my greatest advantage as a designer was not having ever seen Cooper before, and therefore being able to view the site with completely fresh eyes.</p>
                     <p className="w-slim self-center">My initial observations:</p>
-                    <h4 className="w-slim self-center gray">I figured, since we’re collecting all this review data, we should use it!</h4> */}
+                    <h4 className="w-slim self-center gray">Pretty quickly, I thought that it didn't make sense for each review to be on its own page. That would make it hard for people to build one cohesive picture about one role. I figured, since we’re collecting all this review data, we should use it!</h4> */}
                     {/* role page after */}
-                    {/* <h4 className="w-slim self-center gray">The result: data-backed insights, concrete stats, site flow</h4>
+                    {/* <h4 className="w-slim self-center gray">The result: data-backed insights, concrete stats, site architecture that more closely mirrors other job board sites.</h4>
                     <h4 className="w-slim self-center gray">Problem: All three designers were creating different brand identities so designs didn’t match, changing design system as we were creating new designs, etc.<br />Needed more organization, and standardization. I decided to become design lead.</h4> */}
                 </div>
                 <div id="sec-sem" className="section">

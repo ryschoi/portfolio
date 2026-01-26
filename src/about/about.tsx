@@ -65,7 +65,6 @@ export default function About() {
     }
   };
 
-
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const handleWorkClick = () => {
@@ -119,8 +118,7 @@ export default function About() {
           <h3 className="tracking-[-0.25px] serif">Currently...</h3>
           <ul className="gray">
             <li className="h4">Third-year Computer Science and Design student at Northeastern University</li>
-            <li className="h4">Doing my co-op at The Boston Beer Company on the Marketing Analytics team, using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible</li>
-            <li className="h4">Design lead at <a href="https://www.sandboxnu.com/" className="h3 underline">Sandbox NU</a> for <a className="h3 underline" href="/cooper">Cooper</a>, creating a job experience review platform to help Northeastern students make more informed co-op decisions</li>
+            <li className="h4">Design lead at <a href="https://www.sandboxnu.com/" className="h4 underline">Sandbox NU</a> for <a className="h4 underline" href="/cooper">Cooper</a>, creating a job experience review platform to help Northeastern students make more informed co-op decisions</li>
           </ul>
           <br />
           <h3 className="serif">Incoming Human Interface Design Intern @ Apple, Summer 2026</h3>

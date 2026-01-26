@@ -10,10 +10,10 @@ import FloatingNav from "components/floating-nav";
 export default function SnakebiteData() {
     const thisProject = projects.find(p => p.path === "/snakebite-data");
     const sections: section[] = [
-        { id: "data-collection-and-engineering", header: "01. Data collection and engineering", description: "Gather data sets and create preliminary data visualizations", optional: "I got various data sets of climate conditions from Our World in Data. In Excel, I cleaned them up so I could work with them in one workbook, and then created initial visualizations (that I later moved to Illustrator)." },
-        { id: "data-visualization",  header: "02. Data visualization", description: "Establishing a clear visual language and data story", optional: "In Illustrator, I not only edited individual visualizations, creating one consistent look for the poster, but I also had to make sure that each of the visualizations, once pieced together, told one cohesive story." },
-        { id: "final-deliverable",  header: "03. Final deliverable", description: "A5 size poster" },
-        { id: "reflection",  header: "04. Reflection", description: "My first data visualization project!" }
+        { id: "data-collection-and-engineering", header: "Data collection and engineering", description: "Gather data sets and create preliminary data visualizations", optional: "I got various data sets of climate conditions from Our World in Data. In Excel, I cleaned them up so I could work with them in one workbook, and then created initial visualizations (that I later moved to Illustrator)." },
+        { id: "data-visualization",  header: "Data visualization", description: "Establishing a clear visual language and data story", optional: "In Illustrator, I not only edited individual visualizations, creating one consistent look for the poster, but I also had to make sure that each of the visualizations, once pieced together, told one cohesive story." },
+        { id: "final-deliverable",  header: "Final deliverable", description: "A5-size poster" },
+        { id: "reflection",  header: "Reflection", description: "My first data visualization project!" }
     ];
     return (
         <div className="project-content">

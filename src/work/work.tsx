@@ -44,9 +44,9 @@ export default function Work() {
       {/* GREETING */}
       <div className="flex flex-wrap gap-[2.5rem] items-start mt-[8.5rem] mb-[12rem] self-center">
         <img src="images/website-assets/notion_face.png" className="w-[8rem] object-contain" />
-        <div className="w-[39rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[3vh]">
-            {/* <p className="gray bold tracking-[-0.25px] mb-[-0.5rem]">Incoming @ Apple  |  CS & Design @ Northeastern</p> */}
-          <h1 className="tracking-[-0.3px]">Hi, I'm Rebecca, a developer-turned-designer shaping digital experiences with intention and craft. <br /><span className="gray">Incoming @ Apple.</span>
+        <div className="w-[42rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[3vh]">
+          {/* <p className="gray bold tracking-[-0.25px] mb-[-0.5rem]">Incoming @ Apple  |  CS & Design @ Northeastern</p> */}
+          <h1 className="tracking-[-0.3px]">Hi, I'm Rebecca.<br /><span className="gray">A developer-turned-designer shaping digital experiences with clarity and craft.</span>
           </h1>
           {/* <h4 className="gray mt-[-1.5vh]">Incoming Human Interface Design Intern @ Apple</h4> */}
           <div className="flex flex-wrap gap-[0.5rem]">
@@ -68,7 +68,7 @@ export default function Work() {
               onClick={() => setSelectedTag((prev) => (prev === tag ? null : tag))}
               className="flex items-center gap-[0.5rem]">
               <Tag hover={true} clicked={isSelected}>
-                {tag} <span className={`text-[0.85rem] ${ isSelected ? "light-gray" : "gray" }`}>{count}</span>
+                {tag} <span className={`text-[0.85rem] ${isSelected ? "light-gray" : "gray"}`}>{count}</span>
               </Tag>
             </div>
           );
