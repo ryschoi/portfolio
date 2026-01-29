@@ -1,12 +1,12 @@
 import ProjectHeader from "../components/project-header";
 import SectionHeader from "../components/section-header";
-import Task from "../components/task";
 import TwoImageCaption from "../components/two-image-caption";
 import VerticalImageSpan from "../components/vertical-image-span";
 import { projects } from "../database";
 import { Project } from "./project";
 import "./projects.css";
 import { section } from "./section";
+import FloatingNav from "components/floating-nav";
 
 export default function DissonantHarmony() {
     const thisProject = projects.find(p => p.path === "/dissonant-harmony");
@@ -22,7 +22,7 @@ export default function DissonantHarmony() {
     return (
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} sections={sections} />
-
+            <FloatingNav sections={sections} />
             <div className="project-content-rest">
                 <div id="concept">
                     <SectionHeader title={sections[0].header} description={sections[0].description} optional={sections[0].optional} />
@@ -48,7 +48,7 @@ export default function DissonantHarmony() {
                 {/* DARK VERSIONS */}
                 <div className="section align-center" id="background">
                     <SectionHeader title={sections[2].header} description={sections[2].description} optional={sections[2].optional} />
-                    <p className="w-slim self-center">To determine this, I put both poster versions in grayscale to see the differences in values in each of the colors. Value in color theory refers to the darkness of a color, independent of hue or saturation. As can be seen in the images below, there is much more contrast between the sculpture and the background in the lighter background than the dark one. The small screws in the top-right of the dark-background poster are completely invisible, meaning that they are the exact same values.</p>
+                    <p className="w-slim">To determine this, I put both poster versions in grayscale to see the differences in values in each of the colors. Value in color theory refers to the darkness of a color, independent of hue or saturation. As can be seen in the images below, there is much more contrast between the sculpture and the background in the lighter background than the dark one. The small screws in the top-right of the dark-background poster are completely invisible, meaning that they are the exact same values.</p>
 
                     <TwoImageCaption path1="/images/work/calder/calder-bad-contrast.jpg" cap1="dark background → low contrast" path2="/images/work/calder/calder-good-contrast.jpg" cap2="light background → high contrast" />
                 </div>
@@ -56,7 +56,7 @@ export default function DissonantHarmony() {
                 {/* A1 */}
                 <div className="section align-center" id="a1-size-poster">
                     <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />
-                    <div className="flex flex-col w-slim self-center">
+                    <div className="flex flex-col w-slim">
                         <div className="rounded img-bg w-full flex align-center justify-center py-[4rem]">
                             <img src="images/work/calder/calder-a1-markup.png" alt="" className="w-[36rem] max-w-[84vw]" />
                         </div>
@@ -67,14 +67,15 @@ export default function DissonantHarmony() {
                         <VerticalImageSpan path="images/work/calder/calder.png" />
                         <p className="caption cap-top">final a1 poster</p>
                     </div>
-                    <p className="w-slim self-center">In the final A1 poster version, there is a much-better sense of hierarchy and more obvious flow for how people should read the poster.<br /><br />
+                    <p className="w-slim">In the final A1 poster version, there is a much-better sense of hierarchy and more obvious flow for how people should read the poster.<br /><br />
                         Eyes are first directed to either the sculpture or the title. There is a clear, top-to-bottom flow of elements. The big red sculpture piece being in the vertical center also helps guide the eyes from the top of the sculpture group to the bottom and does not potentailly diverge the viewer's attention elsewhere.<br /><br />
                         Museum info at the bottom being a similar width as the title helps retain consistency and hierarchy across elements, not adding another layer to the hierarchy of elements.</p>
                 </div>
 
                 {/* FLYER */}
                 <div className="section align-center" id="a5-size-flyer">
-                    <SectionHeader title={sections[4].header} description={sections[4].description} optional={sections[4].optional} />                    <p className="w-slim self-center">I thought this made the most sense as while the poster could be meant to spark intrigue for the viewers, the flyer would be held at the museum, and therefore showing the actual artwork could help museum visitors know what to keep an eye out for. Furthermore, if museum goers had seen the poster before the flyer (or vice versa), it could help them make the connection of the deeper meaning behind the artwork, having seen the structure both constructed and deconstructed.</p>
+                    <SectionHeader title={sections[4].header} description={sections[4].description} optional={sections[4].optional} />                    
+                    <p className="w-slim">I thought this made the most sense as while the poster could be meant to spark intrigue for the viewers, the flyer would be held at the museum, and therefore showing the actual artwork could help museum visitors know what to keep an eye out for. Furthermore, if museum goers had seen the poster before the flyer (or vice versa), it could help them make the connection of the deeper meaning behind the artwork, having seen the structure both constructed and deconstructed.</p>
                     <div className="flex flex-col w-full">
                         <div className="img-bg rounded flex place-content-center w-full">
                             <div className="self-center my-[3rem] subtle-shadow flex flex-wrap gap-[4rem] place-content-center">
@@ -88,7 +89,8 @@ export default function DissonantHarmony() {
 
                 {/* DIGITAL MATERIAL */}
                 <div className="section align-center" id="digital-marketing-material">
-                    <SectionHeader title={sections[5].header} description={sections[5].description} optional={sections[5].optional} />                    <p className="w-slim self-center">The center slide features a gif that shows the individual pieces of the sculpture getting put back together. This gif ties together the entire set of marketing materials as it visually plays out the transformation of individual, dissonant pieces coming together and forming a harmonious sculpture.</p>
+                    <SectionHeader title={sections[5].header} description={sections[5].description} optional={sections[5].optional} />                    
+                    <p className="w-slim">The center slide features a gif that shows the individual pieces of the sculpture getting put back together. This gif ties together the entire set of marketing materials as it visually plays out the transformation of individual, dissonant pieces coming together and forming a harmonious sculpture.</p>
 
 
                     <div className="work-img-group-col-bigger">

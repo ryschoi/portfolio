@@ -29,10 +29,10 @@ export default function NavBar() {
         Rebecca Choi
       </Link>
 
-      <div className="flex gap-[2rem]">
+      <div className="flex gap-[3vw]">
         <button
           onClick={handleWorkClick}
-          className={`caption bg-transparent transition-colors
+          className={`p-[0px] caption bg-transparent transition-colors
             ${pathname === "/"
               ? "nav-active"
               : "gray work-hover"

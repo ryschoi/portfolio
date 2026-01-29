@@ -10,6 +10,14 @@
   background-color: #bac5bd50;
 }
 
+.sres-bg {
+  background-color: #414141;
+}
+
+.mt-no-optional {
+  margin-top: -1.5rem;
+}
+
 .plain-tag {
   background-color: var(--color-tag-bg);
   color: var(--color-black);
@@ -181,4 +189,59 @@
   top: 1em;
   right: 1rem;
   z-index: 10;
+}
+
+.card {
+  border-radius: 0.5rem;
+  background: #86852530;
+  overflow: hidden;
+  transition: box-shadow 0.4s ease;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  font-family: 'Space Mono';
+  text-transform: uppercase;
+  font-size: var(--ps-size);
+  color: #00000085;
+  font-weight: bold;
+}
+
+.plus-minus {
+  color: #00000085;
+  font-weight: bold;
+  transition: transform 0.25s ease;
+}
+
+.card.open .plus-minus {
+  transform: rotate(180deg);
+}
+
+.card-content {
+  background-color: #ffffff60;
+  border-radius: 0.5rem 0.5rem 0 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.content {
+  margin: 1.25rem 1.5rem;
+}
+
+.card.open .card-content {
+  max-height: 90vh;
+  /* border: 2px solid #00000015; */
+  /* box-shadow: 0 8px 24px rgba(0,0,0,0.12); */
 }

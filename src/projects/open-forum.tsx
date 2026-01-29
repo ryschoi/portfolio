@@ -6,6 +6,7 @@ import SectionHeader from "components/section-header";
 import Tag from "components/tag";
 import { section } from "./section";
 import FloatingNav from "components/floating-nav";
+import Collapsible from "components/collapsible";
 
 export default function OpenForum() {
     const thisProject = projects.find(p => p.path === "/open-forum");
@@ -26,7 +27,7 @@ export default function OpenForum() {
                 <div id="research" className="section">
                     <SectionHeader title={sections[0].header} description={sections[0].description} />
 
-                    <div className="flex flex-col gap-[0.75rem] img-bg left-border w-slim self-center py-[1rem] px-[1.2rem]">
+                    <div className="flex flex-col gap-[0.75rem] img-bg left-border w-slim py-[1rem] px-[1.2rem]">
                         <p className="caption">Research process</p>
                         <ul>
                             <li>
@@ -43,14 +44,35 @@ export default function OpenForum() {
                             </li>
                         </ul>
                     </div>
+                    {/* <Collapsible
+                        classes="w-slim"
+                        closedText="Research process"
+                        content={
+                            <ul className="pl-[1.25rem]">
+                                <li>
+                                    Conduct <span className="bold">online research</span> on how college students connect these days, the state of college students' wellbeings, etc.
+                                </li>
+                                <li>
+                                    Conduct <span className="bold">interviews</span> with four different Northeastern students to hear from some of our potential users' real experiences of navigating social life on campus.
+                                </li>
+                                <li>
+                                    Create an <span className="bold">affinity diagram to extract key themes</span> from our interviews
+                                </li>
+                                <li>
+                                    Create two <span className="bold">personas</span> to illustrate what the themes might look like in the context of actual people's lives, preferences, and temperaments.
+                                </li>
+                            </ul>
+                        }
+                    /> */}
+
                     {/* ONLINE RESEARCH */}
                     {/* What software tools exist to support belongingness, inclusion, social connectedness, and social support? What types of interactions do these tools support? */}
                     {/* <div className="flex flex-col gap-[2rem] mt-[1rem]">
-                        <div className="flex flex-col w-slim self-center">
+                        <div className="flex flex-col w-slim">
                             <h3 className="gray">Online research</h3>
                             <h3 className="">Digital platforms are commonly used by clubs and organizations for large-group communication and work for existing relationships but are not ideal for forming new connections.</h3>
                         </div>
-                        <div className="w-slim self-center">
+                        <div className="w-slim">
                             <p className="mb-[0.25rem] bold">Northeastern CampusLabs</p>
                             <ul>
                                 <li>Catalog of university-registered clubs and organizations</li>
@@ -92,7 +114,7 @@ export default function OpenForum() {
 
                     {/* INTERVIEWS */}
                     <div className="flex flex-col gap-[2rem] mt-[1rem]">
-                        <div className="flex flex-col w-slim self-center">
+                        <div className="flex flex-col w-slim">
                             {/* <h3 className="gray">Interviews & affinity diagram</h3> */}
                             {/* <h3 className="">Online social platforms are commonly used by clubs and organizations for big-group communication or for existing relationships and are not ideal for forming new connections.</h3> */}
                         </div>
@@ -125,7 +147,7 @@ export default function OpenForum() {
                         </div>
                     </div>
                     {/* NEXT STEPS */}
-                    <div className="w-slim self-center">
+                    <div className="w-slim">
                         <h4 className="mb-[0.5rem]">From this, we decided we'd need our app to...</h4>
                         <ul>
                             <li>help organize or facilitate social interaction in-person, not create a digital space for it</li>
@@ -141,7 +163,7 @@ export default function OpenForum() {
                     <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
 
                     {/* IDEAS LIST */}
-                    {/* <div className="w-slim self-center">
+                    {/* <div className="w-slim">
                         <p className="mb-[0.5rem]">Some of our ideas were:</p>
                         <ul>
                             <li>An app for clubs to post their upcoming events. A filter-heavy platform for users to curate their feed to events that fit their preferences (i.e. free food, resume/career help, networking, etc.)</li>
@@ -186,16 +208,16 @@ export default function OpenForum() {
                 {/* LOW-FI */}
                 <div id="user-testing" className="section">
                     <SectionHeader title={sections[2].header} description={sections[2].description} />
-                    <p className="w-slim self-center">Coming soon.</p>
+                    <p className="w-slim">Coming soon.</p>
                 </div>
 
                 {/* HIGH-FI */}
                 <div id="design" className="section">
                     <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />
-                    <p className="w-slim self-center">Below is a high-fidelity prototype of our app that I created in Figma.</p>
+                    <p className="w-slim">Below is a high-fidelity prototype of our app that I created in Figma.</p>
                     <div className="img-bg rounded flex align-center justify-center w-full mb-[0.5rem]">
                         <div className="self-center my-[4vw]">
-                            <video autoPlay loop playsInline muted className="w-[20vw] min-w-[20rem]">
+                            <video autoPlay loop playsInline muted className="w-[20vw] min-w-[20rem] rounded-[3rem]">
                                 <source src="images/work/open-forum/open-forum-video.mov" type="video/mp4" />
                             </video>
                         </div>

@@ -4,17 +4,18 @@ import ProjectHeader from "../components/project-header";
 import SectionHeader from "components/section-header";
 import { Project } from "./project";
 import { section } from "./section";
-import SlideImg from "components/slide-img";
+import FloatingNav from "components/floating-nav";
 
 export default function AliHacks() {
     const thisProject = projects.find(p => p.path === "/ali-hacks");
     const sections: section[] = [
-        { id:"internal-portal", header: "01. Internal portal", description: "Manage and submit hackathon applications, get details for the day of the hackathon", optional: "This is the portal where applicants will apply for the hackathon, check the status of their application, and later when accepted, get details of the day of the hackathon. Administrators also manage applications on this page." },
-        { id:"sponsorship-package", header: "02. Sponsorship package", description: "Informational flyer to send out to potential sponsors" }
+        { id:"internal-portal", header: "Internal portal", description: "Manage and submit hackathon applications, get details for the day of the hackathon", optional: "This is the portal where applicants will apply for the hackathon, check the status of their application, and later when accepted, get details of the day of the hackathon. Administrators also manage applications on this page." },
+        { id:"sponsorship-package", header: "Sponsorship package", description: "Informational flyer to send out to potential sponsors" }
     ]
     return (
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} sections={sections} />
+            <FloatingNav sections={sections} />
             <div className="project-content-rest">
                 <div className="section self-center" id="internal-portal">
                     <SectionHeader title={sections[0].header} description={sections[0].description} optional={sections[0].optional} />

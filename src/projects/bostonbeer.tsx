@@ -17,12 +17,12 @@ export default function BostonBeer() {
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} sections={sections} />
             <div className="project-content-rest">
-                <p className="w-slim self-center">Case study coming soon.</p>
+                <p className="w-slim">Case study coming soon.</p>
                 {/* <FloatingNav sections={sections} /> */}
                 {/* <div className="section w-slim" id="qmm">
                     <SectionHeader title={sections[0].header} description={sections[0].description} optional={sections[0].optional} />
                 </div>
-                <div className="section self-center" id="bls-sls">
+                <div className="section" id="bls-sls">
                     <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
                 </div>
 
