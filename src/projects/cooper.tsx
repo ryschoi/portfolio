@@ -20,20 +20,20 @@ export default function Cooper() {
             <div className="project-content-rest">
                 <div id="first-sem" className="section">
                     <SectionHeader title={sections[0].header} description={sections[0].description} />
-                    {/* <p className="w-slim">Coming soon.</p> */}
+                    <p className="w-slim">Coming soon.</p>
                     {/* role page before */}
-                    <p className="w-slim">Upon first joining the project, my greatest advantage as a designer was not having ever seen Cooper before, and therefore being able to view the site with completely fresh eyes.</p>
+                    {/* <p className="w-slim">Upon first joining the project, my greatest advantage as a designer was not having ever seen Cooper before, and therefore being able to view the site with completely fresh eyes.</p>
                     <p className="w-slim">My initial observations:</p>
-                    <h4 className="w-slim gray">Pretty quickly, I thought that it didn't make sense for each review to be on its own page. That would make it hard for people to build one cohesive picture about one role. I figured, since we’re collecting all this review data, we should use it!</h4>
+                    <h4 className="w-slim gray">Pretty quickly, I thought that it didn't make sense for each review to be on its own page. That would make it hard for people to build one cohesive picture about one role. I figured, since we’re collecting all this review data, we should use it!</h4> */}
                    {/* role page after */}
-                    <h4 className="w-slim gray">The result: data-backed insights, concrete stats, site architecture that more closely mirrors other job board sites.</h4>
-                    <h4 className="w-slim gray">Problem: All three designers were creating different brand identities so designs didn’t match, changing design system as we were creating new designs, etc.<br />Needed more organization, and standardization. I decided to become design lead.</h4>
+                    {/* <h4 className="w-slim gray">The result: data-backed insights, concrete stats, site architecture that more closely mirrors other job board sites.</h4>
+                    <h4 className="w-slim gray">Problem: All three designers were creating different brand identities so designs didn’t match, changing design system as we were creating new designs, etc.<br />Needed more organization, and standardization. I decided to become design lead.</h4> */}
                 </div>
                 <div id="sec-sem" className="section">
                     <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
                     
                     <p className="w-slim">Coming soon.</p>
-                    <p>Over the summer, I</p>
+                    {/* <p>Over the summer, I</p>
                     <ul>
                         <li>Refined the design system</li>
                         <li>Organized the Figma file</li>
@@ -62,7 +62,7 @@ export default function Cooper() {
                             <h3 className="gray">Balancing professionalism and friendliness</h3>
                         </div>
                         <p></p>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
