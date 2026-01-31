@@ -406,13 +406,12 @@ hr {
   flex-direction: column;
   gap: 0.5rem;
 
-  max-width: 14rem;
+  /* max-width: 14rem; */
   white-space: normal;
 
   /* padding: 0.5rem; */
   /* background-color: #d7d7d750; */
   /* border-radius: 1rem; */
-
 }
 
 .nav-dot {
@@ -450,6 +449,8 @@ hr {
   pointer-events: none;
 
   transition: opacity 0.25s ease, transform 0.25s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .floating-nav:hover .label {

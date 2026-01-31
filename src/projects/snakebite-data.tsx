@@ -14,7 +14,7 @@ export default function SnakebiteData() {
         { id: "data-collection-and-engineering", header: "Data collection and engineering", description: "Gather data sets and create preliminary data visualizations", optional: "I got various data sets of climate conditions from Our World in Data. In Excel, I cleaned them up so I could work with them in one workbook, and then created initial visualizations (that I later moved to Illustrator)." },
         { id: "data-visualization", header: "Data visualization", description: "Establishing a clear visual language and data story", optional: "In Illustrator, I not only edited individual visualizations, creating one consistent look for the poster, but I also had to make sure that each of the visualizations, once pieced together, told one cohesive story." },
         { id: "final-deliverable", header: "Final deliverable", description: "A5-size poster" },
-        { id: "reflection", header: "Reflection", description: "My first data visualization project!" }
+        { id: "reflection", header: "Reflection", description: "My first data visualization project", optional: "Through this project, I learned that a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but that the data needs to be represented in a language users can read." }
     ];
     return (
         <div className="project-content">
@@ -43,6 +43,36 @@ export default function SnakebiteData() {
                     </div>
 
                     <div className="work-img-group-col">
+                        <div className="rounded flex flex-col gap-[1.25rem] box-border">
+                            <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
+                                <img src="/images/work/snakebite-data/s-data-bars.png" alt="" className="" />
+                            </div>
+                            <div className="flex flex-col gap-[0.15rem] ml-[0.5rem] w-6/7">
+                                <p className="h4">First version: bars</p>
+                                <p>Arbitrary bar sizes–only takeaway is the difference value and the general size difference</p>
+                            </div>
+                        </div>
+                        <div className="rounded flex flex-col gap-[1.25rem] box-border">
+                            <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
+                                <img src="/images/work/snakebite-data/s-data-sun.png" alt="" className="max-h-[15rem] self-center" />
+                            </div>
+                            <div className="flex flex-col gap-[0.15rem] ml-[0.5rem] w-6/7">
+                                <p className="h4">Second version: illustrations</p>
+                                <p>Illustrations showed what the climates might look like, but the visuals were also arbitrarily-sized and therefore not very informative</p>
+                            </div>
+                        </div>
+                        <div className="rounded flex flex-col gap-[1.25rem] box-border">
+                            <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
+                                <img src="/images/work/snakebite-data/s-data-circles.png" alt="" className="max-h-[15rem] self-center" />
+                            </div>
+                            <div className="flex flex-col gap-[0.15rem] ml-[0.5rem] w-6/7">
+                                <p className="h4">Final version: isotypes</p>
+                                <p>Isotypes being representative of actual proportions of the numbers makes it much easier to tell the values of each measurement and just how much the differences are</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* <div className="work-img-group-col">
                         <div className="img-bg rounded flex flex-col p-[1.5rem] box-border">
                             <div className="work-add-img-cont p-[1rem] box-border h-[20rem]">
                                 <img src="/images/work/snakebite-data/s-data-bars.png" alt="" className="subtle-shadow" />
@@ -70,7 +100,7 @@ export default function SnakebiteData() {
                                 <p>Isotypes being representative of actual proportions of the numbers makes it much easier to tell the values of each measurement and just how much the differences are</p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* <div className="flex flex-col w-slim gap-[3rem]">
                         <div className="flex flex-col gap-[0.6rem] left-border pl-[0.6rem]">
@@ -123,7 +153,7 @@ export default function SnakebiteData() {
                         </div>
                         <h4 className="gray">For this chart, the challenge was figuring out how to label the boxes in a way that highlighted the large disparity between reported data and reality with the least amount of brain work.</h4>
                         <br />
-                        <Collapsible closedText="Process" content={<p className="">Following Edward Tufte's "degree of separation" scale, a method of determining how accessible labels are to their corresponding data points, I connected the labels directly to the boxes rather than separating them from the boxes entirely. This way, there is less back-and-forth between the boxes and the labels, and the main message of the visualization can be understood at just a glance since all the central points are consolidated in one area.</p>} />                        
+                        <Collapsible closedText="Process" content={<p className="">Following Edward Tufte's "degree of separation" scale, a method of determining how accessible labels are to their corresponding data points, I connected the labels directly to the boxes rather than separating them from the boxes entirely. This way, there is less back-and-forth between the boxes and the labels, and the main message of the visualization can be understood at just a glance since all the central points are consolidated in one area.</p>} />
                     </div>
                     {/* IMAGES */}
                     <div className="work-img-group-col">
@@ -153,8 +183,10 @@ export default function SnakebiteData() {
                 </div>
 
                 <div className="section" id="reflection">
-                    <SectionHeader title={sections[3].header} description={sections[3].description} />
-                    <p className="w-slim">Through this project, I learned that <span className="bold">a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but that the data needs to be represented in a language users can read</span>. For this project, that meant setting solid context for each visualization and, in my single-tone design, being very intentional with each time I used the color green so that the visualizations could be interpretted with even just a glance. The color green running throughout the entire poster also keeps the same meaning of referring to the countries with higher-than-average rates of snakebite.<br /><br />I was lucky to have gotten to learn about the global snakebite crisis through this project and to get to put my design skills to use to bring about more awareness for both those affected and not. While this poster only covers climate conditions, I'd love to expand the story with the incorporation of data about wealth & lifestyle, hospital accessibility, and government funding.</p>
+                    <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />
+                    <p className="w-slim">For this project, that meant setting solid context for each visualization and, in my single-tone design, being very intentional with each time I used the color green so that the visualizations could be interpretted with even just a glance. The color green running throughout the entire poster also keeps the same meaning of referring to the countries with higher-than-average rates of snakebite.
+                        <br /><br />
+                        Getting to learn about and put my design skills to raise awareness about the global snakebite crisis reminded me how meaningful design can be. While this poster only covers climate conditions, I'd love to expand the story with the incorporation of data for things wealth, lifestyle, hospital accessibility, and government funding.</p>
                 </div>
             </div>
         </div>
