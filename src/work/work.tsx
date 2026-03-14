@@ -43,12 +43,14 @@ export default function Work() {
     <div className="flex flex-col">
       {/* GREETING */}
       <div className="flex flex-wrap gap-[2.5rem] items-start mt-[8.5rem] mb-[12rem] self-center">
-        <img src="images/website-assets/notion_face.png" className="w-[8rem] object-contain" />
+        <img src="images/website-assets/notion_face.png" className="mt-[1.5rem] w-[8rem] object-contain" />
         <div className="w-[42rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[3vh]">
-          {/* <p className="gray bold tracking-[-0.25px] mb-[-0.5rem]">Incoming @ Apple  |  CS & Design @ Northeastern</p> */}
-          <h1 className="tracking-[-0.3px]">Hi, I'm Rebecca.<br /><span className="gray">A developer-turned-designer shaping digital experiences with clarity and craft.</span>
+          <p className="green caption tracking-[-0.25px] mb-[-0.5rem]">● Incoming @ Apple, summer 2026  |  seeking fall 2026 co-op opportunity</p>
+          <h1 className="tracking-[-0.3px]">
+            Hi, I'm Rebecca.<br />
+            <span className="gray">A developer-turned-designer shaping digital experiences with clarity and craft.</span>
           </h1>
-          {/* <h4 className="gray mt-[-1.5vh]">Incoming Human Interface Design Intern @ Apple</h4> */}
+          {/* <h4 className=" mt-[-0.5vh] dark-green">Incoming Design @ Apple, Summer 2026  |  Seeking Fall 2026 co-op</h4> */}
           <div className="flex flex-wrap gap-[0.5rem]">
             <HoverButton path="/background" buttonText="Read about my work background" hoverText="What are my design principles? Why tech + design? How did I get here??" />
             <HoverButton path="/about#contacts" buttonText="Contact me" hoverText="Email, phone, LinkedIn..." />

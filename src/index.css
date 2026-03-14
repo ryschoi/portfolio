@@ -231,8 +231,12 @@ a:hover {
 }
 
 .green {
-  color: #acaa0b;
+  color: #9f9e29;
 }
+
+/* .dark-green {
+  color: #9f9e29;
+} */
 
 .nav-active,
 .work-hover:hover {
@@ -248,9 +252,9 @@ a:hover {
   color: #0b69ac;
 }
 
-.dark-green {
+/* .dark-green {
   color: #6F6E09;
-}
+} */
 
 .light-green {
   color: #E0DFAC;
