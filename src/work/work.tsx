@@ -42,16 +42,16 @@ export default function Work() {
   return (
     <div className="flex flex-col">
       {/* GREETING */}
-      <div className="flex flex-wrap gap-[2.5rem] items-start mt-[8.5rem] mb-[12rem] self-center">
+      <div className="flex flex-wrap gap-[2.5rem] items-start mt-[7.5rem] mb-[12rem] self-center">
         <img src="images/website-assets/notion_face.png" className="mt-[1.5rem] w-[8rem] object-contain" />
-        <div className="w-[42rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[3vh]">
+        <div className="w-[42rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[1.5rem]">
           <p className="green caption tracking-[-0.25px] mb-[-0.5rem]">● Incoming @ Apple, summer 2026  |  seeking fall 2026 co-op opportunity</p>
-          <h1 className="tracking-[-0.3px]">
-            Hi, I'm Rebecca.<br />
-            <span className="gray">A developer-turned-designer shaping digital experiences with clarity and craft.</span>
-          </h1>
-          {/* <h4 className=" mt-[-0.5vh] dark-green">Incoming Design @ Apple, Summer 2026  |  Seeking Fall 2026 co-op</h4> */}
-          <div className="flex flex-wrap gap-[0.5rem]">
+          <div className="flex flex-col gap-[0.25rem]">
+            <h1 className="tracking-[-0.3px]">Hi, I'm Rebecca.</h1>
+            <h3 className="tracking-[-0.2px] gray">A developer-turned designer shaping digital experiences with clarity and craft.
+            </h3>
+          </div>
+          <div className="flex flex-wrap gap-[0.5rem] mt-[-0.5rem]">
             <HoverButton path="/background" buttonText="Read about my work background" hoverText="What are my design principles? Why tech + design? How did I get here??" />
             <HoverButton path="/about#contacts" buttonText="Contact me" hoverText="Email, phone, LinkedIn..." />
           </div>
