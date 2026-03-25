@@ -31,7 +31,6 @@ export default function FloatingNav({ sections }: { sections: section[] }) {
         return () => observer.disconnect();
     }, [sections]);
 
-
     return (
         <div className="floating-nav group">
             {sections.map((section) => (

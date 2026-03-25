@@ -1,4 +1,3 @@
-import "./background.css";
 import Pill from "components/pill";
 
 export default function Background() {

@@ -6,11 +6,10 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Work from "./work/work"
 import Misc from "./misc/misc"
-import Background from "background/background";
-import Resume from "./resume/resume";
+import Background from "background";
 import About from "./about/about";
-import NavBar from "./navigation/nav"
-import Footer from "./footer/footer";
+import NavBar from "./nav"
+import Footer from "./footer";
 
 import Rockumentary from './projects/rockumentary';
 import SnakebiteResponse from "./projects/snakebite-response"
@@ -35,7 +34,6 @@ export default function App() {
           <Route path="/" element={<Work />} />
           <Route path="/misc" element={<Misc />} />
           <Route path="/background" element={<Background />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<About />} />
 
           <Route path="/rockumentary" element={<Rockumentary />} />
