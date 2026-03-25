@@ -1,6 +1,5 @@
 import { misc } from "database";
 import { MiscProj } from "misc/misc-proj";
-import Tag from "./tag";
 
 export default function MiscModal({ project }: { project: MiscProj }) {
     return (

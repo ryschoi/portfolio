@@ -1,7 +1,7 @@
 import { misc } from "../database";
 import MiscCard from "../components/misc-card";
 import { useState } from "react";
-import Tag from "components/tag";
+import Pill from "components/pill";
 
 export default function Misc() {
     const [selectedTag, setSelectedTag] = useState<string | null>(null);
@@ -33,7 +33,7 @@ export default function Misc() {
                             <div
                                 key={tag}
                                 onClick={() => setSelectedTag((prev) => (prev === tag ? null : tag))}>
-                                <Tag text={tag} hover={true} clicked={isSelected} />
+                                <Pill text={tag} hover={true} clicked={isSelected} />
                             </div>
                         );
                     })}
