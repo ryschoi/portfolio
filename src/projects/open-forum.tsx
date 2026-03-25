@@ -3,10 +3,10 @@ import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
 import SectionHeader from "components/section-header";
-import Tag from "components/tag";
 import { section } from "./section";
 import FloatingNav from "components/floating-nav";
 import Collapsible from "components/collapsible";
+import Pill from "components/pill";
 
 export default function OpenForum() {
     const thisProject = projects.find(p => p.path === "/open-forum");
@@ -119,7 +119,7 @@ export default function OpenForum() {
                             {/* <h3 className="">Online social platforms are commonly used by clubs and organizations for big-group communication or for existing relationships and are not ideal for forming new connections.</h3> */}
                         </div>
                         {/* <ImageModal src="images/work/open-forum/g2-affinity-diagram.png" alt="" /> */}
-                        {/* <div className="rounded w-full flex place-content-center py-[4vw]">
+                        {/* <div className="round w-full flex place-content-center py-[4vw]">
                             <img src="images/work/open-forum/g2-affinity-diagram.png" alt="" className="w-[30rem] max-w-[84vw]" />
                         </div> */}
                         <div className="gray-full-container">
@@ -130,8 +130,8 @@ export default function OpenForum() {
                                         <h3>Structured and interested-based social spaces are reported more effective methods of socializing</h3>
                                         <p>Almost all the students we interviewed mentioned meeting friends either from clubs or other public activities like intramural sports.</p>
                                         {/* <div className="flex gap-[0.25rem] mt-[0.5rem]">
-                                            <Tag text="Organized social events" hover={false} clicked={true} />
-                                            <Tag text="Interest-based" hover={false} clicked={true} />
+                                            <Pill text="Organized social events" hover={false} clicked={true} />
+                                            <Pill text="Interest-based" hover={false} clicked={true} />
                                         </div> */}
                                     </div>
                                     <div className="flex flex-col gap-[0.5rem]">
@@ -181,11 +181,11 @@ export default function OpenForum() {
                                     <p>A platform that organizes open discussions on current events, hot takes, etc. Students can submit petitions and people will be able to express interest and show up either to participate or just listen.</p>
                                     <p>Encourages sharing interests / opinions by inviting people passionate about the same topics and provides a casual environment for people to talk and meet new people.</p>
                                     <div className="flex flex-wrap gap-[0.5rem] mt-[1rem]">
-                                        <Tag text="Organized social events" hover={false} clicked={true} />
-                                        <Tag text="Busy-schedule compatible" hover={false} clicked={true} />
-                                        <Tag text="New connections" hover={false} clicked={true} />
-                                        <Tag text="Existing relationships" hover={false} clicked={true} />
-                                        <Tag text="Interest-based" hover={false} clicked={true} />
+                                        <Pill text="Organized social events" hover={false} clicked={true} />
+                                        <Pill text="Busy-schedule compatible" hover={false} clicked={true} />
+                                        <Pill text="New connections" hover={false} clicked={true} />
+                                        <Pill text="Existing relationships" hover={false} clicked={true} />
+                                        <Pill text="Interest-based" hover={false} clicked={true} />
                                     </div>
                                 </div>
                                 <div className="flex flex-col gap-[1rem]">
@@ -193,11 +193,11 @@ export default function OpenForum() {
                                     <p>A platform that sets you up with a random group of people and a day/time to meet up each week. Takes in weekly availability and forms groups based on availability and loosely based on interests.</p>
                                     <p>Helps with the struggle with time constraints by finding people with matching weekly availabilities, encouraging consistent meetups.</p>
                                     <div className="flex flex-wrap gap-[0.5rem] mt-[1rem]">
-                                        <Tag text="Organized social events" hover={false} clicked={true} />
-                                        <Tag text="Busy-schedule compatible" hover={false} clicked={true} />
-                                        <Tag text="New connections" hover={false} clicked={true} />
-                                        <Tag text="Existing relationships" hover={false} clicked={false} />
-                                        <Tag text="Interest-based" hover={false} clicked={false} />
+                                        <Pill text="Organized social events" hover={false} clicked={true} />
+                                        <Pill text="Busy-schedule compatible" hover={false} clicked={true} />
+                                        <Pill text="New connections" hover={false} clicked={true} />
+                                        <Pill text="Existing relationships" hover={false} clicked={false} />
+                                        <Pill text="Interest-based" hover={false} clicked={false} />
                                     </div>
                                 </div>
                             </div>
@@ -215,16 +215,16 @@ export default function OpenForum() {
                 <div id="design" className="section">
                     <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />
                     <p className="w-slim">Below is a high-fidelity prototype of our app that I created in Figma.</p>
-                    <div className="img-bg rounded flex align-center justify-center w-full mb-[0.5rem]">
+                    <div className="img-bg round flex align-center justify-center w-full mb-[0.5rem]">
                         <div className="self-center my-[4vw]">
-                            <video autoPlay loop playsInline muted className="w-[20vw] min-w-[20rem] rounded-[3rem]">
+                            <video autoPlay loop playsInline muted className="w-[20vw] min-w-[20rem] round-[3rem]">
                                 <source src="images/work/open-forum/open-forum-video.mov" type="video/mp4" />
                             </video>
                         </div>
                     </div>
                     <div className="half-grid-full">
                         <div className="flex flex-col">
-                            <div className="bg-[#1e1e1e] rounded flex place-content-center">
+                            <div className="bg-[#1e1e1e] round flex place-content-center">
                                 <div className="self-center my-[6vw]">
                                     <img src="images/work/open-forum/messages.png" alt="" className="w-[32vw] min-w-[330px] dark-shadow" />
                                 </div>
@@ -232,7 +232,7 @@ export default function OpenForum() {
                             <p className="caption cap-top">Error prevention and feedback messages</p>
                         </div>
                         <div className="flex flex-col">
-                            <div className="bg-[#1e1e1e] rounded flex place-content-center">
+                            <div className="bg-[#1e1e1e] round flex place-content-center">
                                 <div className="self-center my-[4.3vw]">
                                     <img src="images/work/open-forum/tags.png" alt="" className="w-[14vw] min-w-[200px]" />
                                 </div>

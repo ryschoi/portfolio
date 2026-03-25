@@ -1,3 +1,4 @@
+import './index.css'
 import ResetScroll from "./reset-scroll"
 import ScrollToTopButton from "components/scroll-top";
 import ProcessButton from "components/process-button";
@@ -20,8 +21,8 @@ import Radien from "./projects/radien";
 import Cooper from "./projects/cooper"
 import OpenForum from "./projects/open-forum";
 import AliHacks from "./projects/ali-hacks";
-import BostonBeer from "projects/bostonbeer";
-import PortfolioWebsite from "projects/portfolio";
+import BostonBeer from "./projects/bostonbeer";
+import PortfolioWebsite from "./projects/portfolio";
 
 
 export default function App() {

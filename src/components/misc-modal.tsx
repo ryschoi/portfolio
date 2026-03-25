@@ -4,7 +4,7 @@ import Tag from "./tag";
 
 export default function MiscModal({ project }: { project: MiscProj }) {
     return (
-        <div className="dark-bg rounded">
+        <div className="dark-bg round">
             <div className="flex flex-col mx-[1.5rem] my-[2rem]">
                 {/* TEXT & TAGS */}
                 <div className="frosted-2 m-[1rem] flex justify-between w-full">

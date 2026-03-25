@@ -4,8 +4,7 @@ import { projects } from "../database";
 import "../index.css";
 import "./work.css";
 import WorkCard from "./work-card";
-import Tag from "../components/tag";
-import HoverButton from "components/hover-button";
+import Pill from "components/pill";
 
 export default function Work() {
   const location = useLocation();
@@ -46,14 +45,14 @@ export default function Work() {
         <img src="images/website-assets/notion_face.png" className="mt-[1.5rem] w-[8rem] object-contain" />
         <div className="w-[42rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[1.5rem]">
           <p className="green caption tracking-[-0.25px] mb-[-0.5rem]">● Incoming @ Apple, summer 2026  |  seeking fall 2026 co-op opportunity</p>
-          <div className="flex flex-col gap-[0.25rem]">
+          <div className="flex flex-col gap-[0.25rem] md:bg-red-600">
             <h1 className="tracking-[-0.3px]">Hi, I'm Rebecca.</h1>
             <h3 className="tracking-[-0.2px] gray">A developer-turned designer shaping digital experiences with clarity and craft.
             </h3>
           </div>
           <div className="flex flex-wrap gap-[0.5rem] mt-[-0.5rem]">
-            <HoverButton path="/background" buttonText="Read about my work background" hoverText="What are my design principles? Why tech + design? How did I get here??" />
-            <HoverButton path="/about#contacts" buttonText="Contact me" hoverText="Email, phone, LinkedIn..." />
+            <Pill hover={true} clicked={false} path="/background" text="Read about my work background" tooltip="What are my design principles? Why tech + design? How did I get here??" />
+            <Pill hover={true} clicked={false} path="/about#contacts" text="Contact me" tooltip="Email, phone, LinkedIn..." />
           </div>
         </div>
       </div>
@@ -69,13 +68,13 @@ export default function Work() {
               key={tag}
               onClick={() => setSelectedTag((prev) => (prev === tag ? null : tag))}
               className="flex items-center gap-[0.5rem]">
-              <Tag hover={true} clicked={isSelected}>
+              <Pill hover={true} clicked={isSelected}>
                 {tag} <span className={`text-[0.85rem] ${isSelected ? "light-gray" : "gray"}`}>{count}</span>
-              </Tag>
+              </Pill>
             </div>
           );
         })}
-        <button onClick={() => setSelectedTag(null)} id="clear-filters" className="gray hover-underline">Clear filters</button>
+        <button onClick={() => setSelectedTag(null)} id="clear-filters" className="ml-[0.5rem] gray hover-underline">Clear filters</button>
       </div>
 
       {/* WORK CARDS */}
@@ -98,7 +97,7 @@ export default function Work() {
               .map((tag) => {
                 const isSelected = selectedTag === tag;
                 return (
-                  <Tag key={tag} text={tag} hover={true} clicked={isSelected} />
+                  <Pill key={tag} text={tag} hover={true} clicked={isSelected} />
                 );
               })
           )}

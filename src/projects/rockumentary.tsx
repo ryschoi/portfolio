@@ -25,7 +25,7 @@ export default function Rockumentary() {
                     <div className="flex flex-col gap-[1rem]">
                         <TwoImageCaptionRock path1="/images/work/rockumentary/rockumentary sketches.png" cap1="Hand-traced on my ipad" path2="/images/work/rockumentary/rock_writing.png" cap2="Potential title text" />
                         <div className="flex flex-col w-full">
-                            <div className="img-bg rounded flex align-center justify-center w-full">
+                            <div className="img-bg round flex align-center justify-center w-full">
                                 <div className="self-center my-[3rem]">
                                     <img src="/images/work/rockumentary/rock_ver1.jpg" alt="" className="h-[30rem] subtle-shadow" />
                                 </div>
@@ -40,7 +40,7 @@ export default function Rockumentary() {
                     <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
                     <div className="flex flex-row gap-[0.5rem] w-full">
                         <div className="flex flex-col w-1/3">
-                            <div className="img-bg rounded flex align-center justify-center">
+                            <div className="img-bg round flex align-center justify-center">
                                 <div className="self-center my-[3rem] subtle-shadow flex flex-wrap gap-[2rem]">
                                     <img src="/images/work/rockumentary/rock_corner.png" alt="" className="object-contain crop-image w-[24vw]" />
                                 </div>
@@ -48,7 +48,7 @@ export default function Rockumentary() {
                             <p className="caption cap-top">the grain is subtle but adds dimension and softens the blocky text</p>
                         </div>
                         <div className="flex flex-col w-2/3">
-                            <div className="img-bg rounded flex align-center justify-center">
+                            <div className="img-bg round flex align-center justify-center">
                                 <div className="self-center my-[3rem] subtle-shadow flex flex-wrap gap-[2rem]">
                                     <img src="/images/work/rockumentary/rock_comp_seb.png" alt="" className="object-contain crop-image w-[24vw]" />
                                     <img src="/images/work/rockumentary/rock_comp_real.png" alt="" className="object-contain w-[24vw]" />

@@ -30,7 +30,7 @@ export default function SnakebiteData() {
 
                     {/* FIRST DRAFT */}
                     <h4 className="gray w-slim">The first iteration of the poster prompted changes being needed surrounding choosing the right type of visualizations to use and refining the visual style.</h4>
-                    <div className="w-slim img-bg rounded flex place-content-center p-[4vw] box-border">
+                    <div className="w-slim img-bg round flex place-content-center p-[4vw] box-border">
                         <img src="/images/work/snakebite-data/first-crit-feedback.png" alt="" className="self-center subtle-shadow w-full" />
                     </div>
                 </div>
@@ -43,7 +43,7 @@ export default function SnakebiteData() {
                     </div>
 
                     <div className="work-img-group-col">
-                        <div className="rounded flex flex-col gap-[1.25rem] box-border">
+                        <div className="round flex flex-col gap-[1.25rem] box-border">
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
                                 <img src="/images/work/snakebite-data/s-data-bars.png" alt="" className="" />
                             </div>
@@ -52,7 +52,7 @@ export default function SnakebiteData() {
                                 <p>Arbitrary bar sizes–only takeaway is the difference value and the general size difference</p>
                             </div>
                         </div>
-                        <div className="rounded flex flex-col gap-[1.25rem] box-border">
+                        <div className="round flex flex-col gap-[1.25rem] box-border">
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
                                 <img src="/images/work/snakebite-data/s-data-sun.png" alt="" className="max-h-[15rem] self-center" />
                             </div>
@@ -61,7 +61,7 @@ export default function SnakebiteData() {
                                 <p>Illustrations showed what the climates might look like, but the visuals were also arbitrarily-sized and therefore not very informative</p>
                             </div>
                         </div>
-                        <div className="rounded flex flex-col gap-[1.25rem] box-border">
+                        <div className="round flex flex-col gap-[1.25rem] box-border">
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
                                 <img src="/images/work/snakebite-data/s-data-circles.png" alt="" className="max-h-[15rem] self-center" />
                             </div>
@@ -73,7 +73,7 @@ export default function SnakebiteData() {
                     </div>
 
                     {/* <div className="work-img-group-col">
-                        <div className="img-bg rounded flex flex-col p-[1.5rem] box-border">
+                        <div className="img-bg round flex flex-col p-[1.5rem] box-border">
                             <div className="work-add-img-cont p-[1rem] box-border h-[20rem]">
                                 <img src="/images/work/snakebite-data/s-data-bars.png" alt="" className="subtle-shadow" />
                             </div>
@@ -82,7 +82,7 @@ export default function SnakebiteData() {
                                 <p>Arbitrary bar sizes–only takeaway is the difference value and the general size difference</p>
                             </div>
                         </div>
-                        <div className="img-bg rounded flex flex-col p-[1.5rem] box-border">
+                        <div className="img-bg round flex flex-col p-[1.5rem] box-border">
                             <div className="work-add-img-cont p-[1rem] box-border h-[20rem]">
                                 <img src="/images/work/snakebite-data/s-data-sun.png" alt="" className="subtle-shadow max-h-[15rem] self-center" />
                             </div>
@@ -91,7 +91,7 @@ export default function SnakebiteData() {
                                 <p>Illustrations showed what the climates might look like, but the visuals were also arbitrarily-sized and therefore not very informative</p>
                             </div>
                         </div>
-                        <div className="img-bg rounded flex flex-col p-[1.5rem] box-border thick-light-border">
+                        <div className="img-bg round flex flex-col p-[1.5rem] box-border thick-light-border">
                             <div className="work-add-img-cont p-[1rem] box-border h-[20rem]">
                                 <img src="/images/work/snakebite-data/s-data-circles.png" alt="" className="subtle-shadow max-h-[15rem] self-center" />
                             </div>

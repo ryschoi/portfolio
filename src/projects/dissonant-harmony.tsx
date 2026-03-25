@@ -32,12 +32,12 @@ export default function DissonantHarmony() {
                 <div className="section align-center" id="type">
                     <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
                     <div className="flex flex-row gap-[0.5rem]">
-                        <div className="calder-bg rounded flex place-content-center w-3/5">
+                        <div className="calder-bg round flex place-content-center w-3/5">
                             <div className="self-center my-[1rem]">
                                 <img src="/images/work/calder/calder_type-06.png" alt="" className="h-[18vw]" />
                             </div>
                         </div>
-                        <div className="calder-bg rounded flex place-content-center w-full">
+                        <div className="calder-bg round flex place-content-center w-full">
                             <div className="self-center my-[1rem]">
                                 <img src="/images/work/calder/calder_type-07.png" alt="" className="h-[18vw]" />
                             </div>
@@ -57,7 +57,7 @@ export default function DissonantHarmony() {
                 <div className="section align-center" id="a1-size-poster">
                     <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />
                     <div className="flex flex-col w-slim">
-                        <div className="rounded img-bg w-full flex align-center justify-center py-[4rem]">
+                        <div className="round img-bg w-full flex align-center justify-center py-[4rem]">
                             <img src="images/work/calder/calder-a1-markup.png" alt="" className="w-[36rem] max-w-[84vw]" />
                         </div>
                         <p className="caption cap-top">a pervious a1 poster version</p>
@@ -77,7 +77,7 @@ export default function DissonantHarmony() {
                     <SectionHeader title={sections[4].header} description={sections[4].description} optional={sections[4].optional} />                    
                     <p className="w-slim">I thought this made the most sense as while the poster could be meant to spark intrigue for the viewers, the flyer would be held at the museum, and therefore showing the actual artwork could help museum visitors know what to keep an eye out for. Furthermore, if museum goers had seen the poster before the flyer (or vice versa), it could help them make the connection of the deeper meaning behind the artwork, having seen the structure both constructed and deconstructed.</p>
                     <div className="flex flex-col w-full">
-                        <div className="img-bg rounded flex place-content-center w-full">
+                        <div className="img-bg round flex place-content-center w-full">
                             <div className="self-center my-[3rem] subtle-shadow flex flex-wrap gap-[4rem] place-content-center">
                                 <img src="/images/work/calder/calder_a5_front.png" alt="" className="w-[24vw] min-w-[332px]" />
                                 <img src="/images/work/calder/calder_a5_back.png" alt="" className="w-[24vw] min-w-[332px]" />

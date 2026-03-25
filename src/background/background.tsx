@@ -1,11 +1,12 @@
 import "./background.css";
+import Pill from "components/pill";
 
 export default function Background() {
     return (
         <div className="flex justify-center w-full">
             <div className="flex flex-col gap-[4rem] w-slim">
-                <div className="flex flex-col gap-[1.25rem]">
-                    <button className="plain-tag self-center subtle-shadow">Work background & philosophy</button>
+                <div className="flex flex-col gap-[1.25rem] items-center">
+                    <Pill hover={false} clicked={false} text="Work background & philosophy" />
                     <h1 className="text-center callout w-9.5/10 self-center serif">Highly detail-oriented and intentional from concept to execution</h1>
                     <p className="gray text-center">I use my analytical skills and sensitivity to usability in human-computer interactions to create meaningful and useful products. However, at the core, I am just a thinker and am always trying to understand how things work.</p>
                 </div>

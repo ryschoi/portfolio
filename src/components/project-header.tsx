@@ -1,7 +1,7 @@
 import { Project } from "../projects/project";
-import Tag from "./tag";
 import ProcessBox from "./process";
 import { section } from "projects/section";
+import Pill from "./pill";
 
 export default function ProjectHeader({ project, sections }: { project: Project, sections: section[] }) {
     return (
@@ -12,13 +12,13 @@ export default function ProjectHeader({ project, sections }: { project: Project,
                 <p className="caption">{project.name}, {project.year}</p>
                 <div className="flex gap-[0.5rem] tag-position-2 mt-[0.5rem]">
                     {project.tags.map((tag) => (
-                        <Tag text={tag} hover={false} clicked={true} />
+                        <Pill text={tag} hover={false} clicked={true} />
                     ))}
                 </div>
             </div>
 
             {/* IMAGE */}
-            <div className="rounded img-bg w-full flex align-center justify-center py-[3vw]">
+            <div className="round img-bg w-full flex align-center justify-center py-[3vw]">
                 < img src={project.frontImage} alt="" className={project.vertical === true ? "w-[26rem] max-w-[85vw] subtle-shadow" : "w-[44rem] max-w-[85vw] subtle-shadow"} />
                 {/* {project.id === 13 ? (
                     <video autoPlay loop playsInline muted src="images/work/alihacks/full_proto.mov"

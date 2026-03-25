@@ -2,10 +2,9 @@ import "./about.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
-import Tag from "../components/tag";
-import HoverButton from "components/hover-button";
 import TagCursor from "components/tag-cursor";
 import SlideImg from "components/slide-img";
+import Pill from "components/pill";
 
 export default function About() {
   const { hash } = useLocation();
@@ -46,9 +45,9 @@ export default function About() {
     return (
       <div className="relative group">
         <button onClick={handleCopy}
-          className="tag py-[6px] px-[16px] rounded transition">{text}
+          className="tag py-[6px] px-[16px] round transition">{text}
         </button>
-        <div className="absolute bottom-full mb-[0.5rem] left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.88rem] rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 gray">
+        <div className="absolute bottom-full mb-[0.5rem] left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.88rem] round opacity-0 group-hover:opacity-100 transition-opacity duration-200 gray">
           {tooltip}
         </div>
       </div>
@@ -92,21 +91,21 @@ export default function About() {
             About me
             <br />
             <span className="gray h3">
-              Apart from my <HoverButton path="/" buttonText="Work" hoverText="Collection of projects that captures the full breadth of my interests" onClick={handleWorkClick} /> and <HoverButton path="/background" buttonText="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
+              Apart from my <Pill path="/" text="Work" tooltip="Collection of projects that captures the full breadth of my interests" onClick={handleWorkClick} hover={true} clicked={false} /> and <Pill path="/background" text="Work background / philosophy" tooltip="What are my design principles? Why CS & Design? How did I get here??" hover={true} clicked={false} />
             </span>
           </h2>
 
-          <div className="relative rounded flex align-center justify-center overflow-hidden">
+          <div className="relative round flex align-center justify-center overflow-hidden">
             <div className="my-[3vw]">
               <img src="images/website-assets/denby_headshot_cropped.jpg"
                 alt=""
-                className="rounded w-[20rem] max-w-[85vw] smaller-shadow object-cover"
+                className="round w-[20rem] max-w-[85vw] smaller-shadow object-cover"
               />
             </div>
           </div>
 
           <br />
-          <button onClick={() => handleScroll("contacts")} className="hover-tag">↓ Contact & links</button>
+          <Pill hover={true} clicked={false} text="↓ Contact & links" onClick={() => handleScroll("contacts")} />
         </div>
 
         <hr />
@@ -136,16 +135,16 @@ export default function About() {
           {/* IMAGES */}
           {/* <div className="work-img-group-col">
             <div className="flex flex-col">
-              <img className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/nara.png" />
+              <img className="w-full h-[15vw] min-h-[25vh] object-cover round" src="images/nara.png" />
               <p className="caption cap-top">My dog, Nara</p>
             </div>
             <div className="flex flex-col">
-              <img className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/arboretum wide.jpg" />
+              <img className="w-full h-[15vw] min-h-[25vh] object-cover round" src="images/arboretum wide.jpg" />
               <p className="caption cap-top">Trees!</p>
             </div>
           </div> */}
           {/* <>
-            <img className="tag-img rounded" src="images/nara.png"
+            <img className="tag-img round" src="images/nara.png"
               style={{ cursor: "none" }}
               onMouseMove={(e: React.MouseEvent<HTMLImageElement>) => handleMove(e)}
               onMouseEnter={(e: React.MouseEvent<HTMLImageElement>) => handleMove(e)}
@@ -190,9 +189,9 @@ export default function About() {
           <div className="flex gap-[1rem] items-center">
             <p className="caption">Links</p>
             <div className="flex flex-wrap gap-[0.8rem]">
-              <a href="https://www.linkedin.com/in/ryschoi/"><Tag text="LinkedIn" hover={true} clicked={false} /></a>
-              <a href="https://github.com/ryschoi"><Tag text="GitHub" hover={true} clicked={false} /></a>
-              <a href="images/Rebecca_Choi_Resume.pdf"><Tag text="Resume" hover={true} clicked={false} /></a>
+              <Pill path="https://www.linkedin.com/in/ryschoi/" text="LinkedIn" hover={true} clicked={false} />
+              <Pill path="https://github.com/ryschoi" text="GitHub" hover={true} clicked={false} />
+              <Pill path="images/Rebecca_Choi_Resume.pdf" text="Resume" hover={true} clicked={false} />
             </div>
           </div>
         </div>

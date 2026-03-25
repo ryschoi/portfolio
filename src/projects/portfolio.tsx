@@ -23,7 +23,7 @@ export default function PortfolioWebsite () {
                     <div className="flex flex-col w-full gap-[0.5rem]">
                         <div className="w-full ali-bg work-add-img-cont">
                             <div className="self-center my-[3rem]">
-                                <video autoPlay loop playsInline muted className="w-[60rem] max-w-[85vw] subtle-shadow rounded">
+                                <video autoPlay loop playsInline muted className="w-[60rem] max-w-[85vw] subtle-shadow round">
                                     <source src="images/work/alihacks/full_proto.mov" type="video/mp4" />
                                 </video>
                             </div>
@@ -38,7 +38,7 @@ export default function PortfolioWebsite () {
                             </div>
                             <div className="ali-bg work-add-img-cont">
                                 <div className="self-center my-[3rem]">
-                                    <video autoPlay loop playsInline muted className="w-[30vw] min-w-[18rem] subtle-shadow rounded">
+                                    <video autoPlay loop playsInline muted className="w-[30vw] min-w-[18rem] subtle-shadow round">
                                         <source src="images/work/alihacks/dropdown.mov" type="video/mp4" />
                                     </video>
                                 </div>

@@ -2,16 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://vetrivelcsamy.github.io/cheltenham-classic/cheltenhamclassic.css');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* @font-face {
-  font-family: 'Universal Sans';
-  src: url('/fonts/Universal-Sans-Display-450-Trial.ttf') format('truetype');
-  font-style: normal;
-  font-display: swap;
-} */
+@import "tailwindcss";
+@source "./**/*.{js,ts,jsx,tsx}";
 
 @theme {
   --color-green: oklch(0.7163 0.1533 108.86);
@@ -66,11 +58,13 @@
   color: var(--color-black);
 }
 
-* {
-  font-family: 'Hanken Grotesk', sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1;
-  margin: 0;
-  color: var(--color-black);
+@layer base {
+  * {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    margin: 0;
+    color: var(--color-black);
+  }
 }
 
 body {
@@ -182,7 +176,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.rounded {
+.round {
   border-radius: 0.5rem;
 }
 
@@ -206,7 +200,7 @@ a:hover {
   color: var(--color-black);
 }
 
-.border {
+.border-reg {
   border: 2px solid var(--color-black);
 }
 
@@ -252,10 +246,6 @@ a:hover {
   color: #0b69ac;
 }
 
-/* .dark-green {
-  color: #6F6E09;
-} */
-
 .light-green {
   color: #E0DFAC;
 }
@@ -271,32 +261,52 @@ button {
   font-size: 0.85rem;
 }
 
-.tag,
-.tag-no-hover {
+.pill {
   background-color: var(--color-tag-bg);
   color: var(--color-black);
   border: 1.5px solid var(--color-gray-stroke);
-  border-radius: 1rem;
+  border-radius: 10rem;
   position: relative;
   top: 0;
   padding: 6px 16px;
   transition: top ease 0.5s;
 }
 
+.pillText {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  height: fit-content;
+  font-weight: 450;
+}
+
+.tag,
+.tag-no-hover {
+  background-color: var(--color-tag-bg);
+  color: var(--color-black);
+  border: 1.5px solid var(--color-gray-stroke);
+  border-radius: 20rem;
+  position: relative;
+  top: 0;
+  padding: 6px 16px;
+  transition: top ease 0.5s;
+  line-height: 1.4;
+}
+
 .tag:hover {
   background-color: var(--color-tag-hover);
   color: var(--color-black);
   border: 1.5px solid var(--color-gray-stroke);
-  border-radius: 1rem;
   cursor: pointer;
   top: -3px;
+  line-height: 1.4;
 }
 
 .tag-clicked {
   background-color: var(--color-black);
   color: #ffffff;
   border: 1.5px solid var(--color-black);
-  border-radius: 1rem;
+  border-radius: 20rem;
+  line-height: 1.4;
 }
 
 hr {

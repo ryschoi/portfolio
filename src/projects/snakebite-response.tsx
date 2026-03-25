@@ -26,7 +26,7 @@ export default function snakebiteResponse() {
                     {/* <Collapsible closedText="What I Do" content={<p className="italic gray">Wurman's L.A.T.C.H.: location, alphabet, time, category, hierarchyWurman's L.A.T.C.H.: location, alphabet, time, category, hierarchyWurman's L.A.T.C.H.: location, alphabet, time, category, hierarchy</p>} /> */}
 
                     {/* <div className="w-slim">
-                        <img src="images/work/snakebite-response/headers.png" className="rounded w-full max-w-[90vw]" />
+                        <img src="images/work/snakebite-response/headers.png" className="round w-full max-w-[90vw]" />
                         <p className="caption">Headers in the final poster</p>
                     </div> */}
                 </div>
@@ -34,16 +34,16 @@ export default function snakebiteResponse() {
                 <div className="section" id="poster-and-concept-design">
                     <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
                     <div className="flex flex-col w-fit w-slim">
-                        <div className="rounded img-bg flex place-content-center py-[4vw]">
+                        <div className="round img-bg flex place-content-center py-[4vw]">
                             <img src="images/work/snakebite-response/snakebite_first.png" alt="" className="w-[24rem] max-w-[84vw] subtle-shadow" />
                         </div>
                         <p className="caption cap-top">First version</p>
                     </div>
-                    <div className="rounded img-bg w-full flex place-content-center py-[2vw] w-full">
+                    <div className="round img-bg w-full flex place-content-center py-[2vw] w-full">
                         <img src="images/work/snakebite-response/s-res-ver1-table.png" alt="" className="w-[65rem] max-w-[90vw]" />
                     </div>
                     <div className="flex flex-col w-full">
-                        <div className="rounded img-bg flex place-content-center py-[4vw]">
+                        <div className="round img-bg flex place-content-center py-[4vw]">
                             <img src="images/work/snakebite-response/snakebitePrevention.png" alt="" className="h-[36vw] max-w-[84vw] subtle-shadow" />
                         </div>
                         <p className="caption cap-top">Final version</p>
@@ -53,7 +53,7 @@ export default function snakebiteResponse() {
 
                 <div className="section" id="wallet-cards">
                     <SectionHeader title={sections[2].header} description={sections[2].description} optional={sections[2].optional} />
-                    <div className="rounded sres-bg w-full flex place-content-center">
+                    <div className="round sres-bg w-full flex place-content-center">
                         <div className="grid grid-flow-col grid-rows-3 gap-[2vw] my-[4vw]">
                             <img src="images/work/snakebite-response/snakebiteWallet1.png" alt="" className="w-[25rem] max-w-[38vw]" />
                             <img src="images/work/snakebite-response/snakebiteWallet3.png" alt="" className="w-[25rem] max-w-[38vw]" />
@@ -64,7 +64,7 @@ export default function snakebiteResponse() {
                         </div>
                     </div>
                     <div className="flex flex-col w-full">
-                        <div className="rounded img-bg w-full flex place-content-center py-[4vw]">
+                        <div className="round img-bg w-full flex place-content-center py-[4vw]">
                             <img src="images/work/snakebite-response/snakebiteWalletVersions.png" alt="" className="w-[50rem] max-w-[84vw] subtle-shadow" />
                         </div>
                         <p className="caption cap-top">Previous versions in print form</p>
