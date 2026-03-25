@@ -127,8 +127,8 @@ export default function About() {
 
         {/* OTHER THINGS */}
         <div className="flex flex-col gap-[1.5rem]">
-          <h4 className="">
-            <span className="font-[400]">Some things that keep me going:</span> walks around the city, baking & recipe testing, bass guitar, kombucha, spontaneous changes to this website, and my dog<br />
+          <h4 className="font-[375]">
+            <span className="font-[375]">Some things that keep me going:</span> testing new baking & cooking recipes, playing the bass guitar, exploring different parts of Boston, kombucha, spontaneous changes to this website, and my dog<br />
             {/* Pet peeves: custom cursors, inefficiency */}
             {/* Dislikes: custom cursors */}
           </h4>

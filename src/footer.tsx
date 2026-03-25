@@ -36,10 +36,10 @@ export default function Footer() {
             <div className="flex flex-wrap justify-between items-start gap-y-[3.5rem]">
                 {/* Left side */}
                 <div className="flex flex-col gap-[3vw]">
-                    <Link to="/" onClick={() => handleClick('/')}>Rebecca Choi</Link>
+                    <Link to="/" onClick={() => handleClick('/')} className="font-[350]">Rebecca Choi</Link>
                     <div>
                         <p className="caption">Coded and designed by me ◡̈</p>
-                        <p className="caption">Last updated: Jan 2026</p>
+                        <p className="caption">Last updated: Mar 2026</p>
                     </div>
                 </div>
 

@@ -14,7 +14,7 @@ export default function SnakebiteData() {
         { id: "data-collection-and-engineering", header: "Data collection and engineering", description: "Gather data sets and create preliminary data visualizations", optional: "I got various data sets of climate conditions from Our World in Data. In Excel, I cleaned them up so I could work with them in one workbook, and then created initial visualizations (that I later moved to Illustrator)." },
         { id: "data-visualization", header: "Data visualization", description: "Establishing a clear visual language and data story", optional: "In Illustrator, I not only edited individual visualizations, creating one consistent look for the poster, but I also had to make sure that each of the visualizations, once pieced together, told one cohesive story." },
         { id: "final-deliverable", header: "Final deliverable", description: "A5-size poster" },
-        { id: "reflection", header: "Reflection", description: "My first data visualization project", optional: "Through this project, I learned that a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but that the data needs to be represented in a language users can read." }
+        { id: "reflection", header: "Reflection", description: "My first data visualization project", optional: "I learned that a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but about representing the data in a language the audience can understand." }
     ];
     return (
         <div className="project-content">
@@ -67,7 +67,7 @@ export default function SnakebiteData() {
                             </div>
                             <div className="flex flex-col gap-[0.15rem] ml-[0.5rem] w-6/7">
                                 <p className="h4">Final version: isotypes</p>
-                                <p>Isotypes being representative of actual proportions of the numbers makes it much easier to tell the values of each measurement and just how much the differences are</p>
+                                <p>Isotypes representative of the actual proportions of the numbers makes it much easier to accurately gauge the values of each measurement</p>
                             </div>
                         </div>
                     </div>
@@ -151,7 +151,7 @@ export default function SnakebiteData() {
                             <h3>Degree of separation</h3>
                             <h3 className="gray">Reducing the time needed to grasp the main message</h3>
                         </div>
-                        <h4 className="gray">For this chart, the challenge was figuring out how to label the boxes in a way that highlighted the large disparity between reported data and reality with the least amount of brain work.</h4>
+                        <h4 className="gray">The challenge with this chart was figuring out how to label the boxes in a way that highlighted the large disparity between reported data and reality with the least amount of brain work.</h4>
                         <br />
                         <Collapsible closedText="Process" content={<p className="">Following Edward Tufte's "degree of separation" scale, a method of determining how accessible labels are to their corresponding data points, I connected the labels directly to the boxes rather than separating them from the boxes entirely. This way, there is less back-and-forth between the boxes and the labels, and the main message of the visualization can be understood at just a glance since all the central points are consolidated in one area.</p>} />
                     </div>
@@ -179,7 +179,10 @@ export default function SnakebiteData() {
                 {/* FINAL */}
                 <div className="section" id="final-deliverable">
                     <SectionHeader title={sections[2].header} description={sections[2].description} />
-                    <VerticalImageSpan path="images/work/snakebite-data/snakebiteData.png" />
+                    {/* <VerticalImageSpan path="images/work/snakebite-data/snakebiteData.png" /> */}
+                    <div className="round img-bg w-full flex place-content-center py-[4vw]">
+                        <img src="images/work/snakebite-data/snakebiteData.png" alt="" className="w-[44rem] max-w-[84vw] subtle-shadow" />
+                    </div>
                 </div>
 
                 <div className="section" id="reflection">
