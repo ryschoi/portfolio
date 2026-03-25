@@ -181,8 +181,8 @@ export default function About() {
           <div className="flex gap-[1rem] items-center">
             <p className="caption">Contact</p>
             <div className="flex flex-wrap gap-[0.8rem]">
-              <CopyButton text="rebecca.choi05@gmail.com" />
-              <CopyButton text="(510) 682-0020" />
+              <Pill copyText="rebecca.choi05@gmail.com" hover={true} clicked={false} />
+              <Pill copyText="(510) 682-0020" hover={true} clicked={false} />
             </div>
           </div>
           {/* LINKS */}
@@ -191,16 +191,10 @@ export default function About() {
             <div className="flex flex-wrap gap-[0.8rem]">
               <Pill path="https://www.linkedin.com/in/ryschoi/" text="LinkedIn" hover={true} clicked={false} />
               <Pill path="https://github.com/ryschoi" text="GitHub" hover={true} clicked={false} />
-              <Pill path="images/Rebecca_Choi_Resume.pdf" text="Resume" hover={true} clicked={false} />
+              <Pill path="../../public/images/Rebecca_Choi_Resume.pdf" text="Resume" hover={true} clicked={false} />
             </div>
           </div>
         </div>
-
-        {/* <p>
-          As someone who is both visionary and rational, I navigate complex problems with discernment and find ways to turn solutions into reality.
-          <br /><br />
-          It's important to me that the projects I work on are meaningful to their users and in the way that they are created. As a designer, this means that I am intentional with all my choices, making sure that whatever I design is easy on the eyes, easy to use, and delivers what the user needs out of the product. As a developer, I focus on scalability, efficiency, and writing clean and maintainable code.
-        </p> */}
       </div>
     </div>
   );

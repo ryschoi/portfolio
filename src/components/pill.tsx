@@ -9,10 +9,12 @@ type PillProps = {
     tooltip?: string;
     path?: string;
     onClick?: () => void;
+    copyText?: string;
 };
 
-export default function Pill({ hover, clicked, text, children, tooltip, path, onClick }: PillProps) {
+export default function Pill({ hover, clicked, text, children, tooltip, path, onClick, copyText }: PillProps) {
     const [isHovering, setIsHovering] = useState(false);
+    const [copyTooltip, setCopyTooltip] = useState("Copy");
 
     const basePadding = "py-[6px] px-[16px]";
 
@@ -24,25 +26,39 @@ export default function Pill({ hover, clicked, text, children, tooltip, path, on
 
     const isExternal = path?.startsWith("http");
 
-    const hoverHandlers = hover
+    const hoverHandlers = hover || copyText
         ? {
             onMouseEnter: () => setIsHovering(true),
             onMouseLeave: () => setIsHovering(false),
         }
         : {};
 
+    const handleClick = copyText
+        ? async () => {
+            try {
+                await navigator.clipboard.writeText(copyText);
+                setCopyTooltip("Copied 📋");
+                setTimeout(() => setCopyTooltip("Copy"), 1500);
+            } catch {
+                setCopyTooltip("Copy failed");
+            }
+        }
+        : onClick;
+
+    const activeTooltip = copyText ? copyTooltip : tooltip;
+
     const content = (
         <div className="relative inline-flex h-fit">
-            <button className={`${pillClass} pillText`} onClick={onClick} {...hoverHandlers}>
-                {text ?? children}
+            <button className={`${pillClass} pillText`} onClick={handleClick} {...hoverHandlers}>
+                {(text || copyText) ?? children}
             </button>
-            {tooltip && isHovering && <p className="tooltip gray">{tooltip}</p>}
+            {activeTooltip && isHovering && <p className={copyText ? "copyTooltip gray" : "tooltip gray"}>{activeTooltip}</p>}
         </div>
     );
 
-    if (path && !onClick) {
+    if (path && !onClick && !copyText) {
         return isExternal
-            ? <a className="inline-flex leading-none h-fit" href={path} target="_blank" rel="noreferrer">{content}</a>
+            ? <a className="inline-flex leading-none h-fit" href={path} target="_blank" rel="noopener noreferrer">{content}</a>
             : <Link className="inline-flex leading-none h-fit" to={path}>{content}</Link>;
     }
 
