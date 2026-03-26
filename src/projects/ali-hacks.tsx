@@ -59,6 +59,7 @@ export default function AliHacks() {
                 </div>
                 <div className="section self-center" id="sponsorship-package">
                     <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
+                    <p className="mt-no-optional w-slim">Many sponsors noted that the design of the sponsorship package was a big reason why they decided to partner with the hackathon!</p>
                     <div className="w-full ali-bg-2 work-add-img-cont overflow-hidden">
                         <div className="my-[2rem] ml-[2.5rem]">
                             <div className="scroll-static">

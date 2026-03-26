@@ -11,7 +11,7 @@ export default function snakebiteResponse() {
     const thisProject = projects.find(p => p.path === "/snakebite-response");
     const sections: section[] = [
         { id: "research", header: "Research", description: "Learning about snakebites, specifically in Africa", optional: "I started off by researching the current state of the snakebite crisis and how one might prevent fatal encounters with snakes, focusing material specific to Botswana or Africa." },
-        { id: "poster-and-concept-design", header: "Concept and poster design", description: "Developing a clean and easily-understandable visual style", optional: "To start off, I put all the information I had onto the poster just to see what it would look like and to determine which direction I should take the poster in. While the design was pretty unsuccessful, it was extremely helpful for quickly determining what I should and shouldn't do in terms of color/style and the structure of the poster." },
+        { id: "poster-and-concept-design", header: "Concept and poster design", description: "Developing a clean and easily-understandable visual style", optional: "" },
         { id: "wallet-cards", header: "Wallet cards", description: "Transferring poster contents into bite-size pieces of information for wallet cards", optional: "After the poster, I created a set of wallet cards with the same content on the poster for people to have a way to access the information more conveniently." },
     ];
     return (
@@ -33,7 +33,8 @@ export default function snakebiteResponse() {
 
                 <div className="section" id="poster-and-concept-design">
                     <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
-                    <div className="flex flex-col w-fit w-slim">
+                    <p className="mt-no-optional w-slim">To start off, I put all the information I had onto the poster just to see what it would look like and to determine which direction I should take the poster in. While the design was pretty unsuccessful, it was extremely helpful for quickly determining what I should and shouldn't do in terms of color/style and the structure of the poster.</p>
+                    <div className="flex flex-col w-full w-slim">
                         <div className="round img-bg flex place-content-center py-[4vw]">
                             <img src="images/work/snakebite-response/snakebite_first.png" alt="" className="w-[24rem] max-w-[84vw] subtle-shadow" />
                         </div>
@@ -43,8 +44,8 @@ export default function snakebiteResponse() {
                         <img src="images/work/snakebite-response/s-res-ver1-table.png" alt="" className="w-[65rem] max-w-[90vw]" />
                     </div>
                     <div className="flex flex-col w-full">
-                        <div className="round img-bg flex place-content-center py-[4vw]">
-                            <img src="images/work/snakebite-response/snakebitePrevention.png" alt="" className="h-[36vw] max-w-[84vw] subtle-shadow" />
+                        <div className="round sres-bg flex place-content-center py-[4vw]">
+                            <img src="images/work/snakebite-response/snakebitePrevention.png" alt="" className="h-[44vw] max-w-[84vw]" />
                         </div>
                         <p className="caption cap-top">Final version</p>
                     </div>

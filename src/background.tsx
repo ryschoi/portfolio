@@ -31,7 +31,7 @@ export default function Background() {
                 <div className="thing">
                     <img src="/images/icons/data_icon.png" className="w-[4rem] mb-[0.75rem] aspect-square" />
                     <h3>Data</h3>
-                    <p>Today, there is no shortage of data. I’m excited by how much information we have access to, and how we can make informed and intentional decisions from it.</p>
+                    <p>Today, there is no shortage of data, and I’m excited by how it can help us make informed and intentional decisions from it.</p>
                 </div>
             </div>
         </div>
