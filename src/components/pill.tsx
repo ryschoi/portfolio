@@ -25,6 +25,7 @@ export default function Pill({ hover, clicked, text, children, tooltip, path, on
     ].join(" ");
 
     const isExternal = path?.startsWith("http");
+    const isFile = path?.match(/\.(pdf|docx|png|jpg|zip)$/i);
 
     const hoverHandlers = hover || copyText
         ? {
@@ -57,7 +58,7 @@ export default function Pill({ hover, clicked, text, children, tooltip, path, on
     );
 
     if (path && !onClick && !copyText) {
-        return isExternal
+        return (isExternal || isFile)
             ? <a className="inline-flex leading-none h-fit" href={path} target="_blank" rel="noopener noreferrer">{content}</a>
             : <Link className="inline-flex leading-none h-fit" to={path}>{content}</Link>;
     }

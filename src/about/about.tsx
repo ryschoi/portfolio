@@ -5,10 +5,13 @@ import { useLocation, Link, useNavigate } from "react-router-dom";
 import TagCursor from "components/tag-cursor";
 import SlideImg from "components/slide-img";
 import Pill from "components/pill";
+import HoverTag, { useTagCursor } from "components/hover-tag";
 
 export default function About() {
   const { hash } = useLocation();
   interface CopyButtonProps { text: string; }
+
+  const { cursorState, containerProps } = useTagCursor();
 
   const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
 
@@ -72,7 +75,7 @@ export default function About() {
     } else {
       const section = document.getElementById("filters");
       if (section) {
-        const offset = 64;
+        const offset = 200;
         const y =
           section.getBoundingClientRect().top +
           window.pageYOffset -
@@ -151,23 +154,29 @@ export default function About() {
               onMouseLeave={(e: React.MouseEvent<HTMLImageElement>) => hideCursor(e)} />
             <TagCursor text="My dog, Nara" x={cursor.x} y={cursor.y} visible={cursor.visible} />
           </> */}
+          {/* <div className="relative inline-block" {...containerProps}>
+            <img src="images/cooper hangout.PNG" alt="hi" className="rounded-xl" />
+            <HoverTag asCursor text="The Cooper team!" cursorX={cursorState.x} cursorY={cursorState.y} visible={cursorState.visible} />
+          </div> */}
           <div className="carousel-container">
             <div className="carousel-viewport">
               <div className="slides-wrapper">
-                <SlideImg src="images/nara.png" caption="my dog nara" vert={false} />
-                <SlideImg src="images/sandbox group.JPG" caption="sandbox" vert={false} />
-                <SlideImg src="images/cooper hangout.PNG" caption="the cooper team" vert={false} />
-                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" vert={false} />
+                <SlideImg src="images/nara.png" caption="My dog Nara" vert={false} />
+                <SlideImg src="images/cooper hangout.PNG" caption="The Cooper team!" vert={false} />
+                <SlideImg src="images/cookies.png" caption="Holiday cookie boxes" vert={false} />
                 <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
-                <SlideImg src="images/northeastern_campus.png" caption="campus in the fall" vert={true} />
-                <SlideImg src="images/arboretum wide.jpg" caption="trees!" vert={false} />
-                <SlideImg src="images/nara.png" caption="my dog nara" vert={false} />
-                <SlideImg src="images/sandbox group.JPG" caption="sandbox" vert={false} />
-                <SlideImg src="images/cooper hangout.PNG" caption="the cooper team" vert={false} />
-                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" vert={false} />
+                <SlideImg src="images/polaroid.png" caption="" vert={true} />
+                <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />
+                <SlideImg src="images/northeastern_campus.png" caption="Campus in the fall" vert={true} />
+                <SlideImg src="images/arboretum wide.jpg" caption="Trees" vert={false} />
+                <SlideImg src="images/nara.png" caption="My dog Nara" vert={false} />
+                <SlideImg src="images/cooper hangout.PNG" caption="The Cooper team!" vert={false} />
+                <SlideImg src="images/cookies.png" caption="Holiday cookie boxes" vert={false} />
                 <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
-                <SlideImg src="images/northeastern_campus.png" caption="campus in the fall" vert={true} />
-                <SlideImg src="images/arboretum wide.jpg" caption="trees!" vert={false} />
+                <SlideImg src="images/polaroid.png" caption="" vert={true} />
+                <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />
+                <SlideImg src="images/northeastern_campus.png" caption="Campus in the fall" vert={true} />
+                <SlideImg src="images/arboretum wide.jpg" caption="Trees" vert={false} />
               </div>
             </div>
           </div>
@@ -191,7 +200,7 @@ export default function About() {
             <div className="flex flex-wrap gap-[0.8rem]">
               <Pill path="https://www.linkedin.com/in/ryschoi/" text="LinkedIn" hover={true} clicked={false} />
               <Pill path="https://github.com/ryschoi" text="GitHub" hover={true} clicked={false} />
-              <Pill path="../../public/images/Rebecca_Choi_Resume.pdf" text="Resume" hover={true} clicked={false} />
+              <Pill path="/images/Rebecca_Choi_Resume.pdf" text="Resume" hover={true} clicked={false} />
             </div>
           </div>
         </div>

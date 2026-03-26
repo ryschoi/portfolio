@@ -15,15 +15,15 @@ export default function Background() {
                 <div className="thing">
                     <img src="/images/icons/code_icon.png" className="w-[4rem] mb-[0.75rem] aspect-square" />
                     <h3>Coding as a tool</h3>
-                    <p className="">When I took my first coding class in middle school, a summer web development bootcamp, I fell in love with the freedom to code and create whatever I wanted, but soon realized that with that freedom came many decisions surrounding usability and intent. This is when I discovered the importance of design.</p>
+                    <p className="">When I took my first coding class in middle school, a summer web development bootcamp, I fell in love with the freedom to code and create whatever I wanted, but quickly realized that freedom came with many decisions surrounding usability and intent: What exactly was I to code?. This is when I discovered the importance of design.</p>
                 </div>
 
                 {/* DESIGN */}
                 <div className="thing">
                     <img src="/images/icons/design_icon.png" className="w-[4rem] mb-[0.75rem] aspect-square" />
                     <h3>Design as a framework</h3>
-                    <p>If I wanted to create the greatest product to exist, I would need to know what would make such a product so great. To me, design is a framework for how to create. It teaches you how to make decisions and to think strategically so you can find solutions that fit business, user behavior, and aesthetic constraints. <br /><br />
-                        With experience designing for a wide range of audiences–college students, non-English speakers, and brand marketing teams–I've had lots of practice applying design principles to many different products, successfully applying fundamental design principles to the needs and unique situations of each user group. <span className="font-[500]">This means that functionality and user experience are the main values I act on when designing.</span>
+                    <p>To me, design is a framework for how to create. It teaches you to base your decisions on research findings and proven methods so you can find effective solutions that fit business, user behavior, and aesthetic constraints.<br /><br />
+                        The greatest help to me as a UX designer has been just being a little bit more attentive to the online platforms I was interacting with. <span className="italic">How did I know to look there for that button? Why might the designers have decided to use that specific input type? What microinteractions here are smoothening out the experience?</span> These kinds of questions and noticing how my most loved products are designed has helped me move my own designs from static, nice-looking screens to products ready to be used and shipped.
                     </p>
                 </div>
 
