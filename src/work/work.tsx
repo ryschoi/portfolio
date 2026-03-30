@@ -44,7 +44,7 @@ export default function Work() {
       <div className="flex flex-wrap gap-[2.5rem] items-start mt-[7.5rem] mb-[12rem] self-center">
         <img src="images/website-assets/notion_face.png" className="mt-[1.5rem] w-[8rem] object-contain" />
         <div className="w-[42rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[1.5rem]">
-          <p className="green caption tracking-[-0.25px] mb-[-0.5rem]">● Incoming @ Apple, summer 2026  |  seeking fall 2026 co-op opportunity</p>
+          <p className="green caption tracking-[-0.25px] mb-[-0.5rem]">● Incoming @ Apple, summer 2026  |  seeking Sep-Dec 2026 co-op opportunity</p>
           <div className="flex flex-col gap-[0.25rem] md:bg-red-600">
             <h1 className="tracking-[-0.3px]">Hi, I'm Rebecca.</h1>
             <h3 className="tracking-[-0.2px] gray">A developer-turned designer shaping digital experiences with clarity and craft.
