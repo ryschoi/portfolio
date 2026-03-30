@@ -28,7 +28,7 @@ export default function ImageBG({ project }: { project: Project }) {
                                 <Pill text={tag} hover={false} clicked={true} />
                             ))}
                     </div>
-                    <div className="my-[3vw]">
+                    <div className="my-[3vw] ">
                         {project.id === 12 ? (
                             <video autoPlay loop playsInline muted src="images/work/open-forum/open-forum-video.mov"
                                 className="w-[18rem] max-w-[85vw] round-[3rem]" />

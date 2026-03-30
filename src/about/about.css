@@ -56,7 +56,7 @@
 }
 
 .carousel-container:hover .slides-wrapper {
-  animation-play-state: paused;
+  /* animation-play-state: paused; */
 }
 
 .slide-img {
