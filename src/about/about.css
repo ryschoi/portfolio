@@ -55,9 +55,9 @@
   }
 }
 
-.carousel-container:hover .slides-wrapper {
-  /* animation-play-state: paused; */
-}
+/* .carousel-container:hover .slides-wrapper {
+  animation-play-state: paused;
+} */
 
 .slide-img {
   width: 20rem;

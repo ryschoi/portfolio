@@ -13,9 +13,9 @@ export default function ImageBG({ project }: { project: Project }) {
                             <Pill hover={false} clicked={true} text={tag} />
                         ))}
                     </div>
-                    <div className="my-[3vw]">
+                    <div className="mt-[3vw]">
                         <img src={project.frontImage} alt=""
-                            className="w-[26rem] max-w-[85vw] subtle-shadow object-cover"
+                            className="w-[34rem] h-[40rem] max-w-[85vw] subtle-shadow object-cover object-top"
                         />
                     </div>
                 </div>
