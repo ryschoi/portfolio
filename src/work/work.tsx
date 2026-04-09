@@ -4,7 +4,7 @@ import { projects } from "../database";
 import "../index.css";
 import "./work.css";
 import WorkCard from "./work-card";
-import Pill from "components/pill";
+import Pill from "../components/pill";
 
 export default function Work() {
   const location = useLocation();

@@ -2,10 +2,10 @@ import "./about.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
-import TagCursor from "components/tag-cursor";
-import SlideImg from "components/slide-img";
-import Pill from "components/pill";
-import HoverTag, { useTagCursor } from "components/hover-tag";
+import TagCursor from "../components/tag-cursor";
+import SlideImg from "../components/slide-img";
+import Pill from "../components/pill";
+import HoverTag, { useTagCursor } from "../components/hover-tag";
 
 export default function About() {
   const { hash } = useLocation();

@@ -1,4 +1,4 @@
-import Pill from "components/pill";
+import Pill from "./components/pill";
 
 export default function Background() {
     return (

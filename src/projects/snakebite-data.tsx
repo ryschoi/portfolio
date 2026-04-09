@@ -5,8 +5,8 @@ import SectionHeader from "../components/section-header";
 import VerticalImageSpan from "../components/vertical-image-span";
 import { Project } from "./project";
 import { section } from "./section";
-import FloatingNav from "components/floating-nav";
-import Collapsible from "components/collapsible";
+import FloatingNav from "../components/floating-nav";
+import Collapsible from "../components/collapsible";
 
 export default function SnakebiteData() {
     const thisProject = projects.find(p => p.path === "/snakebite-data");

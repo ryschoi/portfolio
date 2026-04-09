@@ -5,6 +5,7 @@
 @import "tailwindcss";
 @source "./**/*.{js,ts,jsx,tsx}";
 
+
 @theme {
   --color-green: oklch(0.5952 0.1266 106.97);
 
@@ -214,69 +215,75 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 0rem;
 
-    /* max-width: 14rem; */
     white-space: normal;
-
-    /* padding: 0.5rem; */
-    /* background-color: #d7d7d750; */
-    /* border-radius: 1rem; */
   }
 
   .nav-dot {
     display: flex;
     align-items: center;
+    position: relative;
+    width: 0.5rem; /* explicit width = just the dot */
 
     background: transparent;
     border: none;
     cursor: pointer;
+    padding: 0.4rem 0; /* vertical hit area without affecting width */
 
     color: inherit;
-    gap: 0.55rem;
-  }
+}
 
-  .dot {
+.dot {
+    display: block; /* ensure it renders as a block */
+    flex-shrink: 0;
     width: 0.5rem;
     height: 0.5rem;
     border-radius: 999px;
     background: #a0a0a0;
 
     transition:
-      width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-      background-color 0.5s ease 0.05s,
-      transform 0.25s ease;
-  }
+        height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+        background-color 0.5s ease 0.05s,
+        transform 0.25s ease;
+}
 
-  .label {
-    color: #878787;
-    overflow: hidden;
+.label {
+    position: absolute;
+    left: calc(0.5rem + 0.55rem); /* dot width + gap */
+    top: 50%;
+    transform: translateY(-50%) translateX(-4px);
     white-space: nowrap;
-    line-height: 0.85rem;
+    line-height: 0.8rem;
+
+    background-color: var(--color-tag-bg);
+    color: var(--color-black);
+    border: 1.5px solid var(--color-gray-stroke);
+    border-radius: 10rem;
+    padding: 6px 10px;
 
     opacity: 0;
-    transform: translateX(-4px);
     pointer-events: none;
 
     transition: opacity 0.25s ease, transform 0.25s ease;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-  }
+}
 
-  .floating-nav:hover .label {
+.nav-dot:hover .label {
     opacity: 1;
-    transform: translateX(0);
-  }
+    transform: translateY(-50%) translateX(0);
+}
 
-  .nav-dot:hover .dot {
+.nav-dot:hover .dot {
     transform: scale(1.25);
-  }
+}
 
-  .nav-dot.active .dot {
+.nav-dot.active .dot {
     height: 1.25rem;
     border-radius: 999px;
     background: #3f3f3f;
-  }
+}
 
   .caption {
     font-family: 'Space Mono';

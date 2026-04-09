@@ -1,12 +1,12 @@
-import { section } from "projects/section";
+import { section } from "../projects/section";
 import { useEffect, useState } from "react";
 
 export default function FloatingNav({ sections }: { sections: section[] }) {
     const handleScroll = (id: string) => {
-        document.getElementById(id)?.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-        });
+        const el = document.getElementById(id);
+        if (!el) return;
+        const top = el.getBoundingClientRect().top + window.scrollY - 100;
+        window.scrollTo({ top, behavior: "smooth" });
     };
 
     const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -37,10 +37,10 @@ export default function FloatingNav({ sections }: { sections: section[] }) {
                 <button
                     key={section.id}
                     onClick={() => handleScroll(section.id)}
-                    className={`nav-dot ${ section.id === activeSection ? "active" : ""}`}
+                    className={`nav-dot ${section.id === activeSection ? "active" : ""}`}
                 >
                     <span className="dot" />
-                    {/* <span className="label caption">{section.header}</span> */}
+                    <span className="label caption">{section.header}</span>
                 </button>
             ))}
         </div>

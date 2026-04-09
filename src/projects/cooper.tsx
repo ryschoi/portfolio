@@ -3,8 +3,8 @@ import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
 import { section } from "./section";
-import SectionHeader from "components/section-header";
-import FloatingNav from "components/floating-nav";
+import SectionHeader from "../components/section-header";
+import FloatingNav from "../components/floating-nav";
 
 export default function Cooper() {
     const thisProject = projects.find(p => p.path === "/cooper");

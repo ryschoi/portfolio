@@ -1,10 +1,10 @@
 import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
-import SectionHeader from "components/section-header";
+import SectionHeader from "../components/section-header";
 import { Project } from "./project";
 import { section } from "./section";
-import SlideImg from "components/slide-img";
+import SlideImg from "../components/slide-img";
 
 export default function PortfolioWebsite () {
     const thisProject = projects.find(p => p.path === "/ali-hacks");

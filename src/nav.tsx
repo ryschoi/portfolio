@@ -1,4 +1,4 @@
-import NavBarItem from "components/navbar-item";
+import NavBarItem from "./components/navbar-item";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function NavBar() {

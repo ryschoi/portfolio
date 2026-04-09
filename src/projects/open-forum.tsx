@@ -2,11 +2,11 @@ import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
-import SectionHeader from "components/section-header";
+import SectionHeader from "../components/section-header";
 import { section } from "./section";
-import FloatingNav from "components/floating-nav";
-import Collapsible from "components/collapsible";
-import Pill from "components/pill";
+import FloatingNav from "../components/floating-nav";
+import Collapsible from "../components/collapsible";
+import Pill from "../components/pill";
 
 export default function OpenForum() {
     const thisProject = projects.find(p => p.path === "/open-forum");

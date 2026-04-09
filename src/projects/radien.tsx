@@ -2,7 +2,7 @@ import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import { Project } from "./project";
-import Task from "components/task";
+import Task from "../components/task";
 
 export default function Radien() {
     const thisProject = projects.find(p => p.path === "/radien");

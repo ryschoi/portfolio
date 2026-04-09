@@ -6,7 +6,7 @@ import { projects } from "../database";
 import { Project } from "./project";
 import "./projects.css";
 import { section } from "./section";
-import FloatingNav from "components/floating-nav";
+import FloatingNav from "../components/floating-nav";
 
 export default function DissonantHarmony() {
     const thisProject = projects.find(p => p.path === "/dissonant-harmony");
@@ -14,9 +14,9 @@ export default function DissonantHarmony() {
         { id: "concept", header: "01. Concept", description: "Reflecting the idea of dissonant harmony in the illustrations and typography", optional: "For the museum exhibition to design for, I chose the SFMoma Dissonant Harmony exhibition for Alexander Calder. To focus on the idea of a dissonant harmony, I deconstructed one of Calder's sculptures, Big Crinkly, by first tracing over an image of it with the pen tool and then separating it into its individual parts. The imagery of the individual pieces shows that all these random, rough-cut shapes can somehow come together and create a harmonious result like Big Crinkly." },
         { id: "type", header: "02. Type", description: "Aglet Mono: geometric, like Calder's artwork", optional: "The title words that vary heavily in style and yet are the same width emphasize a dissonant harmony between two objects." },
         { id: "background", header: "03. Background", description: "A light background with enough contrast to let colors pop", optional: "After trying out both light and dark backgrounds, I found that the light background worked better as it let the colors in the sculpture pop more whereas in the dark background the colors got washed out." },
-        { id: "ai-size-poster", header: "04. A1-size poster", description: "Ensuring there is a focal point for the poster", optional: "It was important that there was a main focal point for the poster, especially because the poster was a big A1 size. I needed to establish a clear direction that viewers' eyes could follow when looking at the poster. That meant not only setting big-enough margins, but also making sure the individual pieces of the sculpture were framed well and that the other elements supported the main focus (the sculpture)." },
-        { id: "a5-size-flyer", header: "05. A5-size flyer", description: "A flyer intended to guide people to the exhibition rather than spark intrigue like the poster", optional: "Unlike the rest of the exhibition materials, the flyer shows the fully-constructed version of Big Crinkly, focusing more on guiding museum-goers to the exhibit." },
-        { id: "digital-marketing-material", header: "06. Digital marketing material: Instagram posts and gif", description: "Sneaking in one last instance of dissonant harmony with the nine-square grid", optional: "For the extra-observant and overthinkers (like me), the nine squares in the Instagram feed creating one complete picture make one extra nugget of fun." },
+        { id: "a1-size-poster", header: "04. A1-size poster", description: "Ensuring there is a focal point for the poster", optional: "It was important that there was a main focal point for the poster, especially because the poster was a big A1 size. I needed to establish a clear direction that viewers' eyes could follow when looking at the poster. That meant not only setting big-enough margins, but also making sure the individual pieces of the sculpture were framed well and that the other elements supported the main focus (the sculpture)." },
+        { id: "a5-size-flyer", header: "05. A5-size flyer", description: "A flyer to guide people to the exhibition rather than spark intrigue like the poster", optional: "Unlike the rest of the exhibition materials, the flyer shows the fully-constructed version of Big Crinkly, focusing more on guiding museum-goers to the exhibit." },
+        { id: "digital-marketing-material", header: "06. Instagram posts", description: "Sneaking in one last instance of dissonant harmony with the nine-square grid", optional: "For the extra-observant and overthinkers (like me), the nine squares in the Instagram feed creating one complete picture make one extra nugget of fun." },
     ]
 
     return (

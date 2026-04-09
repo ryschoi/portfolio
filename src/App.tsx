@@ -1,12 +1,12 @@
 import './index.css'
 import ResetScroll from "./reset-scroll"
-import ScrollToTopButton from "components/scroll-top";
-import ProcessButton from "components/process-button";
+import ScrollToTopButton from './components/scroll-top';
+import ProcessButton from './components/process-button';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Work from "./work/work"
 import Misc from "./misc/misc"
-import Background from "background";
+import Background from "./background";
 import About from "./about/about";
 import NavBar from "./nav"
 import Footer from "./footer";

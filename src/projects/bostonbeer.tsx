@@ -4,7 +4,7 @@ import ProjectHeader from "../components/project-header";
 import SectionHeader from "../components/section-header";
 import { Project } from "./project";
 import { section } from "./section";
-import FloatingNav from "components/floating-nav";
+import FloatingNav from "../components/floating-nav";
 
 export default function BostonBeer() {
     const thisProject = projects.find(p => p.path === "/boston-beer");
