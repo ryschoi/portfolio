@@ -72,24 +72,6 @@
         "overview": "Project overview"
     },
     {
-        "id": 6,
-        "active": true,
-        "name": "Snakebite Response Poster",
-        "path": "/snakebite-response",
-        "summary": "An illustrated guide to snakebite prevention for Batswana of all ages",
-        "type": "School project",
-        "team": ["Individual project"],
-        "role": "Designer",
-        "medium": "Print",
-        "tools": "Adobe Illustrator, Figma, Goodnotes",
-        "year": 2024,
-        "timeline": "Sep - Oct 2024",
-        "tags": ["Information design"],
-        "vertical": false,
-        "frontImage": "images/work/snakebite-response/snakebitePrevention.png",
-        "overview": "A poster and wallet card set for preventing snakebite in Botswana. The first of two projects for my Information Design studio."
-    },
-    {
         "id": 5,
         "active": true,
         "name": "Cooper Co-op Review Platform @ Sandbox",
@@ -108,22 +90,22 @@
         "overview": "Leading the design side of the creation of a Northeastern co-op review platform"
     },
     {
-        "id": 2,
+        "id": 6,
         "active": true,
-        "name": "Dissonant Harmony",
-        "path": "/dissonant-harmony",
-        "summary": "Using type and form to convey \"dissonant harmony\" in Alexander Calder's \"Big Crinkly\"",
+        "name": "Snakebite Response Poster",
+        "path": "/snakebite-response",
+        "summary": "An illustrated guide to snakebite prevention for Batswana of all ages",
         "type": "School project",
         "team": ["Individual project"],
         "role": "Designer",
         "medium": "Print",
-        "tools": "Adobe Illustrator",
+        "tools": "Adobe Illustrator, Figma, Goodnotes",
         "year": 2024,
-        "timeline": "Feb - Apr 2024",
-        "tags": ["Graphic design"],
-        "vertical": true,
-        "frontImage": "images/work/calder/calder.png",
-        "overview": "Marketing material for an Alexandar Calder museum exhibition. Includes an A1 size poster, A5 size flyer, and Instagram posts."
+        "timeline": "Sep - Oct 2024",
+        "tags": ["Information design"],
+        "vertical": false,
+        "frontImage": "images/work/snakebite-response/snakebitePrevention.png",
+        "overview": "A poster and wallet card set for preventing snakebite in Botswana. The first of two projects for my Information Design studio."
     },
     {
         "id": 13,
@@ -142,6 +124,24 @@
         "vertical": false,
         "frontImage": "images/work/alihacks/aliFront.png",
         "overview": "An internal application portal for a Boston student-led hackathon and a sponsorship package to send out to potential sponsors."
+    },
+    {
+        "id": 2,
+        "active": true,
+        "name": "Dissonant Harmony",
+        "path": "/dissonant-harmony",
+        "summary": "Using type and form to convey \"dissonant harmony\" in Alexander Calder's \"Big Crinkly\"",
+        "type": "School project",
+        "team": ["Individual project"],
+        "role": "Designer",
+        "medium": "Print",
+        "tools": "Adobe Illustrator",
+        "year": 2024,
+        "timeline": "Feb - Apr 2024",
+        "tags": ["Graphic design"],
+        "vertical": true,
+        "frontImage": "images/work/calder/calder.png",
+        "overview": "Marketing material for an Alexandar Calder museum exhibition. Includes an A1 size poster, A5 size flyer, and Instagram posts."
     },
     {
         "id": 1,
