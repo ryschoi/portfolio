@@ -1,40 +1,42 @@
 import { Project } from "../projects/project";
-import Tag from "./tag";
+import Pill from "./pill";
 
 export default function ImageBG({ project }: { project: Project }) {
     return (
         <div className="flex flex-col gap-[0.5rem]">
             {/* FIRST IMAGE */}
             {project.id === 7 ?
-                <div className="zoom img-bg relative rounded flex justify-center overflow-hidden">
+                <div className="zoom img-bg relative round flex justify-center overflow-hidden">
                     {/* TAGS */}
                     <div className="flex gap-[0.5rem] tag-position">
                         {project.tags.map((tag) => (
-                            <Tag text={tag} hover={false} clicked={true} />
+                            <Pill hover={false} clicked={true} text={tag} />
                         ))}
                     </div>
-                    <div className="my-[3vw]">
+                    <div className="mt-[3vw]">
                         <img src={project.frontImage} alt=""
-                            className="w-[26rem] max-w-[85vw] subtle-shadow object-cover"
+                            className="w-[34rem] h-[40rem] max-w-[85vw] subtle-shadow object-cover object-top"
                         />
                     </div>
                 </div>
                 :
-                <div className="zoom img-bg relative rounded flex align-center justify-center overflow-hidden">
+                <div className="zoom img-bg relative round flex align-center justify-center overflow-hidden">
                     {/* MAP BUTTONS */}
                     <div className="flex gap-[0.5rem] tag-position">
                         {project.tags
                             .map((tag) => (
-                                <Tag text={tag} hover={false} clicked={true} />
+                                <Pill text={tag} hover={false} clicked={true} />
                             ))}
                     </div>
-                    <div className="my-[3vw]">
+                    <div className="my-[3vw] ">
                         {project.id === 12 ? (
                             <video autoPlay loop playsInline muted src="images/work/open-forum/open-forum-video.mov"
-                                className="w-[18rem] max-w-[85vw] rounded-[3rem]" />
+                                className="w-[18rem] max-w-[85vw] round-[3rem]" />
                         ) : project.id === 13 ? (
                             <video autoPlay loop playsInline muted src="images/work/alihacks/full_proto.mov"
                                 className="w-[44rem] max-w-[85vw] subtle-shadow object-cover" />
+                        ) : project.id === 14 ? (
+                            <img src={project.frontImage} alt="" className="w-[44rem] max-w-[85vw] object-cover" />
                         ) : (
                             <img src={project.frontImage} alt=""
                                 className={

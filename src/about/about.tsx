@@ -2,14 +2,16 @@ import "./about.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
-import Tag from "../components/tag";
-import HoverButton from "components/hover-button";
-import TagCursor from "components/tag-cursor";
-import SlideImg from "components/slide-img";
+import TagCursor from "../components/tag-cursor";
+import SlideImg from "../components/slide-img";
+import Pill from "../components/pill";
+import HoverTag, { useTagCursor } from "../components/hover-tag";
 
 export default function About() {
   const { hash } = useLocation();
   interface CopyButtonProps { text: string; }
+
+  const { cursorState, containerProps } = useTagCursor();
 
   const [cursor, setCursor] = useState({ x: 0, y: 0, visible: false });
 
@@ -46,9 +48,9 @@ export default function About() {
     return (
       <div className="relative group">
         <button onClick={handleCopy}
-          className="tag py-[6px] px-[16px] rounded transition">{text}
+          className="tag py-[6px] px-[16px] round transition">{text}
         </button>
-        <div className="absolute bottom-full mb-[0.5rem] left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.88rem] rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 gray">
+        <div className="absolute bottom-full mb-[0.5rem] left-1/2 -translate-x-1/2 whitespace-nowrap text-[0.88rem] round opacity-0 group-hover:opacity-100 transition-opacity duration-200 gray">
           {tooltip}
         </div>
       </div>
@@ -65,7 +67,6 @@ export default function About() {
     }
   };
 
-
   const { pathname } = useLocation();
   const navigate = useNavigate();
   const handleWorkClick = () => {
@@ -74,7 +75,7 @@ export default function About() {
     } else {
       const section = document.getElementById("filters");
       if (section) {
-        const offset = 64;
+        const offset = 200;
         const y =
           section.getBoundingClientRect().top +
           window.pageYOffset -
@@ -93,21 +94,21 @@ export default function About() {
             About me
             <br />
             <span className="gray h3">
-              Apart from my <HoverButton path="/" buttonText="Work" hoverText="Collection of projects that captures the full breadth of my interests" onClick={handleWorkClick} /> and <HoverButton path="/background" buttonText="Work background / philosophy" hoverText="What are my design principles? Why CS & Design? How did I get here??" />
+              Apart from my <Pill path="/" text="Work" tooltip="Collection of projects that captures the full breadth of my interests" onClick={handleWorkClick} hover={true} clicked={false} /> and <Pill path="/background" text="Work background / philosophy" tooltip="What are my design principles? Why CS & Design? How did I get here??" hover={true} clicked={false} />
             </span>
           </h2>
 
-          <div className="relative rounded flex align-center justify-center overflow-hidden">
+          <div className="relative round flex align-center justify-center overflow-hidden">
             <div className="my-[3vw]">
               <img src="images/website-assets/denby_headshot_cropped.jpg"
                 alt=""
-                className="rounded w-[20rem] max-w-[85vw] smaller-shadow object-cover"
+                className="round w-[20rem] max-w-[85vw] smaller-shadow object-cover"
               />
             </div>
           </div>
 
           <br />
-          <button onClick={() => handleScroll("contacts")} className="hover-tag">↓ Contact & links</button>
+          <Pill hover={true} clicked={false} text="↓ Contact & links" onClick={() => handleScroll("contacts")} />
         </div>
 
         <hr />
@@ -119,8 +120,7 @@ export default function About() {
           <h3 className="tracking-[-0.25px] serif">Currently...</h3>
           <ul className="gray">
             <li className="h4">Third-year Computer Science and Design student at Northeastern University</li>
-            <li className="h4">Doing my co-op at The Boston Beer Company on the Marketing Analytics team, using my design thinking to make our dashboards and one-sheeters more user-friendly and accessible</li>
-            <li className="h4">Design lead at <a href="https://www.sandboxnu.com/" className="h3 underline">Sandbox NU</a> for <a className="h3 underline" href="/cooper">Cooper</a>, creating a job experience review platform to help Northeastern students make more informed co-op decisions</li>
+            <li className="h4">Design lead at <a href="https://www.sandboxnu.com/" className="h4 underline">Sandbox NU</a> for <a className="h4 underline" href="/cooper">Cooper</a>, creating a job experience review platform to help Northeastern students make more informed co-op decisions</li>
           </ul>
           <br />
           <h3 className="serif">Incoming Human Interface Design Intern @ Apple, Summer 2026</h3>
@@ -130,47 +130,53 @@ export default function About() {
 
         {/* OTHER THINGS */}
         <div className="flex flex-col gap-[1.5rem]">
-          <h4 className="">
-            <span className="font-[400]">Some things that keep me going:</span> walks around the city, baking & recipe testing, bass guitar, kombucha, spontaneous changes to this website, and my dog<br />
+          <h4 className="font-[375]">Outside of design and coding this portfolio you can find me experimenting with new baking and cooking recipes, playing the bass guitar, and trying new food spots around Boston.<br />
+           {/* Ask me about the science behind baking and why everyone should learn how to play a musical instrument! */}
             {/* Pet peeves: custom cursors, inefficiency */}
             {/* Dislikes: custom cursors */}
           </h4>
           {/* IMAGES */}
           {/* <div className="work-img-group-col">
             <div className="flex flex-col">
-              <img className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/nara.png" />
+              <img className="w-full h-[15vw] min-h-[25vh] object-cover round" src="images/nara.png" />
               <p className="caption cap-top">My dog, Nara</p>
             </div>
             <div className="flex flex-col">
-              <img className="w-full h-[15vw] min-h-[25vh] object-cover rounded" src="images/arboretum wide.jpg" />
+              <img className="w-full h-[15vw] min-h-[25vh] object-cover round" src="images/arboretum wide.jpg" />
               <p className="caption cap-top">Trees!</p>
             </div>
           </div> */}
           {/* <>
-            <img className="tag-img rounded" src="images/nara.png"
+            <img className="tag-img round" src="images/nara.png"
               style={{ cursor: "none" }}
               onMouseMove={(e: React.MouseEvent<HTMLImageElement>) => handleMove(e)}
               onMouseEnter={(e: React.MouseEvent<HTMLImageElement>) => handleMove(e)}
               onMouseLeave={(e: React.MouseEvent<HTMLImageElement>) => hideCursor(e)} />
             <TagCursor text="My dog, Nara" x={cursor.x} y={cursor.y} visible={cursor.visible} />
           </> */}
+          {/* <div className="relative inline-block" {...containerProps}>
+            <img src="images/cooper hangout.PNG" alt="hi" className="rounded-xl" />
+            <HoverTag asCursor text="The Cooper team!" cursorX={cursorState.x} cursorY={cursorState.y} visible={cursorState.visible} />
+          </div> */}
           <div className="carousel-container">
             <div className="carousel-viewport">
               <div className="slides-wrapper">
-                <SlideImg src="images/nara.png" caption="my dog nara" vert={false} />
-                <SlideImg src="images/sandbox group.JPG" caption="sandbox" vert={false} />
-                <SlideImg src="images/cooper hangout.PNG" caption="the cooper team" vert={false} />
-                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" vert={false} />
+                <SlideImg src="images/nara.png" caption="My dog Nara" vert={false} />
+                <SlideImg src="images/cooper hangout.PNG" caption="The Cooper team!" vert={false} />
+                <SlideImg src="images/cookies.png" caption="Holiday cookie boxes" vert={false} />
                 <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
-                <SlideImg src="images/northeastern_campus.png" caption="campus in the fall" vert={true} />
-                <SlideImg src="images/arboretum wide.jpg" caption="trees!" vert={false} />
-                <SlideImg src="images/nara.png" caption="my dog nara" vert={false} />
-                <SlideImg src="images/sandbox group.JPG" caption="sandbox" vert={false} />
-                <SlideImg src="images/cooper hangout.PNG" caption="the cooper team" vert={false} />
-                <SlideImg src="images/cookies.png" caption="cookie boxes for my team" vert={false} />
+                <SlideImg src="images/polaroid.png" caption="" vert={true} />
+                <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />
+                <SlideImg src="images/northeastern_campus.png" caption="Campus in the fall" vert={true} />
+                <SlideImg src="images/arboretum wide.jpg" caption="Trees" vert={false} />
+                <SlideImg src="images/nara.png" caption="My dog Nara" vert={false} />
+                <SlideImg src="images/cooper hangout.PNG" caption="The Cooper team!" vert={false} />
+                <SlideImg src="images/cookies.png" caption="Holiday cookie boxes" vert={false} />
                 <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
-                <SlideImg src="images/northeastern_campus.png" caption="campus in the fall" vert={true} />
-                <SlideImg src="images/arboretum wide.jpg" caption="trees!" vert={false} />
+                <SlideImg src="images/polaroid.png" caption="" vert={true} />
+                <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />
+                <SlideImg src="images/northeastern_campus.png" caption="Campus in the fall" vert={true} />
+                <SlideImg src="images/arboretum wide.jpg" caption="Trees" vert={false} />
               </div>
             </div>
           </div>
@@ -183,27 +189,21 @@ export default function About() {
           {/* CONTACT */}
           <div className="flex gap-[1rem] items-center">
             <p className="caption">Contact</p>
-            <div className="flex flex-wrap gap-[0.8rem]">
-              <CopyButton text="rebecca.choi05@gmail.com" />
-              <CopyButton text="(510) 682-0020" />
+            <div className="flex flex-wrap gap-[0.6rem]">
+              <Pill copyText="rebecca.choi05@gmail.com" hover={true} clicked={false} />
+              <Pill copyText="(510) 682-0020" hover={true} clicked={false} />
             </div>
           </div>
           {/* LINKS */}
           <div className="flex gap-[1rem] items-center">
             <p className="caption">Links</p>
-            <div className="flex flex-wrap gap-[0.8rem]">
-              <a href="https://www.linkedin.com/in/ryschoi/"><Tag text="LinkedIn" hover={true} clicked={false} /></a>
-              <a href="https://github.com/ryschoi"><Tag text="GitHub" hover={true} clicked={false} /></a>
-              <a href="images/Rebecca_Choi_Resume.pdf"><Tag text="Resume" hover={true} clicked={false} /></a>
+            <div className="flex flex-wrap gap-[0.6rem]">
+              <Pill path="https://www.linkedin.com/in/ryschoi/" text="LinkedIn" hover={true} clicked={false} />
+              <Pill path="https://github.com/ryschoi" text="GitHub" hover={true} clicked={false} />
+              <Pill path="/images/Rebecca_Choi_Resume.pdf" text="Resume" hover={true} clicked={false} />
             </div>
           </div>
         </div>
-
-        {/* <p>
-          As someone who is both visionary and rational, I navigate complex problems with discernment and find ways to turn solutions into reality.
-          <br /><br />
-          It's important to me that the projects I work on are meaningful to their users and in the way that they are created. As a designer, this means that I am intentional with all my choices, making sure that whatever I design is easy on the eyes, easy to use, and delivers what the user needs out of the product. As a developer, I focus on scalability, efficiency, and writing clean and maintainable code.
-        </p> */}
       </div>
     </div>
   );

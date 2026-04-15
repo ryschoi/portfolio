@@ -1,15 +1,15 @@
+import './index.css'
 import ResetScroll from "./reset-scroll"
-import ScrollToTopButton from "components/scroll-top";
-import ProcessButton from "components/process-button";
+import ScrollToTopButton from './components/scroll-top';
+import ProcessButton from './components/process-button';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Work from "./work/work"
 import Misc from "./misc/misc"
-import Background from "background/background";
-import Resume from "./resume/resume";
+import Background from "./background";
 import About from "./about/about";
-import NavBar from "./navigation/nav"
-import Footer from "./footer/footer";
+import NavBar from "./nav"
+import Footer from "./footer";
 
 import Rockumentary from './projects/rockumentary';
 import SnakebiteResponse from "./projects/snakebite-response"
@@ -20,8 +20,8 @@ import Radien from "./projects/radien";
 import Cooper from "./projects/cooper"
 import OpenForum from "./projects/open-forum";
 import AliHacks from "./projects/ali-hacks";
-import BostonBeer from "projects/bostonbeer";
-import PortfolioWebsite from "projects/portfolio";
+import BostonBeer from "./projects/bostonbeer";
+import PortfolioWebsite from "./projects/portfolio";
 
 
 export default function App() {
@@ -34,7 +34,6 @@ export default function App() {
           <Route path="/" element={<Work />} />
           <Route path="/misc" element={<Misc />} />
           <Route path="/background" element={<Background />} />
-          <Route path="/resume" element={<Resume />} />
           <Route path="/about" element={<About />} />
 
           <Route path="/rockumentary" element={<Rockumentary />} />

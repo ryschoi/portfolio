@@ -9,11 +9,10 @@
   background-color: #d2d180;
   color: #1e1e1e;
   border: 1.5px solid #212121;
-  border-radius: 1rem;
+  border-radius: 10rem;
   position: relative;
   top: 0;
   padding: 6px 16px;
-  transition: top ease 0.5s;
 }
 
 .carousel-container {
@@ -56,9 +55,9 @@
   }
 }
 
-.carousel-container:hover .slides-wrapper {
+/* .carousel-container:hover .slides-wrapper {
   animation-play-state: paused;
-}
+} */
 
 .slide-img {
   width: 20rem;
