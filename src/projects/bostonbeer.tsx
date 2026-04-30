@@ -15,11 +15,6 @@ export default function BostonBeer() {
         { id: "q3", header: "second iteration: quarter 3 design", description: "Q3 summary" },
         { id: "reflection", header: "Reflection", description: "Reflection summary" }
     ];
-    // const sections: section[] = [
-    //     { id: "qmm", header: "Quarterly Media Measurement Scorecards", description: "Designing scorecards to provide a high-level, yet actionable summary of quarterly marketing data", optional: "" },
-    //     { id: "bls-sls",  header: "Report Dashboards", description: "Eliminating the need to create new report PowerPoints by creating an interactive and aggregate Power BI dashboard of brand and sales lift study data", optional: "" },
-    //     { id: "reflection",  header: "Reflection", description: "Applying UX design principles and practices to the marketing + data world" }
-    // ];
     return (
         <div className="project-content">
             <ProjectHeader project={thisProject as Project} sections={sections} />
@@ -28,6 +23,8 @@ export default function BostonBeer() {
                 {/* <p className="w-slim">Case study coming soon.</p> */}
                 <div className="section w-slim" id="problem">
                     <SectionHeader title={sections[0].header} description={sections[0].description} optional={sections[0].optional} />
+                    <p className="w-slim">Coming in without any formal marketing experience or learning, I was starting at a blank.</p>
+                    <p className="w-slim">As my first project, I was tasked with</p>
                 </div>
 
                 <div className="section" id="findings">

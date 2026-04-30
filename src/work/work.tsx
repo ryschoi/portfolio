@@ -75,7 +75,7 @@ export default function Work() {
           </div>
         </div>
       </div>
-      z{/* FILTERS */}
+      {/* FILTERS */}
       <div className="flex flex-wrap gap-[0.5rem] mb-[1.5rem]" id="filters">
         {allTags.map((tag) => {
           const isSelected = selectedTag === tag;
