@@ -37,7 +37,7 @@
     },
     {
         "id": 14,
-        "active": true,
+        "active": false,
         "name": "Marketing Analytics Co-op @ Boston Beer",
         "path": "/boston-beer",
         "summary": "Applying UX research and design thinking to translate marketing data into clear and engaging insights for a non-technical audience",

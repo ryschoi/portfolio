@@ -41,15 +41,15 @@ export default function Work() {
   return (
     <div className="flex flex-col">
       {/* GREETING */}
-      <div className="flex flex-wrap gap-[2.5rem] items-start mt-[7.5rem] mb-[12rem] self-center">
+      <div className="flex flex-wrap gap-[2rem] items-center mt-[7.5rem] mb-[12rem] self-center">
         <img
           src="images/website-assets/notion_face.png"
-          className="mt-[1.5rem] w-[8rem] object-contain"
+          className="w-[8rem] object-contain"
         />
         <div className="w-[42rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[1.5rem]">
-          <p className="green caption tracking-[-0.25px] mb-[-0.75rem]">
+          {/* <p className="green caption tracking-[-0.25px] mb-[-0.75rem]">
             ● Incoming @ Apple, summer 2026
-          </p>
+          </p> */}
           <div className="flex flex-col gap-[0.25rem] md:bg-red-600">
             <h1 className="tracking-[-0.3px]">Hi, I'm Rebecca.</h1>
             <h3 className="tracking-[-0.2px] gray">
