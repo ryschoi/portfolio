@@ -144,7 +144,7 @@ export default function About() {
 
         <div className="thing mt-[1.5rem]">
           <h4 className="serif">Outside of design and coding this portfolio,</h4>
-          <p className="gray">you can find me experimenting with new baking and cooking recipes, playing the bass guitar, and trying new food spots around Boston.</p>
+          <p className="gray">you can find me experimenting with new baking and cooking recipes, playing the bass guitar, and exploring different parts of Boston.</p>
         </div>
 
         {/* OTHER THINGS */}

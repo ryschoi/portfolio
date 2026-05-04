@@ -12,7 +12,7 @@ export default function OpenForum() {
     const thisProject = projects.find(p => p.path === "/open-forum");
     const sections: section[] = [
         { id: "research", header: "Research question", description: "How can technology support students’ belongingness on campus?" },
-        { id: "ideation", header: "Ideation", description: "Our solution must support both new and existing relationships and facilitate structured, interest-based social gatherings in a non-time-demanding way", optional: "Using the themes and constraints we got from our research, we came up with 15 different potential solutions and got creative with the different areas of life we could turn into socializing opportunities (eating, studying, conversation, errands, etc.)" },
+        { id: "ideation", header: "Ideation", description: "Our solution must support both new and existing relationships and facilitate structured, interest-based social gatherings in a non-time-demanding way"},
         { id: "user-testing", header: "User testing w/ low-fidelity prototypes", description: "With paper prototypes of our top two ideas, we gathered feedback from fellow students" },
         { id: "design", header: "High-fidelity prototype", description: "Presenting... Open Forum", optional: "We decided to go with Open Forum, the discussion-organizing app, as it was the solution that best addressed all of our constraints." }
     ];
@@ -161,15 +161,15 @@ export default function OpenForum() {
                                 <h3 className="mb-[1.5rem] dark-gray caption">What we found</h3>
                                 <div className="flex flex-col gap-[2.5rem]">
                                     <div className="flex flex-col gap-[0.5rem]">
-                                        <h3 className="serif-2">Structured and interested-based social spaces are reported more effective methods of socializing</h3>
+                                        <h3 className="">Structured and interested-based social spaces are reported more effective methods of socializing</h3>
                                         <p className="gray p-sm">Almost all the students we interviewed mentioned meeting friends either from clubs or other public activities like intramural sports.</p>
                                     </div>
                                     <div className="flex flex-col gap-[0.5rem]">
-                                        <h3 className="serif-2">Technology can help maintain existing connections but struggles to create them</h3>
+                                        <h3 className="">Technology can help maintain existing connections but struggles to create them</h3>
                                         <p className="gray p-sm">Online methods of connecting like FaceTimes or sending friends Instagram reels are better for maintaining friendships rather than forming new ones.</p>
                                     </div>
                                     <div className="flex flex-col gap-[0.5rem]">
-                                        <h3 className="serif-2">Students are busy and time constraints complicate socializing efforts</h3>
+                                        <h3 className="">Students are busy and time constraints complicate socializing efforts</h3>
                                         <p className="gray p-sm">Students' collectively busy schedules make it hard to find time to socialize. Interestingly, one student mentioned that that didn't necessarily mean that they didn't feel like they didn't belong because of the "shared-struggle" sentiments.</p>
                                     </div>
                                 </div>
@@ -191,16 +191,7 @@ export default function OpenForum() {
                 {/* IDEATION */}
                 <div id="ideation" className="section">
                     <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
-
-                    {/* IDEAS LIST */}
-                    {/* <div className="w-slim">
-                        <p className="mb-[0.5rem]">Some of our ideas were:</p>
-                        <ul>
-                            <li>An app for clubs to post their upcoming events. A filter-heavy platform for users to curate their feed to events that fit their preferences (i.e. free food, resume/career help, networking, etc.)</li>
-                            <li>A web app that shows available rooms on campus since space is the greatest asset on Northeastern campus and often times a barrier to hanging out because people cannot find spaces to meet.</li>
-                            <li>A podcast hosted by Northeastern students, bringing on other Northeastern students. It would help the Northeastern community feel smaller with the shared experiences talked about on the podcast while introducing new students each week. Targets those who are busy and always on the move (gives them something to listen to).</li>
-                        </ul>
-                    </div> */}
+                    <p className="w-slim gray">Using the themes and constraints we got from our research, we came up with 15 different potential solutions and got creative with the different areas of life we could turn into socializing opportunities (eating, studying, conversation, errands, etc.)</p>
                     {/* TOP IDEAS */}
                     <div className="gray-full-container">
                         <div className="med-w my-[4rem]">
