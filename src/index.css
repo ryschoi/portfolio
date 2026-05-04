@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://vetrivelcsamy.github.io/cheltenham-classic/cheltenhamclassic.css');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Myeongjo&display=swap');
 
 @import "tailwindcss";
 @source "./**/*.{js,ts,jsx,tsx}";
 
+@font-face {
+  font-family: 'Eiko-Thin';
+  src: url('/fonts/eiko/PPEiko-Thin.otf') format('opentype');
+}
 
 @theme {
   --color-green: oklch(0.5952 0.1266 106.97);
@@ -77,6 +82,14 @@ body {
     color: var(--color-black);
   }
 
+  .eiko {
+    font-family: 'Eiko-Thin', serif;
+  }
+
+  .coromont {
+    font-family: 'Cormorant', serif;
+  }
+
   p,
   ul,
   i,
@@ -85,6 +98,14 @@ body {
     line-height: var(--leading);
     font-weight: var(--weight);
     text-transform: none;
+  }
+
+  .p-sm {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 350;
+    text-transform: none;
+    letter-spacing: -1%;
   }
 
   ul {
@@ -106,13 +127,23 @@ body {
 
   h2,
   .h2 {
-    font-family: 'cheltenhamclassic', serif;
+    /* font-family: 'Eiko-Thin', serif; */
+    /* font-family: 'cheltenhamclassic', serif; */
+    /* font-family: 'Cormorant', serif; */
+    font-family: 'Nanum Myeongjo', serif;
     font-weight: 400;
     margin: var(--zero);
     font-size: var(--h2-size);
     line-height: var(--h2-leading);
     font-weight: var(--heading-weight);
     letter-spacing: -0.25px;
+  }
+
+  .serif-2 {
+    /* font-family: 'Crimson Text', serif; */
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 500;
+    font-size: 22px;
   }
 
   h3,
@@ -310,8 +341,10 @@ body {
   }
 
   .serif {
-    font-family: 'cheltenhamclassic', serif;
-    font-weight: 400;
+    /* font-family: 'cheltenhamclassic', serif; */
+    font-family: 'Nanum Myeongjo', serif;
+    /* font-family: 'Cormorant', serif; */
+    font-weight: 500;
   }
 
   .callout {
@@ -332,7 +365,7 @@ body {
   }
 
   .gray {
-    color: #727272;
+    color: #676767;
   }
 
   .dark-gray {

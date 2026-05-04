@@ -6,6 +6,7 @@ import TagCursor from "../components/tag-cursor";
 import SlideImg from "../components/slide-img";
 import Pill from "../components/pill";
 import HoverTag, { useTagCursor } from "../components/hover-tag";
+import LinkHover from "../components/link-hover";
 
 export default function About() {
   const { hash } = useLocation();
@@ -93,7 +94,7 @@ export default function About() {
           <h2 className="mb-[1rem]">
             About me
             <br />
-            <span className="gray h3">
+            <span className="gray p-style">
               Apart from my <Pill path="/" text="Work" tooltip="Collection of projects that captures the full breadth of my interests" onClick={handleWorkClick} hover={true} clicked={false} /> and <Pill path="/background" text="Work background / philosophy" tooltip="What are my design principles? Why CS & Design? How did I get here??" hover={true} clicked={false} />
             </span>
           </h2>
@@ -107,57 +108,47 @@ export default function About() {
             </div>
           </div>
 
-          <br />
-          <Pill hover={true} clicked={false} text="↓ Contact & links" onClick={() => handleScroll("contacts")} />
+          {/* <br /> */}
+          {/* <Pill hover={true} clicked={false} text="↓ Contact & links" onClick={() => handleScroll("contacts")} /> */}
         </div>
 
-        <hr />
+        {/* <hr /> */}
 
         {/* CURRENTLY */}
         <div className="thing">
-          <h3 className="tracking-[-0.25px] serif">Born and raised in the temperate Bay Area, and now in Boston, MA.</h3>
+          <p className="gray">I was born and raised in the temperate Bay Area, and now I'm in Boston, MA studying Computer Science and Design at Northeastern University.</p>
           <br />
-          <h3 className="tracking-[-0.25px] serif">Currently...</h3>
-          <ul className="gray">
-            <li className="h4">Third-year Computer Science and Design student at Northeastern University</li>
-            <li className="h4">Design lead at <a href="https://www.sandboxnu.com/" className="h4 underline">Sandbox NU</a> for <a className="h4 underline" href="/cooper">Cooper</a>, creating a job experience review platform to help Northeastern students make more informed co-op decisions</li>
-          </ul>
-          <br />
-          <h3 className="serif">Incoming Human Interface Design Intern @ Apple, Summer 2026</h3>
+          <h4 className="serif">Experience</h4>
+          <div className="flex flex-col gap-[0.25rem]">
+            <div className="flex flex-col tablet:flex-row justify-between">
+              {/* <LinkHover label="case study coming soon" children={<p className="gray"><span className="black">Apple, </span>Human Interface Design Intern</p>} /> */}
+              <p className="gray"><span className="black">Apple, </span>Human Interface Design Intern</p>
+              <p className="caption color-[#999999] text-[0.8rem] tablet:text-[0.85rem]">Incoming Summer 2026</p>
+            </div>
+            <hr />
+            <LinkHover href="../cooper" label="go to case study" children={
+              <div className="flex flex-col tablet:flex-row justify-between hover:italic">
+                <p className="gray"><span className="black">Sandbox, </span>Design Lead for <a className="underline" href="/cooper">Cooper</a></p>
+                <p className="caption color-[#999999] text-[0.8rem] tablet:text-[0.85rem]">Since Jan 2025</p>
+              </div>
+            } />
+            <hr />
+            <LinkHover label="case study coming soon" children={
+              <div className="flex flex-col tablet:flex-row justify-between hover:italic">
+                <p className="gray"><span className="black">Boston Beer Company, </span>Marketing Analytics Co-op</p>
+                <p className="caption color-[#999999] text-[0.8rem] tablet:text-[0.85rem]">Jul - Dec 2025</p>
+              </div>
+            } />
+          </div>
         </div>
 
-        <hr />
+        <div className="thing mt-[1.5rem]">
+          <h4 className="serif">Outside of design and coding this portfolio,</h4>
+          <p className="gray">you can find me experimenting with new baking and cooking recipes, playing the bass guitar, and trying new food spots around Boston.</p>
+        </div>
 
         {/* OTHER THINGS */}
         <div className="flex flex-col gap-[1.5rem]">
-          <h4 className="font-[375]">Outside of design and coding this portfolio you can find me experimenting with new baking and cooking recipes, playing the bass guitar, and trying new food spots around Boston.<br />
-           {/* Ask me about the science behind baking and why everyone should learn how to play a musical instrument! */}
-            {/* Pet peeves: custom cursors, inefficiency */}
-            {/* Dislikes: custom cursors */}
-          </h4>
-          {/* IMAGES */}
-          {/* <div className="work-img-group-col">
-            <div className="flex flex-col">
-              <img className="w-full h-[15vw] min-h-[25vh] object-cover round" src="images/nara.png" />
-              <p className="caption cap-top">My dog, Nara</p>
-            </div>
-            <div className="flex flex-col">
-              <img className="w-full h-[15vw] min-h-[25vh] object-cover round" src="images/arboretum wide.jpg" />
-              <p className="caption cap-top">Trees!</p>
-            </div>
-          </div> */}
-          {/* <>
-            <img className="tag-img round" src="images/nara.png"
-              style={{ cursor: "none" }}
-              onMouseMove={(e: React.MouseEvent<HTMLImageElement>) => handleMove(e)}
-              onMouseEnter={(e: React.MouseEvent<HTMLImageElement>) => handleMove(e)}
-              onMouseLeave={(e: React.MouseEvent<HTMLImageElement>) => hideCursor(e)} />
-            <TagCursor text="My dog, Nara" x={cursor.x} y={cursor.y} visible={cursor.visible} />
-          </> */}
-          {/* <div className="relative inline-block" {...containerProps}>
-            <img src="images/cooper hangout.PNG" alt="hi" className="rounded-xl" />
-            <HoverTag asCursor text="The Cooper team!" cursorX={cursorState.x} cursorY={cursorState.y} visible={cursorState.visible} />
-          </div> */}
           <div className="carousel-container">
             <div className="carousel-viewport">
               <div className="slides-wrapper">

@@ -13,15 +13,15 @@ export default function Background() {
 
                 {/* CODING */}
                 <div className="thing">
-                    <img src="/images/icons/code_icon.png" className="w-[4rem] mb-[0.75rem] aspect-square" />
-                    <h3>Coding as a tool</h3>
+                    <img src="/images/icons/code_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
+                    <h3 className="serif font-[700]">Coding as a tool</h3>
                     <p className="">When I took my first coding class in middle school, a summer web development bootcamp, I fell in love with the freedom to code whatever I wanted, but quickly realized that freedom came with many decisions surrounding usability and intent: What exactly was I to code?. This is when I discovered the importance of design.</p>
                 </div>
 
                 {/* DESIGN */}
                 <div className="thing">
-                    <img src="/images/icons/design_icon.png" className="w-[4rem] mb-[0.75rem] aspect-square" />
-                    <h3>Design as a framework</h3>
+                    <img src="/images/icons/design_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
+                    <h3 className="serif font-[700]">Design as a framework</h3>
                     <p>To me, design is a framework for how to create. It teaches you to base your decisions on research findings and proven methods so you can find effective solutions that fit business, user behavior, and aesthetic constraints.<br /><br />
                         The way I have grown most as a UX designer is just by being a little more attentive to the online platforms I interact with. <span className="italic">How did I know to look there for that button? Why might the designers have decided to use that specific input type? What microinteractions here are smoothening out the experience?</span> These kinds of questions and breaking down how my favorite products are designed help me move my designs from static prototypes to products ready to be used and shipped.
                     </p>
@@ -29,8 +29,8 @@ export default function Background() {
 
                 {/* DATA */}
                 <div className="thing">
-                    <img src="/images/icons/data_icon.png" className="w-[4rem] mb-[0.75rem] aspect-square" />
-                    <h3>Data</h3>
+                    <img src="/images/icons/data_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
+                    <h3 className="serif font-[700]">Data</h3>
                     <p>Not only for UX research, but for all disciplines, data is a powerful key to uncovering patterns and themes. As a designer, whenever possible, I incorporate collecting and analyzing data into my work process to make more informed and intetional design choices.</p>
                 </div>
             </div>
