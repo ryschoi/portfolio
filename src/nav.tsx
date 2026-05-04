@@ -25,11 +25,11 @@ export default function NavBar() {
 
   return (
     <div className="w-full flex mt-[2.5rem] mb-[4.5rem] justify-between items-start">
-      <Link to="/" className="h-fit bold tracking-[-0.02rem]">
+      <Link to="/" className="h-fit bold tracking-[-0.02rem] hidden md:block">
         Rebecca Choi
       </Link>
 
-      <div className="flex gap-[3vw]">
+      <div className="flex mx-[4%] w-full justify-between md:m-0 md:w-fit md:gap-[3vw]">
         <button
           onClick={handleWorkClick}
           className={`p-[0px] caption bg-transparent

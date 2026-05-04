@@ -13,7 +13,7 @@ export default function WorkCard({ project }: { project: Project }) {
             <div className="flex justify-between">
                 <div className="flex flex-col gap-[0.3vh]">
                     <Link to={project.path} className="flex flex-col w-full">
-                        <h3>{project.summary}</h3>
+                        <h3 className="">{project.summary}</h3>
                     </Link>
                     <p className="caption">{project.name}, {project.year}</p>
                 </div>

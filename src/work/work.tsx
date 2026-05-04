@@ -50,7 +50,7 @@ export default function Work() {
           {/* <p className="green caption tracking-[-0.25px] mb-[-0.75rem]">
             ● Incoming @ Apple, summer 2026
           </p> */}
-          <div className="flex flex-col gap-[0.25rem] md:bg-red-600">
+          <div className="flex flex-col gap-[0.25rem]">
             <h1 className="tracking-[-0.3px]">Hi, I'm Rebecca.</h1>
             <h3 className="tracking-[-0.2px] gray">
               A developer-turned designer shaping digital experiences with

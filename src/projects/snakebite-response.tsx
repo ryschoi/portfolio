@@ -21,28 +21,48 @@ export default function snakebiteResponse() {
             <div className="project-content-rest">
                 <div className="section" id="research">
                     <SectionHeader title={sections[0].header} description={sections[0].description} />
-                    <p className="mt-no-optional w-slim">I started off by researching the current state of the snakebite crisis and how one might prevent fatal encounters with snakes, focusing material specific to Botswana or Africa. <br /><br />After collecting all the content for the poster, I decided to organize my information into the following three sections: indoor/home, outdoor/activity, and apparel.</p>
-
-                    {/* <Collapsible closedText="What I Do" content={<p className="italic gray">Wurman's L.A.T.C.H.: location, alphabet, time, category, hierarchyWurman's L.A.T.C.H.: location, alphabet, time, category, hierarchyWurman's L.A.T.C.H.: location, alphabet, time, category, hierarchy</p>} /> */}
-
-                    {/* <div className="w-slim">
-                        <img src="images/work/snakebite-response/headers.png" className="round w-full max-w-[90vw]" />
-                        <p className="caption">Headers in the final poster</p>
-                    </div> */}
+                    <p className="mt-no-optional w-slim dark-gray">I started off by researching the current state of the snakebite crisis and how one might prevent fatal encounters with snakes, focusing material specific to Botswana or Africa. <br /><br />After collecting all the content for the poster, I decided to organize my information into the following three sections: indoor/home, outdoor/activity, and apparel.</p>
                 </div>
 
                 <div className="section" id="poster-and-concept-design">
                     <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
-                    <p className="mt-no-optional w-slim">To start off, I put all the information I had onto the poster just to see what it would look like and to determine which direction I should take the poster in. While the design was pretty unsuccessful, it was extremely helpful for quickly determining what I should and shouldn't do in terms of color/style and the structure of the poster.</p>
-                    <div className="flex flex-col w-full w-slim">
+                    <p className="mt-no-optional w-slim dark-gray">To start off, I put all the information I had onto the poster just to see what it would look like and to determine which direction I should take the poster in.</p>
+                    <div className="flex flex-col w-full">
                         <div className="round img-bg flex place-content-center py-[4vw]">
                             <img src="images/work/snakebite-response/snakebite_first.png" alt="" className="w-[24rem] max-w-[84vw] subtle-shadow" />
                         </div>
                         <p className="caption cap-top">First version</p>
                     </div>
-                    <div className="round img-bg w-full flex place-content-center py-[2vw] w-full">
-                        <img src="images/work/snakebite-response/s-res-ver1-table.png" alt="" className="w-[65rem] max-w-[90vw]" />
+                    <div className="w-slim flex flex-col gap-[2rem]">
+                        <p className="dark-gray">While the design was pretty unsuccessful, it was extremely helpful for quickly determining what I should and shouldn't do in terms of color/style and the structure of the poster.</p>
+                        <div className="flex flex-col gap-[0.25rem]">
+                            <div className="flex gap-[2rem]">
+                                <p className="w-1/2 serif font-[800]">Issue</p>
+                                <p className="w-1/2 serif font-[800]">Solution</p>
+                            </div>
+                            <hr />
+                            <div className="flex gap-[2rem]">
+                                <p className="w-1/2">Some illustrations are 2D, some are 3D</p>
+                                <p className="w-1/2">Hand-draw illustrations and make all 3D to make scene more realistic</p>
+                            </div>
+                            <hr />
+                            <div className="flex gap-[2rem]">
+                                <p className="w-1/2">Green background competes with focus on content</p>
+                                <p className="w-1/2">Use light background</p>
+                            </div>
+                            <hr />
+                            <div className="flex gap-[2rem]">
+                                <p className="w-1/2">Hard to picture prevention actions from the illustrated objects alone</p>
+                                <p className="w-1/2">Illustrate an entire scene/picture of their lives</p>
+                            </div>
+                            <hr />
+                            <div className="flex gap-[2rem]">
+                                <p className="w-1/2">Snake does not really guide viewer through sections as intended</p>
+                                <p className="w-1/2">Get rid of snake and establish hierarchy through spacing</p>
+                            </div>
+                        </div>
                     </div>
+                    <h2 className="w-slim mt-[4rem]">Final poster</h2>
                     <div className="flex flex-col w-full">
                         <div className="round sres-bg flex place-content-center py-[4vw]">
                             <img src="images/work/snakebite-response/snakebitePrevention.png" alt="" className="h-[44vw] max-w-[84vw]" />

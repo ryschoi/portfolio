@@ -11,7 +11,7 @@ import Collapsible from "../components/collapsible";
 export default function SnakebiteData() {
     const thisProject = projects.find(p => p.path === "/snakebite-data");
     const sections: section[] = [
-        { id: "data-collection-and-engineering", header: "Data collection and engineering", description: "Gather data sets and create preliminary data visualizations", optional: "I got various data sets of climate conditions from Our World in Data. In Excel, I cleaned them up so I could work with them in one workbook, and then created initial visualizations (that I later moved to Illustrator)." },
+        { id: "data-collection-and-engineering", header: "Data collection and engineering", description: "Gather data sets and create preliminary data visualizations" },
         { id: "data-visualization", header: "Data visualization", description: "Establishing a clear visual language and data story", optional: "In Illustrator, I not only edited individual visualizations, creating one consistent look for the poster, but I also had to make sure that each of the visualizations, once pieced together, told one cohesive story." },
         { id: "final-deliverable", header: "Final deliverable", description: "A5-size poster" },
         { id: "reflection", header: "Reflection", description: "My first data visualization project", optional: "I learned that a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but about representing the data in a language the audience can understand." }
@@ -22,6 +22,7 @@ export default function SnakebiteData() {
             <div className="project-content-rest">
                 <div className="section w-slim" id="data-collection-and-engineering">
                     <SectionHeader title={sections[0].header} description={sections[0].description} optional={sections[0].optional} />
+                    <p className="mt-no-optional w-slim dark-gray">I got various data sets of climate conditions from Our World in Data. In Excel, I cleaned them up so I could work with them in one workbook, and then created initial visualizations (that I later moved to Illustrator).</p>
                 </div>
                 <FloatingNav sections={sections} />
                 {/* DATA VISUALIZATION */}
@@ -29,7 +30,7 @@ export default function SnakebiteData() {
                     <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
 
                     {/* FIRST DRAFT */}
-                    <h4 className="gray w-slim">The first iteration of the poster prompted changes being needed surrounding choosing the right type of visualizations to use and refining the visual style.</h4>
+                    <p className="dark-gray w-slim">The first iteration of the poster prompted changes being needed surrounding choosing the right type of visualizations to use and refining the visual style.</p>
                     <div className="w-slim img-bg round flex place-content-center p-[4vw] box-border">
                         <img src="/images/work/snakebite-data/first-crit-feedback.png" alt="" className="self-center subtle-shadow w-full" />
                     </div>

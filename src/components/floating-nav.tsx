@@ -32,7 +32,7 @@ export default function FloatingNav({ sections }: { sections: section[] }) {
     }, [sections]);
 
     return (
-        <div className="floating-nav group hidden tablet:block">
+        <div className="floating-nav group hidden md:block">
             {sections.map((section) => (
                 <button
                     key={section.id}

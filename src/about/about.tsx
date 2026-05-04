@@ -120,23 +120,22 @@ export default function About() {
           <br />
           <h4 className="serif">Experience</h4>
           <div className="flex flex-col gap-[0.25rem]">
-            <div className="flex flex-col tablet:flex-row justify-between">
-              {/* <LinkHover label="case study coming soon" children={<p className="gray"><span className="black">Apple, </span>Human Interface Design Intern</p>} /> */}
+            <div className="flex flex-col md:flex-row justify-between">
               <p className="gray"><span className="black">Apple, </span>Human Interface Design Intern</p>
-              <p className="caption color-[#999999] text-[0.8rem] tablet:text-[0.85rem]">Incoming Summer 2026</p>
+              <p className="caption color-[#999999] text-[0.8rem] md:text-[0.85rem]">Incoming Summer 2026</p>
             </div>
             <hr />
             <LinkHover href="../cooper" label="go to case study" children={
-              <div className="flex flex-col tablet:flex-row justify-between hover:italic">
+              <div className="flex flex-col md:flex-row justify-between hover:italic">
                 <p className="gray"><span className="black">Sandbox, </span>Design Lead for <a className="underline" href="/cooper">Cooper</a></p>
-                <p className="caption color-[#999999] text-[0.8rem] tablet:text-[0.85rem]">Since Jan 2025</p>
+                <p className="caption color-[#999999] text-[0.8rem] md:text-[0.85rem]">Since Jan 2025</p>
               </div>
             } />
             <hr />
             <LinkHover label="case study coming soon" children={
-              <div className="flex flex-col tablet:flex-row justify-between hover:italic">
+              <div className="flex flex-col md:flex-row justify-between hover:italic">
                 <p className="gray"><span className="black">Boston Beer Company, </span>Marketing Analytics Co-op</p>
-                <p className="caption color-[#999999] text-[0.8rem] tablet:text-[0.85rem]">Jul - Dec 2025</p>
+                <p className="caption color-[#999999] text-[0.8rem] md:text-[0.85rem]">Jul - Dec 2025</p>
               </div>
             } />
           </div>
