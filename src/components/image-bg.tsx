@@ -13,9 +13,9 @@ export default function ImageBG({ project }: { project: Project }) {
                             <Pill hover={false} clicked={true} text={tag} />
                         ))}
                     </div>
-                    <div className="mt-[6vw] tablet:mt-[3vw]">
+                    <div className="mt-[6vw] md:mt-[3vw]">
                         <img src={project.frontImage} alt=""
-                            className="w-[18rem] h-[22rem] tablet:w-[34rem] tablet:h-[40rem] subtle-shadow object-cover object-top"
+                            className="w-[18rem] h-[22rem] md:w-[34rem] md:h-[40rem] subtle-shadow object-cover object-top"
                         />
                     </div>
                 </div>
@@ -28,10 +28,10 @@ export default function ImageBG({ project }: { project: Project }) {
                                 <Pill text={tag} hover={false} clicked={true} />
                             ))}
                     </div>
-                    <div className="my-[5vw] tablet:my-[3vw]">
+                    <div className="my-[5vw] md:my-[3vw]">
                         {project.id === 12 ? (
                             <video autoPlay loop playsInline muted src="images/work/open-forum/open-forum-video.mov"
-                                className="w-[14rem] tablet:w-[18rem] round-[3rem]" />
+                                className="w-[14rem] md:w-[18rem] round-[3rem]" />
                         ) : project.id === 13 ? (
                             <video autoPlay loop playsInline muted src="images/work/alihacks/full_proto.mov"
                                 className="w-[44rem] max-w-[85vw] subtle-shadow object-cover" />
@@ -110,7 +110,7 @@ export default function ImageBG({ project }: { project: Project }) {
                         </div>
                     </div>
                     <div className="zoom img-bg work-add-img-cont overflow-hidden">
-                        <div className="self-center mt-[2rem] tablet:mt-[4rem] h-[50vh] object-contain">
+                        <div className="self-center mt-[2rem] md:mt-[4rem] h-[50vh] object-contain">
                             <img src="/images/work/open-forum/AI details.png" alt="" className="w-[24vw] min-w-[18rem] subtle-shadow" />
                         </div>
                     </div>
