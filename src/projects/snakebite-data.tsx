@@ -2,13 +2,12 @@ import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import SectionHeader from "../components/section-header";
-import VerticalImageSpan from "../components/vertical-image-span";
 import { Project } from "./project";
 import { section } from "./section";
 import FloatingNav from "../components/floating-nav";
 import Collapsible from "../components/collapsible";
 import { useScrollTheme } from "../components/useScrollTheme";
-import { useRef, useEffect } from 'react'
+import { useRef } from 'react'
 
 export default function SnakebiteData() {
     const thisProject = projects.find(p => p.path === "/snakebite-data");

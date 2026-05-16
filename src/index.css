@@ -16,10 +16,11 @@
 }
 
 .dark {
-  --text: #fdfdfd;
+  --text: #d7d7d7;
   --bg: #212121;
-  --gray: #c6c6c6;
+  --gray: #989898;
   --dark-gray: #9a9a9a;
+  --color-green: #d7d285;
 }
 
 @font-face {
@@ -203,6 +204,18 @@ body {
   hr {
     border: 0.7px solid #dcdcdc;
   }
+
+  .dark hr {
+    border: 0.7px solid #4a4a4a;
+  }
+
+  .full-bleed {
+    width: 100vw;
+    margin-left: -4vw;
+    margin-right: -4vw;
+  }
+
+  
 }
 
 @layer components {
@@ -344,12 +357,12 @@ body {
   .dark .nav-dot.active .dot {
     height: 1.25rem;
     border-radius: 999px;
-    background: #dbdbdb;
+    background: #f8f5f4;
   }
 
   .caption {
     font-family: 'Space Mono';
-    color: #727272;
+    color: var(--gray);
     text-transform: uppercase;
     font-size: var(--ps-size);
   }

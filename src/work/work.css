@@ -46,6 +46,10 @@
   cursor: pointer;
 }
 
+.dark .up-arrow {
+  color: oklch(32.11% 0 0);
+}
+
 .up-arrow:hover,
 .process-button:hover {
   background-color: var(--color-tag-hover);
