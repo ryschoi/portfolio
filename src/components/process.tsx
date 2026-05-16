@@ -1,4 +1,4 @@
-import { section } from "projects/section";
+import { section } from "../projects/section";
 
 export default function ProcessBox({ sectionsList }: { sectionsList: section[] }) {
     const handleScroll = (item: string) => {

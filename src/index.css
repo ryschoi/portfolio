@@ -6,6 +6,22 @@
 @import "tailwindcss";
 @source "./**/*.{js,ts,jsx,tsx}";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --text: var(--color-black);
+  --bg: #f7f6f4;
+  --gray: #676767;
+  --dark-gray: #575757;
+}
+
+.dark {
+  --text: #fdfdfd;
+  --bg: #212121;
+  --gray: #c6c6c6;
+  --dark-gray: #9a9a9a;
+}
+
 @font-face {
   font-family: 'Eiko-Thin';
   src: url('/fonts/eiko/PPEiko-Thin.otf') format('opentype');
@@ -61,8 +77,8 @@
 }
 
 body {
-  /* background-color: #F9F8F6; */
-  background-color: #f7f6f4;
+  background-color: var(--bg);
+  transition: background-color 0.4s ease;
 }
 
 #root {
@@ -74,7 +90,7 @@ body {
     font-family: 'Hanken Grotesk', sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
     margin: 0;
-    color: var(--color-black);
+    color: var(--text);
   }
 
   .eiko {
@@ -108,7 +124,7 @@ body {
     padding-left: 1.4rem;
   }
 
-  ul li{
+  ul li {
     padding-left: 0.3rem;
   }
 
@@ -190,6 +206,22 @@ body {
 }
 
 @layer components {
+  .subtle-shadow {
+    filter: drop-shadow(0 0 3rem #d0d0d0)
+  }
+
+  .dark .subtle-shadow {
+    filter: drop-shadow(0 0 3rem #2f2f2f)
+  }
+
+  .img-bg {
+    background-color: #00000007
+  }
+
+  .dark .img-bg {
+    background-color: #ffffff07
+  }
+
   .pill {
     background-color: var(--color-tag-bg);
     color: var(--color-black);
@@ -250,18 +282,16 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    width: 0.5rem; /* explicit width = just the dot */
-
+    width: 0.5rem;
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 0.4rem 0; /* vertical hit area without affecting width */
-
+    padding: 0.4rem 0;
     color: inherit;
-}
+  }
 
-.dot {
-    display: block; /* ensure it renders as a block */
+  .dot {
+    display: block;
     flex-shrink: 0;
     width: 0.5rem;
     height: 0.5rem;
@@ -269,14 +299,14 @@ body {
     background: #a0a0a0;
 
     transition:
-        height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 0.5s ease 0.05s,
-        transform 0.25s ease;
-}
+      height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 0.5s ease 0.05s,
+      transform 0.25s ease;
+  }
 
-.label {
+  .label {
     position: absolute;
-    left: calc(0.5rem + 0.55rem); /* dot width + gap */
+    left: calc(0.5rem + 0.55rem);
     top: 50%;
     transform: translateY(-50%) translateX(-4px);
     white-space: nowrap;
@@ -294,22 +324,28 @@ body {
     transition: opacity 0.25s ease, transform 0.25s ease;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-}
+  }
 
-.nav-dot:hover .label {
+  .nav-dot:hover .label {
     opacity: 1;
     transform: translateY(-50%) translateX(0);
-}
+  }
 
-.nav-dot:hover .dot {
+  .nav-dot:hover .dot {
     transform: scale(1.25);
-}
+  }
 
-.nav-dot.active .dot {
+  .nav-dot.active .dot {
     height: 1.25rem;
     border-radius: 999px;
     background: #3f3f3f;
-}
+  }
+
+  .dark .nav-dot.active .dot {
+    height: 1.25rem;
+    border-radius: 999px;
+    background: #dbdbdb;
+  }
 
   .caption {
     font-family: 'Space Mono';
@@ -360,11 +396,11 @@ body {
   }
 
   .gray {
-    color: #676767;
+    color: var(--gray);
   }
 
   .dark-gray {
-    color: #575757;
+    color: var(--dark-gray);
   }
 
   .black {

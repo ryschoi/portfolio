@@ -116,18 +116,18 @@ export default function About() {
 
         {/* CURRENTLY */}
         <div className="thing">
-          <p className="gray">I was born and raised in the temperate Bay Area, and now I'm in Boston, MA studying Computer Science and Design at Northeastern University.</p>
+          <p className="gray">I was born and raised in the Bay Area, and now I'm in Boston studying Computer Science and Design at Northeastern University.</p>
           <br />
           <h4 className="serif">Experience</h4>
           <div className="flex flex-col gap-[0.25rem]">
             <div className="flex flex-col md:flex-row justify-between">
               <p className="gray"><span className="black">Apple, </span>Human Interface Design Intern</p>
-              <p className="caption color-[#999999] text-[0.8rem] md:text-[0.85rem]">Incoming Summer 2026</p>
+              <p className="caption color-[#999999] text-[0.8rem] md:text-[0.85rem]">Since May 2026</p>
             </div>
             <hr />
             <LinkHover href="../cooper" label="go to case study" children={
               <div className="flex flex-col md:flex-row justify-between hover:italic">
-                <p className="gray"><span className="black">Sandbox, </span>Design Lead for <a className="underline" href="/cooper">Cooper</a></p>
+                <p className="gray"><span className="black">Sandbox, </span>Design Lead for Cooper</p>
                 <p className="caption color-[#999999] text-[0.8rem] md:text-[0.85rem]">Since Jan 2025</p>
               </div>
             } />
@@ -151,17 +151,17 @@ export default function About() {
           <div className="carousel-container">
             <div className="carousel-viewport">
               <div className="slides-wrapper">
-                <SlideImg src="images/nara.png" caption="My dog Nara" vert={false} />
-                <SlideImg src="images/cooper hangout.PNG" caption="The Cooper team!" vert={false} />
-                <SlideImg src="images/cookies.png" caption="Holiday cookie boxes" vert={false} />
+                <SlideImg src="images/nara4.png" caption="My dog Nara" vert={false} />
+                {/* <SlideImg src="images/cooper hangout.PNG" caption="The Cooper team!" vert={false} /> */}
+                <SlideImg src="images/yogurt2.png" caption="Me + greek yogurt 🤝🏼" vert={true} />
                 <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
                 <SlideImg src="images/polaroid.png" caption="" vert={true} />
                 <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />
                 <SlideImg src="images/northeastern_campus.png" caption="Campus in the fall" vert={true} />
                 <SlideImg src="images/arboretum wide.jpg" caption="Trees" vert={false} />
-                <SlideImg src="images/nara.png" caption="My dog Nara" vert={false} />
-                <SlideImg src="images/cooper hangout.PNG" caption="The Cooper team!" vert={false} />
-                <SlideImg src="images/cookies.png" caption="Holiday cookie boxes" vert={false} />
+                <SlideImg src="images/nara4.png" caption="My dog Nara" vert={false} />
+                {/* <SlideImg src="images/cooper hangout.PNG" caption="The Cooper team!" vert={false} /> */}
+                <SlideImg src="images/yogurt2.png" caption="Me + greek yogurt 🤝🏼" vert={true} />
                 <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
                 <SlideImg src="images/polaroid.png" caption="" vert={true} />
                 <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />

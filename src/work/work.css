@@ -1,6 +1,6 @@
-.img-bg {
+/* .img-bg {
   background-color: #00000007;
-}
+} */
 
 .dark-img-bg {
   background-color: #272727;
@@ -126,10 +126,6 @@
   background-color: #D3D3D3;
 }
 
-.subtle-shadow {
-  filter: drop-shadow(0 0 3rem #d0d0d0)
-}
-
 .smaller-shadow {
   filter: drop-shadow(0 0 1.5rem #d0d0d0)
 }
@@ -212,6 +208,11 @@
   /* font-weight: bold; */
   font-family: 'Nanum Myeongjo', serif;
   color: #333333;
+}
+
+.card-header:hover {
+  background-color: #e9e7d8;
+  /* transition: transform 3s; */
 }
 
 .plus-minus {

@@ -23,7 +23,6 @@ import AliHacks from "./projects/ali-hacks";
 import BostonBeer from "./projects/bostonbeer";
 import PortfolioWebsite from "./projects/portfolio";
 
-
 export default function App() {
   return (
     <Router>

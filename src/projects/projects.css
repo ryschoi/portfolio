@@ -24,6 +24,30 @@
     background-color: #212121;
 }
 
+.process-cont {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    margin-left: calc(-4vw);
+    margin-right: calc(-4vw);
+}
+
+.dark-section {
+    width: 100vw;
+    margin-top: -2.5rem;
+    margin-bottom: -2.5rem;
+    margin-left: calc(-4vw);
+    margin-right: calc(-4vw);
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.bg-trans {
+    transition: background-color 0.5s ease;
+}
+
 .gray-full-container {
     width: 100vw;
     margin-left: calc(-4vw);

@@ -47,14 +47,15 @@ export default function Work() {
           className="w-[8rem] object-contain"
         />
         <div className="w-[42rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[1.5rem]">
-          {/* <p className="green caption tracking-[-0.25px] mb-[-0.75rem]">
-            ● Incoming @ Apple, summer 2026
-          </p> */}
+          <p className="green caption tracking-[-0.25px] mb-[-0.75rem]">
+            ● Design @ Apple | CS & Design @ Northeastern
+          </p>
           <div className="flex flex-col gap-[0.25rem]">
             <h1 className="tracking-[-0.3px]">Hi, I'm Rebecca.</h1>
             <h3 className="tracking-[-0.2px] gray">
-              A developer-turned designer shaping digital experiences with
-              clarity and craft.
+              {/* A developer-turned designer shaping digital experiences with
+              clarity and craft. */}
+              Crafting digital experiences with clarity and intent.
             </h3>
           </div>
           <div className="flex flex-wrap gap-[0.5rem] mt-[-0.5rem]">
