@@ -51,20 +51,20 @@ export default function SnakebiteData() {
                         <h3 className="gray">Representing data in a visual and proportionately-accurate way</h3>
                     </div>
 
-                    <div className="work-img-group-col subtle-shadow">
-                        <div className="round flex flex-col gap-[1rem] box-border">
+                    <div className="md:flex md:flex-row flex flex-col gap-y-[2rem] md:gap-[0.5rem] subtle-shadow">
+                        <div className="round flex flex-col gap-[1rem] box-border w-full">
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
                                 <img src="/images/work/snakebite-data/s-data-bars.png" alt="" className="" />
                             </div>
                             <p className="ml-[0.5rem] w-9/10"><span className="caption">version 1 (bars) - </span>Arbitrary bar sizes. Only takeaway is the numeric difference in value and the general visual size difference</p>
                         </div>
-                        <div className="round flex flex-col gap-[1rem] box-border">
+                        <div className="round flex flex-col gap-[1rem] box-border w-full">
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
                                 <img src="/images/work/snakebite-data/s-data-sun.png" alt="" className="max-h-[15rem] self-center" />
                             </div>
                             <p className="ml-[0.5rem] w-9/10"><span className="caption">version 2 (illustrations) - </span>Illustrations showed what the climates might look like, but the visuals were also arbitrarily-sized and therefore not very informative</p>
                         </div>
-                        <div className="round flex flex-col gap-[1rem] box-border">
+                        <div className="round flex flex-col gap-[1rem] box-border w-full">
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
                                 <img src="/images/work/snakebite-data/s-data-circles.png" alt="" className="max-h-[15rem] self-center" />
                             </div>
