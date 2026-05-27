@@ -264,3 +264,12 @@
     gap: 0.5rem;
     align-self: center;
 }
+
+@keyframes live-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.live-pulse {
+  animation: live-blink 2s ease-in-out infinite;
+}

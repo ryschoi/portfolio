@@ -158,6 +158,10 @@ body {
     font-size: 22px;
   }
 
+  .nanum {
+    font-family: 'Nanum Myeongjo', serif;
+  }
+
   h3,
   .h3 {
     margin: var(--zero);

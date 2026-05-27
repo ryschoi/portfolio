@@ -41,31 +41,24 @@ export default function Work() {
   return (
     <div className="flex flex-col">
       {/* GREETING */}
-      <div className="flex flex-wrap gap-[2rem] items-center mt-[7.5rem] mb-[12rem] self-center">
+      <div className="flex gap-[2.75rem] items-center mt-[7.5rem] mb-[12rem] self-center">
         <img
+          className="hidden md:block w-[8rem] object-contain"
           src="images/website-assets/notion_face.png"
-          className="w-[8rem] object-contain"
         />
-        <div className="w-[42rem] mx-[1rem] max-w-[80vw] flex flex-col gap-[1.5rem]">
-          <p className="green caption tracking-[-0.25px] mb-[-0.75rem]">
-            ● Design @ Apple | CS & Design @ Northeastern
-          </p>
-          <div className="flex flex-col gap-[0.25rem]">
-            <h1 className="tracking-[-0.3px]">Hi, I'm Rebecca.</h1>
-            <h3 className="tracking-[-0.2px] gray">
-              {/* A developer-turned designer shaping digital experiences with
-              clarity and craft. */}
-              Crafting digital experiences with clarity and intent.
-            </h3>
-          </div>
+        <div className="w-slim md:w-[42rem] flex flex-col gap-[2rem] md:gap-[1.75rem]">
+          <p className="green caption tracking-[-0.25px] mb-[-0.75rem]"><span className="live-pulse caption green">●</span> Design @ Apple, cs & Design @ Northeastern</p>
+          <h1 className="nanum leading-[1.3]">Hi, I'm Rebecca, a designer blending thorough product thinking with visual craft</h1>
           <div className="flex flex-wrap gap-[0.5rem] mt-[-0.5rem]">
             <Pill
               hover={true}
               clicked={false}
               path="/background"
-              text="Read about my work background"
               tooltip="What are my design principles? Why tech + design? How did I get here??"
-            />
+            >
+              <span className="hidden md:inline">Read about my work background</span>
+              <span className="md:hidden">Work background</span>
+            </Pill>
             <Pill
               hover={true}
               clicked={false}
@@ -95,9 +88,8 @@ export default function Work() {
               <Pill hover={true} clicked={isSelected}>
                 {tag}{" "}
                 <span
-                  className={`text-[0.85rem] ${
-                    isSelected ? "light-gray" : "gray"
-                  }`}
+                  className={`text-[0.85rem] ${isSelected ? "light-gray" : "gray"
+                    }`}
                 >
                   {count}
                 </span>
