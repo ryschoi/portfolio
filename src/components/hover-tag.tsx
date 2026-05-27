@@ -109,7 +109,7 @@ export default function HoverTag({
           transition: "opacity 0.15s ease",
         }}
       >
-        <span className={`${pillBase} green-tag`}>
+        <span className={`${pillBase} green-tag ${className}`}>
           {label}
         </span>
       </span>

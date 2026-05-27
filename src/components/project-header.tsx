@@ -1,14 +1,14 @@
 import { Project } from "../projects/project";
 import ProcessBox from "./process";
-import { section } from "projects/section";
+import { section } from "../projects/section";
 import Pill from "./pill";
 
 export default function ProjectHeader({ project, sections }: { project: Project, sections: section[] }) {
     return (
         <div className="flex flex-col items-center mb-[6rem] w-full gap-[2rem]">
             {/* TOP TITLE */}
-            <div className="mob-mid-w flex flex-col gap-[0.35rem]">
-                <h1 className="mb-[0.15rem] tracking-[-0.3px]">{project.summary}</h1>
+            <div className="mob-mid-w flex flex-col gap-[0.5rem]">
+                <h1 className="serif tracking-[-0.3px]">{project.summary}</h1>
                 <p className="caption">{project.name}, {project.year}</p>
                 <div className="flex gap-[0.5rem] tag-position-2 mt-[0.5rem]">
                     {project.tags.map((tag) => (

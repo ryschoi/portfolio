@@ -2,39 +2,48 @@ import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
 import SectionHeader from "../components/section-header";
-import VerticalImageSpan from "../components/vertical-image-span";
 import { Project } from "./project";
 import { section } from "./section";
 import FloatingNav from "../components/floating-nav";
 import Collapsible from "../components/collapsible";
+import { useScrollTheme } from "../components/useScrollTheme";
+import { useRef } from 'react'
 
 export default function SnakebiteData() {
     const thisProject = projects.find(p => p.path === "/snakebite-data");
     const sections: section[] = [
-        { id: "data-collection-and-engineering", header: "Data collection and engineering", description: "Gather data sets and create preliminary data visualizations", optional: "I got various data sets of climate conditions from Our World in Data. In Excel, I cleaned them up so I could work with them in one workbook, and then created initial visualizations (that I later moved to Illustrator)." },
-        { id: "data-visualization", header: "Data visualization", description: "Establishing a clear visual language and data story", optional: "In Illustrator, I not only edited individual visualizations, creating one consistent look for the poster, but I also had to make sure that each of the visualizations, once pieced together, told one cohesive story." },
+        { id: "data-collection-and-engineering", header: "Data collection and engineering", description: "Gather data sets and create preliminary data visualizations" },
+        { id: "data-visualization", header: "Data visualization", description: "Storytelling with the data through clear visual language", optional: "My approach for the design was not just to edit individual visualizations, but to make each of the visualizations, once pieced together, tell one cohesive story." },
         { id: "final-deliverable", header: "Final deliverable", description: "A5-size poster" },
         { id: "reflection", header: "Reflection", description: "My first data visualization project", optional: "I learned that a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but about representing the data in a language the audience can understand." }
     ];
+
+    const dataVizRef = useRef<HTMLDivElement>(null)
+    useScrollTheme({ ref: dataVizRef })
+
     return (
-        <div className="project-content">
+        <div className="project-content bg-trans">
             <ProjectHeader project={thisProject as Project} sections={sections} />
             <div className="project-content-rest">
                 <div className="section w-slim" id="data-collection-and-engineering">
                     <SectionHeader title={sections[0].header} description={sections[0].description} optional={sections[0].optional} />
+                    <p className="mt-no-optional w-slim dark-gray">I got data sets for various climate conditions from Our World in Data. In Excel, I cleaned them up so I could work with them in one workbook, and then created initial visualizations that I later moved to Illustrator.</p>
                 </div>
+
                 <FloatingNav sections={sections} />
+
                 {/* DATA VISUALIZATION */}
                 <div className="section self-center" id="data-visualization">
                     <SectionHeader title={sections[1].header} description={sections[1].description} optional={sections[1].optional} />
 
                     {/* FIRST DRAFT */}
-                    <h4 className="gray w-slim">The first iteration of the poster prompted changes being needed surrounding choosing the right type of visualizations to use and refining the visual style.</h4>
-                    <div className="w-slim img-bg round flex place-content-center p-[4vw] box-border">
-                        <img src="/images/work/snakebite-data/first-crit-feedback.png" alt="" className="self-center subtle-shadow w-full" />
+                    <div className="flex flex-col gap-[2rem] self-center">
+                        <p className="dark-gray w-slim">The first iteration of the poster prompted changes being needed surrounding choosing the right type of visualizations to use and refining the visual style.</p>
+                        <div className="w-slim img-bg round flex place-content-center p-[4vw] box-border">
+                            <img src="/images/work/snakebite-data/first-crit-feedback.png" alt="" className="self-center w-full subtle-shadow" />
+                        </div>
                     </div>
                 </div>
-
                 {/* ISOTYPES */}
                 <div className="flex flex-col mt-[1rem] gap-[1.5rem] align-center w-full">
                     <div className="flex flex-col w-slim">
@@ -42,33 +51,24 @@ export default function SnakebiteData() {
                         <h3 className="gray">Representing data in a visual and proportionately-accurate way</h3>
                     </div>
 
-                    <div className="work-img-group-col">
-                        <div className="round flex flex-col gap-[1.25rem] box-border">
+                    <div className="md:flex md:flex-row flex flex-col gap-y-[2rem] md:gap-[0.5rem] subtle-shadow">
+                        <div className="round flex flex-col gap-[1rem] box-border w-full">
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
                                 <img src="/images/work/snakebite-data/s-data-bars.png" alt="" className="" />
                             </div>
-                            <div className="flex flex-col gap-[0.15rem] ml-[0.5rem] w-6/7">
-                                <p className="h4">First version: bars</p>
-                                <p>Arbitrary bar sizes–only takeaway is the difference value and the general size difference</p>
-                            </div>
+                            <p className="ml-[0.5rem] w-9/10"><span className="caption">version 1 (bars) - </span>Arbitrary bar sizes. Only takeaway is the numeric difference in value and the general visual size difference</p>
                         </div>
-                        <div className="round flex flex-col gap-[1.25rem] box-border">
+                        <div className="round flex flex-col gap-[1rem] box-border w-full">
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
                                 <img src="/images/work/snakebite-data/s-data-sun.png" alt="" className="max-h-[15rem] self-center" />
                             </div>
-                            <div className="flex flex-col gap-[0.15rem] ml-[0.5rem] w-6/7">
-                                <p className="h4">Second version: illustrations</p>
-                                <p>Illustrations showed what the climates might look like, but the visuals were also arbitrarily-sized and therefore not very informative</p>
-                            </div>
+                            <p className="ml-[0.5rem] w-9/10"><span className="caption">version 2 (illustrations) - </span>Illustrations showed what the climates might look like, but the visuals were also arbitrarily-sized and therefore not very informative</p>
                         </div>
-                        <div className="round flex flex-col gap-[1.25rem] box-border">
+                        <div className="round flex flex-col gap-[1rem] box-border w-full">
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
                                 <img src="/images/work/snakebite-data/s-data-circles.png" alt="" className="max-h-[15rem] self-center" />
                             </div>
-                            <div className="flex flex-col gap-[0.15rem] ml-[0.5rem] w-6/7">
-                                <p className="h4">Final version: isotypes</p>
-                                <p>Isotypes representative of the actual proportions of the numbers makes it much easier to accurately gauge the values of each measurement</p>
-                            </div>
+                            <p className="ml-[0.5rem] w-9/10"><span className="caption">final version (isotypes) - </span>Isotypes representative of the actual proportions of the numbers makes it much easier to accurately gauge the values of each measurement</p>
                         </div>
                     </div>
                 </div>
@@ -106,11 +106,12 @@ export default function SnakebiteData() {
                 </div>
 
                 {/* FINAL */}
-                <div className="section" id="final-deliverable">
-                    <SectionHeader title={sections[2].header} description={sections[2].description} />
-                    {/* <VerticalImageSpan path="images/work/snakebite-data/snakebiteData.png" /> */}
-                    <div className="round img-bg w-full flex place-content-center py-[4vw]">
-                        <img src="images/work/snakebite-data/snakebiteData.png" alt="" className="w-[44rem] max-w-[84vw] subtle-shadow" />
+                <div ref={dataVizRef} className="dark-section">
+                    <div className="section" id="final-deliverable">
+                        <SectionHeader title={sections[2].header} description={sections[2].description} />
+                        <div className="round img-bg w-full flex place-content-center py-[4vw]">
+                            <img src="images/work/snakebite-data/snakebiteData.png" alt="" className="w-[48rem] max-w-[84vw] subtle-shadow" />
+                        </div>
                     </div>
                 </div>
 
@@ -121,6 +122,6 @@ export default function SnakebiteData() {
                         Getting to learn about and put my design skills to raise awareness about the global snakebite crisis reminded me how meaningful design can be. While this poster only covers climate conditions, I'd love to expand the story with the incorporation of data for things wealth, lifestyle, hospital accessibility, and government funding.</p>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }

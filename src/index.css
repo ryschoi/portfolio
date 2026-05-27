@@ -1,10 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://vetrivelcsamy.github.io/cheltenham-classic/cheltenhamclassic.css');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Myeongjo&display=swap');
 
 @import "tailwindcss";
 @source "./**/*.{js,ts,jsx,tsx}";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --text: var(--color-black);
+  --bg: #f7f6f4;
+  --gray: #676767;
+  --dark-gray: #575757;
+}
+
+.dark {
+  --text: #d7d7d7;
+  --bg: #212121;
+  --gray: #989898;
+  --dark-gray: #9a9a9a;
+  --color-green: #d7d285;
+}
+
+@font-face {
+  font-family: 'Eiko-Thin';
+  src: url('/fonts/eiko/PPEiko-Thin.otf') format('opentype');
+}
 
 @theme {
   --color-green: oklch(0.5952 0.1266 106.97);
@@ -48,11 +70,6 @@
 
   --callout-size: 2.5rem;
   --callout-leading: 3rem;
-
-  --breakpoint-*: initial;
-  --breakpoint-tablet: 40rem;
-  --breakpoint-laptop: 64rem;
-  --breakpoint-desktop: 80rem;
 }
 
 ::selection {
@@ -61,8 +78,8 @@
 }
 
 body {
-  /* background-color: #F9F8F6; */
-  background-color: #f7f6f4;
+  background-color: var(--bg);
+  transition: background-color 0.4s ease;
 }
 
 #root {
@@ -74,7 +91,15 @@ body {
     font-family: 'Hanken Grotesk', sans-serif;
     font-feature-settings: 'liga' 1, 'calt' 1;
     margin: 0;
-    color: var(--color-black);
+    color: var(--text);
+  }
+
+  .eiko {
+    font-family: 'Eiko-Thin', serif;
+  }
+
+  .coromont {
+    font-family: 'Cormorant', serif;
   }
 
   p,
@@ -87,12 +112,20 @@ body {
     text-transform: none;
   }
 
+  .p-sm {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 350;
+    text-transform: none;
+    letter-spacing: -1%;
+  }
+
   ul {
     list-style-type: disc;
     padding-left: 1.4rem;
   }
 
-  ul li{
+  ul li {
     padding-left: 0.3rem;
   }
 
@@ -106,13 +139,27 @@ body {
 
   h2,
   .h2 {
-    font-family: 'cheltenhamclassic', serif;
+    /* font-family: 'Eiko-Thin', serif; */
+    /* font-family: 'cheltenhamclassic', serif; */
+    /* font-family: 'Cormorant', serif; */
+    font-family: 'Nanum Myeongjo', serif;
     font-weight: 400;
     margin: var(--zero);
     font-size: var(--h2-size);
     line-height: var(--h2-leading);
     font-weight: var(--heading-weight);
     letter-spacing: -0.25px;
+  }
+
+  .serif-2 {
+    /* font-family: 'Crimson Text', serif; */
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 500;
+    font-size: 22px;
+  }
+
+  .nanum {
+    font-family: 'Nanum Myeongjo', serif;
   }
 
   h3,
@@ -161,9 +208,37 @@ body {
   hr {
     border: 0.7px solid #dcdcdc;
   }
+
+  .dark hr {
+    border: 0.7px solid #4a4a4a;
+  }
+
+  .full-bleed {
+    width: 100vw;
+    margin-left: -4vw;
+    margin-right: -4vw;
+  }
+
+  
 }
 
 @layer components {
+  .subtle-shadow {
+    filter: drop-shadow(0 0 3rem #d0d0d0)
+  }
+
+  .dark .subtle-shadow {
+    filter: drop-shadow(0 0 3rem #2f2f2f)
+  }
+
+  .img-bg {
+    background-color: #00000007
+  }
+
+  .dark .img-bg {
+    background-color: #ffffff07
+  }
+
   .pill {
     background-color: var(--color-tag-bg);
     color: var(--color-black);
@@ -224,18 +299,16 @@ body {
     display: flex;
     align-items: center;
     position: relative;
-    width: 0.5rem; /* explicit width = just the dot */
-
+    width: 0.5rem;
     background: transparent;
     border: none;
     cursor: pointer;
-    padding: 0.4rem 0; /* vertical hit area without affecting width */
-
+    padding: 0.4rem 0;
     color: inherit;
-}
+  }
 
-.dot {
-    display: block; /* ensure it renders as a block */
+  .dot {
+    display: block;
     flex-shrink: 0;
     width: 0.5rem;
     height: 0.5rem;
@@ -243,14 +316,14 @@ body {
     background: #a0a0a0;
 
     transition:
-        height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 0.5s ease 0.05s,
-        transform 0.25s ease;
-}
+      height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+      background-color 0.5s ease 0.05s,
+      transform 0.25s ease;
+  }
 
-.label {
+  .label {
     position: absolute;
-    left: calc(0.5rem + 0.55rem); /* dot width + gap */
+    left: calc(0.5rem + 0.55rem);
     top: 50%;
     transform: translateY(-50%) translateX(-4px);
     white-space: nowrap;
@@ -268,26 +341,32 @@ body {
     transition: opacity 0.25s ease, transform 0.25s ease;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-}
+  }
 
-.nav-dot:hover .label {
+  .nav-dot:hover .label {
     opacity: 1;
     transform: translateY(-50%) translateX(0);
-}
+  }
 
-.nav-dot:hover .dot {
+  .nav-dot:hover .dot {
     transform: scale(1.25);
-}
+  }
 
-.nav-dot.active .dot {
+  .nav-dot.active .dot {
     height: 1.25rem;
     border-radius: 999px;
     background: #3f3f3f;
-}
+  }
+
+  .dark .nav-dot.active .dot {
+    height: 1.25rem;
+    border-radius: 999px;
+    background: #f8f5f4;
+  }
 
   .caption {
     font-family: 'Space Mono';
-    color: #727272;
+    color: var(--gray);
     text-transform: uppercase;
     font-size: var(--ps-size);
   }
@@ -310,8 +389,10 @@ body {
   }
 
   .serif {
-    font-family: 'cheltenhamclassic', serif;
-    font-weight: 400;
+    /* font-family: 'cheltenhamclassic', serif; */
+    font-family: 'Nanum Myeongjo', serif;
+    /* font-family: 'Cormorant', serif; */
+    font-weight: 500;
   }
 
   .callout {
@@ -332,11 +413,11 @@ body {
   }
 
   .gray {
-    color: #727272;
+    color: var(--gray);
   }
 
   .dark-gray {
-    color: #575757;
+    color: var(--dark-gray);
   }
 
   .black {

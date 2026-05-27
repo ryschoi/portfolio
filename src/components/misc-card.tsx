@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { MiscProj } from "../misc/misc-proj";
-import MiscModal from "./misc-modal";
+// import MiscModal from "./misc-modal";
 
 export default function MiscCard({ project }: { project: MiscProj }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -29,7 +29,7 @@ export default function MiscCard({ project }: { project: MiscProj }) {
             {isOpen && (
                 <div className="fixed w-full flex z-50" onClick={() => setIsOpen(false)}>
                     <div className="overflow-auto" onClick={(e) => e.stopPropagation()}>
-                        <MiscModal project={project} />
+                        {/* <MiscModal project={project} /> */}
                     </div>
                 </div>
             )}

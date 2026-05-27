@@ -1,6 +1,6 @@
-.img-bg {
+/* .img-bg {
   background-color: #00000007;
-}
+} */
 
 .dark-img-bg {
   background-color: #272727;
@@ -44,6 +44,10 @@
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
+}
+
+.dark .up-arrow {
+  color: oklch(32.11% 0 0);
 }
 
 .up-arrow:hover,
@@ -126,10 +130,6 @@
   background-color: #D3D3D3;
 }
 
-.subtle-shadow {
-  filter: drop-shadow(0 0 3rem #d0d0d0)
-}
-
 .smaller-shadow {
   filter: drop-shadow(0 0 1.5rem #d0d0d0)
 }
@@ -148,7 +148,7 @@
   gap: 0.5rem;
   width: 100%;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
-  row-gap: 2rem;
+  row-gap: 0.5rem;
 }
 
 .work-img-group-col-bigger {
@@ -163,6 +163,8 @@
   display: flex;
   flex-direction: column;
   place-content: center;
+  width: 100%;
+  /* height: 100%; */
 }
 
 .left-border {
@@ -203,16 +205,25 @@
   font-size: 1rem;
   cursor: pointer;
   border-radius: 0.5rem;
-  font-family: 'Space Mono';
-  text-transform: uppercase;
-  font-size: var(--ps-size);
-  color: #00000085;
-  font-weight: bold;
+  /* font-family: 'Space Mono'; */
+  /* text-transform: uppercase; */
+  /* font-size: var(--ps-size); */
+  /* color: #00000085; */
+  /* font-weight: bold; */
+  font-family: 'Nanum Myeongjo', serif;
+  color: #333333;
+}
+
+.card-header:hover {
+  background-color: #e9e7d8;
+  /* transition: transform 3s; */
 }
 
 .plus-minus {
-  color: #00000085;
-  font-weight: bold;
+  /* color: #00000085; */
+  font-family: 'Hanken Grotesk', sans-sserif;
+  color: #333333;
+  font-weight: light;
   transition: transform 0.25s ease;
 }
 
@@ -221,8 +232,10 @@
 }
 
 .card-content {
-  background-color: #ffffff60;
+  /* background-color: #ffffff30; */
   /* background-color: #ffffff; */
+  /* background-color: #ecece1; */
+  background-color: #e9e7d8;
 
   border-radius: 0.5rem 0.5rem 0 0;
   max-height: 0;
@@ -231,14 +244,18 @@
 }
 
 .content {
-  margin: 1.25rem 1.5rem;
+  margin: 0% 2.2rem 1.25rem 2.2rem;
 }
 
 .card.open .card-content {
   max-height: 90vh;
   /* border: 2px solid #00000015; */
   box-sizing: border-box;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  /* box-shadow: 0 8px 20px rgba(0,0,0,0.1); */
+}
+
+.card.open {
+  background-color: #e9e7d8;
 }
 
 .thing {
@@ -246,4 +263,13 @@
     flex-direction: column;
     gap: 0.5rem;
     align-self: center;
+}
+
+@keyframes live-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.live-pulse {
+  animation: live-blink 2s ease-in-out infinite;
 }

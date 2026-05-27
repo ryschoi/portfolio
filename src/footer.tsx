@@ -29,7 +29,7 @@ export default function Footer() {
     };
 
     return (
-        <div id="footer" className="mt-[8rem] mb-[4.5rem]">
+        <div id="footer" className="w-slim mt-[8rem] mb-[4.5rem] md:w-full md:max-w-full">
             <hr />
             <br />
             <br />
@@ -59,7 +59,7 @@ export default function Footer() {
                         <p className="caption mb-[0.5rem]">Contact</p>
                         <p>rebecca.choi05@gmail.com</p>
                         <p>(510) 682-0020</p>
-                        <a href="https://www.linkedin.com/in/ryschoi/" className="underline">LinkedIn</a>
+                        {/* <a href="https://www.linkedin.com/in/ryschoi/" className="underline">LinkedIn</a> */}
                     </div>
                 </div>
             </div>
