@@ -56,19 +56,28 @@ export default function SnakebiteData() {
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
                                 <img src="/images/work/snakebite-data/s-data-bars.png" alt="" className="" />
                             </div>
-                            <p className="ml-[0.5rem] w-9/10"><span className="caption">version 1 (bars) - </span>Arbitrary bar sizes. Only takeaway is the numeric difference in value and the general visual size difference</p>
+                            <div>
+                                <p className="ml-[0.5rem] w-9/10 caption mb-[0.25rem]">version 1 (bars)</p>
+                                <p className="ml-[0.5rem] w-9/10">Arbitrary bar sizes. Only takeaway is the numeric difference in value and the general visual size difference</p>
+                            </div>
                         </div>
                         <div className="round flex flex-col gap-[1rem] box-border w-full">
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
                                 <img src="/images/work/snakebite-data/s-data-sun.png" alt="" className="max-h-[15rem] self-center" />
                             </div>
-                            <p className="ml-[0.5rem] w-9/10"><span className="caption">version 2 (illustrations) - </span>Illustrations showed what the climates might look like, but the visuals were also arbitrarily-sized and therefore not very informative</p>
+                            <div>
+                                <p className="ml-[0.5rem] w-9/10 caption mb-[0.25rem]">version 2 (illustrations)</p>
+                                <p className="ml-[0.5rem] w-9/10">Illustrations showed what the climates might look like, but the visuals were also arbitrarily-sized and therefore not very informative</p>
+                            </div>
                         </div>
                         <div className="round flex flex-col gap-[1rem] box-border w-full">
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
                                 <img src="/images/work/snakebite-data/s-data-circles.png" alt="" className="max-h-[15rem] self-center" />
                             </div>
-                            <p className="ml-[0.5rem] w-9/10"><span className="caption">final version (isotypes) - </span>Isotypes representative of the actual proportions of the numbers makes it much easier to accurately gauge the values of each measurement</p>
+                            <div>
+                                <p className="ml-[0.5rem] w-9/10 caption mb-[0.25rem]">final version (isotypes)</p>
+                                <p className="ml-[0.5rem] w-9/10">Isotypes representative of the actual proportions of the numbers makes it much easier to accurately gauge the values of each measurement</p>
+                            </div>
                         </div>
                     </div>
                 </div>

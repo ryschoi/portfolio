@@ -22,6 +22,20 @@ export default function Work() {
     }
   }, [location.state]);
 
+  // Enable scroll-snapping on the page (only while Work is mounted) so scrolling
+  // down from the top settles on the filters. `proximity` keeps it from trapping
+  // the scroll once you're past the filters into the work cards.
+  useEffect(() => {
+    const html = document.documentElement;
+    const prevBehavior = html.style.scrollBehavior;
+    html.classList.add("snap-y", "snap-proximity");
+    html.style.scrollBehavior = "smooth";
+    return () => {
+      html.classList.remove("snap-y", "snap-proximity");
+      html.style.scrollBehavior = prevBehavior;
+    };
+  }, []);
+
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
   const allTags = Array.from(
@@ -47,7 +61,7 @@ export default function Work() {
           src="images/website-assets/notion_face.png"
         />
         <div className="w-slim md:w-[42rem] flex flex-col gap-[2rem] md:gap-[1.75rem]">
-          <p className="green caption tracking-[-0.25px] mb-[-0.75rem]"><span className="live-pulse caption green">●</span> Design @ Apple, cs & Design @ Northeastern</p>
+          <p className="green caption tracking-[-0.25px] mb-[-0.75rem]"><span className="live-pulse caption green">●</span> Design Intern @ Apple, cs & Design @ Northeastern</p>
           <h1 className="nanum leading-[1.3]">Hi, I'm Rebecca, a designer blending thorough product thinking with visual craft</h1>
           <div className="flex flex-wrap gap-[0.5rem] mt-[-0.5rem]">
             <Pill
@@ -70,7 +84,7 @@ export default function Work() {
         </div>
       </div>
       {/* FILTERS */}
-      <div className="flex flex-wrap gap-[0.5rem] mb-[1.5rem]" id="filters">
+      <div className="flex flex-wrap gap-[0.5rem] mb-[1.5rem] snap-start scroll-mt-[6rem]" id="filters">
         {allTags.map((tag) => {
           const isSelected = selectedTag === tag;
           const count = projects.filter(

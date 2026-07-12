@@ -472,6 +472,28 @@ body {
     align-self: center;
   }
 
+  .mod-mid-w {
+    width: var(--mob-page-w);
+    max-width: 52rem;
+    align-self: center;
+  }
+
+  @media (max-width: 767px) {
+    .mod-mid-w {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   .hover-underline:hover {
     text-decoration: underline;
   }

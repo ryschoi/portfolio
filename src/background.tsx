@@ -1,47 +1,158 @@
-import Pill from "./components/pill";
+import { useEffect, useRef, useState } from "react";
+import ContentCard from "./components/content-card";
+
+// Non-first cards land slightly left of center by this many px (desktop only).
+const SHIFT = 48;
+// Mobile: how much of the previous card peeks above the focused card.
+const PEEK = 96;
+
+// Below the `md` breakpoint the cards flow in the page and the window scrolls
+// vertically; at/above `md` they live in a horizontal scroll container.
+const isVertical = () =>
+    typeof window !== "undefined" && window.matchMedia("(max-width: 767px)").matches;
 
 export default function Background() {
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [active, setActive] = useState(0);
+
+    // Desktop horizontal scroll target for card `i`: first at the left edge, last
+    // at the right edge, others just left of center. Measured via bounding rects
+    // so it's independent of the container's offset parent.
+    const snapLeft = (container: HTMLDivElement, i: number) => {
+        const card = container.children[i] as HTMLElement;
+        const cardRect = card.getBoundingClientRect();
+        const view = container.getBoundingClientRect();
+        if (i === 0) {
+            return Math.max(0, container.scrollLeft + (cardRect.left - view.left));
+        }
+        if (i === container.children.length - 1) {
+            return Math.max(0, container.scrollLeft + (cardRect.right - view.right));
+        }
+        const cardCenter = cardRect.left + card.offsetWidth / 2;
+        const viewCenter = view.left + container.clientWidth / 2;
+        return Math.max(0, container.scrollLeft + (cardCenter - viewCenter) + SHIFT);
+    };
+
+    const focusCard = (i: number) => {
+        setActive(i);
+        const container = containerRef.current;
+        if (!container) return;
+        const card = container.children[i] as HTMLElement;
+        if (isVertical()) {
+            // Window is the scroller on mobile — bring the card top just below the top.
+            const y = card.getBoundingClientRect().top + window.scrollY - PEEK;
+            window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+        } else {
+            container.scrollTo({ left: snapLeft(container, i), behavior: "smooth" });
+        }
+    };
+
+    // Desktop: keep `active` in sync when the user scrolls the horizontal track.
+    const handleScroll = () => {
+        if (isVertical()) return;
+        const container = containerRef.current;
+        if (!container) return;
+        let nearest = 0;
+        let min = Infinity;
+        Array.from(container.children).forEach((_, i) => {
+            const d = Math.abs(snapLeft(container, i) - container.scrollLeft);
+            if (d < min) {
+                min = d;
+                nearest = i;
+            }
+        });
+        setActive(nearest);
+    };
+
+    // Mobile: the window scrolls, so track the card nearest the top of the viewport
+    // and enable page-level scroll snapping only while the mobile layout is active.
+    useEffect(() => {
+        const html = document.documentElement;
+        const mql = window.matchMedia("(max-width: 767px)");
+        const snapClasses = ["snap-y", "snap-proximity", "scroll-pt-24"];
+
+        const onScroll = () => {
+            const container = containerRef.current;
+            if (!container || !mql.matches) return;
+            let nearest = 0;
+            let min = Infinity;
+            Array.from(container.children).forEach((child, i) => {
+                const d = Math.abs((child as HTMLElement).getBoundingClientRect().top - PEEK);
+                if (d < min) {
+                    min = d;
+                    nearest = i;
+                }
+            });
+            setActive(nearest);
+        };
+
+        const applySnap = () => {
+            if (mql.matches) html.classList.add(...snapClasses);
+            else html.classList.remove(...snapClasses);
+        };
+
+        applySnap();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        mql.addEventListener("change", applySnap);
+        return () => {
+            window.removeEventListener("scroll", onScroll);
+            mql.removeEventListener("change", applySnap);
+            html.classList.remove(...snapClasses);
+        };
+    }, []);
+
+    const sections = [
+        <div className="thing" key="code">
+            <img src="/images/icons/code_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
+            <h3 className="serif font-[700]">[2018] Learned to code</h3>
+            <p className="">I first learned to code in middle school, at a summer web development bootcamp. I fell in love with the freedom to code whatever I wanted, but quickly realized that freedom came with many decisions surrounding usability and intent: <span className="italic">What exactly was I to code?</span> This is when I discovered the importance of design.</p>
+        </div>,
+        <div className="thing" key="design">
+            <img src="/images/icons/shapes_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
+            <h3 className="serif font-[700]">[2021] Design ≠ art ??</h3>
+            <p>In junior year of high school, I went into my first graphic design class thinking that design was just about making this look aesthetic. That understanding was quickly shaken when I was continually challenged to think about how other people might interpret my designs, and if they clearly communicated the intended message. This kickstarted my practice of being intentional with each design detail I made.</p>
+        </div>,
+        <div className="thing" key="data">
+            <img src="/images/icons/design_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
+            <h3 className="serif font-[700]">[2023] Designing experiences</h3>
+            <p>In college, I started UI/UX design, expanding my focus from static visual
+                communication to interactive digital experiences.
+                I enjoy designing digital products because of the challenge of
+                finding solutions that balance the many constraints: business goals,
+                user needs, technical limitations, aesthetics, time, etc. It keeps things exciting!
+                <br /><br />
+                <span className="caption gray">Key aspects of my design approach:</span>
+                <ul className="mt-[0.5rem]">
+                    <li>Being <span className="bold">curious and asking lots of questions</span> (about the problem, about the visual language, and about the products that I use and think work really well, etc.). <span className="italic">
+                        What might the user be feeling when first opening this tool? Which microinteractions are
+                        making the experience feel more seamless?</span></li>
+                    <li><span className="bold">Sorting through vague problem spaces</span> and <span className="bold">using research</span> to hone in on concrete and effective solutions</li>
+                    <li>Paying <span className="bold">close attention to every detail</span> for visual craft and a seamless user experience</li>
+                </ul>
+            </p>
+        </div>,
+    ];
+
     return (
         <div className="flex justify-center w-full">
-            <div className="flex flex-col gap-[4rem] w-slim">
-                <div className="flex flex-col gap-[1rem] items-center">
-                    <Pill hover={false} clicked={false} text="Work background / philosophy" />
-                    <h1 className="text-center callout w-9.5/10 self-center serif">My work journey and approach</h1>
-                </div>
-
-                {/* CODING */}
-                <div className="thing">
-                    <img src="/images/icons/code_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
-                    <h3 className="serif font-[700]">[2018] Learned to code</h3>
-                    <p className="">I first learned to code in middle school, at a summer web development bootcamp. I fell in love with the freedom to code whatever I wanted, but quickly realized that freedom came with many decisions surrounding usability and intent: <span className="italic">What exactly was I to code?</span> This is when I discovered the importance of design.</p>
-                </div>
-
-                {/* DESIGN */}
-                <div className="thing">
-                    <img src="/images/icons/shapes_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
-                    <h3 className="serif font-[700]">[2021] Design ≠ art ??</h3>
-                    <p>In junior year of high school, I went into my first graphic design class thinking that design was just about making this look aesthetic. That understanding was quickly shaken when I was continually challenged to think about how other people might interpret my designs, and if they clearly communicated the intended message. This kickstarted my practice of being intentional with each design detail I made.</p>
-                </div>
-
-                {/* DATA */}
-                <div className="thing">
-                    <img src="/images/icons/design_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
-                    <h3 className="serif font-[700]">[2023] Designing experiences</h3>
-                    <p>In college, I started UI/UX design, expanding my focus from static visual
-                        communication to interactive digital experiences.
-                        I enjoy designing digital products because of the challenge of 
-                        finding solutions that balance the many constraints: business goals, 
-                        user needs, technical limitations, aesthetics, time, etc. It keeps things exciting!
-                        <br /><br />
-                        <span className="caption gray">Key aspects of my design approach:</span>
-                        <ul className="mt-[0.5rem]">
-                            <li>Being <span className="bold">curious and asking lots of questions</span> (about the problem, about the visual language, and about the products that I use and think work really well, etc.). <span className="italic">
-                                What might the user be feeling when first opening this tool? Which microinteractions are
-                                making the experience feel more seamless?</span></li>
-                            <li><span className="bold">Sorting through vague problem spaces</span> and <span className="bold">using research</span> to hone in on concrete and effective solutions</li>
-                            <li>Paying <span className="bold">close attention to every detail</span> for visual craft and a seamless user experience</li>
-                        </ul>
-                    </p>
+            <div className="flex flex-col gap-[1.5rem] mod-mid-w">
+                <h1 className="md:w-9.5/10 w-9/10 mob-mid-w serif">From code, to design, to code + design</h1>
+                <div
+                    ref={containerRef}
+                    onScroll={handleScroll}
+                    className="flex flex-col items-center gap-[1rem] w-full min-w-0 no-scrollbar md:flex-row md:items-start md:overflow-x-auto md:snap-x md:snap-mandatory"
+                >
+                    {sections.map((content, i) => (
+                        <ContentCard
+                            key={i}
+                            active={i === active}
+                            first={i === 0}
+                            last={i === sections.length - 1}
+                            onClick={i === active ? undefined : () => focusCard(i)}
+                        >
+                            {content}
+                        </ContentCard>
+                    ))}
                 </div>
             </div>
         </div>
