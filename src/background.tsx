@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import ContentCard from "./components/content-card";
+import CardNav from "./components/card-nav";
 
 // Non-first cards land slightly left of center by this many px (desktop only).
 const SHIFT = 48;
@@ -14,6 +15,8 @@ const isVertical = () =>
 export default function Background() {
     const containerRef = useRef<HTMLDivElement>(null);
     const [active, setActive] = useState(0);
+    // Hide the progress indicator once the cards are scrolled out of view.
+    const [navVisible, setNavVisible] = useState(true);
 
     // Desktop horizontal scroll target for card `i`: first at the left edge, last
     // at the right edge, others just left of center. Measured via bounding rects
@@ -101,6 +104,25 @@ export default function Background() {
         };
     }, []);
 
+    // Hide the indicator once the footer starts to come into view.
+    useEffect(() => {
+        const footer = document.getElementById("footer");
+        if (!footer) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => setNavVisible(!entry.isIntersecting),
+            { threshold: 0 }
+        );
+        observer.observe(footer);
+        return () => observer.disconnect();
+    }, []);
+
+    const navLabels = [
+        "[2018] Learned to code",
+        "[2021] Design ≠ art ??",
+        "[2023] Designing experiences",
+        "[2025] AI meets designing",
+    ];
+
     const sections = [
         <div className="thing" key="code">
             <img src="/images/icons/code_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
@@ -133,7 +155,7 @@ export default function Background() {
         </div>,
         <div className="thing" key="ai">
             <img src="/images/icons/ai_icon2.png" className="w-[4rem] mb-[1rem] aspect-square" />
-            <h3 className="serif font-[700]">[2025] AI meets designing</h3>
+            <h3 className="serif font-[700]">[2025] AI meets design</h3>
             <p>With AI, I combine my designs and coding background to create something greater than the sum of their parts!
                 <br /><br />
                 In my experience of using AI to prototype an interaction or implement my designs, I found that so much of "successfully using AI" to move from design to implementation comes from knowing how to describe what you want. 
@@ -163,6 +185,7 @@ export default function Background() {
                         </ContentCard>
                     ))}
                 </div>
+                <CardNav labels={navLabels} active={active} onSelect={focusCard} visible={navVisible} />
             </div>
         </div>
     );

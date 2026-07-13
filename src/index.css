@@ -317,6 +317,7 @@ body {
 
     transition:
       height 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+      width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
       background-color 0.5s ease 0.05s,
       transform 0.25s ease;
   }
@@ -362,6 +363,82 @@ body {
     height: 1.25rem;
     border-radius: 999px;
     background: #f8f5f4;
+  }
+
+  /* Horizontal dot row. On mobile it floats fixed at the bottom-center of
+     the viewport over a soft, feathered blur (no pill chrome); on desktop it
+     sits in flow below the cards. */
+  .card-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 0rem;
+
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+
+    padding: 4rem 0 1.5rem;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    /* Full-width bottom scrim: opaque at the bottom edge, fading up into the page. */
+    -webkit-mask-image: linear-gradient(to top, #000 35%, transparent);
+    mask-image: linear-gradient(to top, #000 35%, transparent);
+
+    transition: opacity 0.3s ease;
+  }
+
+  .card-nav.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .card-nav .nav-dot {
+    width: auto;
+    height: 0.5rem;
+    padding: 0 0.4rem;
+  }
+
+  /* Grow along the horizontal axis instead of the vertical one. */
+  .card-nav .nav-dot.active .dot,
+  .dark .card-nav .nav-dot.active .dot {
+    height: 0.5rem;
+    width: 1.25rem;
+  }
+
+  /* Labels are desktop-only: on touch they'd stick open after a tap. */
+  .card-nav .label {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .card-nav {
+      position: static;
+      width: auto;
+      align-items: center;
+      padding: 0;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+
+    /* Tooltip above the dot, revealed on hover. */
+    .card-nav .label {
+      display: block;
+      left: 50%;
+      top: auto;
+      bottom: calc(0.5rem + 0.55rem);
+      transform: translateX(-50%) translateY(4px);
+    }
+
+    .card-nav .nav-dot:hover .label {
+      transform: translateX(-50%) translateY(0);
+    }
   }
 
   .caption {
