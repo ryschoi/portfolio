@@ -131,6 +131,15 @@ export default function Background() {
                 </ul>
             </p>
         </div>,
+        <div className="thing" key="ai">
+            <img src="/images/icons/ai_icon2.png" className="w-[4rem] mb-[1rem] aspect-square" />
+            <h3 className="serif font-[700]">[2025] AI meets designing</h3>
+            <p>With AI, I combine my designs and coding background to create something greater than the sum of their parts!
+                <br /><br />
+                In my experience of using AI to prototype an interaction or implement my designs, I found that so much of "successfully using AI" to move from design to implementation comes from knowing how to describe what you want. 
+                I'm currently exploring how to create better approaches and tools to help AI more accurately implement designs and to make it easier for even non-coders to be able to describe how the product should look and behave.
+            </p>
+        </div>,
     ];
 
     return (
