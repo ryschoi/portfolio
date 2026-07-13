@@ -151,17 +151,13 @@ export default function About() {
           <div className="carousel-container">
             <div className="carousel-viewport">
               <div className="slides-wrapper">
-                <SlideImg src="images/nara4.png" caption="My dog Nara" vert={false} />
-                {/* <SlideImg src="images/cooper hangout.PNG" caption="The Cooper team!" vert={false} /> */}
-                <SlideImg src="images/yogurt2.png" caption="Me + greek yogurt 🤝🏼" vert={true} />
+                <SlideImg src="images/nara6.jpeg" caption="My dog Nara" vert={false} />
                 <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
                 <SlideImg src="images/polaroid.png" caption="" vert={true} />
                 <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />
                 <SlideImg src="images/northeastern_campus.png" caption="Campus in the fall" vert={true} />
                 <SlideImg src="images/arboretum wide.jpg" caption="Trees" vert={false} />
-                <SlideImg src="images/nara4.png" caption="My dog Nara" vert={false} />
-                {/* <SlideImg src="images/cooper hangout.PNG" caption="The Cooper team!" vert={false} /> */}
-                <SlideImg src="images/yogurt2.png" caption="Me + greek yogurt 🤝🏼" vert={true} />
+                <SlideImg src="images/nara6.jpeg" caption="My dog Nara" vert={false} />
                 <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
                 <SlideImg src="images/polaroid.png" caption="" vert={true} />
                 <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />

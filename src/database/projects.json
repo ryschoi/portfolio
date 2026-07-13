@@ -33,7 +33,7 @@
         "tags": ["Information design", "Data"],
         "vertical": true,
         "frontImage": "images/work/snakebite-data/snakebiteData.png",
-        "overview": "As the second project from my Information Design studio, I needed to create a data story poster about the global snakebite crisis. This poster captures the link between different climate conditions and countries with high rates of snakebite."
+        "overview": "As the second project from my Information Design studio, I create this data story poster about the link between climate and high rates of snakebite."
     },
     {
         "id": 14,
@@ -112,7 +112,7 @@
         "active": true,
         "name": "ALI Hacks",
         "path": "/ali-hacks",
-        "summary": "Professional yet original internal portal UI and sponsorship package for a Boston-based, student-led hackathon",
+        "summary": "Internal portal design and sponsorship package for a Boston-based, student-led hackathon",
         "type": "Contract",
         "team": ["Individual project"],
         "role": "UI/UX designer",

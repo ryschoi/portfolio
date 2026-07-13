@@ -98,7 +98,7 @@ export default function DissonantHarmony() {
                                     <img src="/images/work/calder/calder_instagram.jpeg" alt="" className="w-[30vw] min-w-[18rem] subtle-shadow" />
                                 </div>
                             </div>
-                            <p className="caption cap-top">Instagram posts <a className="caption underline" href="https://www.instagram.com/snfivowlactz/">(pseudo Instagram account)</a></p>
+                            <p className="caption cap-top">Instagram posts</p>
                         </div>
                         <div>
                             <div className="img-bg work-add-img-cont">
