@@ -23,6 +23,7 @@ import AliHacks from "./projects/ali-hacks";
 import BostonBeer from "./projects/bostonbeer";
 import PortfolioWebsite from "./projects/portfolio";
 import UnderConstruction from "./under-construction";
+import Apple from "./projects/apple"
 
 export default function App() {
   // return <UnderConstruction />;
@@ -49,6 +50,7 @@ export default function App() {
           <Route path="/ali-hacks" element={<AliHacks />} />
           <Route path="/boston-beer" element={<BostonBeer />} />
           <Route path="/portfolio-website" element={<PortfolioWebsite />} />
+          <Route path="/apple" element={<Apple />} />
         </Routes>
 
         <Footer />

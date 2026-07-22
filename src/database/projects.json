@@ -1,5 +1,23 @@
 [
     {
+        "id": 16,
+        "active": false,
+        "name": "Apple ",
+        "path": "/apple",
+        "summary": "Designed both internal and consumer-facing experiences to help Apple users better understand and use their devices",
+        "type": "Internship",
+        "team": ["Instructional Products, Human Interface Design Intern"],
+        "role": "",
+        "medium": "Web, mobile",
+        "tools": "Sketch, Claude",
+        "year": 2026,
+        "timeline": "May - Aug 2026",
+        "tags": ["UI/UX"],
+        "vertical": false,
+        "frontImage": "images/work/apple/apple.png",
+        "overview": "I created an internal web app prototype tool to streamline a mutli-faceted project. I also redesigned consumer-facing UI to support personalization of educational content"
+    },
+    {
         "id": 12,
         "active": true,
         "name": "Open Forum",

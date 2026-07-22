@@ -132,7 +132,7 @@ export default function Background() {
         <div className="thing" key="design">
             <img src="/images/icons/shapes_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
             <h3 className="serif font-[700]">[2021] Design ≠ art ??</h3>
-            <p>In junior year of high school, I went into my first graphic design class thinking that design was just about making this look aesthetic. That understanding was quickly shaken when I was continually challenged to think about how other people might interpret my designs, and if they clearly communicated the intended message. This kickstarted my practice of being intentional with each design detail I made.</p>
+            <p>In junior year of high school, I went into my first graphic design class thinking that design was just about making things look aesthetic. That understanding was quickly shaken when I was continually challenged to think about how other people might interpret my designs, and if they clearly communicated the intended message. This kickstarted my practice of being intentional with each design detail I made.</p>
         </div>,
         <div className="thing" key="data">
             <img src="/images/icons/design_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
