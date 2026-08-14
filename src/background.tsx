@@ -120,7 +120,7 @@ export default function Background() {
         "[2018] Learned to code",
         "[2021] Design ≠ art ??",
         "[2023] Designing experiences",
-        "[2025] AI meets designing",
+        "[2026] AI meets designing",
     ];
 
     const sections = [
@@ -164,26 +164,47 @@ export default function Background() {
         </div>,
     ];
 
+    const next = () => focusCard((active + 1) % sections.length);
+    const isLast = active === sections.length - 1;
+
     return (
         <div className="flex justify-center w-full">
             <div className="flex flex-col gap-[1.5rem] mod-mid-w">
                 <h1 className="md:w-9.5/10 w-9/10 mob-mid-w serif">From code, to design, to code + design</h1>
-                <div
-                    ref={containerRef}
-                    onScroll={handleScroll}
-                    className="flex flex-col items-center gap-[1rem] w-full min-w-0 no-scrollbar md:flex-row md:items-start md:overflow-x-auto md:snap-x md:snap-mandatory"
-                >
-                    {sections.map((content, i) => (
-                        <ContentCard
-                            key={i}
-                            active={i === active}
-                            first={i === 0}
-                            last={i === sections.length - 1}
-                            onClick={i === active ? undefined : () => focusCard(i)}
-                        >
-                            {content}
-                        </ContentCard>
-                    ))}
+                <div className="relative w-full">
+                    <div
+                        ref={containerRef}
+                        onScroll={handleScroll}
+                        className="flex flex-col items-center gap-[1rem] w-full min-w-0 no-scrollbar md:flex-row md:items-start md:overflow-x-auto md:snap-x md:snap-mandatory"
+                    >
+                        {sections.map((content, i) => (
+                            <ContentCard
+                                key={i}
+                                active={i === active}
+                                first={i === 0}
+                                last={i === sections.length - 1}
+                                onClick={i === active ? undefined : () => focusCard(i)}
+                            >
+                                {content}
+                            </ContentCard>
+                        ))}
+                    </div>
+
+                    <button
+                        onClick={next}
+                        aria-label={isLast ? "Restart from the first section" : "Next section"}
+                        className="absolute right-[1rem] top-1/2 -translate-y-1/2 flex items-center justify-center w-[2.5rem] h-[2.5rem] rounded-full border border-white/40 img-bg backdrop-blur-md cursor-pointer hover:opacity-80 transition-opacity"
+                    >
+                        {isLast ? (
+                            <svg width="12" height="16.2" viewBox="0 0 172.461 232.715" fill="currentColor">
+                                <path d="M86.2305 209.766C133.887 209.766 172.461 171.191 172.461 123.535C172.461 75.8789 133.887 37.3047 86.2305 37.3047C75.8789 37.3047 65.8203 39.1602 56.8359 42.5781C54.1992 43.5547 50.4883 45.4102 50.5859 50.3906C50.6836 56.4453 56.6406 59.2773 61.6211 57.3242C69.3359 54.4922 77.6367 52.9297 86.2305 52.9297C125.195 52.9297 156.738 84.4727 156.738 123.438C156.738 162.402 125.195 193.945 86.2305 193.945C47.2656 193.945 15.7227 162.402 15.7227 123.438C15.7227 119.141 12.207 115.625 7.8125 115.625C3.51562 115.625 0 119.141 0 123.438C0 171.191 38.5742 209.766 86.2305 209.766ZM59.7656 49.0234L95.4102 13.6719C96.875 12.207 97.5586 10.0586 97.5586 8.00781C97.5586 3.61328 94.2383 0 89.8438 0C87.5 0 85.6445 0.976562 84.1797 2.44141L43.9453 43.2617C42.3828 44.8242 41.5039 46.9727 41.5039 49.1211C41.5039 51.2695 42.1875 53.2227 43.9453 54.9805L84.1797 95.4102C85.6445 96.7773 87.4023 97.6562 89.8438 97.6562C94.2383 97.6562 97.5586 94.2383 97.5586 89.7461C97.5586 87.6953 96.875 85.7422 95.3125 84.2773Z" />
+                            </svg>
+                        ) : (
+                            <svg className="-rotate-90" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        )}
+                    </button>
                 </div>
                 <CardNav labels={navLabels} active={active} onSelect={focusCard} visible={navVisible} />
             </div>

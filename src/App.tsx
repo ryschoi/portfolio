@@ -26,7 +26,7 @@ import UnderConstruction from "./under-construction";
 import Apple from "./projects/apple"
 
 export default function App() {
-  // return <UnderConstruction />;
+  return <UnderConstruction />;
 
   return (
     <Router>

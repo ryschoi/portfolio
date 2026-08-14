@@ -1,8 +1,8 @@
 [
     {
         "id": 16,
-        "active": false,
-        "name": "Apple ",
+        "active": true,
+        "name": "Apple",
         "path": "/apple",
         "summary": "Designed both internal and consumer-facing experiences to help Apple users better understand and use their devices",
         "type": "Internship",
@@ -15,7 +15,7 @@
         "tags": ["UI/UX"],
         "vertical": false,
         "frontImage": "images/work/apple/apple.png",
-        "overview": "I created an internal web app prototype tool to streamline a mutli-faceted project. I also redesigned consumer-facing UI to support personalization of educational content"
+        "overview": "I created an internal prototyping tool to streamline the end-to-end process of one of our team's features. I also redesigned the Tips app to support surfacing relevant content."
     },
     {
         "id": 12,

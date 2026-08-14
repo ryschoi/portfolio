@@ -36,7 +36,7 @@ export default function ProjectHeader({ project, sections }: { project: Project,
                 </div>
                 <div className="flex flex-wrap justify-between gap-y-[2rem]" id="proj-attributes">
                     <div className="flex flex-col gap-[0.2rem] w-[10rem]">
-                        <p className="caption">PROJECT TYPE</p>
+                        <p className="caption">WORK TYPE</p>
                         <p>{project.type}</p>
                     </div>
                     <div className="flex flex-col gap-[0.2rem] w-[10rem]">
@@ -65,7 +65,7 @@ export default function ProjectHeader({ project, sections }: { project: Project,
                 }
             </div>
 
-            <ProcessBox sectionsList={sections} />
+            <ProcessBox sectionsList={sections} project={project} />
         </div>
     );
 }
