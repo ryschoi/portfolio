@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useLocation, Link, useNavigate } from "react-router-dom";
 import TagCursor from "../components/tag-cursor";
 import SlideImg from "../components/slide-img";
+import Carousel from "../components/carousel";
 import Pill from "../components/pill";
 import HoverTag, { useTagCursor } from "../components/hover-tag";
 import LinkHover from "../components/link-hover";
@@ -95,7 +96,7 @@ export default function About() {
             About me
             <br />
             <span className="gray p-style">
-              Apart from my <Pill path="/" text="Work" tooltip="Collection of projects that captures the full breadth of my interests" onClick={handleWorkClick} hover={true} clicked={false} /> and <Pill path="/background" text="Work background / philosophy" tooltip="What are my design principles? Why CS & Design? How did I get here??" hover={true} clicked={false} />
+              Apart from my <Pill path="/" text="Work" tooltip="Collection of projects that captures the full breadth of my interests" onClick={handleWorkClick} hover={true} clicked={false} /> and <Pill path="/background" text="Background" tooltip="What are my design principles? Why CS & Design? How did I get here??" hover={true} clicked={false} />
             </span>
           </h2>
 
@@ -120,19 +121,21 @@ export default function About() {
           <br />
           <h4 className="serif">Experience</h4>
           <div className="flex flex-col gap-[0.25rem]">
-            <div className="flex flex-col md:flex-row justify-between">
+            <LinkHover href="../apple" label="go to case study" children={
+              <div className="flex flex-col md:flex-row justify-between hover:italic">
               <p className="gray"><span className="black">Apple, </span>Human Interface Design Intern</p>
-              <p className="caption color-[#999999] text-[0.8rem] md:text-[0.85rem]">Since May 2026</p>
+              <p className="caption color-[#999999] text-[0.8rem] md:text-[0.85rem]">May - Aug 2026</p>
             </div>
+            } />
             <hr />
             <LinkHover href="../cooper" label="go to case study" children={
               <div className="flex flex-col md:flex-row justify-between hover:italic">
                 <p className="gray"><span className="black">Sandbox, </span>Design Lead for Cooper</p>
-                <p className="caption color-[#999999] text-[0.8rem] md:text-[0.85rem]">Since Jan 2025</p>
+                <p className="caption color-[#999999] text-[0.8rem] md:text-[0.85rem]">Jan 2025 - Present</p>
               </div>
             } />
             <hr />
-            <LinkHover label="case study coming soon" children={
+            <LinkHover label="coming soon" children={
               <div className="flex flex-col md:flex-row justify-between hover:italic">
                 <p className="gray"><span className="black">Boston Beer Company, </span>Marketing Analytics Co-op</p>
                 <p className="caption color-[#999999] text-[0.8rem] md:text-[0.85rem]">Jul - Dec 2025</p>
@@ -142,30 +145,26 @@ export default function About() {
         </div>
 
         <div className="thing mt-[1.5rem]">
-          <h4 className="serif">Outside of design and coding this portfolio,</h4>
+          <h4 className="serif">Outside of design and tinkering with this portfolio,</h4>
           <p className="gray">you can find me experimenting with new baking and cooking recipes, playing the bass guitar, and exploring different parts of Boston.</p>
         </div>
 
         {/* OTHER THINGS */}
         <div className="flex flex-col gap-[1.5rem]">
-          <div className="carousel-container">
-            <div className="carousel-viewport">
-              <div className="slides-wrapper">
-                <SlideImg src="images/nara6.jpeg" caption="My dog Nara" vert={false} />
-                <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
-                <SlideImg src="images/polaroid.png" caption="" vert={true} />
-                <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />
-                <SlideImg src="images/northeastern_campus.png" caption="Campus in the fall" vert={true} />
-                <SlideImg src="images/arboretum wide.jpg" caption="Trees" vert={false} />
-                <SlideImg src="images/nara6.jpeg" caption="My dog Nara" vert={false} />
-                <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
-                <SlideImg src="images/polaroid.png" caption="" vert={true} />
-                <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />
-                <SlideImg src="images/northeastern_campus.png" caption="Campus in the fall" vert={true} />
-                <SlideImg src="images/arboretum wide.jpg" caption="Trees" vert={false} />
-              </div>
-            </div>
-          </div>
+          <Carousel>
+            <SlideImg src="images/nara6.jpeg" caption="My dog Nara" vert={false} />
+            <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
+            <SlideImg src="images/polaroid.png" caption="" vert={true} />
+            <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />
+            <SlideImg src="images/northeastern_campus.png" caption="Campus in the fall" vert={true} />
+            <SlideImg src="images/arboretum wide.jpg" caption="Trees" vert={false} />
+            <SlideImg src="images/nara6.jpeg" caption="My dog Nara" vert={false} />
+            <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
+            <SlideImg src="images/polaroid.png" caption="" vert={true} />
+            <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />
+            <SlideImg src="images/northeastern_campus.png" caption="Campus in the fall" vert={true} />
+            <SlideImg src="images/arboretum wide.jpg" caption="Trees" vert={false} />
+          </Carousel>
         </div>
 
         <hr />
@@ -184,9 +183,9 @@ export default function About() {
           <div className="flex gap-[1rem] items-center">
             <p className="caption">Links</p>
             <div className="flex flex-wrap gap-[0.6rem]">
+              <Pill path="/images/Rebecca_Choi_Resume.pdf" text="Resume" hover={true} clicked={false} />
               <Pill path="https://www.linkedin.com/in/ryschoi/" text="LinkedIn" hover={true} clicked={false} />
               <Pill path="https://github.com/ryschoi" text="GitHub" hover={true} clicked={false} />
-              <Pill path="/images/Rebecca_Choi_Resume.pdf" text="Resume" hover={true} clicked={false} />
             </div>
           </div>
         </div>
