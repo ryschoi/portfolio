@@ -2,7 +2,7 @@ import Pill from "./components/pill";
 
 export default function UnderConstruction() {
   return (
-    <div className="flex flex-col w-full px-4 md:w-1/3 md:px-6 mx-auto min-h-screen items-center justify-center gap-7 text-center">
+    <div className="flex flex-col w-full px-4 md:w-1/3 md:px-6 mx-auto min-h-svh items-center justify-center gap-7 text-center">
       <h1 className="nanum leading-[1.3]">Rebecca Choi<br />Product design + UX engineering</h1>
       <h1 className="nanum leading-[1.3] italic">Portfolio under construction–new work coming soon.</h1>
       {/* <p className="caption">Contact</p> */}
