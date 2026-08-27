@@ -104,7 +104,7 @@ export default function StepCards({ steps }: StepCardsProps) {
                                 }`}
                         >
                             <div className="flex flex-col h-full p-[2rem]">
-                                <img src={step.icon} className="w-[7rem] aspect-square mx-auto my-auto dark:invert" alt="" />
+                                <img src={step.icon} className="w-[12rem] aspect-square mx-auto mt-[1rem] mb-auto dark:invert" alt="" />
                                 <div className="flex flex-col gap-[0.25rem] h-1/3">
                                     {step.title && <h4 className="">{step.title}</h4>}
                                     <p>{step.description}</p>

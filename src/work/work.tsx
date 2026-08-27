@@ -61,8 +61,8 @@ export default function Work() {
           src="images/website-assets/notion_face.png"
         />
         <div className="w-slim md:w-[42rem] flex flex-col gap-[2rem] md:gap-[1.75rem]">
-          <p className="green caption tracking-[-0.25px] mb-[-0.75rem]"><span className="live-pulse caption green">●</span> Design Intern @ Apple, cs & Design @ Northeastern</p>
-          <h1 className="nanum leading-[1.3]">Hi, I'm Rebecca.<br />Product designer + UX engineer</h1>
+          <p className="green caption tracking-[-0.25px] mb-[-0.75rem]"><span className="live-pulse caption green">●</span> Prev. Design Intern @ Apple, cs & Design @ Northeastern</p>
+          <h1 className="nanum leading-[1.3]">Hi, I'm Rebecca.<br />Product design + UX engineering</h1>
           <div className="flex flex-wrap gap-[0.5rem] mt-[-0.5rem]">
             <Pill
               hover={true}

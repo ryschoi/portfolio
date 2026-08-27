@@ -46,11 +46,11 @@ export default function Apple() {
                                     </div> */}
                                     <p className="gray">One of the features our team owns requires close collaboration between different teams and complex prototyping. My role was to design and implement a tool to improve the efficiency and scalability of this process.</p>
                                     <StepCards steps={[
-                                        { icon: "/images/icons/step-discover.svg", title: "Discover", description: "To start, I met with instructional designers, HI designers, and engineers to learn more about the current process." },
-                                        { icon: "/images/icons/step-synthesize.svg", title: "Synthesize", description: "Then, I synthesized the diverse set of pain points into a system that was innovative in features while matching the mental model of the users." },
-                                        { icon: "/images/icons/step-design.svg", title: "Design", description: "I designed visual components in Sketch, and used Claude to create an interactive prototype of the tool." },
-                                        { icon: "/images/icons/step-validate.svg", title: "Validate", description: "Concurrently, I checked in with the future users to make sure that the tool remained aligned with their needs as it evolved from its initial designs." },
-                                        { icon: "/images/icons/step-ship.svg", title: "Ship", description: "In my final week of the internship, I implemented the tool as a React web app, ready for engineers to integrate it into the other existing tool." },
+                                        { icon: "/images/work/apple/illustrations/tips.png", title: "Discover", description: "To start, I met with instructional designers, HI designers, and engineers to learn more about the current process." },
+                                        { icon: "/images/work/apple/illustrations/feeds.png", title: "Synthesize", description: "Then, I synthesized the diverse set of pain points into a system that was innovative in features while matching the mental model of the users." },
+                                        { icon: "/images/work/apple/claude.png", title: "Design", description: "I designed visual components in Sketch, and used Claude to create an interactive prototype of the tool." },
+                                        { icon: "/images/work/apple/step-validate.svg", title: "Validate", description: "Concurrently, I checked in with the future users to make sure that the tool remained aligned with their needs as it evolved from its initial designs." },
+                                        { icon: "/images/work/apple/step-ship.svg", title: "Ship", description: "In my final week of the internship, I implemented the tool as a React web app, ready for engineers to integrate it into the other existing tool." },
                                     ]} />
                                     <br />
                                 </div>
@@ -62,9 +62,9 @@ export default function Apple() {
                                     <p>The Tips app houses hundreds of tips for the many Apple's products. Having such a large library of content opens up the opportunity to surface the content that is most relevant to each user.
                                         I kickstarted the design thinking and exploration for this.</p>
                                     <StepCards steps={[
-                                        { icon: "/images/icons/step-discover.svg", title: "Discover", description: "Met with instructional designers who are most familiar with Tips content and how the current experience works." },
-                                        { icon: "/images/icons/step-synthesize.svg", title: "Research", description: "Researched other platforms to get a sense of strategy and design." },
-                                        { icon: "/images/icons/step-design.svg", title: "Content strategy", description: "Created a framework for ways to organize the content, emphasizing the connection of the tips to users' everyday lives." },
+                                        { icon: "/images/work/apple/illustrations/tips.png", title: "Discover", description: "Met with instructional designers who are most familiar with Tips content and how the current experience works." },
+                                        { icon: "/images/work/apple/illustrations/feeds.png", title: "Research", description: "Researched other platforms to get a sense of strategy and design." },
+                                        { icon: "/images/work/apple/illustrations/reorg.gif", title: "Content strategy", description: "Created a framework for ways to organize the content, emphasizing the connection of the tips to users' everyday lives." },
                                         { icon: "/images/icons/step-validate.svg", title: "Visual elements", description: "Pulled from existing visual components in the Apple ecosystem to create the proposed library of components for Tips." },
                                     ]} />
                                 </div>
