@@ -39,7 +39,7 @@ export default function Footer() {
                     <Link to="/" onClick={() => handleClick('/')} className="font-[350]">Rebecca Choi</Link>
                     <div>
                         <p className="caption">Coded and designed by me ◡̈</p>
-                        <p className="caption">Projects updated: Dec 2025</p>
+                        <p className="caption">Work updated: Aug 2026</p>
                     </div>
                 </div>
 

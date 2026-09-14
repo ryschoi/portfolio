@@ -132,23 +132,23 @@ export default function Background() {
         <div className="thing" key="design">
             <img src="/images/icons/shapes_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
             <h3 className="serif font-[700]">[2021] Design ≠ art ??</h3>
-            <p>In junior year of high school, I went into my first graphic design class thinking that design was just about making things look aesthetic. That understanding was quickly shaken when I was continually challenged to think about how other people might interpret my designs, and if they clearly communicated the intended message. This kickstarted my practice of being intentional with each design detail I made.</p>
+            <p>In junior year of high school, I went into my first graphic design class thinking that design was just about making things look aesthetic. Instead, I was continually challenged to evalate my work based on how other people would interpret it, if it clearly communicated the intended message. This instilled the habit of being intentional with every design detail.</p>
         </div>,
         <div className="thing" key="data">
             <img src="/images/icons/design_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
             <h3 className="serif font-[700]">[2023] Designing experiences</h3>
             <p>In college, I started UI/UX design, expanding my focus from static visual
                 communication to interactive digital experiences.
-                I enjoy designing digital products because of the challenge of
+                I enjoy the challenge of
                 finding solutions that balance the many constraints: business goals,
-                user needs, technical limitations, aesthetics, time, etc. It keeps things exciting!
+                user needs, technical limitations, aesthetics, time, etc. It keeps things exciting and provides clear guidelines for decisions.
                 <br /><br />
                 <span className="caption gray">Key aspects of my design approach:</span>
                 <ul className="mt-[0.5rem]">
                     <li>Being <span className="bold">curious and asking lots of questions</span> (about the problem, about the visual language, and about the products that I use and think work really well, etc.). <span className="italic">
                         What might the user be feeling when first opening this tool? Which microinteractions are
                         making the experience feel more seamless?</span></li>
-                    <li><span className="bold">Sorting through vague problem spaces</span> and <span className="bold">using research</span> to hone in on concrete and effective solutions</li>
+                    <li><span className="bold">Sorting through vague problem spaces</span> and <span className="bold">rapidly iterating</span> to hone in on concrete and effective solutions</li>
                     <li>Paying <span className="bold">close attention to every detail</span> for visual craft and a seamless user experience</li>
                 </ul>
             </p>
@@ -156,10 +156,10 @@ export default function Background() {
         <div className="thing" key="ai">
             <img src="/images/icons/ai_icon2.png" className="w-[4rem] mb-[1rem] aspect-square" />
             <h3 className="serif font-[700]">[2025] AI meets design</h3>
-            <p>With AI, I combine my designs and coding background to create something greater than the sum of their parts!
+            <p>With AI, I combine my designs and coding background to create something greater than the sum of their parts.
                 <br /><br />
-                In my experience of using AI to prototype an interaction or implement my designs, I found that so much of "successfully using AI" to move from design to implementation comes from knowing how to describe what you want. 
-                I'm currently exploring how to create better approaches and tools to help AI more accurately implement designs and to make it easier for even non-coders to be able to describe how the product should look and behave.
+                In my experience of using AI to prototype interactions or implement designs, I found that so much of "successfully using AI" comes from knowing 1) how to use properly prompt AI, and 2) what to use it for.<br /><br />
+                I'm currently exploring what new approaches to using AI or AI tools could help non-coders and even non-designers more effortlessly create beautiful, industry-standard products.
             </p>
         </div>,
     ];
@@ -170,7 +170,7 @@ export default function Background() {
     return (
         <div className="flex justify-center w-full">
             <div className="flex flex-col gap-[1.5rem] mod-mid-w">
-                <h1 className="md:w-9.5/10 w-9/10 mob-mid-w serif">From code, to design, to code + design</h1>
+                <h1 className="md:w-9.5/10 w-9/10 mob-mid-w serif">From coder, to designer, to design engineer</h1>
                 <div className="relative w-full">
                     <div
                         ref={containerRef}

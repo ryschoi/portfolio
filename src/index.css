@@ -722,3 +722,68 @@ body {
     cursor: pointer;
   }
 }
+/* Two-frame flicker for step-card illustrations. The top frame hard-cuts to
+   transparent at the halfway mark, so each frame gets exactly half the cycle. */
+@keyframes step-flicker {
+  0%, 50% {
+    opacity: 1;
+  }
+
+  50.001%, 100% {
+    opacity: 0;
+  }
+}
+
+.step-flicker {
+  animation: step-flicker var(--flicker-cycle, 1.5s) linear infinite;
+}
+
+/* Reverse-genie: a window unfurling out of a point, the way minimising to the
+   Dock looks played backwards. scaleY leads so it stretches upward first, then
+   scaleX widens — the two-stage read is what sells it as a genie rather than a
+   plain zoom. Paired with vector-effect: non-scaling-stroke on the path, so the
+   drawn line keeps its weight at every size. */
+@keyframes genie-out {
+  0% {
+    transform: scale(0.04, 0.015);
+    opacity: 0;
+  }
+
+  8% {
+    opacity: 1;
+  }
+
+  30% {
+    transform: scale(0.1, 0.55);
+  }
+
+  55% {
+    transform: scale(1, 1);
+  }
+
+  62% {
+    transform: scale(0.985, 1.015);
+  }
+
+  70%, 100% {
+    transform: scale(1, 1);
+  }
+}
+
+.genie-out {
+  animation: genie-out var(--genie-cycle, 3s) cubic-bezier(0.32, 0.72, 0.3, 1) infinite;
+  /* Percentage transform-origins need fill-box to resolve against the shape's
+     own bounds rather than the SVG viewport. */
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .genie-out {
+    animation: none;
+  }
+
+  .step-flicker {
+    animation: none;
+  }
+}

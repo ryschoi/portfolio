@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { isValidElement, useEffect, useRef, useState, type ReactElement } from "react";
 import CardNav from "./card-nav";
 
 export interface Step {
-    icon: string;
+    /** A single image, two frames to flicker between, or custom media. */
+    icon: string | string[] | ReactElement;
     title?: string;
     description: string;
 }
@@ -10,6 +11,7 @@ export interface Step {
 interface StepCardsProps {
     steps: Step[];
 }
+
 
 export default function StepCards({ steps }: StepCardsProps) {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -104,7 +106,24 @@ export default function StepCards({ steps }: StepCardsProps) {
                                 }`}
                         >
                             <div className="flex flex-col h-full p-[2rem]">
-                                <img src={step.icon} className="w-[12rem] aspect-square mx-auto mt-[1rem] mb-auto dark:invert" alt="" />
+                                {isValidElement(step.icon) ? (
+                                    <div className="flex-1 min-h-0 aspect-square mx-auto">{step.icon}</div>
+                                ) : Array.isArray(step.icon) ? (
+                                    <div className="relative flex-1 min-h-0 aspect-square mx-auto">
+                                        {step.icon.map((frame, f) => (
+                                            <img
+                                                key={frame}
+                                                src={frame}
+                                                // The second frame sits underneath and stays put; the
+                                                // first one animates away to reveal it.
+                                                className={`absolute inset-0 w-full h-full object-contain dark:invert ${f === 0 ? "step-flicker z-10" : ""}`}
+                                                alt=""
+                                            />
+                                        ))}
+                                    </div>
+                                ) : (
+                                    <img src={step.icon} className="w-[12rem] aspect-square mx-auto mt-[1rem] mb-auto dark:invert" alt="" />
+                                )}
                                 <div className="flex flex-col gap-[0.25rem] h-1/3">
                                     {step.title && <h4 className="">{step.title}</h4>}
                                     <p>{step.description}</p>

@@ -15,6 +15,7 @@ import Carousel from "../components/carousel";
 import TipStack from "../components/tip-stack";
 import Pill from "../components/pill";
 import StepCards from "../components/step-cards";
+import GenieWindow from "../components/genie-window";
 
 export default function Apple() {
     const thisProject = projects.find(p => p.path === "/apple");
@@ -44,12 +45,12 @@ export default function Apple() {
                                         <Pill text="Prototyping" hover={false} clicked={false} />
                                         <Pill text="Interaction design" hover={false} clicked={false} />
                                     </div> */}
-                                    <p className="gray">One of the features our team owns requires close collaboration between different teams and complex prototyping. My role was to design and implement a tool to improve the efficiency and scalability of this process.</p>
+                                    <p className="gray">One of the features our team owns requires close collaboration between different teams and complex prototyping. My tool improved the efficiency and scalability of this process.</p>
                                     <StepCards steps={[
                                         { icon: "/images/work/apple/illustrations/tips.png", title: "Discover", description: "To start, I met with instructional designers, HI designers, and engineers to learn more about the current process." },
                                         { icon: "/images/work/apple/illustrations/feeds.png", title: "Synthesize", description: "Then, I synthesized the diverse set of pain points into a system that was innovative in features while matching the mental model of the users." },
                                         { icon: "/images/work/apple/claude.png", title: "Design", description: "I designed visual components in Sketch, and used Claude to create an interactive prototype of the tool." },
-                                        { icon: "/images/work/apple/step-validate.svg", title: "Validate", description: "Concurrently, I checked in with the future users to make sure that the tool remained aligned with their needs as it evolved from its initial designs." },
+                                        { icon: <GenieWindow backdrop="/images/work/apple/illustrations/validate/frame-1.png" />, title: "Validate", description: "Concurrently, I checked in with the future users to make sure that the tool remained aligned with their needs as it evolved from its initial designs." },
                                         { icon: "/images/work/apple/step-ship.svg", title: "Ship", description: "In my final week of the internship, I implemented the tool as a React web app, ready for engineers to integrate it into the other existing tool." },
                                     ]} />
                                     <br />
@@ -59,7 +60,7 @@ export default function Apple() {
                             title="Redesigned the Tips app to support surfacing relevant content"
                             content={
                                 <div className="flex flex-col gap-[1rem]">
-                                    <p>The Tips app houses hundreds of tips for the many Apple's products. Having such a large library of content opens up the opportunity to surface the content that is most relevant to each user.
+                                    <p>The Tips app houses hundreds of tips for iPhone, iPad, AirPods, Watch, and Vision Pro. Having such a large library of content opens up the opportunity to surface the content that is most relevant to each user.
                                         I kickstarted the design thinking and exploration for this.</p>
                                     <StepCards steps={[
                                         { icon: "/images/work/apple/illustrations/tips.png", title: "Discover", description: "Met with instructional designers who are most familiar with Tips content and how the current experience works." },
@@ -90,13 +91,13 @@ export default function Apple() {
                                     header: "Workflow",
                                     description: "Your work process is just as important as the work itself. Refining your workflow saves time later, freeing up bandwidth for the real work.",
                                     tips: [
-                                        "images/work/apple/tips/tip-2-1.png",
                                         "images/work/apple/tips/tip-2-2.png",
+                                        "images/work/apple/tips/tip-2-1.png",
                                     ],
                                 },
                                 {
                                     header: "Design with a team",
-                                    description: "A good designer thinks beyond just the ideal solution, but also to how the solution willbe impacted by outside constraints and with time.",
+                                    description: "A good designer thinks beyond just the ideal solution, and to implementation feasibility and timeline, product strategy, etc.",
                                     tips: [
                                         "images/work/apple/tips/tip-3-1.png",
                                         // "images/work/apple/tips/tip-3-1.png",

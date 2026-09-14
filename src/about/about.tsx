@@ -153,13 +153,13 @@ export default function About() {
         <div className="flex flex-col gap-[1.5rem]">
           <Carousel>
             <SlideImg src="images/nara6.jpeg" caption="My dog Nara" vert={false} />
-            <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
+            <SlideImg src="images/carrotCake.png" caption="Ran a fall popup cafe!" vert={false} />
             <SlideImg src="images/polaroid.png" caption="" vert={true} />
             <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />
             <SlideImg src="images/northeastern_campus.png" caption="Campus in the fall" vert={true} />
             <SlideImg src="images/arboretum wide.jpg" caption="Trees" vert={false} />
             <SlideImg src="images/nara6.jpeg" caption="My dog Nara" vert={false} />
-            <SlideImg src="images/carrotCake.png" caption="Fall baking" vert={false} />
+            <SlideImg src="images/carrotCake.png" caption="Ran a fall popup cafe!" vert={false} />
             <SlideImg src="images/polaroid.png" caption="" vert={true} />
             <SlideImg src="images/cooking.png" caption="Cooking with friends" vert={true} />
             <SlideImg src="images/northeastern_campus.png" caption="Campus in the fall" vert={true} />
