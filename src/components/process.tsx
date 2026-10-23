@@ -16,7 +16,7 @@ export default function ProcessBox({ sectionsList, project }: { sectionsList: se
         <div className="task-container flex place-content-center">
             <div className="mob-mid-w my-[7rem] flex flex-col gap-[1rem]">
                 {project.id === 16 ? (
-                    <p className="white">During my 13 weeks at Apple with the Instructional Products team, I designed tools and experiences to support the team in creating content and experiences to help people learn about and use their devices.
+                    <p className="white">During my 13 weeks at Apple, I worked as a Human Interface Design intern with the Instructional Products team. Human Interface designers own the UI design while ________ and working with content designers to determine the best format and experience for the product goal. Instructional Products helps people understand and use their devices better. Recent work includes the Tips app, Step-By-Step Help, and welcome experiences.
                     <br /><br />Due to an NDA, I'm unable to share designs or project details from this internship.</p>
                 ) : (
                     <>

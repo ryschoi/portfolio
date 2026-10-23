@@ -144,10 +144,10 @@ export default function About() {
           </div>
         </div>
 
-        <div className="thing mt-[1.5rem]">
+        {/* <div className="thing mt-[1.5rem]">
           <h4 className="serif">Outside of design and tinkering with this portfolio,</h4>
           <p className="gray">you can find me experimenting with new baking and cooking recipes, playing the bass guitar, and exploring different parts of Boston.</p>
-        </div>
+        </div> */}
 
         {/* OTHER THINGS */}
         <div className="flex flex-col gap-[1.5rem]">

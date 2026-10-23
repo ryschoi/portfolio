@@ -2,8 +2,8 @@ import { isValidElement, useEffect, useRef, useState, type ReactElement } from "
 import CardNav from "./card-nav";
 
 export interface Step {
-    /** A single image, two frames to flicker between, or custom media. */
-    icon: string | string[] | ReactElement;
+    /** Optional: a single image, two frames to flicker between, or custom media. */
+    icon?: string | string[] | ReactElement;
     title?: string;
     description: string;
 }
@@ -102,11 +102,11 @@ export default function StepCards({ steps }: StepCardsProps) {
                         <div
                             key={i}
                             onClick={i === index ? undefined : () => focusCard(i)}
-                            className={`shrink-0 w-[calc(100%-4rem)] max-w-[21rem] aspect-[3/4] rounded-[1.5rem] border border-white/40 img-bg backdrop-blur-md overflow-hidden transition-opacity duration-300 [&_img]:transition-[filter] [&_img]:duration-300 ${i === index ? "opacity-100" : "opacity-50 cursor-pointer [&_img]:grayscale"
+                            className={`shrink-0 w-[calc(100%-4rem)] max-w-[21rem] ${step.icon ? "aspect-[3/4]" : ""} rounded-[1.5rem] border border-white/40 img-bg backdrop-blur-md overflow-hidden transition-opacity duration-300 [&_img]:transition-[filter] [&_img]:duration-300 ${i === index ? "opacity-100" : "opacity-50 cursor-pointer [&_img]:grayscale"
                                 }`}
                         >
                             <div className="flex flex-col h-full p-[2rem]">
-                                {isValidElement(step.icon) ? (
+                                {!step.icon ? null : isValidElement(step.icon) ? (
                                     <div className="flex-1 min-h-0 aspect-square mx-auto">{step.icon}</div>
                                 ) : Array.isArray(step.icon) ? (
                                     <div className="relative flex-1 min-h-0 aspect-square mx-auto">
@@ -124,7 +124,8 @@ export default function StepCards({ steps }: StepCardsProps) {
                                 ) : (
                                     <img src={step.icon} className="w-[12rem] aspect-square mx-auto mt-[1rem] mb-auto dark:invert" alt="" />
                                 )}
-                                <div className="flex flex-col gap-[0.25rem] h-1/3">
+                                {/* Without an icon, the card drops its fixed aspect ratio and fits its text. */}
+                                <div className={`flex flex-col gap-[0.25rem] ${step.icon ? "h-1/3" : ""}`}>
                                     {step.title && <h4 className="">{step.title}</h4>}
                                     <p>{step.description}</p>
                                 </div>

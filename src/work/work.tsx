@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useLayoutEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { projects } from "../database";
 import "../index.css";
@@ -9,7 +9,9 @@ import Pill from "../components/pill";
 export default function Work() {
   const location = useLocation();
 
-  useEffect(() => {
+  // Arriving from another page: jump straight to the filters (before paint) —
+  // smooth scrolling is only for scrolls within a page.
+  useLayoutEffect(() => {
     if (location.state?.scrollTo === "filters") {
       const section = document.getElementById("filters");
       if (section) {
@@ -17,7 +19,7 @@ export default function Work() {
         const y =
           section.getBoundingClientRect().top + window.pageYOffset - offset;
 
-        window.scrollTo({ top: y, behavior: "smooth" });
+        window.scrollTo({ top: y, behavior: "instant" });
       }
     }
   }, [location.state]);
@@ -27,12 +29,9 @@ export default function Work() {
   // the scroll once you're past the filters into the work cards.
   useEffect(() => {
     const html = document.documentElement;
-    const prevBehavior = html.style.scrollBehavior;
     html.classList.add("snap-y", "snap-proximity");
-    html.style.scrollBehavior = "smooth";
     return () => {
       html.classList.remove("snap-y", "snap-proximity");
-      html.style.scrollBehavior = prevBehavior;
     };
   }, []);
 
@@ -62,7 +61,7 @@ export default function Work() {
         />
         <div className="w-slim md:w-[42rem] flex flex-col gap-[2rem] md:gap-[1.75rem]">
           <p className="green caption tracking-[-0.25px] mb-[-0.75rem]"><span className="live-pulse caption green">●</span> Prev. Design Intern @ Apple, cs & Design @ Northeastern</p>
-          <h1 className="nanum leading-[1.3]">Hi, I'm Rebecca.<br />Product design + UX engineering</h1>
+          <h1 className="nanum leading-[1.3]">Hi, I'm Rebecca. Product designer building scalable and invisible systems.</h1>
           <div className="flex flex-wrap gap-[0.5rem] mt-[-0.5rem]">
             <Pill
               hover={true}
@@ -78,7 +77,7 @@ export default function Work() {
               clicked={false}
               path="/about#contacts"
               text="Contact me"
-              tooltip="Email, phone, LinkedIn..."
+              tooltip="Email, resume, LinkedIn..."
             />
           </div>
         </div>

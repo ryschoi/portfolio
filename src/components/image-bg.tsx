@@ -82,6 +82,22 @@ export default function ImageBG({ project }: { project: Project }) {
                 </div>
             )}
 
+            {/* COOPER IMAGES */}
+            {project.id === 5 && (
+                <div className="work-img-group-col">
+                    <div className="zoom img-bg work-add-img-cont overflow-hidden h-[24rem]">
+                        <div className="self-center mx-[3vw]">
+                            <img src="/images/work/cooper/compare_prev.png" alt="" className="w-[30vw] min-w-[18rem] subtle-shadow" />
+                        </div>
+                    </div>
+                    <div className="zoom img-bg work-add-img-cont overflow-hidden h-[24rem] !justify-start">
+                        <div className="self-center mt-[2rem]">
+                            <img src="/images/work/cooper/view review.png" alt="" className="w-[36vw] min-w-[22rem] subtle-shadow" />
+                        </div>
+                    </div>
+                </div>
+            )}
+
             {/* DISSONANT HARMONY */}
             {project.id === 2 && (
                 <div className="work-img-group-col">
