@@ -8,7 +8,7 @@ import Work from "./work/work"
 import Misc from "./misc/misc"
 import Background from "./background";
 import About from "./about/about";
-import NavBar from "./nav"
+import Sidebar from "./sidebar"
 import Footer from "./footer";
 
 import Rockumentary from './projects/rockumentary';
@@ -26,15 +26,16 @@ import UnderConstruction from "./under-construction";
 import Apple from "./projects/apple"
 
 export default function App() {
-  return <UnderConstruction />;
+  // return <UnderConstruction />;
 
   return (
     <Router>
       <ResetScroll />
-      <div className="flex flex-col place-content-center">
-        <NavBar />
+      <div className="flex flex-col md:grid md:grid-cols-[minmax(14rem,20rem)_minmax(0,1fr)] md:gap-[5vw]">
+        <Sidebar />
+        <main className="main-col flex flex-col min-w-0 md:pt-[2.5rem]">
         <Routes>
-          <Route path="/" element={<Work />} />
+          <Route path="/" element={<Work hero={null} showFilters={false} />} />
           <Route path="/misc" element={<Misc />} />
           <Route path="/background" element={<Background />} />
           <Route path="/about" element={<About />} />
@@ -54,6 +55,7 @@ export default function App() {
         </Routes>
 
         <Footer />
+        </main>
       </div>
       {/* <ProcessButton /> */}
       <ScrollToTopButton />

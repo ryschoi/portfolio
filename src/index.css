@@ -787,3 +787,28 @@ body {
     animation: none;
   }
 }
+
+/* 2-column layout: page widths were sized against the whole viewport, so on
+   desktop fit them to the right column instead. Unlayered so it beats utilities. */
+@media (min-width: 48rem) {
+  #root {
+    margin-left: 3%;
+  }
+
+  .main-col {
+    --mob-page-w: 100%;
+    --med-page-w: 100%;
+  }
+
+  .main-col img,
+  .main-col video,
+  .main-col [class*="vw]"] {
+    max-width: 100%;
+  }
+
+  .main-col :is(.full-bleed, .task-container, .process-cont, .dark-section, .gray-full-container, .gray-narrow-container) {
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
