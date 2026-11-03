@@ -5,12 +5,11 @@ import "../index.css";
 import "./work.css";
 import WorkCard from "./work-card";
 import Pill from "../components/pill";
-import Greeting from "./greeting";
 
 // `hero` is the landing section above the filters; swap it to try out new versions.
 // Without filters, the cards become the scroll/snap target the nav's "Work" jumps to.
 export default function Work({
-  hero = <Greeting />,
+  hero = null,
   showFilters = true,
 }: {
   hero?: ReactNode;
@@ -110,25 +109,6 @@ export default function Work({
           <WorkCard key={proj.id} project={proj} showTags={showFilters} />
         ))}
       </div>
-      {/* SEE MORE */}
-      {/* <Link className="self-center mt-[6rem] gray" to={"../misc"}>
-        <p className="gray inline">See more</p>
-        <div className="inline mx-[0.5rem]">
-          {selectedTag === null ? (
-            <p className="inline gray">misc</p>
-          ) : (
-            allTags
-              .filter((tag) => tag === selectedTag)
-              .map((tag) => {
-                const isSelected = selectedTag === tag;
-                return (
-                  <Pill key={tag} text={tag} hover={true} clicked={isSelected} />
-                );
-              })
-          )}
-        </div>
-        <p className="gray inline">work →</p>
-      </Link> */}
     </div>
   );
 }

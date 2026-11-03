@@ -167,28 +167,6 @@ export default function About() {
           </Carousel>
         </div>
 
-        <hr />
-
-        {/* TAGS */}
-        <div className="w-full flex flex-col gap-[1rem]" id="contacts">
-          {/* CONTACT */}
-          <div className="flex gap-[1rem] items-center">
-            <p className="caption">Contact</p>
-            <div className="flex flex-wrap gap-[0.6rem]">
-              <Pill copyText="rebecca.choi05@gmail.com" hover={true} clicked={false} />
-              <Pill copyText="(510) 682-0020" hover={true} clicked={false} />
-            </div>
-          </div>
-          {/* LINKS */}
-          <div className="flex gap-[1rem] items-center">
-            <p className="caption">Links</p>
-            <div className="flex flex-wrap gap-[0.6rem]">
-              <Pill path="/images/Rebecca_Choi_Resume.pdf" text="Resume" hover={true} clicked={false} />
-              <Pill path="https://www.linkedin.com/in/ryschoi/" text="LinkedIn" hover={true} clicked={false} />
-              <Pill path="https://github.com/ryschoi" text="GitHub" hover={true} clicked={false} />
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );

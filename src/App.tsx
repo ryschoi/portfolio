@@ -1,12 +1,11 @@
 import './index.css'
 import ResetScroll from "./reset-scroll"
 import ScrollToTopButton from './components/scroll-top';
-import ProcessButton from './components/process-button';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Work from "./work/work"
-import Misc from "./misc/misc"
 import Background from "./background";
+import Craft from "./craft";
 import About from "./about/about";
 import Sidebar from "./sidebar"
 import Footer from "./footer";
@@ -31,12 +30,12 @@ export default function App() {
   return (
     <Router>
       <ResetScroll />
-      <div className="flex flex-col md:grid md:grid-cols-[minmax(14rem,20rem)_minmax(0,1fr)] md:gap-[5vw]">
+      <div className="flex flex-col md:grid md:grid-cols-[minmax(14rem,20rem)_minmax(0,1fr)] md:gap-x-[5vw]">
         <Sidebar />
         <main className="main-col flex flex-col min-w-0 md:pt-[2.5rem]">
         <Routes>
           <Route path="/" element={<Work hero={null} showFilters={false} />} />
-          <Route path="/misc" element={<Misc />} />
+          <Route path="/craft" element={<Craft />} />
           <Route path="/background" element={<Background />} />
           <Route path="/about" element={<About />} />
 
@@ -53,9 +52,12 @@ export default function App() {
           <Route path="/portfolio-website" element={<PortfolioWebsite />} />
           <Route path="/apple" element={<Apple />} />
         </Routes>
-
-        <Footer />
         </main>
+        {/* Spans both columns inside the grid so the sticky sidebar stays
+            pinned to the end; the opaque background lets it slide over the sidebar. */}
+        <div id="footer-wrap" className="md:col-span-2 relative z-10 bg-[var(--bg)]">
+          <Footer />
+        </div>
       </div>
       {/* <ProcessButton /> */}
       <ScrollToTopButton />
