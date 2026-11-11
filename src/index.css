@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://vetrivelcsamy.github.io/cheltenham-classic/cheltenhamclassic.css');
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Myeongjo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://vetrivelcsamy.github.io/cheltenham-classic/cheltenhamclassic.css");
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Myeongjo&display=swap");
 
 @import "tailwindcss";
 @source "./**/*.{js,ts,jsx,tsx}";
@@ -25,8 +25,8 @@
 }
 
 @font-face {
-  font-family: 'Eiko-Thin';
-  src: url('/fonts/eiko/PPEiko-Thin.otf') format('opentype');
+  font-family: "Eiko-Thin";
+  src: url("/fonts/eiko/PPEiko-Thin.otf") format("opentype");
 }
 
 @theme {
@@ -89,18 +89,20 @@ body {
 
 @layer base {
   * {
-    font-family: 'Hanken Grotesk', sans-serif;
-    font-feature-settings: 'liga' 1, 'calt' 1;
+    font-family: "Hanken Grotesk", sans-serif;
+    font-feature-settings:
+      "liga" 1,
+      "calt" 1;
     margin: 0;
     color: var(--text);
   }
 
   .eiko {
-    font-family: 'Eiko-Thin', serif;
+    font-family: "Eiko-Thin", serif;
   }
 
   .coromont {
-    font-family: 'Cormorant', serif;
+    font-family: "Cormorant", serif;
   }
 
   p,
@@ -143,7 +145,7 @@ body {
     /* font-family: 'Eiko-Thin', serif; */
     /* font-family: 'cheltenhamclassic', serif; */
     /* font-family: 'Cormorant', serif; */
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: "Nanum Myeongjo", serif;
     font-weight: 400;
     margin: var(--zero);
     font-size: var(--h2-size);
@@ -154,13 +156,13 @@ body {
 
   .serif-2 {
     /* font-family: 'Crimson Text', serif; */
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: "Nanum Myeongjo", serif;
     font-weight: 500;
     font-size: 22px;
   }
 
   .nanum {
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: "Nanum Myeongjo", serif;
   }
 
   h3,
@@ -219,25 +221,23 @@ body {
     margin-left: -4vw;
     margin-right: -4vw;
   }
-
-  
 }
 
 @layer components {
   .subtle-shadow {
-    filter: drop-shadow(0 0 3rem #d0d0d0)
+    filter: drop-shadow(0 0 3rem #d0d0d0);
   }
 
   .dark .subtle-shadow {
-    filter: drop-shadow(0 0 3rem #2f2f2f)
+    filter: drop-shadow(0 0 3rem #2f2f2f);
   }
 
   .img-bg {
-    background-color: #00000007
+    background-color: #00000007;
   }
 
   .dark .img-bg {
-    background-color: #ffffff07
+    background-color: #ffffff07;
   }
 
   .pill {
@@ -284,7 +284,7 @@ body {
 
   .floating-nav {
     position: fixed;
-    left: 2vw;
+    left: 28vw;
     top: 50%;
     transform: translateY(-50%);
     z-index: 9999;
@@ -340,7 +340,9 @@ body {
     opacity: 0;
     pointer-events: none;
 
-    transition: opacity 0.25s ease, transform 0.25s ease;
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
@@ -474,6 +476,10 @@ body {
     color: var(--gray);
     text-transform: uppercase;
     font-size: var(--ps-size);
+    /* font-family: "DotGothic16", sans-serif; */
+    /* font-weight: 400;
+    font-style: normal;
+    font-size: 1rem; */
   }
 
   .cap-top {
@@ -495,7 +501,7 @@ body {
 
   .serif {
     /* font-family: 'cheltenhamclassic', serif; */
-    font-family: 'Nanum Myeongjo', serif;
+    font-family: "Nanum Myeongjo", serif;
     /* font-family: 'Cormorant', serif; */
     font-weight: 500;
   }
@@ -514,7 +520,7 @@ body {
   }
 
   .light-gray {
-    color: #A0A0A0;
+    color: #a0a0a0;
   }
 
   .gray {
@@ -534,7 +540,7 @@ body {
   }
 
   .sf-pro {
-    font-family: -apple-system, 'SF Pro', 'Hanken Grotesk', sans-serif;
+    font-family: -apple-system, "SF Pro", "Hanken Grotesk", sans-serif;
   }
 
   .timeline-tooltip {
@@ -551,7 +557,9 @@ body {
     pointer-events: none;
   }
 
-  .dropdown-group:has(.dropdown-item[data-open="true"]) .dropdown-item:not([data-open="true"]) h2 {
+  .dropdown-group:has(.dropdown-item[data-open="true"])
+    .dropdown-item:not([data-open="true"])
+    h2 {
     color: var(--gray);
   }
 
@@ -594,7 +602,7 @@ body {
   }
 
   .light-green {
-    color: #E0DFAC;
+    color: #e0dfac;
   }
 
   .w-slim {
@@ -714,7 +722,7 @@ body {
   }
 
   .resume-shadow {
-    filter: drop-shadow(0 0 3rem #ebebeb)
+    filter: drop-shadow(0 0 3rem #ebebeb);
   }
 
   .green-hover:hover {
@@ -725,11 +733,13 @@ body {
 /* Two-frame flicker for step-card illustrations. The top frame hard-cuts to
    transparent at the halfway mark, so each frame gets exactly half the cycle. */
 @keyframes step-flicker {
-  0%, 50% {
+  0%,
+  50% {
     opacity: 1;
   }
 
-  50.001%, 100% {
+  50.001%,
+  100% {
     opacity: 0;
   }
 }
@@ -765,13 +775,15 @@ body {
     transform: scale(0.985, 1.015);
   }
 
-  70%, 100% {
+  70%,
+  100% {
     transform: scale(1, 1);
   }
 }
 
 .genie-out {
-  animation: genie-out var(--genie-cycle, 3s) cubic-bezier(0.32, 0.72, 0.3, 1) infinite;
+  animation: genie-out var(--genie-cycle, 3s) cubic-bezier(0.32, 0.72, 0.3, 1)
+    infinite;
   /* Percentage transform-origins need fill-box to resolve against the shape's
      own bounds rather than the SVG viewport. */
   transform-box: fill-box;
@@ -806,9 +818,34 @@ body {
     max-width: 100%;
   }
 
-  .main-col :is(.full-bleed, .task-container, .process-cont, .dark-section, .gray-full-container, .gray-narrow-container) {
+  .main-col
+    :is(
+      .full-bleed,
+      .task-container,
+      .process-cont,
+      .dark-section,
+      .gray-full-container,
+      .gray-narrow-container
+    ) {
     width: auto;
+    /* Parents are often items-center flex columns, where width:auto would
+       shrink these to their content instead of filling the column. */
+    align-self: stretch;
     margin-left: 0;
     margin-right: 0;
   }
+
+  /* Black task/process bands run from the column's left edge out to the right
+     edge of the screen (past #root's 4% right margin); the matching padding
+     keeps their content centered in the column. */
+  .main-col .task-container {
+    margin-right: -4vw;
+    padding-right: 4vw;
+  }
+}
+
+/* Stops the bands' slight overshoot (4vw vs. 4% of the scrollbar-less body)
+   from causing a horizontal scrollbar. clip, unlike hidden, keeps the sticky sidebar working. */
+body {
+  overflow-x: clip;
 }

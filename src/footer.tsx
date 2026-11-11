@@ -39,7 +39,7 @@ export default function Footer() {
         <p className="caption">Coded and designed by me ◡̈</p>
 
         <div className="flex gap-[1rem]">
-          <CopyText text="rebecca.choi05@gmail.com" />
+          <CopyText text="rebecca.choi05@gmail.com" followCursor />
           <a href="https://www.linkedin.com/in/ryschoi/">LinkedIn</a>
           <a href="/images/Rebecca_Choi_Resume.pdf" target="_blank" rel="noopener noreferrer">
             Resume
