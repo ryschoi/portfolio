@@ -37,6 +37,11 @@ export const craftItems: CraftItem[] = [
     title: "Radien",
     description: "Ticket-tracking system for cross-team project management",
   },
+  {
+    src: "/images/work/cooper/cooper.png",
+    title: "Cooper",
+    description: "Cooper",
+  },
 
   // ALI Hacks — internal portal
   {
