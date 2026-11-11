@@ -60,12 +60,11 @@ export default function Cooper() {
             </p>
             <h2 className="serif mt-[2rem]">
               but a job description alone is often not enough to confidently
-              commit.
+              commit to one.
             </h2>
             <p>
               Students start searching for co-ops as early as in the fall of
-              sophomore year. A job description is often not enough to
-              confidently commit six months to a role, especially as it is most
+              sophomore year. Students are often filled with many questions, especially as it is most
               students' first professional experience.
               {/* - first time searchers and first professional experience
               - confident decision

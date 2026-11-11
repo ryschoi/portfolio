@@ -5,16 +5,17 @@ import Pill from "./pill";
 
 export default function ProjectHeader({ project, sections }: { project: Project, sections: section[] }) {
     return (
-        <div className="flex flex-col items-center mb-[6rem] w-full gap-[2rem]">
+        <div className="flex flex-col items-center mt-[1.5rem] mb-[6rem] w-full gap-[2rem]">
+            {/* Needs an explicit width: in an items-center flex column an <hr> shrinks to 0. */}
             {/* TOP TITLE */}
             <div className="mob-mid-w flex flex-col gap-[0.5rem]">
                 <h1 className="serif tracking-[-0.3px]">{project.summary}</h1>
                 <p className="caption">{project.name}, {project.year}</p>
-                <div className="flex gap-[0.5rem] tag-position-2 mt-[0.5rem]">
+                {/* <div className="flex gap-[0.5rem] tag-position-2 mt-[0.5rem]">
                     {project.tags.map((tag) => (
                         <Pill text={tag} hover={false} clicked={true} />
                     ))}
-                </div>
+                </div> */}
             </div>
 
             {/* IMAGE */}

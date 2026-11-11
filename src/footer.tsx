@@ -38,7 +38,7 @@ export default function Footer() {
       <div className="flex flex-wrap justify-between items-start gap-y-[3.5rem] mt-[2rem]">
         <p className="caption">Coded and designed by me ◡̈</p>
 
-        <div className="flex gap-[1rem]">
+        <div className="flex flex-wrap gap-x-[1rem] gap-y-[0.5rem]">
           <CopyText text="rebecca.choi05@gmail.com" followCursor />
           <a href="https://www.linkedin.com/in/ryschoi/">LinkedIn</a>
           <a href="/images/Rebecca_Choi_Resume.pdf" target="_blank" rel="noopener noreferrer">

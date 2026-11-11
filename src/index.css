@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://vetrivelcsamy.github.io/cheltenham-classic/cheltenhamclassic.css");
-@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant:ital,wght@0,300..700;1,300..700&family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nanum+Myeongjo:wght@400;700&display=swap");
 
 @import "tailwindcss";
 @source "./**/*.{js,ts,jsx,tsx}";
@@ -16,9 +16,10 @@
   --light-gray: #a0a0a0;
 }
 
+/* Dark palette: toggled on <body> by useScrollTheme; add .dark to <html> in index.html to make it the site default. */
 .dark {
-  --text: #d7d7d7;
-  --bg: #212121;
+  --text: #ededed;
+  --bg: #222222;
   --gray: #989898;
   --dark-gray: #9a9a9a;
   --color-green: #d7d285;
@@ -284,7 +285,7 @@ body {
 
   .floating-nav {
     position: fixed;
-    left: 28vw;
+    left: 2vw;
     top: 50%;
     transform: translateY(-50%);
     z-index: 9999;
@@ -532,7 +533,7 @@ body {
   }
 
   .black {
-    color: var(--color-black);
+    color: var(--text);
   }
 
   .dropdown-item h2 {
@@ -800,52 +801,8 @@ body {
   }
 }
 
-/* 2-column layout: page widths were sized against the whole viewport, so on
-   desktop fit them to the right column instead. Unlayered so it beats utilities. */
-@media (min-width: 48rem) {
-  #root {
-    margin-left: 3%;
-  }
-
-  .main-col {
-    --mob-page-w: 100%;
-    --med-page-w: 100%;
-  }
-
-  .main-col img,
-  .main-col video,
-  .main-col [class*="vw]"] {
-    max-width: 100%;
-  }
-
-  .main-col
-    :is(
-      .full-bleed,
-      .task-container,
-      .process-cont,
-      .dark-section,
-      .gray-full-container,
-      .gray-narrow-container
-    ) {
-    width: auto;
-    /* Parents are often items-center flex columns, where width:auto would
-       shrink these to their content instead of filling the column. */
-    align-self: stretch;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  /* Black task/process bands run from the column's left edge out to the right
-     edge of the screen (past #root's 4% right margin); the matching padding
-     keeps their content centered in the column. */
-  .main-col .task-container {
-    margin-right: -4vw;
-    padding-right: 4vw;
-  }
-}
-
-/* Stops the bands' slight overshoot (4vw vs. 4% of the scrollbar-less body)
-   from causing a horizontal scrollbar. clip, unlike hidden, keeps the sticky sidebar working. */
+/* Full-bleed bands are 100vw wide, which overshoots the body by the scrollbar
+   width; clip (unlike hidden) hides that without creating a scroll container. */
 body {
   overflow-x: clip;
 }

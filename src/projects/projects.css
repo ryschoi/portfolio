@@ -57,6 +57,10 @@
     place-content: center;
 }
 
+.dark .gray-full-container {
+    background-color: #2a2a2a;
+}
+
 .gray-narrow-container {
     width: 100vw;
     margin-left: calc(-4vw);

@@ -22,7 +22,7 @@
         "active": true,
         "name": "Co-op Review Site @ Sandbox",
         "path": "/cooper",
-        "summary": "Creating a more informed and __________ Northeastern co-op search experience",
+        "summary": "Creating a more informed and __________ co-op search experience",
         "type": "Club",
         "team": ["Project Lead", "Technical Lead", "Design Lead (me)","~5 developers", "~3 designers"],
         "role": "",
