@@ -1,38 +1,56 @@
-import './index.css'
-import ResetScroll from "./reset-scroll"
-import ScrollToTopButton from './components/scroll-top';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./index.css";
+import ResetScroll from "./reset-scroll";
+import ScrollToTopButton from "./components/scroll-top";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 
-import Work from "./work/work"
+import Work from "./work/work";
 import Background from "./background";
 import Craft from "./craft";
 import About from "./about/about";
-import TopBar from "./top-bar"
+import TopBar from "./top-bar";
 import Footer from "./footer";
 
-import Rockumentary from './projects/rockumentary';
-import SnakebiteResponse from "./projects/snakebite-response"
+import Rockumentary from "./projects/rockumentary";
+import SnakebiteResponse from "./projects/snakebite-response";
 import DissonantHarmony from "./projects/dissonant-harmony";
 import SnakebiteData from "./projects/snakebite-data";
 import SchoolStairs from "./projects/school-stairs";
 import Radien from "./projects/radien";
-import Cooper from "./projects/cooper"
+import Cooper from "./projects/cooper";
 import OpenForum from "./projects/open-forum";
 import AliHacks from "./projects/ali-hacks";
 import BostonBeer from "./projects/bostonbeer";
 import PortfolioWebsite from "./projects/portfolio";
-import UnderConstruction from "./under-construction";
-import Apple from "./projects/apple"
+import Apple from "./projects/apple";
 
 export default function App() {
-  return <UnderConstruction />;
-
   return (
     <Router>
       <ResetScroll />
-      <div className="flex flex-col min-h-svh">
-        <TopBar />
-        <main className="flex flex-col flex-1 min-w-0">
+      <Layout />
+      <ScrollToTopButton />
+    </Router>
+  );
+}
+
+function Layout() {
+  // The craft page is locked to the window: the photo map fills the space
+  // between the top bar and footer and scrolls on its own, the page doesn't.
+  const fitToWindow = useLocation().pathname === "/craft";
+
+  return (
+    <div
+      className={`flex flex-col ${fitToWindow ? "h-svh overflow-hidden" : "min-h-svh"}`}
+    >
+      <TopBar />
+      <main
+        className={`flex flex-col flex-1 min-w-0 ${fitToWindow ? "min-h-0" : ""}`}
+      >
         <Routes>
           <Route path="/" element={<Work hero={null} showFilters={false} />} />
           <Route path="/craft" element={<Craft />} />
@@ -52,11 +70,8 @@ export default function App() {
           <Route path="/portfolio-website" element={<PortfolioWebsite />} />
           <Route path="/apple" element={<Apple />} />
         </Routes>
-        </main>
-        <Footer />
-      </div>
-      {/* <ProcessButton /> */}
-      <ScrollToTopButton />
-    </Router >
+      </main>
+      <Footer compact={fitToWindow} />
+    </div>
   );
 }

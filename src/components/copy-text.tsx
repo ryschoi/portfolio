@@ -2,7 +2,7 @@ import { useState } from "react";
 
 // Plain text that copies itself on click, with the same "Copy" hover tooltip as Pill's copyText.
 // With followCursor, the tooltip tracks the mouse instead of sitting at a fixed spot above the text.
-export default function CopyText({ text, followCursor = false }: { text: string; followCursor?: boolean }) {
+export default function CopyText({ text, followCursor = false, className = "" }: { text: string; followCursor?: boolean; className?: string }) {
     const [isHovering, setIsHovering] = useState(false);
     const [tooltip, setTooltip] = useState("Copy");
     const [cursor, setCursor] = useState({ x: 0, y: 0 });
@@ -30,7 +30,7 @@ export default function CopyText({ text, followCursor = false }: { text: string;
     return (
         <div className="relative w-fit">
             <button
-                className="bg-transparent p-[0px] p-style green-hover cursor-pointer"
+                className={`bg-transparent p-[0px] p-style green-hover cursor-pointer ${className}`}
                 onClick={handleCopy}
                 onMouseEnter={(e) => { handleMouseMove(e); setIsHovering(true); }}
                 onMouseLeave={() => setIsHovering(false)}

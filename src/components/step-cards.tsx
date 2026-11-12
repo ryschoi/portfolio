@@ -158,7 +158,6 @@ export default function StepCards({ steps }: StepCardsProps) {
                 inline
                 showLabels={false}
             />
-            {/* <p className="caption">Step {index + 1} of {steps.length}</p> */}
         </div>
     );
 }

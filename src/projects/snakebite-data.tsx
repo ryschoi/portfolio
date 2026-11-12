@@ -54,7 +54,7 @@ export default function SnakebiteData() {
                     <div className="md:flex md:flex-row flex flex-col gap-y-[2rem] md:gap-[0.5rem] subtle-shadow">
                         <div className="round flex flex-col gap-[1rem] box-border w-full">
                             <div className="s-data-bg work-add-img-cont p-[1.5rem] box-border h-[18rem]">
-                                <img src="/images/work/snakebite-data/s-data-bars.png" alt="" className="" />
+                                <img src="/images/work/snakebite-data/s-data-bars.png" alt="" />
                             </div>
                             <div>
                                 <p className="ml-[0.5rem] w-9/10 caption mb-[0.25rem]">version 1 (bars)</p>
@@ -91,7 +91,7 @@ export default function SnakebiteData() {
                         </div>
                         <h4 className="gray">The challenge with this chart was figuring out how to label the boxes in a way that highlighted the large disparity between reported data and reality with the least amount of brain work.</h4>
                         <br />
-                        <Collapsible closedText="Process" content={<p className="">Following Edward Tufte's "degree of separation" scale, a method of determining how accessible labels are to their corresponding data points, I connected the labels directly to the boxes rather than separating them from the boxes entirely. This way, there is less back-and-forth between the boxes and the labels, and the main message of the visualization can be understood at just a glance since all the central points are consolidated in one area.</p>} />
+                        <Collapsible closedText="Process" content={<p>Following Edward Tufte's "degree of separation" scale, a method of determining how accessible labels are to their corresponding data points, I connected the labels directly to the boxes rather than separating them from the boxes entirely. This way, there is less back-and-forth between the boxes and the labels, and the main message of the visualization can be understood at just a glance since all the central points are consolidated in one area.</p>} />
                     </div>
                     {/* IMAGES */}
                     <div className="work-img-group-col">

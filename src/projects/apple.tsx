@@ -9,11 +9,9 @@ import { useScrollTheme } from "../components/useScrollTheme";
 import { useRef } from 'react'
 import Dropdown from "../components/dropdown";
 import DropdownGroup from "../components/dropdown-group";
-import Timeline from "../components/timeline";
 import SlideImg from "../components/slide-img";
 import Carousel from "../components/carousel";
 import TipStack from "../components/tip-stack";
-import Pill from "../components/pill";
 import StepCards from "../components/step-cards";
 import GenieWindow from "../components/genie-window";
 
@@ -40,11 +38,6 @@ export default function Apple() {
                             defaultOpen
                             content={
                                 <div className="flex flex-col gap-[1rem]">
-                                    {/* <div className="flex gap-[0.5rem]">
-                                        <Pill text="End-to-end" hover={false} clicked={false} />
-                                        <Pill text="Prototyping" hover={false} clicked={false} />
-                                        <Pill text="Interaction design" hover={false} clicked={false} />
-                                    </div> */}
                                     <p className="gray">One of the features our team owns requires close collaboration between different teams and complex prototyping. My tool improved the efficiency and scalability of this process.</p>
                                     <StepCards steps={[
                                         { icon: "/images/work/apple/illustrations/tips.png", title: "Discover", description: "To start, I met with instructional designers, HI designers, and engineers to learn more about the current process." },
@@ -74,14 +67,6 @@ export default function Apple() {
                 </div>
                 <div id="learnings" className="section">
                     <SectionHeader title={sections[1].header} description={sections[1].description} />
-                    {/* <p className="w-slim">
-                        How HI design works at Apple
-                        What "design" means at a large tech company
-                        What it means to be a designer in 2026
-                        How to tell a story
-                        Design excellence
-                        Even the smallest details should scale to all users' needs and understandings of their devices.
-                    </p> */}
                     <div className="w-[80vw] mb-[3rem] self-center flex flex-col md:flex-row items-center justify-center gap-[3rem] md:gap-[2rem]">
                         <TipStack
                             cardScale={0.55}
@@ -116,32 +101,22 @@ export default function Apple() {
                     </div>
                     <hr />
                     <p className="caption w-slim self-center mb-[-1rem]">Loved all the greenery 💚🌳</p>
-                    <div>
-                        <Carousel>
-                            {/* <SlideImg src="images/work/apple/caffe.png" caption="" vert={true} /> */}
-                            <SlideImg src="images/work/apple/team.jpg" caption="" vert={false} />
-                            <SlideImg src="images/work/apple/ap.png" caption="" vert={true} />
-                            <SlideImg src="images/work/apple/ap2.png" caption="" vert={false} />
-                            <SlideImg src="images/work/apple/trees.png" caption="" vert={true} />
-                            {/* <SlideImg src="images/work/apple/mariani.png" caption="" vert={true} /> */}
-                            {/* <SlideImg src="images/work/apple/IL.png" caption="" vert={true} /> */}
-                            <SlideImg src="images/work/apple/rainbow.png" caption="" vert={false} />
-                            <SlideImg src="images/work/apple/poppies.png" caption="" vert={true} />
-                            <SlideImg src="images/work/apple/sky.png" caption="" vert={false} />
-                            {/* <SlideImg src="images/work/apple/hello.png" caption="" vert={true} /> */}
-                            {/* <SlideImg src="images/work/apple/caffe.png" caption="" vert={true} /> */}
-                            <SlideImg src="images/work/apple/team.jpg" caption="" vert={false} />
-                            <SlideImg src="images/work/apple/ap.png" caption="" vert={true} />
-                            <SlideImg src="images/work/apple/ap2.png" caption="" vert={false} />
-                            <SlideImg src="images/work/apple/trees.png" caption="" vert={true} />
-                            {/* <SlideImg src="images/work/apple/mariani.png" caption="" vert={true} /> */}
-                            {/* <SlideImg src="images/work/apple/IL.png" caption="" vert={true} /> */}
-                            <SlideImg src="images/work/apple/rainbow.png" caption="" vert={false} />
-                            <SlideImg src="images/work/apple/poppies.png" caption="" vert={true} />
-                            <SlideImg src="images/work/apple/sky.png" caption="" vert={false} />
-                            {/* <SlideImg src="images/work/apple/hello.png" caption="" vert={true} /> */}
-                        </Carousel>
-                    </div>
+                    <Carousel>
+                        <SlideImg src="images/work/apple/team.jpg" caption="" vert={false} />
+                        <SlideImg src="images/work/apple/ap.png" caption="" vert={true} />
+                        <SlideImg src="images/work/apple/ap2.png" caption="" vert={false} />
+                        <SlideImg src="images/work/apple/trees.png" caption="" vert={true} />
+                        <SlideImg src="images/work/apple/rainbow.png" caption="" vert={false} />
+                        <SlideImg src="images/work/apple/poppies.png" caption="" vert={true} />
+                        <SlideImg src="images/work/apple/sky.png" caption="" vert={false} />
+                        <SlideImg src="images/work/apple/team.jpg" caption="" vert={false} />
+                        <SlideImg src="images/work/apple/ap.png" caption="" vert={true} />
+                        <SlideImg src="images/work/apple/ap2.png" caption="" vert={false} />
+                        <SlideImg src="images/work/apple/trees.png" caption="" vert={true} />
+                        <SlideImg src="images/work/apple/rainbow.png" caption="" vert={false} />
+                        <SlideImg src="images/work/apple/poppies.png" caption="" vert={true} />
+                        <SlideImg src="images/work/apple/sky.png" caption="" vert={false} />
+                    </Carousel>
                 </div>
             </div>
         </div>

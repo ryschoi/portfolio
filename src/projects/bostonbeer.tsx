@@ -20,7 +20,6 @@ export default function BostonBeer() {
             <ProjectHeader project={thisProject as Project} sections={sections} />
             <FloatingNav sections={sections} />
             <div className="project-content-rest">
-                {/* <p className="w-slim">Case study coming soon.</p> */}
                 <div className="section w-slim" id="problem">
                     <SectionHeader title={sections[0].header} description={sections[0].description} optional={sections[0].optional} />
                     <p className="w-slim">Coming in without any formal marketing experience or learning, I was starting at a blank.</p>

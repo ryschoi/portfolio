@@ -1,18 +1,25 @@
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { craftItems, CraftItem } from "./database/craft";
 
 // Giant pannable photo map of the images listed in src/database/craft.ts, with a
 // minimap showing where the view is. Placements are re-randomized on each visit:
-// the canvas is a grid of cells, and each image lands at a random size and spot
-// inside its own cell, so it looks scattered without images piling on top of
-// each other. Image sizes aren't needed up front: each image gets a random
-// width and a max height that keeps it (plus its hover caption) inside its cell.
+// the canvas is a grid of cells sized to the screen, and each image lands at a
+// random size and spot inside its own cell, so it looks scattered without images
+// piling on top of each other. Image sizes aren't needed up front: each image
+// gets a random width and a max height that keeps it (plus its hover caption)
+// inside its cell.
 
-const CELL_W = 400;
-const CELL_H = CELL_W * (4 / 5); // N×N grid of these makes the whole map 5:4
+const CELL_W = 400; // base cell shape, used to pick the grid's columns and rows
+const CELL_H = CELL_W * (4 / 5);
+const CELL_W_RANGE = [300, 600]; // cells stretch within these to fill the map
+const CELL_H_RANGE = [240, 480];
+const MAP_FILL = 1.5; // the map aims for this many times the visible width
+const DESKTOP_ASPECT = 16 / 10; // map shape on landscape screens, like a laptop/desktop display
+const SPARE_CELL_COST = 0.15; // how much an empty cell counts against a grid shape when picking one
 const GUTTER = 24; // minimum breathing room inside each cell
 const CAPTION_H = 56; // room reserved under each image for the hover caption
 const MINIMAP_W = 50;
+const DOT_INSET = 6; // px between the minimap border and the dot's center at the edges
 const ZOOM_FILL = 0.8; // a zoomed image fills this much of the view
 const ZOOM_MS = 450;
 const MAX_SCALE = 8;
@@ -20,39 +27,73 @@ const PINCH_SPEED = 0.01; // trackpad pinch sensitivity
 const DRAG_THRESHOLD = 4; // px of movement before a press counts as a drag, not a click
 
 const isVideo = (src: string) => /\.(mov|mp4|webm)$/i.test(src);
+// How far along a scrollable range we are, 0–1 (0.5 when there's nothing to scroll).
+const scrollProgress = (pos: number, max: number) => (max > 0 ? Math.min(1, Math.max(0, pos / max)) : 0.5);
+const clamp = (v: number, [min, max]: number[]) => Math.min(max, Math.max(min, v));
 
 type Placed = CraftItem & { x: number; y: number; w: number; maxH: number };
 
-function layout(): { items: Placed[]; width: number; height: number } {
+// 1. Shape: on landscape screens the map is 16:10, like a desktop display; on
+//    portrait screens (phones) it takes the view's shape.
+// 2. Grid: the columns × rows with about one cell per image whose shape best
+//    matches that, with few empty cells.
+// 3. Cells stretch so the map is about MAP_FILL times the view's width.
+// 4. Images take the cells closest to the middle (with some randomness), so any
+//    empty cells end up near the edges instead of in the first view.
+function layout(viewW: number, viewH: number): { items: Placed[]; width: number; height: number } {
   const shuffled = [...craftItems].sort(() => Math.random() - 0.5);
-  // 5:4 map (wider than tall): an N×N grid of 5:4 cells with at least one cell per image. When there are
-  // spare cells, images go into a random subset of them, so the gaps are random too.
-  const n = Math.max(1, Math.ceil(Math.sqrt(shuffled.length)));
-  const cells = Array.from({ length: n * n }, (_, i) => i)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, shuffled.length);
-  const innerW = CELL_W - GUTTER;
-  const innerH = CELL_H - GUTTER - CAPTION_H;
+  const n = shuffled.length;
+  const aspect = viewW >= viewH ? DESKTOP_ASPECT : viewW / viewH;
+
+  let cols = 1;
+  let best = Infinity;
+  for (let c = 1; c <= n; c++) {
+    const r = Math.ceil(n / c);
+    const shapeMiss = Math.abs(Math.log((c * CELL_W) / (r * CELL_H) / aspect));
+    const score = shapeMiss + (c * r - n) * SPARE_CELL_COST;
+    if (score < best) [best, cols] = [score, c];
+  }
+  const rows = Math.ceil(n / cols);
+
+  const cellW = clamp((viewW * MAP_FILL) / cols, CELL_W_RANGE);
+  const cellH = clamp((cols * cellW) / aspect / rows, CELL_H_RANGE);
+  const width = cols * cellW;
+  const height = rows * cellH;
+
+  // Distance from the map's center (as a fraction of the map), plus jitter.
+  const centerScore = (i: number) => {
+    const dx = ((i % cols) + 0.5) / cols - 0.5;
+    const dy = (Math.floor(i / cols) + 0.5) / rows - 0.5;
+    return Math.hypot(dx, dy) + Math.random() * 0.2;
+  };
+  const cells = Array.from({ length: cols * rows }, (_, i) => ({ i, d: centerScore(i) }))
+    .sort((a, b) => a.d - b.d)
+    .slice(0, n)
+    .map((c) => c.i);
+  const innerW = cellW - GUTTER;
+  const innerH = cellH - GUTTER - CAPTION_H;
 
   const items = shuffled.map((item, i) => {
-    const w = 160 + Math.random() * (innerW - 160);
+    const w = innerW * (0.5 + Math.random() * 0.5);
     const yOffset = Math.random() * innerH * 0.35;
-    const col = cells[i] % n;
-    const row = Math.floor(cells[i] / n);
+    const col = cells[i] % cols;
+    const row = Math.floor(cells[i] / cols);
     return {
       ...item,
       w,
       maxH: innerH - yOffset,
-      x: col * CELL_W + GUTTER / 2 + Math.random() * (innerW - w),
-      y: row * CELL_H + GUTTER / 2 + yOffset,
+      x: col * cellW + GUTTER / 2 + Math.random() * (innerW - w),
+      y: row * cellH + GUTTER / 2 + yOffset,
     };
   });
 
-  return { items, width: n * CELL_W, height: n * CELL_H };
+  return { items, width, height };
 }
 
 export default function Craft() {
-  const { items, width, height } = useMemo(layout, []);
+  // Laid out once the map's visible size is known (before the first paint).
+  const [map, setMap] = useState<ReturnType<typeof layout> | null>(null);
+  const { items, width, height } = map ?? { items: [], width: 0, height: 0 };
   const scrollerRef = useRef<HTMLDivElement>(null);
   const sizerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLDivElement>(null);
@@ -65,7 +106,7 @@ export default function Craft() {
   const [zoomed, setZoomed] = useState<number | null>(null);
   const preZoom = useRef<{ s: number; cx: number; cy: number } | null>(null);
 
-  const minimapH = (MINIMAP_W * height) / width;
+  const minimapH = width ? (MINIMAP_W * height) / width : 0;
 
   // Map point currently at viewport position (vx, vy) — defaults to the view's
   // center. The sizer is centered when it's smaller than the view, hence offsetLeft/Top.
@@ -79,14 +120,19 @@ export default function Craft() {
     };
   };
 
-  // Move the minimap dot to the center of the current view. Mutates the dot
-  // directly so scrolling doesn't re-render all the images.
+  // Move the minimap dot to match how far the view is scrolled: at the far
+  // left/top edge of the map the dot is at the minimap's left/top edge, and so
+  // on. When the map fits in the view in a direction, the dot sits centered.
+  // Mutates the dot directly so scrolling doesn't re-render all the images.
   const syncDot = () => {
+    const el = scrollerRef.current;
     const dot = dotRef.current;
-    if (!scrollerRef.current || !sizerRef.current || !dot) return;
-    const c = mapPointAt();
-    dot.style.left = `${Math.min(1, Math.max(0, c.x / width)) * 100}%`;
-    dot.style.top = `${Math.min(1, Math.max(0, c.y / height)) * 100}%`;
+    if (!el || !dot) return;
+    const fx = scrollProgress(el.scrollLeft, el.scrollWidth - el.clientWidth);
+    const fy = scrollProgress(el.scrollTop, el.scrollHeight - el.clientHeight);
+    // Inset so the dot stays inside the minimap's border at the edges.
+    dot.style.left = `calc(${DOT_INSET}px + ${fx} * (100% - ${2 * DOT_INSET}px))`;
+    dot.style.top = `calc(${DOT_INSET}px + ${fy} * (100% - ${2 * DOT_INSET}px))`;
   };
 
   // Smallest zoom: the whole map fits in the view (or 1×, if it already fits).
@@ -214,6 +260,11 @@ export default function Craft() {
 
   useEffect(() => stopAnim, []);
 
+  useLayoutEffect(() => {
+    const el = scrollerRef.current!;
+    setMap(layout(el.clientWidth, el.clientHeight));
+  }, []);
+
   // Start in the middle of the map.
   useLayoutEffect(() => {
     applyView(1, width / 2, height / 2);
@@ -245,18 +296,16 @@ export default function Craft() {
   // Cleared after the click event fires, so the click handlers can see `moved`.
   const endDrag = () => { setTimeout(() => { drag.current = null; }); };
 
-  // Clicking the minimap jumps the view there.
+  // Clicking a spot on the minimap scrolls to the matching point (same mapping as the dot).
   const onMinimapClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const el = scrollerRef.current;
-    const sz = sizerRef.current;
-    if (!el || !sz) return;
+    if (!el) return;
     const rect = e.currentTarget.getBoundingClientRect();
-    const s = scale.current;
-    const fx = (e.clientX - rect.left) / rect.width;
-    const fy = (e.clientY - rect.top) / rect.height;
+    const fx = Math.min(1, Math.max(0, (e.clientX - rect.left - DOT_INSET) / (rect.width - 2 * DOT_INSET)));
+    const fy = Math.min(1, Math.max(0, (e.clientY - rect.top - DOT_INSET) / (rect.height - 2 * DOT_INSET)));
     el.scrollTo({
-      left: fx * width * s + sz.offsetLeft - el.clientWidth / 2,
-      top: fy * height * s + sz.offsetTop - el.clientHeight / 2,
+      left: fx * (el.scrollWidth - el.clientWidth),
+      top: fy * (el.scrollHeight - el.clientHeight),
       behavior: "smooth",
     });
   };
@@ -264,7 +313,7 @@ export default function Craft() {
   const zoomedItem = zoomed === null ? null : items[zoomed];
 
   return (
-    <div className="relative w-full h-[75svh] md:h-[calc(100svh-5rem)]">
+    <div className="relative w-full flex-1 min-h-0">
       <div
         ref={scrollerRef}
         onScroll={syncDot}
@@ -316,7 +365,7 @@ export default function Craft() {
                     where the caption shows unscaled at the bottom instead) */}
                 {zoomed === null && (
                   <div className="absolute top-full left-0 w-full pt-[0.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                    <p className="">{item.title}</p>
+                    <p>{item.title}</p>
                     {item.description && <p className="gray">{item.description}</p>}
                   </div>
                 )}
@@ -337,7 +386,7 @@ export default function Craft() {
       {/* MINIMAP */}
       <div
         onClick={onMinimapClick}
-        className="absolute bottom-[1rem] left-[1rem] rounded-[0.6rem] border-[1.5px] border-gray-stroke bg-[var(--bg)] cursor-pointer"
+        className="absolute bottom-[-0.5rem] left-0 rounded-[0.6rem] border-[1.5px] border-gray-stroke bg-[color-mix(in_srgb,var(--bg)_80%,transparent)] cursor-pointer"
         style={{ width: MINIMAP_W, height: minimapH }}
         aria-hidden="true"
       >

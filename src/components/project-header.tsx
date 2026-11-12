@@ -1,7 +1,6 @@
 import { Project } from "../projects/project";
 import ProcessBox from "./process";
 import { section } from "../projects/section";
-import Pill from "./pill";
 
 export default function ProjectHeader({ project, sections }: { project: Project, sections: section[] }) {
     return (
@@ -11,22 +10,11 @@ export default function ProjectHeader({ project, sections }: { project: Project,
             <div className="mob-mid-w flex flex-col gap-[0.5rem]">
                 <h1 className="serif tracking-[-0.3px]">{project.summary}</h1>
                 <p className="caption">{project.name}, {project.year}</p>
-                {/* <div className="flex gap-[0.5rem] tag-position-2 mt-[0.5rem]">
-                    {project.tags.map((tag) => (
-                        <Pill text={tag} hover={false} clicked={true} />
-                    ))}
-                </div> */}
             </div>
 
             {/* IMAGE */}
             <div className="round img-bg w-full flex align-center justify-center py-[3vw]">
                 < img src={project.frontImage} alt="" className={project.vertical === true ? "w-[26rem] max-w-[85vw] subtle-shadow" : "w-[44rem] max-w-[85vw] subtle-shadow"} />
-                {/* {project.id === 13 ? (
-                    <video autoPlay loop playsInline muted src="images/work/alihacks/full_proto.mov"
-                        className="w-[44rem] max-w-[85vw] subtle-shadow object-cover" />
-                ) : (
-                    < img src={project.frontImage} alt="" className={project.vertical === true ? "w-[26rem] max-w-[85vw] subtle-shadow" : "w-[44rem] max-w-[85vw] subtle-shadow"} />
-                )} */}
             </div>
 
             {/* BELOW IMAGE */}
@@ -50,7 +38,7 @@ export default function ProjectHeader({ project, sections }: { project: Project,
                             {project.team.map((t, i) => (
                                 <p key={i}>{t}</p>
                             ))}
-                            <p className="">{project.role}</p>
+                            <p>{project.role}</p>
                         </div>
                     </div>
                     <div className="flex flex-col gap-[0.2rem] w-[10rem]">

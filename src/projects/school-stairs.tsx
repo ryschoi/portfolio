@@ -1,14 +1,8 @@
 import "./projects.css";
-import { projects } from "../database";
-import ProjectHeader from "../components/project-header";
-import { Project } from "./project";
 
 export default function SchoolStairs() {
-    const thisProject = projects.find(p => p.path === "/school-stairs");
-
     return (
         <div className="project-content">
-            {/* <ProjectHeader project={thisProject as Project} /> */}
             <div className="project-content-rest">
                 <div className="col22">
                     <div className="row22">

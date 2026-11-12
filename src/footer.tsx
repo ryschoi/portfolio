@@ -1,41 +1,13 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
 import CopyText from "./components/copy-text";
 
-export default function Footer() {
-  const { pathname } = useLocation();
-  const navigate = useNavigate();
-
-  const handleWorkClick = () => {
-    if (pathname !== "/") {
-      navigate("/", { state: { scrollTo: "filters" } });
-    } else {
-      const section = document.getElementById("filters");
-      if (section) {
-        const offset = 64;
-        const y =
-          section.getBoundingClientRect().top + window.pageYOffset - offset;
-
-        window.scrollTo({ top: y, behavior: "smooth" });
-      }
-    }
-  };
-
-  const handleClick = (to: string) => {
-    if (
-      pathname === to &&
-      ["/", "/background", "/about", "/resume"].includes(to)
-    ) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
+export default function Footer({ compact = false }: { compact?: boolean }) {
   return (
     <div
       id="footer"
-      className="w-slim mt-[6rem] mb-[2.5rem] md:w-full md:max-w-full"
+      className={`w-slim ${compact ? "mt-[1.5rem] mb-[1.5rem]" : "mt-[6rem] mb-[2.5rem]"} md:w-full md:max-w-full`}
     >
       <hr />
-      <div className="flex flex-wrap justify-between items-start gap-y-[3.5rem] mt-[2rem]">
+      <div className={`flex flex-wrap justify-between items-start gap-y-[0.75rem] ${compact ? "mt-[1rem]" : "mt-[2rem]"}`}>
         <p className="caption">Coded and designed by me ◡̈</p>
 
         <div className="flex flex-wrap gap-x-[1rem] gap-y-[0.5rem]">

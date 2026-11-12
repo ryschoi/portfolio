@@ -44,16 +44,6 @@ export default function PortfolioWebsite () {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="ali-bg work-add-img-cont">
-                            <div className="self-center my-[3rem]">
-                                <img src="/images/work/alihacks/app_status.png" alt="" className="w-[72rem] max-w-[85vw] subtle-shadow object-cover" />
-                            </div>
-                        </div>
-                        <div className="ali-bg work-add-img-cont">
-                            <div className="self-center my-[3rem]">
-                                <img src="/images/work/alihacks/judging.png" alt="" className="w-[40rem] max-w-[85vw] subtle-shadow object-cover" />
-                            </div>
-                        </div> */}
                     </div>
                 </div>
                 <div className="section self-center">

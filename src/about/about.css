@@ -70,3 +70,32 @@
   object-fit: cover;
   border-radius: 0.5rem;
 }
+
+/* Hover caption that follows the cursor over About photos. The look
+   (fill, outline, padding) comes from the shared .pill class; this handles
+   positioning, wrapping, the light text and the near-square corners. */
+.photo-caption-tag {
+  position: absolute;
+  transform: translate(14px, 18px); /* sits just below-right of the cursor tip */
+  pointer-events: none;
+  z-index: 50;
+  width: max-content;
+  max-width: 14rem;
+  font-size: 0.9rem;
+  line-height: 1.35rem;
+  font-weight: 300;
+  border-radius: 0.2rem; /* overrides .pill's full rounding: almost rectangular */
+  text-align: left;
+  transition: opacity 0.15s ease;
+}
+
+.photo-caption-tag.flip {
+  transform: translate(calc(-100% - 6px), 18px); /* below-left of the cursor */
+}
+
+/* No hover on touch screens, so no caption cursor there. */
+@media (hover: none) {
+  .photo-caption-tag {
+    display: none;
+  }
+}

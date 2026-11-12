@@ -127,7 +127,7 @@ export default function Background() {
         <div className="thing" key="code">
             <img src="/images/icons/code_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
             <h3 className="serif font-[700]">[2018] Learned to code</h3>
-            <p className="">I first learned to code in middle school, at a summer web development bootcamp. I fell in love with the freedom to code whatever I wanted, but quickly realized that freedom came with many decisions surrounding usability and intent: <span className="italic">What exactly was I to code?</span> This is when I discovered the importance of design.</p>
+            <p>I first learned to code in middle school, at a summer web development bootcamp. I fell in love with the freedom to code whatever I wanted, but quickly realized that freedom came with many decisions surrounding usability and intent: <span className="italic">What exactly was I to code?</span> This is when I discovered the importance of design.</p>
         </div>,
         <div className="thing" key="design">
             <img src="/images/icons/shapes_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />

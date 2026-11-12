@@ -57,9 +57,7 @@ export default function DissonantHarmony() {
                 <div className="section align-center" id="a1-size-poster">
                     <SectionHeader title={sections[3].header} description={sections[3].description} optional={sections[3].optional} />
                     <p className="mt-no-optional w-slim dark-gray">It was important that there was a main focal point for the poster, especially because the poster was a big A1 size. I needed to establish a clear direction that viewers' eyes could follow when looking at the poster. That meant not only setting big-enough margins, but also making sure the individual pieces of the sculpture were framed well and that the other elements supported the main focus (the sculpture).</p>
-                    {/* <div className="round w-full flex align-center justify-center py-[4rem]"> */}
-                        <img src="images/work/calder/calder-a1-markup.png" alt="" className="my-[3rem] self-center w-full md:w-[50rem]" />
-                    {/* </div> */}
+                    <img src="images/work/calder/calder-a1-markup.png" alt="" className="my-[3rem] self-center w-full md:w-[50rem]" />
                     {/* final a1 */}
                     <div className="flex flex-col w-full">
                         <VerticalImageSpan path="images/work/calder/calder.png" />
