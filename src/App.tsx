@@ -26,9 +26,12 @@ import OpenForum from "./projects/open-forum";
 import AliHacks from "./projects/ali-hacks";
 import BostonBeer from "./projects/bostonbeer";
 import PortfolioWebsite from "./projects/portfolio";
+import UnderConstruction from "./under-construction";
 import Apple from "./projects/apple";
 
 export default function App() {
+  return <UnderConstruction />;
+
   return (
     <Router>
       <ResetScroll />
