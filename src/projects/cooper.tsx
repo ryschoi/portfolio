@@ -50,7 +50,9 @@ export default function Cooper() {
             title={sections[0].header}
             description={sections[0].description}
           />
-          <div className="flex flex-col gap-[0.5rem] w-slim mt-[-1rem]">
+          {/* -2rem cancels most of the section's 2.5rem gap so this first paragraph sits
+              0.5rem under the header's h2, matching the h2 + paragraph pair below. */}
+          <div className="flex flex-col gap-[0.5rem] w-slim mt-[-2rem]">
             <p className="dark-gray">
               By default, two co-op terms are built into every academic plan, and
               students take off six months from classes to work full time in a
@@ -58,11 +60,12 @@ export default function Cooper() {
               {/* built into academic plan */}
               {/* questions */}
             </p>
+            <div className="round img-bg w-full h-[12rem] mt-[0.75rem]" />
             <h2 className="serif mt-[2rem]">
               but a job description alone is often not enough to confidently
               commit to one.
             </h2>
-            <p>
+            <p className="dark-gray">
               Students start searching for co-ops as early as in the fall of
               sophomore year. Students are often filled with many questions, especially as it is most
               students' first professional experience.
@@ -72,6 +75,8 @@ export default function Cooper() {
               - start searching early
               - often just using a job description */}
             </p>
+            {/* Placeholder for images */}
+            <div className="round img-bg w-full h-[12rem] mt-[0.75rem]" />
           </div>
           <div className="gray-full-container">
             <div className="flex flex-col gap-[2.5rem] my-[4rem] w-full">

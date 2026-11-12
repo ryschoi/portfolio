@@ -10,6 +10,9 @@ export default function ProcessBox({ sectionsList, project }: { sectionsList: se
                     <br /><br />Due to an NDA, I'm unable to share designs or project details from this internship.</p>
                 ) : (
                     <>
+                        <p className="caption light-gray">Overview</p>
+                        <h2 className="white">{project.overview}</h2>
+                        {/* Process list, replaced by the overview for now:
                         <p className="caption light-gray">Process</p>
                         <hr className="border-[#555555] border-[1.25px]" />
                         {sectionsList.map((section, index) => (
@@ -21,6 +24,7 @@ export default function ProcessBox({ sectionsList, project }: { sectionsList: se
                                 <hr className="border-[#555555] border-[1.25px]" />
                             </div>
                         ))}
+                        */}
                     </>
                 )}
             </div>
