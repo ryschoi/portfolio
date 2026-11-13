@@ -1,0 +1,81 @@
+/* iMessage "Echo"-style flood: see message-flood.tsx. */
+
+.message-flood img {
+  position: absolute;
+  height: auto;
+  opacity: 0;
+  /* The bubbles' tails are at the bottom right, so they grow from there like iMessage. */
+  transform-origin: 90% 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Balloon arc: float up, hang for a moment, then sink slowly back out the bottom. */
+.message-flood.is-playing .message-flood-main {
+  animation: bubble-balloon 5000ms linear var(--delay) both;
+}
+
+/* Echo copies drift straight through: up from below the box and out through its top, fading
+   as they go. That leaves only the real questions, in their non-overlapping layout, with no
+   separate cleanup step. */
+.message-flood.is-playing .message-flood-echo {
+  animation: echo-drift 1800ms cubic-bezier(0.25, 0.6, 0.6, 1) var(--delay) both;
+}
+
+/* Each segment carries its own easing: the rise decelerates into the top like a tapped balloon
+   losing speed, the hang drifts a hair downward, and the fall starts gently and picks up. The
+   box clips the bubbles below it, so they rise from and sink out of its bottom edge. */
+@keyframes bubble-balloon {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem) scale(0.6);
+    animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  6% {
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(0) scale(1);
+    animation-timing-function: ease-in-out;
+  }
+  48% {
+    transform: translateY(0.4rem) scale(1);
+    animation-timing-function: cubic-bezier(0.45, 0, 0.8, 0.5);
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(12rem) scale(0.95);
+  }
+}
+
+@keyframes echo-drift {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem) scale(0.6);
+  }
+  15% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-14rem) scale(1);
+  }
+}
+
+/* No motion: show the real questions as a still image and skip the flood. */
+@media (prefers-reduced-motion: reduce) {
+  .message-flood .message-flood-main {
+    opacity: 1;
+    animation: none !important;
+  }
+  .message-flood .message-flood-echo {
+    display: none;
+  }
+}

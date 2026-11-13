@@ -78,3 +78,31 @@
     gap: 2.5rem;
     width: 100%;
 }
+/* Two images stacked in one spot take turns: each holds for most of its half of the cycle,
+   then fades over to the other. The second image runs the same animation half a cycle
+   behind (a negative delay set inline), so exactly one is showing at a time. */
+.crossfade {
+    animation: crossfade 10s ease-in-out infinite;
+}
+
+@keyframes crossfade {
+    0%, 45% {
+        opacity: 1;
+    }
+    50%, 95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* No motion: show only the first image. */
+@media (prefers-reduced-motion: reduce) {
+    .crossfade {
+        animation: none;
+    }
+    .crossfade + .crossfade {
+        opacity: 0;
+    }
+}

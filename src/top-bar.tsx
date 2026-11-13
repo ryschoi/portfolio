@@ -22,7 +22,11 @@ export default function TopBar() {
     ? "Product designer building scalable systems and invisible interfaces"
     : project && (
         <>
-          <span className="nanum gray">Work / </span>{project.name}
+          <a href="/" className="nanum gray no-underline hover:no-underline hover:font-medium">
+            <span className="nanum gray">Work</span>
+          </a>
+          <span className="nanum gray"> / </span>
+          {project.name}
           <span className="nanum gray ml-[0.25rem]">{project.year}</span>
         </>
       );
