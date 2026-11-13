@@ -82,7 +82,7 @@
    then fades over to the other. The second image runs the same animation half a cycle
    behind (a negative delay set inline), so exactly one is showing at a time. */
 .crossfade {
-    animation: crossfade 10s ease-in-out infinite;
+    animation: crossfade 7s ease-in-out infinite;
 }
 
 @keyframes crossfade {
@@ -97,12 +97,81 @@
     }
 }
 
+/* Captions that swap with a crossfade's slides. Text blending into text looks muddy, so
+   instead of overlapping, the outgoing caption fades out quickly (47–49% of the cycle,
+   about 0.14s at 7s) and the next one fades in right after (49–50%), lined up with the
+   middle of the image fade. Same cycle length and delays as .crossfade. */
+.crossfade-caption {
+    animation: crossfade-caption 7s linear infinite;
+}
+
+@keyframes crossfade-caption {
+    0%, 47% {
+        opacity: 1;
+    }
+    49%, 99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Pause button for a crossfade box: freezes every slide where it is. */
+.crossfade-paused .crossfade,
+.crossfade-paused .crossfade-caption {
+    animation-play-state: paused;
+}
+
+.crossfade-toggle {
+    display: grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    color: #818181;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* The global "* { color: var(--text) }" base rule sets a color on every element, including
+   the <path>/<rect> inside the icon, and their currentColor fill resolves against that, so
+   the icon came out in the text color. Make everything inside inherit the button's color. */
+.crossfade-toggle * {
+    color: inherit;
+}
+
+.crossfade-toggle:hover {
+    background-color: #0000000d;
+    color: var(--light-gray);
+}
+
+/* "Lighter" on a dark page means closer to the background, so it goes darker there. */
+.dark .crossfade-toggle {
+    color: #555555;
+}
+
+.dark .crossfade-toggle:hover {
+    background-color: #ffffff14;
+    color: var(--gray);
+}
+
 /* No motion: show only the first image. */
 @media (prefers-reduced-motion: reduce) {
     .crossfade {
         animation: none;
     }
     .crossfade + .crossfade {
+        opacity: 0;
+    }
+    .crossfade-toggle {
+        display: none;
+    }
+    .crossfade-caption {
+        animation: none;
+    }
+    .crossfade-caption + .crossfade-caption {
         opacity: 0;
     }
 }

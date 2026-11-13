@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./projects.css";
 import { projects } from "../database";
 import ProjectHeader from "../components/project-header";
@@ -46,8 +47,41 @@ const pillars = [
 // "cards" is the original three-card grid.
 const PILLAR_LAYOUT: "rows" | "cards" = "rows";
 
+// Pause/play button for a crossfade box, pinned to its bottom-right corner. The box
+// gets the "crossfade-paused" class while paused (see projects.css).
+function CrossfadePauseButton({
+  paused,
+  onToggle,
+}: {
+  paused: boolean;
+  onToggle: () => void;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onToggle}
+      aria-label={paused ? "Play" : "Pause"}
+      aria-pressed={paused}
+      className="crossfade-toggle absolute right-[0.75rem] bottom-[0.6rem] md:right-[1rem] md:bottom-[0.75rem]"
+    >
+      {paused ? (
+        <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true">
+          <path d="M4 2.5v11l9.5-5.5z" />
+        </svg>
+      ) : (
+        <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true">
+          <rect x="3.5" y="2.5" width="3" height="11" rx="0.75" />
+          <rect x="9.5" y="2.5" width="3" height="11" rx="0.75" />
+        </svg>
+      )}
+    </button>
+  );
+}
+
 export default function Cooper() {
   const thisProject = projects.find((p) => p.path === "/cooper");
+  const [formatPaused, setFormatPaused] = useState(false);
+  const [interviewPaused, setInterviewPaused] = useState(false);
   const sections: section[] = [
     {
       id: "overview",
@@ -93,9 +127,9 @@ export default function Cooper() {
               0.5rem under the header's h2, matching the h2 + paragraph pair below. */}
           <div className="flex flex-col gap-[0.5rem] w-slim mt-[-2rem]">
             <p className="dark-gray">
-              By default, two co-op terms are built into every academic plan, and
-              students take off six months from classes to work full time in a
-              field of their choice.
+              By default, two co-op terms are built into every academic plan,
+              and students take off six months from classes to work full time in
+              a field of their choice.
               {/* built into academic plan */}
               {/* questions */}
             </p>
@@ -115,8 +149,8 @@ export default function Cooper() {
             </h2>
             <p className="dark-gray">
               Students start searching for co-ops as early as in the fall of
-              sophomore year. Students are often filled with many questions, especially as it is most
-              students' first professional experience.
+              sophomore year. Students are often filled with many questions,
+              especially as it is most students' first professional experience.
               {/* - first time searchers and first professional experience
               - confident decision
               - six month commitment
@@ -168,9 +202,9 @@ export default function Cooper() {
           <div className="w-slim flex flex-col gap-[0.5rem]">
             <h3 className="mb-[0.5rem] dark-gray caption">My role</h3>
             <p className="dark-gray">
-              I led the design of Cooper, starting with three design
-              pillars I set to guide every decision we made. Here they are, with
-              the features that support each one.
+              I led the design of Cooper, starting with three design pillars I
+              set to guide every decision we made. Here they are, with the
+              features that support each one.
             </p>
           </div>
           {PILLAR_LAYOUT === "rows" ? (
@@ -205,17 +239,17 @@ export default function Cooper() {
               ))}
             </div>
           ) : (
-          <div className="med-w grid grid-cols-1 lg:grid-cols-3 gap-[1rem]">
-            {pillars.map((pillar) => (
-              <div
-                key={pillar.title}
-                className="flex flex-col justify-between gap-[1rem] p-[2rem] rounded-[1.5rem] border border-white/40 img-bg"
-              >
-                <div className="flex flex-col gap-[0.25rem]">
-                  <h4>{pillar.title}</h4>
-                  <p>{pillar.description}</p>
-                </div>
-                {/* Features hidden for now.
+            <div className="med-w grid grid-cols-1 lg:grid-cols-3 gap-[1rem]">
+              {pillars.map((pillar) => (
+                <div
+                  key={pillar.title}
+                  className="flex flex-col justify-between gap-[1rem] p-[2rem] rounded-[1.5rem] border border-white/40 img-bg"
+                >
+                  <div className="flex flex-col gap-[0.25rem]">
+                    <h4>{pillar.title}</h4>
+                    <p>{pillar.description}</p>
+                  </div>
+                  {/* Features hidden for now.
                 {pillar.features.length > 0 && (
                   <div className="flex flex-wrap gap-[0.5rem]">
                     {pillar.features.map((feature) => (
@@ -229,22 +263,20 @@ export default function Cooper() {
                   </div>
                 )}
                 */}
-              </div>
-            ))}
-          </div>
+                </div>
+              ))}
+            </div>
           )}
         </div>
 
         {/* ISSUE 1 */}
         <div id="subjectivity" className="section">
-          <SectionHeader
-            description={sections[2].description}
-          />
+          <SectionHeader description={sections[2].description} />
           {/* -2rem pulls the text up under the header, same as the Overview. */}
           <div className="w-slim flex flex-col gap-[1rem] mt-[-2rem]">
             <p className="dark-gray">
-              For a long time, most of our questions used a 1–5
-              rating, which is arbitrary and uninformative.
+              For a long time, most of our questions used a 1–5 rating, which is
+              arbitrary and uninformative.
             </p>
             <div className="flex flex-col mb-[1rem]">
               {/* Same light gray box as the two Overview images above. */}
@@ -258,14 +290,17 @@ export default function Cooper() {
               <p className="sp gray mt-[0.6rem]">Previous question format</p>
             </div>
             <p className="dark-gray">
-              To leave as little room as possible for bias and subjectivity, I
-              defined clear criteria for each metric, so every review is
-              measured against the same standards across reviewers and roles.
+              To leave as little room as possible for bias and subjectivity,
+              each metric is now defined with clear criteria, so every review is
+              measured against the same standards, across all reviewers and
+              roles.
             </p>
             {/* New rating breakdowns, crossfading between the two categories on a loop.
                 Both images share one grid cell, so the box is as tall as the taller one. */}
             <div className="flex flex-col mt-[0.75rem]">
-              <div className="round img-bg w-full grid place-items-center p-[1rem] md:p-[2rem]">
+              <div
+                className={`relative round img-bg w-full grid place-items-center p-[1rem] pb-[2.75rem] md:p-[2rem] ${formatPaused ? "crossfade-paused" : ""}`}
+              >
                 {[
                   {
                     src: "/images/work/cooper/company-culture.png",
@@ -281,28 +316,102 @@ export default function Cooper() {
                     src={image.src}
                     alt={image.alt}
                     className="crossfade w-[88%] md:w-[70%] [grid-area:1/1]"
-                    style={{ animationDelay: `${i * -5}s` }}
+                    style={{ animationDelay: `${i * -3.5}s` }}
                   />
                 ))}
+                <CrossfadePauseButton
+                  paused={formatPaused}
+                  onToggle={() => setFormatPaused((p) => !p)}
+                />
               </div>
               <p className="sp gray mt-[0.6rem]">Current question format</p>
             </div>
+            <p className="dark-gray mt-[1rem]">
+              Biased reviews don't just stem from vague question phrasing, but
+              also differences in individual experiences, like in interview
+              difficulty. To address this, both the review form and the
+              displayed reviews frame difficulty in relation to similar roles.
+            </p>
+            {/* The difficulty question in the review form and how it shows on a review,
+                crossfading on a loop like the question-format box above. Both slides share
+                one grid cell, so the box is as tall as the taller one. The captions sit under
+                the box, stacked the same way and on the same timing, so each swaps with its
+                image; the paused class goes on the wrapper so it freezes both. */}
+            {(() => {
+              const slides = [
+                {
+                  label: "In the review form",
+                  src: "/images/work/cooper/interview_diff.png",
+                  alt: "Review form difficulty question with options: easier than, about the same as, or harder than other interviews",
+                  aspect: 1467 / 951,
+                  width: "w-[80%] md:w-[60%]",
+                },
+                {
+                  label: "The displayed review",
+                  src: "/images/work/cooper/interview.png",
+                  alt: "A displayed review rating the technical and behavioral interviews 'Less difficult', with a tooltip: compared to other interviews for technical roles",
+                  // Shown cropped to 1774×650: the PNG has a lot of empty space above and
+                  // below its content, and trimming it makes the content larger.
+                  aspect: 1774 / 650,
+                  width: "w-full md:w-[88%]",
+                },
+              ];
+              const delay = (i: number) => ({ animationDelay: `${i * -3.5}s` });
+              return (
+                <div
+                  className={`flex flex-col mt-[0.75rem] ${interviewPaused ? "crossfade-paused" : ""}`}
+                >
+                  <div className="relative round img-bg w-full grid place-items-center p-[1rem] pb-[2.75rem] md:p-[2rem]">
+                    {slides.map((slide, i) => (
+                      <div
+                        key={slide.src}
+                        className={`crossfade round bg-white p-[1rem] [grid-area:1/1] ${slide.width}`}
+                        style={delay(i)}
+                      >
+                        <img
+                          src={slide.src}
+                          alt={slide.alt}
+                          className="w-full object-cover"
+                          style={{ aspectRatio: slide.aspect }}
+                        />
+                      </div>
+                    ))}
+                    <CrossfadePauseButton
+                      paused={interviewPaused}
+                      onToggle={() => setInterviewPaused((p) => !p)}
+                    />
+                  </div>
+                  <div className="grid mt-[0.6rem]">
+                    {slides.map((slide, i) => (
+                      <p
+                        key={slide.label}
+                        className="crossfade-caption sp gray [grid-area:1/1]"
+                        style={delay(i)}
+                      >
+                        {slide.label}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
+            <p className="dark-gray mt-[1rem]">
+              Since candidates for similar roles tend to be at similar skill
+              levels, comparing against those interviews gives a fairer baseline
+              than each reviewer’s personal sense of “hard.”
+            </p>
           </div>
         </div>
 
         {/* ISSUE 2 */}
         <div id="moderation" className="section">
-          <SectionHeader
-            description={sections[3].description}
-          />
+          <SectionHeader description={sections[3].description} />
           <p className="w-slim">Coming soon.</p>
         </div>
 
         {/* ISSUE 3 */}
         <div id="small-samples" className="section">
-          <SectionHeader
-            description={sections[4].description}
-          />
+          <SectionHeader description={sections[4].description} />
           <p className="w-slim">Coming soon.</p>
         </div>
 
