@@ -65,16 +65,170 @@ function CrossfadePauseButton({
       className="crossfade-toggle absolute right-[0.75rem] bottom-[0.6rem] md:right-[1rem] md:bottom-[0.75rem]"
     >
       {paused ? (
-        <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true">
+        <svg
+          viewBox="0 0 16 16"
+          width="15"
+          height="15"
+          fill="currentColor"
+          aria-hidden="true"
+        >
           <path d="M4 2.5v11l9.5-5.5z" />
         </svg>
       ) : (
-        <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true">
+        <svg
+          viewBox="0 0 16 16"
+          width="15"
+          height="15"
+          fill="currentColor"
+          aria-hidden="true"
+        >
           <rect x="3.5" y="2.5" width="3" height="11" rx="0.75" />
           <rect x="9.5" y="2.5" width="3" height="11" rx="0.75" />
         </svg>
       )}
     </button>
+  );
+}
+
+// The three moderation safeguards, in the order a review meets them. Boxes are empty
+// placeholders until screenshots are added: give an entry a `src` and `alt` to show it.
+const safeguards: {
+  stage: string;
+  text: string;
+  caption: string;
+  src?: string;
+  alt?: string;
+}[] = [
+  {
+    stage: "In the review form",
+    text: "The questions are designed to minimize ambiguity and subjectivity.",
+    caption: "Review form questions",
+  },
+  {
+    stage: "Before the review goes live",
+    text: "Before a review goes live, an admin must approve it from the admin dashboard.",
+    caption: "Admin dashboard",
+  },
+  {
+    stage: "After the review goes live",
+    text: "Anyone can report a review, role, or company, and the report goes to the admin dashboard to be looked into.",
+    caption: "Reporting feature",
+  },
+];
+
+// Manual carousel for the safeguards: the active step's counter and stage name, its
+// sentence, box and caption, with prev/next arrows.
+// Every step's sentence and box share one grid cell and fade between each other, so the
+// carousel is always as tall as its tallest step and nothing below it jumps.
+function SafeguardCarousel() {
+  const [active, setActive] = useState(0);
+  const last = safeguards.length - 1;
+  const fade = (i: number) =>
+    `[grid-area:1/1] transition-opacity duration-300 ${
+      i === active ? "opacity-100" : "opacity-0 pointer-events-none"
+    }`;
+
+  return (
+    <div className="flex flex-col">
+      {/* Step counter and stage name, then the step's sentence. */}
+      <div className="grid">
+        {safeguards.map((safeguard, i) => (
+          <p
+            key={safeguard.stage}
+            className={`flex items-baseline gap-[0.6rem] ${fade(i)}`}
+            aria-hidden={i !== active}
+          >
+            <span className="caption gray">
+              {i + 1}/{safeguards.length}
+            </span>
+            <span className="font-[400] gray">{safeguard.stage}</span>
+          </p>
+        ))}
+      </div>
+
+      <div className="grid mt-[0.5rem]">
+        {safeguards.map((safeguard, i) => (
+          <p
+            key={safeguard.stage}
+            className={`dark-gray ${fade(i)}`}
+            aria-hidden={i !== active}
+          >
+            {safeguard.text}
+          </p>
+        ))}
+      </div>
+
+      <div className="grid">
+        {safeguards.map((safeguard, i) => (
+          <div
+            key={safeguard.stage}
+            className={`round img-bg w-full overflow-hidden ${fade(i)}`}
+            aria-hidden={i !== active}
+          >
+            {safeguard.src ? (
+              <img
+                src={safeguard.src}
+                alt={safeguard.alt ?? ""}
+                className="w-full"
+              />
+            ) : (
+              // Same size as the Overview boxes: 1.5rem padding around a 2000×570 frame.
+              <div className="p-[1.5rem]">
+                <div className="w-full aspect-[2000/570]" />
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+
+      <div className="flex items-center justify-between mt-[0.6rem]">
+        <p className="sp gray">{safeguards[active].caption}</p>
+        <div className="flex gap-[0.25rem] mr-[-0.5rem]">
+          <button
+            type="button"
+            onClick={() => setActive((a) => Math.max(0, a - 1))}
+            disabled={active === 0}
+            aria-label="Previous safeguard"
+            className="crossfade-toggle disabled:opacity-30 disabled:pointer-events-none"
+          >
+            <svg
+              viewBox="0 0 16 16"
+              width="15"
+              height="15"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M10 3 5 8l5 5" />
+            </svg>
+          </button>
+          <button
+            type="button"
+            onClick={() => setActive((a) => Math.min(last, a + 1))}
+            disabled={active === last}
+            aria-label="Next safeguard"
+            className="crossfade-toggle disabled:opacity-30 disabled:pointer-events-none"
+          >
+            <svg
+              viewBox="0 0 16 16"
+              width="15"
+              height="15"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.75"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m6 3 5 5-5 5" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -101,15 +255,14 @@ export default function Cooper() {
     },
     {
       id: "moderation",
-      header: "Balancing administration and student voices",
-      description: "Balancing administration and student voices",
+      header: "Content safeguards",
+      description: "Content safeguards",
     },
     {
       id: "small-samples",
-      header: "Visual representation for small sample sizes",
-      description: "Visual representation for small sample sizes",
+      header: "Representing all sample sizes",
+      description: "Visual representation for all sample sizes",
     },
-    { id: "see-cooper", header: "See Cooper", description: "Craft highlights" },
   ];
 
   return (
@@ -123,10 +276,10 @@ export default function Cooper() {
             title={sections[0].header}
             description={sections[0].description}
           />
-          {/* -2rem cancels most of the section's 2.5rem gap so this first paragraph sits
-              0.5rem under the header's h2, matching the h2 + paragraph pair below. */}
-          <div className="flex flex-col gap-[0.5rem] w-slim mt-[-2rem]">
-            <p className="dark-gray">
+          {/* -1.5rem cancels part of the section's 2.5rem gap so this first paragraph sits
+              1rem under the header's h2, matching the h2 + paragraph pair below. */}
+          <div className="flex flex-col gap-[0.5rem] w-slim mt-[-1.5rem]">
+            <p className="gray">
               By default, two co-op terms are built into every academic plan,
               and students take off six months from classes to work full time in
               a field of their choice.
@@ -143,11 +296,11 @@ export default function Cooper() {
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
-            <h2 className="serif mt-[2rem]">
+            <h2 className="serif mt-[4rem] mb-[0.5rem]">
               but a job description alone is often not enough to confidently
               commit to one.
             </h2>
-            <p className="dark-gray">
+            <p className="gray">
               Students start searching for co-ops as early as in the fall of
               sophomore year. Students are often filled with many questions,
               especially as it is most students' first professional experience.
@@ -162,40 +315,15 @@ export default function Cooper() {
           <div className="gray-full-container">
             <div className="flex flex-col gap-[2.5rem] my-[4rem] w-full">
               <div className="w-slim flex flex-col gap-[0.5rem]">
-                <h3 className="mb-[0.5rem] dark-gray caption">Solution</h3>
-                <h2>Cooper!</h2>
+                {/* <h3 className="mb-[0.5rem] dark-gray caption">Solution</h3> */}
+                <h2>Solution: Cooper!</h2>
                 <p className="dark-gray">
-                  Think of it as Rate My Professor, but for co-ops. Students can
+                  It's like Rate My Professor, but for co-ops. Students can
                   read and write reviews for co-ops and internships, and since
                   most co-op and internship positions are cyclical, we use
                   previous students' experiences to inform future searchers'
                   experiences/decisions.
                 </p>
-              </div>
-              <div className="med-w grid grid-cols-1 lg:grid-cols-3 gap-[1rem]">
-                {[
-                  {
-                    src: "/images/work/cooper/ss_reviews.png",
-                    caption: "Reviews from past co-ops",
-                  },
-                  {
-                    src: "/images/work/cooper/ss_co-opsupport.png",
-                    caption: "Insight into co-op-specific experiences",
-                  },
-                  {
-                    src: "/images/work/cooper/ss_tooltip.png",
-                    caption: "Compare with similar positions",
-                  },
-                ].map((image) => (
-                  <div key={image.src} className="flex flex-col">
-                    <img
-                      src={image.src}
-                      alt=""
-                      className="w-full aspect-[8/7] object-cover object-top rounded-[0.75rem] subtle-shadow"
-                    />
-                    <p className="cap-top w-4/5">{image.caption}</p>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
@@ -406,22 +534,136 @@ export default function Cooper() {
         {/* ISSUE 2 */}
         <div id="moderation" className="section">
           <SectionHeader description={sections[3].description} />
-          <p className="w-slim">Coming soon.</p>
+          {/* -2rem pulls the text up under the header, same as Subjectivity. */}
+          <div className="w-slim flex flex-col gap-[1rem] mt-[-2rem]">
+            <p className="dark-gray">
+              Throughout the project, we periodically checked in with
+              Northeastern's co-op directors to make sure they'd be comfortable
+              with a site like Cooper existing.
+              <br />
+              <br />
+              Their main concern was that negative reviews could damage the
+              school's long-standing relationships with employers, since many
+              co-op positions recur cycle after cycle.
+            </p>
+            <p className="dark-gray">
+              We addressed this with safeguards at three points in a review's
+              life.
+            </p>
+            <div className="mt-[0.75rem]">
+              <SafeguardCarousel />
+            </div>
+          </div>
         </div>
 
         {/* ISSUE 3 */}
         <div id="small-samples" className="section">
           <SectionHeader description={sections[4].description} />
-          <p className="w-slim">Coming soon.</p>
-        </div>
-
-        {/* SEE COOPER */}
-        <div id="see-cooper" className="section">
-          <SectionHeader
-            title={sections[5].header}
-            description={sections[5].description}
-          />
-          <p className="w-slim">Coming soon.</p>
+          {/* -2rem pulls the text up under the header, same as Subjectivity. */}
+          <div className="w-slim flex flex-col gap-[1rem] mt-[-2rem]">
+            <p className="dark-gray">
+              Cooper will be around for years to come, but likely without anyone
+              actively maintaining it. Some companies hire entire cohorts of
+              co-ops each cycle, while others hire just a handful, or even one,
+              so every job page had to work just as well with a single review as
+              with dozens.
+            </p>
+            <p className="dark-gray">
+              That meant we couldn't rely on review counts alone as a quick
+              summary, but we couldn't visualize everything either. Instead,
+              some answers are stated definitively, while others show just the
+              data and leave the interpretation to the reader.
+            </p>
+            {/* Side by side, each in the same light gray box + caption as above. The boxes are
+                square, and the image bleeds off the bottom right; an entry without a `src`
+                shows an empty box. */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-[1rem] mt-[0.75rem] mb-[1rem]">
+              {(
+                [
+                  {
+                    caption: "Definitive",
+                    width: "w-[127%]",
+                    position: "top-[2rem] left-[1.5rem]",
+                    images: [
+                      {
+                        src: "/images/work/cooper/definitive.png",
+                        alt: "Job details stated outright, such as 'No overtime reported' and 'Not required' for drug tests, each with the count behind it, like '0/1 reported overtime work'",
+                      },
+                    ],
+                  },
+                  {
+                    // Four examples that toggle on a loop (no pause button), centered in the box.
+                    // Sized a bit larger than the Definitive screenshot's text. All four are
+                    // 916px wide, so their text matches; an image can set its own `width`.
+                    caption: "Just the data",
+                    width: "w-[80%]",
+                    position: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
+                    images: [
+                      {
+                        src: "/images/work/cooper/behavioral.png",
+                        alt: "Behavioral: 1/1 reported behavioral interviews, with a dot for the one response and a 'Less difficult' tag",
+                      },
+                      {
+                        src: "/images/work/cooper/technical.png",
+                        alt: "Technical: 1/1 reported technical interviews, with a dot for the one response",
+                      },
+                      {
+                        src: "/images/work/cooper/PTO.png",
+                        alt: "PTO: 0/1 indicated receiving paid time off, with an empty dot for the one response",
+                      },
+                      {
+                        src: "/images/work/cooper/travel.png",
+                        alt: "Travel stipend: 1/1 indicated receiving transportation or relocation assistance, with a dot for the one response",
+                      },
+                    ],
+                  },
+                ] as {
+                  caption: string;
+                  width: string;
+                  position: string;
+                  images: { src: string; alt: string; width?: string }[];
+                }[]
+              ).map((box) => (
+                <div key={box.caption} className="flex flex-col">
+                  {/* The Definitive image starts 2rem down and 1.5rem in from the top left and is
+                      wider than the box, so it gets cut off at the right and bottom edges. The
+                      Just the data images are centered and take turns, 1.75s each. */}
+                  <div className="round img-bg relative w-full aspect-square overflow-hidden">
+                    {box.images.map((image, i) => (
+                      <img
+                        key={image.src}
+                        src={image.src}
+                        alt={image.alt}
+                        className={`absolute max-w-none ${box.position} ${
+                          image.width ?? box.width
+                        } ${box.images.length > 1 ? "crossfade-4" : ""}`}
+                        style={
+                          box.images.length > 1
+                            ? // Image i starts i quarters into the cycle, so they play in list order.
+                              { animationDelay: `${-((box.images.length - i) % box.images.length) * 1.75}s` }
+                            : undefined
+                        }
+                      />
+                    ))}
+                  </div>
+                  <p className="sp gray mt-[0.6rem]">{box.caption}</p>
+                </div>
+              ))}
+            </div>
+            <br />
+            <p className="dark-gray">
+              But in <span className="dark-gray font-[400]">Compare Mode</span>,
+              counts are shown as percentages so metrics are easier to compare.
+            </p>
+            {/* Short div: same size as the Overview boxes, 1.5rem padding around a
+                2000×570 frame. Empty placeholder until the compare screenshot is added. */}
+            <div className="flex flex-col mt-[0.75rem]">
+              <div className="round img-bg w-full overflow-hidden p-[1.5rem]">
+                <div className="w-full aspect-[2000/570]" />
+              </div>
+              <p className="sp gray mt-[0.6rem]">Compare mode</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

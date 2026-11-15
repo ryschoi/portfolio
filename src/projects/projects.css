@@ -82,7 +82,7 @@
    then fades over to the other. The second image runs the same animation half a cycle
    behind (a negative delay set inline), so exactly one is showing at a time. */
 .crossfade {
-    animation: crossfade 7s ease-in-out infinite;
+    animation: crossfade 4s ease-in-out infinite;
 }
 
 @keyframes crossfade {
@@ -90,6 +90,25 @@
         opacity: 1;
     }
     50%, 95% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Four images taking turns, 1.75s each over a 7s cycle: each holds for most of its
+   quarter, then fades over to the next. Negative delays set inline (0, -5.25s, -3.5s,
+   -1.75s) shift each image so they play in list order. */
+.crossfade-4 {
+    animation: crossfade-4 7s ease-in-out infinite;
+}
+
+@keyframes crossfade-4 {
+    0%, 20% {
+        opacity: 1;
+    }
+    25%, 95% {
         opacity: 0;
     }
     100% {
@@ -163,6 +182,12 @@
         animation: none;
     }
     .crossfade + .crossfade {
+        opacity: 0;
+    }
+    .crossfade-4 {
+        animation: none;
+    }
+    .crossfade-4 + .crossfade-4 {
         opacity: 0;
     }
     .crossfade-toggle {
