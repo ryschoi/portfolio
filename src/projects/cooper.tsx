@@ -320,9 +320,9 @@ export default function Cooper() {
                 <p className="dark-gray">
                   It's like Rate My Professor, but for co-ops. Students can
                   read and write reviews for co-ops and internships, and since
-                  most co-op and internship positions are cyclical, we use
-                  previous students' experiences to inform future searchers'
-                  experiences/decisions.
+                  most co-op and internship positions recur each cycle, 
+                  previous students' experiences help inform future searchers'
+                  decisions.
                 </p>
               </div>
             </div>
@@ -444,7 +444,7 @@ export default function Cooper() {
                     src={image.src}
                     alt={image.alt}
                     className="crossfade w-[88%] md:w-[70%] [grid-area:1/1]"
-                    style={{ animationDelay: `${i * -3.5}s` }}
+                    style={{ animationDelay: `calc(var(--crossfade-duration) * ${i * -0.5})` }}
                   />
                 ))}
                 <CrossfadePauseButton
@@ -484,7 +484,7 @@ export default function Cooper() {
                   width: "w-full md:w-[88%]",
                 },
               ];
-              const delay = (i: number) => ({ animationDelay: `${i * -3.5}s` });
+              const delay = (i: number) => ({ animationDelay: `calc(var(--crossfade-duration) * ${i * -0.5})` });
               return (
                 <div
                   className={`flex flex-col mt-[0.75rem] ${interviewPaused ? "crossfade-paused" : ""}`}

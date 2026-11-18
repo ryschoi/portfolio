@@ -80,9 +80,15 @@
 }
 /* Two images stacked in one spot take turns: each holds for most of its half of the cycle,
    then fades over to the other. The second image runs the same animation half a cycle
-   behind (a negative delay set inline), so exactly one is showing at a time. */
+   behind (a negative delay set inline), so exactly one is showing at a time.
+   The images, their captions and the inline delays all read --crossfade-duration, so
+   change the speed here only; they stay in sync. */
+:root {
+    --crossfade-duration: 7s;
+}
+
 .crossfade {
-    animation: crossfade 4s ease-in-out infinite;
+    animation: crossfade var(--crossfade-duration) ease-in-out infinite;
 }
 
 @keyframes crossfade {
@@ -121,7 +127,7 @@
    about 0.14s at 7s) and the next one fades in right after (49–50%), lined up with the
    middle of the image fade. Same cycle length and delays as .crossfade. */
 .crossfade-caption {
-    animation: crossfade-caption 7s linear infinite;
+    animation: crossfade-caption var(--crossfade-duration) linear infinite;
 }
 
 @keyframes crossfade-caption {
