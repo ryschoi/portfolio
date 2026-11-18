@@ -22,12 +22,12 @@ export default function TopBar() {
     ? "Product designer building scalable systems and invisible interfaces"
     : project && (
         <>
-          <a href="/" className="nanum gray no-underline hover:no-underline hover:font-medium">
-            <span className="nanum gray">Work</span>
+          <a href="/" className="gray no-underline hover:no-underline hover:font-medium">
+            <span className="gray font-normal">Work</span>
           </a>
-          <span className="nanum gray"> / </span>
+          <span className="gray font-normal"> / </span>
           {project.name}
-          <span className="nanum gray ml-[0.25rem]">{project.year}</span>
+          <span className="gray ml-[0.25rem]">{project.year}</span>
         </>
       );
 
@@ -37,12 +37,12 @@ export default function TopBar() {
   ];
 
   return (
-    <header className="nanum flex flex-wrap md:flex-nowrap items-baseline justify-between gap-y-[0.75rem] pt-[1.875rem] md:mb-[2rem] mb-[2.5rem]">
+    <header className="flex flex-wrap md:flex-nowrap items-baseline justify-between gap-y-[0.75rem] pt-[1.875rem] md:mb-[2rem] mb-[2.5rem]">
       <div className="contents md:flex md:items-baseline">
         <Link
           to="/"
           onClick={handleHomeClick}
-          className="nanum font-bold text-[1.125rem] tracking-[-0.02em] no-underline md:w-[13.125rem] md:shrink-0"
+          className="font-medium text-[1.125rem] tracking-[-0.02em] no-underline md:w-[13.125rem] md:shrink-0"
         >
           Rebecca Choi
         </Link>
@@ -52,7 +52,7 @@ export default function TopBar() {
           // name's fixed width; it falls back to sitting right after the name when
           // that column starts further left than the name ends.
           <p
-            className={`nanum font-normal text-[1rem] order-last w-full md:order-none md:w-auto ${
+            className={`font-normal text-[1rem] order-last w-full md:order-none md:w-auto ${
               isHome
                 ? ""
                 : "md:ml-[max(0px,calc((92vw_-_min(85vw,832px))_/_2_-_13.125rem))]"
@@ -67,7 +67,7 @@ export default function TopBar() {
           <Link
             key={path}
             to={path}
-            className={`nanum font-normal text-[1rem] no-underline green-hover ${pathname === path ? "nav-active" : ""}`}
+            className={`font-normal text-[1rem] no-underline green-hover ${pathname === path ? "nav-active" : ""}`}
           >
             {name}
           </Link>

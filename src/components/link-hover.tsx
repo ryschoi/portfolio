@@ -24,7 +24,7 @@ export default function LinkHover({ href, label, children }: HoverLinkProps) {
         cursorX={cursorState.x}
         cursorY={cursorState.y}
         visible={cursorState.visible}
-        className="caption text-[0.8rem] bold"
+        className="text-[0.8rem] bold"
       />
     </div>
   );

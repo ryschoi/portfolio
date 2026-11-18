@@ -61,7 +61,7 @@ export default function DissonantHarmony() {
                     {/* final a1 */}
                     <div className="flex flex-col w-full">
                         <VerticalImageSpan path="images/work/calder/calder.png" />
-                        <p className="caption cap-top">final a1 poster</p>
+                        <p className="cap-top">final a1 poster</p>
                     </div>
                     <p className="w-slim">In the final A1 poster version, there is a much-better sense of hierarchy and more obvious flow for how people should read the poster.<br /><br />
                         Eyes are first directed to either the sculpture or the title. There is a clear, top-to-bottom flow of elements. The big red sculpture piece being in the vertical center also helps guide the eyes from the top of the sculpture group to the bottom and does not potentailly diverge the viewer's attention elsewhere.<br /><br />
@@ -79,7 +79,7 @@ export default function DissonantHarmony() {
                                 <img src="/images/work/calder/calder_a5_back.png" alt="" className="w-[24vw] min-w-[332px]" />
                             </div>
                         </div>
-                        <p className="caption cap-top">front & back</p>
+                        <p className="cap-top">front & back</p>
                     </div>
                 </div>
 
@@ -96,7 +96,7 @@ export default function DissonantHarmony() {
                                     <img src="/images/work/calder/calder_instagram.jpeg" alt="" className="w-[30vw] min-w-[18rem] subtle-shadow" />
                                 </div>
                             </div>
-                            <p className="caption cap-top">Instagram posts</p>
+                            <p className="cap-top">Instagram posts</p>
                         </div>
                         <div>
                             <div className="img-bg work-add-img-cont">
@@ -106,7 +106,7 @@ export default function DissonantHarmony() {
                                     </video>
                                 </div>
                             </div>
-                            <p className="caption cap-top">Sculpture reconstruction gif</p>
+                            <p className="cap-top">Sculpture reconstruction gif</p>
                         </div>
                     </div>
                 </div>

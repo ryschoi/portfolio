@@ -22,7 +22,7 @@ export default function Misc() {
         <div className="flex flex-col place-content-center items-center gap-[2rem]">
             <div className="flex flex-col gap-[1rem]">
                 {/* TITLE */}
-                <h2 className="">Miscellaneous work from over the years</h2>
+                <h2>Miscellaneous work from over the years</h2>
 
                 {/* FILTERS */}
                 <div className="flex flex-wrap gap-[0.5rem] mb-[2rem]">

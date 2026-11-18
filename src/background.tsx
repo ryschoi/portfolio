@@ -126,24 +126,24 @@ export default function Background() {
     const sections = [
         <div className="thing" key="code">
             <img src="/images/icons/code_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
-            <h3 className="serif font-[700]">[2018] Learned to code</h3>
+            <h3 className="font-[700]">[2018] Learned to code</h3>
             <p>I first learned to code in middle school, at a summer web development bootcamp. I fell in love with the freedom to code whatever I wanted, but quickly realized that freedom came with many decisions surrounding usability and intent: <span className="italic">What exactly was I to code?</span> This is when I discovered the importance of design.</p>
         </div>,
         <div className="thing" key="design">
             <img src="/images/icons/shapes_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
-            <h3 className="serif font-[700]">[2021] Design ≠ art ??</h3>
+            <h3 className="font-[700]">[2021] Design ≠ art ??</h3>
             <p>In junior year of high school, I went into my first graphic design class thinking that design was just about making things look aesthetic. Instead, I was continually challenged to evalate my work based on how other people would interpret it, if it clearly communicated the intended message. This instilled the habit of being intentional with every design detail.</p>
         </div>,
         <div className="thing" key="data">
             <img src="/images/icons/design_icon.png" className="w-[4rem] mb-[1rem] aspect-square" />
-            <h3 className="serif font-[700]">[2023] Designing experiences</h3>
+            <h3 className="font-[700]">[2023] Designing experiences</h3>
             <p>In college, I started UI/UX design, expanding my focus from static visual
                 communication to interactive digital experiences.
                 I enjoy the challenge of
                 finding solutions that balance the many constraints: business goals,
                 user needs, technical limitations, aesthetics, time, etc. It keeps things exciting and provides clear guidelines for decisions.
                 <br /><br />
-                <span className="caption gray">Key aspects of my design approach:</span>
+                <span className="gray">Key aspects of my design approach:</span>
                 <ul className="mt-[0.5rem]">
                     <li>Being <span className="bold">curious and asking lots of questions</span> (about the problem, about the visual language, and about the products that I use and think work really well, etc.). <span className="italic">
                         What might the user be feeling when first opening this tool? Which microinteractions are
@@ -155,7 +155,7 @@ export default function Background() {
         </div>,
         <div className="thing" key="ai">
             <img src="/images/icons/ai_icon2.png" className="w-[4rem] mb-[1rem] aspect-square" />
-            <h3 className="serif font-[700]">[2025] AI meets design</h3>
+            <h3 className="font-[700]">[2025] AI meets design</h3>
             <p>With AI, I combine my designs and coding background to create something greater than the sum of their parts.
                 <br /><br />
                 In my experience of using AI to prototype interactions or implement designs, I found that so much of "successfully using AI" comes from knowing 1) how to use properly prompt AI, and 2) what to use it for.<br /><br />
@@ -170,7 +170,7 @@ export default function Background() {
     return (
         <div className="flex justify-center w-full">
             <div className="flex flex-col gap-[1.5rem] mod-mid-w">
-                <h1 className="md:w-9.5/10 w-9/10 mob-mid-w serif">From coder, to designer, to design engineer</h1>
+                <h1 className="md:w-9.5/10 w-9/10 mob-mid-w">From coder, to designer, to design engineer</h1>
                 <div className="relative w-full">
                     <div
                         ref={containerRef}

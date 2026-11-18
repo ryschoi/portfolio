@@ -19,7 +19,7 @@ export default function Apple() {
     const thisProject = projects.find(p => p.path === "/apple");
     const sections: section[] = [
         { id: "projects", header: "What I worked on", description: "" },
-        { id: "learnings", header: "what I learned", description: "Some learnings and practical advice I would give pre-internship Rebecca, formatted as our very own tips!" },
+        { id: "learnings", header: "What I learned", description: "Some learnings and practical advice I would give pre-internship Rebecca, formatted as our very own tips!" },
     ];
 
     const dataVizRef = useRef<HTMLDivElement>(null)
@@ -100,7 +100,7 @@ export default function Apple() {
                         />
                     </div>
                     <hr />
-                    <p className="caption w-slim self-center mb-[-1rem]">Loved all the greenery 💚🌳</p>
+                    <p className="w-slim self-center mb-[-1rem]">Loved all the greenery 💚🌳</p>
                     <Carousel>
                         <SlideImg src="images/work/apple/team.jpg" caption="" vert={false} />
                         <SlideImg src="images/work/apple/ap.png" caption="" vert={true} />

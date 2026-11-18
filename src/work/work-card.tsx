@@ -13,9 +13,9 @@ export default function WorkCard({ project, showTags = true }: { project: Projec
             <div className="flex justify-between">
                 <div className="flex flex-col gap-[0.3vh]">
                     <Link to={project.path} className="flex flex-col w-full">
-                        <h3 className="serif">{project.summary}</h3>
+                        <h3>{project.summary}</h3>
                     </Link>
-                    <p className="caption">{project.name}, {project.year}</p>
+                    <p>{project.name}, {project.year}</p>
                 </div>
             </div>
         </div>

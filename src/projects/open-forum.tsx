@@ -51,7 +51,7 @@ export default function OpenForum() {
                         </div>
                         <div className="gray-full-container">
                             <div className="w-slim my-[4rem]">
-                                <h3 className="mb-[1.5rem] dark-gray caption">What we found</h3>
+                                <h3 className="mb-[1.5rem] dark-gray">What we found</h3>
                                 <div className="flex flex-col gap-[2.5rem]">
                                     <div className="flex flex-col gap-[0.5rem]">
                                         <h3>Structured and interested-based social spaces are reported more effective methods of socializing</h3>
@@ -88,7 +88,7 @@ export default function OpenForum() {
                     {/* TOP IDEAS */}
                     <div className="gray-full-container">
                         <div className="med-w my-[4rem]">
-                            <h3 className="mb-[1.5rem] dark-gray caption">Top two ideas</h3>
+                            <h3 className="mb-[1.5rem] dark-gray">Top two ideas</h3>
                             <div className="half-grid">
                                 <div className="flex flex-col gap-[1rem]">
                                     <h3>Open Forum</h3>
@@ -143,7 +143,7 @@ export default function OpenForum() {
                                     <img src="images/work/open-forum/messages.png" alt="" className="w-[32vw] min-w-[330px] dark-shadow" />
                                 </div>
                             </div>
-                            <p className="caption cap-top">Error prevention and feedback messages</p>
+                            <p className="cap-top">Error prevention and feedback messages</p>
                         </div>
                         <div className="flex flex-col">
                             <div className="bg-[#1e1e1e] round flex place-content-center">
@@ -151,7 +151,7 @@ export default function OpenForum() {
                                     <img src="images/work/open-forum/tags.png" alt="" className="w-[14vw] min-w-[200px]" />
                                 </div>
                             </div>
-                            <p className="caption cap-top">Tags to quickly find relevant forum topics</p>
+                            <p className="cap-top">Tags to quickly find relevant forum topics</p>
                         </div>
                     </div>
                 </div>

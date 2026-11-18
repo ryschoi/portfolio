@@ -30,7 +30,7 @@ export default function Rockumentary() {
                                     <img src="/images/work/rockumentary/rock_ver1.jpg" alt="" className="h-[30rem] subtle-shadow" />
                                 </div>
                             </div>
-                            <p className="caption cap-top">one of my sketched out ideas</p>
+                            <p className="cap-top">one of my sketched out ideas</p>
                         </div>
                     </div>
                 </div>
@@ -45,7 +45,7 @@ export default function Rockumentary() {
                                     <img src="/images/work/rockumentary/rock_corner.png" alt="" className="object-contain crop-image w-[24vw]" />
                                 </div>
                             </div>
-                            <p className="caption cap-top">the grain is subtle but adds dimension and softens the blocky text</p>
+                            <p className="cap-top">the grain is subtle but adds dimension and softens the blocky text</p>
                         </div>
                         <div className="flex flex-col w-2/3">
                             <div className="img-bg round flex align-center justify-center">
@@ -54,7 +54,7 @@ export default function Rockumentary() {
                                     <img src="/images/work/rockumentary/rock_comp_real.png" alt="" className="object-contain w-[24vw]" />
                                 </div>
                             </div>
-                            <p className="caption cap-top">The reference photo versus the drawing</p>
+                            <p className="cap-top">The reference photo versus the drawing</p>
                         </div>
                     </div>
                 </div>

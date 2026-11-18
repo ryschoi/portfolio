@@ -20,12 +20,12 @@
     {
         "id": 5,
         "active": true,
-        "name": "Co-op Review Site",
+        "name": "Cooper",
         "path": "/cooper",
         "summary": "Creating a more informed and __________ co-op search experience",
         "type": "Club",
         "team": ["Project Lead", "Technical Lead", "Design Lead (me)","~5 developers", "~3 designers"],
-        "role": "",
+        "role": "Design Lead",
         "medium": "Web, mobile",
         "tools": "Claude Code, Figma",
         "year": 2026,
@@ -33,7 +33,7 @@
         "tags": ["UI/UX", "Design Engineering"],
         "vertical": false,
         "frontImage": "images/work/cooper/cooper.png",
-        "overview": "Led the design side of the creation of a Northeastern co-op and internship review site"
+        "overview": "Led the design for a Northeastern co-op review site that helps students search with more transparency and confidence."
     },
     {
         "id": 12,
@@ -51,7 +51,7 @@
         "tags": ["UI/UX"],
         "vertical": false,
         "frontImage": "images/work/open-forum/open-forum-screens.png",
-        "overview": "Semester-long group project for Human-Computer Interaction consisting of a full UX research process to create a mobile app solution to support belongingness on campus"
+        "overview": "A mobile-app solution to support belongingness on campus."
     },
     {
         "id": 7,
@@ -69,7 +69,7 @@
         "tags": ["Information design", "Data"],
         "vertical": true,
         "frontImage": "images/work/snakebite-data/snakebiteData.png",
-        "overview": "As the second project from my Information Design studio, I created this data story poster about the link between climate and high rates of snakebite."
+        "overview": "A data story poster about the link between climate and high rates of snakebite"
     },
     {
         "id": 14,
@@ -123,7 +123,7 @@
         "tags": ["Information design"],
         "vertical": false,
         "frontImage": "images/work/snakebite-response/snakebitePrevention.png",
-        "overview": "A poster and wallet card set for preventing snakebite in Botswana. The first of two projects for my Information Design studio."
+        "overview": "A poster and wallet card set for preventing snakebite in Botswana"
     },
     {
         "id": 13,
@@ -141,7 +141,7 @@
         "tags": ["UI/UX"],
         "vertical": false,
         "frontImage": "images/work/alihacks/aliFront.png",
-        "overview": "An internal application portal for a Boston student-led hackathon and a sponsorship package to send out to potential sponsors."
+        "overview": "An internal application portal for a Boston student-led hackathon and a sponsorship package to send out to potential sponsors"
     },
     {
         "id": 2,

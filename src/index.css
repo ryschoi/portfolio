@@ -49,7 +49,7 @@
 
   /* TEXT */
   --heading-weight: 400;
-  --weight: 300;
+  --weight: 375;
   --leading: 1.6rem;
 
   --ps-size: 0.9rem;
@@ -146,12 +146,11 @@ body {
     /* font-family: 'Eiko-Thin', serif; */
     /* font-family: 'cheltenhamclassic', serif; */
     /* font-family: 'Cormorant', serif; */
-    font-family: "Nanum Myeongjo", serif;
-    font-weight: 400;
+    /* font-family: "Nanum Myeongjo", serif; */
+    font-weight: 350;
     margin: var(--zero);
     font-size: var(--h2-size);
     line-height: var(--h2-leading);
-    font-weight: var(--heading-weight);
     letter-spacing: -0.25px;
   }
 
@@ -169,10 +168,10 @@ body {
   h3,
   .h3 {
     margin: var(--zero);
-    font-size: var(--h3-size);
+    font-size: 1.3rem;
     line-height: var(--h3-leading);
-    font-weight: var(--heading-weight);
     letter-spacing: -0.25px;
+    font-weight: 350;
   }
 
   h4,
@@ -241,6 +240,17 @@ body {
     background-color: #ffffff07;
   }
 
+  /* Cooper project header box: the Cooper logo blue (#3173DE, taken from cooper.png)
+     mixed ~10% into a light gray rather than white, so it reads as a muted slate blue
+     instead of baby blue. On dark pages it's the same blue at low opacity so it stays dim. */
+  .cooper-bg {
+    background-color: #dde4ee;
+  }
+
+  .dark .cooper-bg {
+    background-color: #3173de26;
+  }
+
   .pill {
     background-color: var(--color-tag-bg);
     color: var(--color-black);
@@ -283,11 +293,13 @@ body {
     border-color: var(--color-black);
   }
 
+  /* Fixed to the viewport, but its top is set from JS (floating-nav.tsx): it rides along
+     with the first section's top edge, then stays 6rem from the top of the screen. Starts
+     below the viewport so it doesn't flash in the middle before the first update. */
   .floating-nav {
     position: fixed;
     left: 2vw;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 100vh;
     z-index: 9999;
 
     display: flex;
@@ -330,7 +342,7 @@ body {
     top: 50%;
     transform: translateY(-50%) translateX(-4px);
     white-space: nowrap;
-    line-height: 0.8rem;
+    /* line-height: 0.8rem; */
 
     background-color: var(--color-tag-bg);
     color: var(--color-black);
@@ -367,6 +379,61 @@ body {
     height: 1.25rem;
     border-radius: 999px;
     background: #f8f5f4;
+  }
+
+  /* Project-page floating nav: a set width, with every section's title always shown as
+     plain text beside its dot (instead of the hover pill the card nav uses). Long titles
+     wrap within the width. The active dot still stretches into the tall gray pill. */
+  .floating-nav {
+    width: 10rem;
+  }
+
+  /* One-line titles keep their dot centered on the text. Titles that wrap (flagged with
+     data-multiline from floating-nav.tsx) put the dot at the top instead, beside the first
+     line: the margin centers it on that line (label line box is 1.2rem tall), and the
+     taller active pill starts at the same top and stretches downward. */
+  .floating-nav .nav-dot {
+    width: 100%;
+    gap: 0.6rem;
+    text-align: left;
+  }
+
+  .floating-nav .nav-dot[data-multiline] {
+    align-items: flex-start;
+  }
+
+  .floating-nav .nav-dot[data-multiline] .dot {
+    margin-top: 0.35rem;
+  }
+
+  .floating-nav .label {
+    position: static;
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+    white-space: normal;
+    line-height: 1.2;
+    color: #a0a0a0;
+    background: none;
+    border: none;
+    padding: 0;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: color 0.25s ease;
+  }
+
+  .floating-nav .nav-dot:hover .label {
+    transform: none;
+  }
+
+  .floating-nav .nav-dot:hover .label,
+  .floating-nav .nav-dot.active .label {
+    color: #3f3f3f;
+  }
+
+  .dark .floating-nav .nav-dot:hover .label,
+  .dark .floating-nav .nav-dot.active .label {
+    color: #f8f5f4;
   }
 
   /* Horizontal dot row. On mobile it floats fixed at the bottom-center of

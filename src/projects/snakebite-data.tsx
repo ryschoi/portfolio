@@ -12,14 +12,16 @@ import { useRef } from 'react'
 export default function SnakebiteData() {
     const thisProject = projects.find(p => p.path === "/snakebite-data");
     const sections: section[] = [
-        { id: "data-collection-and-engineering", header: "Data collection and engineering", description: "Gather data sets and create preliminary data visualizations" },
+        { id: "data-collection-and-engineering", header: "Data collection", description: "Gather data sets and create preliminary data visualizations" },
         { id: "data-visualization", header: "Data visualization", description: "Storytelling with the data through clear visual language", optional: "My approach for the design was not just to edit individual visualizations, but to make each of the visualizations, once pieced together, tell one cohesive story." },
         { id: "final-deliverable", header: "Final deliverable", description: "A5-size poster" },
         { id: "reflection", header: "Reflection", description: "My first data visualization project", optional: "I learned that a good data visualization is not just about hierarchy and highlighting the most outstanding numbers, but about representing the data in a language the audience can understand." }
     ];
 
+    // Dark mode while the final designs are on screen is turned off; uncomment the
+    // useScrollTheme calls below to bring it back.
     const dataVizRef = useRef<HTMLDivElement>(null)
-    useScrollTheme({ ref: dataVizRef })
+    // useScrollTheme({ ref: dataVizRef })
 
     return (
         <div className="project-content bg-trans">
@@ -57,7 +59,7 @@ export default function SnakebiteData() {
                                 <img src="/images/work/snakebite-data/s-data-bars.png" alt="" />
                             </div>
                             <div>
-                                <p className="ml-[0.5rem] w-9/10 caption mb-[0.25rem]">version 1 (bars)</p>
+                                <p className="ml-[0.5rem] w-9/10 mb-[0.25rem]">version 1 (bars)</p>
                                 <p className="ml-[0.5rem] w-9/10">Arbitrary bar sizes. Only takeaway is the numeric difference in value and the general visual size difference</p>
                             </div>
                         </div>
@@ -66,7 +68,7 @@ export default function SnakebiteData() {
                                 <img src="/images/work/snakebite-data/s-data-sun.png" alt="" className="max-h-[15rem] self-center" />
                             </div>
                             <div>
-                                <p className="ml-[0.5rem] w-9/10 caption mb-[0.25rem]">version 2 (illustrations)</p>
+                                <p className="ml-[0.5rem] w-9/10 mb-[0.25rem]">version 2 (illustrations)</p>
                                 <p className="ml-[0.5rem] w-9/10">Illustrations showed what the climates might look like, but the visuals were also arbitrarily-sized and therefore not very informative</p>
                             </div>
                         </div>
@@ -75,7 +77,7 @@ export default function SnakebiteData() {
                                 <img src="/images/work/snakebite-data/s-data-circles.png" alt="" className="max-h-[15rem] self-center" />
                             </div>
                             <div>
-                                <p className="ml-[0.5rem] w-9/10 caption mb-[0.25rem]">final version (isotypes)</p>
+                                <p className="ml-[0.5rem] w-9/10 mb-[0.25rem]">final version (isotypes)</p>
                                 <p className="ml-[0.5rem] w-9/10">Isotypes representative of the actual proportions of the numbers makes it much easier to accurately gauge the values of each measurement</p>
                             </div>
                         </div>
@@ -101,7 +103,7 @@ export default function SnakebiteData() {
                                     <img src="/images/work/snakebite-data/degree1.png" alt="" className="self-center w-6/7 min-w-[18rem]" />
                                 </div>
                             </div>
-                            <p className="caption cap-top">initial</p>
+                            <p className="cap-top">initial</p>
                         </div>
                         <div>
                             <div className="s-data-bg work-add-img-cont">
@@ -109,7 +111,7 @@ export default function SnakebiteData() {
                                     <img src="/images/work/snakebite-data/degree2.png" alt="" className="self-center w-6/7 min-w-[18rem]" />
                                 </div>
                             </div>
-                            <p className="caption cap-top">final</p>
+                            <p className="cap-top">final</p>
                         </div>
                     </div>
                 </div>

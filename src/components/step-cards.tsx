@@ -126,7 +126,7 @@ export default function StepCards({ steps }: StepCardsProps) {
                                 )}
                                 {/* Without an icon, the card drops its fixed aspect ratio and fits its text. */}
                                 <div className={`flex flex-col gap-[0.25rem] ${step.icon ? "h-1/3" : ""}`}>
-                                    {step.title && <h4 className="">{step.title}</h4>}
+                                    {step.title && <h4>{step.title}</h4>}
                                     <p>{step.description}</p>
                                 </div>
                             </div>

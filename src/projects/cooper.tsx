@@ -8,6 +8,8 @@ import SectionHeader from "../components/section-header";
 import FloatingNav from "../components/floating-nav";
 import Pill from "../components/pill";
 import MessageFlood from "../components/message-flood";
+import CrossfadePauseButton from "../components/crossfade-pause-button";
+import SafeguardCarousel, { Safeguard } from "../components/safeguard-carousel";
 
 const pillars = [
   {
@@ -47,58 +49,9 @@ const pillars = [
 // "cards" is the original three-card grid.
 const PILLAR_LAYOUT: "rows" | "cards" = "rows";
 
-// Pause/play button for a crossfade box, pinned to its bottom-right corner. The box
-// gets the "crossfade-paused" class while paused (see projects.css).
-function CrossfadePauseButton({
-  paused,
-  onToggle,
-}: {
-  paused: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onToggle}
-      aria-label={paused ? "Play" : "Pause"}
-      aria-pressed={paused}
-      className="crossfade-toggle absolute right-[0.75rem] bottom-[0.6rem] md:right-[1rem] md:bottom-[0.75rem]"
-    >
-      {paused ? (
-        <svg
-          viewBox="0 0 16 16"
-          width="15"
-          height="15"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <path d="M4 2.5v11l9.5-5.5z" />
-        </svg>
-      ) : (
-        <svg
-          viewBox="0 0 16 16"
-          width="15"
-          height="15"
-          fill="currentColor"
-          aria-hidden="true"
-        >
-          <rect x="3.5" y="2.5" width="3" height="11" rx="0.75" />
-          <rect x="9.5" y="2.5" width="3" height="11" rx="0.75" />
-        </svg>
-      )}
-    </button>
-  );
-}
-
 // The three moderation safeguards, in the order a review meets them. Boxes are empty
 // placeholders until screenshots are added: give an entry a `src` and `alt` to show it.
-const safeguards: {
-  stage: string;
-  text: string;
-  caption: string;
-  src?: string;
-  alt?: string;
-}[] = [
+const safeguards: Safeguard[] = [
   {
     stage: "In the review form",
     text: "The questions are designed to minimize ambiguity and subjectivity.",
@@ -116,122 +69,6 @@ const safeguards: {
   },
 ];
 
-// Manual carousel for the safeguards: the active step's counter and stage name, its
-// sentence, box and caption, with prev/next arrows.
-// Every step's sentence and box share one grid cell and fade between each other, so the
-// carousel is always as tall as its tallest step and nothing below it jumps.
-function SafeguardCarousel() {
-  const [active, setActive] = useState(0);
-  const last = safeguards.length - 1;
-  const fade = (i: number) =>
-    `[grid-area:1/1] transition-opacity duration-300 ${
-      i === active ? "opacity-100" : "opacity-0 pointer-events-none"
-    }`;
-
-  return (
-    <div className="flex flex-col">
-      {/* Step counter and stage name, then the step's sentence. */}
-      <div className="grid">
-        {safeguards.map((safeguard, i) => (
-          <p
-            key={safeguard.stage}
-            className={`flex items-baseline gap-[0.6rem] ${fade(i)}`}
-            aria-hidden={i !== active}
-          >
-            <span className="caption gray">
-              {i + 1}/{safeguards.length}
-            </span>
-            <span className="font-[400] gray">{safeguard.stage}</span>
-          </p>
-        ))}
-      </div>
-
-      <div className="grid mt-[0.5rem]">
-        {safeguards.map((safeguard, i) => (
-          <p
-            key={safeguard.stage}
-            className={`dark-gray ${fade(i)}`}
-            aria-hidden={i !== active}
-          >
-            {safeguard.text}
-          </p>
-        ))}
-      </div>
-
-      <div className="grid">
-        {safeguards.map((safeguard, i) => (
-          <div
-            key={safeguard.stage}
-            className={`round img-bg w-full overflow-hidden ${fade(i)}`}
-            aria-hidden={i !== active}
-          >
-            {safeguard.src ? (
-              <img
-                src={safeguard.src}
-                alt={safeguard.alt ?? ""}
-                className="w-full"
-              />
-            ) : (
-              // Same size as the Overview boxes: 1.5rem padding around a 2000×570 frame.
-              <div className="p-[1.5rem]">
-                <div className="w-full aspect-[2000/570]" />
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-
-      <div className="flex items-center justify-between mt-[0.6rem]">
-        <p className="sp gray">{safeguards[active].caption}</p>
-        <div className="flex gap-[0.25rem] mr-[-0.5rem]">
-          <button
-            type="button"
-            onClick={() => setActive((a) => Math.max(0, a - 1))}
-            disabled={active === 0}
-            aria-label="Previous safeguard"
-            className="crossfade-toggle disabled:opacity-30 disabled:pointer-events-none"
-          >
-            <svg
-              viewBox="0 0 16 16"
-              width="15"
-              height="15"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.75"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M10 3 5 8l5 5" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            onClick={() => setActive((a) => Math.min(last, a + 1))}
-            disabled={active === last}
-            aria-label="Next safeguard"
-            className="crossfade-toggle disabled:opacity-30 disabled:pointer-events-none"
-          >
-            <svg
-              viewBox="0 0 16 16"
-              width="15"
-              height="15"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.75"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="m6 3 5 5-5 5" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function Cooper() {
   const thisProject = projects.find((p) => p.path === "/cooper");
   const [formatPaused, setFormatPaused] = useState(false);
@@ -244,9 +81,14 @@ export default function Cooper() {
         "Co-op is a _____________ part of the Northeastern student experience,",
     },
     {
-      id: "features",
-      header: "Design overview",
-      description: "Design overview",
+      id: "solution",
+      header: "Solution",
+      description: "Solution: Cooper!",
+    },
+    {
+      id: "my-role",
+      header: "My role",
+      description: "My role: Design Lead",
     },
     {
       id: "subjectivity",
@@ -265,6 +107,8 @@ export default function Cooper() {
     },
   ];
 
+  const section = (id: string) => sections.find((s) => s.id === id)!;
+
   return (
     <div className="project-content">
       <ProjectHeader project={thisProject as Project} sections={sections} />
@@ -273,11 +117,9 @@ export default function Cooper() {
         {/* INTRO */}
         <div id="overview" className="section">
           <SectionHeader
-            title={sections[0].header}
-            description={sections[0].description}
+            title={section("overview").header}
+            description={section("overview").description}
           />
-          {/* -1.5rem cancels part of the section's 2.5rem gap so this first paragraph sits
-              1rem under the header's h2, matching the h2 + paragraph pair below. */}
           <div className="flex flex-col gap-[0.5rem] w-slim mt-[-1.5rem]">
             <p className="gray">
               By default, two co-op terms are built into every academic plan,
@@ -296,7 +138,7 @@ export default function Cooper() {
                 className="absolute inset-0 w-full h-full object-cover"
               />
             </div>
-            <h2 className="serif mt-[4rem] mb-[0.5rem]">
+            <h2 className="mt-[4rem] mb-[0.5rem]">
               but a job description alone is often not enough to confidently
               commit to one.
             </h2>
@@ -312,29 +154,47 @@ export default function Cooper() {
             </p>
             <MessageFlood className="round img-bg w-full mt-[0.75rem]" />
           </div>
-          <div className="gray-full-container">
-            <div className="flex flex-col gap-[2.5rem] my-[4rem] w-full">
-              <div className="w-slim flex flex-col gap-[0.5rem]">
-                {/* <h3 className="mb-[0.5rem] dark-gray caption">Solution</h3> */}
-                <h2>Solution: Cooper!</h2>
-                <p className="dark-gray">
-                  It's like Rate My Professor, but for co-ops. Students can
-                  read and write reviews for co-ops and internships, and since
-                  most co-op and internship positions recur each cycle, 
-                  previous students' experiences help inform future searchers'
-                  decisions.
-                </p>
+        </div>
+        <div id="solution" className="section">
+          <SectionHeader description={section("solution").description} />
+          <p className="dark-gray mt-[-1.5rem] w-slim">
+            It's like Rate My Professor, but for co-ops. Students can read and
+            write reviews for co-ops and internships, and since most co-op and
+            internship positions recur each cycle, previous students'
+            experiences help inform future searchers' decisions.
+          </p>
+          {/* Same screen recording as Cooper's big box on the home page (image-bg.tsx), in a
+              light gray box like the Overview images. -1.5rem keeps it 1rem under the text. */}
+          <div className="round img-bg w-slim p-[1.5rem] mt-[-1.5rem]">
+            <video
+              autoPlay
+              loop
+              playsInline
+              muted
+              src="/images/work/cooper/job_compare.mov"
+              poster={thisProject?.frontImage}
+              className="w-full subtle-shadow round"
+            />
+          </div>
+          {/* Two square light gray boxes side by side (stacked on mobile), each with a caption
+              underneath, styled like the Definitive / Just the data pair. Empty for now: put
+              an image or video inside a box's div. -1.5rem keeps them 1rem under the video. */}
+          <div className="w-slim grid grid-cols-1 md:grid-cols-2 gap-[1rem] mt-[-1.5rem]">
+            {["Review your co-op", "Read another"].map((caption) => (
+              <div key={caption} className="flex flex-col">
+                <div className="round img-bg relative w-full aspect-square overflow-hidden" />
+                <p className="sp gray mt-[0.6rem]">{caption}</p>
               </div>
-            </div>
+            ))}
           </div>
-          <div className="w-slim flex flex-col gap-[0.5rem]">
-            <h3 className="mb-[0.5rem] dark-gray caption">My role</h3>
-            <p className="dark-gray">
-              I led the design of Cooper, starting with three design pillars I
-              set to guide every decision we made. Here they are, with the
-              features that support each one.
-            </p>
-          </div>
+        </div>
+        <div id="my-role" className="section">
+          <SectionHeader description={section("my-role").description} />
+          <p className="dark-gray mt-[-1.5rem] w-slim">
+            I led the design of Cooper, which involved _________. starting with
+            three design pillars I set to guide every decision we made. Here
+            they are, with the features that support each one.
+          </p>
           {PILLAR_LAYOUT === "rows" ? (
             // Numbered editorial rows: hairline between each, big serif title on the
             // left, the description and its features on the right. Stacks on mobile.
@@ -344,24 +204,12 @@ export default function Cooper() {
                   key={pillar.title}
                   className="grid grid-cols-1 lg:grid-cols-[2.5rem_11rem_1fr] gap-x-[1.5rem] gap-y-[0.5rem] py-[1.75rem] border-t border-[var(--color-gray-stroke)]"
                 >
-                  <span className="caption light-gray lg:pt-[0.6rem]">
+                  <span className="light-gray lg:pt-[0.6rem]">
                     0{i + 1}
                   </span>
-                  <h2 className="serif">{pillar.title}</h2>
+                  <h2>{pillar.title}</h2>
                   <div className="flex flex-col gap-[0.75rem] lg:pt-[0.35rem]">
                     <p className="dark-gray">{pillar.description}</p>
-                    {/* Features hidden for now.
-                    <p className="p-sm gray flex flex-wrap gap-x-[0.6rem]">
-                      {pillar.features.map((feature, j) => (
-                        <span key={feature} className="whitespace-nowrap">
-                          {feature}
-                          {j < pillar.features.length - 1 && (
-                            <span className="light-gray ml-[0.6rem]">·</span>
-                          )}
-                        </span>
-                      ))}
-                    </p>
-                    */}
                   </div>
                 </div>
               ))}
@@ -377,31 +225,15 @@ export default function Cooper() {
                     <h4>{pillar.title}</h4>
                     <p>{pillar.description}</p>
                   </div>
-                  {/* Features hidden for now.
-                {pillar.features.length > 0 && (
-                  <div className="flex flex-wrap gap-[0.5rem]">
-                    {pillar.features.map((feature) => (
-                      <Pill
-                        key={feature}
-                        text={feature}
-                        hover={false}
-                        clicked={false}
-                      />
-                    ))}
-                  </div>
-                )}
-                */}
                 </div>
               ))}
             </div>
           )}
         </div>
-
         {/* ISSUE 1 */}
         <div id="subjectivity" className="section">
-          <SectionHeader description={sections[2].description} />
-          {/* -2rem pulls the text up under the header, same as the Overview. */}
-          <div className="w-slim flex flex-col gap-[1rem] mt-[-2rem]">
+          <SectionHeader description={section("subjectivity").description} />
+          <div className="w-slim flex flex-col gap-[1rem] mt-[-1.5rem]">
             <p className="dark-gray">
               For a long time, most of our questions used a 1–5 rating, which is
               arbitrary and uninformative.
@@ -444,7 +276,9 @@ export default function Cooper() {
                     src={image.src}
                     alt={image.alt}
                     className="crossfade w-[88%] md:w-[70%] [grid-area:1/1]"
-                    style={{ animationDelay: `calc(var(--crossfade-duration) * ${i * -0.5})` }}
+                    style={{
+                      animationDelay: `calc(var(--crossfade-duration) * ${i * -0.5})`,
+                    }}
                   />
                 ))}
                 <CrossfadePauseButton
@@ -484,7 +318,9 @@ export default function Cooper() {
                   width: "w-full md:w-[88%]",
                 },
               ];
-              const delay = (i: number) => ({ animationDelay: `calc(var(--crossfade-duration) * ${i * -0.5})` });
+              const delay = (i: number) => ({
+                animationDelay: `calc(var(--crossfade-duration) * ${i * -0.5})`,
+              });
               return (
                 <div
                   className={`flex flex-col mt-[0.75rem] ${interviewPaused ? "crossfade-paused" : ""}`}
@@ -533,15 +369,14 @@ export default function Cooper() {
 
         {/* ISSUE 2 */}
         <div id="moderation" className="section">
-          <SectionHeader description={sections[3].description} />
-          {/* -2rem pulls the text up under the header, same as Subjectivity. */}
-          <div className="w-slim flex flex-col gap-[1rem] mt-[-2rem]">
+          <SectionHeader description={section("moderation").description} />
+          <div className="w-slim flex flex-col gap-[1rem] mt-[-1.5rem]">
             <p className="dark-gray">
               Throughout the project, we periodically checked in with
               Northeastern's co-op directors to make sure they'd be comfortable
               with a site like Cooper existing.
-              <br />
-              <br />
+            </p>
+            <p className="dark-gray">
               Their main concern was that negative reviews could damage the
               school's long-standing relationships with employers, since many
               co-op positions recur cycle after cycle.
@@ -551,16 +386,15 @@ export default function Cooper() {
               life.
             </p>
             <div className="mt-[0.75rem]">
-              <SafeguardCarousel />
+              <SafeguardCarousel safeguards={safeguards} />
             </div>
           </div>
         </div>
 
         {/* ISSUE 3 */}
         <div id="small-samples" className="section">
-          <SectionHeader description={sections[4].description} />
-          {/* -2rem pulls the text up under the header, same as Subjectivity. */}
-          <div className="w-slim flex flex-col gap-[1rem] mt-[-2rem]">
+          <SectionHeader description={section("small-samples").description} />
+          <div className="w-slim flex flex-col gap-[1rem] mt-[-1.5rem]">
             <p className="dark-gray">
               Cooper will be around for years to come, but likely without anyone
               actively maintaining it. Some companies hire entire cohorts of
@@ -597,7 +431,8 @@ export default function Cooper() {
                     // 916px wide, so their text matches; an image can set its own `width`.
                     caption: "Just the data",
                     width: "w-[80%]",
-                    position: "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
+                    position:
+                      "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2",
                     images: [
                       {
                         src: "/images/work/cooper/behavioral.png",
@@ -640,7 +475,9 @@ export default function Cooper() {
                         style={
                           box.images.length > 1
                             ? // Image i starts i quarters into the cycle, so they play in list order.
-                              { animationDelay: `${-((box.images.length - i) % box.images.length) * 1.75}s` }
+                              {
+                                animationDelay: `${-((box.images.length - i) % box.images.length) * 1.75}s`,
+                              }
                             : undefined
                         }
                       />

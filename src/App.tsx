@@ -9,7 +9,6 @@ import {
 } from "react-router-dom";
 
 import Work from "./work/work";
-import Background from "./background";
 import Craft from "./craft";
 import About from "./about/about";
 import TopBar from "./top-bar";
@@ -57,20 +56,13 @@ function Layout() {
         <Routes>
           <Route path="/" element={<Work hero={null} showFilters={false} />} />
           <Route path="/craft" element={<Craft />} />
-          <Route path="/background" element={<Background />} />
           <Route path="/about" element={<About />} />
-
-          <Route path="/rockumentary" element={<Rockumentary />} />
           <Route path="/snakebite-response" element={<SnakebiteResponse />} />
           <Route path="/dissonant-harmony" element={<DissonantHarmony />} />
           <Route path="/snakebite-data" element={<SnakebiteData />} />
-          <Route path="/school-stairs" element={<SchoolStairs />} />
-          <Route path="/radien" element={<Radien />} />
           <Route path="/cooper" element={<Cooper />} />
           <Route path="/open-forum" element={<OpenForum />} />
           <Route path="/ali-hacks" element={<AliHacks />} />
-          <Route path="/boston-beer" element={<BostonBeer />} />
-          <Route path="/portfolio-website" element={<PortfolioWebsite />} />
           <Route path="/apple" element={<Apple />} />
         </Routes>
       </main>

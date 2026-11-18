@@ -7,7 +7,7 @@ export default function TwoImageCaption({ path1, cap1, path2, cap2 }: { path1: s
                         <img src={path1} alt="" className="w-[30vw] min-w-[18rem] subtle-shadow" />
                     </div>
                 </div>
-                <p className="caption cap-top">{cap1}</p>
+                <p className="cap-top">{cap1}</p>
             </div>
             <div>
                 <div className="img-bg work-add-img-cont">
@@ -15,7 +15,7 @@ export default function TwoImageCaption({ path1, cap1, path2, cap2 }: { path1: s
                         <img src={path2} alt="" className="w-[30vw] min-w-[18rem] subtle-shadow" />
                     </div>
                 </div>
-                <p className="caption cap-top">{cap2}</p>
+                <p className="cap-top">{cap2}</p>
             </div>
         </div>
     );

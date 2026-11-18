@@ -30,7 +30,7 @@ export default function Timeline({ milestones, classes }: TimelineProps) {
                             <p className="timeline-tooltip gray">{milestone.text}</p>
                         )}
                     </button>
-                    {milestone.label && <p className="caption gray whitespace-nowrap">{milestone.label}</p>}
+                    {milestone.label && <p className="gray whitespace-nowrap">{milestone.label}</p>}
                 </div>
             ))}
         </div>

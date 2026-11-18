@@ -67,7 +67,7 @@ export default function Dropdown({ title, content, classes, defaultOpen = false 
                 {/* min-w-0 lets the title actually shrink/wrap within the row
                     instead of a flex item's default min-width:auto pushing the
                     (mobile, in-row) chevron out past the row's right edge. */}
-                <h2 className="serif transition-[font-weight] duration-300 min-w-0">{title}</h2>
+                <h2 className="transition-[font-weight] duration-300 min-w-0">{title}</h2>
             </button>
             <div
                 className="overflow-hidden transition-[max-height] duration-300 ease-in-out"

@@ -32,11 +32,11 @@ export default function NavBar() {
       <div className="flex mx-[4%] w-full justify-between md:m-0 md:w-fit md:gap-[3vw]">
         <button
           onClick={handleWorkClick}
-          className={`p-[0px] caption bg-transparent
-            ${pathname === "/"
-              ? "nav-active green-hover"
-              : "gray work-hover green-hover"
-            }`}
+          className={`p-[0px] bg-transparent
+ ${pathname === "/"
+ ? "nav-active green-hover"
+ : "gray work-hover green-hover"
+ }`}
         >
           Work
         </button>

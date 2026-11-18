@@ -8,7 +8,7 @@ export default function Footer({ compact = false }: { compact?: boolean }) {
     >
       <hr />
       <div className={`flex flex-wrap justify-between items-start gap-y-[0.75rem] ${compact ? "mt-[1rem]" : "mt-[2rem]"}`}>
-        <p className="caption">Coded and designed by me ◡̈</p>
+        <p>Coded and designed by me ◡̈</p>
 
         <div className="flex flex-wrap gap-x-[1rem] gap-y-[0.5rem]">
           <CopyText text="rebecca.choi05@gmail.com" followCursor />

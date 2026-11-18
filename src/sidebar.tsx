@@ -61,7 +61,7 @@ export default function Sidebar() {
             to="/"
             className="h-fit bold tracking-[-0.02rem] hidden md:block"
           >
-            <h1 className="nanum leading-[1.3]">Rebecca Choi</h1>
+            <h1 className="leading-[1.3]">Rebecca Choi</h1>
           </Link>
           <p className="gray">
             Product designer building scalable systems and invisible interfaces
@@ -74,12 +74,12 @@ export default function Sidebar() {
         <div className="flex mx-[4%] justify-between md:m-0 md:flex-col md:items-start md:gap-[0.25rem]">
           <button
             onClick={handleWorkClick}
-            className={`p-[0px] caption bg-transparent
-              ${
-                pathname === "/"
-                  ? "nav-active green-hover"
-                  : "gray work-hover green-hover"
-              }`}
+            className={`p-[0px] bg-transparent
+ ${
+ pathname === "/"
+ ? "nav-active green-hover"
+ : "gray work-hover green-hover"
+ }`}
           >
             Work
           </button>

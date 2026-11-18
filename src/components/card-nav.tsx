@@ -39,7 +39,7 @@ export default function CardNav({
                     className={`nav-dot ${i === active ? "active" : ""}`}
                 >
                     <span className="dot" />
-                    {showLabels && <span className="label caption">{label}</span>}
+                    {showLabels && <span className="label">{label}</span>}
                 </button>
             ))}
         </div>
