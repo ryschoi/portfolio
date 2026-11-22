@@ -168,7 +168,7 @@ body {
   h3,
   .h3 {
     margin: var(--zero);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: var(--h3-leading);
     letter-spacing: -0.25px;
     font-weight: 350;
